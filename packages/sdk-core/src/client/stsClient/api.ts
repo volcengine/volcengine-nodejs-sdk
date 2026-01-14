@@ -22,14 +22,17 @@ import {
 
 import { AssumeRoleRequest } from "./types/index";
 import { AssumeRoleResponse } from "./types/index";
-import { AssumeRoleRequestCast } from "./meta/index";
-import { AssumeRoleResponseCast } from "./meta/index";
 
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
 export type AssumeRoleCommandOutput = CommandOutput<AssumeRoleResponse>;
 
+declare module "../../types/types" {
+  interface CommandOutputMap {
+    AssumeRoleCommand: AssumeRoleCommandOutput;
+  }
+}
 /**
  * STSClient Service Client
  */
@@ -58,9 +61,6 @@ export class AssumeRoleCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(
       AssumeRoleCommand.metaPath
     );
-
-    this.requestMap = AssumeRoleRequestCast;
-    this.responseMap = AssumeRoleResponseCast;
   }
 }
 

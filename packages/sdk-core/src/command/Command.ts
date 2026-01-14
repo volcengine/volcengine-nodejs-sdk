@@ -22,7 +22,7 @@ export class Command<
   requestMap?: Record<string, any>;
   responseMap?: Record<string, any>;
 
-  private __type?: {
+  protected __type?: {
     output: TOutput;
     commandName: TCommandName;
   };

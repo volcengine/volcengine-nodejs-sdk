@@ -102,14 +102,11 @@ export class Client {
 
   async send<
     TInput extends CommandInput,
-    TOutput,
-    TName extends keyof CommandOutputMap | never = never
+    TCommandName extends keyof CommandOutputMap
   >(
-    command: Command<TInput, TOutput, TName>,
+    command: Command<TInput, CommandOutputMap[TCommandName], TCommandName>,
     options?: SendOptions
-  ): Promise<
-    TName extends keyof CommandOutputMap ? CommandOutputMap[TName] : TOutput
-  > {
+  ): Promise<CommandOutputMap[TCommandName]> {
     const stack = this.middlewareStack.merge(command.middlewareStack);
     const context: MiddlewareContext = {
       clientName: this.constructor.name,
@@ -181,17 +178,6 @@ export class Client {
     return result as any;
   }
 
-  async sendWithRawResponse<
-    TInput extends CommandInput,
-    TOutput,
-    TName extends keyof CommandOutputMap | never = never
-  >(
-    command: Command<TInput, TOutput, TName>,
-    options?: SendOptions
-  ): Promise<any> {
-    return this.send(command, { ...options, skipResponseCasting: true });
-  }
-
   destroy(): void {
     // 清理 requestHandler 资源
     this.requestHandler.destroy?.();
@@ -203,9 +189,10 @@ export class Client {
    */
   debugMiddlewareStack<
     TInput extends CommandInput,
-    TOutput,
-    TName extends keyof CommandOutputMap | never = never
-  >(command: Command<TInput, TOutput, TName>): string {
+    TCommandName extends keyof CommandOutputMap
+  >(
+    command: Command<TInput, CommandOutputMap[TCommandName], TCommandName>
+  ): string {
     const mergedStack = this.middlewareStack.merge(command.middlewareStack);
     return mergedStack.toString();
   }

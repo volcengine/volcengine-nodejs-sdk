@@ -128,7 +128,7 @@ export interface SendOptions {
   /**
    * AbortController 的 signal，用于取消请求
    */
-  abortSignal?: AbortSignal;
+  abortSignal?: any;
   /**
    * Request-level timeout in milliseconds
    * Overrides client-level httpOptions.timeout
