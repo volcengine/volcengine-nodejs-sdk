@@ -1,0 +1,9 @@
+packages:
+  # 手工维护的核心包
+  - "packages/*"
+
+  # 代码生成的服务客户端
+  - "service/*"
+
+  # 示例
+  - "examples"

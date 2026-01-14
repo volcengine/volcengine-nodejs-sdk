@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+.pnpm-store
+
+
+# Build outputs
+dist/
+lib/
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+
+# OS generated files
+.DS_Store
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+.trae
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.local
+
+# Changesets
+.changeset/*
+!.changeset/config.json
+
+ref/
+.turbo
