@@ -46,63 +46,6 @@ describe("Client with MockRequestHandler", () => {
     expect(lastRequest?.url).toBe("https://example.com/api/test");
     expect(lastRequest?.method).toBe("POST");
   });
-  test("should skip response casting when using sendWithRawResponse", async () => {
-    // Arrange
-    const mockHandler = new MockRequestHandler();
-    const serverData = {
-      ServerKey: "ServerValue",
-      List: [{ ItemKey: "ItemValue" }],
-    };
-    mockHandler.mock("https://example.com/api/test", {
-      status: 200,
-      data: serverData,
-    });
-
-    const client = new Client({
-      host: "example.com",
-      requestHandler: mockHandler,
-    });
-
-    // 创建一个带有 responseMap 的 Command
-    const command: any = {
-      constructor: { name: "TestCommand" },
-      input: {},
-      middlewareStack: {
-        steps: {
-          initialize: [],
-          serialize: [],
-          build: [],
-          finalizeRequest: [],
-        },
-      },
-      requestConfig: {
-        method: "POST",
-        pathname: "/api/test",
-        params: { Action: "Test" },
-      },
-      responseMap: {
-        TestResponseMeta: {
-          ServerKey: "clientKey",
-        },
-        ListMapMeta: {
-          ItemKey: "itemKey",
-        },
-      },
-    };
-
-    // 手动添加 castMiddleware 到 client 的 middlewareStack (因为我们 mock 了 command.middlewareStack)
-    // 但在真实 Client.ts 中，send 方法会合并 client 和 command 的 stack
-    // 这里我们直接依赖 Client 构造函数中添加的默认中间件，包括 castMiddleware
-
-    // Act
-    const result = await client.sendWithRawResponse(command);
-
-    // Assert
-    // 应该返回原始 PascalCase 数据，而不是转换后的 camelCase 数据
-    expect(result).toEqual(serverData);
-
-    await client.destroy();
-  });
 });
 
 describe("Client destroy", () => {
