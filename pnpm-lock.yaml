@@ -52,6 +52,1280 @@ importers:
         specifier: ^5.2.2
         version: 5.9.3
 
+  service/acep:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/advdefence:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/advdefence20230308:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/aiotvideo:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/aiotvideo20231001:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/alb:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/apig:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/apig20221112:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/ark:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/billing:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/bmq:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/bmq20240901:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/bytehouse:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/bytehousece20240831:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/cbr:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/cdn:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/cen:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/certificateservice:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/clb:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/cloudidentity:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/cloudmonitor:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/cloudtrail20180101:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/config:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/coze20250601:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/cp:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/cr:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/cv20240606:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/dataleap:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/dbw:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/dcdn:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/directconnect:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/dms:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/dms20250101:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/dns:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/ecs:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/edx:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/escloud:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/filenas:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/flink20250101:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/fwcenter:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/ga:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/graph:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/graph20250815:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/gtm:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/hbase:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/i18nopenapi:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/iam:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/iam20210801:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/kafka:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/kms:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/mcdn:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/mcs:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/metakms:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/milvus:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/mongodb:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/na:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/natgateway:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/nta:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/organization:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/pca20251001:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/privatelink:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/privatezone:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/quota:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/rabbitmq:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/rcs5g:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/rdsmssql:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/rdsmysqlv2:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/rdspostgresql:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/redis:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/resourcecenter:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/resourceshare:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/rocketmq:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/secagent:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/seccenter:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/seccenter20240508:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/smc:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/speechsaasprod:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/speechsaasprod20250521:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/sqs:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/storageebs:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/sts:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/tag:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/tis:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/transitrouter:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/translate20250301:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/vedbm:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/vefaas:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/vefaasdev:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/veiapi:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/vepfs:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/vke:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/vmp:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/vod20250101:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/volcobserve:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/vpc:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/vpn:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/waf:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/wtn:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.28
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
 packages:
 
   '@ast-grep/napi-darwin-arm64@0.37.0':
