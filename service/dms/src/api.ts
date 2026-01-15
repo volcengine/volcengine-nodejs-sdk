@@ -37,19 +37,6 @@ export type QueryDataMigrateTaskCommandOutput = CommandOutput<QueryDataMigrateTa
 export type ResumeDataMigrateTaskCommandOutput = CommandOutput<ResumeDataMigrateTaskResponse>;
 export type StopDataMigrateTaskCommandOutput = CommandOutput<StopDataMigrateTaskResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateDataMigrateTaskCommand: CreateDataMigrateTaskCommandOutput;
-    CreateFailureDataMigrateTaskCommand: CreateFailureDataMigrateTaskCommandOutput;
-    ListDataMigrateTaskCommand: ListDataMigrateTaskCommandOutput;
-    QueryDataMigrateTaskCommand: QueryDataMigrateTaskCommandOutput;
-    ResumeDataMigrateTaskCommand: ResumeDataMigrateTaskCommandOutput;
-    StopDataMigrateTaskCommand: StopDataMigrateTaskCommandOutput;
-  }
-}
 
 /**
  * DMSClient Service Client

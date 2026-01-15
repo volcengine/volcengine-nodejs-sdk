@@ -49,23 +49,6 @@ export type ListProjectsCommandOutput = CommandOutput<ListProjectsResponse>;
 export type MoveProjectResourceCommandOutput = CommandOutput<MoveProjectResourceResponse>;
 export type UpdateProjectCommandOutput = CommandOutput<UpdateProjectResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AttachPolicyInProjectCommand: AttachPolicyInProjectCommandOutput;
-    CreateProjectCommand: CreateProjectCommandOutput;
-    DeleteProjectCommand: DeleteProjectCommandOutput;
-    DetachPolicyInProjectCommand: DetachPolicyInProjectCommandOutput;
-    GetProjectCommand: GetProjectCommandOutput;
-    ListProjectIdentitiesCommand: ListProjectIdentitiesCommandOutput;
-    ListProjectResourcesCommand: ListProjectResourcesCommandOutput;
-    ListProjectsCommand: ListProjectsCommandOutput;
-    MoveProjectResourceCommand: MoveProjectResourceCommandOutput;
-    UpdateProjectCommand: UpdateProjectCommandOutput;
-  }
-}
 
 /**
  * IAM20210801Client Service Client

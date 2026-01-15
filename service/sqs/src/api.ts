@@ -43,21 +43,6 @@ export type ReceiveMessageCommandOutput = CommandOutput<ReceiveMessageResponse>;
 export type SendMessageCommandOutput = CommandOutput<SendMessageResponse>;
 export type SetQueueAttributesCommandOutput = CommandOutput<SetQueueAttributesResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateQueueCommand: CreateQueueCommandOutput;
-    DeleteMessageCommand: DeleteMessageCommandOutput;
-    DeleteQueueCommand: DeleteQueueCommandOutput;
-    GetQueueAttributesCommand: GetQueueAttributesCommandOutput;
-    ListQueuesCommand: ListQueuesCommandOutput;
-    ReceiveMessageCommand: ReceiveMessageCommandOutput;
-    SendMessageCommand: SendMessageCommandOutput;
-    SetQueueAttributesCommand: SetQueueAttributesCommandOutput;
-  }
-}
 
 /**
  * SQSClient Service Client

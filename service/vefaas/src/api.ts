@@ -178,66 +178,6 @@ export type UpdateKafkaTriggerCommandOutput = CommandOutput<UpdateKafkaTriggerRe
 export type UpdateReleaseCommandOutput = CommandOutput<UpdateReleaseResponse>;
 export type UpdateTimerCommandOutput = CommandOutput<UpdateTimerResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AbortReleaseCommand: AbortReleaseCommandOutput;
-    CancelSandboxImagePrecacheTicketCommand: CancelSandboxImagePrecacheTicketCommandOutput;
-    CreateDependencyInstallTaskCommand: CreateDependencyInstallTaskCommandOutput;
-    CreateFunctionCommand: CreateFunctionCommandOutput;
-    CreateKafkaTriggerCommand: CreateKafkaTriggerCommandOutput;
-    CreateSandboxCommand: CreateSandboxCommandOutput;
-    CreateTimerCommand: CreateTimerCommandOutput;
-    DeleteFunctionCommand: DeleteFunctionCommandOutput;
-    DeleteKafkaTriggerCommand: DeleteKafkaTriggerCommandOutput;
-    DeleteSandboxImageCommand: DeleteSandboxImageCommandOutput;
-    DeleteTimerCommand: DeleteTimerCommandOutput;
-    DescribeSandboxCommand: DescribeSandboxCommandOutput;
-    EnableUserCrVpcTunnelCommand: EnableUserCrVpcTunnelCommandOutput;
-    GenWebshellEndpointCommand: GenWebshellEndpointCommandOutput;
-    GetAvailabilityZonesCommand: GetAvailabilityZonesCommandOutput;
-    GetCodeUploadAddressCommand: GetCodeUploadAddressCommandOutput;
-    GetDependencyInstallTaskLogDownloadURICommand: GetDependencyInstallTaskLogDownloadURICommandOutput;
-    GetDependencyInstallTaskStatusCommand: GetDependencyInstallTaskStatusCommandOutput;
-    GetFunctionCommand: GetFunctionCommandOutput;
-    GetFunctionInstanceLogsCommand: GetFunctionInstanceLogsCommandOutput;
-    GetFunctionResourceCommand: GetFunctionResourceCommandOutput;
-    GetImageSyncStatusCommand: GetImageSyncStatusCommandOutput;
-    GetKafkaTriggerCommand: GetKafkaTriggerCommandOutput;
-    GetPublicSandboxImageGroupsCommand: GetPublicSandboxImageGroupsCommandOutput;
-    GetReleaseStatusCommand: GetReleaseStatusCommandOutput;
-    GetRevisionCommand: GetRevisionCommandOutput;
-    GetRocketMQTriggerCommand: GetRocketMQTriggerCommandOutput;
-    GetSandboxImagePrecacheTicketCommand: GetSandboxImagePrecacheTicketCommandOutput;
-    GetTimerCommand: GetTimerCommandOutput;
-    KillSandboxCommand: KillSandboxCommandOutput;
-    ListAsyncTasksCommand: ListAsyncTasksCommandOutput;
-    ListFunctionElasticScaleStrategyCommand: ListFunctionElasticScaleStrategyCommandOutput;
-    ListFunctionInstancesCommand: ListFunctionInstancesCommandOutput;
-    ListFunctionsCommand: ListFunctionsCommandOutput;
-    ListReleaseRecordsCommand: ListReleaseRecordsCommandOutput;
-    ListRevisionsCommand: ListRevisionsCommandOutput;
-    ListSandboxImagePrecacheTicketsCommand: ListSandboxImagePrecacheTicketsCommandOutput;
-    ListSandboxImagesCommand: ListSandboxImagesCommandOutput;
-    ListSandboxesCommand: ListSandboxesCommandOutput;
-    ListTriggersCommand: ListTriggersCommandOutput;
-    PrecacheSandboxImagesCommand: PrecacheSandboxImagesCommandOutput;
-    QueryUserCrVpcTunnelCommand: QueryUserCrVpcTunnelCommandOutput;
-    ReleaseCommand: ReleaseCommandOutput;
-    SetSandboxTimeoutCommand: SetSandboxTimeoutCommandOutput;
-    TerminateAsyncTaskCommand: TerminateAsyncTaskCommandOutput;
-    TerminateDependencyInstallTaskCommand: TerminateDependencyInstallTaskCommandOutput;
-    TransitionSandboxCommand: TransitionSandboxCommandOutput;
-    UpdateFunctionCommand: UpdateFunctionCommandOutput;
-    UpdateFunctionMetricScaleStrategyRulesCommand: UpdateFunctionMetricScaleStrategyRulesCommandOutput;
-    UpdateFunctionResourceCommand: UpdateFunctionResourceCommandOutput;
-    UpdateKafkaTriggerCommand: UpdateKafkaTriggerCommandOutput;
-    UpdateReleaseCommand: UpdateReleaseCommandOutput;
-    UpdateTimerCommand: UpdateTimerCommandOutput;
-  }
-}
 
 /**
  * VEFAASClient Service Client

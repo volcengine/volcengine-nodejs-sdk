@@ -97,39 +97,6 @@ export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UploadLeafCertificateCommandOutput = CommandOutput<UploadLeafCertificateResponse>;
 export type UploadRootInstanceCommandOutput = CommandOutput<UploadRootInstanceResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateLeafInstanceCommand: CreateLeafInstanceCommandOutput;
-    CreateRootInstanceCommand: CreateRootInstanceCommandOutput;
-    CreateSubInstanceCommand: CreateSubInstanceCommandOutput;
-    DeleteLeafInstanceCommand: DeleteLeafInstanceCommandOutput;
-    DeleteRootInstanceCommand: DeleteRootInstanceCommandOutput;
-    DeleteSubInstanceCommand: DeleteSubInstanceCommandOutput;
-    DisableRootInstanceCommand: DisableRootInstanceCommandOutput;
-    DisableSubInstanceCommand: DisableSubInstanceCommandOutput;
-    DownloadLeafInstanceCommand: DownloadLeafInstanceCommandOutput;
-    EnableRootInstanceCommand: EnableRootInstanceCommandOutput;
-    EnableSubInstanceCommand: EnableSubInstanceCommandOutput;
-    GetLeafInstanceCommand: GetLeafInstanceCommandOutput;
-    GetQuotaDetailCommand: GetQuotaDetailCommandOutput;
-    GetRootInstanceCommand: GetRootInstanceCommandOutput;
-    GetSubInstanceCommand: GetSubInstanceCommandOutput;
-    ListLeafInstancesCommand: ListLeafInstancesCommandOutput;
-    ListRootInstancesCommand: ListRootInstancesCommandOutput;
-    ListSubInstancesCommand: ListSubInstancesCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    RevokeLeafInstanceCommand: RevokeLeafInstanceCommandOutput;
-    RevokeRootInstanceCommand: RevokeRootInstanceCommandOutput;
-    RevokeSubInstanceCommand: RevokeSubInstanceCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-    UploadLeafCertificateCommand: UploadLeafCertificateCommandOutput;
-    UploadRootInstanceCommand: UploadRootInstanceCommandOutput;
-  }
-}
 
 /**
  * PCA20251001Client Service Client

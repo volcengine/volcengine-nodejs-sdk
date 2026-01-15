@@ -160,60 +160,6 @@ export type UpdateAccountCommandOutput = CommandOutput<UpdateAccountResponse>;
 export type UpdateOrganizationalUnitCommandOutput = CommandOutput<UpdateOrganizationalUnitResponse>;
 export type UpdateServiceControlPolicyCommandOutput = CommandOutput<UpdateServiceControlPolicyResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AcceptInvitationCommand: AcceptInvitationCommandOutput;
-    AcceptQuitApplicationCommand: AcceptQuitApplicationCommandOutput;
-    AttachServiceControlPolicyCommand: AttachServiceControlPolicyCommandOutput;
-    CancelChangeAccountSecureContactInfoCommand: CancelChangeAccountSecureContactInfoCommandOutput;
-    CancelInvitationCommand: CancelInvitationCommandOutput;
-    ChangeAccountSecureContactInfoCommand: ChangeAccountSecureContactInfoCommandOutput;
-    CreateAccountCommand: CreateAccountCommandOutput;
-    CreateOrganizationCommand: CreateOrganizationCommandOutput;
-    CreateOrganizationalUnitCommand: CreateOrganizationalUnitCommandOutput;
-    CreateServiceControlPolicyCommand: CreateServiceControlPolicyCommandOutput;
-    DeleteOrganizationCommand: DeleteOrganizationCommandOutput;
-    DeleteOrganizationalUnitCommand: DeleteOrganizationalUnitCommandOutput;
-    DeleteServiceControlPolicyCommand: DeleteServiceControlPolicyCommandOutput;
-    DescribeAccountCommand: DescribeAccountCommandOutput;
-    DescribeAccountInvitationCommand: DescribeAccountInvitationCommandOutput;
-    DescribeOrganizationCommand: DescribeOrganizationCommandOutput;
-    DescribeOrganizationalUnitCommand: DescribeOrganizationalUnitCommandOutput;
-    DescribeQuitApplicationCommand: DescribeQuitApplicationCommandOutput;
-    DetachServiceControlPolicyCommand: DetachServiceControlPolicyCommandOutput;
-    DisableConsoleLoginCommand: DisableConsoleLoginCommandOutput;
-    DisableServiceControlPolicyCommand: DisableServiceControlPolicyCommandOutput;
-    EnableConsoleLoginCommand: EnableConsoleLoginCommandOutput;
-    EnableServiceControlPolicyCommand: EnableServiceControlPolicyCommandOutput;
-    GetAccountSecureContactInfoCommand: GetAccountSecureContactInfoCommandOutput;
-    GetServiceControlPolicyCommand: GetServiceControlPolicyCommandOutput;
-    GetServiceControlPolicyEnablementCommand: GetServiceControlPolicyEnablementCommandOutput;
-    InviteAccountCommand: InviteAccountCommandOutput;
-    ListAccountsCommand: ListAccountsCommandOutput;
-    ListInvitationsCommand: ListInvitationsCommandOutput;
-    ListOrganizationalUnitsCommand: ListOrganizationalUnitsCommandOutput;
-    ListOrganizationalUnitsForParentCommand: ListOrganizationalUnitsForParentCommandOutput;
-    ListPoliciesForTargetCommand: ListPoliciesForTargetCommandOutput;
-    ListServiceControlPoliciesCommand: ListServiceControlPoliciesCommandOutput;
-    ListTagResourcesCommand: ListTagResourcesCommandOutput;
-    ListTargetsForPolicyCommand: ListTargetsForPolicyCommandOutput;
-    MoveAccountCommand: MoveAccountCommandOutput;
-    QuitOrganizationCommand: QuitOrganizationCommandOutput;
-    ReInviteAccountCommand: ReInviteAccountCommandOutput;
-    RejectInvitationCommand: RejectInvitationCommandOutput;
-    RejectQuitApplicationCommand: RejectQuitApplicationCommandOutput;
-    RemoveAccountCommand: RemoveAccountCommandOutput;
-    RetryChangeAccountSecureContactInfoCommand: RetryChangeAccountSecureContactInfoCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-    UpdateAccountCommand: UpdateAccountCommandOutput;
-    UpdateOrganizationalUnitCommand: UpdateOrganizationalUnitCommandOutput;
-    UpdateServiceControlPolicyCommand: UpdateServiceControlPolicyCommandOutput;
-  }
-}
 
 /**
  * ORGANIZATIONClient Service Client

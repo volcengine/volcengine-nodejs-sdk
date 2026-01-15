@@ -46,22 +46,6 @@ export type PlayCloudRecordCommandOutput = CommandOutput<PlayCloudRecordResponse
 export type StartPlaybackCommandOutput = CommandOutput<StartPlaybackResponse>;
 export type StopPlaybackCommandOutput = CommandOutput<StopPlaybackResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CloudControlCommand: CloudControlCommandOutput;
-    ControlPlaybackCommand: ControlPlaybackCommandOutput;
-    DownloadLocalMediaCommand: DownloadLocalMediaCommandOutput;
-    GetRecordListCommand: GetRecordListCommandOutput;
-    ListStreamRecordsCommand: ListStreamRecordsCommandOutput;
-    ListStreamScreenshotsCommand: ListStreamScreenshotsCommandOutput;
-    PlayCloudRecordCommand: PlayCloudRecordCommandOutput;
-    StartPlaybackCommand: StartPlaybackCommandOutput;
-    StopPlaybackCommand: StopPlaybackCommandOutput;
-  }
-}
 
 /**
  * AIOTVIDEO20231001Client Service Client

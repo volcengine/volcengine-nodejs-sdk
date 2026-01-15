@@ -148,56 +148,6 @@ export type UpdateClusterConfigCommandOutput = CommandOutput<UpdateClusterConfig
 export type UpdateNodePoolConfigCommandOutput = CommandOutput<UpdateNodePoolConfigResponse>;
 export type UpdateScalingPolicyCommandOutput = CommandOutput<UpdateScalingPolicyResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    BindingRemedyConfigCommand: BindingRemedyConfigCommandOutput;
-    CreateAddonCommand: CreateAddonCommandOutput;
-    CreateClusterCommand: CreateClusterCommandOutput;
-    CreateDefaultNodePoolCommand: CreateDefaultNodePoolCommandOutput;
-    CreateKubeconfigCommand: CreateKubeconfigCommandOutput;
-    CreateNodePoolCommand: CreateNodePoolCommandOutput;
-    CreateNodesCommand: CreateNodesCommandOutput;
-    CreateScalingPolicyCommand: CreateScalingPolicyCommandOutput;
-    DeleteAddonCommand: DeleteAddonCommandOutput;
-    DeleteClusterCommand: DeleteClusterCommandOutput;
-    DeleteKubeconfigsCommand: DeleteKubeconfigsCommandOutput;
-    DeleteNodePoolCommand: DeleteNodePoolCommandOutput;
-    DeleteNodesCommand: DeleteNodesCommandOutput;
-    DeleteScalingPoliciesCommand: DeleteScalingPoliciesCommandOutput;
-    ExecContainerImageCommitmentCommand: ExecContainerImageCommitmentCommandOutput;
-    ForwardKubernetesApiCommand: ForwardKubernetesApiCommandOutput;
-    GetGlobalDefaultDeleteOptionCommand: GetGlobalDefaultDeleteOptionCommandOutput;
-    GrantPermissionCommand: GrantPermissionCommandOutput;
-    ListAddonsCommand: ListAddonsCommandOutput;
-    ListClustersCommand: ListClustersCommandOutput;
-    ListInstanceTypeLabelsCommand: ListInstanceTypeLabelsCommandOutput;
-    ListKubeconfigsCommand: ListKubeconfigsCommandOutput;
-    ListNodePoolsCommand: ListNodePoolsCommandOutput;
-    ListNodesCommand: ListNodesCommandOutput;
-    ListPermissionsCommand: ListPermissionsCommandOutput;
-    ListRemedyConfigsCommand: ListRemedyConfigsCommandOutput;
-    ListScalingEventsCommand: ListScalingEventsCommandOutput;
-    ListScalingPoliciesCommand: ListScalingPoliciesCommandOutput;
-    ListSupportedAddInstanceTypesCommand: ListSupportedAddInstanceTypesCommandOutput;
-    ListSupportedAddonsCommand: ListSupportedAddonsCommandOutput;
-    ListSupportedImagesCommand: ListSupportedImagesCommandOutput;
-    ListSupportedResourceTypesCommand: ListSupportedResourceTypesCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    RevokePermissionCommand: RevokePermissionCommandOutput;
-    SetGlobalDefaultDeleteOptionCommand: SetGlobalDefaultDeleteOptionCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UnbindingRemedyConfigCommand: UnbindingRemedyConfigCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-    UpdateAddonConfigCommand: UpdateAddonConfigCommandOutput;
-    UpdateAddonVersionCommand: UpdateAddonVersionCommandOutput;
-    UpdateClusterConfigCommand: UpdateClusterConfigCommandOutput;
-    UpdateNodePoolConfigCommand: UpdateNodePoolConfigCommandOutput;
-    UpdateScalingPolicyCommand: UpdateScalingPolicyCommandOutput;
-  }
-}
 
 /**
  * VKEClient Service Client

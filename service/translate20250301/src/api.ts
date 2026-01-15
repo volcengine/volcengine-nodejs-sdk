@@ -37,19 +37,6 @@ export type SubmitAudioCommandOutput = CommandOutput<SubmitAudioResponse>;
 export type TranslateImageCommandOutput = CommandOutput<TranslateImageResponse>;
 export type TranslateTextCommandOutput = CommandOutput<TranslateTextResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    GetUsageCommand: GetUsageCommandOutput;
-    LangDetectCommand: LangDetectCommandOutput;
-    QueryAudioCommand: QueryAudioCommandOutput;
-    SubmitAudioCommand: SubmitAudioCommandOutput;
-    TranslateImageCommand: TranslateImageCommandOutput;
-    TranslateTextCommand: TranslateTextCommandOutput;
-  }
-}
 
 /**
  * TRANSLATE20250301Client Service Client

@@ -94,38 +94,6 @@ export type SetDefSwitchCommandOutput = CommandOutput<SetDefSwitchResponse>;
 export type UpdHostRuleCommandOutput = CommandOutput<UpdHostRuleResponse>;
 export type UpdateAtkAlarmThresholdCommandOutput = CommandOutput<UpdateAtkAlarmThresholdResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddHostRuleCommand: AddHostRuleCommandOutput;
-    BatchAddHostRuleCommand: BatchAddHostRuleCommandOutput;
-    BatchDelHostRuleCommand: BatchDelHostRuleCommandOutput;
-    BatchDeleteFwdRuleCommand: BatchDeleteFwdRuleCommandOutput;
-    BatchSwitchBackupServersCommand: BatchSwitchBackupServersCommandOutput;
-    BatchUpdHostRuleCommand: BatchUpdHostRuleCommandOutput;
-    DelHostRuleCommand: DelHostRuleCommandOutput;
-    DescAtkAlarmThresholdCommand: DescAtkAlarmThresholdCommandOutput;
-    DescCertificateCommand: DescCertificateCommandOutput;
-    DescFwdRuleCommand: DescFwdRuleCommandOutput;
-    DescHostRulesCommand: DescHostRulesCommandOutput;
-    DescInstanceListCommand: DescInstanceListCommandOutput;
-    DescWebAtkOverviewCommand: DescWebAtkOverviewCommandOutput;
-    DescWebAtkStatisticsCommand: DescWebAtkStatisticsCommandOutput;
-    DescWebAtkTopSrcIpCommand: DescWebAtkTopSrcIpCommandOutput;
-    DescWebAtkTopUrlCommand: DescWebAtkTopUrlCommandOutput;
-    DescWebBpsFlowCommand: DescWebBpsFlowCommandOutput;
-    DescWebQpsFlowCommand: DescWebQpsFlowCommandOutput;
-    DescWebRespCodeCommand: DescWebRespCodeCommandOutput;
-    GetFwdRuleLipListCommand: GetFwdRuleLipListCommandOutput;
-    GetHostDefStatusCommand: GetHostDefStatusCommandOutput;
-    GetWebDefAttackLogCommand: GetWebDefAttackLogCommandOutput;
-    SetDefSwitchCommand: SetDefSwitchCommandOutput;
-    UpdHostRuleCommand: UpdHostRuleCommandOutput;
-    UpdateAtkAlarmThresholdCommand: UpdateAtkAlarmThresholdCommandOutput;
-  }
-}
 
 /**
  * ADVDEFENCEClient Service Client

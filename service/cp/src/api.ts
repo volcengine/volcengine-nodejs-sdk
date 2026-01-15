@@ -109,43 +109,6 @@ export type UpdateTriggerCommandOutput = CommandOutput<UpdateTriggerResponse>;
 export type UpdateWorkspaceCommandOutput = CommandOutput<UpdateWorkspaceResponse>;
 export type UpgradeComponentStepCommandOutput = CommandOutput<UpgradeComponentStepResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CancelPipelineRunCommand: CancelPipelineRunCommandOutput;
-    CreateComponentStepCommand: CreateComponentStepCommandOutput;
-    CreatePipelineWebhookURLCommand: CreatePipelineWebhookURLCommandOutput;
-    CreateResourceCommand: CreateResourceCommandOutput;
-    CreateServiceConnectionCommand: CreateServiceConnectionCommandOutput;
-    CreateTriggerCommand: CreateTriggerCommandOutput;
-    CreateWorkspaceCommand: CreateWorkspaceCommandOutput;
-    DeleteComponentStepCommand: DeleteComponentStepCommandOutput;
-    DeletePipelineCommand: DeletePipelineCommandOutput;
-    DeleteResourceCommand: DeleteResourceCommandOutput;
-    DeleteServiceConnectionCommand: DeleteServiceConnectionCommandOutput;
-    DeleteTriggerCommand: DeleteTriggerCommandOutput;
-    DeleteWorkspaceCommand: DeleteWorkspaceCommandOutput;
-    GetServiceConnectionCommand: GetServiceConnectionCommandOutput;
-    GetTaskRunLogCommand: GetTaskRunLogCommandOutput;
-    GetTaskRunLogDownloadURICommand: GetTaskRunLogDownloadURICommandOutput;
-    ListComponentStepCommand: ListComponentStepCommandOutput;
-    ListPipelineRunsCommand: ListPipelineRunsCommandOutput;
-    ListResourcesCommand: ListResourcesCommandOutput;
-    ListServiceConnectionsCommand: ListServiceConnectionsCommandOutput;
-    ListTaskRunsCommand: ListTaskRunsCommandOutput;
-    ListTriggersCommand: ListTriggersCommandOutput;
-    ListWorkspacesCommand: ListWorkspacesCommandOutput;
-    RunPipelineCommand: RunPipelineCommandOutput;
-    UpdateComponentStepCommand: UpdateComponentStepCommandOutput;
-    UpdateResourceCommand: UpdateResourceCommandOutput;
-    UpdateServiceConnectionCommand: UpdateServiceConnectionCommandOutput;
-    UpdateTriggerCommand: UpdateTriggerCommandOutput;
-    UpdateWorkspaceCommand: UpdateWorkspaceCommandOutput;
-    UpgradeComponentStepCommand: UpgradeComponentStepCommandOutput;
-  }
-}
 
 /**
  * CPClient Service Client

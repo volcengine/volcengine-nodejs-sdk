@@ -103,41 +103,6 @@ export type SubmitPreloadTaskCommandOutput = CommandOutput<SubmitPreloadTaskResp
 export type SubmitRefreshTaskCommandOutput = CommandOutput<SubmitRefreshTaskResponse>;
 export type UpdateDnsScheduleStaticWeightCommandOutput = CommandOutput<UpdateDnsScheduleStaticWeightResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddDnsScheduleStaticWeightCommand: AddDnsScheduleStaticWeightCommandOutput;
-    DeleteDnsScheduleStaticWeightCommand: DeleteDnsScheduleStaticWeightCommandOutput;
-    DescribeAlertStrategyCommand: DescribeAlertStrategyCommandOutput;
-    DescribeCdnAccessLogCommand: DescribeCdnAccessLogCommandOutput;
-    DescribeCdnDataOfflineCommand: DescribeCdnDataOfflineCommandOutput;
-    DescribeCdnOriginDataOfflineCommand: DescribeCdnOriginDataOfflineCommandOutput;
-    DescribeCdnRegionAndIspCommand: DescribeCdnRegionAndIspCommandOutput;
-    DescribeCdnTopIpCommand: DescribeCdnTopIpCommandOutput;
-    DescribeCdnTopUrlCommand: DescribeCdnTopUrlCommandOutput;
-    DescribeContentQuotaCommand: DescribeContentQuotaCommandOutput;
-    DescribeContentTaskByTaskIdCommand: DescribeContentTaskByTaskIdCommandOutput;
-    DescribeDnsScheduleCommand: DescribeDnsScheduleCommandOutput;
-    DescribeDnsScheduleActiveWeightsCommand: DescribeDnsScheduleActiveWeightsCommandOutput;
-    DescribeDnsScheduleStaticWeightsCommand: DescribeDnsScheduleStaticWeightsCommandOutput;
-    DisableDnsScheduleDomainCommand: DisableDnsScheduleDomainCommandOutput;
-    EnableDnsScheduleDomainCommand: EnableDnsScheduleDomainCommandOutput;
-    ListAlertMetaMetricsCommand: ListAlertMetaMetricsCommandOutput;
-    ListAlertStrategiesCommand: ListAlertStrategiesCommandOutput;
-    ListCdnDomainsCommand: ListCdnDomainsCommandOutput;
-    ListCloudAccountsCommand: ListCloudAccountsCommandOutput;
-    ListContentTasksCommand: ListContentTasksCommandOutput;
-    ListDnsSchedulesCommand: ListDnsSchedulesCommandOutput;
-    ListVendorContentTaskCommand: ListVendorContentTaskCommandOutput;
-    ListViewsCommand: ListViewsCommandOutput;
-    SubmitOverseaPreloadTaskCommand: SubmitOverseaPreloadTaskCommandOutput;
-    SubmitPreloadTaskCommand: SubmitPreloadTaskCommandOutput;
-    SubmitRefreshTaskCommand: SubmitRefreshTaskCommandOutput;
-    UpdateDnsScheduleStaticWeightCommand: UpdateDnsScheduleStaticWeightCommandOutput;
-  }
-}
 
 /**
  * MCDNClient Service Client

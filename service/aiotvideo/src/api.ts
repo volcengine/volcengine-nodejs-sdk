@@ -151,57 +151,6 @@ export type UpdateScreenshotTemplateCommandOutput = CommandOutput<UpdateScreensh
 export type UpdateSpaceCommandOutput = CommandOutput<UpdateSpaceResponse>;
 export type UpdateStreamCommandOutput = CommandOutput<UpdateStreamResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CancelBindTemplateCommand: CancelBindTemplateCommandOutput;
-    CancelStreamTemplateCommand: CancelStreamTemplateCommandOutput;
-    CancelStreamTemplateV2Command: CancelStreamTemplateV2CommandOutput;
-    CreateDeviceCommand: CreateDeviceCommandOutput;
-    CreateScreenshotTemplateCommand: CreateScreenshotTemplateCommandOutput;
-    CreateSpaceCommand: CreateSpaceCommandOutput;
-    CreateStreamCommand: CreateStreamCommandOutput;
-    DeleteDeviceCommand: DeleteDeviceCommandOutput;
-    DeleteScreenshotTemplateCommand: DeleteScreenshotTemplateCommandOutput;
-    DeleteSpaceCommand: DeleteSpaceCommandOutput;
-    DeleteStreamCommand: DeleteStreamCommandOutput;
-    DeleteStreamRecordCommand: DeleteStreamRecordCommandOutput;
-    FreshDeviceCommand: FreshDeviceCommandOutput;
-    GetDataProjectWithBindWidthAndFlowCommand: GetDataProjectWithBindWidthAndFlowCommandOutput;
-    GetDeviceCommand: GetDeviceCommandOutput;
-    GetDeviceChannelsV2Command: GetDeviceChannelsV2CommandOutput;
-    GetLocalDownloadCommand: GetLocalDownloadCommandOutput;
-    GetPushStreamCntCommand: GetPushStreamCntCommandOutput;
-    GetScreenshotTemplateCommand: GetScreenshotTemplateCommandOutput;
-    GetSpaceCommand: GetSpaceCommandOutput;
-    GetSpaceTemplateCommand: GetSpaceTemplateCommandOutput;
-    GetStreamCommand: GetStreamCommandOutput;
-    GetStreamDataCommand: GetStreamDataCommandOutput;
-    GetStreamRecordCommand: GetStreamRecordCommandOutput;
-    ListDeviceScreenshotsV2Command: ListDeviceScreenshotsV2CommandOutput;
-    ListDevicesCommand: ListDevicesCommandOutput;
-    ListScreenshotTemplatesCommand: ListScreenshotTemplatesCommandOutput;
-    ListSpacesCommand: ListSpacesCommandOutput;
-    ListStreamsCommand: ListStreamsCommandOutput;
-    SetSpaceTemplateCommand: SetSpaceTemplateCommandOutput;
-    SetStreamTemplateCommand: SetStreamTemplateCommandOutput;
-    SetStreamTemplateV2Command: SetStreamTemplateV2CommandOutput;
-    StartSpaceCommand: StartSpaceCommandOutput;
-    StartStreamCommand: StartStreamCommandOutput;
-    StartVoiceTalkCommand: StartVoiceTalkCommandOutput;
-    StatStreamCommand: StatStreamCommandOutput;
-    StopSpaceCommand: StopSpaceCommandOutput;
-    StopVoiceTalkCommand: StopVoiceTalkCommandOutput;
-    StreamStartRecordCommand: StreamStartRecordCommandOutput;
-    StreamStopRecordCommand: StreamStopRecordCommandOutput;
-    UpdateDeviceCommand: UpdateDeviceCommandOutput;
-    UpdateScreenshotTemplateCommand: UpdateScreenshotTemplateCommandOutput;
-    UpdateSpaceCommand: UpdateSpaceCommandOutput;
-    UpdateStreamCommand: UpdateStreamCommandOutput;
-  }
-}
 
 /**
  * AIOTVIDEOClient Service Client

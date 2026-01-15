@@ -37,19 +37,6 @@ export type StartLoggingCommandOutput = CommandOutput<StartLoggingResponse>;
 export type StopLoggingCommandOutput = CommandOutput<StopLoggingResponse>;
 export type UpdateTrailCommandOutput = CommandOutput<UpdateTrailResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateTrailCommand: CreateTrailCommandOutput;
-    DeleteTrailCommand: DeleteTrailCommandOutput;
-    DescribeTrailsCommand: DescribeTrailsCommandOutput;
-    StartLoggingCommand: StartLoggingCommandOutput;
-    StopLoggingCommand: StopLoggingCommandOutput;
-    UpdateTrailCommand: UpdateTrailCommandOutput;
-  }
-}
 
 /**
  * CLOUDTRAIL20180101Client Service Client

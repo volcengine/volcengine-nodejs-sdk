@@ -76,32 +76,6 @@ export type ModifyQuotaTemplateServiceStatusCommandOutput = CommandOutput<Modify
 export type ModifyTemplateQuotaItemCommandOutput = CommandOutput<ModifyTemplateQuotaItemResponse>;
 export type UpdateAlarmRuleCommandOutput = CommandOutput<UpdateAlarmRuleResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateAlarmRuleCommand: CreateAlarmRuleCommandOutput;
-    CreateQuotaApplicationCommand: CreateQuotaApplicationCommandOutput;
-    CreateTemplateQuotaItemCommand: CreateTemplateQuotaItemCommandOutput;
-    DeleteAlarmRulesCommand: DeleteAlarmRulesCommandOutput;
-    DeleteTemplateQuotaItemCommand: DeleteTemplateQuotaItemCommandOutput;
-    GetAlarmRuleCommand: GetAlarmRuleCommandOutput;
-    GetProductQuotaCommand: GetProductQuotaCommandOutput;
-    GetQuotaApplicationCommand: GetQuotaApplicationCommandOutput;
-    GetQuotaTemplateServiceStatusCommand: GetQuotaTemplateServiceStatusCommandOutput;
-    ListAlarmHistoryCommand: ListAlarmHistoryCommandOutput;
-    ListProductQuotaDimensionsCommand: ListProductQuotaDimensionsCommandOutput;
-    ListProductQuotasCommand: ListProductQuotasCommandOutput;
-    ListProductsCommand: ListProductsCommandOutput;
-    ListQuotaAlarmRulesCommand: ListQuotaAlarmRulesCommandOutput;
-    ListQuotaApplicationTemplatesCommand: ListQuotaApplicationTemplatesCommandOutput;
-    ListQuotaApplicationsCommand: ListQuotaApplicationsCommandOutput;
-    ModifyQuotaTemplateServiceStatusCommand: ModifyQuotaTemplateServiceStatusCommandOutput;
-    ModifyTemplateQuotaItemCommand: ModifyTemplateQuotaItemCommandOutput;
-    UpdateAlarmRuleCommand: UpdateAlarmRuleCommandOutput;
-  }
-}
 
 /**
  * QUOTAClient Service Client

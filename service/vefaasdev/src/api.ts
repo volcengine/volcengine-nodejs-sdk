@@ -94,38 +94,6 @@ export type UpdateFunctionCommandOutput = CommandOutput<UpdateFunctionResponse>;
 export type UpdateReleaseCommandOutput = CommandOutput<UpdateReleaseResponse>;
 export type WriteFilesCommandOutput = CommandOutput<WriteFilesResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AbortReleaseCommand: AbortReleaseCommandOutput;
-    CreateDebugInstanceCommand: CreateDebugInstanceCommandOutput;
-    CreateFunctionCommand: CreateFunctionCommandOutput;
-    CreateSandboxCommand: CreateSandboxCommandOutput;
-    DeleteFunctionCommand: DeleteFunctionCommandOutput;
-    DescribeSandboxCommand: DescribeSandboxCommandOutput;
-    GenWebshellEndpointCommand: GenWebshellEndpointCommandOutput;
-    GetAvailabilityZonesCommand: GetAvailabilityZonesCommandOutput;
-    GetFunctionCommand: GetFunctionCommandOutput;
-    GetFunctionInstanceLogsCommand: GetFunctionInstanceLogsCommandOutput;
-    GetReleaseStatusCommand: GetReleaseStatusCommandOutput;
-    GetRevisionCommand: GetRevisionCommandOutput;
-    KillSandboxCommand: KillSandboxCommandOutput;
-    ListFunctionInstancesCommand: ListFunctionInstancesCommandOutput;
-    ListFunctionsCommand: ListFunctionsCommandOutput;
-    ListReleaseRecordsCommand: ListReleaseRecordsCommandOutput;
-    ListRevisionsCommand: ListRevisionsCommandOutput;
-    ListSandboxesCommand: ListSandboxesCommandOutput;
-    ReadFilesCommand: ReadFilesCommandOutput;
-    ReleaseCommand: ReleaseCommandOutput;
-    RunCodeCommand: RunCodeCommandOutput;
-    SetSandboxTimeoutCommand: SetSandboxTimeoutCommandOutput;
-    UpdateFunctionCommand: UpdateFunctionCommandOutput;
-    UpdateReleaseCommand: UpdateReleaseCommandOutput;
-    WriteFilesCommand: WriteFilesCommandOutput;
-  }
-}
 
 /**
  * VEFAASDEVClient Service Client

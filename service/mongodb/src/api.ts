@@ -160,60 +160,6 @@ export type RestoreToNewInstanceCommandOutput = CommandOutput<RestoreToNewInstan
 export type SwitchDBMasterCommandOutput = CommandOutput<SwitchDBMasterResponse>;
 export type UpdateDBAccountPrivilegeCommandOutput = CommandOutput<UpdateDBAccountPrivilegeResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddTagsToResourceCommand: AddTagsToResourceCommandOutput;
-    AssociateAllowListCommand: AssociateAllowListCommandOutput;
-    CreateAllowListCommand: CreateAllowListCommandOutput;
-    CreateBackupCommand: CreateBackupCommandOutput;
-    CreateDBAccountCommand: CreateDBAccountCommandOutput;
-    CreateDBEndpointCommand: CreateDBEndpointCommandOutput;
-    CreateDBInstanceCommand: CreateDBInstanceCommandOutput;
-    DeleteAllowListCommand: DeleteAllowListCommandOutput;
-    DeleteDBAccountCommand: DeleteDBAccountCommandOutput;
-    DeleteDBEndpointCommand: DeleteDBEndpointCommandOutput;
-    DeleteDBInstanceCommand: DeleteDBInstanceCommandOutput;
-    DescribeAllowListDetailCommand: DescribeAllowListDetailCommandOutput;
-    DescribeAllowListsCommand: DescribeAllowListsCommandOutput;
-    DescribeAvailabilityZonesCommand: DescribeAvailabilityZonesCommandOutput;
-    DescribeBackupsCommand: DescribeBackupsCommandOutput;
-    DescribeDBAccountsCommand: DescribeDBAccountsCommandOutput;
-    DescribeDBEndpointCommand: DescribeDBEndpointCommandOutput;
-    DescribeDBInstanceBackupPolicyCommand: DescribeDBInstanceBackupPolicyCommandOutput;
-    DescribeDBInstanceBackupURLCommand: DescribeDBInstanceBackupURLCommandOutput;
-    DescribeDBInstanceDetailCommand: DescribeDBInstanceDetailCommandOutput;
-    DescribeDBInstanceParametersCommand: DescribeDBInstanceParametersCommandOutput;
-    DescribeDBInstanceParametersLogCommand: DescribeDBInstanceParametersLogCommandOutput;
-    DescribeDBInstanceSSLCommand: DescribeDBInstanceSSLCommandOutput;
-    DescribeDBInstancesCommand: DescribeDBInstancesCommandOutput;
-    DescribeNodeSpecsCommand: DescribeNodeSpecsCommandOutput;
-    DescribeNormalLogsCommand: DescribeNormalLogsCommandOutput;
-    DescribeRecoverableTimeCommand: DescribeRecoverableTimeCommandOutput;
-    DescribeRegionsCommand: DescribeRegionsCommandOutput;
-    DescribeSlowLogsCommand: DescribeSlowLogsCommandOutput;
-    DisassociateAllowListCommand: DisassociateAllowListCommandOutput;
-    ModifyAllowListCommand: ModifyAllowListCommandOutput;
-    ModifyDBEndpointPortCommand: ModifyDBEndpointPortCommandOutput;
-    ModifyDBEndpointPrivateDNSVisibilityCommand: ModifyDBEndpointPrivateDNSVisibilityCommandOutput;
-    ModifyDBInstanceBackupPolicyCommand: ModifyDBInstanceBackupPolicyCommandOutput;
-    ModifyDBInstanceBackupURLCommand: ModifyDBInstanceBackupURLCommandOutput;
-    ModifyDBInstanceChargeTypeCommand: ModifyDBInstanceChargeTypeCommandOutput;
-    ModifyDBInstanceNameCommand: ModifyDBInstanceNameCommandOutput;
-    ModifyDBInstanceParametersCommand: ModifyDBInstanceParametersCommandOutput;
-    ModifyDBInstanceSSLCommand: ModifyDBInstanceSSLCommandOutput;
-    ModifyDBInstanceSpecCommand: ModifyDBInstanceSpecCommandOutput;
-    ModifyMultiDBInstanceParametersCommand: ModifyMultiDBInstanceParametersCommandOutput;
-    RemoveTagsFromResourceCommand: RemoveTagsFromResourceCommandOutput;
-    ResetDBAccountCommand: ResetDBAccountCommandOutput;
-    RestartDBInstanceCommand: RestartDBInstanceCommandOutput;
-    RestoreToNewInstanceCommand: RestoreToNewInstanceCommandOutput;
-    SwitchDBMasterCommand: SwitchDBMasterCommandOutput;
-    UpdateDBAccountPrivilegeCommand: UpdateDBAccountPrivilegeCommandOutput;
-  }
-}
 
 /**
  * MONGODBClient Service Client

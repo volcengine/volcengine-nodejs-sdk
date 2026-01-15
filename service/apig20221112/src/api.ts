@@ -37,19 +37,6 @@ export type GetRouteCommandOutput = CommandOutput<GetRouteResponse>;
 export type ListRoutesCommandOutput = CommandOutput<ListRoutesResponse>;
 export type UpdateRouteCommandOutput = CommandOutput<UpdateRouteResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CheckRouteExistCommand: CheckRouteExistCommandOutput;
-    CreateRouteCommand: CreateRouteCommandOutput;
-    DeleteRouteCommand: DeleteRouteCommandOutput;
-    GetRouteCommand: GetRouteCommandOutput;
-    ListRoutesCommand: ListRoutesCommandOutput;
-    UpdateRouteCommand: UpdateRouteCommandOutput;
-  }
-}
 
 /**
  * APIG20221112Client Service Client

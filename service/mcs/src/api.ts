@@ -64,28 +64,6 @@ export type PostApiV1AssetDescribeDetailCommandOutput = CommandOutput<PostApiV1A
 export type PostApiV1OverviewDescribeAssetInfoCommandOutput = CommandOutput<PostApiV1OverviewDescribeAssetInfoResponse>;
 export type RiskStatusUpdateBySoarCommandOutput = CommandOutput<RiskStatusUpdateBySoarResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    BanAlertIPCallbackCommand: BanAlertIPCallbackCommandOutput;
-    GetAlarmSyncTaskCommand: GetAlarmSyncTaskCommandOutput;
-    GetApiV1AlarmDetailCommand: GetApiV1AlarmDetailCommandOutput;
-    GetApiV1OverviewAlarmStatsCommand: GetApiV1OverviewAlarmStatsCommandOutput;
-    GetApiV1OverviewSecurityScoresCommand: GetApiV1OverviewSecurityScoresCommandOutput;
-    GetAssetSyncTaskCommand: GetAssetSyncTaskCommandOutput;
-    GetOverviewCardCommand: GetOverviewCardCommandOutput;
-    GetOverviewServiceModuleCommand: GetOverviewServiceModuleCommandOutput;
-    GetRiskCommand: GetRiskCommandOutput;
-    GetRiskDetectionTaskCommand: GetRiskDetectionTaskCommandOutput;
-    GetRiskStatCommand: GetRiskStatCommandOutput;
-    PostApiV1AlarmDescribeOverviewCommand: PostApiV1AlarmDescribeOverviewCommandOutput;
-    PostApiV1AssetDescribeDetailCommand: PostApiV1AssetDescribeDetailCommandOutput;
-    PostApiV1OverviewDescribeAssetInfoCommand: PostApiV1OverviewDescribeAssetInfoCommandOutput;
-    RiskStatusUpdateBySoarCommand: RiskStatusUpdateBySoarCommandOutput;
-  }
-}
 
 /**
  * MCSClient Service Client

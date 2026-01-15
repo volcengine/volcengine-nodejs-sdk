@@ -127,49 +127,6 @@ export type RenewVpnGatewayCommandOutput = CommandOutput<RenewVpnGatewayResponse
 export type ResetVpnConnectionCommandOutput = CommandOutput<ResetVpnConnectionResponse>;
 export type SetVpnGatewayRenewalCommandOutput = CommandOutput<SetVpnGatewayRenewalResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateCustomerGatewayCommand: CreateCustomerGatewayCommandOutput;
-    CreateSslVpnClientCertCommand: CreateSslVpnClientCertCommandOutput;
-    CreateSslVpnServerCommand: CreateSslVpnServerCommandOutput;
-    CreateVpnConnectionCommand: CreateVpnConnectionCommandOutput;
-    CreateVpnConnectionHealthCheckersCommand: CreateVpnConnectionHealthCheckersCommandOutput;
-    CreateVpnGatewayCommand: CreateVpnGatewayCommandOutput;
-    CreateVpnGatewayRouteCommand: CreateVpnGatewayRouteCommandOutput;
-    DeleteCustomerGatewayCommand: DeleteCustomerGatewayCommandOutput;
-    DeleteSslVpnClientCertCommand: DeleteSslVpnClientCertCommandOutput;
-    DeleteSslVpnServerCommand: DeleteSslVpnServerCommandOutput;
-    DeleteVpnConnectionCommand: DeleteVpnConnectionCommandOutput;
-    DeleteVpnConnectionHealthCheckerCommand: DeleteVpnConnectionHealthCheckerCommandOutput;
-    DeleteVpnGatewayCommand: DeleteVpnGatewayCommandOutput;
-    DeleteVpnGatewayRouteCommand: DeleteVpnGatewayRouteCommandOutput;
-    DescribeCustomerGatewayAttributesCommand: DescribeCustomerGatewayAttributesCommandOutput;
-    DescribeCustomerGatewaysCommand: DescribeCustomerGatewaysCommandOutput;
-    DescribeSslVpnClientCertAttributesCommand: DescribeSslVpnClientCertAttributesCommandOutput;
-    DescribeSslVpnClientCertsCommand: DescribeSslVpnClientCertsCommandOutput;
-    DescribeSslVpnServersCommand: DescribeSslVpnServersCommandOutput;
-    DescribeVpnConnectionAttributesCommand: DescribeVpnConnectionAttributesCommandOutput;
-    DescribeVpnConnectionsCommand: DescribeVpnConnectionsCommandOutput;
-    DescribeVpnGatewayAttributesCommand: DescribeVpnGatewayAttributesCommandOutput;
-    DescribeVpnGatewayRouteAttributesCommand: DescribeVpnGatewayRouteAttributesCommandOutput;
-    DescribeVpnGatewayRoutesCommand: DescribeVpnGatewayRoutesCommandOutput;
-    DescribeVpnGatewaysCommand: DescribeVpnGatewaysCommandOutput;
-    DescribeVpnGatewaysBillingCommand: DescribeVpnGatewaysBillingCommandOutput;
-    ModifyCustomerGatewayAttributesCommand: ModifyCustomerGatewayAttributesCommandOutput;
-    ModifySslVpnClientCertCommand: ModifySslVpnClientCertCommandOutput;
-    ModifySslVpnServerCommand: ModifySslVpnServerCommandOutput;
-    ModifyVpnConnectionAttributesCommand: ModifyVpnConnectionAttributesCommandOutput;
-    ModifyVpnConnectionHealthCheckerCommand: ModifyVpnConnectionHealthCheckerCommandOutput;
-    ModifyVpnConnectionTunnelAttributesCommand: ModifyVpnConnectionTunnelAttributesCommandOutput;
-    ModifyVpnGatewayAttributesCommand: ModifyVpnGatewayAttributesCommandOutput;
-    RenewVpnGatewayCommand: RenewVpnGatewayCommandOutput;
-    ResetVpnConnectionCommand: ResetVpnConnectionCommandOutput;
-    SetVpnGatewayRenewalCommand: SetVpnGatewayRenewalCommandOutput;
-  }
-}
 
 /**
  * VPNClient Service Client

@@ -31,17 +31,6 @@ export type DTSOpenListTagResourceGroupsCommandOutput = CommandOutput<DTSOpenLis
 export type DTSOpenTagResourceGroupsCommandOutput = CommandOutput<DTSOpenTagResourceGroupsResponse>;
 export type DTSOpenUntagResourceGroupsCommandOutput = CommandOutput<DTSOpenUntagResourceGroupsResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    DTSOpenDescribeResourceGroupsCommand: DTSOpenDescribeResourceGroupsCommandOutput;
-    DTSOpenListTagResourceGroupsCommand: DTSOpenListTagResourceGroupsCommandOutput;
-    DTSOpenTagResourceGroupsCommand: DTSOpenTagResourceGroupsCommandOutput;
-    DTSOpenUntagResourceGroupsCommand: DTSOpenUntagResourceGroupsCommandOutput;
-  }
-}
 
 /**
  * DATALEAPClient Service Client

@@ -172,64 +172,6 @@ export type UnsubscribeInstanceCommandOutput = CommandOutput<UnsubscribeInstance
 export type UpdateAuthCommandOutput = CommandOutput<UpdateAuthResponse>;
 export type UpdateBudgetCommandOutput = CommandOutput<UpdateBudgetResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CancelInvitationCommand: CancelInvitationCommandOutput;
-    CancelOrderCommand: CancelOrderCommandOutput;
-    CleanUpFinancialRelationCommand: CleanUpFinancialRelationCommandOutput;
-    CommonBuyCommand: CommonBuyCommandOutput;
-    CreateBudgetCommand: CreateBudgetCommandOutput;
-    CreateFinancialRelationCommand: CreateFinancialRelationCommandOutput;
-    DeleteBudgetCommand: DeleteBudgetCommandOutput;
-    DeleteFinancialRelationCommand: DeleteFinancialRelationCommandOutput;
-    GetOrderCommand: GetOrderCommandOutput;
-    HandleInvitationCommand: HandleInvitationCommandOutput;
-    ListAmortizedCostBillDailyCommand: ListAmortizedCostBillDailyCommandOutput;
-    ListAmortizedCostBillDetailCommand: ListAmortizedCostBillDetailCommandOutput;
-    ListAmortizedCostBillMonthlyCommand: ListAmortizedCostBillMonthlyCommandOutput;
-    ListAvailableInstancesCommand: ListAvailableInstancesCommandOutput;
-    ListBillCommand: ListBillCommandOutput;
-    ListBillDetailCommand: ListBillDetailCommandOutput;
-    ListBillOverviewByCategoryCommand: ListBillOverviewByCategoryCommandOutput;
-    ListBillOverviewByProdCommand: ListBillOverviewByProdCommandOutput;
-    ListBudgetCommand: ListBudgetCommandOutput;
-    ListBudgetAmountByBudgetIDCommand: ListBudgetAmountByBudgetIDCommandOutput;
-    ListBudgetFilterBillingModeCommand: ListBudgetFilterBillingModeCommandOutput;
-    ListBudgetFilterOwnerIDCommand: ListBudgetFilterOwnerIDCommandOutput;
-    ListBudgetFilterPayerIDCommand: ListBudgetFilterPayerIDCommandOutput;
-    ListBudgetFilterProductCommand: ListBudgetFilterProductCommandOutput;
-    ListBudgetFilterProjectCommand: ListBudgetFilterProjectCommandOutput;
-    ListBudgetFilterRegionCodeCommand: ListBudgetFilterRegionCodeCommandOutput;
-    ListBudgetFilterSubjectInfoCommand: ListBudgetFilterSubjectInfoCommandOutput;
-    ListBudgetFilterTagKeyCommand: ListBudgetFilterTagKeyCommandOutput;
-    ListBudgetFilterTagValueCommand: ListBudgetFilterTagValueCommandOutput;
-    ListBudgetFilterZoneCodeCommand: ListBudgetFilterZoneCodeCommandOutput;
-    ListCouponUsageRecordsCommand: ListCouponUsageRecordsCommandOutput;
-    ListCouponsCommand: ListCouponsCommandOutput;
-    ListFinancialRelationCommand: ListFinancialRelationCommandOutput;
-    ListInvitationCommand: ListInvitationCommandOutput;
-    ListOrderProductDetailsCommand: ListOrderProductDetailsCommandOutput;
-    ListOrdersCommand: ListOrdersCommandOutput;
-    ListPackageUsageDetailsCommand: ListPackageUsageDetailsCommandOutput;
-    ListRecipientInformationCommand: ListRecipientInformationCommandOutput;
-    ListResourcePackagesCommand: ListResourcePackagesCommandOutput;
-    ListSplitBillDetailCommand: ListSplitBillDetailCommandOutput;
-    PayOrderCommand: PayOrderCommandOutput;
-    QueryBalanceAcctCommand: QueryBalanceAcctCommandOutput;
-    QueryBudgetDetailCommand: QueryBudgetDetailCommandOutput;
-    QueryPriceForPayAsYouGoCommand: QueryPriceForPayAsYouGoCommandOutput;
-    QueryPriceForRenewCommand: QueryPriceForRenewCommandOutput;
-    QueryPriceForSubscriptionCommand: QueryPriceForSubscriptionCommandOutput;
-    RenewInstanceCommand: RenewInstanceCommandOutput;
-    SetRenewalTypeCommand: SetRenewalTypeCommandOutput;
-    UnsubscribeInstanceCommand: UnsubscribeInstanceCommandOutput;
-    UpdateAuthCommand: UpdateAuthCommandOutput;
-    UpdateBudgetCommand: UpdateBudgetCommandOutput;
-  }
-}
 
 /**
  * BILLINGClient Service Client

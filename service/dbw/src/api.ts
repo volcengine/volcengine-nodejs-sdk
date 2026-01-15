@@ -73,31 +73,6 @@ export type ManualExecuteTicketCommandOutput = CommandOutput<ManualExecuteTicket
 export type ModifyAuditLogConfigCommandOutput = CommandOutput<ModifyAuditLogConfigResponse>;
 export type SlowQueryAdviceTaskHistoryApiCommandOutput = CommandOutput<SlowQueryAdviceTaskHistoryApiResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AgreeUserProtocolCommand: AgreeUserProtocolCommandOutput;
-    CreateDdlSqlChangeTicketCommand: CreateDdlSqlChangeTicketCommandOutput;
-    CreateDmlSqlChangeTicketCommand: CreateDmlSqlChangeTicketCommandOutput;
-    DescribeAuditLogConfigCommand: DescribeAuditLogConfigCommandOutput;
-    DescribeAuditLogDetailCommand: DescribeAuditLogDetailCommandOutput;
-    DescribeSlowLogsCommand: DescribeSlowLogsCommandOutput;
-    DescribeTicketDetailCommand: DescribeTicketDetailCommandOutput;
-    DescribeTicketsCommand: DescribeTicketsCommandOutput;
-    DescribeWorkflowCommand: DescribeWorkflowCommandOutput;
-    ExecuteSQLCommand: ExecuteSQLCommandOutput;
-    GenerateSQLFromNLCommand: GenerateSQLFromNLCommandOutput;
-    GetTableInfoCommand: GetTableInfoCommandOutput;
-    ListDatabasesCommand: ListDatabasesCommandOutput;
-    ListSlowQueryAdviceApiCommand: ListSlowQueryAdviceApiCommandOutput;
-    ListTablesCommand: ListTablesCommandOutput;
-    ManualExecuteTicketCommand: ManualExecuteTicketCommandOutput;
-    ModifyAuditLogConfigCommand: ModifyAuditLogConfigCommandOutput;
-    SlowQueryAdviceTaskHistoryApiCommand: SlowQueryAdviceTaskHistoryApiCommandOutput;
-  }
-}
 
 /**
  * DBWClient Service Client

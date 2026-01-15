@@ -145,55 +145,6 @@ export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type WithdrawCenRouteEntryCommandOutput = CommandOutput<WithdrawCenRouteEntryResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AssociateCenBandwidthPackageCommand: AssociateCenBandwidthPackageCommandOutput;
-    AttachInstanceToCenCommand: AttachInstanceToCenCommandOutput;
-    CreateCenCommand: CreateCenCommandOutput;
-    CreateCenBandwidthPackageCommand: CreateCenBandwidthPackageCommandOutput;
-    CreateCenInterRegionBandwidthCommand: CreateCenInterRegionBandwidthCommandOutput;
-    CreateCenServiceRouteEntryCommand: CreateCenServiceRouteEntryCommandOutput;
-    CreateCenSummaryRouteEntryCommand: CreateCenSummaryRouteEntryCommandOutput;
-    DeleteCenCommand: DeleteCenCommandOutput;
-    DeleteCenBandwidthPackageCommand: DeleteCenBandwidthPackageCommandOutput;
-    DeleteCenInterRegionBandwidthCommand: DeleteCenInterRegionBandwidthCommandOutput;
-    DeleteCenServiceRouteEntryCommand: DeleteCenServiceRouteEntryCommandOutput;
-    DeleteCenSummaryRouteEntryCommand: DeleteCenSummaryRouteEntryCommandOutput;
-    DescribeCenAttachedInstanceAttributesCommand: DescribeCenAttachedInstanceAttributesCommandOutput;
-    DescribeCenAttachedInstancesCommand: DescribeCenAttachedInstancesCommandOutput;
-    DescribeCenAttributesCommand: DescribeCenAttributesCommandOutput;
-    DescribeCenBandwidthPackageAttributesCommand: DescribeCenBandwidthPackageAttributesCommandOutput;
-    DescribeCenBandwidthPackagesCommand: DescribeCenBandwidthPackagesCommandOutput;
-    DescribeCenBandwidthPackagesBillingCommand: DescribeCenBandwidthPackagesBillingCommandOutput;
-    DescribeCenInterRegionBandwidthAttributesCommand: DescribeCenInterRegionBandwidthAttributesCommandOutput;
-    DescribeCenInterRegionBandwidthsCommand: DescribeCenInterRegionBandwidthsCommandOutput;
-    DescribeCenRouteEntriesCommand: DescribeCenRouteEntriesCommandOutput;
-    DescribeCenServiceRouteEntriesCommand: DescribeCenServiceRouteEntriesCommandOutput;
-    DescribeCenSummaryRouteEntriesCommand: DescribeCenSummaryRouteEntriesCommandOutput;
-    DescribeCensCommand: DescribeCensCommandOutput;
-    DescribeGrantRulesToCenCommand: DescribeGrantRulesToCenCommandOutput;
-    DescribeInstanceGrantedRulesCommand: DescribeInstanceGrantedRulesCommandOutput;
-    DetachInstanceFromCenCommand: DetachInstanceFromCenCommandOutput;
-    DisassociateCenBandwidthPackageCommand: DisassociateCenBandwidthPackageCommandOutput;
-    GrantInstanceToCenCommand: GrantInstanceToCenCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    ModifyCenAttributesCommand: ModifyCenAttributesCommandOutput;
-    ModifyCenBandwidthPackageAssociationCommand: ModifyCenBandwidthPackageAssociationCommandOutput;
-    ModifyCenBandwidthPackageAttributesCommand: ModifyCenBandwidthPackageAttributesCommandOutput;
-    ModifyCenInterRegionBandwidthAttributesCommand: ModifyCenInterRegionBandwidthAttributesCommandOutput;
-    ModifyCenServiceRouteEntryAttributesCommand: ModifyCenServiceRouteEntryAttributesCommandOutput;
-    PublishCenRouteEntryCommand: PublishCenRouteEntryCommandOutput;
-    RenewCenBandwidthPackageCommand: RenewCenBandwidthPackageCommandOutput;
-    RevokeInstanceFromCenCommand: RevokeInstanceFromCenCommandOutput;
-    SetCenBandwidthPackageRenewalCommand: SetCenBandwidthPackageRenewalCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-    WithdrawCenRouteEntryCommand: WithdrawCenRouteEntryCommandOutput;
-  }
-}
 
 /**
  * CENClient Service Client

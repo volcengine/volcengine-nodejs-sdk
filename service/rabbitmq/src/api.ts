@@ -97,39 +97,6 @@ export type ModifyUserPasswordCommandOutput = CommandOutput<ModifyUserPasswordRe
 export type RemoveTagsFromResourceCommandOutput = CommandOutput<RemoveTagsFromResourceResponse>;
 export type RestartInstanceCommandOutput = CommandOutput<RestartInstanceResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddTagsToResourceCommand: AddTagsToResourceCommandOutput;
-    AssociateAllowListCommand: AssociateAllowListCommandOutput;
-    CreateAllowListCommand: CreateAllowListCommandOutput;
-    CreateInstanceCommand: CreateInstanceCommandOutput;
-    CreatePublicAddressCommand: CreatePublicAddressCommandOutput;
-    DeleteAllowListCommand: DeleteAllowListCommandOutput;
-    DeleteInstanceCommand: DeleteInstanceCommandOutput;
-    DeletePublicAddressCommand: DeletePublicAddressCommandOutput;
-    DescribeAllowListDetailCommand: DescribeAllowListDetailCommandOutput;
-    DescribeAllowListsCommand: DescribeAllowListsCommandOutput;
-    DescribeAvailabilityZonesCommand: DescribeAvailabilityZonesCommandOutput;
-    DescribeInstanceConfigsCommand: DescribeInstanceConfigsCommandOutput;
-    DescribeInstanceDetailCommand: DescribeInstanceDetailCommandOutput;
-    DescribeInstancesCommand: DescribeInstancesCommandOutput;
-    DescribePluginsCommand: DescribePluginsCommandOutput;
-    DescribeRegionsCommand: DescribeRegionsCommandOutput;
-    DescribeTagsByResourceCommand: DescribeTagsByResourceCommandOutput;
-    DisassociateAllowListCommand: DisassociateAllowListCommandOutput;
-    ModifyAllowListCommand: ModifyAllowListCommandOutput;
-    ModifyInstanceAttributesCommand: ModifyInstanceAttributesCommandOutput;
-    ModifyInstanceChargeTypeCommand: ModifyInstanceChargeTypeCommandOutput;
-    ModifyInstanceSpecCommand: ModifyInstanceSpecCommandOutput;
-    ModifyPluginCommand: ModifyPluginCommandOutput;
-    ModifyUserPasswordCommand: ModifyUserPasswordCommandOutput;
-    RemoveTagsFromResourceCommand: RemoveTagsFromResourceCommandOutput;
-    RestartInstanceCommand: RestartInstanceCommandOutput;
-  }
-}
 
 /**
  * RABBITMQClient Service Client

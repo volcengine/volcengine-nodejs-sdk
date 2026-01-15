@@ -40,20 +40,6 @@ export type GetResourceCountsCommandOutput = CommandOutput<GetResourceCountsResp
 export type ListResourceTypesCommandOutput = CommandOutput<ListResourceTypesResponse>;
 export type SearchResourcesCommandOutput = CommandOutput<SearchResourcesResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    DisableResourceCenterCommand: DisableResourceCenterCommandOutput;
-    EnableResourceCenterCommand: EnableResourceCenterCommandOutput;
-    ExecuteSQLQueryCommand: ExecuteSQLQueryCommandOutput;
-    GetResourceCenterStatusCommand: GetResourceCenterStatusCommandOutput;
-    GetResourceCountsCommand: GetResourceCountsCommandOutput;
-    ListResourceTypesCommand: ListResourceTypesCommandOutput;
-    SearchResourcesCommand: SearchResourcesCommandOutput;
-  }
-}
 
 /**
  * RESOURCECENTERClient Service Client

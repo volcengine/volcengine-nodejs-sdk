@@ -22,14 +22,6 @@ import { CreateDatabaseResponse } from './types/index';
 // ============================================================================
 export type CreateDatabaseCommandOutput = CommandOutput<CreateDatabaseResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateDatabaseCommand: CreateDatabaseCommandOutput;
-  }
-}
 
 /**
  * BYTEHOUSEClient Service Client

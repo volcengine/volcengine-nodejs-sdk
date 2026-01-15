@@ -130,50 +130,6 @@ export type TopicExistCommandOutput = CommandOutput<TopicExistResponse>;
 export type UpdateInstanceMessageRetentionCommandOutput = CommandOutput<UpdateInstanceMessageRetentionResponse>;
 export type UpdateTopicMessageRetentionCommandOutput = CommandOutput<UpdateTopicMessageRetentionResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateGroupCommand: CreateGroupCommandOutput;
-    CreateInstanceCommand: CreateInstanceCommandOutput;
-    CreateTopicCommand: CreateTopicCommandOutput;
-    DeleteGroupCommand: DeleteGroupCommandOutput;
-    DeleteInstanceCommand: DeleteInstanceCommandOutput;
-    DeleteTopicCommand: DeleteTopicCommandOutput;
-    DescribeAvailableZonesCommand: DescribeAvailableZonesCommandOutput;
-    DescribeGroupCommand: DescribeGroupCommandOutput;
-    DescribeGroupsInTopicCommand: DescribeGroupsInTopicCommandOutput;
-    DescribeInstanceCommand: DescribeInstanceCommandOutput;
-    DescribeInstanceResourceStatCommand: DescribeInstanceResourceStatCommandOutput;
-    DescribePartitionsInTopicCommand: DescribePartitionsInTopicCommandOutput;
-    DescribeSubscriptionCommand: DescribeSubscriptionCommandOutput;
-    DescribeTopicCommand: DescribeTopicCommandOutput;
-    DescribeTopicTimeRangeCommand: DescribeTopicTimeRangeCommandOutput;
-    DescribeTopicsInGroupCommand: DescribeTopicsInGroupCommandOutput;
-    DisableOverlayAccessCommand: DisableOverlayAccessCommandOutput;
-    DisablePublicAccessCommand: DisablePublicAccessCommandOutput;
-    EnableOverlayAccessCommand: EnableOverlayAccessCommandOutput;
-    EnablePublicAccessCommand: EnablePublicAccessCommandOutput;
-    GroupExistCommand: GroupExistCommandOutput;
-    ListAvailableSecurityGroupsForBMQCommand: ListAvailableSecurityGroupsForBMQCommandOutput;
-    ListAvailableSubnetsForBMQCommand: ListAvailableSubnetsForBMQCommandOutput;
-    ListAvailableVPCForBMQCommand: ListAvailableVPCForBMQCommandOutput;
-    ListInstanceResourceStatsCommand: ListInstanceResourceStatsCommandOutput;
-    ListSpecificationsCommand: ListSpecificationsCommandOutput;
-    ModifyInstanceTagCommand: ModifyInstanceTagCommandOutput;
-    ModifyOverlayAccessCommand: ModifyOverlayAccessCommandOutput;
-    PreviewTopicDataCommand: PreviewTopicDataCommandOutput;
-    ResetSubscriptionOffsetCommand: ResetSubscriptionOffsetCommandOutput;
-    ScaleUpTopicCommand: ScaleUpTopicCommandOutput;
-    SearchGroupsCommand: SearchGroupsCommandOutput;
-    SearchInstancesCommand: SearchInstancesCommandOutput;
-    SearchTopicsCommand: SearchTopicsCommandOutput;
-    TopicExistCommand: TopicExistCommandOutput;
-    UpdateInstanceMessageRetentionCommand: UpdateInstanceMessageRetentionCommandOutput;
-    UpdateTopicMessageRetentionCommand: UpdateTopicMessageRetentionCommandOutput;
-  }
-}
 
 /**
  * BMQClient Service Client

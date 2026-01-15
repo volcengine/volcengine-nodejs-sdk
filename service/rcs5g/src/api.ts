@@ -25,15 +25,6 @@ import { SendRcsResponse } from './types/index';
 export type SendBatchRcsCommandOutput = CommandOutput<SendBatchRcsResponse>;
 export type SendRcsCommandOutput = CommandOutput<SendRcsResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    SendBatchRcsCommand: SendBatchRcsCommandOutput;
-    SendRcsCommand: SendRcsCommandOutput;
-  }
-}
 
 /**
  * RCS5GClient Service Client

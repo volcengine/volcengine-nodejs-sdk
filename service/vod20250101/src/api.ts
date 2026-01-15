@@ -94,38 +94,6 @@ export type UpdateAITranslationSpeakersCommandOutput = CommandOutput<UpdateAITra
 export type UpdateAITranslationSpeechesCommandOutput = CommandOutput<UpdateAITranslationSpeechesResponse>;
 export type UpdateAITranslationUtterancesCommandOutput = CommandOutput<UpdateAITranslationUtterancesResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    ContinueAITranslationWorkflowCommand: ContinueAITranslationWorkflowCommandOutput;
-    CreateAITermbaseCommand: CreateAITermbaseCommandOutput;
-    CreateAITranslationSpeakerCommand: CreateAITranslationSpeakerCommandOutput;
-    CreateAITranslationSpeechCommand: CreateAITranslationSpeechCommandOutput;
-    CreateAITranslationUtteranceCommand: CreateAITranslationUtteranceCommandOutput;
-    DeleteAITermItemCommand: DeleteAITermItemCommandOutput;
-    DeleteAITermbaseCommand: DeleteAITermbaseCommandOutput;
-    DeleteAITranslationSpeechCommand: DeleteAITranslationSpeechCommandOutput;
-    GenerateAITranslationUtteranceAudioCommand: GenerateAITranslationUtteranceAudioCommandOutput;
-    GetAITermbaseCommand: GetAITermbaseCommandOutput;
-    GetAITranslationProjectCommand: GetAITranslationProjectCommandOutput;
-    GetExecutionCommand: GetExecutionCommandOutput;
-    ListAITermbaseCommand: ListAITermbaseCommandOutput;
-    ListAITranslationProjectCommand: ListAITranslationProjectCommandOutput;
-    ListAITranslationSpeechCommand: ListAITranslationSpeechCommandOutput;
-    RefreshAITranslationProjectCommand: RefreshAITranslationProjectCommandOutput;
-    RemoveAITranslationUtteranceCommand: RemoveAITranslationUtteranceCommandOutput;
-    SetAITermItemCommand: SetAITermItemCommandOutput;
-    StartExecutionCommand: StartExecutionCommandOutput;
-    SubmitAITranslationWorkflowCommand: SubmitAITranslationWorkflowCommandOutput;
-    UpdateAITermbaseCommand: UpdateAITermbaseCommandOutput;
-    UpdateAITranslationProjectConfigCommand: UpdateAITranslationProjectConfigCommandOutput;
-    UpdateAITranslationSpeakersCommand: UpdateAITranslationSpeakersCommandOutput;
-    UpdateAITranslationSpeechesCommand: UpdateAITranslationSpeechesCommandOutput;
-    UpdateAITranslationUtterancesCommand: UpdateAITranslationUtterancesCommandOutput;
-  }
-}
 
 /**
  * VOD20250101Client Service Client

@@ -25,15 +25,6 @@ import { UpdateVolcInstanceResponse } from './types/index';
 export type DeleteVolcInstanceCommandOutput = CommandOutput<DeleteVolcInstanceResponse>;
 export type UpdateVolcInstanceCommandOutput = CommandOutput<UpdateVolcInstanceResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    DeleteVolcInstanceCommand: DeleteVolcInstanceCommandOutput;
-    UpdateVolcInstanceCommand: UpdateVolcInstanceCommandOutput;
-  }
-}
 
 /**
  * BYTEHOUSECE20240831Client Service Client

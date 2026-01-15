@@ -52,24 +52,6 @@ export type GetNetworkTrafficMetricsCommandOutput = CommandOutput<GetNetworkTraf
 export type GetNetworkTrafficTopNCommandOutput = CommandOutput<GetNetworkTrafficTopNResponse>;
 export type ReanalysisPathCommandOutput = CommandOutput<ReanalysisPathResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateDiagnosisInstanceCommand: CreateDiagnosisInstanceCommandOutput;
-    CreatePathAnalysisCommand: CreatePathAnalysisCommandOutput;
-    DeleteAnalysisPathCommand: DeleteAnalysisPathCommandOutput;
-    DeleteAnalysisPathReportCommand: DeleteAnalysisPathReportCommandOutput;
-    DescribeDiagnosisInstanceDetailCommand: DescribeDiagnosisInstanceDetailCommandOutput;
-    DescribeDiagnosisInstancesCommand: DescribeDiagnosisInstancesCommandOutput;
-    DescribeHistoryDiagnosisCommand: DescribeHistoryDiagnosisCommandOutput;
-    GetAnalysisPathReportCommand: GetAnalysisPathReportCommandOutput;
-    GetNetworkTrafficMetricsCommand: GetNetworkTrafficMetricsCommandOutput;
-    GetNetworkTrafficTopNCommand: GetNetworkTrafficTopNCommandOutput;
-    ReanalysisPathCommand: ReanalysisPathCommandOutput;
-  }
-}
 
 /**
  * NAClient Service Client

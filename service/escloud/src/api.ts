@@ -94,38 +94,6 @@ export type RestartNodeCommandOutput = CommandOutput<RestartNodeResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateInstanceCommand: CreateInstanceCommandOutput;
-    CreateInstanceInOneStepCommand: CreateInstanceInOneStepCommandOutput;
-    DescribeInstanceCommand: DescribeInstanceCommandOutput;
-    DescribeInstanceNodesCommand: DescribeInstanceNodesCommandOutput;
-    DescribeInstancePluginsCommand: DescribeInstancePluginsCommandOutput;
-    DescribeInstancesCommand: DescribeInstancesCommandOutput;
-    DescribeIpAllowListCommand: DescribeIpAllowListCommandOutput;
-    DescribeNodeAvailableSpecsCommand: DescribeNodeAvailableSpecsCommandOutput;
-    DescribeNodeAvailableSpecsV2Command: DescribeNodeAvailableSpecsV2CommandOutput;
-    DescribeScenariosCommand: DescribeScenariosCommandOutput;
-    DescribeZonesCommand: DescribeZonesCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    ModifyChargeCodeCommand: ModifyChargeCodeCommandOutput;
-    ModifyDeletionProtectionCommand: ModifyDeletionProtectionCommandOutput;
-    ModifyIpAllowListCommand: ModifyIpAllowListCommandOutput;
-    ModifyIpAllowListV2Command: ModifyIpAllowListV2CommandOutput;
-    ModifyMaintenanceSettingCommand: ModifyMaintenanceSettingCommandOutput;
-    ModifyNodeSpecInOneStepCommand: ModifyNodeSpecInOneStepCommandOutput;
-    ReleaseInstanceCommand: ReleaseInstanceCommandOutput;
-    RenameInstanceCommand: RenameInstanceCommandOutput;
-    ResetAdminPasswordCommand: ResetAdminPasswordCommandOutput;
-    RestartInstanceCommand: RestartInstanceCommandOutput;
-    RestartNodeCommand: RestartNodeCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-  }
-}
 
 /**
  * ESCLOUDClient Service Client

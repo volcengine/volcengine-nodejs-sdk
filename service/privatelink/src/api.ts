@@ -148,56 +148,6 @@ export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type VerifyVpcEndpointServicePrivateDNSCommandOutput = CommandOutput<VerifyVpcEndpointServicePrivateDNSResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddPermissionToVpcEndpointServiceCommand: AddPermissionToVpcEndpointServiceCommandOutput;
-    AddZoneToVpcEndpointCommand: AddZoneToVpcEndpointCommandOutput;
-    AttachResourceToVpcEndpointServiceCommand: AttachResourceToVpcEndpointServiceCommandOutput;
-    AttachSecurityGroupToVpcEndpointCommand: AttachSecurityGroupToVpcEndpointCommandOutput;
-    CreateUniqueResourceTypeVpcEndpointServiceCommand: CreateUniqueResourceTypeVpcEndpointServiceCommandOutput;
-    CreateVpcEndpointCommand: CreateVpcEndpointCommandOutput;
-    CreateVpcEndpointServiceCommand: CreateVpcEndpointServiceCommandOutput;
-    CreateVpcGatewayEndpointCommand: CreateVpcGatewayEndpointCommandOutput;
-    DeleteVpcEndpointCommand: DeleteVpcEndpointCommandOutput;
-    DeleteVpcEndpointServiceCommand: DeleteVpcEndpointServiceCommandOutput;
-    DeleteVpcGatewayEndpointCommand: DeleteVpcGatewayEndpointCommandOutput;
-    DescribePrivateLinkAvailableZonesCommand: DescribePrivateLinkAvailableZonesCommandOutput;
-    DescribeVpcEndpointAttributesCommand: DescribeVpcEndpointAttributesCommandOutput;
-    DescribeVpcEndpointConnectionsCommand: DescribeVpcEndpointConnectionsCommandOutput;
-    DescribeVpcEndpointSecurityGroupsCommand: DescribeVpcEndpointSecurityGroupsCommandOutput;
-    DescribeVpcEndpointServiceAttributesCommand: DescribeVpcEndpointServiceAttributesCommandOutput;
-    DescribeVpcEndpointServicePermissionsCommand: DescribeVpcEndpointServicePermissionsCommandOutput;
-    DescribeVpcEndpointServiceResourcesCommand: DescribeVpcEndpointServiceResourcesCommandOutput;
-    DescribeVpcEndpointServicesCommand: DescribeVpcEndpointServicesCommandOutput;
-    DescribeVpcEndpointServicesByEndUserCommand: DescribeVpcEndpointServicesByEndUserCommandOutput;
-    DescribeVpcEndpointZonesCommand: DescribeVpcEndpointZonesCommandOutput;
-    DescribeVpcEndpointsCommand: DescribeVpcEndpointsCommandOutput;
-    DescribeVpcGatewayEndpointAttributesCommand: DescribeVpcGatewayEndpointAttributesCommandOutput;
-    DescribeVpcGatewayEndpointServicesCommand: DescribeVpcGatewayEndpointServicesCommandOutput;
-    DescribeVpcGatewayEndpointsCommand: DescribeVpcGatewayEndpointsCommandOutput;
-    DetachResourceFromVpcEndpointServiceCommand: DetachResourceFromVpcEndpointServiceCommandOutput;
-    DetachSecurityGroupFromVpcEndpointCommand: DetachSecurityGroupFromVpcEndpointCommandOutput;
-    DisableVpcEndpointConnectionCommand: DisableVpcEndpointConnectionCommandOutput;
-    EnableVpcEndpointConnectionCommand: EnableVpcEndpointConnectionCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    ModifyEndpointPayerAccountCommand: ModifyEndpointPayerAccountCommandOutput;
-    ModifyUniqueResourceTypeVpcEndpointServiceAttributesCommand: ModifyUniqueResourceTypeVpcEndpointServiceAttributesCommandOutput;
-    ModifyVpcEndpointAttributesCommand: ModifyVpcEndpointAttributesCommandOutput;
-    ModifyVpcEndpointConnectionsCommand: ModifyVpcEndpointConnectionsCommandOutput;
-    ModifyVpcEndpointServiceAttributesCommand: ModifyVpcEndpointServiceAttributesCommandOutput;
-    ModifyVpcEndpointServiceResourceAttributesCommand: ModifyVpcEndpointServiceResourceAttributesCommandOutput;
-    ModifyVpcEndpointZoneConnectionResourceAttributesCommand: ModifyVpcEndpointZoneConnectionResourceAttributesCommandOutput;
-    ModifyVpcGatewayEndpointAttributesCommand: ModifyVpcGatewayEndpointAttributesCommandOutput;
-    RemovePermissionFromVpcEndpointServiceCommand: RemovePermissionFromVpcEndpointServiceCommandOutput;
-    RemoveZoneFromVpcEndpointCommand: RemoveZoneFromVpcEndpointCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-    VerifyVpcEndpointServicePrivateDNSCommand: VerifyVpcEndpointServicePrivateDNSCommandOutput;
-  }
-}
 
 /**
  * PRIVATELINKClient Service Client

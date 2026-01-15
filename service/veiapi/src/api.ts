@@ -175,65 +175,6 @@ export type UpdateLogStatusCommandOutput = CommandOutput<UpdateLogStatusResponse
 export type UpdateNodeGroupCommandOutput = CommandOutput<UpdateNodeGroupResponse>;
 export type UpdateVideoAnalysisTaskCommandOutput = CommandOutput<UpdateVideoAnalysisTaskResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddIotModelsCommand: AddIotModelsCommandOutput;
-    ApplyVideoAnalysisTaskTokenCommand: ApplyVideoAnalysisTaskTokenCommandOutput;
-    CommitVideoAnalysisTaskCommand: CommitVideoAnalysisTaskCommandOutput;
-    CreateAIGatewayModelCommand: CreateAIGatewayModelCommandOutput;
-    CreateChannelCommand: CreateChannelCommandOutput;
-    CreateIotLlmTokenCommand: CreateIotLlmTokenCommandOutput;
-    CreateModelServiceCommand: CreateModelServiceCommandOutput;
-    CreateNodeGroupCommand: CreateNodeGroupCommandOutput;
-    CreateSNInOneStepCommand: CreateSNInOneStepCommandOutput;
-    CreateVideoAnalysisTaskCommand: CreateVideoAnalysisTaskCommandOutput;
-    DeleteIotLlmTokensCommand: DeleteIotLlmTokensCommandOutput;
-    DeleteIotModelsCommand: DeleteIotModelsCommandOutput;
-    DeleteNodeGroupCommand: DeleteNodeGroupCommandOutput;
-    DeleteVideoAnalysisTaskCommand: DeleteVideoAnalysisTaskCommandOutput;
-    DeleteVideoAnalysisTaskDataCommand: DeleteVideoAnalysisTaskDataCommandOutput;
-    DeviceContinuousMoveCommand: DeviceContinuousMoveCommandOutput;
-    EdgeCallCommand: EdgeCallCommandOutput;
-    GetLastDevicePropertyValueCommand: GetLastDevicePropertyValueCommandOutput;
-    GetLogRuleCommand: GetLogRuleCommandOutput;
-    GetMediapipeEventCommand: GetMediapipeEventCommandOutput;
-    GetNodeGroupCommand: GetNodeGroupCommandOutput;
-    GetVideoAnalysisStatisticsCommand: GetVideoAnalysisStatisticsCommandOutput;
-    GetVideoAnalysisTaskCommand: GetVideoAnalysisTaskCommandOutput;
-    GetVideoAnalysisTaskDataCommand: GetVideoAnalysisTaskDataCommandOutput;
-    GetVideoAnalysisTaskMediaMetaCommand: GetVideoAnalysisTaskMediaMetaCommandOutput;
-    GetVideoFirstFrameCommand: GetVideoFirstFrameCommandOutput;
-    ListDeploymentCommand: ListDeploymentCommandOutput;
-    ListDeviceCommand: ListDeviceCommandOutput;
-    ListHCINewCommand: ListHCINewCommandOutput;
-    ListIotModelsCommand: ListIotModelsCommandOutput;
-    ListLLModelsV2Command: ListLLModelsV2CommandOutput;
-    ListMediapipeEventCommand: ListMediapipeEventCommandOutput;
-    ListMediapipeInstanceCommand: ListMediapipeInstanceCommandOutput;
-    ListModelCommand: ListModelCommandOutput;
-    ListModelServiceCommand: ListModelServiceCommandOutput;
-    ListNodeGroupCommand: ListNodeGroupCommandOutput;
-    ListProjectCommand: ListProjectCommandOutput;
-    ListVideoAnalysisTaskCommand: ListVideoAnalysisTaskCommandOutput;
-    ListVideoAnalysisTaskDataCommand: ListVideoAnalysisTaskDataCommandOutput;
-    ListVideoAnalysisTaskObjectClassesCommand: ListVideoAnalysisTaskObjectClassesCommandOutput;
-    StartVideoStreamAnalysisTaskCommand: StartVideoStreamAnalysisTaskCommandOutput;
-    StopVideoStreamAnalysisTaskCommand: StopVideoStreamAnalysisTaskCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-    UpdateAIGatewayModelCommand: UpdateAIGatewayModelCommandOutput;
-    UpdateChannelCommand: UpdateChannelCommandOutput;
-    UpdateDeploymentCommand: UpdateDeploymentCommandOutput;
-    UpdateHCICommand: UpdateHCICommandOutput;
-    UpdateLogRuleCommand: UpdateLogRuleCommandOutput;
-    UpdateLogStatusCommand: UpdateLogStatusCommandOutput;
-    UpdateNodeGroupCommand: UpdateNodeGroupCommandOutput;
-    UpdateVideoAnalysisTaskCommand: UpdateVideoAnalysisTaskCommandOutput;
-  }
-}
 
 /**
  * VEIAPIClient Service Client

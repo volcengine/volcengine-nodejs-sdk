@@ -64,28 +64,6 @@ export type ModifyInstanceChargeTypeCommandOutput = CommandOutput<ModifyInstance
 export type ModifyInstanceDeletionProtectionPolicyCommandOutput = CommandOutput<ModifyInstanceDeletionProtectionPolicyResponse>;
 export type RestartDBInstanceCommandOutput = CommandOutput<RestartDBInstanceResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AssociateAllowListCommand: AssociateAllowListCommandOutput;
-    CreateAllowListCommand: CreateAllowListCommandOutput;
-    CreateDBInstanceCommand: CreateDBInstanceCommandOutput;
-    DeleteAllowListCommand: DeleteAllowListCommandOutput;
-    DeleteDBInstanceCommand: DeleteDBInstanceCommandOutput;
-    DescribeAllowListDetailCommand: DescribeAllowListDetailCommandOutput;
-    DescribeAllowListsCommand: DescribeAllowListsCommandOutput;
-    DescribeDBInstanceDetailCommand: DescribeDBInstanceDetailCommandOutput;
-    DescribeDBInstancesCommand: DescribeDBInstancesCommandOutput;
-    DisassociateAllowListCommand: DisassociateAllowListCommandOutput;
-    ModifyAllowListCommand: ModifyAllowListCommandOutput;
-    ModifyDBInstanceNameCommand: ModifyDBInstanceNameCommandOutput;
-    ModifyInstanceChargeTypeCommand: ModifyInstanceChargeTypeCommandOutput;
-    ModifyInstanceDeletionProtectionPolicyCommand: ModifyInstanceDeletionProtectionPolicyCommandOutput;
-    RestartDBInstanceCommand: RestartDBInstanceCommandOutput;
-  }
-}
 
 /**
  * HBASEClient Service Client

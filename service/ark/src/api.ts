@@ -145,55 +145,6 @@ export type UpdateEndpointCommandOutput = CommandOutput<UpdateEndpointResponse>;
 export type UpdateEvaluationJobCommandOutput = CommandOutput<UpdateEvaluationJobResponse>;
 export type UpdateModelCustomizationJobCommandOutput = CommandOutput<UpdateModelCustomizationJobResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateBatchInferenceJobCommand: CreateBatchInferenceJobCommandOutput;
-    CreateEndpointCommand: CreateEndpointCommandOutput;
-    CreateEvaluationJobCommand: CreateEvaluationJobCommandOutput;
-    CreateModelCustomizationJobCommand: CreateModelCustomizationJobCommandOutput;
-    DeleteCustomModelCommand: DeleteCustomModelCommandOutput;
-    DeleteEndpointCommand: DeleteEndpointCommandOutput;
-    DeleteEvaluationJobCommand: DeleteEvaluationJobCommandOutput;
-    DeleteModelCustomizationJobCommand: DeleteModelCustomizationJobCommandOutput;
-    GetApiKeyCommand: GetApiKeyCommandOutput;
-    GetBatchInferenceJobCommand: GetBatchInferenceJobCommandOutput;
-    GetCustomModelCommand: GetCustomModelCommandOutput;
-    GetEndpointCertificateCommand: GetEndpointCertificateCommandOutput;
-    GetEvaluationJobCommand: GetEvaluationJobCommandOutput;
-    GetEvaluationResultCommand: GetEvaluationResultCommandOutput;
-    GetFoundationModelCommand: GetFoundationModelCommandOutput;
-    GetFoundationModelVersionCommand: GetFoundationModelVersionCommandOutput;
-    GetFoundationModelVersionConfigurationCommand: GetFoundationModelVersionConfigurationCommandOutput;
-    GetModelCustomizationJobCommand: GetModelCustomizationJobCommandOutput;
-    GetModelCustomizationJobMetricDataCommand: GetModelCustomizationJobMetricDataCommandOutput;
-    GetModelCustomizationJobMetricsCommand: GetModelCustomizationJobMetricsCommandOutput;
-    GetToolUsageCommand: GetToolUsageCommandOutput;
-    GetUsageCommand: GetUsageCommandOutput;
-    ListAuditLogsCommand: ListAuditLogsCommandOutput;
-    ListBatchInferenceJobsCommand: ListBatchInferenceJobsCommandOutput;
-    ListCustomModelsCommand: ListCustomModelsCommandOutput;
-    ListEndpointsCommand: ListEndpointsCommandOutput;
-    ListEvaluationJobsCommand: ListEvaluationJobsCommandOutput;
-    ListEvaluationResultsCommand: ListEvaluationResultsCommandOutput;
-    ListFoundationModelVersionsCommand: ListFoundationModelVersionsCommandOutput;
-    ListFoundationModelsCommand: ListFoundationModelsCommandOutput;
-    ListModelCustomizationJobsCommand: ListModelCustomizationJobsCommandOutput;
-    ResumeBatchInferenceJobCommand: ResumeBatchInferenceJobCommandOutput;
-    ResumeModelCustomizationJobCommand: ResumeModelCustomizationJobCommandOutput;
-    StartEndpointCommand: StartEndpointCommandOutput;
-    StopBatchInferenceJobCommand: StopBatchInferenceJobCommandOutput;
-    StopEndpointCommand: StopEndpointCommandOutput;
-    TerminateEvaluationJobCommand: TerminateEvaluationJobCommandOutput;
-    TerminateModelCustomizationJobCommand: TerminateModelCustomizationJobCommandOutput;
-    UpdateCustomModelCommand: UpdateCustomModelCommandOutput;
-    UpdateEndpointCommand: UpdateEndpointCommandOutput;
-    UpdateEvaluationJobCommand: UpdateEvaluationJobCommandOutput;
-    UpdateModelCustomizationJobCommand: UpdateModelCustomizationJobCommandOutput;
-  }
-}
 
 /**
  * ARKClient Service Client

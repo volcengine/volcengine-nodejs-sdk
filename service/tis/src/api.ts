@@ -40,20 +40,6 @@ export type GetSpeakerListCommandOutput = CommandOutput<GetSpeakerListResponse>;
 export type PushMsgToDeviceCommandOutput = CommandOutput<PushMsgToDeviceResponse>;
 export type TopActionDispatchCommandOutput = CommandOutput<TopActionDispatchResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    BuyResourcePackageCommand: BuyResourcePackageCommandOutput;
-    ClearDeviceLongMemoryCommand: ClearDeviceLongMemoryCommandOutput;
-    GetAgentListCommand: GetAgentListCommandOutput;
-    GetQuotaInfoCommand: GetQuotaInfoCommandOutput;
-    GetSpeakerListCommand: GetSpeakerListCommandOutput;
-    PushMsgToDeviceCommand: PushMsgToDeviceCommandOutput;
-    TopActionDispatchCommand: TopActionDispatchCommandOutput;
-  }
-}
 
 /**
  * TISClient Service Client

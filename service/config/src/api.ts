@@ -82,34 +82,6 @@ export type StartConfigurationRecorderCommandOutput = CommandOutput<StartConfigu
 export type StopConfigurationRecorderCommandOutput = CommandOutput<StopConfigurationRecorderResponse>;
 export type UpdateAccountGroupCommandOutput = CommandOutput<UpdateAccountGroupResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AssociateAccountGroupPrincipalsCommand: AssociateAccountGroupPrincipalsCommandOutput;
-    CreateAccountGroupCommand: CreateAccountGroupCommandOutput;
-    DeleteAccountGroupCommand: DeleteAccountGroupCommandOutput;
-    DescribeAccountGroupsCommand: DescribeAccountGroupsCommandOutput;
-    DescribeConfigurationRecordersCommand: DescribeConfigurationRecordersCommandOutput;
-    DisassociateAccountGroupPrincipalsCommand: DisassociateAccountGroupPrincipalsCommandOutput;
-    GetAccountGroupDiscoveredResourceCommand: GetAccountGroupDiscoveredResourceCommandOutput;
-    GetAccountGroupDiscoveredResourceCountsCommand: GetAccountGroupDiscoveredResourceCountsCommandOutput;
-    GetAccountGroupResourceConfigHistoryCommand: GetAccountGroupResourceConfigHistoryCommandOutput;
-    GetDiscoveredResourceCommand: GetDiscoveredResourceCommandOutput;
-    GetDiscoveredResourceCountsCommand: GetDiscoveredResourceCountsCommandOutput;
-    GetOrganizationDiscoveredResourceCountsCommand: GetOrganizationDiscoveredResourceCountsCommandOutput;
-    GetResourceConfigHistoryCommand: GetResourceConfigHistoryCommandOutput;
-    ListAccountGroupDiscoveredResourcesCommand: ListAccountGroupDiscoveredResourcesCommandOutput;
-    ListAccountGroupMembersCommand: ListAccountGroupMembersCommandOutput;
-    ListAccountGroupsCommand: ListAccountGroupsCommandOutput;
-    ListDiscoveredResourcesCommand: ListDiscoveredResourcesCommandOutput;
-    PutConfigurationRecorderCommand: PutConfigurationRecorderCommandOutput;
-    StartConfigurationRecorderCommand: StartConfigurationRecorderCommandOutput;
-    StopConfigurationRecorderCommand: StopConfigurationRecorderCommandOutput;
-    UpdateAccountGroupCommand: UpdateAccountGroupCommandOutput;
-  }
-}
 
 /**
  * CONFIGClient Service Client

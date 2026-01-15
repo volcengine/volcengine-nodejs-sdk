@@ -25,15 +25,6 @@ import { GetFileDetectionResponse } from './types/index';
 export type CreateFileDetectionCommandOutput = CommandOutput<CreateFileDetectionResponse>;
 export type GetFileDetectionCommandOutput = CommandOutput<GetFileDetectionResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateFileDetectionCommand: CreateFileDetectionCommandOutput;
-    GetFileDetectionCommand: GetFileDetectionCommandOutput;
-  }
-}
 
 /**
  * NTAClient Service Client

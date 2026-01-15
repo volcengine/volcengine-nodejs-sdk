@@ -151,57 +151,6 @@ export type UpdateLensPolicyCommandOutput = CommandOutput<UpdateLensPolicyRespon
 export type UpdateLensTaskCommandOutput = CommandOutput<UpdateLensTaskResponse>;
 export type UpdateMountServiceCommandOutput = CommandOutput<UpdateMountServiceResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AttachMountServiceToSelfFileSystemCommand: AttachMountServiceToSelfFileSystemCommandOutput;
-    CancelDataFlowTaskCommand: CancelDataFlowTaskCommandOutput;
-    CancelLensTaskCommand: CancelLensTaskCommandOutput;
-    ConfigDataFlowBandwidthCommand: ConfigDataFlowBandwidthCommandOutput;
-    CreateDataFlowTaskCommand: CreateDataFlowTaskCommandOutput;
-    CreateFileSystemCommand: CreateFileSystemCommandOutput;
-    CreateFilesetCommand: CreateFilesetCommandOutput;
-    CreateLensPolicyCommand: CreateLensPolicyCommandOutput;
-    CreateLensTaskCommand: CreateLensTaskCommandOutput;
-    CreateMountServiceCommand: CreateMountServiceCommandOutput;
-    CreatePreSignedUrlCommand: CreatePreSignedUrlCommandOutput;
-    DeleteDataFlowTaskCommand: DeleteDataFlowTaskCommandOutput;
-    DeleteFileSystemCommand: DeleteFileSystemCommandOutput;
-    DeleteFilesetCommand: DeleteFilesetCommandOutput;
-    DeleteLensPolicyCommand: DeleteLensPolicyCommandOutput;
-    DeleteLensTaskCommand: DeleteLensTaskCommandOutput;
-    DeleteMountServiceCommand: DeleteMountServiceCommandOutput;
-    DescribeDataFlowBandwidthCommand: DescribeDataFlowBandwidthCommandOutput;
-    DescribeDataFlowTasksCommand: DescribeDataFlowTasksCommandOutput;
-    DescribeFileSystemOverviewCommand: DescribeFileSystemOverviewCommandOutput;
-    DescribeFileSystemStatisticsCommand: DescribeFileSystemStatisticsCommandOutput;
-    DescribeFileSystemsCommand: DescribeFileSystemsCommandOutput;
-    DescribeFilesetsCommand: DescribeFilesetsCommandOutput;
-    DescribeLensPoliciesCommand: DescribeLensPoliciesCommandOutput;
-    DescribeLensServicesCommand: DescribeLensServicesCommandOutput;
-    DescribeLensTasksCommand: DescribeLensTasksCommandOutput;
-    DescribeMountServiceNodeTypesCommand: DescribeMountServiceNodeTypesCommandOutput;
-    DescribeMountServicesCommand: DescribeMountServicesCommandOutput;
-    DescribeRegionsCommand: DescribeRegionsCommandOutput;
-    DescribeZonesCommand: DescribeZonesCommandOutput;
-    DetachMountServiceFromSelfFileSystemCommand: DetachMountServiceFromSelfFileSystemCommandOutput;
-    ExpandFileSystemCommand: ExpandFileSystemCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    SetFilesetQosCommand: SetFilesetQosCommandOutput;
-    SetFilesetQuotaCommand: SetFilesetQuotaCommandOutput;
-    StartLensServiceCommand: StartLensServiceCommandOutput;
-    StopLensServiceCommand: StopLensServiceCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-    UpdateFileSystemCommand: UpdateFileSystemCommandOutput;
-    UpdateFilesetCommand: UpdateFilesetCommandOutput;
-    UpdateLensPolicyCommand: UpdateLensPolicyCommandOutput;
-    UpdateLensTaskCommand: UpdateLensTaskCommandOutput;
-    UpdateMountServiceCommand: UpdateMountServiceCommandOutput;
-  }
-}
 
 /**
  * VEPFSClient Service Client

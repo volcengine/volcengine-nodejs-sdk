@@ -40,20 +40,6 @@ export type RefreshDeviceCredentialCommandOutput = CommandOutput<RefreshDeviceCr
 export type RegisterDeviceCredentialCommandOutput = CommandOutput<RegisterDeviceCredentialResponse>;
 export type UnRegisterDeviceCredentialCommandOutput = CommandOutput<UnRegisterDeviceCredentialResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateDashboardEndpointCommand: CreateDashboardEndpointCommandOutput;
-    DeleteDashboardEndpointCommand: DeleteDashboardEndpointCommandOutput;
-    DescribeDeviceCredentialCommand: DescribeDeviceCredentialCommandOutput;
-    DescribeMQTTClientsCommand: DescribeMQTTClientsCommandOutput;
-    RefreshDeviceCredentialCommand: RefreshDeviceCredentialCommandOutput;
-    RegisterDeviceCredentialCommand: RegisterDeviceCredentialCommandOutput;
-    UnRegisterDeviceCredentialCommand: UnRegisterDeviceCredentialCommandOutput;
-  }
-}
 
 /**
  * BMQ20240901Client Service Client

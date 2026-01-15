@@ -79,33 +79,6 @@ export type ListTasksCommandOutput = CommandOutput<ListTasksResponse>;
 export type RetryFailedTaskCommandOutput = CommandOutput<RetryFailedTaskResponse>;
 export type UpdateTaskCommandOutput = CommandOutput<UpdateTaskResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateAddressCommand: CreateAddressCommandOutput;
-    CreateAgentCommand: CreateAgentCommandOutput;
-    CreateAgentGroupCommand: CreateAgentGroupCommandOutput;
-    CreateTaskCommand: CreateTaskCommandOutput;
-    DeleteAddressCommand: DeleteAddressCommandOutput;
-    DeleteAgentCommand: DeleteAgentCommandOutput;
-    DeleteAgentGroupCommand: DeleteAgentGroupCommandOutput;
-    DeleteTaskCommand: DeleteTaskCommandOutput;
-    GetAddressCommand: GetAddressCommandOutput;
-    GetAgentCommand: GetAgentCommandOutput;
-    GetAgentGroupCommand: GetAgentGroupCommandOutput;
-    GetAgentGroupStatusCommand: GetAgentGroupStatusCommandOutput;
-    GetRealTimeStatisticsCommand: GetRealTimeStatisticsCommandOutput;
-    GetTaskCommand: GetTaskCommandOutput;
-    ListAddressesCommand: ListAddressesCommandOutput;
-    ListAgentGroupsCommand: ListAgentGroupsCommandOutput;
-    ListAgentsCommand: ListAgentsCommandOutput;
-    ListTasksCommand: ListTasksCommandOutput;
-    RetryFailedTaskCommand: RetryFailedTaskCommandOutput;
-    UpdateTaskCommand: UpdateTaskCommandOutput;
-  }
-}
 
 /**
  * DMS20250101Client Service Client

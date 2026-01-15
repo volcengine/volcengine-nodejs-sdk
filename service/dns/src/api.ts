@@ -106,42 +106,6 @@ export type UpdateRecordSetCommandOutput = CommandOutput<UpdateRecordSetResponse
 export type UpdateRecordStatusCommandOutput = CommandOutput<UpdateRecordStatusResponse>;
 export type UpdateZoneCommandOutput = CommandOutput<UpdateZoneResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    BatchDeleteCustomLineCommand: BatchDeleteCustomLineCommandOutput;
-    CheckRetrieveZoneCommand: CheckRetrieveZoneCommandOutput;
-    CheckZoneCommand: CheckZoneCommandOutput;
-    CreateCustomLineCommand: CreateCustomLineCommandOutput;
-    CreateRecordCommand: CreateRecordCommandOutput;
-    CreateUserZoneBackupCommand: CreateUserZoneBackupCommandOutput;
-    CreateZoneCommand: CreateZoneCommandOutput;
-    DeleteRecordCommand: DeleteRecordCommandOutput;
-    DeleteUserZoneBackupCommand: DeleteUserZoneBackupCommandOutput;
-    DeleteZoneCommand: DeleteZoneCommandOutput;
-    ListCustomLinesCommand: ListCustomLinesCommandOutput;
-    ListDomainStatisticsCommand: ListDomainStatisticsCommandOutput;
-    ListLinesCommand: ListLinesCommandOutput;
-    ListRecordDigestByLineCommand: ListRecordDigestByLineCommandOutput;
-    ListRecordSetsCommand: ListRecordSetsCommandOutput;
-    ListRecordsCommand: ListRecordsCommandOutput;
-    ListZoneStatisticsCommand: ListZoneStatisticsCommandOutput;
-    ListZonesCommand: ListZonesCommandOutput;
-    QueryBackupScheduleCommand: QueryBackupScheduleCommandOutput;
-    QueryRecordCommand: QueryRecordCommandOutput;
-    QueryZoneCommand: QueryZoneCommandOutput;
-    RestoreUserZoneBackupCommand: RestoreUserZoneBackupCommandOutput;
-    RetrieveZoneCommand: RetrieveZoneCommandOutput;
-    UpdateBackupScheduleCommand: UpdateBackupScheduleCommandOutput;
-    UpdateCustomLineCommand: UpdateCustomLineCommandOutput;
-    UpdateRecordCommand: UpdateRecordCommandOutput;
-    UpdateRecordSetCommand: UpdateRecordSetCommandOutput;
-    UpdateRecordStatusCommand: UpdateRecordStatusCommandOutput;
-    UpdateZoneCommand: UpdateZoneCommandOutput;
-  }
-}
 
 /**
  * DNSClient Service Client

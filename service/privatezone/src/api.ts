@@ -148,56 +148,6 @@ export type UpdateRecordSetCommandOutput = CommandOutput<UpdateRecordSetResponse
 export type UpdateResolverEndpointCommandOutput = CommandOutput<UpdateResolverEndpointResponse>;
 export type UpdateResolverRuleCommandOutput = CommandOutput<UpdateResolverRuleResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    BatchCreateRecordCommand: BatchCreateRecordCommandOutput;
-    BatchDeleteRecordCommand: BatchDeleteRecordCommandOutput;
-    BatchUpdateRecordCommand: BatchUpdateRecordCommandOutput;
-    BindRuleVPCCommand: BindRuleVPCCommandOutput;
-    BindVPCCommand: BindVPCCommandOutput;
-    CreateAuthorizedUserCommand: CreateAuthorizedUserCommandOutput;
-    CreatePrivateZoneCommand: CreatePrivateZoneCommandOutput;
-    CreateRecordCommand: CreateRecordCommandOutput;
-    CreateResolverEndpointCommand: CreateResolverEndpointCommandOutput;
-    CreateResolverRuleCommand: CreateResolverRuleCommandOutput;
-    DeleteAuthorizedUserCommand: DeleteAuthorizedUserCommandOutput;
-    DeletePrivateZoneCommand: DeletePrivateZoneCommandOutput;
-    DeleteRecordCommand: DeleteRecordCommandOutput;
-    DeleteResolverEndpointCommand: DeleteResolverEndpointCommandOutput;
-    DeleteResolverRuleCommand: DeleteResolverRuleCommandOutput;
-    IncBindVPCCommand: IncBindVPCCommandOutput;
-    ListAuthorizedUsersCommand: ListAuthorizedUsersCommandOutput;
-    ListBindVPCCommand: ListBindVPCCommandOutput;
-    ListPrivateZonesCommand: ListPrivateZonesCommandOutput;
-    ListRecordAttributesCommand: ListRecordAttributesCommandOutput;
-    ListRecordSetsCommand: ListRecordSetsCommandOutput;
-    ListRecordsCommand: ListRecordsCommandOutput;
-    ListRegionsCommand: ListRegionsCommandOutput;
-    ListResolverEndpointsCommand: ListResolverEndpointsCommandOutput;
-    ListResolverRulesCommand: ListResolverRulesCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    ListUserVPCCommand: ListUserVPCCommandOutput;
-    QueryEcsHostSyncTaskCommand: QueryEcsHostSyncTaskCommandOutput;
-    QueryPrivateZoneCommand: QueryPrivateZoneCommandOutput;
-    QueryRecordCommand: QueryRecordCommandOutput;
-    QueryResolverEndpointCommand: QueryResolverEndpointCommandOutput;
-    QueryResolverRuleCommand: QueryResolverRuleCommandOutput;
-    SendVerifyCodeCommand: SendVerifyCodeCommandOutput;
-    SyncEcsHostCommand: SyncEcsHostCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-    UpdateBindVPCCommand: UpdateBindVPCCommandOutput;
-    UpdateEcsHostSyncTaskCommand: UpdateEcsHostSyncTaskCommandOutput;
-    UpdatePrivateZoneCommand: UpdatePrivateZoneCommandOutput;
-    UpdateRecordCommand: UpdateRecordCommandOutput;
-    UpdateRecordSetCommand: UpdateRecordSetCommandOutput;
-    UpdateResolverEndpointCommand: UpdateResolverEndpointCommandOutput;
-    UpdateResolverRuleCommand: UpdateResolverRuleCommandOutput;
-  }
-}
 
 /**
  * PRIVATEZONEClient Service Client

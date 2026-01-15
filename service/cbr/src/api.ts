@@ -103,41 +103,6 @@ export type UpdateBackupPolicyCommandOutput = CommandOutput<UpdateBackupPolicyRe
 export type UpdateRecoveryPointCommandOutput = CommandOutput<UpdateRecoveryPointResponse>;
 export type UpdateRestoreJobCommandOutput = CommandOutput<UpdateRestoreJobResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateBackupJobCommand: CreateBackupJobCommandOutput;
-    CreateBackupPlanCommand: CreateBackupPlanCommandOutput;
-    CreateBackupPolicyCommand: CreateBackupPolicyCommandOutput;
-    CreateBackupResourceCommand: CreateBackupResourceCommandOutput;
-    CreateRestoreJobCommand: CreateRestoreJobCommandOutput;
-    CreateVaultCommand: CreateVaultCommandOutput;
-    DeleteBackupPlanCommand: DeleteBackupPlanCommandOutput;
-    DeleteBackupPolicyCommand: DeleteBackupPolicyCommandOutput;
-    DeleteBackupResourceCommand: DeleteBackupResourceCommandOutput;
-    DeleteRecoveryPointCommand: DeleteRecoveryPointCommandOutput;
-    DeleteVaultCommand: DeleteVaultCommandOutput;
-    DescribeBackupPlansCommand: DescribeBackupPlansCommandOutput;
-    DescribeBackupPoliciesCommand: DescribeBackupPoliciesCommandOutput;
-    DescribeBackupResourcesCommand: DescribeBackupResourcesCommandOutput;
-    DescribeRecoveryPointsCommand: DescribeRecoveryPointsCommandOutput;
-    DescribeRegionsCommand: DescribeRegionsCommandOutput;
-    DescribeRestoreJobsCommand: DescribeRestoreJobsCommandOutput;
-    DescribeVaultsCommand: DescribeVaultsCommandOutput;
-    DescribeZonesCommand: DescribeZonesCommandOutput;
-    DisableBackupPolicyCommand: DisableBackupPolicyCommandOutput;
-    EnableBackupPolicyCommand: EnableBackupPolicyCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-    UpdateBackupPlanCommand: UpdateBackupPlanCommandOutput;
-    UpdateBackupPolicyCommand: UpdateBackupPolicyCommandOutput;
-    UpdateRecoveryPointCommand: UpdateRecoveryPointCommandOutput;
-    UpdateRestoreJobCommand: UpdateRestoreJobCommandOutput;
-  }
-}
 
 /**
  * CBRClient Service Client

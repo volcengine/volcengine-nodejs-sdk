@@ -34,18 +34,6 @@ export type DescribeSecretVersionsCommandOutput = CommandOutput<DescribeSecretVe
 export type DescribeSecretsCommandOutput = CommandOutput<DescribeSecretsResponse>;
 export type GetSecretValueCommandOutput = CommandOutput<GetSecretValueResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    BatchGetSecretValueCommand: BatchGetSecretValueCommandOutput;
-    DescribeSecretCommand: DescribeSecretCommandOutput;
-    DescribeSecretVersionsCommand: DescribeSecretVersionsCommandOutput;
-    DescribeSecretsCommand: DescribeSecretsCommandOutput;
-    GetSecretValueCommand: GetSecretValueCommandOutput;
-  }
-}
 
 /**
  * METAKMSClient Service Client

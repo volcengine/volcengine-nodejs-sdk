@@ -91,37 +91,6 @@ export type ModifyInstanceAdvancedFeaturesCommandOutput = CommandOutput<ModifyIn
 export type RestartDBInstanceCommandOutput = CommandOutput<RestartDBInstanceResponse>;
 export type RestoreToExistedInstanceCommandOutput = CommandOutput<RestoreToExistedInstanceResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateBackupCommand: CreateBackupCommandOutput;
-    CreateDBInstanceCommand: CreateDBInstanceCommandOutput;
-    CreateTosRestoreCommand: CreateTosRestoreCommandOutput;
-    DeleteBackupCommand: DeleteBackupCommandOutput;
-    DeleteDBInstanceCommand: DeleteDBInstanceCommandOutput;
-    DescribeAvailabilityZonesCommand: DescribeAvailabilityZonesCommandOutput;
-    DescribeAvailableCrossRegionCommand: DescribeAvailableCrossRegionCommandOutput;
-    DescribeBackupDetailCommand: DescribeBackupDetailCommandOutput;
-    DescribeBackupsCommand: DescribeBackupsCommandOutput;
-    DescribeCrossBackupPolicyCommand: DescribeCrossBackupPolicyCommandOutput;
-    DescribeDBInstanceParametersCommand: DescribeDBInstanceParametersCommandOutput;
-    DescribeDBInstanceSpecsCommand: DescribeDBInstanceSpecsCommandOutput;
-    DescribeDBInstancesCommand: DescribeDBInstancesCommandOutput;
-    DescribeRegionsCommand: DescribeRegionsCommandOutput;
-    DescribeTosRestoreTaskDetailCommand: DescribeTosRestoreTaskDetailCommandOutput;
-    DescribeTosRestoreTasksCommand: DescribeTosRestoreTasksCommandOutput;
-    DownloadBackupCommand: DownloadBackupCommandOutput;
-    ModifyBackupPolicyCommand: ModifyBackupPolicyCommandOutput;
-    ModifyCrossBackupPolicyCommand: ModifyCrossBackupPolicyCommandOutput;
-    ModifyDBFailoverCommand: ModifyDBFailoverCommandOutput;
-    ModifyDBInstanceNameCommand: ModifyDBInstanceNameCommandOutput;
-    ModifyInstanceAdvancedFeaturesCommand: ModifyInstanceAdvancedFeaturesCommandOutput;
-    RestartDBInstanceCommand: RestartDBInstanceCommandOutput;
-    RestoreToExistedInstanceCommand: RestoreToExistedInstanceCommandOutput;
-  }
-}
 
 /**
  * RDSMSSQLClient Service Client

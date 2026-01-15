@@ -64,28 +64,6 @@ export type VideoProjectTaskListCommandOutput = CommandOutput<VideoProjectTaskLi
 export type VideoResourceUploadCommandOutput = CommandOutput<VideoResourceUploadResponse>;
 export type WebhooksCreateCommandOutput = CommandOutput<WebhooksCreateResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateVideoCreateCommand: CreateVideoCreateCommandOutput;
-    ProjectDetailCommand: ProjectDetailCommandOutput;
-    ProjectNamespaceCreateCommand: ProjectNamespaceCreateCommandOutput;
-    ProjectNamespaceDetailCommand: ProjectNamespaceDetailCommandOutput;
-    ProjectNamespacesCommand: ProjectNamespacesCommandOutput;
-    ProjectUserRoleCommand: ProjectUserRoleCommandOutput;
-    ProjectUsersCommand: ProjectUsersCommandOutput;
-    ProjectsCommand: ProjectsCommandOutput;
-    VideoProjectCreateCommand: VideoProjectCreateCommandOutput;
-    VideoProjectListCommand: VideoProjectListCommandOutput;
-    VideoProjectSerialTaskCreateCommand: VideoProjectSerialTaskCreateCommandOutput;
-    VideoProjectTaskDetailCommand: VideoProjectTaskDetailCommandOutput;
-    VideoProjectTaskListCommand: VideoProjectTaskListCommandOutput;
-    VideoResourceUploadCommand: VideoResourceUploadCommandOutput;
-    WebhooksCreateCommand: WebhooksCreateCommandOutput;
-  }
-}
 
 /**
  * I18NOPENAPIClient Service Client

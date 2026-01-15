@@ -46,22 +46,6 @@ export type ListResourceTypesCommandOutput = CommandOutput<ListResourceTypesResp
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateTagsCommand: CreateTagsCommandOutput;
-    DeleteTagsCommand: DeleteTagsCommandOutput;
-    GetResourcesCommand: GetResourcesCommandOutput;
-    GetTagKeysCommand: GetTagKeysCommandOutput;
-    GetTagValuesCommand: GetTagValuesCommandOutput;
-    GetTagsCommand: GetTagsCommandOutput;
-    ListResourceTypesCommand: ListResourceTypesCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-  }
-}
 
 /**
  * TAGClient Service Client

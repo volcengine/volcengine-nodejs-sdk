@@ -88,36 +88,6 @@ export type UpdatePoolCommandOutput = CommandOutput<UpdatePoolResponse>;
 export type UpdateProbeCommandOutput = CommandOutput<UpdateProbeResponse>;
 export type UpdateRuleCommandOutput = CommandOutput<UpdateRuleResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreatePoolCommand: CreatePoolCommandOutput;
-    CreateRuleCommand: CreateRuleCommandOutput;
-    DeleteGtmCommand: DeleteGtmCommandOutput;
-    DeletePoolCommand: DeletePoolCommandOutput;
-    DeleteRuleCommand: DeleteRuleCommandOutput;
-    GetGtmCommand: GetGtmCommandOutput;
-    GetPolicyCommand: GetPolicyCommandOutput;
-    GetPoolCommand: GetPoolCommandOutput;
-    GetProbeCommand: GetProbeCommandOutput;
-    GetRuleCommand: GetRuleCommandOutput;
-    ListGtmsCommand: ListGtmsCommandOutput;
-    ListPoolsCommand: ListPoolsCommandOutput;
-    ListProbeTaskIdsCommand: ListProbeTaskIdsCommandOutput;
-    ListRulesCommand: ListRulesCommandOutput;
-    ReadProbeTaskDetailCommand: ReadProbeTaskDetailCommandOutput;
-    StartRoutingCommand: StartRoutingCommandOutput;
-    StopRoutingCommand: StopRoutingCommandOutput;
-    UpdateGtmCommand: UpdateGtmCommandOutput;
-    UpdateLoadCommand: UpdateLoadCommandOutput;
-    UpdatePolicyCommand: UpdatePolicyCommandOutput;
-    UpdatePoolCommand: UpdatePoolCommandOutput;
-    UpdateProbeCommand: UpdateProbeCommandOutput;
-    UpdateRuleCommand: UpdateRuleCommandOutput;
-  }
-}
 
 /**
  * GTMClient Service Client

@@ -130,50 +130,6 @@ export type UpdateDomainProbeSettingsCommandOutput = CommandOutput<UpdateDomainP
 export type UpdateSingleDomainConfigCommandOutput = CommandOutput<UpdateSingleDomainConfigResponse>;
 export type VerifyDomainOwnershipCommandOutput = CommandOutput<VerifyDomainOwnershipResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    BatchBlockIPCommand: BatchBlockIPCommandOutput;
-    CheckPurgePrefetchTaskCommand: CheckPurgePrefetchTaskCommandOutput;
-    CreateCertBindCommand: CreateCertBindCommandOutput;
-    CreateDomainConfigsCommand: CreateDomainConfigsCommandOutput;
-    CreatePurgePrefetchTaskCommand: CreatePurgePrefetchTaskCommandOutput;
-    DeleteCertBindCommand: DeleteCertBindCommandOutput;
-    DeleteDomainCommand: DeleteDomainCommandOutput;
-    DescribeBlockIPCommand: DescribeBlockIPCommandOutput;
-    DescribeDcdnRegionAndIspCommand: DescribeDcdnRegionAndIspCommandOutput;
-    DescribeDomainDetailCommand: DescribeDomainDetailCommandOutput;
-    DescribeDomainIspDataCommand: DescribeDomainIspDataCommandOutput;
-    DescribeDomainLogsCommand: DescribeDomainLogsCommandOutput;
-    DescribeDomainOverviewCommand: DescribeDomainOverviewCommandOutput;
-    DescribeDomainPVDataCommand: DescribeDomainPVDataCommandOutput;
-    DescribeDomainProbeSettingsCommand: DescribeDomainProbeSettingsCommandOutput;
-    DescribeDomainRegionDataCommand: DescribeDomainRegionDataCommandOutput;
-    DescribeDomainUVDataCommand: DescribeDomainUVDataCommandOutput;
-    DescribeOriginRealTimeDataCommand: DescribeOriginRealTimeDataCommandOutput;
-    DescribeOriginStatisticsCommand: DescribeOriginStatisticsCommandOutput;
-    DescribeOriginStatisticsDetailCommand: DescribeOriginStatisticsDetailCommandOutput;
-    DescribeRealTimeDataCommand: DescribeRealTimeDataCommandOutput;
-    DescribeStatisticsCommand: DescribeStatisticsCommandOutput;
-    DescribeStatisticsDetailCommand: DescribeStatisticsDetailCommandOutput;
-    DescribeTopDomainsCommand: DescribeTopDomainsCommandOutput;
-    DescribeTopIPCommand: DescribeTopIPCommandOutput;
-    DescribeTopRefererCommand: DescribeTopRefererCommandOutput;
-    DescribeTopURLCommand: DescribeTopURLCommandOutput;
-    DescribeVerifyContentCommand: DescribeVerifyContentCommandOutput;
-    GetPurgePrefetchTaskQuotaCommand: GetPurgePrefetchTaskQuotaCommandOutput;
-    ListCertCommand: ListCertCommandOutput;
-    ListCertBindCommand: ListCertBindCommandOutput;
-    RetryPurgePrefetchTaskCommand: RetryPurgePrefetchTaskCommandOutput;
-    StartDomainCommand: StartDomainCommandOutput;
-    StopDomainCommand: StopDomainCommandOutput;
-    UpdateDomainProbeSettingsCommand: UpdateDomainProbeSettingsCommandOutput;
-    UpdateSingleDomainConfigCommand: UpdateSingleDomainConfigCommandOutput;
-    VerifyDomainOwnershipCommand: VerifyDomainOwnershipCommandOutput;
-  }
-}
 
 /**
  * DCDNClient Service Client

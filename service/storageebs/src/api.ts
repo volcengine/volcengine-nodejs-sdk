@@ -145,55 +145,6 @@ export type ReInitializeVolumeCommandOutput = CommandOutput<ReInitializeVolumeRe
 export type RollbackSnapshotGroupCommandOutput = CommandOutput<RollbackSnapshotGroupResponse>;
 export type RollbackVolumeCommandOutput = CommandOutput<RollbackVolumeResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    ApplyAutoSnapshotPolicyCommand: ApplyAutoSnapshotPolicyCommandOutput;
-    AttachVolumeCommand: AttachVolumeCommandOutput;
-    CalculatePriceV2Command: CalculatePriceV2CommandOutput;
-    CancelAutoSnapshotPolicyCommand: CancelAutoSnapshotPolicyCommandOutput;
-    CreateAutoSnapshotPolicyCommand: CreateAutoSnapshotPolicyCommandOutput;
-    CreatePlacementGroupCommand: CreatePlacementGroupCommandOutput;
-    CreateSnapshotCommand: CreateSnapshotCommandOutput;
-    CreateSnapshotGroupCommand: CreateSnapshotGroupCommandOutput;
-    CreateTagsCommand: CreateTagsCommandOutput;
-    CreateVolumeCommand: CreateVolumeCommandOutput;
-    DeleteAutoSnapshotPolicyCommand: DeleteAutoSnapshotPolicyCommandOutput;
-    DeletePlacementGroupCommand: DeletePlacementGroupCommandOutput;
-    DeleteSnapshotCommand: DeleteSnapshotCommandOutput;
-    DeleteSnapshotGroupCommand: DeleteSnapshotGroupCommandOutput;
-    DeleteTagsCommand: DeleteTagsCommandOutput;
-    DeleteVolumeCommand: DeleteVolumeCommandOutput;
-    DescribeAutoSnapshotPolicyCommand: DescribeAutoSnapshotPolicyCommandOutput;
-    DescribePlacementGroupDetailsCommand: DescribePlacementGroupDetailsCommandOutput;
-    DescribePlacementGroupsCommand: DescribePlacementGroupsCommandOutput;
-    DescribeReservedStorageCapacityCommand: DescribeReservedStorageCapacityCommandOutput;
-    DescribeSnapshotChainsCommand: DescribeSnapshotChainsCommandOutput;
-    DescribeSnapshotGroupsCommand: DescribeSnapshotGroupsCommandOutput;
-    DescribeSnapshotsCommand: DescribeSnapshotsCommandOutput;
-    DescribeSnapshotsUsageCommand: DescribeSnapshotsUsageCommandOutput;
-    DescribeTagsCommand: DescribeTagsCommandOutput;
-    DescribeVolumeTypeCommand: DescribeVolumeTypeCommandOutput;
-    DescribeVolumesCommand: DescribeVolumesCommandOutput;
-    DetachVolumeCommand: DetachVolumeCommandOutput;
-    ExtendVolumeCommand: ExtendVolumeCommandOutput;
-    ModifyAutoSnapshotPolicyCommand: ModifyAutoSnapshotPolicyCommandOutput;
-    ModifyPlacementGroupCommand: ModifyPlacementGroupCommandOutput;
-    ModifyReservedStorageCapacityEffectiveAtCommand: ModifyReservedStorageCapacityEffectiveAtCommandOutput;
-    ModifySnapshotAttributeCommand: ModifySnapshotAttributeCommandOutput;
-    ModifySnapshotGroupCommand: ModifySnapshotGroupCommandOutput;
-    ModifyVolumeAttributeCommand: ModifyVolumeAttributeCommandOutput;
-    ModifyVolumeChargeTypeCommand: ModifyVolumeChargeTypeCommandOutput;
-    ModifyVolumeExtraPerformanceCommand: ModifyVolumeExtraPerformanceCommandOutput;
-    ModifyVolumeSpecCommand: ModifyVolumeSpecCommandOutput;
-    PurchaseReservedStorageCapacityCommand: PurchaseReservedStorageCapacityCommandOutput;
-    ReInitializeVolumeCommand: ReInitializeVolumeCommandOutput;
-    RollbackSnapshotGroupCommand: RollbackSnapshotGroupCommandOutput;
-    RollbackVolumeCommand: RollbackVolumeCommandOutput;
-  }
-}
 
 /**
  * STORAGEEBSClient Service Client

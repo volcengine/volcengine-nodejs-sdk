@@ -82,34 +82,6 @@ export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateResourceShareCommandOutput = CommandOutput<UpdateResourceShareResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AcceptResourceShareInvitationCommand: AcceptResourceShareInvitationCommandOutput;
-    AssociateResourceShareCommand: AssociateResourceShareCommandOutput;
-    CreateResourceShareCommand: CreateResourceShareCommandOutput;
-    DeleteResourceShareCommand: DeleteResourceShareCommandOutput;
-    DescribeResourceShareInvitationsCommand: DescribeResourceShareInvitationsCommandOutput;
-    DescribeResourceSharesCommand: DescribeResourceSharesCommandOutput;
-    DisableSharingWithOrganizationCommand: DisableSharingWithOrganizationCommandOutput;
-    DisassociateResourceShareCommand: DisassociateResourceShareCommandOutput;
-    EnableSharingWithOrganizationCommand: EnableSharingWithOrganizationCommandOutput;
-    GetPermissionCommand: GetPermissionCommandOutput;
-    ListPermissionsCommand: ListPermissionsCommandOutput;
-    ListPrincipalsCommand: ListPrincipalsCommandOutput;
-    ListResourceShareAssociationsCommand: ListResourceShareAssociationsCommandOutput;
-    ListResourceSharePermissionsCommand: ListResourceSharePermissionsCommandOutput;
-    ListResourceTypesCommand: ListResourceTypesCommandOutput;
-    ListResourcesCommand: ListResourcesCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    RejectResourceShareInvitationCommand: RejectResourceShareInvitationCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-    UpdateResourceShareCommand: UpdateResourceShareCommandOutput;
-  }
-}
 
 /**
  * RESOURCESHAREClient Service Client

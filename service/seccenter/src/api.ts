@@ -34,18 +34,6 @@ export type ModifyCloudEnvCommandOutput = CommandOutput<ModifyCloudEnvResponse>;
 export type MultiCloudAccessSyncCommandOutput = CommandOutput<MultiCloudAccessSyncResponse>;
 export type SwitchCloudEnvSyncCommandOutput = CommandOutput<SwitchCloudEnvSyncResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddCloudEnvCommand: AddCloudEnvCommandOutput;
-    DeleteCloudEnvCommand: DeleteCloudEnvCommandOutput;
-    ModifyCloudEnvCommand: ModifyCloudEnvCommandOutput;
-    MultiCloudAccessSyncCommand: MultiCloudAccessSyncCommandOutput;
-    SwitchCloudEnvSyncCommand: SwitchCloudEnvSyncCommandOutput;
-  }
-}
 
 /**
  * SECCENTERClient Service Client

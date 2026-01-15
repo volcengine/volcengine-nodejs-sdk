@@ -34,18 +34,6 @@ export type ListApplicationInstanceCommandOutput = CommandOutput<ListApplication
 export type RestartGWSApplicationCommandOutput = CommandOutput<RestartGWSApplicationResponse>;
 export type StartApplicationInstanceCommandOutput = CommandOutput<StartApplicationInstanceResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CancelApplicationInstanceCommand: CancelApplicationInstanceCommandOutput;
-    GetApplicationInstanceCommand: GetApplicationInstanceCommandOutput;
-    ListApplicationInstanceCommand: ListApplicationInstanceCommandOutput;
-    RestartGWSApplicationCommand: RestartGWSApplicationCommandOutput;
-    StartApplicationInstanceCommand: StartApplicationInstanceCommandOutput;
-  }
-}
 
 /**
  * FLINK20250101Client Service Client

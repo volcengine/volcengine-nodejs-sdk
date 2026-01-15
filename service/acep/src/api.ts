@@ -106,42 +106,6 @@ export type UpdateCustomRouteCommandOutput = CommandOutput<UpdateCustomRouteResp
 export type UpdatePhoneTemplateCommandOutput = CommandOutput<UpdatePhoneTemplateResponse>;
 export type UpdatePodPropertyCommandOutput = CommandOutput<UpdatePodPropertyResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddCustomRouteCommand: AddCustomRouteCommandOutput;
-    AddPhoneTemplateCommand: AddPhoneTemplateCommandOutput;
-    BackupDataCommand: BackupDataCommandOutput;
-    BackupPodCommand: BackupPodCommandOutput;
-    CancelBackupPodCommand: CancelBackupPodCommandOutput;
-    CancelRestorePodCommand: CancelRestorePodCommandOutput;
-    CreatePodCommand: CreatePodCommandOutput;
-    CreatePodOneStepCommand: CreatePodOneStepCommandOutput;
-    DeleteBackupDataCommand: DeleteBackupDataCommandOutput;
-    DeleteCustomRouteCommand: DeleteCustomRouteCommandOutput;
-    GetDcBandwidthDailyPeakCommand: GetDcBandwidthDailyPeakCommandOutput;
-    GetPhoneTemplateCommand: GetPhoneTemplateCommandOutput;
-    ListAppCommand: ListAppCommandOutput;
-    ListBackupDataCommand: ListBackupDataCommandOutput;
-    ListCustomRouteCommand: ListCustomRouteCommandOutput;
-    ListPhoneTemplateCommand: ListPhoneTemplateCommandOutput;
-    ListPodCommand: ListPodCommandOutput;
-    MigratePodCommand: MigratePodCommandOutput;
-    RemovePhoneTemplateCommand: RemovePhoneTemplateCommandOutput;
-    ResetPodCommand: ResetPodCommandOutput;
-    RestoreDataCommand: RestoreDataCommandOutput;
-    RestorePodCommand: RestorePodCommandOutput;
-    StartRecordingCommand: StartRecordingCommandOutput;
-    StartScreenShotCommand: StartScreenShotCommandOutput;
-    StopRecordingCommand: StopRecordingCommandOutput;
-    StopScreenShotCommand: StopScreenShotCommandOutput;
-    UpdateCustomRouteCommand: UpdateCustomRouteCommandOutput;
-    UpdatePhoneTemplateCommand: UpdatePhoneTemplateCommandOutput;
-    UpdatePodPropertyCommand: UpdatePodPropertyCommandOutput;
-  }
-}
 
 /**
  * ACEPClient Service Client

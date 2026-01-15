@@ -64,28 +64,6 @@ export type ServiceStatusCommandOutput = CommandOutput<ServiceStatusResponse>;
 export type TerminateServiceCommandOutput = CommandOutput<TerminateServiceResponse>;
 export type UpdateAPIKeyCommandOutput = CommandOutput<UpdateAPIKeyResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    ActivateServiceCommand: ActivateServiceCommandOutput;
-    AliasResourcePackCommand: AliasResourcePackCommandOutput;
-    CreateAPIKeyCommand: CreateAPIKeyCommandOutput;
-    DeleteAPIKeyCommand: DeleteAPIKeyCommandOutput;
-    FormalizeResourcePacksCommand: FormalizeResourcePacksCommandOutput;
-    ListAPIKeysCommand: ListAPIKeysCommandOutput;
-    ListBigModelTTSTimbresCommand: ListBigModelTTSTimbresCommandOutput;
-    ListSpeakersCommand: ListSpeakersCommandOutput;
-    OrderResourcePacksCommand: OrderResourcePacksCommandOutput;
-    PauseServiceCommand: PauseServiceCommandOutput;
-    ResourcePacksStatusCommand: ResourcePacksStatusCommandOutput;
-    ResumeServiceCommand: ResumeServiceCommandOutput;
-    ServiceStatusCommand: ServiceStatusCommandOutput;
-    TerminateServiceCommand: TerminateServiceCommandOutput;
-    UpdateAPIKeyCommand: UpdateAPIKeyCommandOutput;
-  }
-}
 
 /**
  * SPEECHSAASPRODClient Service Client

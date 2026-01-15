@@ -46,22 +46,6 @@ export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UsageMonitoringCommandOutput = CommandOutput<UsageMonitoringResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    BatchListMegaTTSTrainStatusCommand: BatchListMegaTTSTrainStatusCommandOutput;
-    ListMegaTTSTrainStatusCommand: ListMegaTTSTrainStatusCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    OrderAccessResourcePacksCommand: OrderAccessResourcePacksCommandOutput;
-    QuotaMonitoringCommand: QuotaMonitoringCommandOutput;
-    RenewAccessResourcePacksCommand: RenewAccessResourcePacksCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-    UsageMonitoringCommand: UsageMonitoringCommandOutput;
-  }
-}
 
 /**
  * SPEECHSAASPROD20250521Client Service Client

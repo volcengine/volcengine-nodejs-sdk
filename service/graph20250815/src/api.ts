@@ -34,18 +34,6 @@ export type GetGraphTableSchemaStatusCommandOutput = CommandOutput<GetGraphTable
 export type GetTableCommandOutput = CommandOutput<GetTableResponse>;
 export type ModifyGraphSchemaCommandOutput = CommandOutput<ModifyGraphSchemaResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddGraphTablesCommand: AddGraphTablesCommandOutput;
-    GetGraphTableSchemaCommand: GetGraphTableSchemaCommandOutput;
-    GetGraphTableSchemaStatusCommand: GetGraphTableSchemaStatusCommandOutput;
-    GetTableCommand: GetTableCommandOutput;
-    ModifyGraphSchemaCommand: ModifyGraphSchemaCommandOutput;
-  }
-}
 
 /**
  * GRAPH20250815Client Service Client

@@ -100,40 +100,6 @@ export type UpdateSyslogConfigCommandOutput = CommandOutput<UpdateSyslogConfigRe
 export type UploadToolProductDocCommandOutput = CommandOutput<UploadToolProductDocResponse>;
 export type UpsertAlarmFeedbackWithRagCommandOutput = CommandOutput<UpsertAlarmFeedbackWithRagResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddIMConfigCommand: AddIMConfigCommandOutput;
-    AddSyslogConfigCommand: AddSyslogConfigCommandOutput;
-    AddToolProductCommand: AddToolProductCommandOutput;
-    BatchAddToolProductDocCommand: BatchAddToolProductDocCommandOutput;
-    CheckIMConfigCommand: CheckIMConfigCommandOutput;
-    CheckIMConfigParamsCommand: CheckIMConfigParamsCommandOutput;
-    DelSyslogConfigCommand: DelSyslogConfigCommandOutput;
-    DeleteIMConfigCommand: DeleteIMConfigCommandOutput;
-    DeleteToolProductCommand: DeleteToolProductCommandOutput;
-    DescribeAlarmStatOverviewV2Command: DescribeAlarmStatOverviewV2CommandOutput;
-    EditIMConfigCommand: EditIMConfigCommandOutput;
-    EditIMConfigStatusCommand: EditIMConfigStatusCommandOutput;
-    ExportAlarmCommand: ExportAlarmCommandOutput;
-    GenLogStashConfigCommand: GenLogStashConfigCommandOutput;
-    GetAlarmDetailCommand: GetAlarmDetailCommandOutput;
-    GetResourceAuthConfigCommand: GetResourceAuthConfigCommandOutput;
-    GetToolDetailCommand: GetToolDetailCommandOutput;
-    ListCloudProductIntegrationConfigCommand: ListCloudProductIntegrationConfigCommandOutput;
-    ListFastSamplingAlarmCommand: ListFastSamplingAlarmCommandOutput;
-    ListSyslogConfigCommand: ListSyslogConfigCommandOutput;
-    ListToolProductCommand: ListToolProductCommandOutput;
-    ListToolsCommand: ListToolsCommandOutput;
-    SaveToolCommand: SaveToolCommandOutput;
-    UpdateCloudProductIntegrationConfigCommand: UpdateCloudProductIntegrationConfigCommandOutput;
-    UpdateSyslogConfigCommand: UpdateSyslogConfigCommandOutput;
-    UploadToolProductDocCommand: UploadToolProductDocCommandOutput;
-    UpsertAlarmFeedbackWithRagCommand: UpsertAlarmFeedbackWithRagCommandOutput;
-  }
-}
 
 /**
  * SECAGENTClient Service Client

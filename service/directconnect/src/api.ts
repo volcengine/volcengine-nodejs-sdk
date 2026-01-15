@@ -157,59 +157,6 @@ export type ModifyDirectConnectVirtualInterfaceAttributesCommandOutput = Command
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AllocateDirectConnectVirtualInterfaceCommand: AllocateDirectConnectVirtualInterfaceCommandOutput;
-    ApplyDirectConnectConnectionLoaCommand: ApplyDirectConnectConnectionLoaCommandOutput;
-    ConfirmDirectConnectVirtualInterfaceCommand: ConfirmDirectConnectVirtualInterfaceCommandOutput;
-    CreateBgpPeerCommand: CreateBgpPeerCommandOutput;
-    CreateDirectConnectConnectionCommand: CreateDirectConnectConnectionCommandOutput;
-    CreateDirectConnectConnectionOrderCommand: CreateDirectConnectConnectionOrderCommandOutput;
-    CreateDirectConnectGatewayCommand: CreateDirectConnectGatewayCommandOutput;
-    CreateDirectConnectGatewayRouteCommand: CreateDirectConnectGatewayRouteCommandOutput;
-    CreateDirectConnectTrafficQosPolicyCommand: CreateDirectConnectTrafficQosPolicyCommandOutput;
-    CreateDirectConnectTrafficQosQueueCommand: CreateDirectConnectTrafficQosQueueCommandOutput;
-    CreateDirectConnectTrafficQosRuleCommand: CreateDirectConnectTrafficQosRuleCommandOutput;
-    CreateDirectConnectVirtualInterfaceCommand: CreateDirectConnectVirtualInterfaceCommandOutput;
-    DeleteBgpPeerCommand: DeleteBgpPeerCommandOutput;
-    DeleteDirectConnectConnectionCommand: DeleteDirectConnectConnectionCommandOutput;
-    DeleteDirectConnectGatewayCommand: DeleteDirectConnectGatewayCommandOutput;
-    DeleteDirectConnectGatewayRouteCommand: DeleteDirectConnectGatewayRouteCommandOutput;
-    DeleteDirectConnectTrafficQosPolicyCommand: DeleteDirectConnectTrafficQosPolicyCommandOutput;
-    DeleteDirectConnectTrafficQosQueueCommand: DeleteDirectConnectTrafficQosQueueCommandOutput;
-    DeleteDirectConnectTrafficQosRuleCommand: DeleteDirectConnectTrafficQosRuleCommandOutput;
-    DeleteDirectConnectVirtualInterfaceCommand: DeleteDirectConnectVirtualInterfaceCommandOutput;
-    DescribeBgpPeerAttributesCommand: DescribeBgpPeerAttributesCommandOutput;
-    DescribeBgpPeersCommand: DescribeBgpPeersCommandOutput;
-    DescribeDirectConnectAccessPointsCommand: DescribeDirectConnectAccessPointsCommandOutput;
-    DescribeDirectConnectConnectionAttributesCommand: DescribeDirectConnectConnectionAttributesCommandOutput;
-    DescribeDirectConnectConnectionLoaAttributesCommand: DescribeDirectConnectConnectionLoaAttributesCommandOutput;
-    DescribeDirectConnectConnectionsCommand: DescribeDirectConnectConnectionsCommandOutput;
-    DescribeDirectConnectGatewayAttributesCommand: DescribeDirectConnectGatewayAttributesCommandOutput;
-    DescribeDirectConnectGatewayRouteAttributesCommand: DescribeDirectConnectGatewayRouteAttributesCommandOutput;
-    DescribeDirectConnectGatewayRoutesCommand: DescribeDirectConnectGatewayRoutesCommandOutput;
-    DescribeDirectConnectGatewaysCommand: DescribeDirectConnectGatewaysCommandOutput;
-    DescribeDirectConnectTrafficQosPoliciesCommand: DescribeDirectConnectTrafficQosPoliciesCommandOutput;
-    DescribeDirectConnectTrafficQosQueuesCommand: DescribeDirectConnectTrafficQosQueuesCommandOutput;
-    DescribeDirectConnectTrafficQosRulesCommand: DescribeDirectConnectTrafficQosRulesCommandOutput;
-    DescribeDirectConnectVirtualInterfaceAttributesCommand: DescribeDirectConnectVirtualInterfaceAttributesCommandOutput;
-    DescribeDirectConnectVirtualInterfacesCommand: DescribeDirectConnectVirtualInterfacesCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    ModifyBgpPeerAttributesCommand: ModifyBgpPeerAttributesCommandOutput;
-    ModifyDirectConnectConnectionAttributesCommand: ModifyDirectConnectConnectionAttributesCommandOutput;
-    ModifyDirectConnectConnectionLoaAttributesCommand: ModifyDirectConnectConnectionLoaAttributesCommandOutput;
-    ModifyDirectConnectGatewayAttributesCommand: ModifyDirectConnectGatewayAttributesCommandOutput;
-    ModifyDirectConnectTrafficQosPolicyAttributesCommand: ModifyDirectConnectTrafficQosPolicyAttributesCommandOutput;
-    ModifyDirectConnectTrafficQosQueueAttributesCommand: ModifyDirectConnectTrafficQosQueueAttributesCommandOutput;
-    ModifyDirectConnectTrafficQosRuleAttributesCommand: ModifyDirectConnectTrafficQosRuleAttributesCommandOutput;
-    ModifyDirectConnectVirtualInterfaceAttributesCommand: ModifyDirectConnectVirtualInterfaceAttributesCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-  }
-}
 
 /**
  * DIRECTCONNECTClient Service Client

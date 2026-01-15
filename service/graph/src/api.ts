@@ -148,56 +148,6 @@ export type UpdateTabletReadBlackListConfCommandOutput = CommandOutput<UpdateTab
 export type UpdateTabletWriteBlackListConfCommandOutput = CommandOutput<UpdateTabletWriteBlackListConfResponse>;
 export type ValidateConfCheckerCommandOutput = CommandOutput<ValidateConfCheckerResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddTablesCommand: AddTablesCommandOutput;
-    AlterTableCommand: AlterTableCommandOutput;
-    CalcTableLimitsCommand: CalcTableLimitsCommandOutput;
-    CreateInstanceCommand: CreateInstanceCommandOutput;
-    DecodeRawKeyCommand: DecodeRawKeyCommandOutput;
-    DescribeInstanceCommand: DescribeInstanceCommandOutput;
-    DescribeVegraphConfigInK8sCommand: DescribeVegraphConfigInK8sCommandOutput;
-    DescribeVegraphConfigInMetamysqlCommand: DescribeVegraphConfigInMetamysqlCommandOutput;
-    DescribeZonesCommand: DescribeZonesCommandOutput;
-    DestroyInstanceCommand: DestroyInstanceCommandOutput;
-    ExecuteMetaserviceCliCommand: ExecuteMetaserviceCliCommandOutput;
-    ExecuteQueryCommand: ExecuteQueryCommandOutput;
-    GetAddTablesTicketOptionsCommand: GetAddTablesTicketOptionsCommandOutput;
-    GetConfCheckerCommand: GetConfCheckerCommandOutput;
-    GetInstanceSpecScopeCommand: GetInstanceSpecScopeCommandOutput;
-    GetTableCommand: GetTableCommandOutput;
-    GetTableConfigCommand: GetTableConfigCommandOutput;
-    GetTableIOQosOptionsCommand: GetTableIOQosOptionsCommandOutput;
-    GetTableLimitCommand: GetTableLimitCommandOutput;
-    GetTableQuotaCommand: GetTableQuotaCommandOutput;
-    GetTableSchemaCommand: GetTableSchemaCommandOutput;
-    GetVegraphNetworkResourceCommand: GetVegraphNetworkResourceCommandOutput;
-    GetVegraphReadAndWriteStatusCommand: GetVegraphReadAndWriteStatusCommandOutput;
-    GetVersionSetAndComponentsInfoCommand: GetVersionSetAndComponentsInfoCommandOutput;
-    GraphragAddKnowledgeBaseCommand: GraphragAddKnowledgeBaseCommandOutput;
-    ListAllTablesCommand: ListAllTablesCommandOutput;
-    ListClusterTablesCommand: ListClusterTablesCommandOutput;
-    ListGraphRagServiceCommand: ListGraphRagServiceCommandOutput;
-    ListInstanceCommand: ListInstanceCommandOutput;
-    ListTabletServerCommand: ListTabletServerCommandOutput;
-    ListTabletTaskCommand: ListTabletTaskCommandOutput;
-    ListTabletsCommand: ListTabletsCommandOutput;
-    MigrateTabletReplicaCommand: MigrateTabletReplicaCommandOutput;
-    ModifyDBInstanceDeletionProtectionPolicyCommand: ModifyDBInstanceDeletionProtectionPolicyCommandOutput;
-    ModifySchemaCommand: ModifySchemaCommandOutput;
-    SetVegraphReadAndWriteStatusCommand: SetVegraphReadAndWriteStatusCommandOutput;
-    TruncateTableCommand: TruncateTableCommandOutput;
-    UpdateConfCheckerCommand: UpdateConfCheckerCommandOutput;
-    UpdateGremlinKeywordBlackListConfCommand: UpdateGremlinKeywordBlackListConfCommandOutput;
-    UpdateKeyBlackListConfCommand: UpdateKeyBlackListConfCommandOutput;
-    UpdateTabletReadBlackListConfCommand: UpdateTabletReadBlackListConfCommandOutput;
-    UpdateTabletWriteBlackListConfCommand: UpdateTabletWriteBlackListConfCommandOutput;
-    ValidateConfCheckerCommand: ValidateConfCheckerCommandOutput;
-  }
-}
 
 /**
  * GRAPHClient Service Client

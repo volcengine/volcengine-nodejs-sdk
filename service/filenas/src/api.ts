@@ -154,58 +154,6 @@ export type UpdatePermissionGroupCommandOutput = CommandOutput<UpdatePermissionG
 export type UpdatePermissionRuleCommandOutput = CommandOutput<UpdatePermissionRuleResponse>;
 export type UpdateSnapshotCommandOutput = CommandOutput<UpdateSnapshotResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CancelDataFlowTaskCommand: CancelDataFlowTaskCommandOutput;
-    CancelDirQuotaCommand: CancelDirQuotaCommandOutput;
-    CreateAccessPointCommand: CreateAccessPointCommandOutput;
-    CreateDataFlowCommand: CreateDataFlowCommandOutput;
-    CreateDataFlowTaskCommand: CreateDataFlowTaskCommandOutput;
-    CreateFileSystemCommand: CreateFileSystemCommandOutput;
-    CreateMountPointCommand: CreateMountPointCommandOutput;
-    CreatePermissionGroupCommand: CreatePermissionGroupCommandOutput;
-    CreatePreSignedUrlCommand: CreatePreSignedUrlCommandOutput;
-    CreateReservedCapacityCommand: CreateReservedCapacityCommandOutput;
-    CreateSnapshotCommand: CreateSnapshotCommandOutput;
-    DeleteAccessPointCommand: DeleteAccessPointCommandOutput;
-    DeleteDataFlowCommand: DeleteDataFlowCommandOutput;
-    DeleteDataFlowTaskCommand: DeleteDataFlowTaskCommandOutput;
-    DeleteFileSystemCommand: DeleteFileSystemCommandOutput;
-    DeleteMountPointCommand: DeleteMountPointCommandOutput;
-    DeletePermissionGroupCommand: DeletePermissionGroupCommandOutput;
-    DeleteSnapshotCommand: DeleteSnapshotCommandOutput;
-    DescribeAccessPointsCommand: DescribeAccessPointsCommandOutput;
-    DescribeDataFlowTasksCommand: DescribeDataFlowTasksCommandOutput;
-    DescribeDataFlowsCommand: DescribeDataFlowsCommandOutput;
-    DescribeDirQuotasCommand: DescribeDirQuotasCommandOutput;
-    DescribeFileSystemOverviewCommand: DescribeFileSystemOverviewCommandOutput;
-    DescribeFileSystemStatisticsCommand: DescribeFileSystemStatisticsCommandOutput;
-    DescribeFileSystemsCommand: DescribeFileSystemsCommandOutput;
-    DescribeMountPointsCommand: DescribeMountPointsCommandOutput;
-    DescribeMountedClientsCommand: DescribeMountedClientsCommandOutput;
-    DescribePermissionGroupsCommand: DescribePermissionGroupsCommandOutput;
-    DescribePermissionRulesCommand: DescribePermissionRulesCommandOutput;
-    DescribeRegionsCommand: DescribeRegionsCommandOutput;
-    DescribeReservedCapacitysCommand: DescribeReservedCapacitysCommandOutput;
-    DescribeSnapshotsCommand: DescribeSnapshotsCommandOutput;
-    DescribeZonesCommand: DescribeZonesCommandOutput;
-    ExpandFileSystemCommand: ExpandFileSystemCommandOutput;
-    ModifyAccessPointCommand: ModifyAccessPointCommandOutput;
-    ModifyFileSystemSpecCommand: ModifyFileSystemSpecCommandOutput;
-    SetDirQuotaCommand: SetDirQuotaCommandOutput;
-    StartDataFlowCommand: StartDataFlowCommandOutput;
-    StopDataFlowCommand: StopDataFlowCommandOutput;
-    UpdateDataFlowCommand: UpdateDataFlowCommandOutput;
-    UpdateFileSystemCommand: UpdateFileSystemCommandOutput;
-    UpdateMountPointCommand: UpdateMountPointCommandOutput;
-    UpdatePermissionGroupCommand: UpdatePermissionGroupCommandOutput;
-    UpdatePermissionRuleCommand: UpdatePermissionRuleCommandOutput;
-    UpdateSnapshotCommand: UpdateSnapshotCommandOutput;
-  }
-}
 
 /**
  * FILENASClient Service Client

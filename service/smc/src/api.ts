@@ -46,22 +46,6 @@ export type SetIncrementalSyncIntervalCommandOutput = CommandOutput<SetIncrement
 export type TriggerLastIncrementalSyncCommandOutput = CommandOutput<TriggerLastIncrementalSyncResponse>;
 export type UnTagResourcesCommandOutput = CommandOutput<UnTagResourcesResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    DeleteMigrationJobCommand: DeleteMigrationJobCommandOutput;
-    DeleteMigrationSourceCommand: DeleteMigrationSourceCommandOutput;
-    DescribeMigrationLogsCommand: DescribeMigrationLogsCommandOutput;
-    DescribeMigrationSystemSupportTypesCommand: DescribeMigrationSystemSupportTypesCommandOutput;
-    ModifyMigrationJobAttributeCommand: ModifyMigrationJobAttributeCommandOutput;
-    ModifyMigrationSourceAttributeCommand: ModifyMigrationSourceAttributeCommandOutput;
-    SetIncrementalSyncIntervalCommand: SetIncrementalSyncIntervalCommandOutput;
-    TriggerLastIncrementalSyncCommand: TriggerLastIncrementalSyncCommandOutput;
-    UnTagResourcesCommand: UnTagResourcesCommandOutput;
-  }
-}
 
 /**
  * SMCClient Service Client

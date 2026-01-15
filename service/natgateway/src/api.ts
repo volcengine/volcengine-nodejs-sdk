@@ -91,37 +91,6 @@ export type ModifySnatEntryAttributesCommandOutput = CommandOutput<ModifySnatEnt
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateDnatEntryCommand: CreateDnatEntryCommandOutput;
-    CreateNatGatewayCommand: CreateNatGatewayCommandOutput;
-    CreateNatIpCommand: CreateNatIpCommandOutput;
-    CreateSnatEntryCommand: CreateSnatEntryCommandOutput;
-    DeleteDnatEntryCommand: DeleteDnatEntryCommandOutput;
-    DeleteNatGatewayCommand: DeleteNatGatewayCommandOutput;
-    DeleteNatIpCommand: DeleteNatIpCommandOutput;
-    DeleteSnatEntryCommand: DeleteSnatEntryCommandOutput;
-    DescribeDnatEntriesCommand: DescribeDnatEntriesCommandOutput;
-    DescribeDnatEntryAttributesCommand: DescribeDnatEntryAttributesCommandOutput;
-    DescribeNatGatewaysCommand: DescribeNatGatewaysCommandOutput;
-    DescribeNatIpAttributesCommand: DescribeNatIpAttributesCommandOutput;
-    DescribeNatIpLimitRulesCommand: DescribeNatIpLimitRulesCommandOutput;
-    DescribeNatIpsCommand: DescribeNatIpsCommandOutput;
-    DescribeSnatEntriesCommand: DescribeSnatEntriesCommandOutput;
-    DescribeSnatEntryAttributesCommand: DescribeSnatEntryAttributesCommandOutput;
-    ListNatGatewayAvailableZonesCommand: ListNatGatewayAvailableZonesCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    ModifyDnatEntryAttributesCommand: ModifyDnatEntryAttributesCommandOutput;
-    ModifyNatGatewayAttributesCommand: ModifyNatGatewayAttributesCommandOutput;
-    ModifyNatIpAttributesCommand: ModifyNatIpAttributesCommandOutput;
-    ModifySnatEntryAttributesCommand: ModifySnatEntryAttributesCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-  }
-}
 
 /**
  * NATGATEWAYClient Service Client

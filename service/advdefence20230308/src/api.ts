@@ -46,22 +46,6 @@ export type DescribeBizFlowAndConnCountCommandOutput = CommandOutput<DescribeBiz
 export type UpdWebDefCcRuleCommandOutput = CommandOutput<UpdWebDefCcRuleResponse>;
 export type UpdateFwdRuleCommandOutput = CommandOutput<UpdateFwdRuleResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddWebDefCcRuleCommand: AddWebDefCcRuleCommandOutput;
-    BatchAddFwdRuleCommand: BatchAddFwdRuleCommandOutput;
-    DelWebDefCcRuleCommand: DelWebDefCcRuleCommandOutput;
-    DescWebDefCcRuleCommand: DescWebDefCcRuleCommandOutput;
-    DescribeAttackEventCommand: DescribeAttackEventCommandOutput;
-    DescribeAttackFlowCommand: DescribeAttackFlowCommandOutput;
-    DescribeBizFlowAndConnCountCommand: DescribeBizFlowAndConnCountCommandOutput;
-    UpdWebDefCcRuleCommand: UpdWebDefCcRuleCommandOutput;
-    UpdateFwdRuleCommand: UpdateFwdRuleCommandOutput;
-  }
-}
 
 /**
  * ADVDEFENCE20230308Client Service Client

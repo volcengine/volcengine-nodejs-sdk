@@ -28,16 +28,6 @@ export type ListAppsCommandOutput = CommandOutput<ListAppsResponse>;
 export type ListAppsV3CommandOutput = CommandOutput<ListAppsV3Response>;
 export type ListRealTimePublicStreamInfoCommandOutput = CommandOutput<ListRealTimePublicStreamInfoResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    ListAppsCommand: ListAppsCommandOutput;
-    ListAppsV3Command: ListAppsV3CommandOutput;
-    ListRealTimePublicStreamInfoCommand: ListRealTimePublicStreamInfoCommandOutput;
-  }
-}
 
 /**
  * WTNClient Service Client

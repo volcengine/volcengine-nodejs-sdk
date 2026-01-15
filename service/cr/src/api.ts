@@ -103,41 +103,6 @@ export type UpdateRobotAccountCommandOutput = CommandOutput<UpdateRobotAccountRe
 export type UpdateRobotAccountPasswordCommandOutput = CommandOutput<UpdateRobotAccountPasswordResponse>;
 export type UpdateVpcEndpointCommandOutput = CommandOutput<UpdateVpcEndpointResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateEndpointAclPoliciesCommand: CreateEndpointAclPoliciesCommandOutput;
-    CreateNamespaceCommand: CreateNamespaceCommandOutput;
-    CreateRegistryCommand: CreateRegistryCommandOutput;
-    CreateRepositoryCommand: CreateRepositoryCommandOutput;
-    CreateRobotAccountCommand: CreateRobotAccountCommandOutput;
-    DeleteEndpointAclPoliciesCommand: DeleteEndpointAclPoliciesCommandOutput;
-    DeleteNamespaceCommand: DeleteNamespaceCommandOutput;
-    DeleteRegistryCommand: DeleteRegistryCommandOutput;
-    DeleteRepositoryCommand: DeleteRepositoryCommandOutput;
-    DeleteRobotAccountCommand: DeleteRobotAccountCommandOutput;
-    DeleteTagsCommand: DeleteTagsCommandOutput;
-    GetAuthorizationTokenCommand: GetAuthorizationTokenCommandOutput;
-    GetPublicEndpointCommand: GetPublicEndpointCommandOutput;
-    GetUserCommand: GetUserCommandOutput;
-    GetVpcEndpointCommand: GetVpcEndpointCommandOutput;
-    ListDomainsCommand: ListDomainsCommandOutput;
-    ListNamespacesCommand: ListNamespacesCommandOutput;
-    ListRegistriesCommand: ListRegistriesCommandOutput;
-    ListRepositoriesCommand: ListRepositoriesCommandOutput;
-    ListRobotAccountsCommand: ListRobotAccountsCommandOutput;
-    ListTagsCommand: ListTagsCommandOutput;
-    SetUserCommand: SetUserCommandOutput;
-    StartRegistryCommand: StartRegistryCommandOutput;
-    UpdatePublicEndpointCommand: UpdatePublicEndpointCommandOutput;
-    UpdateRepositoryCommand: UpdateRepositoryCommandOutput;
-    UpdateRobotAccountCommand: UpdateRobotAccountCommandOutput;
-    UpdateRobotAccountPasswordCommand: UpdateRobotAccountPasswordCommandOutput;
-    UpdateVpcEndpointCommand: UpdateVpcEndpointCommandOutput;
-  }
-}
 
 /**
  * CRClient Service Client

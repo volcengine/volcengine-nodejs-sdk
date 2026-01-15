@@ -91,37 +91,6 @@ export type StartCdnDomainCommandOutput = CommandOutput<StartCdnDomainResponse>;
 export type StopCdnDomainCommandOutput = CommandOutput<StopCdnDomainResponse>;
 export type UpdateResourceTagsCommandOutput = CommandOutput<UpdateResourceTagsResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddResourceTagsCommand: AddResourceTagsCommandOutput;
-    DeleteCdnCertificateCommand: DeleteCdnCertificateCommandOutput;
-    DeleteCdnDomainCommand: DeleteCdnDomainCommandOutput;
-    DeleteResourceTagsCommand: DeleteResourceTagsCommandOutput;
-    DeleteUsageReportCommand: DeleteUsageReportCommandOutput;
-    DescribeCdnAccessLogCommand: DescribeCdnAccessLogCommandOutput;
-    DescribeCdnConfigCommand: DescribeCdnConfigCommandOutput;
-    DescribeCdnIPCommand: DescribeCdnIPCommandOutput;
-    DescribeCdnRegionAndIspCommand: DescribeCdnRegionAndIspCommandOutput;
-    DescribeCdnServiceCommand: DescribeCdnServiceCommandOutput;
-    DescribeCertConfigCommand: DescribeCertConfigCommandOutput;
-    DescribeDistrictRankingCommand: DescribeDistrictRankingCommandOutput;
-    DescribeEdgeRankingCommand: DescribeEdgeRankingCommandOutput;
-    DescribeEdgeStatusCodeRankingCommand: DescribeEdgeStatusCodeRankingCommandOutput;
-    DescribeOriginDataCommand: DescribeOriginDataCommandOutput;
-    DescribeOriginRankingCommand: DescribeOriginRankingCommandOutput;
-    DescribeOriginStatusCodeRankingCommand: DescribeOriginStatusCodeRankingCommandOutput;
-    DescribeStatisticalRankingCommand: DescribeStatisticalRankingCommandOutput;
-    DescribeUserDataCommand: DescribeUserDataCommandOutput;
-    ListResourceTagsCommand: ListResourceTagsCommandOutput;
-    ListUsageReportsCommand: ListUsageReportsCommandOutput;
-    StartCdnDomainCommand: StartCdnDomainCommandOutput;
-    StopCdnDomainCommand: StopCdnDomainCommandOutput;
-    UpdateResourceTagsCommand: UpdateResourceTagsCommandOutput;
-  }
-}
 
 /**
  * CDNClient Service Client

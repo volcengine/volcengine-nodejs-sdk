@@ -73,31 +73,6 @@ export type ScaleInstanceCommandOutput = CommandOutput<ScaleInstanceResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CreateInstanceCommand: CreateInstanceCommandOutput;
-    CreateInstanceOneStepCommand: CreateInstanceOneStepCommandOutput;
-    DescribeConfigModulesCommand: DescribeConfigModulesCommandOutput;
-    DescribeInstanceConfigCommand: DescribeInstanceConfigCommandOutput;
-    DescribeInstanceDetailCommand: DescribeInstanceDetailCommandOutput;
-    DescribeInstancesCommand: DescribeInstancesCommandOutput;
-    DescribeNodeInfoCommand: DescribeNodeInfoCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    ModifyDeleteProtectCommand: ModifyDeleteProtectCommandOutput;
-    ModifyInstanceConfigCommand: ModifyInstanceConfigCommandOutput;
-    ModifyInstanceNameCommand: ModifyInstanceNameCommandOutput;
-    ModifyPostPaidCommand: ModifyPostPaidCommandOutput;
-    ModifyPrePaidCommand: ModifyPrePaidCommandOutput;
-    ModifyResourceTagsCommand: ModifyResourceTagsCommandOutput;
-    ReleaseInstanceCommand: ReleaseInstanceCommandOutput;
-    ScaleInstanceCommand: ScaleInstanceCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-  }
-}
 
 /**
  * MILVUSClient Service Client

@@ -145,55 +145,6 @@ export type RemoveTagsFromResourceCommandOutput = CommandOutput<RemoveTagsFromRe
 export type ResetConsumedOffsetsCommandOutput = CommandOutput<ResetConsumedOffsetsResponse>;
 export type UpdateMigrateTaskStatusCommandOutput = CommandOutput<UpdateMigrateTaskStatusResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AddTagsToResourceCommand: AddTagsToResourceCommandOutput;
-    AssociateAllowListCommand: AssociateAllowListCommandOutput;
-    CreateAclCommand: CreateAclCommandOutput;
-    CreateGroupCommand: CreateGroupCommandOutput;
-    CreateMigrateSubTasksCommand: CreateMigrateSubTasksCommandOutput;
-    CreatePublicAddressCommand: CreatePublicAddressCommandOutput;
-    CreateUserCommand: CreateUserCommandOutput;
-    DeleteAclCommand: DeleteAclCommandOutput;
-    DeleteAllowListCommand: DeleteAllowListCommandOutput;
-    DeleteGroupCommand: DeleteGroupCommandOutput;
-    DeleteInstanceCommand: DeleteInstanceCommandOutput;
-    DeletePrivateDomainFromPublicCommand: DeletePrivateDomainFromPublicCommandOutput;
-    DeleteTopicCommand: DeleteTopicCommandOutput;
-    DeleteUserCommand: DeleteUserCommandOutput;
-    DescribeAclsCommand: DescribeAclsCommandOutput;
-    DescribeAllowListDetailCommand: DescribeAllowListDetailCommandOutput;
-    DescribeAllowListsCommand: DescribeAllowListsCommandOutput;
-    DescribeAvailabilityZonesCommand: DescribeAvailabilityZonesCommandOutput;
-    DescribeRegionsCommand: DescribeRegionsCommandOutput;
-    DescribeTagsByResourceCommand: DescribeTagsByResourceCommandOutput;
-    DescribeTopicAccessPoliciesCommand: DescribeTopicAccessPoliciesCommandOutput;
-    DescribeTopicParametersCommand: DescribeTopicParametersCommandOutput;
-    DescribeTopicPartitionsCommand: DescribeTopicPartitionsCommandOutput;
-    DescribeTopicsCommand: DescribeTopicsCommandOutput;
-    DescribeUsersCommand: DescribeUsersCommandOutput;
-    DisassociateAllowListCommand: DisassociateAllowListCommandOutput;
-    ModifyAllowListCommand: ModifyAllowListCommandOutput;
-    ModifyGroupCommand: ModifyGroupCommandOutput;
-    ModifyInstanceAttributesCommand: ModifyInstanceAttributesCommandOutput;
-    ModifyInstanceChargeTypeCommand: ModifyInstanceChargeTypeCommandOutput;
-    ModifyInstanceParametersCommand: ModifyInstanceParametersCommandOutput;
-    ModifyInstanceReadWriteRatioCommand: ModifyInstanceReadWriteRatioCommandOutput;
-    ModifyInstanceSpecCommand: ModifyInstanceSpecCommandOutput;
-    ModifyTopicAttributesCommand: ModifyTopicAttributesCommandOutput;
-    ModifyTopicParametersCommand: ModifyTopicParametersCommandOutput;
-    ModifyUserAuthorityCommand: ModifyUserAuthorityCommandOutput;
-    ModifyUserPasswordCommand: ModifyUserPasswordCommandOutput;
-    PublishPrivateDomainToPublicCommand: PublishPrivateDomainToPublicCommandOutput;
-    QueryMessageByTimestampCommand: QueryMessageByTimestampCommandOutput;
-    RemoveTagsFromResourceCommand: RemoveTagsFromResourceCommandOutput;
-    ResetConsumedOffsetsCommand: ResetConsumedOffsetsCommandOutput;
-    UpdateMigrateTaskStatusCommand: UpdateMigrateTaskStatusCommandOutput;
-  }
-}
 
 /**
  * KAFKAClient Service Client

@@ -31,17 +31,6 @@ export type AuthorizeVolcToUserCommandOutput = CommandOutput<AuthorizeVolcToUser
 export type CreateUserCommandOutput = CommandOutput<CreateUserResponse>;
 export type ListCozeUserCommandOutput = CommandOutput<ListCozeUserResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AuthorizeCozeToUserCommand: AuthorizeCozeToUserCommandOutput;
-    AuthorizeVolcToUserCommand: AuthorizeVolcToUserCommandOutput;
-    CreateUserCommand: CreateUserCommandOutput;
-    ListCozeUserCommand: ListCozeUserCommandOutput;
-  }
-}
 
 /**
  * COZE20250601Client Service Client

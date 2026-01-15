@@ -25,15 +25,6 @@ import { GetCallerIdentityResponse } from './types/index';
 export type AssumeRoleCommandOutput = CommandOutput<AssumeRoleResponse>;
 export type GetCallerIdentityCommandOutput = CommandOutput<GetCallerIdentityResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    AssumeRoleCommand: AssumeRoleCommandOutput;
-    GetCallerIdentityCommand: GetCallerIdentityCommandOutput;
-  }
-}
 
 /**
  * STSClient Service Client

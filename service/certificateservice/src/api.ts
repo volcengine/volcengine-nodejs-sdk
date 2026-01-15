@@ -67,29 +67,6 @@ export type QuickApplyCertificateCommandOutput = CommandOutput<QuickApplyCertifi
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 
-// ============================================================================
-// CommandOutputMap Extensions via Declaration Merging
-// ============================================================================
-declare module '@volcengine/sdk-core' {
-  interface CommandOutputMap {
-    CancelInstanceCommand: CancelInstanceCommandOutput;
-    CertificateAddOrganizationCommand: CertificateAddOrganizationCommandOutput;
-    CertificateDeleteInstanceCommand: CertificateDeleteInstanceCommandOutput;
-    CertificateDeleteOrganizationCommand: CertificateDeleteOrganizationCommandOutput;
-    CertificateGetDcvParamCommand: CertificateGetDcvParamCommandOutput;
-    CertificateGetInstanceCommand: CertificateGetInstanceCommandOutput;
-    CertificateGetInstanceListCommand: CertificateGetInstanceListCommandOutput;
-    CertificateGetOrganizationCommand: CertificateGetOrganizationCommandOutput;
-    CertificateGetOrganizationListCommand: CertificateGetOrganizationListCommandOutput;
-    CertificateUpdateInstanceCommand: CertificateUpdateInstanceCommandOutput;
-    CertificateUpdateOrganizationCommand: CertificateUpdateOrganizationCommandOutput;
-    ImportCertificateCommand: ImportCertificateCommandOutput;
-    ListTagsForResourcesCommand: ListTagsForResourcesCommandOutput;
-    QuickApplyCertificateCommand: QuickApplyCertificateCommandOutput;
-    TagResourcesCommand: TagResourcesCommandOutput;
-    UntagResourcesCommand: UntagResourcesCommandOutput;
-  }
-}
 
 /**
  * CERTIFICATESERVICEClient Service Client
