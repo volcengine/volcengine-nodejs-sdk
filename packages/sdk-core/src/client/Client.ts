@@ -102,11 +102,12 @@ export class Client {
 
   async send<
     TInput extends CommandInput,
+    TOutput extends any,
     TCommandName extends keyof CommandOutputMap
   >(
-    command: Command<TInput, CommandOutputMap[TCommandName], TCommandName>,
+    command: Command<TInput, TOutput, TCommandName>,
     options?: SendOptions
-  ): Promise<CommandOutputMap[TCommandName]> {
+  ): Promise<TOutput> {
     const stack = this.middlewareStack.merge(command.middlewareStack);
     const context: MiddlewareContext = {
       clientName: this.constructor.name,

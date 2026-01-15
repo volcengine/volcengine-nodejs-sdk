@@ -28,11 +28,6 @@ import { AssumeRoleResponse } from "./types/index";
 // ============================================================================
 export type AssumeRoleCommandOutput = CommandOutput<AssumeRoleResponse>;
 
-declare module "../../types/types" {
-  interface CommandOutputMap {
-    AssumeRoleCommand: AssumeRoleCommandOutput;
-  }
-}
 /**
  * STSClient Service Client
  */
