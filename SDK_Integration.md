@@ -441,9 +441,10 @@ The backoff strategy determines the wait time between each retry. You can choose
 - `ExponentialWithRandomJitterBackoffStrategy` (Default): Exponential backoff with jitter. Adds a random delay on top of exponential backoff to help avoid "thundering herd" effects.
 
 ```typescript
+import { StrategyName } from "@volcengine/sdk-core";
 const client = new EcsClient({
   // ... other configurations
-  retryMode: "ExponentialBackoffStrategy",
+  strategyName: StrategyName.ExponentialWithRandomJitterBackoffStrategy,
 });
 ```
 
@@ -502,7 +503,7 @@ try {
     if (error.status !== undefined) {
       // 1.1 SSL Error (status === 0)
       if (error.status === 0) {
-        console.error(`❌ SSL Error: ${error.message}`);
+        console.error(`❌ SSL Error`);
       }
       // 1.2 Server returned error (status > 0)
       else {
@@ -514,7 +515,6 @@ try {
           console.error(`   RequestId: ${RequestId}`);
         } else {
           // Other HTTP errors (such as 404, 500, 502, etc.)
-          console.error(`❌ HTTP Error ${error.status}: ${error.message}`);
         }
       }
     }
@@ -530,17 +530,12 @@ try {
     }
     // 3. Handle other SDK exceptions (Exception)
     else {
-      console.error("❌ SDK Exception Occurred:");
-      console.error(`   Message: ${error.message}`);
-      console.error(`   Name:    ${error.name}`);
-      if (error.originalError) {
-        console.error("   Cause:", error.originalError);
-      }
+      console.error("❌ SDK Exception Occurred");
     }
   }
   // 4. Unknown error (Error not thrown by SDK)
   else {
-    console.error("❌ Unknown Error:", error);
+    console.error("❌ Unknown Error");
   }
 }
 ```

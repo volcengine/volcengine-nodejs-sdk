@@ -441,9 +441,11 @@ SDK 只会对特定的错误进行重试，包括：
 - `ExponentialWithRandomJitterBackoffStrategy` (默认): 带抖动的指数退避。在指数退避的基础上增加一个随机延迟，有助于避免“惊群效应”。
 
 ```typescript
+import { StrategyName } from "@volcengine/sdk-core";
+
 const client = new EcsClient({
   // ... 其他配置
-  retryMode: "ExponentialBackoffStrategy",
+  strategyName: StrategyName.ExponentialWithRandomJitterBackoffStrategy,
 });
 ```
 
@@ -502,7 +504,7 @@ try {
     if (error.status !== undefined) {
       // 1.1 SSL 错误 (status === 0)
       if (error.status === 0) {
-        console.error(`❌ SSL Error: ${error.message}`);
+        console.error(`❌ SSL Error`);
       }
       // 1.2 服务端返回的错误 (status > 0)
       else {
@@ -514,7 +516,6 @@ try {
           console.error(`   RequestId: ${RequestId}`);
         } else {
           // 其他 HTTP 错误 (如 404, 500, 502 等)
-          console.error(`❌ HTTP Error ${error.status}: ${error.message}`);
         }
       }
     }
@@ -530,17 +531,12 @@ try {
     }
     // 3. 处理其他 SDK 异常 (Exception)
     else {
-      console.error("❌ SDK Exception Occurred:");
-      console.error(`   Message: ${error.message}`);
-      console.error(`   Name:    ${error.name}`);
-      if (error.originalError) {
-        console.error("   Cause:", error.originalError);
-      }
+      console.error("❌ SDK Exception Occurred");
     }
   }
   // 4. 未知错误 (非 SDK 抛出的错误)
   else {
-    console.error("❌ Unknown Error:", error);
+    console.error("❌ Unknown Error");
   }
 }
 ```
