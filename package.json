@@ -17,9 +17,8 @@
     "test": "turbo run test",
     "test:core": "turbo run test --filter='./packages/*'",
     "clean": "turbo run clean",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && pnpm publish",
+    "release:out": "pnpm publish --registry=https://registry.npmjs.org"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
