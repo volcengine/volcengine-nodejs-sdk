@@ -18,7 +18,8 @@
     "test:core": "turbo run test --filter='./packages/*'",
     "clean": "turbo run clean",
     "release": "pnpm build && pnpm publish -r --access public --filter='./packages/*' --filter='./service/*'",
-    "release:out": "pnpm build && pnpm publish -r --access public --filter='./packages/*' --filter='./service/*' --registry=https://registry.npmjs.org"
+    "release:out": "pnpm build && pnpm publish -r --access public --filter='./packages/*' --filter='./service/*' --registry=https://registry.npmjs.org",
+    "release:service": "pnpm build && pnpm publish -r --access public  --filter='./service/*' --registry=https://registry.npmjs.org"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
