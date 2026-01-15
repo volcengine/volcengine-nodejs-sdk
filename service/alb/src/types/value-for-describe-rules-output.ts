@@ -12,18 +12,23 @@
  * Do not edit the class manually.
  */
 
- import { ValueForDescribeRulesOutput } from './value-for-describe-rules-output';
  /**
  *
  *
  * @export
- * @interface QueryStringConfigForDescribeRulesOutput
+ * @interface ValueForDescribeRulesOutput
  */
-export interface QueryStringConfigForDescribeRulesOutput {
+export interface ValueForDescribeRulesOutput {
 
     /**
-     * @type {Array<ValueForDescribeRulesOutput>}
-     * @memberof QueryStringConfigForDescribeRulesOutput
-     */
-    Values?: Array<ValueForDescribeRulesOutput>;
+      * @type {string}
+      * @memberof ValueForDescribeRulesOutput
+      */
+    Key: string;
+
+    /**
+      * @type {string}
+      * @memberof ValueForDescribeRulesOutput
+      */
+    Value: string;
 }
