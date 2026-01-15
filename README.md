@@ -1,4 +1,4 @@
-中文 | [English](README.EN.MD)
+中文 | [English](README.EN.md)
 
 # Volcengine SDK for Node.js
 
