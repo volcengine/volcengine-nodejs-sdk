@@ -134,10 +134,6 @@ export interface SendOptions {
    * Overrides client-level httpOptions.timeout
    */
   timeout?: number;
-  /**
-   * Whether to skip response casting (converting PascalCase to camelCase)
-   */
-  skipResponseCasting?: boolean;
 }
 
 // ============================================================================

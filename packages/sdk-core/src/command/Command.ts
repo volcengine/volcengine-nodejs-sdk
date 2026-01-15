@@ -19,8 +19,6 @@ export class Command<
     pathname?: string;
     contentType?: string;
   };
-  requestMap?: Record<string, any>;
-  responseMap?: Record<string, any>;
 
   protected __type?: {
     output: TOutput;

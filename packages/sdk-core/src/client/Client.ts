@@ -114,11 +114,6 @@ export class Client {
       commandName: command.constructor.name,
       clientConfig: this.config,
       contentType: command.requestConfig?.contentType || "",
-      castMap: {
-        requestMap: command.requestMap,
-        responseMap: command.responseMap,
-      },
-      skipResponseCasting: options?.skipResponseCasting,
     };
     const handler = stack.resolve(async (args: Args) => args, context);
 
@@ -190,10 +185,9 @@ export class Client {
    */
   debugMiddlewareStack<
     TInput extends CommandInput,
+    TOutput extends any,
     TCommandName extends keyof CommandOutputMap
-  >(
-    command: Command<TInput, CommandOutputMap[TCommandName], TCommandName>
-  ): string {
+  >(command: Command<TInput, TOutput, TCommandName>): string {
     const mergedStack = this.middlewareStack.merge(command.middlewareStack);
     return mergedStack.toString();
   }

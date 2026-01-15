@@ -41,17 +41,6 @@ export interface MiddlewareContext {
    * Content type for the request
    */
   contentType?: string;
-  /**
-   * Map of type casts for request and response data
-   */
-  castMap?: {
-    requestMap?: Record<string, any>;
-    responseMap?: Record<string, any>;
-  };
-  /**
-   * Whether to skip response casting
-   */
-  skipResponseCasting?: boolean;
 }
 
 /**
