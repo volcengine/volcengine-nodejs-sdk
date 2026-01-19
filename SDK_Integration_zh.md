@@ -5,7 +5,6 @@
 - [环境与安装](#环境与安装)
   - [环境要求](#环境要求)
   - [安装](#安装)
-- [快速开始](#快速开始)
 - [访问凭据](#访问凭据)
   - [AK/SK (访问密钥)](#aksk-访问密钥)
   - [STS Token (临时凭证)](#sts-token-临时凭证)
@@ -29,7 +28,6 @@
   - [退避策略](#退避策略)
   - [自定义重试策略](#自定义重试策略)
 - [异常处理](#异常处理)
-  - [输出原始文件](#输出原始文件)
   - [资源清理](#资源清理)
 - [Debug 机制](#debug-机制)
 - [环境变量说明](#环境变量说明)
@@ -44,6 +42,8 @@
 
 推荐使用 `pnpm` 进行安装，同时支持 `npm` 和 `yarn`。
 
+1. 安装 Core 包
+
 ```bash
 # pnpm
 pnpm add @volcengine/sdk-core
@@ -53,6 +53,21 @@ npm install @volcengine/sdk-core
 
 # yarn
 yarn add @volcengine/sdk-core
+```
+
+2. 安装云产品 SDK 包
+
+   以安装 ECS 业务 SDK 包为例：
+
+```bash
+# pnpm
+pnpm add @volcengine/ecs
+
+# npm
+npm install @volcengine/ecs
+
+# yarn
+yarn add @volcengine/ecs
 ```
 
 ## 访问凭据

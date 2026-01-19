@@ -2,13 +2,15 @@
 
 # Volcengine SDK for Node.js
 
-## 安装 Core 包
+## 安装
 
 ### 环境要求
 
 - Node.js >= 18
 
   推荐使用 `pnpm` 进行安装，同时支持 `npm` 和 `yarn`。
+
+1. 安装 Core 包
 
 ```bash
 # pnpm
@@ -19,6 +21,21 @@ npm install @volcengine/sdk-core
 
 # yarn
 yarn add @volcengine/sdk-core
+```
+
+2. 安装云产品 SDK 包
+
+   以安装 ECS 业务 SDK 包为例：
+
+```bash
+# pnpm
+pnpm add @volcengine/ecs
+
+# npm
+npm install @volcengine/ecs
+
+# yarn
+yarn add @volcengine/ecs
 ```
 
 ## 环境变量设置
@@ -38,13 +55,6 @@ export VOLCSTACK_SECRET_ACCESS_KEY="YOUR_SK"
 ## 快速开始
 
 以下示例展示了如何初始化客户端并发送请求。
-安装对应的业务 SDK 包（如 `@volcengine/ecs`）。
-
-```bash
-# pnpm
-pnpm add @volcengine/ecs
-
-```
 
 ```typescript
 import { ECSClient, DescribeZonesCommand } from "@volcengine/ecs"; // 需安装对应的业务包
