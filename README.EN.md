@@ -2,13 +2,15 @@ English | [中文](README.md)
 
 # Volcengine SDK for Node.js
 
-## Installation Core Packages
+## Installation
 
 ### Requirements
 
 - Node.js >= 18
 
 Recommended to use `pnpm` for installation. `npm` and `yarn` are also supported.
+
+1. Installation Core Packages
 
 ```bash
 # pnpm
@@ -19,6 +21,21 @@ npm install @volcengine/sdk-core
 
 # yarn
 yarn add @volcengine/sdk-core
+```
+
+2. Installation Service Packages
+
+   Take installing ECS service SDK package as an example:
+
+```bash
+# pnpm
+pnpm add @volcengine/ecs
+
+# npm
+npm install @volcengine/ecs
+
+# yarn
+yarn add @volcengine/ecs
 ```
 
 ## Environment Variables

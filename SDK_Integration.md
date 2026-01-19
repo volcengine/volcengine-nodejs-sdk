@@ -5,7 +5,6 @@ English | [中文](SDK_Integration_zh.md)
 - [Environment and Installation](#environment-and-installation)
   - [Environment Requirements](#environment-requirements)
   - [Installation](#installation)
-- [Quick Start](#quick-start)
 - [Credentials](#credentials)
   - [AK/SK (Access Key)](#aksk-access-key)
   - [STS Token (Security Token Service)](#sts-token-security-token-service)
@@ -29,7 +28,6 @@ English | [中文](SDK_Integration_zh.md)
   - [Backoff Strategy](#backoff-strategy)
   - [Custom Retry Strategy](#custom-retry-strategy)
 - [Exception Handling](#exception-handling)
-  - [Output Raw Response](#output-raw-response)
   - [Resource Cleanup](#resource-cleanup)
 - [Debug Mechanism](#debug-mechanism)
 - [Environment Variables Description](#environment-variables-description)
@@ -44,6 +42,8 @@ English | [中文](SDK_Integration_zh.md)
 
 It is recommended to use `pnpm` for installation, but `npm` and `yarn` are also supported.
 
+1. Installation Core Packages
+
 ```bash
 # pnpm
 pnpm add @volcengine/sdk-core
@@ -53,6 +53,21 @@ npm install @volcengine/sdk-core
 
 # yarn
 yarn add @volcengine/sdk-core
+```
+
+2. Installation Service Packages
+
+   Take installing ECS service SDK package as an example:
+
+```bash
+# pnpm
+pnpm add @volcengine/ecs
+
+# npm
+npm install @volcengine/ecs
+
+# yarn
+yarn add @volcengine/ecs
 ```
 
 ## Credentials
