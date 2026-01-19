@@ -2,11 +2,11 @@ English | [中文](README.md)
 
 # Volcengine SDK for Node.js
 
-## Installation
-
-### Requirements
+## Requirements
 
 - Node.js >= 18
+
+## Installation
 
 Recommended to use `pnpm` for installation. `npm` and `yarn` are also supported.
 
