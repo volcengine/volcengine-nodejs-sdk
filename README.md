@@ -2,13 +2,13 @@
 
 # Volcengine SDK for Node.js
 
-## 安装
-
-### 环境要求
+## 环境要求
 
 - Node.js >= 18
 
-  推荐使用 `pnpm` 进行安装，同时支持 `npm` 和 `yarn`。
+## 安装
+
+推荐使用 `pnpm` 进行安装，同时支持 `npm` 和 `yarn`。
 
 1. 安装 Core 包
 
