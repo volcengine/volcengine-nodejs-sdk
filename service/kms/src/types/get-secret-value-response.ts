@@ -42,5 +42,11 @@ export interface GetSecretValueResponse {
      * @type {string}
      * @memberof GetSecretValueResponse
      */
+    VersionName?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetSecretValueResponse
+     */
     VersionStage?: string;
 }

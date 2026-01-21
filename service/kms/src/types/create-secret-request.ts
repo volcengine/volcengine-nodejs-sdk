@@ -73,6 +73,12 @@ export interface CreateSecretRequest {
      * @memberof CreateSecretRequest
      */
     SecretValue: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateSecretRequest
+     */
+    VersionName?: string;
 }
 
 /**
