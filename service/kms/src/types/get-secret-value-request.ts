@@ -31,4 +31,10 @@ export interface GetSecretValueRequest {
      * @memberof GetSecretValueRequest
      */
     VersionID?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetSecretValueRequest
+     */
+    VersionName?: string;
 }

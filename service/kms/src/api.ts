@@ -193,7 +193,6 @@ export type UpdateSecretCommandOutput = CommandOutput<UpdateSecretResponse>;
 export type UpdateSecretRotationPolicyCommandOutput = CommandOutput<UpdateSecretRotationPolicyResponse>;
 export type VerifyMacCommandOutput = CommandOutput<VerifyMacResponse>;
 
-
 /**
  * KMSClient Service Client
  */
