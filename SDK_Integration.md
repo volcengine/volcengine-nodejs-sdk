@@ -5,7 +5,6 @@ English | [中文](SDK_Integration_zh.md)
 - [Environment and Installation](#environment-and-installation)
   - [Environment Requirements](#environment-requirements)
   - [Installation](#installation)
-- [Quick Start](#quick-start)
 - [Credentials](#credentials)
   - [AK/SK (Access Key)](#aksk-access-key)
   - [STS Token (Security Token Service)](#sts-token-security-token-service)
@@ -29,7 +28,6 @@ English | [中文](SDK_Integration_zh.md)
   - [Backoff Strategy](#backoff-strategy)
   - [Custom Retry Strategy](#custom-retry-strategy)
 - [Exception Handling](#exception-handling)
-  - [Output Raw Response](#output-raw-response)
   - [Resource Cleanup](#resource-cleanup)
 - [Debug Mechanism](#debug-mechanism)
 - [Environment Variables Description](#environment-variables-description)
@@ -44,6 +42,8 @@ English | [中文](SDK_Integration_zh.md)
 
 It is recommended to use `pnpm` for installation, but `npm` and `yarn` are also supported.
 
+1. Installation Core Packages
+
 ```bash
 # pnpm
 pnpm add @volcengine/sdk-core
@@ -53,6 +53,21 @@ npm install @volcengine/sdk-core
 
 # yarn
 yarn add @volcengine/sdk-core
+```
+
+2. Installation Service Packages
+
+   Take installing ECS service SDK package as an example:
+
+```bash
+# pnpm
+pnpm add @volcengine/ecs
+
+# npm
+npm install @volcengine/ecs
+
+# yarn
+yarn add @volcengine/ecs
 ```
 
 ## Credentials
@@ -441,9 +456,10 @@ The backoff strategy determines the wait time between each retry. You can choose
 - `ExponentialWithRandomJitterBackoffStrategy` (Default): Exponential backoff with jitter. Adds a random delay on top of exponential backoff to help avoid "thundering herd" effects.
 
 ```typescript
+import { StrategyName } from "@volcengine/sdk-core";
 const client = new EcsClient({
   // ... other configurations
-  retryMode: "ExponentialBackoffStrategy",
+  strategyName: StrategyName.ExponentialWithRandomJitterBackoffStrategy,
 });
 ```
 
@@ -502,7 +518,7 @@ try {
     if (error.status !== undefined) {
       // 1.1 SSL Error (status === 0)
       if (error.status === 0) {
-        console.error(`❌ SSL Error: ${error.message}`);
+        console.error(`❌ SSL Error`);
       }
       // 1.2 Server returned error (status > 0)
       else {
@@ -514,7 +530,6 @@ try {
           console.error(`   RequestId: ${RequestId}`);
         } else {
           // Other HTTP errors (such as 404, 500, 502, etc.)
-          console.error(`❌ HTTP Error ${error.status}: ${error.message}`);
         }
       }
     }
@@ -530,17 +545,12 @@ try {
     }
     // 3. Handle other SDK exceptions (Exception)
     else {
-      console.error("❌ SDK Exception Occurred:");
-      console.error(`   Message: ${error.message}`);
-      console.error(`   Name:    ${error.name}`);
-      if (error.originalError) {
-        console.error("   Cause:", error.originalError);
-      }
+      console.error("❌ SDK Exception Occurred");
     }
   }
   // 4. Unknown error (Error not thrown by SDK)
   else {
-    console.error("❌ Unknown Error:", error);
+    console.error("❌ Unknown Error");
   }
 }
 ```

@@ -5,7 +5,6 @@
 - [环境与安装](#环境与安装)
   - [环境要求](#环境要求)
   - [安装](#安装)
-- [快速开始](#快速开始)
 - [访问凭据](#访问凭据)
   - [AK/SK (访问密钥)](#aksk-访问密钥)
   - [STS Token (临时凭证)](#sts-token-临时凭证)
@@ -29,7 +28,6 @@
   - [退避策略](#退避策略)
   - [自定义重试策略](#自定义重试策略)
 - [异常处理](#异常处理)
-  - [输出原始文件](#输出原始文件)
   - [资源清理](#资源清理)
 - [Debug 机制](#debug-机制)
 - [环境变量说明](#环境变量说明)
@@ -44,6 +42,8 @@
 
 推荐使用 `pnpm` 进行安装，同时支持 `npm` 和 `yarn`。
 
+1. 安装 Core 包
+
 ```bash
 # pnpm
 pnpm add @volcengine/sdk-core
@@ -53,6 +53,21 @@ npm install @volcengine/sdk-core
 
 # yarn
 yarn add @volcengine/sdk-core
+```
+
+2. 安装云产品 SDK 包
+
+   以安装 ECS 业务 SDK 包为例：
+
+```bash
+# pnpm
+pnpm add @volcengine/ecs
+
+# npm
+npm install @volcengine/ecs
+
+# yarn
+yarn add @volcengine/ecs
 ```
 
 ## 访问凭据
@@ -441,9 +456,11 @@ SDK 只会对特定的错误进行重试，包括：
 - `ExponentialWithRandomJitterBackoffStrategy` (默认): 带抖动的指数退避。在指数退避的基础上增加一个随机延迟，有助于避免“惊群效应”。
 
 ```typescript
+import { StrategyName } from "@volcengine/sdk-core";
+
 const client = new EcsClient({
   // ... 其他配置
-  retryMode: "ExponentialBackoffStrategy",
+  strategyName: StrategyName.ExponentialWithRandomJitterBackoffStrategy,
 });
 ```
 
@@ -502,7 +519,7 @@ try {
     if (error.status !== undefined) {
       // 1.1 SSL 错误 (status === 0)
       if (error.status === 0) {
-        console.error(`❌ SSL Error: ${error.message}`);
+        console.error(`❌ SSL Error`);
       }
       // 1.2 服务端返回的错误 (status > 0)
       else {
@@ -514,7 +531,6 @@ try {
           console.error(`   RequestId: ${RequestId}`);
         } else {
           // 其他 HTTP 错误 (如 404, 500, 502 等)
-          console.error(`❌ HTTP Error ${error.status}: ${error.message}`);
         }
       }
     }
@@ -530,17 +546,12 @@ try {
     }
     // 3. 处理其他 SDK 异常 (Exception)
     else {
-      console.error("❌ SDK Exception Occurred:");
-      console.error(`   Message: ${error.message}`);
-      console.error(`   Name:    ${error.name}`);
-      if (error.originalError) {
-        console.error("   Cause:", error.originalError);
-      }
+      console.error("❌ SDK Exception Occurred");
     }
   }
   // 4. 未知错误 (非 SDK 抛出的错误)
   else {
-    console.error("❌ Unknown Error:", error);
+    console.error("❌ Unknown Error");
   }
 }
 ```

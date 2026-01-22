@@ -17,9 +17,10 @@
     "test": "turbo run test",
     "test:core": "turbo run test --filter='./packages/*'",
     "clean": "turbo run clean",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "pnpm build && changeset publish"
+    "release": " pnpm publish -r --access public --filter='./packages/*' --filter='./service/*'",
+    "release:core": "pnpm publish -r --access public --filter='./packages/*' --no-git-checks",
+    "release:service": "pnpm publish -r --access public --filter='./service/*' --no-git-checks",
+    "release:iam": " pnpm publish -r --access public --filter='./service/iam' --no-git-checks"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",

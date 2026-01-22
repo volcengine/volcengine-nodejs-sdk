@@ -1,14 +1,16 @@
-中文 | [English](README.EN.MD)
+中文 | [English](README.EN.md)
 
 # Volcengine SDK for Node.js
 
-## 安装
-
-### 环境要求
+## 环境要求
 
 - Node.js >= 18
 
-  推荐使用 `pnpm` 进行安装，同时支持 `npm` 和 `yarn`。
+## 安装
+
+推荐使用 `pnpm` 进行安装，同时支持 `npm` 和 `yarn`。
+
+1. 安装 Core 包
 
 ```bash
 # pnpm
@@ -19,6 +21,21 @@ npm install @volcengine/sdk-core
 
 # yarn
 yarn add @volcengine/sdk-core
+```
+
+2. 安装云产品 SDK 包
+
+   以安装 ECS 业务 SDK 包为例：
+
+```bash
+# pnpm
+pnpm add @volcengine/ecs
+
+# npm
+npm install @volcengine/ecs
+
+# yarn
+yarn add @volcengine/ecs
 ```
 
 ## 环境变量设置
@@ -35,35 +52,20 @@ export VOLCSTACK_ACCESS_KEY_ID="YOUR_AK"
 export VOLCSTACK_SECRET_ACCESS_KEY="YOUR_SK"
 ```
 
-## Endpoint 设置
-
-SDK 支持多种方式配置 Endpoint，优先级从高到低：
-
-1.  **自定义 Endpoint**: 在客户端配置中指定 `host` (e.g. `open.volcengineapi.com`).
-2.  **自动寻址**: 指定 `region`，SDK 会根据服务名和区域自动构造 Endpoint (e.g. `ecs.cn-beijing.volcengineapi.com`).
-3.  **默认**: 如果未指定且无法推导，默认使用 `open.volcengineapi.com`.
-
 ## 快速开始
 
 以下示例展示了如何初始化客户端并发送请求。
-安装对应的业务 SDK 包（如 `@volcengine/iam`）。
-
-```bash
-# pnpm
-pnpm add @volcengine/iam
-
-```
 
 ```typescript
-import { IAMClient } from "@volcengine/iam"; // 需安装对应的业务包
+import { ECSClient, DescribeZonesCommand } from "@volcengine/ecs"; // 需安装对应的业务包
 
 // 1. 使用环境变量中的 AK/SK，并指定 Region
-const client = new IAMClient({
+const client = new ECSClient({
   region: "cn-beijing",
 });
 
 // 2. 或者在代码中显式传入 AK/SK
-// const client = new IAMClient({
+// const client = new ECSClient({
 //   accessKeyId: "YOUR_AK",
 //   secretAccessKey: "YOUR_SK",
 //   region: "cn-beijing",
@@ -72,7 +74,7 @@ const client = new IAMClient({
 async function main() {
   try {
     // 发送请求 (具体 Command 需参考业务 SDK 文档)
-    const command = new ListUsersCommand({});
+    const command = new DescribeZonesCommand({});
     const response = await client.send(command);
     console.log(response);
   } catch (error) {

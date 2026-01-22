@@ -128,16 +128,12 @@ export interface SendOptions {
   /**
    * AbortController 的 signal，用于取消请求
    */
-  abortSignal?: any;
+  abortSignal?: AbortSignal;
   /**
    * Request-level timeout in milliseconds
    * Overrides client-level httpOptions.timeout
    */
   timeout?: number;
-  /**
-   * Whether to skip response casting (converting PascalCase to camelCase)
-   */
-  skipResponseCasting?: boolean;
 }
 
 // ============================================================================
