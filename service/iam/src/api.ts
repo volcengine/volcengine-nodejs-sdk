@@ -20,6 +20,16 @@ import { AddSAMLProviderCertificateRequest } from './types/index';
 import { AddSAMLProviderCertificateResponse } from './types/index';
 import { AddThumbprintToOIDCProviderRequest } from './types/index';
 import { AddThumbprintToOIDCProviderResponse } from './types/index';
+import { AddUserToGroupRequest } from './types/index';
+import { AddUserToGroupResponse } from './types/index';
+import { AttachRolePolicyRequest } from './types/index';
+import { AttachRolePolicyResponse } from './types/index';
+import { AttachUserGroupPolicyRequest } from './types/index';
+import { AttachUserGroupPolicyResponse } from './types/index';
+import { AttachUserPolicyRequest } from './types/index';
+import { AttachUserPolicyResponse } from './types/index';
+import { CreateAccessKeyRequest } from './types/index';
+import { CreateAccessKeyResponse } from './types/index';
 import { CreateGroupRequest } from './types/index';
 import { CreateGroupResponse } from './types/index';
 import { CreateLoginProfileRequest } from './types/index';
@@ -28,6 +38,10 @@ import { CreateOAuthProviderRequest } from './types/index';
 import { CreateOAuthProviderResponse } from './types/index';
 import { CreateOIDCProviderRequest } from './types/index';
 import { CreateOIDCProviderResponse } from './types/index';
+import { CreatePolicyRequest } from './types/index';
+import { CreatePolicyResponse } from './types/index';
+import { CreateRoleRequest } from './types/index';
+import { CreateRoleResponse } from './types/index';
 import { CreateSAMLProviderRequest } from './types/index';
 import { CreateSAMLProviderResponse } from './types/index';
 import { CreateServiceLinkedRoleRequest } from './types/index';
@@ -64,6 +78,8 @@ import { GetAccessKeyLastUsedRequest } from './types/index';
 import { GetAccessKeyLastUsedResponse } from './types/index';
 import { GetAccountSummaryRequest } from './types/index';
 import { GetAccountSummaryResponse } from './types/index';
+import { GetAllowedIPAddressesRequest } from './types/index';
+import { GetAllowedIPAddressesResponse } from './types/index';
 import { GetGroupRequest } from './types/index';
 import { GetGroupResponse } from './types/index';
 import { GetLoginProfileRequest } from './types/index';
@@ -130,6 +146,8 @@ import { UntagResourcesRequest } from './types/index';
 import { UntagResourcesResponse } from './types/index';
 import { UpdateAccessKeyRequest } from './types/index';
 import { UpdateAccessKeyResponse } from './types/index';
+import { UpdateAllowedIPAddressesRequest } from './types/index';
+import { UpdateAllowedIPAddressesResponse } from './types/index';
 import { UpdateGroupRequest } from './types/index';
 import { UpdateGroupResponse } from './types/index';
 import { UpdateLoginProfileRequest } from './types/index';
@@ -153,10 +171,17 @@ import { UpdateUserResponse } from './types/index';
 export type AddClientIDToOIDCProviderCommandOutput = CommandOutput<AddClientIDToOIDCProviderResponse>;
 export type AddSAMLProviderCertificateCommandOutput = CommandOutput<AddSAMLProviderCertificateResponse>;
 export type AddThumbprintToOIDCProviderCommandOutput = CommandOutput<AddThumbprintToOIDCProviderResponse>;
+export type AddUserToGroupCommandOutput = CommandOutput<AddUserToGroupResponse>;
+export type AttachRolePolicyCommandOutput = CommandOutput<AttachRolePolicyResponse>;
+export type AttachUserGroupPolicyCommandOutput = CommandOutput<AttachUserGroupPolicyResponse>;
+export type AttachUserPolicyCommandOutput = CommandOutput<AttachUserPolicyResponse>;
+export type CreateAccessKeyCommandOutput = CommandOutput<CreateAccessKeyResponse>;
 export type CreateGroupCommandOutput = CommandOutput<CreateGroupResponse>;
 export type CreateLoginProfileCommandOutput = CommandOutput<CreateLoginProfileResponse>;
 export type CreateOAuthProviderCommandOutput = CommandOutput<CreateOAuthProviderResponse>;
 export type CreateOIDCProviderCommandOutput = CommandOutput<CreateOIDCProviderResponse>;
+export type CreatePolicyCommandOutput = CommandOutput<CreatePolicyResponse>;
+export type CreateRoleCommandOutput = CommandOutput<CreateRoleResponse>;
 export type CreateSAMLProviderCommandOutput = CommandOutput<CreateSAMLProviderResponse>;
 export type CreateServiceLinkedRoleCommandOutput = CommandOutput<CreateServiceLinkedRoleResponse>;
 export type CreateUserCommandOutput = CommandOutput<CreateUserResponse>;
@@ -175,6 +200,7 @@ export type DetachUserGroupPolicyCommandOutput = CommandOutput<DetachUserGroupPo
 export type DetachUserPolicyCommandOutput = CommandOutput<DetachUserPolicyResponse>;
 export type GetAccessKeyLastUsedCommandOutput = CommandOutput<GetAccessKeyLastUsedResponse>;
 export type GetAccountSummaryCommandOutput = CommandOutput<GetAccountSummaryResponse>;
+export type GetAllowedIPAddressesCommandOutput = CommandOutput<GetAllowedIPAddressesResponse>;
 export type GetGroupCommandOutput = CommandOutput<GetGroupResponse>;
 export type GetLoginProfileCommandOutput = CommandOutput<GetLoginProfileResponse>;
 export type GetOAuthProviderCommandOutput = CommandOutput<GetOAuthProviderResponse>;
@@ -208,6 +234,7 @@ export type SetSecurityConfigCommandOutput = CommandOutput<SetSecurityConfigResp
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateAccessKeyCommandOutput = CommandOutput<UpdateAccessKeyResponse>;
+export type UpdateAllowedIPAddressesCommandOutput = CommandOutput<UpdateAllowedIPAddressesResponse>;
 export type UpdateGroupCommandOutput = CommandOutput<UpdateGroupResponse>;
 export type UpdateLoginProfileCommandOutput = CommandOutput<UpdateLoginProfileResponse>;
 export type UpdateOAuthProviderCommandOutput = CommandOutput<UpdateOAuthProviderResponse>;
@@ -216,7 +243,6 @@ export type UpdatePolicyCommandOutput = CommandOutput<UpdatePolicyResponse>;
 export type UpdateRoleCommandOutput = CommandOutput<UpdateRoleResponse>;
 export type UpdateSAMLProviderCommandOutput = CommandOutput<UpdateSAMLProviderResponse>;
 export type UpdateUserCommandOutput = CommandOutput<UpdateUserResponse>;
-
 
 /**
  * IAMClient Service Client
@@ -277,6 +303,81 @@ export class AddThumbprintToOIDCProviderCommand extends Command<
   }
 }
 /**
+ * Command to AddUserToGroup
+ */
+export class AddUserToGroupCommand extends Command<
+  AddUserToGroupRequest,
+  AddUserToGroupCommandOutput,
+  'AddUserToGroupCommand'
+> {
+  static readonly metaPath = '/AddUserToGroup/2018-01-01/iam/get/text_plain/';
+
+  constructor(input: AddUserToGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddUserToGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to AttachRolePolicy
+ */
+export class AttachRolePolicyCommand extends Command<
+  AttachRolePolicyRequest,
+  AttachRolePolicyCommandOutput,
+  'AttachRolePolicyCommand'
+> {
+  static readonly metaPath = '/AttachRolePolicy/2018-01-01/iam/get/text_plain/';
+
+  constructor(input: AttachRolePolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AttachRolePolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to AttachUserGroupPolicy
+ */
+export class AttachUserGroupPolicyCommand extends Command<
+  AttachUserGroupPolicyRequest,
+  AttachUserGroupPolicyCommandOutput,
+  'AttachUserGroupPolicyCommand'
+> {
+  static readonly metaPath = '/AttachUserGroupPolicy/2018-01-01/iam/get/text_plain/';
+
+  constructor(input: AttachUserGroupPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AttachUserGroupPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to AttachUserPolicy
+ */
+export class AttachUserPolicyCommand extends Command<
+  AttachUserPolicyRequest,
+  AttachUserPolicyCommandOutput,
+  'AttachUserPolicyCommand'
+> {
+  static readonly metaPath = '/AttachUserPolicy/2018-01-01/iam/get/text_plain/';
+
+  constructor(input: AttachUserPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AttachUserPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateAccessKey
+ */
+export class CreateAccessKeyCommand extends Command<
+  CreateAccessKeyRequest,
+  CreateAccessKeyCommandOutput,
+  'CreateAccessKeyCommand'
+> {
+  static readonly metaPath = '/CreateAccessKey/2018-01-01/iam/get/text_plain/';
+
+  constructor(input: CreateAccessKeyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateAccessKeyCommand.metaPath);
+  }
+}
+/**
  * Command to CreateGroup
  */
 export class CreateGroupCommand extends Command<
@@ -334,6 +435,36 @@ export class CreateOIDCProviderCommand extends Command<
   constructor(input: CreateOIDCProviderRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateOIDCProviderCommand.metaPath);
+  }
+}
+/**
+ * Command to CreatePolicy
+ */
+export class CreatePolicyCommand extends Command<
+  CreatePolicyRequest,
+  CreatePolicyCommandOutput,
+  'CreatePolicyCommand'
+> {
+  static readonly metaPath = '/CreatePolicy/2018-01-01/iam/get/text_plain/';
+
+  constructor(input: CreatePolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreatePolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateRole
+ */
+export class CreateRoleCommand extends Command<
+  CreateRoleRequest,
+  CreateRoleCommandOutput,
+  'CreateRoleCommand'
+> {
+  static readonly metaPath = '/CreateRole/2018-01-01/iam/get/text_plain/';
+
+  constructor(input: CreateRoleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateRoleCommand.metaPath);
   }
 }
 /**
@@ -604,6 +735,21 @@ export class GetAccountSummaryCommand extends Command<
   constructor(input: GetAccountSummaryRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetAccountSummaryCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAllowedIPAddresses
+ */
+export class GetAllowedIPAddressesCommand extends Command<
+  GetAllowedIPAddressesRequest,
+  GetAllowedIPAddressesCommandOutput,
+  'GetAllowedIPAddressesCommand'
+> {
+  static readonly metaPath = '/GetAllowedIPAddresses/2018-01-01/iam/post/application_json/';
+
+  constructor(input: GetAllowedIPAddressesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAllowedIPAddressesCommand.metaPath);
   }
 }
 /**
@@ -1102,6 +1248,21 @@ export class UpdateAccessKeyCommand extends Command<
   }
 }
 /**
+ * Command to UpdateAllowedIPAddresses
+ */
+export class UpdateAllowedIPAddressesCommand extends Command<
+  UpdateAllowedIPAddressesRequest,
+  UpdateAllowedIPAddressesCommandOutput,
+  'UpdateAllowedIPAddressesCommand'
+> {
+  static readonly metaPath = '/UpdateAllowedIPAddresses/2018-01-01/iam/post/application_json/';
+
+  constructor(input: UpdateAllowedIPAddressesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAllowedIPAddressesCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateGroup
  */
 export class UpdateGroupCommand extends Command<
@@ -1227,10 +1388,17 @@ export default {
   AddClientIDToOIDCProviderCommand,
   AddSAMLProviderCertificateCommand,
   AddThumbprintToOIDCProviderCommand,
+  AddUserToGroupCommand,
+  AttachRolePolicyCommand,
+  AttachUserGroupPolicyCommand,
+  AttachUserPolicyCommand,
+  CreateAccessKeyCommand,
   CreateGroupCommand,
   CreateLoginProfileCommand,
   CreateOAuthProviderCommand,
   CreateOIDCProviderCommand,
+  CreatePolicyCommand,
+  CreateRoleCommand,
   CreateSAMLProviderCommand,
   CreateServiceLinkedRoleCommand,
   CreateUserCommand,
@@ -1249,6 +1417,7 @@ export default {
   DetachUserPolicyCommand,
   GetAccessKeyLastUsedCommand,
   GetAccountSummaryCommand,
+  GetAllowedIPAddressesCommand,
   GetGroupCommand,
   GetLoginProfileCommand,
   GetOAuthProviderCommand,
@@ -1282,6 +1451,7 @@ export default {
   TagResourcesCommand,
   UntagResourcesCommand,
   UpdateAccessKeyCommand,
+  UpdateAllowedIPAddressesCommand,
   UpdateGroupCommand,
   UpdateLoginProfileCommand,
   UpdateOAuthProviderCommand,
