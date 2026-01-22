@@ -31,4 +31,10 @@ export interface SetSecretValueRequest {
      * @memberof SetSecretValueRequest
      */
     SecretValue: string;
+
+    /**
+     * @type {string}
+     * @memberof SetSecretValueRequest
+     */
+    VersionName?: string;
 }

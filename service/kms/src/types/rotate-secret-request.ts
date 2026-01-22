@@ -25,4 +25,10 @@ export interface RotateSecretRequest {
      * @memberof RotateSecretRequest
      */
     SecretName: string;
+
+    /**
+     * @type {string}
+     * @memberof RotateSecretRequest
+     */
+    VersionName?: string;
 }
