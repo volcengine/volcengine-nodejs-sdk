@@ -16,25 +16,31 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface RenewInstanceRequest
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface RenewInstanceRequest {
 
     /**
      * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof RenewInstanceRequest
      */
-    Key?: string;
+    ClientToken?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {string}
+     * @memberof RenewInstanceRequest
      */
-    Value?: Array<string>;
+    InstanceId: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {number}
+     * @memberof RenewInstanceRequest
      */
-    Values?: Array<string>;
+    Period: number;
+
+    /**
+     * @type {string}
+     * @memberof RenewInstanceRequest
+     */
+    PeriodUnit: string;
 }

@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface EipAddressForDescribeInstancesOutput
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface EipAddressForDescribeInstancesOutput {
 
     /**
      * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof EipAddressForDescribeInstancesOutput
      */
-    Key?: string;
+    AllocationId?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {string}
+     * @memberof EipAddressForDescribeInstancesOutput
      */
-    Value?: Array<string>;
-
-    /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
-    Values?: Array<string>;
+    IpAddress?: string;
 }

@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface TagFilterForDescribeImagesInput
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface TagFilterForDescribeImagesInput {
 
     /**
      * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof TagFilterForDescribeImagesInput
      */
     Key?: string;
 
     /**
      * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
-    Value?: Array<string>;
-
-    /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof TagFilterForDescribeImagesInput
      */
     Values?: Array<string>;
 }

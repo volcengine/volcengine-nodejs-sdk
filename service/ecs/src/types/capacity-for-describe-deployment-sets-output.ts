@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface CapacityForDescribeDeploymentSetsOutput
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface CapacityForDescribeDeploymentSetsOutput {
+
+    /**
+     * @type {number}
+     * @memberof CapacityForDescribeDeploymentSetsOutput
+     */
+    AvailableCount?: number;
+
+    /**
+     * @type {number}
+     * @memberof CapacityForDescribeDeploymentSetsOutput
+     */
+    UsedCount?: number;
 
     /**
      * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof CapacityForDescribeDeploymentSetsOutput
      */
-    Key?: string;
-
-    /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
-    Value?: Array<string>;
-
-    /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
-    Values?: Array<string>;
+    ZoneId?: string;
 }

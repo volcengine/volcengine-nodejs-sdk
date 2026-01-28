@@ -16,25 +16,31 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface RebootInstanceRequest
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface RebootInstanceRequest {
 
     /**
      * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof RebootInstanceRequest
      */
-    Key?: string;
+    ClientToken?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {boolean}
+     * @memberof RebootInstanceRequest
      */
-    Value?: Array<string>;
+    DryRun?: boolean;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {boolean}
+     * @memberof RebootInstanceRequest
      */
-    Values?: Array<string>;
+    ForceStop?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof RebootInstanceRequest
+     */
+    InstanceId: string;
 }

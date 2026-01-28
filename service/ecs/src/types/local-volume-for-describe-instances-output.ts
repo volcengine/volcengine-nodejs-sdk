@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface LocalVolumeForDescribeInstancesOutput
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface LocalVolumeForDescribeInstancesOutput {
+
+    /**
+     * @type {number}
+     * @memberof LocalVolumeForDescribeInstancesOutput
+     */
+    Count?: number;
+
+    /**
+     * @type {number}
+     * @memberof LocalVolumeForDescribeInstancesOutput
+     */
+    Size?: number;
 
     /**
      * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof LocalVolumeForDescribeInstancesOutput
      */
-    Key?: string;
-
-    /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
-    Value?: Array<string>;
-
-    /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
-    Values?: Array<string>;
+    VolumeType?: string;
 }
