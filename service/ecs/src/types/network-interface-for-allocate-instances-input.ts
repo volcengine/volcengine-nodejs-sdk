@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface NetworkInterfaceForAllocateInstancesInput
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface NetworkInterfaceForAllocateInstancesInput {
 
     /**
-     * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {number}
+     * @memberof NetworkInterfaceForAllocateInstancesInput
      */
-    Key?: string;
-
-    /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
-    Value?: Array<string>;
+    Ipv6AddressCount?: number;
 
     /**
      * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof NetworkInterfaceForAllocateInstancesInput
      */
-    Values?: Array<string>;
+    SecurityGroupIds?: Array<string>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof NetworkInterfaceForAllocateInstancesInput
+     */
+    SubnetId?: Array<string>;
 }

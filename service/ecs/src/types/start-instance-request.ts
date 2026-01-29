@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface StartInstanceRequest
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface StartInstanceRequest {
 
     /**
      * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof StartInstanceRequest
      */
-    Key?: string;
+    ClientToken?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {boolean}
+     * @memberof StartInstanceRequest
      */
-    Value?: Array<string>;
+    DryRun?: boolean;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {string}
+     * @memberof StartInstanceRequest
      */
-    Values?: Array<string>;
+    InstanceId: string;
 }
