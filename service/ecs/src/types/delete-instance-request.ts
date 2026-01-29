@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface DeleteInstanceRequest
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface DeleteInstanceRequest {
 
     /**
      * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof DeleteInstanceRequest
      */
-    Key?: string;
+    ClientToken?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {boolean}
+     * @memberof DeleteInstanceRequest
      */
-    Value?: Array<string>;
+    DryRun?: boolean;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {string}
+     * @memberof DeleteInstanceRequest
      */
-    Values?: Array<string>;
+    InstanceId: string;
 }

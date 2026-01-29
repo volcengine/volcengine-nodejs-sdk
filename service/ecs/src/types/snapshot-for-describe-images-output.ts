@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface SnapshotForDescribeImagesOutput
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface SnapshotForDescribeImagesOutput {
+
+    /**
+     * @type {number}
+     * @memberof SnapshotForDescribeImagesOutput
+     */
+    Size?: number;
 
     /**
      * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof SnapshotForDescribeImagesOutput
      */
-    Key?: string;
+    SnapshotId?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {string}
+     * @memberof SnapshotForDescribeImagesOutput
      */
-    Value?: Array<string>;
-
-    /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
-    Values?: Array<string>;
+    VolumeKind?: string;
 }

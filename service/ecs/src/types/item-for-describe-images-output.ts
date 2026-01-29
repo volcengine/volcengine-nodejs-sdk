@@ -16,25 +16,31 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface ItemForDescribeImagesOutput
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface ItemForDescribeImagesOutput {
 
     /**
      * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof ItemForDescribeImagesOutput
      */
-    Key?: string;
+    Name?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {string}
+     * @memberof ItemForDescribeImagesOutput
      */
-    Value?: Array<string>;
+    Result?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {string}
+     * @memberof ItemForDescribeImagesOutput
      */
-    Values?: Array<string>;
+    RiskCode?: string;
+
+    /**
+     * @type {string}
+     * @memberof ItemForDescribeImagesOutput
+     */
+    RiskLevel?: string;
 }

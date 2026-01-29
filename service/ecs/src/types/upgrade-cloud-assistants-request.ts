@@ -16,25 +16,13 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface UpgradeCloudAssistantsRequest
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
-
-    /**
-     * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
-    Key?: string;
+export interface UpgradeCloudAssistantsRequest {
 
     /**
      * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof UpgradeCloudAssistantsRequest
      */
-    Value?: Array<string>;
-
-    /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
-    Values?: Array<string>;
+    InstanceIds?: Array<string>;
 }

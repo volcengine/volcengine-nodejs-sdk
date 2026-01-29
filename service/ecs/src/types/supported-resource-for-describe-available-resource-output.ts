@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface SupportedResourceForDescribeAvailableResourceOutput
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface SupportedResourceForDescribeAvailableResourceOutput {
 
     /**
      * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof SupportedResourceForDescribeAvailableResourceOutput
      */
-    Key?: string;
+    Status?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {string}
+     * @memberof SupportedResourceForDescribeAvailableResourceOutput
      */
-    Value?: Array<string>;
-
-    /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
-    Values?: Array<string>;
+    Value?: string;
 }

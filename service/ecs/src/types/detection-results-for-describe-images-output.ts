@@ -12,29 +12,24 @@
  * Do not edit the class manually.
  */
 
+import { ItemForDescribeImagesOutput } from './item-for-describe-images-output';
  /**
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface DetectionResultsForDescribeImagesOutput
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface DetectionResultsForDescribeImagesOutput {
 
     /**
      * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof DetectionResultsForDescribeImagesOutput
      */
-    Key?: string;
+    DetectionStatus?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {Array<ItemForDescribeImagesOutput>}
+     * @memberof DetectionResultsForDescribeImagesOutput
      */
-    Value?: Array<string>;
-
-    /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
-    Values?: Array<string>;
+    Items?: Array<ItemForDescribeImagesOutput>;
 }

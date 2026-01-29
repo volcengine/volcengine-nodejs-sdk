@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface TagFilterForDescribeLaunchTemplatesInput
+ * @interface FailedInstanceForUpgradeCloudAssistantsOutput
  */
-export interface TagFilterForDescribeLaunchTemplatesInput {
+export interface FailedInstanceForUpgradeCloudAssistantsOutput {
 
     /**
      * @type {string}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @memberof FailedInstanceForUpgradeCloudAssistantsOutput
      */
-    Key?: string;
+    ErrorMessage?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
+     * @type {string}
+     * @memberof FailedInstanceForUpgradeCloudAssistantsOutput
      */
-    Value?: Array<string>;
-
-    /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
-    Values?: Array<string>;
+    Id?: string;
 }
