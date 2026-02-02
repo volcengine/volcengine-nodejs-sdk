@@ -14,12 +14,20 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { BuyPoolPackageRequest } from './types/index';
+import { BuyPoolPackageResponse } from './types/index';
 import { BuyResourcePackageRequest } from './types/index';
 import { BuyResourcePackageResponse } from './types/index';
 import { ClearDeviceLongMemoryRequest } from './types/index';
 import { ClearDeviceLongMemoryResponse } from './types/index';
 import { GetAgentListRequest } from './types/index';
 import { GetAgentListResponse } from './types/index';
+import { GetDeviceBindTcOrderIDRequest } from './types/index';
+import { GetDeviceBindTcOrderIDResponse } from './types/index';
+import { GetPoolDetailListRequest } from './types/index';
+import { GetPoolDetailListResponse } from './types/index';
+import { GetPoolQuotaInfoRequest } from './types/index';
+import { GetPoolQuotaInfoResponse } from './types/index';
 import { GetQuotaInfoRequest } from './types/index';
 import { GetQuotaInfoResponse } from './types/index';
 import { GetSpeakerListRequest } from './types/index';
@@ -32,14 +40,17 @@ import { TopActionDispatchResponse } from './types/index';
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type BuyPoolPackageCommandOutput = CommandOutput<BuyPoolPackageResponse>;
 export type BuyResourcePackageCommandOutput = CommandOutput<BuyResourcePackageResponse>;
 export type ClearDeviceLongMemoryCommandOutput = CommandOutput<ClearDeviceLongMemoryResponse>;
 export type GetAgentListCommandOutput = CommandOutput<GetAgentListResponse>;
+export type GetDeviceBindTcOrderIDCommandOutput = CommandOutput<GetDeviceBindTcOrderIDResponse>;
+export type GetPoolDetailListCommandOutput = CommandOutput<GetPoolDetailListResponse>;
+export type GetPoolQuotaInfoCommandOutput = CommandOutput<GetPoolQuotaInfoResponse>;
 export type GetQuotaInfoCommandOutput = CommandOutput<GetQuotaInfoResponse>;
 export type GetSpeakerListCommandOutput = CommandOutput<GetSpeakerListResponse>;
 export type PushMsgToDeviceCommandOutput = CommandOutput<PushMsgToDeviceResponse>;
 export type TopActionDispatchCommandOutput = CommandOutput<TopActionDispatchResponse>;
-
 
 /**
  * TISClient Service Client
@@ -54,6 +65,21 @@ export class TISClient extends Client {
   }
 }
 
+/**
+ * Command to BuyPoolPackage
+ */
+export class BuyPoolPackageCommand extends Command<
+  BuyPoolPackageRequest,
+  BuyPoolPackageCommandOutput,
+  'BuyPoolPackageCommand'
+> {
+  static readonly metaPath = '/BuyPoolPackage/2024-07-31/tis/post/application_json/';
+
+  constructor(input: BuyPoolPackageRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BuyPoolPackageCommand.metaPath);
+  }
+}
 /**
  * Command to BuyResourcePackage
  */
@@ -97,6 +123,51 @@ export class GetAgentListCommand extends Command<
   constructor(input: GetAgentListRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetAgentListCommand.metaPath);
+  }
+}
+/**
+ * Command to GetDeviceBindTcOrderID
+ */
+export class GetDeviceBindTcOrderIDCommand extends Command<
+  GetDeviceBindTcOrderIDRequest,
+  GetDeviceBindTcOrderIDCommandOutput,
+  'GetDeviceBindTcOrderIDCommand'
+> {
+  static readonly metaPath = '/GetDeviceBindTcOrderID/2024-07-31/tis/post/application_json/';
+
+  constructor(input: GetDeviceBindTcOrderIDRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDeviceBindTcOrderIDCommand.metaPath);
+  }
+}
+/**
+ * Command to GetPoolDetailList
+ */
+export class GetPoolDetailListCommand extends Command<
+  GetPoolDetailListRequest,
+  GetPoolDetailListCommandOutput,
+  'GetPoolDetailListCommand'
+> {
+  static readonly metaPath = '/GetPoolDetailList/2024-07-31/tis/post/application_json/';
+
+  constructor(input: GetPoolDetailListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetPoolDetailListCommand.metaPath);
+  }
+}
+/**
+ * Command to GetPoolQuotaInfo
+ */
+export class GetPoolQuotaInfoCommand extends Command<
+  GetPoolQuotaInfoRequest,
+  GetPoolQuotaInfoCommandOutput,
+  'GetPoolQuotaInfoCommand'
+> {
+  static readonly metaPath = '/GetPoolQuotaInfo/2024-07-31/tis/post/application_json/';
+
+  constructor(input: GetPoolQuotaInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetPoolQuotaInfoCommand.metaPath);
   }
 }
 /**
@@ -162,9 +233,13 @@ export class TopActionDispatchCommand extends Command<
 
 export default {
   TISClient,
+  BuyPoolPackageCommand,
   BuyResourcePackageCommand,
   ClearDeviceLongMemoryCommand,
   GetAgentListCommand,
+  GetDeviceBindTcOrderIDCommand,
+  GetPoolDetailListCommand,
+  GetPoolQuotaInfoCommand,
   GetQuotaInfoCommand,
   GetSpeakerListCommand,
   PushMsgToDeviceCommand,
