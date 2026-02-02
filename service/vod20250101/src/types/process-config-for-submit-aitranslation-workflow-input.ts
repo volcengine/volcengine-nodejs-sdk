@@ -24,6 +24,12 @@ export interface ProcessConfigForSubmitAITranslationWorkflowInput {
      * @type {boolean}
      * @memberof ProcessConfigForSubmitAITranslationWorkflowInput
      */
+    DisableCloneVoiceByScene?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof ProcessConfigForSubmitAITranslationWorkflowInput
+     */
     DisableSmartSubtitleRewrite?: boolean;
 
     /**
