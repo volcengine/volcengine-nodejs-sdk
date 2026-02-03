@@ -86,6 +86,8 @@ import { DescribeLoadBalancerAttributesRequest } from './types/index';
 import { DescribeLoadBalancerAttributesResponse } from './types/index';
 import { DescribeLoadBalancerSpecsRequest } from './types/index';
 import { DescribeLoadBalancerSpecsResponse } from './types/index';
+import { DescribeLoadBalancerStatusRequest } from './types/index';
+import { DescribeLoadBalancerStatusResponse } from './types/index';
 import { DescribeLoadBalancersBillingRequest } from './types/index';
 import { DescribeLoadBalancersBillingResponse } from './types/index';
 import { DescribeLoadBalancersRequest } from './types/index';
@@ -226,6 +228,7 @@ export type DescribeListenerHealthCommandOutput = CommandOutput<DescribeListener
 export type DescribeListenersCommandOutput = CommandOutput<DescribeListenersResponse>;
 export type DescribeLoadBalancerAttributesCommandOutput = CommandOutput<DescribeLoadBalancerAttributesResponse>;
 export type DescribeLoadBalancerSpecsCommandOutput = CommandOutput<DescribeLoadBalancerSpecsResponse>;
+export type DescribeLoadBalancerStatusCommandOutput = CommandOutput<DescribeLoadBalancerStatusResponse>;
 export type DescribeLoadBalancersCommandOutput = CommandOutput<DescribeLoadBalancersResponse>;
 export type DescribeLoadBalancersBillingCommandOutput = CommandOutput<DescribeLoadBalancersBillingResponse>;
 export type DescribeNLBListenerAttributesCommandOutput = CommandOutput<DescribeNLBListenerAttributesResponse>;
@@ -276,7 +279,6 @@ export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagNLBResourcesCommandOutput = CommandOutput<UntagNLBResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UploadCertificateCommandOutput = CommandOutput<UploadCertificateResponse>;
-
 
 /**
  * CLBClient Service Client
@@ -829,6 +831,21 @@ export class DescribeLoadBalancerSpecsCommand extends Command<
   constructor(input: DescribeLoadBalancerSpecsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeLoadBalancerSpecsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeLoadBalancerStatus
+ */
+export class DescribeLoadBalancerStatusCommand extends Command<
+  DescribeLoadBalancerStatusRequest,
+  DescribeLoadBalancerStatusCommandOutput,
+  'DescribeLoadBalancerStatusCommand'
+> {
+  static readonly metaPath = '/DescribeLoadBalancerStatus/2020-04-01/clb/get/text_plain/';
+
+  constructor(input: DescribeLoadBalancerStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeLoadBalancerStatusCommand.metaPath);
   }
 }
 /**
@@ -1620,6 +1637,7 @@ export default {
   DescribeListenersCommand,
   DescribeLoadBalancerAttributesCommand,
   DescribeLoadBalancerSpecsCommand,
+  DescribeLoadBalancerStatusCommand,
   DescribeLoadBalancersCommand,
   DescribeLoadBalancersBillingCommand,
   DescribeNLBListenerAttributesCommand,
