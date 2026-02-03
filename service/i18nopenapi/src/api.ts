@@ -34,6 +34,8 @@ import { VideoProjectCreateRequest } from './types/index';
 import { VideoProjectCreateResponse } from './types/index';
 import { VideoProjectListRequest } from './types/index';
 import { VideoProjectListResponse } from './types/index';
+import { VideoProjectSerialDubTaskCreateRequest } from './types/index';
+import { VideoProjectSerialDubTaskCreateResponse } from './types/index';
 import { VideoProjectSerialTaskCreateRequest } from './types/index';
 import { VideoProjectSerialTaskCreateResponse } from './types/index';
 import { VideoProjectTaskDetailRequest } from './types/index';
@@ -58,12 +60,12 @@ export type ProjectUsersCommandOutput = CommandOutput<ProjectUsersResponse>;
 export type ProjectsCommandOutput = CommandOutput<ProjectsResponse>;
 export type VideoProjectCreateCommandOutput = CommandOutput<VideoProjectCreateResponse>;
 export type VideoProjectListCommandOutput = CommandOutput<VideoProjectListResponse>;
+export type VideoProjectSerialDubTaskCreateCommandOutput = CommandOutput<VideoProjectSerialDubTaskCreateResponse>;
 export type VideoProjectSerialTaskCreateCommandOutput = CommandOutput<VideoProjectSerialTaskCreateResponse>;
 export type VideoProjectTaskDetailCommandOutput = CommandOutput<VideoProjectTaskDetailResponse>;
 export type VideoProjectTaskListCommandOutput = CommandOutput<VideoProjectTaskListResponse>;
 export type VideoResourceUploadCommandOutput = CommandOutput<VideoResourceUploadResponse>;
 export type WebhooksCreateCommandOutput = CommandOutput<WebhooksCreateResponse>;
-
 
 /**
  * I18NOPENAPIClient Service Client
@@ -229,6 +231,21 @@ export class VideoProjectListCommand extends Command<
   }
 }
 /**
+ * Command to VideoProjectSerialDubTaskCreate
+ */
+export class VideoProjectSerialDubTaskCreateCommand extends Command<
+  VideoProjectSerialDubTaskCreateRequest,
+  VideoProjectSerialDubTaskCreateCommandOutput,
+  'VideoProjectSerialDubTaskCreateCommand'
+> {
+  static readonly metaPath = '/VideoProjectSerialDubTaskCreate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoProjectSerialDubTaskCreateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectSerialDubTaskCreateCommand.metaPath);
+  }
+}
+/**
  * Command to VideoProjectSerialTaskCreate
  */
 export class VideoProjectSerialTaskCreateCommand extends Command<
@@ -316,6 +333,7 @@ export default {
   ProjectsCommand,
   VideoProjectCreateCommand,
   VideoProjectListCommand,
+  VideoProjectSerialDubTaskCreateCommand,
   VideoProjectSerialTaskCreateCommand,
   VideoProjectTaskDetailCommand,
   VideoProjectTaskListCommand,
