@@ -14,18 +14,24 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { AddTagsToResourceRequest } from './types/index';
+import { AddTagsToResourceResponse } from './types/index';
 import { AssociateAllowListRequest } from './types/index';
 import { AssociateAllowListResponse } from './types/index';
 import { CreateAllowListRequest } from './types/index';
 import { CreateAllowListResponse } from './types/index';
 import { CreateBackupRequest } from './types/index';
 import { CreateBackupResponse } from './types/index';
+import { CreateBlueGreenDeploymentRequest } from './types/index';
+import { CreateBlueGreenDeploymentResponse } from './types/index';
 import { CreateDBAccountRequest } from './types/index';
 import { CreateDBAccountResponse } from './types/index';
 import { CreateDBEndpointDirectLinkAddressRequest } from './types/index';
 import { CreateDBEndpointDirectLinkAddressResponse } from './types/index';
 import { CreateDBEndpointPublicAddressRequest } from './types/index';
 import { CreateDBEndpointPublicAddressResponse } from './types/index';
+import { CreateDBInstanceRequest } from './types/index';
+import { CreateDBInstanceResponse } from './types/index';
 import { CreateEnterpriseDBInstanceRequest } from './types/index';
 import { CreateEnterpriseDBInstanceResponse } from './types/index';
 import { CreateKeyScanJobRequest } from './types/index';
@@ -34,8 +40,12 @@ import { CreateParameterGroupRequest } from './types/index';
 import { CreateParameterGroupResponse } from './types/index';
 import { DecreaseDBInstanceNodeNumberRequest } from './types/index';
 import { DecreaseDBInstanceNodeNumberResponse } from './types/index';
+import { DeleteAllClientSessionRequest } from './types/index';
+import { DeleteAllClientSessionResponse } from './types/index';
 import { DeleteAllowListRequest } from './types/index';
 import { DeleteAllowListResponse } from './types/index';
+import { DeleteBlueGreenDeploymentRequest } from './types/index';
+import { DeleteBlueGreenDeploymentResponse } from './types/index';
 import { DeleteDBAccountRequest } from './types/index';
 import { DeleteDBAccountResponse } from './types/index';
 import { DeleteDBEndpointDirectLinkAddressRequest } from './types/index';
@@ -54,24 +64,36 @@ import { DescribeAllowListsRequest } from './types/index';
 import { DescribeAllowListsResponse } from './types/index';
 import { DescribeAvailableCrossRegionRequest } from './types/index';
 import { DescribeAvailableCrossRegionResponse } from './types/index';
+import { DescribeBackupPlanRequest } from './types/index';
+import { DescribeBackupPlanResponse } from './types/index';
+import { DescribeBackupPointDownloadUrlsRequest } from './types/index';
+import { DescribeBackupPointDownloadUrlsResponse } from './types/index';
 import { DescribeBackupsRequest } from './types/index';
 import { DescribeBackupsResponse } from './types/index';
 import { DescribeBigKeysRequest } from './types/index';
 import { DescribeBigKeysResponse } from './types/index';
+import { DescribeBlueGreenDeploymentsRequest } from './types/index';
+import { DescribeBlueGreenDeploymentsResponse } from './types/index';
 import { DescribeCrossRegionBackupPolicyRequest } from './types/index';
 import { DescribeCrossRegionBackupPolicyResponse } from './types/index';
 import { DescribeCrossRegionBackupsRequest } from './types/index';
 import { DescribeCrossRegionBackupsResponse } from './types/index';
 import { DescribeDBInstanceAclCategoriesRequest } from './types/index';
 import { DescribeDBInstanceAclCategoriesResponse } from './types/index';
+import { DescribeDBInstanceAclCommandsRequest } from './types/index';
+import { DescribeDBInstanceAclCommandsResponse } from './types/index';
 import { DescribeDBInstanceBandwidthPerShardRequest } from './types/index';
 import { DescribeDBInstanceBandwidthPerShardResponse } from './types/index';
+import { DescribeDBInstanceDetailRequest } from './types/index';
+import { DescribeDBInstanceDetailResponse } from './types/index';
 import { DescribeDBInstanceParamsRequest } from './types/index';
 import { DescribeDBInstanceParamsResponse } from './types/index';
 import { DescribeDBInstanceShardsRequest } from './types/index';
 import { DescribeDBInstanceShardsResponse } from './types/index';
 import { DescribeDBInstanceSpecsRequest } from './types/index';
 import { DescribeDBInstanceSpecsResponse } from './types/index';
+import { DescribeDBInstancesRequest } from './types/index';
+import { DescribeDBInstancesResponse } from './types/index';
 import { DescribeEnterpriseDBInstanceDetailRequest } from './types/index';
 import { DescribeEnterpriseDBInstanceDetailResponse } from './types/index';
 import { DescribeEnterpriseDBInstanceParamsRequest } from './types/index';
@@ -90,14 +112,22 @@ import { DescribeParameterGroupDetailRequest } from './types/index';
 import { DescribeParameterGroupDetailResponse } from './types/index';
 import { DescribeParameterGroupsRequest } from './types/index';
 import { DescribeParameterGroupsResponse } from './types/index';
+import { DescribePitrTimeWindowRequest } from './types/index';
+import { DescribePitrTimeWindowResponse } from './types/index';
 import { DescribePlannedEventsRequest } from './types/index';
 import { DescribePlannedEventsResponse } from './types/index';
 import { DescribeRegionsRequest } from './types/index';
 import { DescribeRegionsResponse } from './types/index';
+import { DescribeSlowLogsRequest } from './types/index';
+import { DescribeSlowLogsResponse } from './types/index';
+import { DescribeTagsByResourceRequest } from './types/index';
+import { DescribeTagsByResourceResponse } from './types/index';
 import { DescribeZonesRequest } from './types/index';
 import { DescribeZonesResponse } from './types/index';
 import { DisassociateAllowListRequest } from './types/index';
 import { DisassociateAllowListResponse } from './types/index';
+import { EnableShardedClusterRequest } from './types/index';
+import { EnableShardedClusterResponse } from './types/index';
 import { ExecutePlannedEventRequest } from './types/index';
 import { ExecutePlannedEventResponse } from './types/index';
 import { FlushDBInstanceRequest } from './types/index';
@@ -106,8 +136,12 @@ import { IncreaseDBInstanceNodeNumberRequest } from './types/index';
 import { IncreaseDBInstanceNodeNumberResponse } from './types/index';
 import { InterruptKeyScanJobRequest } from './types/index';
 import { InterruptKeyScanJobResponse } from './types/index';
+import { ListDBAccountRequest } from './types/index';
+import { ListDBAccountResponse } from './types/index';
 import { ModifyAllowListRequest } from './types/index';
 import { ModifyAllowListResponse } from './types/index';
+import { ModifyBackupPlanRequest } from './types/index';
+import { ModifyBackupPlanResponse } from './types/index';
 import { ModifyBackupPointNameRequest } from './types/index';
 import { ModifyBackupPointNameResponse } from './types/index';
 import { ModifyCrossRegionBackupPolicyRequest } from './types/index';
@@ -116,14 +150,24 @@ import { ModifyDBAccountRequest } from './types/index';
 import { ModifyDBAccountResponse } from './types/index';
 import { ModifyDBInstanceAZConfigureRequest } from './types/index';
 import { ModifyDBInstanceAZConfigureResponse } from './types/index';
+import { ModifyDBInstanceAdditionalBandwidthPerShardRequest } from './types/index';
+import { ModifyDBInstanceAdditionalBandwidthPerShardResponse } from './types/index';
 import { ModifyDBInstanceChargeTypeRequest } from './types/index';
 import { ModifyDBInstanceChargeTypeResponse } from './types/index';
 import { ModifyDBInstanceDeletionProtectionPolicyRequest } from './types/index';
 import { ModifyDBInstanceDeletionProtectionPolicyResponse } from './types/index';
+import { ModifyDBInstanceMaxConnRequest } from './types/index';
+import { ModifyDBInstanceMaxConnResponse } from './types/index';
 import { ModifyDBInstanceNameRequest } from './types/index';
 import { ModifyDBInstanceNameResponse } from './types/index';
+import { ModifyDBInstanceParamsRequest } from './types/index';
+import { ModifyDBInstanceParamsResponse } from './types/index';
 import { ModifyDBInstancePrivateDNSVisibilityRequest } from './types/index';
 import { ModifyDBInstancePrivateDNSVisibilityResponse } from './types/index';
+import { ModifyDBInstanceShardCapacityRequest } from './types/index';
+import { ModifyDBInstanceShardCapacityResponse } from './types/index';
+import { ModifyDBInstanceShardNumberRequest } from './types/index';
+import { ModifyDBInstanceShardNumberResponse } from './types/index';
 import { ModifyDBInstanceSubnetRequest } from './types/index';
 import { ModifyDBInstanceSubnetResponse } from './types/index';
 import { ModifyDBInstanceVisitAddressRequest } from './types/index';
@@ -138,12 +182,24 @@ import { ModifyMaintenanceTimeRequest } from './types/index';
 import { ModifyMaintenanceTimeResponse } from './types/index';
 import { ModifyParameterGroupRequest } from './types/index';
 import { ModifyParameterGroupResponse } from './types/index';
+import { ModifyPlannedEventExecuteTimeRequest } from './types/index';
+import { ModifyPlannedEventExecuteTimeResponse } from './types/index';
 import { RemoveTagsFromResourceRequest } from './types/index';
 import { RemoveTagsFromResourceResponse } from './types/index';
 import { RestartDBInstanceProxyRequest } from './types/index';
 import { RestartDBInstanceProxyResponse } from './types/index';
+import { RestartDBInstanceRequest } from './types/index';
+import { RestartDBInstanceResponse } from './types/index';
+import { RestoreDBInstanceRequest } from './types/index';
+import { RestoreDBInstanceResponse } from './types/index';
+import { StartContinuousBackupRequest } from './types/index';
+import { StartContinuousBackupResponse } from './types/index';
+import { StopContinuousBackupRequest } from './types/index';
+import { StopContinuousBackupResponse } from './types/index';
 import { SwitchOverRequest } from './types/index';
 import { SwitchOverResponse } from './types/index';
+import { SwitchoverBlueGreenDeploymentRequest } from './types/index';
+import { SwitchoverBlueGreenDeploymentResponse } from './types/index';
 import { TestFailoverDBInstanceZoneRequest } from './types/index';
 import { TestFailoverDBInstanceZoneResponse } from './types/index';
 import { TestShutDownDBInstanceNodesRequest } from './types/index';
@@ -154,17 +210,22 @@ import { UpgradeAllowListVersionResponse } from './types/index';
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type AddTagsToResourceCommandOutput = CommandOutput<AddTagsToResourceResponse>;
 export type AssociateAllowListCommandOutput = CommandOutput<AssociateAllowListResponse>;
 export type CreateAllowListCommandOutput = CommandOutput<CreateAllowListResponse>;
 export type CreateBackupCommandOutput = CommandOutput<CreateBackupResponse>;
+export type CreateBlueGreenDeploymentCommandOutput = CommandOutput<CreateBlueGreenDeploymentResponse>;
 export type CreateDBAccountCommandOutput = CommandOutput<CreateDBAccountResponse>;
 export type CreateDBEndpointDirectLinkAddressCommandOutput = CommandOutput<CreateDBEndpointDirectLinkAddressResponse>;
 export type CreateDBEndpointPublicAddressCommandOutput = CommandOutput<CreateDBEndpointPublicAddressResponse>;
+export type CreateDBInstanceCommandOutput = CommandOutput<CreateDBInstanceResponse>;
 export type CreateEnterpriseDBInstanceCommandOutput = CommandOutput<CreateEnterpriseDBInstanceResponse>;
 export type CreateKeyScanJobCommandOutput = CommandOutput<CreateKeyScanJobResponse>;
 export type CreateParameterGroupCommandOutput = CommandOutput<CreateParameterGroupResponse>;
 export type DecreaseDBInstanceNodeNumberCommandOutput = CommandOutput<DecreaseDBInstanceNodeNumberResponse>;
+export type DeleteAllClientSessionCommandOutput = CommandOutput<DeleteAllClientSessionResponse>;
 export type DeleteAllowListCommandOutput = CommandOutput<DeleteAllowListResponse>;
+export type DeleteBlueGreenDeploymentCommandOutput = CommandOutput<DeleteBlueGreenDeploymentResponse>;
 export type DeleteDBAccountCommandOutput = CommandOutput<DeleteDBAccountResponse>;
 export type DeleteDBEndpointDirectLinkAddressCommandOutput = CommandOutput<DeleteDBEndpointDirectLinkAddressResponse>;
 export type DeleteDBEndpointPublicAddressCommandOutput = CommandOutput<DeleteDBEndpointPublicAddressResponse>;
@@ -174,15 +235,21 @@ export type DeleteParameterGroupCommandOutput = CommandOutput<DeleteParameterGro
 export type DescribeAllowListDetailCommandOutput = CommandOutput<DescribeAllowListDetailResponse>;
 export type DescribeAllowListsCommandOutput = CommandOutput<DescribeAllowListsResponse>;
 export type DescribeAvailableCrossRegionCommandOutput = CommandOutput<DescribeAvailableCrossRegionResponse>;
+export type DescribeBackupPlanCommandOutput = CommandOutput<DescribeBackupPlanResponse>;
+export type DescribeBackupPointDownloadUrlsCommandOutput = CommandOutput<DescribeBackupPointDownloadUrlsResponse>;
 export type DescribeBackupsCommandOutput = CommandOutput<DescribeBackupsResponse>;
 export type DescribeBigKeysCommandOutput = CommandOutput<DescribeBigKeysResponse>;
+export type DescribeBlueGreenDeploymentsCommandOutput = CommandOutput<DescribeBlueGreenDeploymentsResponse>;
 export type DescribeCrossRegionBackupPolicyCommandOutput = CommandOutput<DescribeCrossRegionBackupPolicyResponse>;
 export type DescribeCrossRegionBackupsCommandOutput = CommandOutput<DescribeCrossRegionBackupsResponse>;
 export type DescribeDBInstanceAclCategoriesCommandOutput = CommandOutput<DescribeDBInstanceAclCategoriesResponse>;
+export type DescribeDBInstanceAclCommandsCommandOutput = CommandOutput<DescribeDBInstanceAclCommandsResponse>;
 export type DescribeDBInstanceBandwidthPerShardCommandOutput = CommandOutput<DescribeDBInstanceBandwidthPerShardResponse>;
+export type DescribeDBInstanceDetailCommandOutput = CommandOutput<DescribeDBInstanceDetailResponse>;
 export type DescribeDBInstanceParamsCommandOutput = CommandOutput<DescribeDBInstanceParamsResponse>;
 export type DescribeDBInstanceShardsCommandOutput = CommandOutput<DescribeDBInstanceShardsResponse>;
 export type DescribeDBInstanceSpecsCommandOutput = CommandOutput<DescribeDBInstanceSpecsResponse>;
+export type DescribeDBInstancesCommandOutput = CommandOutput<DescribeDBInstancesResponse>;
 export type DescribeEnterpriseDBInstanceDetailCommandOutput = CommandOutput<DescribeEnterpriseDBInstanceDetailResponse>;
 export type DescribeEnterpriseDBInstanceParamsCommandOutput = CommandOutput<DescribeEnterpriseDBInstanceParamsResponse>;
 export type DescribeEnterpriseDBInstanceSpecsCommandOutput = CommandOutput<DescribeEnterpriseDBInstanceSpecsResponse>;
@@ -192,23 +259,34 @@ export type DescribeKeyScanJobsCommandOutput = CommandOutput<DescribeKeyScanJobs
 export type DescribeNodeIdsCommandOutput = CommandOutput<DescribeNodeIdsResponse>;
 export type DescribeParameterGroupDetailCommandOutput = CommandOutput<DescribeParameterGroupDetailResponse>;
 export type DescribeParameterGroupsCommandOutput = CommandOutput<DescribeParameterGroupsResponse>;
+export type DescribePitrTimeWindowCommandOutput = CommandOutput<DescribePitrTimeWindowResponse>;
 export type DescribePlannedEventsCommandOutput = CommandOutput<DescribePlannedEventsResponse>;
 export type DescribeRegionsCommandOutput = CommandOutput<DescribeRegionsResponse>;
+export type DescribeSlowLogsCommandOutput = CommandOutput<DescribeSlowLogsResponse>;
+export type DescribeTagsByResourceCommandOutput = CommandOutput<DescribeTagsByResourceResponse>;
 export type DescribeZonesCommandOutput = CommandOutput<DescribeZonesResponse>;
 export type DisassociateAllowListCommandOutput = CommandOutput<DisassociateAllowListResponse>;
+export type EnableShardedClusterCommandOutput = CommandOutput<EnableShardedClusterResponse>;
 export type ExecutePlannedEventCommandOutput = CommandOutput<ExecutePlannedEventResponse>;
 export type FlushDBInstanceCommandOutput = CommandOutput<FlushDBInstanceResponse>;
 export type IncreaseDBInstanceNodeNumberCommandOutput = CommandOutput<IncreaseDBInstanceNodeNumberResponse>;
 export type InterruptKeyScanJobCommandOutput = CommandOutput<InterruptKeyScanJobResponse>;
+export type ListDBAccountCommandOutput = CommandOutput<ListDBAccountResponse>;
 export type ModifyAllowListCommandOutput = CommandOutput<ModifyAllowListResponse>;
+export type ModifyBackupPlanCommandOutput = CommandOutput<ModifyBackupPlanResponse>;
 export type ModifyBackupPointNameCommandOutput = CommandOutput<ModifyBackupPointNameResponse>;
 export type ModifyCrossRegionBackupPolicyCommandOutput = CommandOutput<ModifyCrossRegionBackupPolicyResponse>;
 export type ModifyDBAccountCommandOutput = CommandOutput<ModifyDBAccountResponse>;
 export type ModifyDBInstanceAZConfigureCommandOutput = CommandOutput<ModifyDBInstanceAZConfigureResponse>;
+export type ModifyDBInstanceAdditionalBandwidthPerShardCommandOutput = CommandOutput<ModifyDBInstanceAdditionalBandwidthPerShardResponse>;
 export type ModifyDBInstanceChargeTypeCommandOutput = CommandOutput<ModifyDBInstanceChargeTypeResponse>;
 export type ModifyDBInstanceDeletionProtectionPolicyCommandOutput = CommandOutput<ModifyDBInstanceDeletionProtectionPolicyResponse>;
+export type ModifyDBInstanceMaxConnCommandOutput = CommandOutput<ModifyDBInstanceMaxConnResponse>;
 export type ModifyDBInstanceNameCommandOutput = CommandOutput<ModifyDBInstanceNameResponse>;
+export type ModifyDBInstanceParamsCommandOutput = CommandOutput<ModifyDBInstanceParamsResponse>;
 export type ModifyDBInstancePrivateDNSVisibilityCommandOutput = CommandOutput<ModifyDBInstancePrivateDNSVisibilityResponse>;
+export type ModifyDBInstanceShardCapacityCommandOutput = CommandOutput<ModifyDBInstanceShardCapacityResponse>;
+export type ModifyDBInstanceShardNumberCommandOutput = CommandOutput<ModifyDBInstanceShardNumberResponse>;
 export type ModifyDBInstanceSubnetCommandOutput = CommandOutput<ModifyDBInstanceSubnetResponse>;
 export type ModifyDBInstanceVisitAddressCommandOutput = CommandOutput<ModifyDBInstanceVisitAddressResponse>;
 export type ModifyDBInstanceVpcAuthModeCommandOutput = CommandOutput<ModifyDBInstanceVpcAuthModeResponse>;
@@ -216,13 +294,18 @@ export type ModifyEnterpriseDBInstanceCapacityCommandOutput = CommandOutput<Modi
 export type ModifyEnterpriseDBInstanceParamsCommandOutput = CommandOutput<ModifyEnterpriseDBInstanceParamsResponse>;
 export type ModifyMaintenanceTimeCommandOutput = CommandOutput<ModifyMaintenanceTimeResponse>;
 export type ModifyParameterGroupCommandOutput = CommandOutput<ModifyParameterGroupResponse>;
+export type ModifyPlannedEventExecuteTimeCommandOutput = CommandOutput<ModifyPlannedEventExecuteTimeResponse>;
 export type RemoveTagsFromResourceCommandOutput = CommandOutput<RemoveTagsFromResourceResponse>;
+export type RestartDBInstanceCommandOutput = CommandOutput<RestartDBInstanceResponse>;
 export type RestartDBInstanceProxyCommandOutput = CommandOutput<RestartDBInstanceProxyResponse>;
+export type RestoreDBInstanceCommandOutput = CommandOutput<RestoreDBInstanceResponse>;
+export type StartContinuousBackupCommandOutput = CommandOutput<StartContinuousBackupResponse>;
+export type StopContinuousBackupCommandOutput = CommandOutput<StopContinuousBackupResponse>;
 export type SwitchOverCommandOutput = CommandOutput<SwitchOverResponse>;
+export type SwitchoverBlueGreenDeploymentCommandOutput = CommandOutput<SwitchoverBlueGreenDeploymentResponse>;
 export type TestFailoverDBInstanceZoneCommandOutput = CommandOutput<TestFailoverDBInstanceZoneResponse>;
 export type TestShutDownDBInstanceNodesCommandOutput = CommandOutput<TestShutDownDBInstanceNodesResponse>;
 export type UpgradeAllowListVersionCommandOutput = CommandOutput<UpgradeAllowListVersionResponse>;
-
 
 /**
  * REDISClient Service Client
@@ -237,6 +320,21 @@ export class REDISClient extends Client {
   }
 }
 
+/**
+ * Command to AddTagsToResource
+ */
+export class AddTagsToResourceCommand extends Command<
+  AddTagsToResourceRequest,
+  AddTagsToResourceCommandOutput,
+  'AddTagsToResourceCommand'
+> {
+  static readonly metaPath = '/AddTagsToResource/2020-12-07/redis/post/application_json/';
+
+  constructor(input: AddTagsToResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddTagsToResourceCommand.metaPath);
+  }
+}
 /**
  * Command to AssociateAllowList
  */
@@ -283,6 +381,21 @@ export class CreateBackupCommand extends Command<
   }
 }
 /**
+ * Command to CreateBlueGreenDeployment
+ */
+export class CreateBlueGreenDeploymentCommand extends Command<
+  CreateBlueGreenDeploymentRequest,
+  CreateBlueGreenDeploymentCommandOutput,
+  'CreateBlueGreenDeploymentCommand'
+> {
+  static readonly metaPath = '/CreateBlueGreenDeployment/2020-12-07/redis/post/application_json/';
+
+  constructor(input: CreateBlueGreenDeploymentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateBlueGreenDeploymentCommand.metaPath);
+  }
+}
+/**
  * Command to CreateDBAccount
  */
 export class CreateDBAccountCommand extends Command<
@@ -325,6 +438,21 @@ export class CreateDBEndpointPublicAddressCommand extends Command<
   constructor(input: CreateDBEndpointPublicAddressRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateDBEndpointPublicAddressCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateDBInstance
+ */
+export class CreateDBInstanceCommand extends Command<
+  CreateDBInstanceRequest,
+  CreateDBInstanceCommandOutput,
+  'CreateDBInstanceCommand'
+> {
+  static readonly metaPath = '/CreateDBInstance/2020-12-07/redis/post/application_json/';
+
+  constructor(input: CreateDBInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateDBInstanceCommand.metaPath);
   }
 }
 /**
@@ -388,6 +516,21 @@ export class DecreaseDBInstanceNodeNumberCommand extends Command<
   }
 }
 /**
+ * Command to DeleteAllClientSession
+ */
+export class DeleteAllClientSessionCommand extends Command<
+  DeleteAllClientSessionRequest,
+  DeleteAllClientSessionCommandOutput,
+  'DeleteAllClientSessionCommand'
+> {
+  static readonly metaPath = '/DeleteAllClientSession/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DeleteAllClientSessionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAllClientSessionCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteAllowList
  */
 export class DeleteAllowListCommand extends Command<
@@ -400,6 +543,21 @@ export class DeleteAllowListCommand extends Command<
   constructor(input: DeleteAllowListRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteAllowListCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteBlueGreenDeployment
+ */
+export class DeleteBlueGreenDeploymentCommand extends Command<
+  DeleteBlueGreenDeploymentRequest,
+  DeleteBlueGreenDeploymentCommandOutput,
+  'DeleteBlueGreenDeploymentCommand'
+> {
+  static readonly metaPath = '/DeleteBlueGreenDeployment/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DeleteBlueGreenDeploymentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteBlueGreenDeploymentCommand.metaPath);
   }
 }
 /**
@@ -538,6 +696,36 @@ export class DescribeAvailableCrossRegionCommand extends Command<
   }
 }
 /**
+ * Command to DescribeBackupPlan
+ */
+export class DescribeBackupPlanCommand extends Command<
+  DescribeBackupPlanRequest,
+  DescribeBackupPlanCommandOutput,
+  'DescribeBackupPlanCommand'
+> {
+  static readonly metaPath = '/DescribeBackupPlan/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribeBackupPlanRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeBackupPlanCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeBackupPointDownloadUrls
+ */
+export class DescribeBackupPointDownloadUrlsCommand extends Command<
+  DescribeBackupPointDownloadUrlsRequest,
+  DescribeBackupPointDownloadUrlsCommandOutput,
+  'DescribeBackupPointDownloadUrlsCommand'
+> {
+  static readonly metaPath = '/DescribeBackupPointDownloadUrls/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribeBackupPointDownloadUrlsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeBackupPointDownloadUrlsCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeBackups
  */
 export class DescribeBackupsCommand extends Command<
@@ -565,6 +753,21 @@ export class DescribeBigKeysCommand extends Command<
   constructor(input: DescribeBigKeysRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeBigKeysCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeBlueGreenDeployments
+ */
+export class DescribeBlueGreenDeploymentsCommand extends Command<
+  DescribeBlueGreenDeploymentsRequest,
+  DescribeBlueGreenDeploymentsCommandOutput,
+  'DescribeBlueGreenDeploymentsCommand'
+> {
+  static readonly metaPath = '/DescribeBlueGreenDeployments/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribeBlueGreenDeploymentsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeBlueGreenDeploymentsCommand.metaPath);
   }
 }
 /**
@@ -613,6 +816,21 @@ export class DescribeDBInstanceAclCategoriesCommand extends Command<
   }
 }
 /**
+ * Command to DescribeDBInstanceAclCommands
+ */
+export class DescribeDBInstanceAclCommandsCommand extends Command<
+  DescribeDBInstanceAclCommandsRequest,
+  DescribeDBInstanceAclCommandsCommandOutput,
+  'DescribeDBInstanceAclCommandsCommand'
+> {
+  static readonly metaPath = '/DescribeDBInstanceAclCommands/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribeDBInstanceAclCommandsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeDBInstanceAclCommandsCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeDBInstanceBandwidthPerShard
  */
 export class DescribeDBInstanceBandwidthPerShardCommand extends Command<
@@ -625,6 +843,21 @@ export class DescribeDBInstanceBandwidthPerShardCommand extends Command<
   constructor(input: DescribeDBInstanceBandwidthPerShardRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeDBInstanceBandwidthPerShardCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeDBInstanceDetail
+ */
+export class DescribeDBInstanceDetailCommand extends Command<
+  DescribeDBInstanceDetailRequest,
+  DescribeDBInstanceDetailCommandOutput,
+  'DescribeDBInstanceDetailCommand'
+> {
+  static readonly metaPath = '/DescribeDBInstanceDetail/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribeDBInstanceDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeDBInstanceDetailCommand.metaPath);
   }
 }
 /**
@@ -670,6 +903,21 @@ export class DescribeDBInstanceSpecsCommand extends Command<
   constructor(input: DescribeDBInstanceSpecsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeDBInstanceSpecsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeDBInstances
+ */
+export class DescribeDBInstancesCommand extends Command<
+  DescribeDBInstancesRequest,
+  DescribeDBInstancesCommandOutput,
+  'DescribeDBInstancesCommand'
+> {
+  static readonly metaPath = '/DescribeDBInstances/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribeDBInstancesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeDBInstancesCommand.metaPath);
   }
 }
 /**
@@ -808,6 +1056,21 @@ export class DescribeParameterGroupsCommand extends Command<
   }
 }
 /**
+ * Command to DescribePitrTimeWindow
+ */
+export class DescribePitrTimeWindowCommand extends Command<
+  DescribePitrTimeWindowRequest,
+  DescribePitrTimeWindowCommandOutput,
+  'DescribePitrTimeWindowCommand'
+> {
+  static readonly metaPath = '/DescribePitrTimeWindow/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribePitrTimeWindowRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePitrTimeWindowCommand.metaPath);
+  }
+}
+/**
  * Command to DescribePlannedEvents
  */
 export class DescribePlannedEventsCommand extends Command<
@@ -838,6 +1101,36 @@ export class DescribeRegionsCommand extends Command<
   }
 }
 /**
+ * Command to DescribeSlowLogs
+ */
+export class DescribeSlowLogsCommand extends Command<
+  DescribeSlowLogsRequest,
+  DescribeSlowLogsCommandOutput,
+  'DescribeSlowLogsCommand'
+> {
+  static readonly metaPath = '/DescribeSlowLogs/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribeSlowLogsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeSlowLogsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeTagsByResource
+ */
+export class DescribeTagsByResourceCommand extends Command<
+  DescribeTagsByResourceRequest,
+  DescribeTagsByResourceCommandOutput,
+  'DescribeTagsByResourceCommand'
+> {
+  static readonly metaPath = '/DescribeTagsByResource/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribeTagsByResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeTagsByResourceCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeZones
  */
 export class DescribeZonesCommand extends Command<
@@ -865,6 +1158,21 @@ export class DisassociateAllowListCommand extends Command<
   constructor(input: DisassociateAllowListRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DisassociateAllowListCommand.metaPath);
+  }
+}
+/**
+ * Command to EnableShardedCluster
+ */
+export class EnableShardedClusterCommand extends Command<
+  EnableShardedClusterRequest,
+  EnableShardedClusterCommandOutput,
+  'EnableShardedClusterCommand'
+> {
+  static readonly metaPath = '/EnableShardedCluster/2020-12-07/redis/post/application_json/';
+
+  constructor(input: EnableShardedClusterRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnableShardedClusterCommand.metaPath);
   }
 }
 /**
@@ -928,6 +1236,21 @@ export class InterruptKeyScanJobCommand extends Command<
   }
 }
 /**
+ * Command to ListDBAccount
+ */
+export class ListDBAccountCommand extends Command<
+  ListDBAccountRequest,
+  ListDBAccountCommandOutput,
+  'ListDBAccountCommand'
+> {
+  static readonly metaPath = '/ListDBAccount/2020-12-07/redis/post/application_json/';
+
+  constructor(input: ListDBAccountRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDBAccountCommand.metaPath);
+  }
+}
+/**
  * Command to ModifyAllowList
  */
 export class ModifyAllowListCommand extends Command<
@@ -940,6 +1263,21 @@ export class ModifyAllowListCommand extends Command<
   constructor(input: ModifyAllowListRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ModifyAllowListCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyBackupPlan
+ */
+export class ModifyBackupPlanCommand extends Command<
+  ModifyBackupPlanRequest,
+  ModifyBackupPlanCommandOutput,
+  'ModifyBackupPlanCommand'
+> {
+  static readonly metaPath = '/ModifyBackupPlan/2020-12-07/redis/post/application_json/';
+
+  constructor(input: ModifyBackupPlanRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyBackupPlanCommand.metaPath);
   }
 }
 /**
@@ -1003,6 +1341,21 @@ export class ModifyDBInstanceAZConfigureCommand extends Command<
   }
 }
 /**
+ * Command to ModifyDBInstanceAdditionalBandwidthPerShard
+ */
+export class ModifyDBInstanceAdditionalBandwidthPerShardCommand extends Command<
+  ModifyDBInstanceAdditionalBandwidthPerShardRequest,
+  ModifyDBInstanceAdditionalBandwidthPerShardCommandOutput,
+  'ModifyDBInstanceAdditionalBandwidthPerShardCommand'
+> {
+  static readonly metaPath = '/ModifyDBInstanceAdditionalBandwidthPerShard/2020-12-07/redis/post/application_json/';
+
+  constructor(input: ModifyDBInstanceAdditionalBandwidthPerShardRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyDBInstanceAdditionalBandwidthPerShardCommand.metaPath);
+  }
+}
+/**
  * Command to ModifyDBInstanceChargeType
  */
 export class ModifyDBInstanceChargeTypeCommand extends Command<
@@ -1033,6 +1386,21 @@ export class ModifyDBInstanceDeletionProtectionPolicyCommand extends Command<
   }
 }
 /**
+ * Command to ModifyDBInstanceMaxConn
+ */
+export class ModifyDBInstanceMaxConnCommand extends Command<
+  ModifyDBInstanceMaxConnRequest,
+  ModifyDBInstanceMaxConnCommandOutput,
+  'ModifyDBInstanceMaxConnCommand'
+> {
+  static readonly metaPath = '/ModifyDBInstanceMaxConn/2020-12-07/redis/post/application_json/';
+
+  constructor(input: ModifyDBInstanceMaxConnRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyDBInstanceMaxConnCommand.metaPath);
+  }
+}
+/**
  * Command to ModifyDBInstanceName
  */
 export class ModifyDBInstanceNameCommand extends Command<
@@ -1048,6 +1416,21 @@ export class ModifyDBInstanceNameCommand extends Command<
   }
 }
 /**
+ * Command to ModifyDBInstanceParams
+ */
+export class ModifyDBInstanceParamsCommand extends Command<
+  ModifyDBInstanceParamsRequest,
+  ModifyDBInstanceParamsCommandOutput,
+  'ModifyDBInstanceParamsCommand'
+> {
+  static readonly metaPath = '/ModifyDBInstanceParams/2020-12-07/redis/post/application_json/';
+
+  constructor(input: ModifyDBInstanceParamsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyDBInstanceParamsCommand.metaPath);
+  }
+}
+/**
  * Command to ModifyDBInstancePrivateDNSVisibility
  */
 export class ModifyDBInstancePrivateDNSVisibilityCommand extends Command<
@@ -1060,6 +1443,36 @@ export class ModifyDBInstancePrivateDNSVisibilityCommand extends Command<
   constructor(input: ModifyDBInstancePrivateDNSVisibilityRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ModifyDBInstancePrivateDNSVisibilityCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyDBInstanceShardCapacity
+ */
+export class ModifyDBInstanceShardCapacityCommand extends Command<
+  ModifyDBInstanceShardCapacityRequest,
+  ModifyDBInstanceShardCapacityCommandOutput,
+  'ModifyDBInstanceShardCapacityCommand'
+> {
+  static readonly metaPath = '/ModifyDBInstanceShardCapacity/2020-12-07/redis/post/application_json/';
+
+  constructor(input: ModifyDBInstanceShardCapacityRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyDBInstanceShardCapacityCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyDBInstanceShardNumber
+ */
+export class ModifyDBInstanceShardNumberCommand extends Command<
+  ModifyDBInstanceShardNumberRequest,
+  ModifyDBInstanceShardNumberCommandOutput,
+  'ModifyDBInstanceShardNumberCommand'
+> {
+  static readonly metaPath = '/ModifyDBInstanceShardNumber/2020-12-07/redis/post/application_json/';
+
+  constructor(input: ModifyDBInstanceShardNumberRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyDBInstanceShardNumberCommand.metaPath);
   }
 }
 /**
@@ -1168,6 +1581,21 @@ export class ModifyParameterGroupCommand extends Command<
   }
 }
 /**
+ * Command to ModifyPlannedEventExecuteTime
+ */
+export class ModifyPlannedEventExecuteTimeCommand extends Command<
+  ModifyPlannedEventExecuteTimeRequest,
+  ModifyPlannedEventExecuteTimeCommandOutput,
+  'ModifyPlannedEventExecuteTimeCommand'
+> {
+  static readonly metaPath = '/ModifyPlannedEventExecuteTime/2020-12-07/redis/post/application_json/';
+
+  constructor(input: ModifyPlannedEventExecuteTimeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyPlannedEventExecuteTimeCommand.metaPath);
+  }
+}
+/**
  * Command to RemoveTagsFromResource
  */
 export class RemoveTagsFromResourceCommand extends Command<
@@ -1180,6 +1608,21 @@ export class RemoveTagsFromResourceCommand extends Command<
   constructor(input: RemoveTagsFromResourceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(RemoveTagsFromResourceCommand.metaPath);
+  }
+}
+/**
+ * Command to RestartDBInstance
+ */
+export class RestartDBInstanceCommand extends Command<
+  RestartDBInstanceRequest,
+  RestartDBInstanceCommandOutput,
+  'RestartDBInstanceCommand'
+> {
+  static readonly metaPath = '/RestartDBInstance/2020-12-07/redis/post/application_json/';
+
+  constructor(input: RestartDBInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RestartDBInstanceCommand.metaPath);
   }
 }
 /**
@@ -1198,6 +1641,51 @@ export class RestartDBInstanceProxyCommand extends Command<
   }
 }
 /**
+ * Command to RestoreDBInstance
+ */
+export class RestoreDBInstanceCommand extends Command<
+  RestoreDBInstanceRequest,
+  RestoreDBInstanceCommandOutput,
+  'RestoreDBInstanceCommand'
+> {
+  static readonly metaPath = '/RestoreDBInstance/2020-12-07/redis/post/application_json/';
+
+  constructor(input: RestoreDBInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RestoreDBInstanceCommand.metaPath);
+  }
+}
+/**
+ * Command to StartContinuousBackup
+ */
+export class StartContinuousBackupCommand extends Command<
+  StartContinuousBackupRequest,
+  StartContinuousBackupCommandOutput,
+  'StartContinuousBackupCommand'
+> {
+  static readonly metaPath = '/StartContinuousBackup/2020-12-07/redis/post/application_json/';
+
+  constructor(input: StartContinuousBackupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StartContinuousBackupCommand.metaPath);
+  }
+}
+/**
+ * Command to StopContinuousBackup
+ */
+export class StopContinuousBackupCommand extends Command<
+  StopContinuousBackupRequest,
+  StopContinuousBackupCommandOutput,
+  'StopContinuousBackupCommand'
+> {
+  static readonly metaPath = '/StopContinuousBackup/2020-12-07/redis/post/application_json/';
+
+  constructor(input: StopContinuousBackupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StopContinuousBackupCommand.metaPath);
+  }
+}
+/**
  * Command to SwitchOver
  */
 export class SwitchOverCommand extends Command<
@@ -1210,6 +1698,21 @@ export class SwitchOverCommand extends Command<
   constructor(input: SwitchOverRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(SwitchOverCommand.metaPath);
+  }
+}
+/**
+ * Command to SwitchoverBlueGreenDeployment
+ */
+export class SwitchoverBlueGreenDeploymentCommand extends Command<
+  SwitchoverBlueGreenDeploymentRequest,
+  SwitchoverBlueGreenDeploymentCommandOutput,
+  'SwitchoverBlueGreenDeploymentCommand'
+> {
+  static readonly metaPath = '/SwitchoverBlueGreenDeployment/2020-12-07/redis/post/application_json/';
+
+  constructor(input: SwitchoverBlueGreenDeploymentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(SwitchoverBlueGreenDeploymentCommand.metaPath);
   }
 }
 /**
@@ -1260,17 +1763,22 @@ export class UpgradeAllowListVersionCommand extends Command<
 
 export default {
   REDISClient,
+  AddTagsToResourceCommand,
   AssociateAllowListCommand,
   CreateAllowListCommand,
   CreateBackupCommand,
+  CreateBlueGreenDeploymentCommand,
   CreateDBAccountCommand,
   CreateDBEndpointDirectLinkAddressCommand,
   CreateDBEndpointPublicAddressCommand,
+  CreateDBInstanceCommand,
   CreateEnterpriseDBInstanceCommand,
   CreateKeyScanJobCommand,
   CreateParameterGroupCommand,
   DecreaseDBInstanceNodeNumberCommand,
+  DeleteAllClientSessionCommand,
   DeleteAllowListCommand,
+  DeleteBlueGreenDeploymentCommand,
   DeleteDBAccountCommand,
   DeleteDBEndpointDirectLinkAddressCommand,
   DeleteDBEndpointPublicAddressCommand,
@@ -1280,15 +1788,21 @@ export default {
   DescribeAllowListDetailCommand,
   DescribeAllowListsCommand,
   DescribeAvailableCrossRegionCommand,
+  DescribeBackupPlanCommand,
+  DescribeBackupPointDownloadUrlsCommand,
   DescribeBackupsCommand,
   DescribeBigKeysCommand,
+  DescribeBlueGreenDeploymentsCommand,
   DescribeCrossRegionBackupPolicyCommand,
   DescribeCrossRegionBackupsCommand,
   DescribeDBInstanceAclCategoriesCommand,
+  DescribeDBInstanceAclCommandsCommand,
   DescribeDBInstanceBandwidthPerShardCommand,
+  DescribeDBInstanceDetailCommand,
   DescribeDBInstanceParamsCommand,
   DescribeDBInstanceShardsCommand,
   DescribeDBInstanceSpecsCommand,
+  DescribeDBInstancesCommand,
   DescribeEnterpriseDBInstanceDetailCommand,
   DescribeEnterpriseDBInstanceParamsCommand,
   DescribeEnterpriseDBInstanceSpecsCommand,
@@ -1298,23 +1812,34 @@ export default {
   DescribeNodeIdsCommand,
   DescribeParameterGroupDetailCommand,
   DescribeParameterGroupsCommand,
+  DescribePitrTimeWindowCommand,
   DescribePlannedEventsCommand,
   DescribeRegionsCommand,
+  DescribeSlowLogsCommand,
+  DescribeTagsByResourceCommand,
   DescribeZonesCommand,
   DisassociateAllowListCommand,
+  EnableShardedClusterCommand,
   ExecutePlannedEventCommand,
   FlushDBInstanceCommand,
   IncreaseDBInstanceNodeNumberCommand,
   InterruptKeyScanJobCommand,
+  ListDBAccountCommand,
   ModifyAllowListCommand,
+  ModifyBackupPlanCommand,
   ModifyBackupPointNameCommand,
   ModifyCrossRegionBackupPolicyCommand,
   ModifyDBAccountCommand,
   ModifyDBInstanceAZConfigureCommand,
+  ModifyDBInstanceAdditionalBandwidthPerShardCommand,
   ModifyDBInstanceChargeTypeCommand,
   ModifyDBInstanceDeletionProtectionPolicyCommand,
+  ModifyDBInstanceMaxConnCommand,
   ModifyDBInstanceNameCommand,
+  ModifyDBInstanceParamsCommand,
   ModifyDBInstancePrivateDNSVisibilityCommand,
+  ModifyDBInstanceShardCapacityCommand,
+  ModifyDBInstanceShardNumberCommand,
   ModifyDBInstanceSubnetCommand,
   ModifyDBInstanceVisitAddressCommand,
   ModifyDBInstanceVpcAuthModeCommand,
@@ -1322,9 +1847,15 @@ export default {
   ModifyEnterpriseDBInstanceParamsCommand,
   ModifyMaintenanceTimeCommand,
   ModifyParameterGroupCommand,
+  ModifyPlannedEventExecuteTimeCommand,
   RemoveTagsFromResourceCommand,
+  RestartDBInstanceCommand,
   RestartDBInstanceProxyCommand,
+  RestoreDBInstanceCommand,
+  StartContinuousBackupCommand,
+  StopContinuousBackupCommand,
   SwitchOverCommand,
+  SwitchoverBlueGreenDeploymentCommand,
   TestFailoverDBInstanceZoneCommand,
   TestShutDownDBInstanceNodesCommand,
   UpgradeAllowListVersionCommand,
