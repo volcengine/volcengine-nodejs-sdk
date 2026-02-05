@@ -79,6 +79,8 @@ export * from './describe-load-balancer-attributes-request';
 export * from './describe-load-balancer-attributes-response';
 export * from './describe-load-balancer-specs-request';
 export * from './describe-load-balancer-specs-response';
+export * from './describe-load-balancer-status-request';
+export * from './describe-load-balancer-status-response';
 export * from './describe-load-balancers-billing-request';
 export * from './describe-load-balancers-billing-response';
 export * from './describe-load-balancers-request';
