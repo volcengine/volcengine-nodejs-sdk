@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ConvertsubtitleForVideoProjectSerialTaskCreateInput } from './convertsubtitle-for-video-project-serial-task-create-input';
 import { PureVideoForVideoProjectSerialTaskCreateInput } from './pure-video-for-video-project-serial-task-create-input';
 import { SubtitleForVideoProjectSerialTaskCreateInput } from './subtitle-for-video-project-serial-task-create-input';
 import { VideoForVideoProjectSerialTaskCreateInput } from './video-for-video-project-serial-task-create-input';
@@ -40,6 +41,12 @@ export interface SerialInfoForVideoProjectSerialTaskCreateInput {
      * @memberof SerialInfoForVideoProjectSerialTaskCreateInput
      */
     subtitle?: SubtitleForVideoProjectSerialTaskCreateInput;
+
+    /**
+     * @type {Array<ConvertsubtitleForVideoProjectSerialTaskCreateInput>}
+     * @memberof SerialInfoForVideoProjectSerialTaskCreateInput
+     */
+    subtitles?: Array<ConvertsubtitleForVideoProjectSerialTaskCreateInput>;
 
     /**
      * @type {VideoForVideoProjectSerialTaskCreateInput}
