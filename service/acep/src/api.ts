@@ -18,46 +18,128 @@ import { AddCustomRouteRequest } from './types/index';
 import { AddCustomRouteResponse } from './types/index';
 import { AddPhoneTemplateRequest } from './types/index';
 import { AddPhoneTemplateResponse } from './types/index';
+import { AutoInstallAppRequest } from './types/index';
+import { AutoInstallAppResponse } from './types/index';
 import { BackupDataRequest } from './types/index';
 import { BackupDataResponse } from './types/index';
 import { BackupPodRequest } from './types/index';
 import { BackupPodResponse } from './types/index';
+import { BindPortMappingRuleRequest } from './types/index';
+import { BindPortMappingRuleResponse } from './types/index';
+import { BuildAOSPImageRequest } from './types/index';
+import { BuildAOSPImageResponse } from './types/index';
 import { CancelBackupPodRequest } from './types/index';
 import { CancelBackupPodResponse } from './types/index';
 import { CancelRestorePodRequest } from './types/index';
 import { CancelRestorePodResponse } from './types/index';
+import { CloseAppRequest } from './types/index';
+import { CloseAppResponse } from './types/index';
+import { CreateDNSRuleRequest } from './types/index';
+import { CreateDNSRuleResponse } from './types/index';
+import { CreateDisplayLayoutMiniRequest } from './types/index';
+import { CreateDisplayLayoutMiniResponse } from './types/index';
+import { CreateImageOneStepRequest } from './types/index';
+import { CreateImageOneStepResponse } from './types/index';
 import { CreatePodOneStepRequest } from './types/index';
 import { CreatePodOneStepResponse } from './types/index';
 import { CreatePodRequest } from './types/index';
 import { CreatePodResponse } from './types/index';
+import { CreatePortMappingRuleRequest } from './types/index';
+import { CreatePortMappingRuleResponse } from './types/index';
+import { CreateTagRequest } from './types/index';
+import { CreateTagResponse } from './types/index';
+import { DeleteAOSPImageRequest } from './types/index';
+import { DeleteAOSPImageResponse } from './types/index';
 import { DeleteBackupDataRequest } from './types/index';
 import { DeleteBackupDataResponse } from './types/index';
 import { DeleteCustomRouteRequest } from './types/index';
 import { DeleteCustomRouteResponse } from './types/index';
+import { DetailAppRequest } from './types/index';
+import { DetailAppResponse } from './types/index';
+import { DetailDNSRuleRequest } from './types/index';
+import { DetailDNSRuleResponse } from './types/index';
+import { DetailDisplayLayoutMiniRequest } from './types/index';
+import { DetailDisplayLayoutMiniResponse } from './types/index';
+import { DetailHostRequest } from './types/index';
+import { DetailHostResponse } from './types/index';
+import { DetailPodRequest } from './types/index';
+import { DetailPodResponse } from './types/index';
+import { DetailPortMappingRuleRequest } from './types/index';
+import { DetailPortMappingRuleResponse } from './types/index';
+import { GetAppCrashLogRequest } from './types/index';
+import { GetAppCrashLogResponse } from './types/index';
 import { GetDcBandwidthDailyPeakRequest } from './types/index';
 import { GetDcBandwidthDailyPeakResponse } from './types/index';
+import { GetImagePreheatingRequest } from './types/index';
+import { GetImagePreheatingResponse } from './types/index';
 import { GetPhoneTemplateRequest } from './types/index';
 import { GetPhoneTemplateResponse } from './types/index';
+import { GetPodAppListRequest } from './types/index';
+import { GetPodAppListResponse } from './types/index';
+import { GetPodMetricRequest } from './types/index';
+import { GetPodMetricResponse } from './types/index';
+import { GetPodPropertyRequest } from './types/index';
+import { GetPodPropertyResponse } from './types/index';
+import { GetProductResourceRequest } from './types/index';
+import { GetProductResourceResponse } from './types/index';
+import { GetTaskInfoRequest } from './types/index';
+import { GetTaskInfoResponse } from './types/index';
+import { InstallAppRequest } from './types/index';
+import { InstallAppResponse } from './types/index';
+import { InstallAppsRequest } from './types/index';
+import { InstallAppsResponse } from './types/index';
+import { LaunchAppRequest } from './types/index';
+import { LaunchAppResponse } from './types/index';
+import { LaunchAppsRequest } from './types/index';
+import { LaunchAppsResponse } from './types/index';
+import { ListAOSPImageRequest } from './types/index';
+import { ListAOSPImageResponse } from './types/index';
 import { ListAppRequest } from './types/index';
 import { ListAppResponse } from './types/index';
 import { ListBackupDataRequest } from './types/index';
 import { ListBackupDataResponse } from './types/index';
+import { ListConfigurationRequest } from './types/index';
+import { ListConfigurationResponse } from './types/index';
 import { ListCustomRouteRequest } from './types/index';
 import { ListCustomRouteResponse } from './types/index';
+import { ListDcRequest } from './types/index';
+import { ListDcResponse } from './types/index';
+import { ListImageResourceRequest } from './types/index';
+import { ListImageResourceResponse } from './types/index';
 import { ListPhoneTemplateRequest } from './types/index';
 import { ListPhoneTemplateResponse } from './types/index';
 import { ListPodRequest } from './types/index';
 import { ListPodResponse } from './types/index';
 import { MigratePodRequest } from './types/index';
 import { MigratePodResponse } from './types/index';
+import { PodDataDeleteRequest } from './types/index';
+import { PodDataDeleteResponse } from './types/index';
+import { PowerOffPodRequest } from './types/index';
+import { PowerOffPodResponse } from './types/index';
+import { PowerOnPodRequest } from './types/index';
+import { PowerOnPodResponse } from './types/index';
+import { PullFileRequest } from './types/index';
+import { PullFileResponse } from './types/index';
+import { PushFileRequest } from './types/index';
+import { PushFileResponse } from './types/index';
+import { RebootHostRequest } from './types/index';
+import { RebootHostResponse } from './types/index';
 import { RemovePhoneTemplateRequest } from './types/index';
 import { RemovePhoneTemplateResponse } from './types/index';
+import { ResetHostRequest } from './types/index';
+import { ResetHostResponse } from './types/index';
 import { ResetPodRequest } from './types/index';
 import { ResetPodResponse } from './types/index';
 import { RestoreDataRequest } from './types/index';
 import { RestoreDataResponse } from './types/index';
 import { RestorePodRequest } from './types/index';
 import { RestorePodResponse } from './types/index';
+import { RunCommandRequest } from './types/index';
+import { RunCommandResponse } from './types/index';
+import { RunSyncCommandRequest } from './types/index';
+import { RunSyncCommandResponse } from './types/index';
+import { SetProxyRequest } from './types/index';
+import { SetProxyResponse } from './types/index';
 import { StartRecordingRequest } from './types/index';
 import { StartRecordingResponse } from './types/index';
 import { StartScreenShotRequest } from './types/index';
@@ -66,46 +148,101 @@ import { StopRecordingRequest } from './types/index';
 import { StopRecordingResponse } from './types/index';
 import { StopScreenShotRequest } from './types/index';
 import { StopScreenShotResponse } from './types/index';
+import { UnbindPortMappingRuleRequest } from './types/index';
+import { UnbindPortMappingRuleResponse } from './types/index';
+import { UninstallAppRequest } from './types/index';
+import { UninstallAppResponse } from './types/index';
+import { UnsubscribeHostResourceRequest } from './types/index';
+import { UnsubscribeHostResourceResponse } from './types/index';
+import { UpdateAOSPImageRequest } from './types/index';
+import { UpdateAOSPImageResponse } from './types/index';
 import { UpdateCustomRouteRequest } from './types/index';
 import { UpdateCustomRouteResponse } from './types/index';
 import { UpdatePhoneTemplateRequest } from './types/index';
 import { UpdatePhoneTemplateResponse } from './types/index';
 import { UpdatePodPropertyRequest } from './types/index';
 import { UpdatePodPropertyResponse } from './types/index';
+import { UploadAppRequest } from './types/index';
+import { UploadAppResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
 export type AddCustomRouteCommandOutput = CommandOutput<AddCustomRouteResponse>;
 export type AddPhoneTemplateCommandOutput = CommandOutput<AddPhoneTemplateResponse>;
+export type AutoInstallAppCommandOutput = CommandOutput<AutoInstallAppResponse>;
 export type BackupDataCommandOutput = CommandOutput<BackupDataResponse>;
 export type BackupPodCommandOutput = CommandOutput<BackupPodResponse>;
+export type BindPortMappingRuleCommandOutput = CommandOutput<BindPortMappingRuleResponse>;
+export type BuildAOSPImageCommandOutput = CommandOutput<BuildAOSPImageResponse>;
 export type CancelBackupPodCommandOutput = CommandOutput<CancelBackupPodResponse>;
 export type CancelRestorePodCommandOutput = CommandOutput<CancelRestorePodResponse>;
+export type CloseAppCommandOutput = CommandOutput<CloseAppResponse>;
+export type CreateDNSRuleCommandOutput = CommandOutput<CreateDNSRuleResponse>;
+export type CreateDisplayLayoutMiniCommandOutput = CommandOutput<CreateDisplayLayoutMiniResponse>;
+export type CreateImageOneStepCommandOutput = CommandOutput<CreateImageOneStepResponse>;
 export type CreatePodCommandOutput = CommandOutput<CreatePodResponse>;
 export type CreatePodOneStepCommandOutput = CommandOutput<CreatePodOneStepResponse>;
+export type CreatePortMappingRuleCommandOutput = CommandOutput<CreatePortMappingRuleResponse>;
+export type CreateTagCommandOutput = CommandOutput<CreateTagResponse>;
+export type DeleteAOSPImageCommandOutput = CommandOutput<DeleteAOSPImageResponse>;
 export type DeleteBackupDataCommandOutput = CommandOutput<DeleteBackupDataResponse>;
 export type DeleteCustomRouteCommandOutput = CommandOutput<DeleteCustomRouteResponse>;
+export type DetailAppCommandOutput = CommandOutput<DetailAppResponse>;
+export type DetailDNSRuleCommandOutput = CommandOutput<DetailDNSRuleResponse>;
+export type DetailDisplayLayoutMiniCommandOutput = CommandOutput<DetailDisplayLayoutMiniResponse>;
+export type DetailHostCommandOutput = CommandOutput<DetailHostResponse>;
+export type DetailPodCommandOutput = CommandOutput<DetailPodResponse>;
+export type DetailPortMappingRuleCommandOutput = CommandOutput<DetailPortMappingRuleResponse>;
+export type GetAppCrashLogCommandOutput = CommandOutput<GetAppCrashLogResponse>;
 export type GetDcBandwidthDailyPeakCommandOutput = CommandOutput<GetDcBandwidthDailyPeakResponse>;
+export type GetImagePreheatingCommandOutput = CommandOutput<GetImagePreheatingResponse>;
 export type GetPhoneTemplateCommandOutput = CommandOutput<GetPhoneTemplateResponse>;
+export type GetPodAppListCommandOutput = CommandOutput<GetPodAppListResponse>;
+export type GetPodMetricCommandOutput = CommandOutput<GetPodMetricResponse>;
+export type GetPodPropertyCommandOutput = CommandOutput<GetPodPropertyResponse>;
+export type GetProductResourceCommandOutput = CommandOutput<GetProductResourceResponse>;
+export type GetTaskInfoCommandOutput = CommandOutput<GetTaskInfoResponse>;
+export type InstallAppCommandOutput = CommandOutput<InstallAppResponse>;
+export type InstallAppsCommandOutput = CommandOutput<InstallAppsResponse>;
+export type LaunchAppCommandOutput = CommandOutput<LaunchAppResponse>;
+export type LaunchAppsCommandOutput = CommandOutput<LaunchAppsResponse>;
+export type ListAOSPImageCommandOutput = CommandOutput<ListAOSPImageResponse>;
 export type ListAppCommandOutput = CommandOutput<ListAppResponse>;
 export type ListBackupDataCommandOutput = CommandOutput<ListBackupDataResponse>;
+export type ListConfigurationCommandOutput = CommandOutput<ListConfigurationResponse>;
 export type ListCustomRouteCommandOutput = CommandOutput<ListCustomRouteResponse>;
+export type ListDcCommandOutput = CommandOutput<ListDcResponse>;
+export type ListImageResourceCommandOutput = CommandOutput<ListImageResourceResponse>;
 export type ListPhoneTemplateCommandOutput = CommandOutput<ListPhoneTemplateResponse>;
 export type ListPodCommandOutput = CommandOutput<ListPodResponse>;
 export type MigratePodCommandOutput = CommandOutput<MigratePodResponse>;
+export type PodDataDeleteCommandOutput = CommandOutput<PodDataDeleteResponse>;
+export type PowerOffPodCommandOutput = CommandOutput<PowerOffPodResponse>;
+export type PowerOnPodCommandOutput = CommandOutput<PowerOnPodResponse>;
+export type PullFileCommandOutput = CommandOutput<PullFileResponse>;
+export type PushFileCommandOutput = CommandOutput<PushFileResponse>;
+export type RebootHostCommandOutput = CommandOutput<RebootHostResponse>;
 export type RemovePhoneTemplateCommandOutput = CommandOutput<RemovePhoneTemplateResponse>;
+export type ResetHostCommandOutput = CommandOutput<ResetHostResponse>;
 export type ResetPodCommandOutput = CommandOutput<ResetPodResponse>;
 export type RestoreDataCommandOutput = CommandOutput<RestoreDataResponse>;
 export type RestorePodCommandOutput = CommandOutput<RestorePodResponse>;
+export type RunCommandCommandOutput = CommandOutput<RunCommandResponse>;
+export type RunSyncCommandCommandOutput = CommandOutput<RunSyncCommandResponse>;
+export type SetProxyCommandOutput = CommandOutput<SetProxyResponse>;
 export type StartRecordingCommandOutput = CommandOutput<StartRecordingResponse>;
 export type StartScreenShotCommandOutput = CommandOutput<StartScreenShotResponse>;
 export type StopRecordingCommandOutput = CommandOutput<StopRecordingResponse>;
 export type StopScreenShotCommandOutput = CommandOutput<StopScreenShotResponse>;
+export type UnbindPortMappingRuleCommandOutput = CommandOutput<UnbindPortMappingRuleResponse>;
+export type UninstallAppCommandOutput = CommandOutput<UninstallAppResponse>;
+export type UnsubscribeHostResourceCommandOutput = CommandOutput<UnsubscribeHostResourceResponse>;
+export type UpdateAOSPImageCommandOutput = CommandOutput<UpdateAOSPImageResponse>;
 export type UpdateCustomRouteCommandOutput = CommandOutput<UpdateCustomRouteResponse>;
 export type UpdatePhoneTemplateCommandOutput = CommandOutput<UpdatePhoneTemplateResponse>;
 export type UpdatePodPropertyCommandOutput = CommandOutput<UpdatePodPropertyResponse>;
-
+export type UploadAppCommandOutput = CommandOutput<UploadAppResponse>;
 
 /**
  * ACEPClient Service Client
@@ -151,6 +288,21 @@ export class AddPhoneTemplateCommand extends Command<
   }
 }
 /**
+ * Command to AutoInstallApp
+ */
+export class AutoInstallAppCommand extends Command<
+  AutoInstallAppRequest,
+  AutoInstallAppCommandOutput,
+  'AutoInstallAppCommand'
+> {
+  static readonly metaPath = '/AutoInstallApp/2025-05-01/acep/post/application_json/';
+
+  constructor(input: AutoInstallAppRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AutoInstallAppCommand.metaPath);
+  }
+}
+/**
  * Command to BackupData
  */
 export class BackupDataCommand extends Command<
@@ -178,6 +330,36 @@ export class BackupPodCommand extends Command<
   constructor(input: BackupPodRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(BackupPodCommand.metaPath);
+  }
+}
+/**
+ * Command to BindPortMappingRule
+ */
+export class BindPortMappingRuleCommand extends Command<
+  BindPortMappingRuleRequest,
+  BindPortMappingRuleCommandOutput,
+  'BindPortMappingRuleCommand'
+> {
+  static readonly metaPath = '/BindPortMappingRule/2025-05-01/acep/post/application_json/';
+
+  constructor(input: BindPortMappingRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BindPortMappingRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to BuildAOSPImage
+ */
+export class BuildAOSPImageCommand extends Command<
+  BuildAOSPImageRequest,
+  BuildAOSPImageCommandOutput,
+  'BuildAOSPImageCommand'
+> {
+  static readonly metaPath = '/BuildAOSPImage/2025-05-01/acep/post/application_json/';
+
+  constructor(input: BuildAOSPImageRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BuildAOSPImageCommand.metaPath);
   }
 }
 /**
@@ -211,6 +393,66 @@ export class CancelRestorePodCommand extends Command<
   }
 }
 /**
+ * Command to CloseApp
+ */
+export class CloseAppCommand extends Command<
+  CloseAppRequest,
+  CloseAppCommandOutput,
+  'CloseAppCommand'
+> {
+  static readonly metaPath = '/CloseApp/2025-05-01/acep/post/application_json/';
+
+  constructor(input: CloseAppRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CloseAppCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateDNSRule
+ */
+export class CreateDNSRuleCommand extends Command<
+  CreateDNSRuleRequest,
+  CreateDNSRuleCommandOutput,
+  'CreateDNSRuleCommand'
+> {
+  static readonly metaPath = '/CreateDNSRule/2025-05-01/acep/post/application_json/';
+
+  constructor(input: CreateDNSRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateDNSRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateDisplayLayoutMini
+ */
+export class CreateDisplayLayoutMiniCommand extends Command<
+  CreateDisplayLayoutMiniRequest,
+  CreateDisplayLayoutMiniCommandOutput,
+  'CreateDisplayLayoutMiniCommand'
+> {
+  static readonly metaPath = '/CreateDisplayLayoutMini/2025-05-01/acep/post/application_json/';
+
+  constructor(input: CreateDisplayLayoutMiniRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateDisplayLayoutMiniCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateImageOneStep
+ */
+export class CreateImageOneStepCommand extends Command<
+  CreateImageOneStepRequest,
+  CreateImageOneStepCommandOutput,
+  'CreateImageOneStepCommand'
+> {
+  static readonly metaPath = '/CreateImageOneStep/2025-05-01/acep/post/application_json/';
+
+  constructor(input: CreateImageOneStepRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateImageOneStepCommand.metaPath);
+  }
+}
+/**
  * Command to CreatePod
  */
 export class CreatePodCommand extends Command<
@@ -238,6 +480,51 @@ export class CreatePodOneStepCommand extends Command<
   constructor(input: CreatePodOneStepRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreatePodOneStepCommand.metaPath);
+  }
+}
+/**
+ * Command to CreatePortMappingRule
+ */
+export class CreatePortMappingRuleCommand extends Command<
+  CreatePortMappingRuleRequest,
+  CreatePortMappingRuleCommandOutput,
+  'CreatePortMappingRuleCommand'
+> {
+  static readonly metaPath = '/CreatePortMappingRule/2025-05-01/acep/post/application_json/';
+
+  constructor(input: CreatePortMappingRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreatePortMappingRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateTag
+ */
+export class CreateTagCommand extends Command<
+  CreateTagRequest,
+  CreateTagCommandOutput,
+  'CreateTagCommand'
+> {
+  static readonly metaPath = '/CreateTag/2025-05-01/acep/post/application_json/';
+
+  constructor(input: CreateTagRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateTagCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteAOSPImage
+ */
+export class DeleteAOSPImageCommand extends Command<
+  DeleteAOSPImageRequest,
+  DeleteAOSPImageCommandOutput,
+  'DeleteAOSPImageCommand'
+> {
+  static readonly metaPath = '/DeleteAOSPImage/2025-05-01/acep/post/application_json/';
+
+  constructor(input: DeleteAOSPImageRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAOSPImageCommand.metaPath);
   }
 }
 /**
@@ -271,6 +558,111 @@ export class DeleteCustomRouteCommand extends Command<
   }
 }
 /**
+ * Command to DetailApp
+ */
+export class DetailAppCommand extends Command<
+  DetailAppRequest,
+  DetailAppCommandOutput,
+  'DetailAppCommand'
+> {
+  static readonly metaPath = '/DetailApp/2025-05-01/acep/post/application_json/';
+
+  constructor(input: DetailAppRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DetailAppCommand.metaPath);
+  }
+}
+/**
+ * Command to DetailDNSRule
+ */
+export class DetailDNSRuleCommand extends Command<
+  DetailDNSRuleRequest,
+  DetailDNSRuleCommandOutput,
+  'DetailDNSRuleCommand'
+> {
+  static readonly metaPath = '/DetailDNSRule/2025-05-01/acep/post/application_json/';
+
+  constructor(input: DetailDNSRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DetailDNSRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to DetailDisplayLayoutMini
+ */
+export class DetailDisplayLayoutMiniCommand extends Command<
+  DetailDisplayLayoutMiniRequest,
+  DetailDisplayLayoutMiniCommandOutput,
+  'DetailDisplayLayoutMiniCommand'
+> {
+  static readonly metaPath = '/DetailDisplayLayoutMini/2025-05-01/acep/post/application_json/';
+
+  constructor(input: DetailDisplayLayoutMiniRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DetailDisplayLayoutMiniCommand.metaPath);
+  }
+}
+/**
+ * Command to DetailHost
+ */
+export class DetailHostCommand extends Command<
+  DetailHostRequest,
+  DetailHostCommandOutput,
+  'DetailHostCommand'
+> {
+  static readonly metaPath = '/DetailHost/2025-05-01/acep/post/application_json/';
+
+  constructor(input: DetailHostRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DetailHostCommand.metaPath);
+  }
+}
+/**
+ * Command to DetailPod
+ */
+export class DetailPodCommand extends Command<
+  DetailPodRequest,
+  DetailPodCommandOutput,
+  'DetailPodCommand'
+> {
+  static readonly metaPath = '/DetailPod/2025-05-01/acep/post/application_json/';
+
+  constructor(input: DetailPodRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DetailPodCommand.metaPath);
+  }
+}
+/**
+ * Command to DetailPortMappingRule
+ */
+export class DetailPortMappingRuleCommand extends Command<
+  DetailPortMappingRuleRequest,
+  DetailPortMappingRuleCommandOutput,
+  'DetailPortMappingRuleCommand'
+> {
+  static readonly metaPath = '/DetailPortMappingRule/2025-05-01/acep/post/application_json/';
+
+  constructor(input: DetailPortMappingRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DetailPortMappingRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAppCrashLog
+ */
+export class GetAppCrashLogCommand extends Command<
+  GetAppCrashLogRequest,
+  GetAppCrashLogCommandOutput,
+  'GetAppCrashLogCommand'
+> {
+  static readonly metaPath = '/GetAppCrashLog/2025-05-01/acep/post/application_json/';
+
+  constructor(input: GetAppCrashLogRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAppCrashLogCommand.metaPath);
+  }
+}
+/**
  * Command to GetDcBandwidthDailyPeak
  */
 export class GetDcBandwidthDailyPeakCommand extends Command<
@@ -286,6 +678,21 @@ export class GetDcBandwidthDailyPeakCommand extends Command<
   }
 }
 /**
+ * Command to GetImagePreheating
+ */
+export class GetImagePreheatingCommand extends Command<
+  GetImagePreheatingRequest,
+  GetImagePreheatingCommandOutput,
+  'GetImagePreheatingCommand'
+> {
+  static readonly metaPath = '/GetImagePreheating/2025-05-01/acep/post/application_json/';
+
+  constructor(input: GetImagePreheatingRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetImagePreheatingCommand.metaPath);
+  }
+}
+/**
  * Command to GetPhoneTemplate
  */
 export class GetPhoneTemplateCommand extends Command<
@@ -298,6 +705,156 @@ export class GetPhoneTemplateCommand extends Command<
   constructor(input: GetPhoneTemplateRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetPhoneTemplateCommand.metaPath);
+  }
+}
+/**
+ * Command to GetPodAppList
+ */
+export class GetPodAppListCommand extends Command<
+  GetPodAppListRequest,
+  GetPodAppListCommandOutput,
+  'GetPodAppListCommand'
+> {
+  static readonly metaPath = '/GetPodAppList/2025-05-01/acep/post/application_json/';
+
+  constructor(input: GetPodAppListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetPodAppListCommand.metaPath);
+  }
+}
+/**
+ * Command to GetPodMetric
+ */
+export class GetPodMetricCommand extends Command<
+  GetPodMetricRequest,
+  GetPodMetricCommandOutput,
+  'GetPodMetricCommand'
+> {
+  static readonly metaPath = '/GetPodMetric/2025-05-01/acep/post/application_json/';
+
+  constructor(input: GetPodMetricRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetPodMetricCommand.metaPath);
+  }
+}
+/**
+ * Command to GetPodProperty
+ */
+export class GetPodPropertyCommand extends Command<
+  GetPodPropertyRequest,
+  GetPodPropertyCommandOutput,
+  'GetPodPropertyCommand'
+> {
+  static readonly metaPath = '/GetPodProperty/2025-05-01/acep/post/application_json/';
+
+  constructor(input: GetPodPropertyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetPodPropertyCommand.metaPath);
+  }
+}
+/**
+ * Command to GetProductResource
+ */
+export class GetProductResourceCommand extends Command<
+  GetProductResourceRequest,
+  GetProductResourceCommandOutput,
+  'GetProductResourceCommand'
+> {
+  static readonly metaPath = '/GetProductResource/2025-05-01/acep/post/application_json/';
+
+  constructor(input: GetProductResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetProductResourceCommand.metaPath);
+  }
+}
+/**
+ * Command to GetTaskInfo
+ */
+export class GetTaskInfoCommand extends Command<
+  GetTaskInfoRequest,
+  GetTaskInfoCommandOutput,
+  'GetTaskInfoCommand'
+> {
+  static readonly metaPath = '/GetTaskInfo/2025-05-01/acep/post/application_json/';
+
+  constructor(input: GetTaskInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetTaskInfoCommand.metaPath);
+  }
+}
+/**
+ * Command to InstallApp
+ */
+export class InstallAppCommand extends Command<
+  InstallAppRequest,
+  InstallAppCommandOutput,
+  'InstallAppCommand'
+> {
+  static readonly metaPath = '/InstallApp/2025-05-01/acep/post/application_json/';
+
+  constructor(input: InstallAppRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(InstallAppCommand.metaPath);
+  }
+}
+/**
+ * Command to InstallApps
+ */
+export class InstallAppsCommand extends Command<
+  InstallAppsRequest,
+  InstallAppsCommandOutput,
+  'InstallAppsCommand'
+> {
+  static readonly metaPath = '/InstallApps/2025-05-01/acep/post/application_json/';
+
+  constructor(input: InstallAppsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(InstallAppsCommand.metaPath);
+  }
+}
+/**
+ * Command to LaunchApp
+ */
+export class LaunchAppCommand extends Command<
+  LaunchAppRequest,
+  LaunchAppCommandOutput,
+  'LaunchAppCommand'
+> {
+  static readonly metaPath = '/LaunchApp/2025-05-01/acep/post/application_json/';
+
+  constructor(input: LaunchAppRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(LaunchAppCommand.metaPath);
+  }
+}
+/**
+ * Command to LaunchApps
+ */
+export class LaunchAppsCommand extends Command<
+  LaunchAppsRequest,
+  LaunchAppsCommandOutput,
+  'LaunchAppsCommand'
+> {
+  static readonly metaPath = '/LaunchApps/2025-05-01/acep/post/application_json/';
+
+  constructor(input: LaunchAppsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(LaunchAppsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAOSPImage
+ */
+export class ListAOSPImageCommand extends Command<
+  ListAOSPImageRequest,
+  ListAOSPImageCommandOutput,
+  'ListAOSPImageCommand'
+> {
+  static readonly metaPath = '/ListAOSPImage/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListAOSPImageRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAOSPImageCommand.metaPath);
   }
 }
 /**
@@ -331,6 +888,21 @@ export class ListBackupDataCommand extends Command<
   }
 }
 /**
+ * Command to ListConfiguration
+ */
+export class ListConfigurationCommand extends Command<
+  ListConfigurationRequest,
+  ListConfigurationCommandOutput,
+  'ListConfigurationCommand'
+> {
+  static readonly metaPath = '/ListConfiguration/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListConfigurationRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListConfigurationCommand.metaPath);
+  }
+}
+/**
  * Command to ListCustomRoute
  */
 export class ListCustomRouteCommand extends Command<
@@ -343,6 +915,36 @@ export class ListCustomRouteCommand extends Command<
   constructor(input: ListCustomRouteRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListCustomRouteCommand.metaPath);
+  }
+}
+/**
+ * Command to ListDc
+ */
+export class ListDcCommand extends Command<
+  ListDcRequest,
+  ListDcCommandOutput,
+  'ListDcCommand'
+> {
+  static readonly metaPath = '/ListDc/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListDcRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDcCommand.metaPath);
+  }
+}
+/**
+ * Command to ListImageResource
+ */
+export class ListImageResourceCommand extends Command<
+  ListImageResourceRequest,
+  ListImageResourceCommandOutput,
+  'ListImageResourceCommand'
+> {
+  static readonly metaPath = '/ListImageResource/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListImageResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListImageResourceCommand.metaPath);
   }
 }
 /**
@@ -391,6 +993,96 @@ export class MigratePodCommand extends Command<
   }
 }
 /**
+ * Command to PodDataDelete
+ */
+export class PodDataDeleteCommand extends Command<
+  PodDataDeleteRequest,
+  PodDataDeleteCommandOutput,
+  'PodDataDeleteCommand'
+> {
+  static readonly metaPath = '/PodDataDelete/2025-05-01/acep/post/application_json/';
+
+  constructor(input: PodDataDeleteRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(PodDataDeleteCommand.metaPath);
+  }
+}
+/**
+ * Command to PowerOffPod
+ */
+export class PowerOffPodCommand extends Command<
+  PowerOffPodRequest,
+  PowerOffPodCommandOutput,
+  'PowerOffPodCommand'
+> {
+  static readonly metaPath = '/PowerOffPod/2025-05-01/acep/post/application_json/';
+
+  constructor(input: PowerOffPodRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(PowerOffPodCommand.metaPath);
+  }
+}
+/**
+ * Command to PowerOnPod
+ */
+export class PowerOnPodCommand extends Command<
+  PowerOnPodRequest,
+  PowerOnPodCommandOutput,
+  'PowerOnPodCommand'
+> {
+  static readonly metaPath = '/PowerOnPod/2025-05-01/acep/post/application_json/';
+
+  constructor(input: PowerOnPodRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(PowerOnPodCommand.metaPath);
+  }
+}
+/**
+ * Command to PullFile
+ */
+export class PullFileCommand extends Command<
+  PullFileRequest,
+  PullFileCommandOutput,
+  'PullFileCommand'
+> {
+  static readonly metaPath = '/PullFile/2025-05-01/acep/post/application_json/';
+
+  constructor(input: PullFileRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(PullFileCommand.metaPath);
+  }
+}
+/**
+ * Command to PushFile
+ */
+export class PushFileCommand extends Command<
+  PushFileRequest,
+  PushFileCommandOutput,
+  'PushFileCommand'
+> {
+  static readonly metaPath = '/PushFile/2025-05-01/acep/post/application_json/';
+
+  constructor(input: PushFileRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(PushFileCommand.metaPath);
+  }
+}
+/**
+ * Command to RebootHost
+ */
+export class RebootHostCommand extends Command<
+  RebootHostRequest,
+  RebootHostCommandOutput,
+  'RebootHostCommand'
+> {
+  static readonly metaPath = '/RebootHost/2025-05-01/acep/post/application_json/';
+
+  constructor(input: RebootHostRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RebootHostCommand.metaPath);
+  }
+}
+/**
  * Command to RemovePhoneTemplate
  */
 export class RemovePhoneTemplateCommand extends Command<
@@ -403,6 +1095,21 @@ export class RemovePhoneTemplateCommand extends Command<
   constructor(input: RemovePhoneTemplateRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(RemovePhoneTemplateCommand.metaPath);
+  }
+}
+/**
+ * Command to ResetHost
+ */
+export class ResetHostCommand extends Command<
+  ResetHostRequest,
+  ResetHostCommandOutput,
+  'ResetHostCommand'
+> {
+  static readonly metaPath = '/ResetHost/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ResetHostRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ResetHostCommand.metaPath);
   }
 }
 /**
@@ -448,6 +1155,51 @@ export class RestorePodCommand extends Command<
   constructor(input: RestorePodRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(RestorePodCommand.metaPath);
+  }
+}
+/**
+ * Command to RunCommand
+ */
+export class RunCommandCommand extends Command<
+  RunCommandRequest,
+  RunCommandCommandOutput,
+  'RunCommandCommand'
+> {
+  static readonly metaPath = '/RunCommand/2025-05-01/acep/post/application_json/';
+
+  constructor(input: RunCommandRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RunCommandCommand.metaPath);
+  }
+}
+/**
+ * Command to RunSyncCommand
+ */
+export class RunSyncCommandCommand extends Command<
+  RunSyncCommandRequest,
+  RunSyncCommandCommandOutput,
+  'RunSyncCommandCommand'
+> {
+  static readonly metaPath = '/RunSyncCommand/2025-05-01/acep/post/application_json/';
+
+  constructor(input: RunSyncCommandRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RunSyncCommandCommand.metaPath);
+  }
+}
+/**
+ * Command to SetProxy
+ */
+export class SetProxyCommand extends Command<
+  SetProxyRequest,
+  SetProxyCommandOutput,
+  'SetProxyCommand'
+> {
+  static readonly metaPath = '/SetProxy/2025-05-01/acep/post/application_json/';
+
+  constructor(input: SetProxyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(SetProxyCommand.metaPath);
   }
 }
 /**
@@ -511,6 +1263,66 @@ export class StopScreenShotCommand extends Command<
   }
 }
 /**
+ * Command to UnbindPortMappingRule
+ */
+export class UnbindPortMappingRuleCommand extends Command<
+  UnbindPortMappingRuleRequest,
+  UnbindPortMappingRuleCommandOutput,
+  'UnbindPortMappingRuleCommand'
+> {
+  static readonly metaPath = '/UnbindPortMappingRule/2025-05-01/acep/post/application_json/';
+
+  constructor(input: UnbindPortMappingRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UnbindPortMappingRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to UninstallApp
+ */
+export class UninstallAppCommand extends Command<
+  UninstallAppRequest,
+  UninstallAppCommandOutput,
+  'UninstallAppCommand'
+> {
+  static readonly metaPath = '/UninstallApp/2025-05-01/acep/post/application_json/';
+
+  constructor(input: UninstallAppRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UninstallAppCommand.metaPath);
+  }
+}
+/**
+ * Command to UnsubscribeHostResource
+ */
+export class UnsubscribeHostResourceCommand extends Command<
+  UnsubscribeHostResourceRequest,
+  UnsubscribeHostResourceCommandOutput,
+  'UnsubscribeHostResourceCommand'
+> {
+  static readonly metaPath = '/UnsubscribeHostResource/2025-05-01/acep/post/application_json/';
+
+  constructor(input: UnsubscribeHostResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UnsubscribeHostResourceCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateAOSPImage
+ */
+export class UpdateAOSPImageCommand extends Command<
+  UpdateAOSPImageRequest,
+  UpdateAOSPImageCommandOutput,
+  'UpdateAOSPImageCommand'
+> {
+  static readonly metaPath = '/UpdateAOSPImage/2025-05-01/acep/post/application_json/';
+
+  constructor(input: UpdateAOSPImageRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAOSPImageCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateCustomRoute
  */
 export class UpdateCustomRouteCommand extends Command<
@@ -555,36 +1367,97 @@ export class UpdatePodPropertyCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(UpdatePodPropertyCommand.metaPath);
   }
 }
+/**
+ * Command to UploadApp
+ */
+export class UploadAppCommand extends Command<
+  UploadAppRequest,
+  UploadAppCommandOutput,
+  'UploadAppCommand'
+> {
+  static readonly metaPath = '/UploadApp/2025-05-01/acep/post/application_json/';
+
+  constructor(input: UploadAppRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UploadAppCommand.metaPath);
+  }
+}
 
 export default {
   ACEPClient,
   AddCustomRouteCommand,
   AddPhoneTemplateCommand,
+  AutoInstallAppCommand,
   BackupDataCommand,
   BackupPodCommand,
+  BindPortMappingRuleCommand,
+  BuildAOSPImageCommand,
   CancelBackupPodCommand,
   CancelRestorePodCommand,
+  CloseAppCommand,
+  CreateDNSRuleCommand,
+  CreateDisplayLayoutMiniCommand,
+  CreateImageOneStepCommand,
   CreatePodCommand,
   CreatePodOneStepCommand,
+  CreatePortMappingRuleCommand,
+  CreateTagCommand,
+  DeleteAOSPImageCommand,
   DeleteBackupDataCommand,
   DeleteCustomRouteCommand,
+  DetailAppCommand,
+  DetailDNSRuleCommand,
+  DetailDisplayLayoutMiniCommand,
+  DetailHostCommand,
+  DetailPodCommand,
+  DetailPortMappingRuleCommand,
+  GetAppCrashLogCommand,
   GetDcBandwidthDailyPeakCommand,
+  GetImagePreheatingCommand,
   GetPhoneTemplateCommand,
+  GetPodAppListCommand,
+  GetPodMetricCommand,
+  GetPodPropertyCommand,
+  GetProductResourceCommand,
+  GetTaskInfoCommand,
+  InstallAppCommand,
+  InstallAppsCommand,
+  LaunchAppCommand,
+  LaunchAppsCommand,
+  ListAOSPImageCommand,
   ListAppCommand,
   ListBackupDataCommand,
+  ListConfigurationCommand,
   ListCustomRouteCommand,
+  ListDcCommand,
+  ListImageResourceCommand,
   ListPhoneTemplateCommand,
   ListPodCommand,
   MigratePodCommand,
+  PodDataDeleteCommand,
+  PowerOffPodCommand,
+  PowerOnPodCommand,
+  PullFileCommand,
+  PushFileCommand,
+  RebootHostCommand,
   RemovePhoneTemplateCommand,
+  ResetHostCommand,
   ResetPodCommand,
   RestoreDataCommand,
   RestorePodCommand,
+  RunCommandCommand,
+  RunSyncCommandCommand,
+  SetProxyCommand,
   StartRecordingCommand,
   StartScreenShotCommand,
   StopRecordingCommand,
   StopScreenShotCommand,
+  UnbindPortMappingRuleCommand,
+  UninstallAppCommand,
+  UnsubscribeHostResourceCommand,
+  UpdateAOSPImageCommand,
   UpdateCustomRouteCommand,
   UpdatePhoneTemplateCommand,
   UpdatePodPropertyCommand,
+  UploadAppCommand,
 };

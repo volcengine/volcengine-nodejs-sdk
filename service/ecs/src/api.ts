@@ -16,6 +16,8 @@ import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandO
 
 import { AllocateDedicatedHostsRequest } from './types/index';
 import { AllocateDedicatedHostsResponse } from './types/index';
+import { AllocateInstancesRequest } from './types/index';
+import { AllocateInstancesResponse } from './types/index';
 import { AssociateInstancesIamRoleRequest } from './types/index';
 import { AssociateInstancesIamRoleResponse } from './types/index';
 import { AttachKeyPairRequest } from './types/index';
@@ -26,6 +28,8 @@ import { CreateCommandRequest } from './types/index';
 import { CreateCommandResponse } from './types/index';
 import { CreateDedicatedHostClusterRequest } from './types/index';
 import { CreateDedicatedHostClusterResponse } from './types/index';
+import { CreateDeploymentSetRequest } from './types/index';
+import { CreateDeploymentSetResponse } from './types/index';
 import { CreateHpcClusterRequest } from './types/index';
 import { CreateHpcClusterResponse } from './types/index';
 import { CreateImageRequest } from './types/index';
@@ -42,6 +46,8 @@ import { CreateSubscriptionRequest } from './types/index';
 import { CreateSubscriptionResponse } from './types/index';
 import { CreateTagsRequest } from './types/index';
 import { CreateTagsResponse } from './types/index';
+import { DeleteCommandRequest } from './types/index';
+import { DeleteCommandResponse } from './types/index';
 import { DeleteDedicatedHostClusterRequest } from './types/index';
 import { DeleteDedicatedHostClusterResponse } from './types/index';
 import { DeleteDeploymentSetRequest } from './types/index';
@@ -50,8 +56,12 @@ import { DeleteHpcClusterRequest } from './types/index';
 import { DeleteHpcClusterResponse } from './types/index';
 import { DeleteImagesRequest } from './types/index';
 import { DeleteImagesResponse } from './types/index';
+import { DeleteInstanceRequest } from './types/index';
+import { DeleteInstanceResponse } from './types/index';
 import { DeleteInstancesRequest } from './types/index';
 import { DeleteInstancesResponse } from './types/index';
+import { DeleteInvocationRequest } from './types/index';
+import { DeleteInvocationResponse } from './types/index';
 import { DeleteKeyPairsRequest } from './types/index';
 import { DeleteKeyPairsResponse } from './types/index';
 import { DeleteLaunchTemplateRequest } from './types/index';
@@ -64,8 +74,12 @@ import { DeleteTagsRequest } from './types/index';
 import { DeleteTagsResponse } from './types/index';
 import { DescribeAutoInstallPackagesRequest } from './types/index';
 import { DescribeAutoInstallPackagesResponse } from './types/index';
+import { DescribeAvailableResourceRequest } from './types/index';
+import { DescribeAvailableResourceResponse } from './types/index';
 import { DescribeCloudAssistantStatusRequest } from './types/index';
 import { DescribeCloudAssistantStatusResponse } from './types/index';
+import { DescribeCommandsRequest } from './types/index';
+import { DescribeCommandsResponse } from './types/index';
 import { DescribeDedicatedHostClustersRequest } from './types/index';
 import { DescribeDedicatedHostClustersResponse } from './types/index';
 import { DescribeDedicatedHostTypesRequest } from './types/index';
@@ -74,6 +88,8 @@ import { DescribeDedicatedHostsRequest } from './types/index';
 import { DescribeDedicatedHostsResponse } from './types/index';
 import { DescribeDeploymentSetSupportedInstanceTypeFamilyRequest } from './types/index';
 import { DescribeDeploymentSetSupportedInstanceTypeFamilyResponse } from './types/index';
+import { DescribeDeploymentSetsRequest } from './types/index';
+import { DescribeDeploymentSetsResponse } from './types/index';
 import { DescribeEventTypesRequest } from './types/index';
 import { DescribeEventTypesResponse } from './types/index';
 import { DescribeHpcClustersRequest } from './types/index';
@@ -82,6 +98,10 @@ import { DescribeHpcInstancePositionRequest } from './types/index';
 import { DescribeHpcInstancePositionResponse } from './types/index';
 import { DescribeImageSharePermissionRequest } from './types/index';
 import { DescribeImageSharePermissionResponse } from './types/index';
+import { DescribeImagesRequest } from './types/index';
+import { DescribeImagesResponse } from './types/index';
+import { DescribeInstanceECSTerminalUrlRequest } from './types/index';
+import { DescribeInstanceECSTerminalUrlResponse } from './types/index';
 import { DescribeInstanceTypeFamiliesRequest } from './types/index';
 import { DescribeInstanceTypeFamiliesResponse } from './types/index';
 import { DescribeInstanceTypesRequest } from './types/index';
@@ -90,6 +110,8 @@ import { DescribeInstanceVncUrlRequest } from './types/index';
 import { DescribeInstanceVncUrlResponse } from './types/index';
 import { DescribeInstancesIamRolesRequest } from './types/index';
 import { DescribeInstancesIamRolesResponse } from './types/index';
+import { DescribeInstancesRequest } from './types/index';
+import { DescribeInstancesResponse } from './types/index';
 import { DescribeInvocationInstancesRequest } from './types/index';
 import { DescribeInvocationInstancesResponse } from './types/index';
 import { DescribeInvocationResultsRequest } from './types/index';
@@ -124,6 +146,8 @@ import { DescribeTagsRequest } from './types/index';
 import { DescribeTagsResponse } from './types/index';
 import { DescribeTasksRequest } from './types/index';
 import { DescribeTasksResponse } from './types/index';
+import { DescribeUserDataRequest } from './types/index';
+import { DescribeUserDataResponse } from './types/index';
 import { DescribeZonesRequest } from './types/index';
 import { DescribeZonesResponse } from './types/index';
 import { DetachKeyPairRequest } from './types/index';
@@ -150,6 +174,8 @@ import { InvokeCommandRequest } from './types/index';
 import { InvokeCommandResponse } from './types/index';
 import { ListTagsForResourcesRequest } from './types/index';
 import { ListTagsForResourcesResponse } from './types/index';
+import { ModifyCommandRequest } from './types/index';
+import { ModifyCommandResponse } from './types/index';
 import { ModifyDedicatedHostAttributeRequest } from './types/index';
 import { ModifyDedicatedHostAttributeResponse } from './types/index';
 import { ModifyDedicatedHostClusterAttributeRequest } from './types/index';
@@ -162,12 +188,16 @@ import { ModifyImageSharePermissionRequest } from './types/index';
 import { ModifyImageSharePermissionResponse } from './types/index';
 import { ModifyInstanceAttributeRequest } from './types/index';
 import { ModifyInstanceAttributeResponse } from './types/index';
+import { ModifyInstanceChargeTypeRequest } from './types/index';
+import { ModifyInstanceChargeTypeResponse } from './types/index';
 import { ModifyInstanceDeploymentRequest } from './types/index';
 import { ModifyInstanceDeploymentResponse } from './types/index';
 import { ModifyInstanceMetadataOptionsRequest } from './types/index';
 import { ModifyInstanceMetadataOptionsResponse } from './types/index';
 import { ModifyInstancePlacementRequest } from './types/index';
 import { ModifyInstancePlacementResponse } from './types/index';
+import { ModifyInstanceSpecRequest } from './types/index';
+import { ModifyInstanceSpecResponse } from './types/index';
 import { ModifyInstanceVpcAttributeRequest } from './types/index';
 import { ModifyInstanceVpcAttributeResponse } from './types/index';
 import { ModifyInstancesSpecRequest } from './types/index';
@@ -184,12 +214,16 @@ import { ModifyTemplateDefaultVersionRequest } from './types/index';
 import { ModifyTemplateDefaultVersionResponse } from './types/index';
 import { PurchaseReservedInstancesRequest } from './types/index';
 import { PurchaseReservedInstancesResponse } from './types/index';
+import { RebootInstanceRequest } from './types/index';
+import { RebootInstanceResponse } from './types/index';
 import { RebootInstancesRequest } from './types/index';
 import { RebootInstancesResponse } from './types/index';
 import { RedeployDedicatedHostRequest } from './types/index';
 import { RedeployDedicatedHostResponse } from './types/index';
 import { RenewDedicatedHostRequest } from './types/index';
 import { RenewDedicatedHostResponse } from './types/index';
+import { RenewInstanceRequest } from './types/index';
+import { RenewInstanceResponse } from './types/index';
 import { RenewScheduledInstanceRequest } from './types/index';
 import { RenewScheduledInstanceResponse } from './types/index';
 import { RepairImageRequest } from './types/index';
@@ -198,10 +232,16 @@ import { ReplaceSystemVolumeRequest } from './types/index';
 import { ReplaceSystemVolumeResponse } from './types/index';
 import { ReportInstancesStatusRequest } from './types/index';
 import { ReportInstancesStatusResponse } from './types/index';
+import { RunCommandRequest } from './types/index';
+import { RunCommandResponse } from './types/index';
 import { RunInstancesRequest } from './types/index';
 import { RunInstancesResponse } from './types/index';
+import { StartInstanceRequest } from './types/index';
+import { StartInstanceResponse } from './types/index';
 import { StartInstancesRequest } from './types/index';
 import { StartInstancesResponse } from './types/index';
+import { StopInstanceRequest } from './types/index';
+import { StopInstanceResponse } from './types/index';
 import { StopInstancesRequest } from './types/index';
 import { StopInstancesResponse } from './types/index';
 import { StopInvocationRequest } from './types/index';
@@ -214,16 +254,20 @@ import { UntagResourcesRequest } from './types/index';
 import { UntagResourcesResponse } from './types/index';
 import { UpdateSystemEventsRequest } from './types/index';
 import { UpdateSystemEventsResponse } from './types/index';
+import { UpgradeCloudAssistantsRequest } from './types/index';
+import { UpgradeCloudAssistantsResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
 export type AllocateDedicatedHostsCommandOutput = CommandOutput<AllocateDedicatedHostsResponse>;
+export type AllocateInstancesCommandOutput = CommandOutput<AllocateInstancesResponse>;
 export type AssociateInstancesIamRoleCommandOutput = CommandOutput<AssociateInstancesIamRoleResponse>;
 export type AttachKeyPairCommandOutput = CommandOutput<AttachKeyPairResponse>;
 export type CopyImageCommandOutput = CommandOutput<CopyImageResponse>;
 export type CreateCommandCommandOutput = CommandOutput<CreateCommandResponse>;
 export type CreateDedicatedHostClusterCommandOutput = CommandOutput<CreateDedicatedHostClusterResponse>;
+export type CreateDeploymentSetCommandOutput = CommandOutput<CreateDeploymentSetResponse>;
 export type CreateHpcClusterCommandOutput = CommandOutput<CreateHpcClusterResponse>;
 export type CreateImageCommandOutput = CommandOutput<CreateImageResponse>;
 export type CreateKeyPairCommandOutput = CommandOutput<CreateKeyPairResponse>;
@@ -232,29 +276,38 @@ export type CreateLaunchTemplateVersionCommandOutput = CommandOutput<CreateLaunc
 export type CreateScheduledInstancesCommandOutput = CommandOutput<CreateScheduledInstancesResponse>;
 export type CreateSubscriptionCommandOutput = CommandOutput<CreateSubscriptionResponse>;
 export type CreateTagsCommandOutput = CommandOutput<CreateTagsResponse>;
+export type DeleteCommandCommandOutput = CommandOutput<DeleteCommandResponse>;
 export type DeleteDedicatedHostClusterCommandOutput = CommandOutput<DeleteDedicatedHostClusterResponse>;
 export type DeleteDeploymentSetCommandOutput = CommandOutput<DeleteDeploymentSetResponse>;
 export type DeleteHpcClusterCommandOutput = CommandOutput<DeleteHpcClusterResponse>;
 export type DeleteImagesCommandOutput = CommandOutput<DeleteImagesResponse>;
+export type DeleteInstanceCommandOutput = CommandOutput<DeleteInstanceResponse>;
 export type DeleteInstancesCommandOutput = CommandOutput<DeleteInstancesResponse>;
+export type DeleteInvocationCommandOutput = CommandOutput<DeleteInvocationResponse>;
 export type DeleteKeyPairsCommandOutput = CommandOutput<DeleteKeyPairsResponse>;
 export type DeleteLaunchTemplateCommandOutput = CommandOutput<DeleteLaunchTemplateResponse>;
 export type DeleteLaunchTemplateVersionCommandOutput = CommandOutput<DeleteLaunchTemplateVersionResponse>;
 export type DeleteScheduledInstanceCommandOutput = CommandOutput<DeleteScheduledInstanceResponse>;
 export type DeleteTagsCommandOutput = CommandOutput<DeleteTagsResponse>;
 export type DescribeAutoInstallPackagesCommandOutput = CommandOutput<DescribeAutoInstallPackagesResponse>;
+export type DescribeAvailableResourceCommandOutput = CommandOutput<DescribeAvailableResourceResponse>;
 export type DescribeCloudAssistantStatusCommandOutput = CommandOutput<DescribeCloudAssistantStatusResponse>;
+export type DescribeCommandsCommandOutput = CommandOutput<DescribeCommandsResponse>;
 export type DescribeDedicatedHostClustersCommandOutput = CommandOutput<DescribeDedicatedHostClustersResponse>;
 export type DescribeDedicatedHostTypesCommandOutput = CommandOutput<DescribeDedicatedHostTypesResponse>;
 export type DescribeDedicatedHostsCommandOutput = CommandOutput<DescribeDedicatedHostsResponse>;
 export type DescribeDeploymentSetSupportedInstanceTypeFamilyCommandOutput = CommandOutput<DescribeDeploymentSetSupportedInstanceTypeFamilyResponse>;
+export type DescribeDeploymentSetsCommandOutput = CommandOutput<DescribeDeploymentSetsResponse>;
 export type DescribeEventTypesCommandOutput = CommandOutput<DescribeEventTypesResponse>;
 export type DescribeHpcClustersCommandOutput = CommandOutput<DescribeHpcClustersResponse>;
 export type DescribeHpcInstancePositionCommandOutput = CommandOutput<DescribeHpcInstancePositionResponse>;
 export type DescribeImageSharePermissionCommandOutput = CommandOutput<DescribeImageSharePermissionResponse>;
+export type DescribeImagesCommandOutput = CommandOutput<DescribeImagesResponse>;
+export type DescribeInstanceECSTerminalUrlCommandOutput = CommandOutput<DescribeInstanceECSTerminalUrlResponse>;
 export type DescribeInstanceTypeFamiliesCommandOutput = CommandOutput<DescribeInstanceTypeFamiliesResponse>;
 export type DescribeInstanceTypesCommandOutput = CommandOutput<DescribeInstanceTypesResponse>;
 export type DescribeInstanceVncUrlCommandOutput = CommandOutput<DescribeInstanceVncUrlResponse>;
+export type DescribeInstancesCommandOutput = CommandOutput<DescribeInstancesResponse>;
 export type DescribeInstancesIamRolesCommandOutput = CommandOutput<DescribeInstancesIamRolesResponse>;
 export type DescribeInvocationInstancesCommandOutput = CommandOutput<DescribeInvocationInstancesResponse>;
 export type DescribeInvocationResultsCommandOutput = CommandOutput<DescribeInvocationResultsResponse>;
@@ -273,6 +326,7 @@ export type DescribeSystemEventDefaultActionCommandOutput = CommandOutput<Descri
 export type DescribeSystemEventsCommandOutput = CommandOutput<DescribeSystemEventsResponse>;
 export type DescribeTagsCommandOutput = CommandOutput<DescribeTagsResponse>;
 export type DescribeTasksCommandOutput = CommandOutput<DescribeTasksResponse>;
+export type DescribeUserDataCommandOutput = CommandOutput<DescribeUserDataResponse>;
 export type DescribeZonesCommandOutput = CommandOutput<DescribeZonesResponse>;
 export type DetachKeyPairCommandOutput = CommandOutput<DetachKeyPairResponse>;
 export type DetectImageCommandOutput = CommandOutput<DetectImageResponse>;
@@ -286,15 +340,18 @@ export type ImportKeyPairCommandOutput = CommandOutput<ImportKeyPairResponse>;
 export type InstallCloudAssistantCommandOutput = CommandOutput<InstallCloudAssistantResponse>;
 export type InvokeCommandCommandOutput = CommandOutput<InvokeCommandResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
+export type ModifyCommandCommandOutput = CommandOutput<ModifyCommandResponse>;
 export type ModifyDedicatedHostAttributeCommandOutput = CommandOutput<ModifyDedicatedHostAttributeResponse>;
 export type ModifyDedicatedHostClusterAttributeCommandOutput = CommandOutput<ModifyDedicatedHostClusterAttributeResponse>;
 export type ModifyDeploymentSetAttributeCommandOutput = CommandOutput<ModifyDeploymentSetAttributeResponse>;
 export type ModifyImageAttributeCommandOutput = CommandOutput<ModifyImageAttributeResponse>;
 export type ModifyImageSharePermissionCommandOutput = CommandOutput<ModifyImageSharePermissionResponse>;
 export type ModifyInstanceAttributeCommandOutput = CommandOutput<ModifyInstanceAttributeResponse>;
+export type ModifyInstanceChargeTypeCommandOutput = CommandOutput<ModifyInstanceChargeTypeResponse>;
 export type ModifyInstanceDeploymentCommandOutput = CommandOutput<ModifyInstanceDeploymentResponse>;
 export type ModifyInstanceMetadataOptionsCommandOutput = CommandOutput<ModifyInstanceMetadataOptionsResponse>;
 export type ModifyInstancePlacementCommandOutput = CommandOutput<ModifyInstancePlacementResponse>;
+export type ModifyInstanceSpecCommandOutput = CommandOutput<ModifyInstanceSpecResponse>;
 export type ModifyInstanceVpcAttributeCommandOutput = CommandOutput<ModifyInstanceVpcAttributeResponse>;
 export type ModifyInstancesSpecCommandOutput = CommandOutput<ModifyInstancesSpecResponse>;
 export type ModifyKeyPairAttributeCommandOutput = CommandOutput<ModifyKeyPairAttributeResponse>;
@@ -303,22 +360,27 @@ export type ModifySubscriptionEventTypesCommandOutput = CommandOutput<ModifySubs
 export type ModifySystemEventDefaultActionCommandOutput = CommandOutput<ModifySystemEventDefaultActionResponse>;
 export type ModifyTemplateDefaultVersionCommandOutput = CommandOutput<ModifyTemplateDefaultVersionResponse>;
 export type PurchaseReservedInstancesCommandOutput = CommandOutput<PurchaseReservedInstancesResponse>;
+export type RebootInstanceCommandOutput = CommandOutput<RebootInstanceResponse>;
 export type RebootInstancesCommandOutput = CommandOutput<RebootInstancesResponse>;
 export type RedeployDedicatedHostCommandOutput = CommandOutput<RedeployDedicatedHostResponse>;
 export type RenewDedicatedHostCommandOutput = CommandOutput<RenewDedicatedHostResponse>;
+export type RenewInstanceCommandOutput = CommandOutput<RenewInstanceResponse>;
 export type RenewScheduledInstanceCommandOutput = CommandOutput<RenewScheduledInstanceResponse>;
 export type RepairImageCommandOutput = CommandOutput<RepairImageResponse>;
 export type ReplaceSystemVolumeCommandOutput = CommandOutput<ReplaceSystemVolumeResponse>;
 export type ReportInstancesStatusCommandOutput = CommandOutput<ReportInstancesStatusResponse>;
+export type RunCommandCommandOutput = CommandOutput<RunCommandResponse>;
 export type RunInstancesCommandOutput = CommandOutput<RunInstancesResponse>;
+export type StartInstanceCommandOutput = CommandOutput<StartInstanceResponse>;
 export type StartInstancesCommandOutput = CommandOutput<StartInstancesResponse>;
+export type StopInstanceCommandOutput = CommandOutput<StopInstanceResponse>;
 export type StopInstancesCommandOutput = CommandOutput<StopInstancesResponse>;
 export type StopInvocationCommandOutput = CommandOutput<StopInvocationResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UninstallCloudAssistantsCommandOutput = CommandOutput<UninstallCloudAssistantsResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateSystemEventsCommandOutput = CommandOutput<UpdateSystemEventsResponse>;
-
+export type UpgradeCloudAssistantsCommandOutput = CommandOutput<UpgradeCloudAssistantsResponse>;
 
 /**
  * ECSClient Service Client
@@ -346,6 +408,21 @@ export class AllocateDedicatedHostsCommand extends Command<
   constructor(input: AllocateDedicatedHostsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(AllocateDedicatedHostsCommand.metaPath);
+  }
+}
+/**
+ * Command to AllocateInstances
+ */
+export class AllocateInstancesCommand extends Command<
+  AllocateInstancesRequest,
+  AllocateInstancesCommandOutput,
+  'AllocateInstancesCommand'
+> {
+  static readonly metaPath = '/AllocateInstances/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: AllocateInstancesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AllocateInstancesCommand.metaPath);
   }
 }
 /**
@@ -421,6 +498,21 @@ export class CreateDedicatedHostClusterCommand extends Command<
   constructor(input: CreateDedicatedHostClusterRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateDedicatedHostClusterCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateDeploymentSet
+ */
+export class CreateDeploymentSetCommand extends Command<
+  CreateDeploymentSetRequest,
+  CreateDeploymentSetCommandOutput,
+  'CreateDeploymentSetCommand'
+> {
+  static readonly metaPath = '/CreateDeploymentSet/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: CreateDeploymentSetRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateDeploymentSetCommand.metaPath);
   }
 }
 /**
@@ -544,6 +636,21 @@ export class CreateTagsCommand extends Command<
   }
 }
 /**
+ * Command to DeleteCommand
+ */
+export class DeleteCommandCommand extends Command<
+  DeleteCommandRequest,
+  DeleteCommandCommandOutput,
+  'DeleteCommandCommand'
+> {
+  static readonly metaPath = '/DeleteCommand/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: DeleteCommandRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteCommandCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteDedicatedHostCluster
  */
 export class DeleteDedicatedHostClusterCommand extends Command<
@@ -604,6 +711,21 @@ export class DeleteImagesCommand extends Command<
   }
 }
 /**
+ * Command to DeleteInstance
+ */
+export class DeleteInstanceCommand extends Command<
+  DeleteInstanceRequest,
+  DeleteInstanceCommandOutput,
+  'DeleteInstanceCommand'
+> {
+  static readonly metaPath = '/DeleteInstance/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: DeleteInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteInstanceCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteInstances
  */
 export class DeleteInstancesCommand extends Command<
@@ -616,6 +738,21 @@ export class DeleteInstancesCommand extends Command<
   constructor(input: DeleteInstancesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteInstancesCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteInvocation
+ */
+export class DeleteInvocationCommand extends Command<
+  DeleteInvocationRequest,
+  DeleteInvocationCommandOutput,
+  'DeleteInvocationCommand'
+> {
+  static readonly metaPath = '/DeleteInvocation/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: DeleteInvocationRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteInvocationCommand.metaPath);
   }
 }
 /**
@@ -709,6 +846,21 @@ export class DescribeAutoInstallPackagesCommand extends Command<
   }
 }
 /**
+ * Command to DescribeAvailableResource
+ */
+export class DescribeAvailableResourceCommand extends Command<
+  DescribeAvailableResourceRequest,
+  DescribeAvailableResourceCommandOutput,
+  'DescribeAvailableResourceCommand'
+> {
+  static readonly metaPath = '/DescribeAvailableResource/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: DescribeAvailableResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAvailableResourceCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeCloudAssistantStatus
  */
 export class DescribeCloudAssistantStatusCommand extends Command<
@@ -721,6 +873,21 @@ export class DescribeCloudAssistantStatusCommand extends Command<
   constructor(input: DescribeCloudAssistantStatusRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeCloudAssistantStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeCommands
+ */
+export class DescribeCommandsCommand extends Command<
+  DescribeCommandsRequest,
+  DescribeCommandsCommandOutput,
+  'DescribeCommandsCommand'
+> {
+  static readonly metaPath = '/DescribeCommands/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: DescribeCommandsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeCommandsCommand.metaPath);
   }
 }
 /**
@@ -784,6 +951,21 @@ export class DescribeDeploymentSetSupportedInstanceTypeFamilyCommand extends Com
   }
 }
 /**
+ * Command to DescribeDeploymentSets
+ */
+export class DescribeDeploymentSetsCommand extends Command<
+  DescribeDeploymentSetsRequest,
+  DescribeDeploymentSetsCommandOutput,
+  'DescribeDeploymentSetsCommand'
+> {
+  static readonly metaPath = '/DescribeDeploymentSets/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: DescribeDeploymentSetsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeDeploymentSetsCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeEventTypes
  */
 export class DescribeEventTypesCommand extends Command<
@@ -844,6 +1026,36 @@ export class DescribeImageSharePermissionCommand extends Command<
   }
 }
 /**
+ * Command to DescribeImages
+ */
+export class DescribeImagesCommand extends Command<
+  DescribeImagesRequest,
+  DescribeImagesCommandOutput,
+  'DescribeImagesCommand'
+> {
+  static readonly metaPath = '/DescribeImages/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: DescribeImagesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeImagesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeInstanceECSTerminalUrl
+ */
+export class DescribeInstanceECSTerminalUrlCommand extends Command<
+  DescribeInstanceECSTerminalUrlRequest,
+  DescribeInstanceECSTerminalUrlCommandOutput,
+  'DescribeInstanceECSTerminalUrlCommand'
+> {
+  static readonly metaPath = '/DescribeInstanceECSTerminalUrl/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: DescribeInstanceECSTerminalUrlRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeInstanceECSTerminalUrlCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeInstanceTypeFamilies
  */
 export class DescribeInstanceTypeFamiliesCommand extends Command<
@@ -886,6 +1098,21 @@ export class DescribeInstanceVncUrlCommand extends Command<
   constructor(input: DescribeInstanceVncUrlRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeInstanceVncUrlCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeInstances
+ */
+export class DescribeInstancesCommand extends Command<
+  DescribeInstancesRequest,
+  DescribeInstancesCommandOutput,
+  'DescribeInstancesCommand'
+> {
+  static readonly metaPath = '/DescribeInstances/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: DescribeInstancesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeInstancesCommand.metaPath);
   }
 }
 /**
@@ -1159,6 +1386,21 @@ export class DescribeTasksCommand extends Command<
   }
 }
 /**
+ * Command to DescribeUserData
+ */
+export class DescribeUserDataCommand extends Command<
+  DescribeUserDataRequest,
+  DescribeUserDataCommandOutput,
+  'DescribeUserDataCommand'
+> {
+  static readonly metaPath = '/DescribeUserData/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: DescribeUserDataRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeUserDataCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeZones
  */
 export class DescribeZonesCommand extends Command<
@@ -1354,6 +1596,21 @@ export class ListTagsForResourcesCommand extends Command<
   }
 }
 /**
+ * Command to ModifyCommand
+ */
+export class ModifyCommandCommand extends Command<
+  ModifyCommandRequest,
+  ModifyCommandCommandOutput,
+  'ModifyCommandCommand'
+> {
+  static readonly metaPath = '/ModifyCommand/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: ModifyCommandRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyCommandCommand.metaPath);
+  }
+}
+/**
  * Command to ModifyDedicatedHostAttribute
  */
 export class ModifyDedicatedHostAttributeCommand extends Command<
@@ -1444,6 +1701,21 @@ export class ModifyInstanceAttributeCommand extends Command<
   }
 }
 /**
+ * Command to ModifyInstanceChargeType
+ */
+export class ModifyInstanceChargeTypeCommand extends Command<
+  ModifyInstanceChargeTypeRequest,
+  ModifyInstanceChargeTypeCommandOutput,
+  'ModifyInstanceChargeTypeCommand'
+> {
+  static readonly metaPath = '/ModifyInstanceChargeType/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: ModifyInstanceChargeTypeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyInstanceChargeTypeCommand.metaPath);
+  }
+}
+/**
  * Command to ModifyInstanceDeployment
  */
 export class ModifyInstanceDeploymentCommand extends Command<
@@ -1486,6 +1758,21 @@ export class ModifyInstancePlacementCommand extends Command<
   constructor(input: ModifyInstancePlacementRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ModifyInstancePlacementCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyInstanceSpec
+ */
+export class ModifyInstanceSpecCommand extends Command<
+  ModifyInstanceSpecRequest,
+  ModifyInstanceSpecCommandOutput,
+  'ModifyInstanceSpecCommand'
+> {
+  static readonly metaPath = '/ModifyInstanceSpec/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: ModifyInstanceSpecRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyInstanceSpecCommand.metaPath);
   }
 }
 /**
@@ -1609,6 +1896,21 @@ export class PurchaseReservedInstancesCommand extends Command<
   }
 }
 /**
+ * Command to RebootInstance
+ */
+export class RebootInstanceCommand extends Command<
+  RebootInstanceRequest,
+  RebootInstanceCommandOutput,
+  'RebootInstanceCommand'
+> {
+  static readonly metaPath = '/RebootInstance/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: RebootInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RebootInstanceCommand.metaPath);
+  }
+}
+/**
  * Command to RebootInstances
  */
 export class RebootInstancesCommand extends Command<
@@ -1651,6 +1953,21 @@ export class RenewDedicatedHostCommand extends Command<
   constructor(input: RenewDedicatedHostRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(RenewDedicatedHostCommand.metaPath);
+  }
+}
+/**
+ * Command to RenewInstance
+ */
+export class RenewInstanceCommand extends Command<
+  RenewInstanceRequest,
+  RenewInstanceCommandOutput,
+  'RenewInstanceCommand'
+> {
+  static readonly metaPath = '/RenewInstance/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: RenewInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RenewInstanceCommand.metaPath);
   }
 }
 /**
@@ -1714,6 +2031,21 @@ export class ReportInstancesStatusCommand extends Command<
   }
 }
 /**
+ * Command to RunCommand
+ */
+export class RunCommandCommand extends Command<
+  RunCommandRequest,
+  RunCommandCommandOutput,
+  'RunCommandCommand'
+> {
+  static readonly metaPath = '/RunCommand/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: RunCommandRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RunCommandCommand.metaPath);
+  }
+}
+/**
  * Command to RunInstances
  */
 export class RunInstancesCommand extends Command<
@@ -1729,6 +2061,21 @@ export class RunInstancesCommand extends Command<
   }
 }
 /**
+ * Command to StartInstance
+ */
+export class StartInstanceCommand extends Command<
+  StartInstanceRequest,
+  StartInstanceCommandOutput,
+  'StartInstanceCommand'
+> {
+  static readonly metaPath = '/StartInstance/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: StartInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StartInstanceCommand.metaPath);
+  }
+}
+/**
  * Command to StartInstances
  */
 export class StartInstancesCommand extends Command<
@@ -1741,6 +2088,21 @@ export class StartInstancesCommand extends Command<
   constructor(input: StartInstancesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(StartInstancesCommand.metaPath);
+  }
+}
+/**
+ * Command to StopInstance
+ */
+export class StopInstanceCommand extends Command<
+  StopInstanceRequest,
+  StopInstanceCommandOutput,
+  'StopInstanceCommand'
+> {
+  static readonly metaPath = '/StopInstance/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: StopInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StopInstanceCommand.metaPath);
   }
 }
 /**
@@ -1833,15 +2195,32 @@ export class UpdateSystemEventsCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateSystemEventsCommand.metaPath);
   }
 }
+/**
+ * Command to UpgradeCloudAssistants
+ */
+export class UpgradeCloudAssistantsCommand extends Command<
+  UpgradeCloudAssistantsRequest,
+  UpgradeCloudAssistantsCommandOutput,
+  'UpgradeCloudAssistantsCommand'
+> {
+  static readonly metaPath = '/UpgradeCloudAssistants/2020-04-01/ecs/get/text_plain/';
+
+  constructor(input: UpgradeCloudAssistantsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpgradeCloudAssistantsCommand.metaPath);
+  }
+}
 
 export default {
   ECSClient,
   AllocateDedicatedHostsCommand,
+  AllocateInstancesCommand,
   AssociateInstancesIamRoleCommand,
   AttachKeyPairCommand,
   CopyImageCommand,
   CreateCommandCommand,
   CreateDedicatedHostClusterCommand,
+  CreateDeploymentSetCommand,
   CreateHpcClusterCommand,
   CreateImageCommand,
   CreateKeyPairCommand,
@@ -1850,29 +2229,38 @@ export default {
   CreateScheduledInstancesCommand,
   CreateSubscriptionCommand,
   CreateTagsCommand,
+  DeleteCommandCommand,
   DeleteDedicatedHostClusterCommand,
   DeleteDeploymentSetCommand,
   DeleteHpcClusterCommand,
   DeleteImagesCommand,
+  DeleteInstanceCommand,
   DeleteInstancesCommand,
+  DeleteInvocationCommand,
   DeleteKeyPairsCommand,
   DeleteLaunchTemplateCommand,
   DeleteLaunchTemplateVersionCommand,
   DeleteScheduledInstanceCommand,
   DeleteTagsCommand,
   DescribeAutoInstallPackagesCommand,
+  DescribeAvailableResourceCommand,
   DescribeCloudAssistantStatusCommand,
+  DescribeCommandsCommand,
   DescribeDedicatedHostClustersCommand,
   DescribeDedicatedHostTypesCommand,
   DescribeDedicatedHostsCommand,
   DescribeDeploymentSetSupportedInstanceTypeFamilyCommand,
+  DescribeDeploymentSetsCommand,
   DescribeEventTypesCommand,
   DescribeHpcClustersCommand,
   DescribeHpcInstancePositionCommand,
   DescribeImageSharePermissionCommand,
+  DescribeImagesCommand,
+  DescribeInstanceECSTerminalUrlCommand,
   DescribeInstanceTypeFamiliesCommand,
   DescribeInstanceTypesCommand,
   DescribeInstanceVncUrlCommand,
+  DescribeInstancesCommand,
   DescribeInstancesIamRolesCommand,
   DescribeInvocationInstancesCommand,
   DescribeInvocationResultsCommand,
@@ -1891,6 +2279,7 @@ export default {
   DescribeSystemEventsCommand,
   DescribeTagsCommand,
   DescribeTasksCommand,
+  DescribeUserDataCommand,
   DescribeZonesCommand,
   DetachKeyPairCommand,
   DetectImageCommand,
@@ -1904,15 +2293,18 @@ export default {
   InstallCloudAssistantCommand,
   InvokeCommandCommand,
   ListTagsForResourcesCommand,
+  ModifyCommandCommand,
   ModifyDedicatedHostAttributeCommand,
   ModifyDedicatedHostClusterAttributeCommand,
   ModifyDeploymentSetAttributeCommand,
   ModifyImageAttributeCommand,
   ModifyImageSharePermissionCommand,
   ModifyInstanceAttributeCommand,
+  ModifyInstanceChargeTypeCommand,
   ModifyInstanceDeploymentCommand,
   ModifyInstanceMetadataOptionsCommand,
   ModifyInstancePlacementCommand,
+  ModifyInstanceSpecCommand,
   ModifyInstanceVpcAttributeCommand,
   ModifyInstancesSpecCommand,
   ModifyKeyPairAttributeCommand,
@@ -1921,19 +2313,25 @@ export default {
   ModifySystemEventDefaultActionCommand,
   ModifyTemplateDefaultVersionCommand,
   PurchaseReservedInstancesCommand,
+  RebootInstanceCommand,
   RebootInstancesCommand,
   RedeployDedicatedHostCommand,
   RenewDedicatedHostCommand,
+  RenewInstanceCommand,
   RenewScheduledInstanceCommand,
   RepairImageCommand,
   ReplaceSystemVolumeCommand,
   ReportInstancesStatusCommand,
+  RunCommandCommand,
   RunInstancesCommand,
+  StartInstanceCommand,
   StartInstancesCommand,
+  StopInstanceCommand,
   StopInstancesCommand,
   StopInvocationCommand,
   TagResourcesCommand,
   UninstallCloudAssistantsCommand,
   UntagResourcesCommand,
   UpdateSystemEventsCommand,
+  UpgradeCloudAssistantsCommand,
 };
