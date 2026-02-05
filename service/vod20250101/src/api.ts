@@ -94,7 +94,6 @@ export type UpdateAITranslationSpeakersCommandOutput = CommandOutput<UpdateAITra
 export type UpdateAITranslationSpeechesCommandOutput = CommandOutput<UpdateAITranslationSpeechesResponse>;
 export type UpdateAITranslationUtterancesCommandOutput = CommandOutput<UpdateAITranslationUtterancesResponse>;
 
-
 /**
  * VOD20250101Client Service Client
  */
