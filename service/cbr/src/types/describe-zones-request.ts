@@ -30,7 +30,7 @@ export interface DescribeZonesRequest {
      * @type {string}
      * @memberof DescribeZonesRequest
      */
-    LanguageCode: string;
+    LanguageCode?: string;
 
     /**
      * @type {string}

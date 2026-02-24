@@ -30,7 +30,7 @@ export interface FiltersForDescribeRestoreJobsInput {
      * @type {string}
      * @memberof FiltersForDescribeRestoreJobsInput
      */
-    ResourceType?: string;
+    ResourceType?: FiltersForDescribeRestoreJobsInputResourceTypeEnum;
 
     /**
      * @type {string}
@@ -44,3 +44,13 @@ export interface FiltersForDescribeRestoreJobsInput {
      */
     RestoreJobName?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum FiltersForDescribeRestoreJobsInputResourceTypeEnum {
+    ECS = 'ECS',
+    VePFS = 'vePFS'
+}
+

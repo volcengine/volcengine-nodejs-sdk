@@ -33,6 +33,12 @@ export interface RecoveryPointForDescribeRecoveryPointsOutput {
     BackupCompletedTime?: string;
 
     /**
+     * @type {string}
+     * @memberof RecoveryPointForDescribeRecoveryPointsOutput
+     */
+    BackupOptions?: string;
+
+    /**
      * @type {number}
      * @memberof RecoveryPointForDescribeRecoveryPointsOutput
      */
@@ -96,7 +102,7 @@ export interface RecoveryPointForDescribeRecoveryPointsOutput {
      * @type {string}
      * @memberof RecoveryPointForDescribeRecoveryPointsOutput
      */
-    ResourceType?: string;
+    ResourceType?: RecoveryPointForDescribeRecoveryPointsOutputResourceTypeEnum;
 
     /**
      * @type {number}
@@ -108,7 +114,7 @@ export interface RecoveryPointForDescribeRecoveryPointsOutput {
      * @type {string}
      * @memberof RecoveryPointForDescribeRecoveryPointsOutput
      */
-    Status?: string;
+    Status?: RecoveryPointForDescribeRecoveryPointsOutputStatusEnum;
 
     /**
      * @type {string}
@@ -116,3 +122,25 @@ export interface RecoveryPointForDescribeRecoveryPointsOutput {
      */
     UpdatedAt?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum RecoveryPointForDescribeRecoveryPointsOutputResourceTypeEnum {
+    ECS = 'ECS',
+    VePFS = 'vePFS'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum RecoveryPointForDescribeRecoveryPointsOutputStatusEnum {
+    AVAILABLE = 'AVAILABLE',
+    DELETING = 'DELETING',
+    BEINGBACKUP = 'BEING_BACKUP',
+    RECOVERING = 'RECOVERING',
+    ERROR = 'ERROR',
+    WAITING = 'WAITING'
+}
+

@@ -60,6 +60,12 @@ export interface JobForDescribeRestoreJobsOutput {
      * @type {string}
      * @memberof JobForDescribeRestoreJobsOutput
      */
+    RestoreOptions?: string;
+
+    /**
+     * @type {string}
+     * @memberof JobForDescribeRestoreJobsOutput
+     */
     Status?: JobForDescribeRestoreJobsOutputStatusEnum;
 }
 

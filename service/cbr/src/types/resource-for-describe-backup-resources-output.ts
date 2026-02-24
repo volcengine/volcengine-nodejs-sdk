@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { MetaInformationForDescribeBackupResourcesOutput } from './meta-information-for-describe-backup-resources-output';
 import { PlanForDescribeBackupResourcesOutput } from './plan-for-describe-backup-resources-output';
  /**
  * 
@@ -47,12 +46,6 @@ export interface ResourceForDescribeBackupResourcesOutput {
     InstanceName?: string;
 
     /**
-     * @type {MetaInformationForDescribeBackupResourcesOutput}
-     * @memberof ResourceForDescribeBackupResourcesOutput
-     */
-    MetaInformation?: MetaInformationForDescribeBackupResourcesOutput;
-
-    /**
      * @type {Array<PlanForDescribeBackupResourcesOutput>}
      * @memberof ResourceForDescribeBackupResourcesOutput
      */
@@ -74,7 +67,7 @@ export interface ResourceForDescribeBackupResourcesOutput {
      * @type {string}
      * @memberof ResourceForDescribeBackupResourcesOutput
      */
-    ResourceType?: string;
+    ResourceType?: ResourceForDescribeBackupResourcesOutputResourceTypeEnum;
 
     /**
      * @type {string}
@@ -94,3 +87,13 @@ export interface ResourceForDescribeBackupResourcesOutput {
      */
     UsedCapacityInBytes?: number;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ResourceForDescribeBackupResourcesOutputResourceTypeEnum {
+    ECS = 'ECS',
+    VePFS = 'vePFS'
+}
+

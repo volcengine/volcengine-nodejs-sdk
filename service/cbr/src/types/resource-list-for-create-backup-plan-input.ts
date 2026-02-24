@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { MetaInformationForCreateBackupPlanInput } from './meta-information-for-create-backup-plan-input';
  /**
  * 
  *
@@ -22,10 +21,10 @@ import { MetaInformationForCreateBackupPlanInput } from './meta-information-for-
 export interface ResourceListForCreateBackupPlanInput {
 
     /**
-     * @type {MetaInformationForCreateBackupPlanInput}
+     * @type {string}
      * @memberof ResourceListForCreateBackupPlanInput
      */
-    MetaInformation?: MetaInformationForCreateBackupPlanInput;
+    BackupOptions?: string;
 
     /**
      * @type {string}
@@ -37,5 +36,15 @@ export interface ResourceListForCreateBackupPlanInput {
      * @type {string}
      * @memberof ResourceListForCreateBackupPlanInput
      */
-    ResourceType?: string;
+    ResourceType?: ResourceListForCreateBackupPlanInputResourceTypeEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ResourceListForCreateBackupPlanInputResourceTypeEnum {
+    ECS = 'ECS',
+    VePFS = 'vePFS'
+}
+
