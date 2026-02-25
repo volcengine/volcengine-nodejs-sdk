@@ -172,7 +172,6 @@ export type UnsubscribeInstanceCommandOutput = CommandOutput<UnsubscribeInstance
 export type UpdateAuthCommandOutput = CommandOutput<UpdateAuthResponse>;
 export type UpdateBudgetCommandOutput = CommandOutput<UpdateBudgetResponse>;
 
-
 /**
  * BILLINGClient Service Client
  */

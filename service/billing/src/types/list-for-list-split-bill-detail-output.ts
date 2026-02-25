@@ -96,6 +96,12 @@ export interface ListForListSplitBillDetailOutput {
      * @type {string}
      * @memberof ListForListSplitBillDetailOutput
      */
+    Count?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListSplitBillDetailOutput
+     */
     CountryRegion?: string;
 
     /**
@@ -397,6 +403,12 @@ export interface ListForListSplitBillDetailOutput {
      * @memberof ListForListSplitBillDetailOutput
      */
     ReservationInstance?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListSplitBillDetailOutput
+     */
+    ResourceID?: string;
 
     /**
      * @type {string}

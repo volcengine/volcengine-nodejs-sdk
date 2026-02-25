@@ -534,6 +534,12 @@ export interface ListForListAmortizedCostBillDetailOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillDetailOutput
      */
+    ResourceID?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillDetailOutput
+     */
     RoundAmount?: string;
 
     /**
