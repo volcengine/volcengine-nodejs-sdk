@@ -20,6 +20,8 @@ import { BuyResourcePackageRequest } from './types/index';
 import { BuyResourcePackageResponse } from './types/index';
 import { ClearDeviceLongMemoryRequest } from './types/index';
 import { ClearDeviceLongMemoryResponse } from './types/index';
+import { CreateDeviceWithoutApprovalRequest } from './types/index';
+import { CreateDeviceWithoutApprovalResponse } from './types/index';
 import { GetAgentListRequest } from './types/index';
 import { GetAgentListResponse } from './types/index';
 import { GetDeviceBindTcOrderIDRequest } from './types/index';
@@ -43,6 +45,7 @@ import { TopActionDispatchResponse } from './types/index';
 export type BuyPoolPackageCommandOutput = CommandOutput<BuyPoolPackageResponse>;
 export type BuyResourcePackageCommandOutput = CommandOutput<BuyResourcePackageResponse>;
 export type ClearDeviceLongMemoryCommandOutput = CommandOutput<ClearDeviceLongMemoryResponse>;
+export type CreateDeviceWithoutApprovalCommandOutput = CommandOutput<CreateDeviceWithoutApprovalResponse>;
 export type GetAgentListCommandOutput = CommandOutput<GetAgentListResponse>;
 export type GetDeviceBindTcOrderIDCommandOutput = CommandOutput<GetDeviceBindTcOrderIDResponse>;
 export type GetPoolDetailListCommandOutput = CommandOutput<GetPoolDetailListResponse>;
@@ -108,6 +111,21 @@ export class ClearDeviceLongMemoryCommand extends Command<
   constructor(input: ClearDeviceLongMemoryRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ClearDeviceLongMemoryCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateDeviceWithoutApproval
+ */
+export class CreateDeviceWithoutApprovalCommand extends Command<
+  CreateDeviceWithoutApprovalRequest,
+  CreateDeviceWithoutApprovalCommandOutput,
+  'CreateDeviceWithoutApprovalCommand'
+> {
+  static readonly metaPath = '/CreateDeviceWithoutApproval/2024-07-31/tis/post/application_json/';
+
+  constructor(input: CreateDeviceWithoutApprovalRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateDeviceWithoutApprovalCommand.metaPath);
   }
 }
 /**
@@ -236,6 +254,7 @@ export default {
   BuyPoolPackageCommand,
   BuyResourcePackageCommand,
   ClearDeviceLongMemoryCommand,
+  CreateDeviceWithoutApprovalCommand,
   GetAgentListCommand,
   GetDeviceBindTcOrderIDCommand,
   GetPoolDetailListCommand,
