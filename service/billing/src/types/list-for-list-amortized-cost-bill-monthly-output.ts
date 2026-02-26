@@ -756,6 +756,12 @@ export interface ListForListAmortizedCostBillMonthlyOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillMonthlyOutput
      */
+    ResourceID?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillMonthlyOutput
+     */
     RoundAmount?: string;
 
     /**

@@ -423,6 +423,12 @@ export interface ListForListBillDetailOutput {
     ReservationInstance?: string;
 
     /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
+    ResourceID?: string;
+
+    /**
      * @type {number}
      * @memberof ListForListBillDetailOutput
      */

@@ -618,6 +618,12 @@ export interface ListForListAmortizedCostBillDailyOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillDailyOutput
      */
+    ResourceID?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillDailyOutput
+     */
     RoundAmount?: string;
 
     /**
