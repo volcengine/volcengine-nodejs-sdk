@@ -38,6 +38,8 @@ import { VideoProjectSerialDubTaskCreateRequest } from './types/index';
 import { VideoProjectSerialDubTaskCreateResponse } from './types/index';
 import { VideoProjectSerialTaskCreateRequest } from './types/index';
 import { VideoProjectSerialTaskCreateResponse } from './types/index';
+import { VideoProjectSuppressionStartRequest } from './types/index';
+import { VideoProjectSuppressionStartResponse } from './types/index';
 import { VideoProjectTaskDetailRequest } from './types/index';
 import { VideoProjectTaskDetailResponse } from './types/index';
 import { VideoProjectTaskListRequest } from './types/index';
@@ -62,6 +64,7 @@ export type VideoProjectCreateCommandOutput = CommandOutput<VideoProjectCreateRe
 export type VideoProjectListCommandOutput = CommandOutput<VideoProjectListResponse>;
 export type VideoProjectSerialDubTaskCreateCommandOutput = CommandOutput<VideoProjectSerialDubTaskCreateResponse>;
 export type VideoProjectSerialTaskCreateCommandOutput = CommandOutput<VideoProjectSerialTaskCreateResponse>;
+export type VideoProjectSuppressionStartCommandOutput = CommandOutput<VideoProjectSuppressionStartResponse>;
 export type VideoProjectTaskDetailCommandOutput = CommandOutput<VideoProjectTaskDetailResponse>;
 export type VideoProjectTaskListCommandOutput = CommandOutput<VideoProjectTaskListResponse>;
 export type VideoResourceUploadCommandOutput = CommandOutput<VideoResourceUploadResponse>;
@@ -261,6 +264,21 @@ export class VideoProjectSerialTaskCreateCommand extends Command<
   }
 }
 /**
+ * Command to VideoProjectSuppressionStart
+ */
+export class VideoProjectSuppressionStartCommand extends Command<
+  VideoProjectSuppressionStartRequest,
+  VideoProjectSuppressionStartCommandOutput,
+  'VideoProjectSuppressionStartCommand'
+> {
+  static readonly metaPath = '/VideoProjectSuppressionStart/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoProjectSuppressionStartRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectSuppressionStartCommand.metaPath);
+  }
+}
+/**
  * Command to VideoProjectTaskDetail
  */
 export class VideoProjectTaskDetailCommand extends Command<
@@ -335,6 +353,7 @@ export default {
   VideoProjectListCommand,
   VideoProjectSerialDubTaskCreateCommand,
   VideoProjectSerialTaskCreateCommand,
+  VideoProjectSuppressionStartCommand,
   VideoProjectTaskDetailCommand,
   VideoProjectTaskListCommand,
   VideoResourceUploadCommand,

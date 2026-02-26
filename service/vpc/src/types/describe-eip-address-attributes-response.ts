@@ -176,4 +176,10 @@ export interface DescribeEipAddressAttributesResponse {
      * @memberof DescribeEipAddressAttributesResponse
      */
     UpdatedAt?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeEipAddressAttributesResponse
+     */
+    VpcId?: string;
 }

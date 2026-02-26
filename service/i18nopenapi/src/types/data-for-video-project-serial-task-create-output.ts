@@ -13,6 +13,7 @@
  */
 
 import { BaseRespForVideoProjectSerialTaskCreateOutput } from './base-resp-for-video-project-serial-task-create-output';
+import { SubtitleFileCheckReportForVideoProjectSerialTaskCreateOutput } from './subtitle-file-check-report-for-video-project-serial-task-create-output';
  /**
  * 
  *
@@ -26,6 +27,12 @@ export interface DataForVideoProjectSerialTaskCreateOutput {
      * @memberof DataForVideoProjectSerialTaskCreateOutput
      */
     BaseResp?: BaseRespForVideoProjectSerialTaskCreateOutput;
+
+    /**
+     * @type {Array<SubtitleFileCheckReportForVideoProjectSerialTaskCreateOutput>}
+     * @memberof DataForVideoProjectSerialTaskCreateOutput
+     */
+    SubtitleFileCheckReports?: Array<SubtitleFileCheckReportForVideoProjectSerialTaskCreateOutput>;
 
     /**
      * @type {Array<string>}
