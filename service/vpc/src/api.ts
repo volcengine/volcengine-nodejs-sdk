@@ -20,18 +20,30 @@ import { AddBandwidthPackageIpRequest } from './types/index';
 import { AddBandwidthPackageIpResponse } from './types/index';
 import { AddIpAddressPoolCidrBlockRequest } from './types/index';
 import { AddIpAddressPoolCidrBlockResponse } from './types/index';
+import { AllocateEipAddressRequest } from './types/index';
+import { AllocateEipAddressResponse } from './types/index';
 import { AllocateIpv6AddressBandwidthRequest } from './types/index';
 import { AllocateIpv6AddressBandwidthResponse } from './types/index';
 import { AssignIpv6AddressesRequest } from './types/index';
 import { AssignIpv6AddressesResponse } from './types/index';
 import { AssignPrivateIpAddressesRequest } from './types/index';
 import { AssignPrivateIpAddressesResponse } from './types/index';
+import { AssociateEipAddressRequest } from './types/index';
+import { AssociateEipAddressResponse } from './types/index';
 import { AssociateHaVipRequest } from './types/index';
 import { AssociateHaVipResponse } from './types/index';
 import { AssociateNetworkAclRequest } from './types/index';
 import { AssociateNetworkAclResponse } from './types/index';
+import { AssociateRouteTableRequest } from './types/index';
+import { AssociateRouteTableResponse } from './types/index';
 import { AssociateVpcCidrBlockRequest } from './types/index';
 import { AssociateVpcCidrBlockResponse } from './types/index';
+import { AttachNetworkInterfaceRequest } from './types/index';
+import { AttachNetworkInterfaceResponse } from './types/index';
+import { AuthorizeSecurityGroupEgressRequest } from './types/index';
+import { AuthorizeSecurityGroupEgressResponse } from './types/index';
+import { AuthorizeSecurityGroupIngressRequest } from './types/index';
+import { AuthorizeSecurityGroupIngressResponse } from './types/index';
 import { CancelBandwidthPackageEipBandwidthRequest } from './types/index';
 import { CancelBandwidthPackageEipBandwidthResponse } from './types/index';
 import { ConvertEipAddressBillingTypeRequest } from './types/index';
@@ -52,8 +64,16 @@ import { CreateIpv6GatewayRequest } from './types/index';
 import { CreateIpv6GatewayResponse } from './types/index';
 import { CreateNetworkAclRequest } from './types/index';
 import { CreateNetworkAclResponse } from './types/index';
+import { CreateNetworkInterfaceRequest } from './types/index';
+import { CreateNetworkInterfaceResponse } from './types/index';
 import { CreatePrefixListRequest } from './types/index';
 import { CreatePrefixListResponse } from './types/index';
+import { CreateRouteEntryRequest } from './types/index';
+import { CreateRouteEntryResponse } from './types/index';
+import { CreateRouteTableRequest } from './types/index';
+import { CreateRouteTableResponse } from './types/index';
+import { CreateSecurityGroupRequest } from './types/index';
+import { CreateSecurityGroupResponse } from './types/index';
 import { CreateSubnetRequest } from './types/index';
 import { CreateSubnetResponse } from './types/index';
 import { CreateTrafficMirrorFilterRequest } from './types/index';
@@ -86,8 +106,16 @@ import { DeleteIpv6GatewayRequest } from './types/index';
 import { DeleteIpv6GatewayResponse } from './types/index';
 import { DeleteNetworkAclRequest } from './types/index';
 import { DeleteNetworkAclResponse } from './types/index';
+import { DeleteNetworkInterfaceRequest } from './types/index';
+import { DeleteNetworkInterfaceResponse } from './types/index';
 import { DeletePrefixListRequest } from './types/index';
 import { DeletePrefixListResponse } from './types/index';
+import { DeleteRouteEntryRequest } from './types/index';
+import { DeleteRouteEntryResponse } from './types/index';
+import { DeleteRouteTableRequest } from './types/index';
+import { DeleteRouteTableResponse } from './types/index';
+import { DeleteSecurityGroupRequest } from './types/index';
+import { DeleteSecurityGroupResponse } from './types/index';
 import { DeleteSubnetRequest } from './types/index';
 import { DeleteSubnetResponse } from './types/index';
 import { DeleteTrafficMirrorFilterRequest } from './types/index';
@@ -104,6 +132,8 @@ import { DescribeBandwidthPackagesRequest } from './types/index';
 import { DescribeBandwidthPackagesResponse } from './types/index';
 import { DescribeEipAddressAttributesRequest } from './types/index';
 import { DescribeEipAddressAttributesResponse } from './types/index';
+import { DescribeEipAddressesRequest } from './types/index';
+import { DescribeEipAddressesResponse } from './types/index';
 import { DescribeFlowLogsRequest } from './types/index';
 import { DescribeFlowLogsResponse } from './types/index';
 import { DescribeHaVipsRequest } from './types/index';
@@ -130,14 +160,24 @@ import { DescribeNetworkAclAttributesRequest } from './types/index';
 import { DescribeNetworkAclAttributesResponse } from './types/index';
 import { DescribeNetworkAclsRequest } from './types/index';
 import { DescribeNetworkAclsResponse } from './types/index';
+import { DescribeNetworkInterfaceAttributesRequest } from './types/index';
+import { DescribeNetworkInterfaceAttributesResponse } from './types/index';
+import { DescribeNetworkInterfacesRequest } from './types/index';
+import { DescribeNetworkInterfacesResponse } from './types/index';
 import { DescribePrefixListAssociationsRequest } from './types/index';
 import { DescribePrefixListAssociationsResponse } from './types/index';
 import { DescribePrefixListEntriesRequest } from './types/index';
 import { DescribePrefixListEntriesResponse } from './types/index';
 import { DescribePrefixListsRequest } from './types/index';
 import { DescribePrefixListsResponse } from './types/index';
+import { DescribeRouteEntryListRequest } from './types/index';
+import { DescribeRouteEntryListResponse } from './types/index';
+import { DescribeRouteTableListRequest } from './types/index';
+import { DescribeRouteTableListResponse } from './types/index';
 import { DescribeSecurityGroupAttributesRequest } from './types/index';
 import { DescribeSecurityGroupAttributesResponse } from './types/index';
+import { DescribeSecurityGroupsRequest } from './types/index';
+import { DescribeSecurityGroupsResponse } from './types/index';
 import { DescribeSubnetAttributesRequest } from './types/index';
 import { DescribeSubnetAttributesResponse } from './types/index';
 import { DescribeSubnetsRequest } from './types/index';
@@ -152,10 +192,16 @@ import { DescribeVpcAttributesRequest } from './types/index';
 import { DescribeVpcAttributesResponse } from './types/index';
 import { DescribeVpcsRequest } from './types/index';
 import { DescribeVpcsResponse } from './types/index';
+import { DetachNetworkInterfaceRequest } from './types/index';
+import { DetachNetworkInterfaceResponse } from './types/index';
+import { DisassociateEipAddressRequest } from './types/index';
+import { DisassociateEipAddressResponse } from './types/index';
 import { DisassociateHaVipRequest } from './types/index';
 import { DisassociateHaVipResponse } from './types/index';
 import { DisassociateNetworkAclRequest } from './types/index';
 import { DisassociateNetworkAclResponse } from './types/index';
+import { DisassociateRouteTableRequest } from './types/index';
+import { DisassociateRouteTableResponse } from './types/index';
 import { DisassociateVpcCidrBlockRequest } from './types/index';
 import { DisassociateVpcCidrBlockResponse } from './types/index';
 import { ListTagsForResourcesRequest } from './types/index';
@@ -166,6 +212,8 @@ import { ModifyBandwidthPackageEipBandwidthRequest } from './types/index';
 import { ModifyBandwidthPackageEipBandwidthResponse } from './types/index';
 import { ModifyBandwidthPackageSpecRequest } from './types/index';
 import { ModifyBandwidthPackageSpecResponse } from './types/index';
+import { ModifyEipAddressAttributesRequest } from './types/index';
+import { ModifyEipAddressAttributesResponse } from './types/index';
 import { ModifyFlowLogAttributeRequest } from './types/index';
 import { ModifyFlowLogAttributeResponse } from './types/index';
 import { ModifyHaVipAttributesRequest } from './types/index';
@@ -184,8 +232,20 @@ import { ModifyIpv6GatewayAttributeRequest } from './types/index';
 import { ModifyIpv6GatewayAttributeResponse } from './types/index';
 import { ModifyNetworkAclAttributesRequest } from './types/index';
 import { ModifyNetworkAclAttributesResponse } from './types/index';
+import { ModifyNetworkInterfaceAttributesRequest } from './types/index';
+import { ModifyNetworkInterfaceAttributesResponse } from './types/index';
 import { ModifyPrefixListRequest } from './types/index';
 import { ModifyPrefixListResponse } from './types/index';
+import { ModifyRouteEntryRequest } from './types/index';
+import { ModifyRouteEntryResponse } from './types/index';
+import { ModifyRouteTableAttributesRequest } from './types/index';
+import { ModifyRouteTableAttributesResponse } from './types/index';
+import { ModifySecurityGroupAttributesRequest } from './types/index';
+import { ModifySecurityGroupAttributesResponse } from './types/index';
+import { ModifySecurityGroupRuleDescriptionsEgressRequest } from './types/index';
+import { ModifySecurityGroupRuleDescriptionsEgressResponse } from './types/index';
+import { ModifySecurityGroupRuleDescriptionsIngressRequest } from './types/index';
+import { ModifySecurityGroupRuleDescriptionsIngressResponse } from './types/index';
 import { ModifySubnetAttributesRequest } from './types/index';
 import { ModifySubnetAttributesResponse } from './types/index';
 import { ModifyTrafficMirrorFilterAttributesRequest } from './types/index';
@@ -198,10 +258,16 @@ import { ModifyTrafficMirrorTargetAttributesRequest } from './types/index';
 import { ModifyTrafficMirrorTargetAttributesResponse } from './types/index';
 import { ModifyVpcAttributesRequest } from './types/index';
 import { ModifyVpcAttributesResponse } from './types/index';
+import { ReleaseEipAddressRequest } from './types/index';
+import { ReleaseEipAddressResponse } from './types/index';
 import { ReleaseIpv6AddressBandwidthRequest } from './types/index';
 import { ReleaseIpv6AddressBandwidthResponse } from './types/index';
 import { RemoveBandwidthPackageIpRequest } from './types/index';
 import { RemoveBandwidthPackageIpResponse } from './types/index';
+import { RevokeSecurityGroupEgressRequest } from './types/index';
+import { RevokeSecurityGroupEgressResponse } from './types/index';
+import { RevokeSecurityGroupIngressRequest } from './types/index';
+import { RevokeSecurityGroupIngressResponse } from './types/index';
 import { TagResourcesRequest } from './types/index';
 import { TagResourcesResponse } from './types/index';
 import { TemporaryUpgradeEipAddressRequest } from './types/index';
@@ -221,12 +287,18 @@ import { UpdateNetworkAclEntriesResponse } from './types/index';
 export type ActiveFlowLogCommandOutput = CommandOutput<ActiveFlowLogResponse>;
 export type AddBandwidthPackageIpCommandOutput = CommandOutput<AddBandwidthPackageIpResponse>;
 export type AddIpAddressPoolCidrBlockCommandOutput = CommandOutput<AddIpAddressPoolCidrBlockResponse>;
+export type AllocateEipAddressCommandOutput = CommandOutput<AllocateEipAddressResponse>;
 export type AllocateIpv6AddressBandwidthCommandOutput = CommandOutput<AllocateIpv6AddressBandwidthResponse>;
 export type AssignIpv6AddressesCommandOutput = CommandOutput<AssignIpv6AddressesResponse>;
 export type AssignPrivateIpAddressesCommandOutput = CommandOutput<AssignPrivateIpAddressesResponse>;
+export type AssociateEipAddressCommandOutput = CommandOutput<AssociateEipAddressResponse>;
 export type AssociateHaVipCommandOutput = CommandOutput<AssociateHaVipResponse>;
 export type AssociateNetworkAclCommandOutput = CommandOutput<AssociateNetworkAclResponse>;
+export type AssociateRouteTableCommandOutput = CommandOutput<AssociateRouteTableResponse>;
 export type AssociateVpcCidrBlockCommandOutput = CommandOutput<AssociateVpcCidrBlockResponse>;
+export type AttachNetworkInterfaceCommandOutput = CommandOutput<AttachNetworkInterfaceResponse>;
+export type AuthorizeSecurityGroupEgressCommandOutput = CommandOutput<AuthorizeSecurityGroupEgressResponse>;
+export type AuthorizeSecurityGroupIngressCommandOutput = CommandOutput<AuthorizeSecurityGroupIngressResponse>;
 export type CancelBandwidthPackageEipBandwidthCommandOutput = CommandOutput<CancelBandwidthPackageEipBandwidthResponse>;
 export type ConvertEipAddressBillingTypeCommandOutput = CommandOutput<ConvertEipAddressBillingTypeResponse>;
 export type CreateBandwidthPackageCommandOutput = CommandOutput<CreateBandwidthPackageResponse>;
@@ -237,7 +309,11 @@ export type CreateIpAddressPoolCommandOutput = CommandOutput<CreateIpAddressPool
 export type CreateIpv6EgressOnlyRuleCommandOutput = CommandOutput<CreateIpv6EgressOnlyRuleResponse>;
 export type CreateIpv6GatewayCommandOutput = CommandOutput<CreateIpv6GatewayResponse>;
 export type CreateNetworkAclCommandOutput = CommandOutput<CreateNetworkAclResponse>;
+export type CreateNetworkInterfaceCommandOutput = CommandOutput<CreateNetworkInterfaceResponse>;
 export type CreatePrefixListCommandOutput = CommandOutput<CreatePrefixListResponse>;
+export type CreateRouteEntryCommandOutput = CommandOutput<CreateRouteEntryResponse>;
+export type CreateRouteTableCommandOutput = CommandOutput<CreateRouteTableResponse>;
+export type CreateSecurityGroupCommandOutput = CommandOutput<CreateSecurityGroupResponse>;
 export type CreateSubnetCommandOutput = CommandOutput<CreateSubnetResponse>;
 export type CreateTrafficMirrorFilterCommandOutput = CommandOutput<CreateTrafficMirrorFilterResponse>;
 export type CreateTrafficMirrorFilterRuleCommandOutput = CommandOutput<CreateTrafficMirrorFilterRuleResponse>;
@@ -254,7 +330,11 @@ export type DeleteIpAddressPoolCidrBlockCommandOutput = CommandOutput<DeleteIpAd
 export type DeleteIpv6EgressOnlyRuleCommandOutput = CommandOutput<DeleteIpv6EgressOnlyRuleResponse>;
 export type DeleteIpv6GatewayCommandOutput = CommandOutput<DeleteIpv6GatewayResponse>;
 export type DeleteNetworkAclCommandOutput = CommandOutput<DeleteNetworkAclResponse>;
+export type DeleteNetworkInterfaceCommandOutput = CommandOutput<DeleteNetworkInterfaceResponse>;
 export type DeletePrefixListCommandOutput = CommandOutput<DeletePrefixListResponse>;
+export type DeleteRouteEntryCommandOutput = CommandOutput<DeleteRouteEntryResponse>;
+export type DeleteRouteTableCommandOutput = CommandOutput<DeleteRouteTableResponse>;
+export type DeleteSecurityGroupCommandOutput = CommandOutput<DeleteSecurityGroupResponse>;
 export type DeleteSubnetCommandOutput = CommandOutput<DeleteSubnetResponse>;
 export type DeleteTrafficMirrorFilterCommandOutput = CommandOutput<DeleteTrafficMirrorFilterResponse>;
 export type DeleteTrafficMirrorFilterRuleCommandOutput = CommandOutput<DeleteTrafficMirrorFilterRuleResponse>;
@@ -263,6 +343,7 @@ export type DeleteTrafficMirrorTargetCommandOutput = CommandOutput<DeleteTraffic
 export type DeleteVpcCommandOutput = CommandOutput<DeleteVpcResponse>;
 export type DescribeBandwidthPackagesCommandOutput = CommandOutput<DescribeBandwidthPackagesResponse>;
 export type DescribeEipAddressAttributesCommandOutput = CommandOutput<DescribeEipAddressAttributesResponse>;
+export type DescribeEipAddressesCommandOutput = CommandOutput<DescribeEipAddressesResponse>;
 export type DescribeFlowLogsCommandOutput = CommandOutput<DescribeFlowLogsResponse>;
 export type DescribeHaVipsCommandOutput = CommandOutput<DescribeHaVipsResponse>;
 export type DescribeInstanceGroupsCommandOutput = CommandOutput<DescribeInstanceGroupsResponse>;
@@ -276,10 +357,15 @@ export type DescribeIpv6GatewayAttributeCommandOutput = CommandOutput<DescribeIp
 export type DescribeIpv6GatewaysCommandOutput = CommandOutput<DescribeIpv6GatewaysResponse>;
 export type DescribeNetworkAclAttributesCommandOutput = CommandOutput<DescribeNetworkAclAttributesResponse>;
 export type DescribeNetworkAclsCommandOutput = CommandOutput<DescribeNetworkAclsResponse>;
+export type DescribeNetworkInterfaceAttributesCommandOutput = CommandOutput<DescribeNetworkInterfaceAttributesResponse>;
+export type DescribeNetworkInterfacesCommandOutput = CommandOutput<DescribeNetworkInterfacesResponse>;
 export type DescribePrefixListAssociationsCommandOutput = CommandOutput<DescribePrefixListAssociationsResponse>;
 export type DescribePrefixListEntriesCommandOutput = CommandOutput<DescribePrefixListEntriesResponse>;
 export type DescribePrefixListsCommandOutput = CommandOutput<DescribePrefixListsResponse>;
+export type DescribeRouteEntryListCommandOutput = CommandOutput<DescribeRouteEntryListResponse>;
+export type DescribeRouteTableListCommandOutput = CommandOutput<DescribeRouteTableListResponse>;
 export type DescribeSecurityGroupAttributesCommandOutput = CommandOutput<DescribeSecurityGroupAttributesResponse>;
+export type DescribeSecurityGroupsCommandOutput = CommandOutput<DescribeSecurityGroupsResponse>;
 export type DescribeSubnetAttributesCommandOutput = CommandOutput<DescribeSubnetAttributesResponse>;
 export type DescribeSubnetsCommandOutput = CommandOutput<DescribeSubnetsResponse>;
 export type DescribeTrafficMirrorFiltersCommandOutput = CommandOutput<DescribeTrafficMirrorFiltersResponse>;
@@ -287,13 +373,17 @@ export type DescribeTrafficMirrorSessionsCommandOutput = CommandOutput<DescribeT
 export type DescribeTrafficMirrorTargetsCommandOutput = CommandOutput<DescribeTrafficMirrorTargetsResponse>;
 export type DescribeVpcAttributesCommandOutput = CommandOutput<DescribeVpcAttributesResponse>;
 export type DescribeVpcsCommandOutput = CommandOutput<DescribeVpcsResponse>;
+export type DetachNetworkInterfaceCommandOutput = CommandOutput<DetachNetworkInterfaceResponse>;
+export type DisassociateEipAddressCommandOutput = CommandOutput<DisassociateEipAddressResponse>;
 export type DisassociateHaVipCommandOutput = CommandOutput<DisassociateHaVipResponse>;
 export type DisassociateNetworkAclCommandOutput = CommandOutput<DisassociateNetworkAclResponse>;
+export type DisassociateRouteTableCommandOutput = CommandOutput<DisassociateRouteTableResponse>;
 export type DisassociateVpcCidrBlockCommandOutput = CommandOutput<DisassociateVpcCidrBlockResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
 export type ModifyBandwidthPackageAttributesCommandOutput = CommandOutput<ModifyBandwidthPackageAttributesResponse>;
 export type ModifyBandwidthPackageEipBandwidthCommandOutput = CommandOutput<ModifyBandwidthPackageEipBandwidthResponse>;
 export type ModifyBandwidthPackageSpecCommandOutput = CommandOutput<ModifyBandwidthPackageSpecResponse>;
+export type ModifyEipAddressAttributesCommandOutput = CommandOutput<ModifyEipAddressAttributesResponse>;
 export type ModifyFlowLogAttributeCommandOutput = CommandOutput<ModifyFlowLogAttributeResponse>;
 export type ModifyHaVipAttributesCommandOutput = CommandOutput<ModifyHaVipAttributesResponse>;
 export type ModifyInstanceGroupAttributesCommandOutput = CommandOutput<ModifyInstanceGroupAttributesResponse>;
@@ -303,22 +393,30 @@ export type ModifyIpv6AddressBandwidthCommandOutput = CommandOutput<ModifyIpv6Ad
 export type ModifyIpv6EgressOnlyRuleAttributeCommandOutput = CommandOutput<ModifyIpv6EgressOnlyRuleAttributeResponse>;
 export type ModifyIpv6GatewayAttributeCommandOutput = CommandOutput<ModifyIpv6GatewayAttributeResponse>;
 export type ModifyNetworkAclAttributesCommandOutput = CommandOutput<ModifyNetworkAclAttributesResponse>;
+export type ModifyNetworkInterfaceAttributesCommandOutput = CommandOutput<ModifyNetworkInterfaceAttributesResponse>;
 export type ModifyPrefixListCommandOutput = CommandOutput<ModifyPrefixListResponse>;
+export type ModifyRouteEntryCommandOutput = CommandOutput<ModifyRouteEntryResponse>;
+export type ModifyRouteTableAttributesCommandOutput = CommandOutput<ModifyRouteTableAttributesResponse>;
+export type ModifySecurityGroupAttributesCommandOutput = CommandOutput<ModifySecurityGroupAttributesResponse>;
+export type ModifySecurityGroupRuleDescriptionsEgressCommandOutput = CommandOutput<ModifySecurityGroupRuleDescriptionsEgressResponse>;
+export type ModifySecurityGroupRuleDescriptionsIngressCommandOutput = CommandOutput<ModifySecurityGroupRuleDescriptionsIngressResponse>;
 export type ModifySubnetAttributesCommandOutput = CommandOutput<ModifySubnetAttributesResponse>;
 export type ModifyTrafficMirrorFilterAttributesCommandOutput = CommandOutput<ModifyTrafficMirrorFilterAttributesResponse>;
 export type ModifyTrafficMirrorFilterRuleAttributesCommandOutput = CommandOutput<ModifyTrafficMirrorFilterRuleAttributesResponse>;
 export type ModifyTrafficMirrorSessionAttributesCommandOutput = CommandOutput<ModifyTrafficMirrorSessionAttributesResponse>;
 export type ModifyTrafficMirrorTargetAttributesCommandOutput = CommandOutput<ModifyTrafficMirrorTargetAttributesResponse>;
 export type ModifyVpcAttributesCommandOutput = CommandOutput<ModifyVpcAttributesResponse>;
+export type ReleaseEipAddressCommandOutput = CommandOutput<ReleaseEipAddressResponse>;
 export type ReleaseIpv6AddressBandwidthCommandOutput = CommandOutput<ReleaseIpv6AddressBandwidthResponse>;
 export type RemoveBandwidthPackageIpCommandOutput = CommandOutput<RemoveBandwidthPackageIpResponse>;
+export type RevokeSecurityGroupEgressCommandOutput = CommandOutput<RevokeSecurityGroupEgressResponse>;
+export type RevokeSecurityGroupIngressCommandOutput = CommandOutput<RevokeSecurityGroupIngressResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type TemporaryUpgradeEipAddressCommandOutput = CommandOutput<TemporaryUpgradeEipAddressResponse>;
 export type UnassignIpv6AddressesCommandOutput = CommandOutput<UnassignIpv6AddressesResponse>;
 export type UnassignPrivateIpAddressesCommandOutput = CommandOutput<UnassignPrivateIpAddressesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateNetworkAclEntriesCommandOutput = CommandOutput<UpdateNetworkAclEntriesResponse>;
-
 
 /**
  * VPCClient Service Client
@@ -379,6 +477,21 @@ export class AddIpAddressPoolCidrBlockCommand extends Command<
   }
 }
 /**
+ * Command to AllocateEipAddress
+ */
+export class AllocateEipAddressCommand extends Command<
+  AllocateEipAddressRequest,
+  AllocateEipAddressCommandOutput,
+  'AllocateEipAddressCommand'
+> {
+  static readonly metaPath = '/AllocateEipAddress/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: AllocateEipAddressRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AllocateEipAddressCommand.metaPath);
+  }
+}
+/**
  * Command to AllocateIpv6AddressBandwidth
  */
 export class AllocateIpv6AddressBandwidthCommand extends Command<
@@ -424,6 +537,21 @@ export class AssignPrivateIpAddressesCommand extends Command<
   }
 }
 /**
+ * Command to AssociateEipAddress
+ */
+export class AssociateEipAddressCommand extends Command<
+  AssociateEipAddressRequest,
+  AssociateEipAddressCommandOutput,
+  'AssociateEipAddressCommand'
+> {
+  static readonly metaPath = '/AssociateEipAddress/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: AssociateEipAddressRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AssociateEipAddressCommand.metaPath);
+  }
+}
+/**
  * Command to AssociateHaVip
  */
 export class AssociateHaVipCommand extends Command<
@@ -454,6 +582,21 @@ export class AssociateNetworkAclCommand extends Command<
   }
 }
 /**
+ * Command to AssociateRouteTable
+ */
+export class AssociateRouteTableCommand extends Command<
+  AssociateRouteTableRequest,
+  AssociateRouteTableCommandOutput,
+  'AssociateRouteTableCommand'
+> {
+  static readonly metaPath = '/AssociateRouteTable/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: AssociateRouteTableRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AssociateRouteTableCommand.metaPath);
+  }
+}
+/**
  * Command to AssociateVpcCidrBlock
  */
 export class AssociateVpcCidrBlockCommand extends Command<
@@ -466,6 +609,51 @@ export class AssociateVpcCidrBlockCommand extends Command<
   constructor(input: AssociateVpcCidrBlockRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(AssociateVpcCidrBlockCommand.metaPath);
+  }
+}
+/**
+ * Command to AttachNetworkInterface
+ */
+export class AttachNetworkInterfaceCommand extends Command<
+  AttachNetworkInterfaceRequest,
+  AttachNetworkInterfaceCommandOutput,
+  'AttachNetworkInterfaceCommand'
+> {
+  static readonly metaPath = '/AttachNetworkInterface/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: AttachNetworkInterfaceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AttachNetworkInterfaceCommand.metaPath);
+  }
+}
+/**
+ * Command to AuthorizeSecurityGroupEgress
+ */
+export class AuthorizeSecurityGroupEgressCommand extends Command<
+  AuthorizeSecurityGroupEgressRequest,
+  AuthorizeSecurityGroupEgressCommandOutput,
+  'AuthorizeSecurityGroupEgressCommand'
+> {
+  static readonly metaPath = '/AuthorizeSecurityGroupEgress/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: AuthorizeSecurityGroupEgressRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AuthorizeSecurityGroupEgressCommand.metaPath);
+  }
+}
+/**
+ * Command to AuthorizeSecurityGroupIngress
+ */
+export class AuthorizeSecurityGroupIngressCommand extends Command<
+  AuthorizeSecurityGroupIngressRequest,
+  AuthorizeSecurityGroupIngressCommandOutput,
+  'AuthorizeSecurityGroupIngressCommand'
+> {
+  static readonly metaPath = '/AuthorizeSecurityGroupIngress/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: AuthorizeSecurityGroupIngressRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AuthorizeSecurityGroupIngressCommand.metaPath);
   }
 }
 /**
@@ -619,6 +807,21 @@ export class CreateNetworkAclCommand extends Command<
   }
 }
 /**
+ * Command to CreateNetworkInterface
+ */
+export class CreateNetworkInterfaceCommand extends Command<
+  CreateNetworkInterfaceRequest,
+  CreateNetworkInterfaceCommandOutput,
+  'CreateNetworkInterfaceCommand'
+> {
+  static readonly metaPath = '/CreateNetworkInterface/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: CreateNetworkInterfaceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateNetworkInterfaceCommand.metaPath);
+  }
+}
+/**
  * Command to CreatePrefixList
  */
 export class CreatePrefixListCommand extends Command<
@@ -631,6 +834,51 @@ export class CreatePrefixListCommand extends Command<
   constructor(input: CreatePrefixListRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreatePrefixListCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateRouteEntry
+ */
+export class CreateRouteEntryCommand extends Command<
+  CreateRouteEntryRequest,
+  CreateRouteEntryCommandOutput,
+  'CreateRouteEntryCommand'
+> {
+  static readonly metaPath = '/CreateRouteEntry/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: CreateRouteEntryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateRouteEntryCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateRouteTable
+ */
+export class CreateRouteTableCommand extends Command<
+  CreateRouteTableRequest,
+  CreateRouteTableCommandOutput,
+  'CreateRouteTableCommand'
+> {
+  static readonly metaPath = '/CreateRouteTable/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: CreateRouteTableRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateRouteTableCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateSecurityGroup
+ */
+export class CreateSecurityGroupCommand extends Command<
+  CreateSecurityGroupRequest,
+  CreateSecurityGroupCommandOutput,
+  'CreateSecurityGroupCommand'
+> {
+  static readonly metaPath = '/CreateSecurityGroup/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: CreateSecurityGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateSecurityGroupCommand.metaPath);
   }
 }
 /**
@@ -874,6 +1122,21 @@ export class DeleteNetworkAclCommand extends Command<
   }
 }
 /**
+ * Command to DeleteNetworkInterface
+ */
+export class DeleteNetworkInterfaceCommand extends Command<
+  DeleteNetworkInterfaceRequest,
+  DeleteNetworkInterfaceCommandOutput,
+  'DeleteNetworkInterfaceCommand'
+> {
+  static readonly metaPath = '/DeleteNetworkInterface/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DeleteNetworkInterfaceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteNetworkInterfaceCommand.metaPath);
+  }
+}
+/**
  * Command to DeletePrefixList
  */
 export class DeletePrefixListCommand extends Command<
@@ -886,6 +1149,51 @@ export class DeletePrefixListCommand extends Command<
   constructor(input: DeletePrefixListRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeletePrefixListCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteRouteEntry
+ */
+export class DeleteRouteEntryCommand extends Command<
+  DeleteRouteEntryRequest,
+  DeleteRouteEntryCommandOutput,
+  'DeleteRouteEntryCommand'
+> {
+  static readonly metaPath = '/DeleteRouteEntry/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DeleteRouteEntryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteRouteEntryCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteRouteTable
+ */
+export class DeleteRouteTableCommand extends Command<
+  DeleteRouteTableRequest,
+  DeleteRouteTableCommandOutput,
+  'DeleteRouteTableCommand'
+> {
+  static readonly metaPath = '/DeleteRouteTable/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DeleteRouteTableRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteRouteTableCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteSecurityGroup
+ */
+export class DeleteSecurityGroupCommand extends Command<
+  DeleteSecurityGroupRequest,
+  DeleteSecurityGroupCommandOutput,
+  'DeleteSecurityGroupCommand'
+> {
+  static readonly metaPath = '/DeleteSecurityGroup/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DeleteSecurityGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteSecurityGroupCommand.metaPath);
   }
 }
 /**
@@ -1006,6 +1314,21 @@ export class DescribeEipAddressAttributesCommand extends Command<
   constructor(input: DescribeEipAddressAttributesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeEipAddressAttributesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeEipAddresses
+ */
+export class DescribeEipAddressesCommand extends Command<
+  DescribeEipAddressesRequest,
+  DescribeEipAddressesCommandOutput,
+  'DescribeEipAddressesCommand'
+> {
+  static readonly metaPath = '/DescribeEipAddresses/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeEipAddressesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeEipAddressesCommand.metaPath);
   }
 }
 /**
@@ -1204,6 +1527,36 @@ export class DescribeNetworkAclsCommand extends Command<
   }
 }
 /**
+ * Command to DescribeNetworkInterfaceAttributes
+ */
+export class DescribeNetworkInterfaceAttributesCommand extends Command<
+  DescribeNetworkInterfaceAttributesRequest,
+  DescribeNetworkInterfaceAttributesCommandOutput,
+  'DescribeNetworkInterfaceAttributesCommand'
+> {
+  static readonly metaPath = '/DescribeNetworkInterfaceAttributes/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeNetworkInterfaceAttributesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeNetworkInterfaceAttributesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeNetworkInterfaces
+ */
+export class DescribeNetworkInterfacesCommand extends Command<
+  DescribeNetworkInterfacesRequest,
+  DescribeNetworkInterfacesCommandOutput,
+  'DescribeNetworkInterfacesCommand'
+> {
+  static readonly metaPath = '/DescribeNetworkInterfaces/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeNetworkInterfacesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeNetworkInterfacesCommand.metaPath);
+  }
+}
+/**
  * Command to DescribePrefixListAssociations
  */
 export class DescribePrefixListAssociationsCommand extends Command<
@@ -1249,6 +1602,36 @@ export class DescribePrefixListsCommand extends Command<
   }
 }
 /**
+ * Command to DescribeRouteEntryList
+ */
+export class DescribeRouteEntryListCommand extends Command<
+  DescribeRouteEntryListRequest,
+  DescribeRouteEntryListCommandOutput,
+  'DescribeRouteEntryListCommand'
+> {
+  static readonly metaPath = '/DescribeRouteEntryList/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeRouteEntryListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeRouteEntryListCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeRouteTableList
+ */
+export class DescribeRouteTableListCommand extends Command<
+  DescribeRouteTableListRequest,
+  DescribeRouteTableListCommandOutput,
+  'DescribeRouteTableListCommand'
+> {
+  static readonly metaPath = '/DescribeRouteTableList/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeRouteTableListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeRouteTableListCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeSecurityGroupAttributes
  */
 export class DescribeSecurityGroupAttributesCommand extends Command<
@@ -1261,6 +1644,21 @@ export class DescribeSecurityGroupAttributesCommand extends Command<
   constructor(input: DescribeSecurityGroupAttributesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeSecurityGroupAttributesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeSecurityGroups
+ */
+export class DescribeSecurityGroupsCommand extends Command<
+  DescribeSecurityGroupsRequest,
+  DescribeSecurityGroupsCommandOutput,
+  'DescribeSecurityGroupsCommand'
+> {
+  static readonly metaPath = '/DescribeSecurityGroups/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeSecurityGroupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeSecurityGroupsCommand.metaPath);
   }
 }
 /**
@@ -1369,6 +1767,36 @@ export class DescribeVpcsCommand extends Command<
   }
 }
 /**
+ * Command to DetachNetworkInterface
+ */
+export class DetachNetworkInterfaceCommand extends Command<
+  DetachNetworkInterfaceRequest,
+  DetachNetworkInterfaceCommandOutput,
+  'DetachNetworkInterfaceCommand'
+> {
+  static readonly metaPath = '/DetachNetworkInterface/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DetachNetworkInterfaceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DetachNetworkInterfaceCommand.metaPath);
+  }
+}
+/**
+ * Command to DisassociateEipAddress
+ */
+export class DisassociateEipAddressCommand extends Command<
+  DisassociateEipAddressRequest,
+  DisassociateEipAddressCommandOutput,
+  'DisassociateEipAddressCommand'
+> {
+  static readonly metaPath = '/DisassociateEipAddress/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DisassociateEipAddressRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisassociateEipAddressCommand.metaPath);
+  }
+}
+/**
  * Command to DisassociateHaVip
  */
 export class DisassociateHaVipCommand extends Command<
@@ -1396,6 +1824,21 @@ export class DisassociateNetworkAclCommand extends Command<
   constructor(input: DisassociateNetworkAclRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DisassociateNetworkAclCommand.metaPath);
+  }
+}
+/**
+ * Command to DisassociateRouteTable
+ */
+export class DisassociateRouteTableCommand extends Command<
+  DisassociateRouteTableRequest,
+  DisassociateRouteTableCommandOutput,
+  'DisassociateRouteTableCommand'
+> {
+  static readonly metaPath = '/DisassociateRouteTable/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DisassociateRouteTableRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisassociateRouteTableCommand.metaPath);
   }
 }
 /**
@@ -1471,6 +1914,21 @@ export class ModifyBandwidthPackageSpecCommand extends Command<
   constructor(input: ModifyBandwidthPackageSpecRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ModifyBandwidthPackageSpecCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyEipAddressAttributes
+ */
+export class ModifyEipAddressAttributesCommand extends Command<
+  ModifyEipAddressAttributesRequest,
+  ModifyEipAddressAttributesCommandOutput,
+  'ModifyEipAddressAttributesCommand'
+> {
+  static readonly metaPath = '/ModifyEipAddressAttributes/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifyEipAddressAttributesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyEipAddressAttributesCommand.metaPath);
   }
 }
 /**
@@ -1609,6 +2067,21 @@ export class ModifyNetworkAclAttributesCommand extends Command<
   }
 }
 /**
+ * Command to ModifyNetworkInterfaceAttributes
+ */
+export class ModifyNetworkInterfaceAttributesCommand extends Command<
+  ModifyNetworkInterfaceAttributesRequest,
+  ModifyNetworkInterfaceAttributesCommandOutput,
+  'ModifyNetworkInterfaceAttributesCommand'
+> {
+  static readonly metaPath = '/ModifyNetworkInterfaceAttributes/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifyNetworkInterfaceAttributesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyNetworkInterfaceAttributesCommand.metaPath);
+  }
+}
+/**
  * Command to ModifyPrefixList
  */
 export class ModifyPrefixListCommand extends Command<
@@ -1621,6 +2094,81 @@ export class ModifyPrefixListCommand extends Command<
   constructor(input: ModifyPrefixListRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ModifyPrefixListCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyRouteEntry
+ */
+export class ModifyRouteEntryCommand extends Command<
+  ModifyRouteEntryRequest,
+  ModifyRouteEntryCommandOutput,
+  'ModifyRouteEntryCommand'
+> {
+  static readonly metaPath = '/ModifyRouteEntry/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifyRouteEntryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyRouteEntryCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyRouteTableAttributes
+ */
+export class ModifyRouteTableAttributesCommand extends Command<
+  ModifyRouteTableAttributesRequest,
+  ModifyRouteTableAttributesCommandOutput,
+  'ModifyRouteTableAttributesCommand'
+> {
+  static readonly metaPath = '/ModifyRouteTableAttributes/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifyRouteTableAttributesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyRouteTableAttributesCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifySecurityGroupAttributes
+ */
+export class ModifySecurityGroupAttributesCommand extends Command<
+  ModifySecurityGroupAttributesRequest,
+  ModifySecurityGroupAttributesCommandOutput,
+  'ModifySecurityGroupAttributesCommand'
+> {
+  static readonly metaPath = '/ModifySecurityGroupAttributes/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifySecurityGroupAttributesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifySecurityGroupAttributesCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifySecurityGroupRuleDescriptionsEgress
+ */
+export class ModifySecurityGroupRuleDescriptionsEgressCommand extends Command<
+  ModifySecurityGroupRuleDescriptionsEgressRequest,
+  ModifySecurityGroupRuleDescriptionsEgressCommandOutput,
+  'ModifySecurityGroupRuleDescriptionsEgressCommand'
+> {
+  static readonly metaPath = '/ModifySecurityGroupRuleDescriptionsEgress/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifySecurityGroupRuleDescriptionsEgressRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifySecurityGroupRuleDescriptionsEgressCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifySecurityGroupRuleDescriptionsIngress
+ */
+export class ModifySecurityGroupRuleDescriptionsIngressCommand extends Command<
+  ModifySecurityGroupRuleDescriptionsIngressRequest,
+  ModifySecurityGroupRuleDescriptionsIngressCommandOutput,
+  'ModifySecurityGroupRuleDescriptionsIngressCommand'
+> {
+  static readonly metaPath = '/ModifySecurityGroupRuleDescriptionsIngress/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifySecurityGroupRuleDescriptionsIngressRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifySecurityGroupRuleDescriptionsIngressCommand.metaPath);
   }
 }
 /**
@@ -1714,6 +2262,21 @@ export class ModifyVpcAttributesCommand extends Command<
   }
 }
 /**
+ * Command to ReleaseEipAddress
+ */
+export class ReleaseEipAddressCommand extends Command<
+  ReleaseEipAddressRequest,
+  ReleaseEipAddressCommandOutput,
+  'ReleaseEipAddressCommand'
+> {
+  static readonly metaPath = '/ReleaseEipAddress/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ReleaseEipAddressRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ReleaseEipAddressCommand.metaPath);
+  }
+}
+/**
  * Command to ReleaseIpv6AddressBandwidth
  */
 export class ReleaseIpv6AddressBandwidthCommand extends Command<
@@ -1741,6 +2304,36 @@ export class RemoveBandwidthPackageIpCommand extends Command<
   constructor(input: RemoveBandwidthPackageIpRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(RemoveBandwidthPackageIpCommand.metaPath);
+  }
+}
+/**
+ * Command to RevokeSecurityGroupEgress
+ */
+export class RevokeSecurityGroupEgressCommand extends Command<
+  RevokeSecurityGroupEgressRequest,
+  RevokeSecurityGroupEgressCommandOutput,
+  'RevokeSecurityGroupEgressCommand'
+> {
+  static readonly metaPath = '/RevokeSecurityGroupEgress/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: RevokeSecurityGroupEgressRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RevokeSecurityGroupEgressCommand.metaPath);
+  }
+}
+/**
+ * Command to RevokeSecurityGroupIngress
+ */
+export class RevokeSecurityGroupIngressCommand extends Command<
+  RevokeSecurityGroupIngressRequest,
+  RevokeSecurityGroupIngressCommandOutput,
+  'RevokeSecurityGroupIngressCommand'
+> {
+  static readonly metaPath = '/RevokeSecurityGroupIngress/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: RevokeSecurityGroupIngressRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RevokeSecurityGroupIngressCommand.metaPath);
   }
 }
 /**
@@ -1839,12 +2432,18 @@ export default {
   ActiveFlowLogCommand,
   AddBandwidthPackageIpCommand,
   AddIpAddressPoolCidrBlockCommand,
+  AllocateEipAddressCommand,
   AllocateIpv6AddressBandwidthCommand,
   AssignIpv6AddressesCommand,
   AssignPrivateIpAddressesCommand,
+  AssociateEipAddressCommand,
   AssociateHaVipCommand,
   AssociateNetworkAclCommand,
+  AssociateRouteTableCommand,
   AssociateVpcCidrBlockCommand,
+  AttachNetworkInterfaceCommand,
+  AuthorizeSecurityGroupEgressCommand,
+  AuthorizeSecurityGroupIngressCommand,
   CancelBandwidthPackageEipBandwidthCommand,
   ConvertEipAddressBillingTypeCommand,
   CreateBandwidthPackageCommand,
@@ -1855,7 +2454,11 @@ export default {
   CreateIpv6EgressOnlyRuleCommand,
   CreateIpv6GatewayCommand,
   CreateNetworkAclCommand,
+  CreateNetworkInterfaceCommand,
   CreatePrefixListCommand,
+  CreateRouteEntryCommand,
+  CreateRouteTableCommand,
+  CreateSecurityGroupCommand,
   CreateSubnetCommand,
   CreateTrafficMirrorFilterCommand,
   CreateTrafficMirrorFilterRuleCommand,
@@ -1872,7 +2475,11 @@ export default {
   DeleteIpv6EgressOnlyRuleCommand,
   DeleteIpv6GatewayCommand,
   DeleteNetworkAclCommand,
+  DeleteNetworkInterfaceCommand,
   DeletePrefixListCommand,
+  DeleteRouteEntryCommand,
+  DeleteRouteTableCommand,
+  DeleteSecurityGroupCommand,
   DeleteSubnetCommand,
   DeleteTrafficMirrorFilterCommand,
   DeleteTrafficMirrorFilterRuleCommand,
@@ -1881,6 +2488,7 @@ export default {
   DeleteVpcCommand,
   DescribeBandwidthPackagesCommand,
   DescribeEipAddressAttributesCommand,
+  DescribeEipAddressesCommand,
   DescribeFlowLogsCommand,
   DescribeHaVipsCommand,
   DescribeInstanceGroupsCommand,
@@ -1894,10 +2502,15 @@ export default {
   DescribeIpv6GatewaysCommand,
   DescribeNetworkAclAttributesCommand,
   DescribeNetworkAclsCommand,
+  DescribeNetworkInterfaceAttributesCommand,
+  DescribeNetworkInterfacesCommand,
   DescribePrefixListAssociationsCommand,
   DescribePrefixListEntriesCommand,
   DescribePrefixListsCommand,
+  DescribeRouteEntryListCommand,
+  DescribeRouteTableListCommand,
   DescribeSecurityGroupAttributesCommand,
+  DescribeSecurityGroupsCommand,
   DescribeSubnetAttributesCommand,
   DescribeSubnetsCommand,
   DescribeTrafficMirrorFiltersCommand,
@@ -1905,13 +2518,17 @@ export default {
   DescribeTrafficMirrorTargetsCommand,
   DescribeVpcAttributesCommand,
   DescribeVpcsCommand,
+  DetachNetworkInterfaceCommand,
+  DisassociateEipAddressCommand,
   DisassociateHaVipCommand,
   DisassociateNetworkAclCommand,
+  DisassociateRouteTableCommand,
   DisassociateVpcCidrBlockCommand,
   ListTagsForResourcesCommand,
   ModifyBandwidthPackageAttributesCommand,
   ModifyBandwidthPackageEipBandwidthCommand,
   ModifyBandwidthPackageSpecCommand,
+  ModifyEipAddressAttributesCommand,
   ModifyFlowLogAttributeCommand,
   ModifyHaVipAttributesCommand,
   ModifyInstanceGroupAttributesCommand,
@@ -1921,15 +2538,24 @@ export default {
   ModifyIpv6EgressOnlyRuleAttributeCommand,
   ModifyIpv6GatewayAttributeCommand,
   ModifyNetworkAclAttributesCommand,
+  ModifyNetworkInterfaceAttributesCommand,
   ModifyPrefixListCommand,
+  ModifyRouteEntryCommand,
+  ModifyRouteTableAttributesCommand,
+  ModifySecurityGroupAttributesCommand,
+  ModifySecurityGroupRuleDescriptionsEgressCommand,
+  ModifySecurityGroupRuleDescriptionsIngressCommand,
   ModifySubnetAttributesCommand,
   ModifyTrafficMirrorFilterAttributesCommand,
   ModifyTrafficMirrorFilterRuleAttributesCommand,
   ModifyTrafficMirrorSessionAttributesCommand,
   ModifyTrafficMirrorTargetAttributesCommand,
   ModifyVpcAttributesCommand,
+  ReleaseEipAddressCommand,
   ReleaseIpv6AddressBandwidthCommand,
   RemoveBandwidthPackageIpCommand,
+  RevokeSecurityGroupEgressCommand,
+  RevokeSecurityGroupIngressCommand,
   TagResourcesCommand,
   TemporaryUpgradeEipAddressCommand,
   UnassignIpv6AddressesCommand,
