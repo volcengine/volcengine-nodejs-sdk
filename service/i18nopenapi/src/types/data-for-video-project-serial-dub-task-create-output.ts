@@ -13,6 +13,7 @@
  */
 
 import { BaseRespForVideoProjectSerialDubTaskCreateOutput } from './base-resp-for-video-project-serial-dub-task-create-output';
+import { SubtitleFileCheckReportForVideoProjectSerialDubTaskCreateOutput } from './subtitle-file-check-report-for-video-project-serial-dub-task-create-output';
  /**
  * 
  *
@@ -26,6 +27,12 @@ export interface DataForVideoProjectSerialDubTaskCreateOutput {
      * @memberof DataForVideoProjectSerialDubTaskCreateOutput
      */
     BaseResp?: BaseRespForVideoProjectSerialDubTaskCreateOutput;
+
+    /**
+     * @type {Array<SubtitleFileCheckReportForVideoProjectSerialDubTaskCreateOutput>}
+     * @memberof DataForVideoProjectSerialDubTaskCreateOutput
+     */
+    SubtitleFileCheckReports?: Array<SubtitleFileCheckReportForVideoProjectSerialDubTaskCreateOutput>;
 
     /**
      * @type {Array<string>}
