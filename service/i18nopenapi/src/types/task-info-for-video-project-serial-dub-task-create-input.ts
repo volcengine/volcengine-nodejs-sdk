@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { SuppressionParamsForVideoProjectSerialDubTaskCreateInput } from './suppression-params-for-video-project-serial-dub-task-create-input';
 import { TargetStyleMapForVideoProjectSerialDubTaskCreateInput } from './target-style-map-for-video-project-serial-dub-task-create-input';
  /**
  * 
@@ -110,6 +111,12 @@ export interface TaskInfoForVideoProjectSerialDubTaskCreateInput {
      * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
      */
     sourceLang?: string;
+
+    /**
+     * @type {SuppressionParamsForVideoProjectSerialDubTaskCreateInput}
+     * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
+     */
+    suppressionParams?: SuppressionParamsForVideoProjectSerialDubTaskCreateInput;
 
     /**
      * @type {Array<string>}

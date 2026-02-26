@@ -1,6 +1,6 @@
 {
   "name": "@volcengine/i18nopenapi",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "swagger client for @volcengine/i18nopenapi",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
