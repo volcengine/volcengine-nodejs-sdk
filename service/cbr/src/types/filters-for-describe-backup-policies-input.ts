@@ -21,10 +21,10 @@
 export interface FiltersForDescribeBackupPoliciesInput {
 
     /**
-     * @type {boolean}
+     * @type {string}
      * @memberof FiltersForDescribeBackupPoliciesInput
      */
-    EnablePolicy?: boolean;
+    EnablePolicy?: string;
 
     /**
      * @type {string}

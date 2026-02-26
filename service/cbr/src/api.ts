@@ -103,7 +103,6 @@ export type UpdateBackupPolicyCommandOutput = CommandOutput<UpdateBackupPolicyRe
 export type UpdateRecoveryPointCommandOutput = CommandOutput<UpdateRecoveryPointResponse>;
 export type UpdateRestoreJobCommandOutput = CommandOutput<UpdateRestoreJobResponse>;
 
-
 /**
  * CBRClient Service Client
  */
