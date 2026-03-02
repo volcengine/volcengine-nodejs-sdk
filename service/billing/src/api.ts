@@ -30,6 +30,8 @@ import { DeleteBudgetRequest } from './types/index';
 import { DeleteBudgetResponse } from './types/index';
 import { DeleteFinancialRelationRequest } from './types/index';
 import { DeleteFinancialRelationResponse } from './types/index';
+import { GetFilterInfoForCostAnalysisRequest } from './types/index';
+import { GetFilterInfoForCostAnalysisResponse } from './types/index';
 import { GetOrderRequest } from './types/index';
 import { GetOrderResponse } from './types/index';
 import { HandleInvitationRequest } from './types/index';
@@ -74,6 +76,8 @@ import { ListBudgetFilterZoneCodeRequest } from './types/index';
 import { ListBudgetFilterZoneCodeResponse } from './types/index';
 import { ListBudgetRequest } from './types/index';
 import { ListBudgetResponse } from './types/index';
+import { ListCostAnalysisOpenApiRequest } from './types/index';
+import { ListCostAnalysisOpenApiResponse } from './types/index';
 import { ListCouponUsageRecordsRequest } from './types/index';
 import { ListCouponUsageRecordsResponse } from './types/index';
 import { ListCouponsRequest } from './types/index';
@@ -106,6 +110,8 @@ import { QueryPriceForRenewRequest } from './types/index';
 import { QueryPriceForRenewResponse } from './types/index';
 import { QueryPriceForSubscriptionRequest } from './types/index';
 import { QueryPriceForSubscriptionResponse } from './types/index';
+import { QueryTagValueByTagKeyRequest } from './types/index';
+import { QueryTagValueByTagKeyResponse } from './types/index';
 import { RenewInstanceRequest } from './types/index';
 import { RenewInstanceResponse } from './types/index';
 import { SetRenewalTypeRequest } from './types/index';
@@ -128,6 +134,7 @@ export type CreateBudgetCommandOutput = CommandOutput<CreateBudgetResponse>;
 export type CreateFinancialRelationCommandOutput = CommandOutput<CreateFinancialRelationResponse>;
 export type DeleteBudgetCommandOutput = CommandOutput<DeleteBudgetResponse>;
 export type DeleteFinancialRelationCommandOutput = CommandOutput<DeleteFinancialRelationResponse>;
+export type GetFilterInfoForCostAnalysisCommandOutput = CommandOutput<GetFilterInfoForCostAnalysisResponse>;
 export type GetOrderCommandOutput = CommandOutput<GetOrderResponse>;
 export type HandleInvitationCommandOutput = CommandOutput<HandleInvitationResponse>;
 export type ListAmortizedCostBillDailyCommandOutput = CommandOutput<ListAmortizedCostBillDailyResponse>;
@@ -150,6 +157,7 @@ export type ListBudgetFilterSubjectInfoCommandOutput = CommandOutput<ListBudgetF
 export type ListBudgetFilterTagKeyCommandOutput = CommandOutput<ListBudgetFilterTagKeyResponse>;
 export type ListBudgetFilterTagValueCommandOutput = CommandOutput<ListBudgetFilterTagValueResponse>;
 export type ListBudgetFilterZoneCodeCommandOutput = CommandOutput<ListBudgetFilterZoneCodeResponse>;
+export type ListCostAnalysisOpenApiCommandOutput = CommandOutput<ListCostAnalysisOpenApiResponse>;
 export type ListCouponUsageRecordsCommandOutput = CommandOutput<ListCouponUsageRecordsResponse>;
 export type ListCouponsCommandOutput = CommandOutput<ListCouponsResponse>;
 export type ListFinancialRelationCommandOutput = CommandOutput<ListFinancialRelationResponse>;
@@ -166,6 +174,7 @@ export type QueryBudgetDetailCommandOutput = CommandOutput<QueryBudgetDetailResp
 export type QueryPriceForPayAsYouGoCommandOutput = CommandOutput<QueryPriceForPayAsYouGoResponse>;
 export type QueryPriceForRenewCommandOutput = CommandOutput<QueryPriceForRenewResponse>;
 export type QueryPriceForSubscriptionCommandOutput = CommandOutput<QueryPriceForSubscriptionResponse>;
+export type QueryTagValueByTagKeyCommandOutput = CommandOutput<QueryTagValueByTagKeyResponse>;
 export type RenewInstanceCommandOutput = CommandOutput<RenewInstanceResponse>;
 export type SetRenewalTypeCommandOutput = CommandOutput<SetRenewalTypeResponse>;
 export type UnsubscribeInstanceCommandOutput = CommandOutput<UnsubscribeInstanceResponse>;
@@ -303,6 +312,21 @@ export class DeleteFinancialRelationCommand extends Command<
   constructor(input: DeleteFinancialRelationRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteFinancialRelationCommand.metaPath);
+  }
+}
+/**
+ * Command to GetFilterInfoForCostAnalysis
+ */
+export class GetFilterInfoForCostAnalysisCommand extends Command<
+  GetFilterInfoForCostAnalysisRequest,
+  GetFilterInfoForCostAnalysisCommandOutput,
+  'GetFilterInfoForCostAnalysisCommand'
+> {
+  static readonly metaPath = '/GetFilterInfoForCostAnalysis/2022-01-01/billing/post/application_json/';
+
+  constructor(input: GetFilterInfoForCostAnalysisRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFilterInfoForCostAnalysisCommand.metaPath);
   }
 }
 /**
@@ -636,6 +660,21 @@ export class ListBudgetFilterZoneCodeCommand extends Command<
   }
 }
 /**
+ * Command to ListCostAnalysisOpenApi
+ */
+export class ListCostAnalysisOpenApiCommand extends Command<
+  ListCostAnalysisOpenApiRequest,
+  ListCostAnalysisOpenApiCommandOutput,
+  'ListCostAnalysisOpenApiCommand'
+> {
+  static readonly metaPath = '/ListCostAnalysisOpenApi/2022-01-01/billing/post/application_json/';
+
+  constructor(input: ListCostAnalysisOpenApiRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListCostAnalysisOpenApiCommand.metaPath);
+  }
+}
+/**
  * Command to ListCouponUsageRecords
  */
 export class ListCouponUsageRecordsCommand extends Command<
@@ -876,6 +915,21 @@ export class QueryPriceForSubscriptionCommand extends Command<
   }
 }
 /**
+ * Command to QueryTagValueByTagKey
+ */
+export class QueryTagValueByTagKeyCommand extends Command<
+  QueryTagValueByTagKeyRequest,
+  QueryTagValueByTagKeyCommandOutput,
+  'QueryTagValueByTagKeyCommand'
+> {
+  static readonly metaPath = '/QueryTagValueByTagKey/2022-01-01/billing/post/application_json/';
+
+  constructor(input: QueryTagValueByTagKeyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(QueryTagValueByTagKeyCommand.metaPath);
+  }
+}
+/**
  * Command to RenewInstance
  */
 export class RenewInstanceCommand extends Command<
@@ -961,6 +1015,7 @@ export default {
   CreateFinancialRelationCommand,
   DeleteBudgetCommand,
   DeleteFinancialRelationCommand,
+  GetFilterInfoForCostAnalysisCommand,
   GetOrderCommand,
   HandleInvitationCommand,
   ListAmortizedCostBillDailyCommand,
@@ -983,6 +1038,7 @@ export default {
   ListBudgetFilterTagKeyCommand,
   ListBudgetFilterTagValueCommand,
   ListBudgetFilterZoneCodeCommand,
+  ListCostAnalysisOpenApiCommand,
   ListCouponUsageRecordsCommand,
   ListCouponsCommand,
   ListFinancialRelationCommand,
@@ -999,6 +1055,7 @@ export default {
   QueryPriceForPayAsYouGoCommand,
   QueryPriceForRenewCommand,
   QueryPriceForSubscriptionCommand,
+  QueryTagValueByTagKeyCommand,
   RenewInstanceCommand,
   SetRenewalTypeCommand,
   UnsubscribeInstanceCommand,
