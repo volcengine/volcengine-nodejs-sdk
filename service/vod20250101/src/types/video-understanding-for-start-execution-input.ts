@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertSegmentForStartExecutionInput } from './convert-segment-for-start-execution-input';
+import { ConvertConvertSegmentForStartExecutionInput } from './convert-convert-segment-for-start-execution-input';
 import { ModelForStartExecutionInput } from './model-for-start-execution-input';
  /**
  * 
@@ -35,10 +35,10 @@ export interface VideoUnderstandingForStartExecutionInput {
     Prompt?: string;
 
     /**
-     * @type {ConvertSegmentForStartExecutionInput}
+     * @type {ConvertConvertSegmentForStartExecutionInput}
      * @memberof VideoUnderstandingForStartExecutionInput
      */
-    Segment?: ConvertSegmentForStartExecutionInput;
+    Segment?: ConvertConvertSegmentForStartExecutionInput;
 
     /**
      * @type {boolean}

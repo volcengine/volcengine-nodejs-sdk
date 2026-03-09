@@ -24,17 +24,11 @@ export interface ConvertClipForGetExecutionOutput {
      * @type {number}
      * @memberof ConvertClipForGetExecutionOutput
      */
-    End?: number;
+    EndTime?: number;
 
     /**
      * @type {number}
      * @memberof ConvertClipForGetExecutionOutput
      */
-    Start?: number;
-
-    /**
-     * @type {number}
-     * @memberof ConvertClipForGetExecutionOutput
-     */
-    VideoIndex?: number;
+    StartTime?: number;
 }

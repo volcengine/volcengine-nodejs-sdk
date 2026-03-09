@@ -21,50 +21,14 @@
 export interface ConvertConvertConvertSegmentForGetExecutionOutput {
 
     /**
-     * @type {string}
-     * @memberof ConvertConvertConvertSegmentForGetExecutionOutput
-     */
-    Description?: string;
-
-    /**
      * @type {number}
      * @memberof ConvertConvertConvertSegmentForGetExecutionOutput
      */
     End?: number;
 
     /**
-     * @type {string}
-     * @memberof ConvertConvertConvertSegmentForGetExecutionOutput
-     */
-    Location?: string;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertConvertSegmentForGetExecutionOutput
-     */
-    Ocr?: string;
-
-    /**
-     * @type {number}
-     * @memberof ConvertConvertConvertSegmentForGetExecutionOutput
-     */
-    Score?: number;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertConvertSegmentForGetExecutionOutput
-     */
-    Shot?: string;
-
-    /**
      * @type {number}
      * @memberof ConvertConvertConvertSegmentForGetExecutionOutput
      */
     Start?: number;
-
-    /**
-     * @type {number}
-     * @memberof ConvertConvertConvertSegmentForGetExecutionOutput
-     */
-    VideoIndex?: number;
 }

@@ -13,7 +13,7 @@
  */
 
 import { AudioStreamMetaForGetExecutionOutput } from './audio-stream-meta-for-get-execution-output';
-import { EncryptionForGetExecutionOutput } from './encryption-for-get-execution-output';
+import { ConvertEncryptionForGetExecutionOutput } from './convert-encryption-for-get-execution-output';
 import { VideoStreamMetaForGetExecutionOutput } from './video-stream-meta-for-get-execution-output';
  /**
  * 
@@ -60,10 +60,10 @@ export interface ConvertTranscodeAudioForGetExecutionOutput {
     Encrypt?: boolean;
 
     /**
-     * @type {EncryptionForGetExecutionOutput}
+     * @type {ConvertEncryptionForGetExecutionOutput}
      * @memberof ConvertTranscodeAudioForGetExecutionOutput
      */
-    Encryption?: EncryptionForGetExecutionOutput;
+    Encryption?: ConvertEncryptionForGetExecutionOutput;
 
     /**
      * @type {string}

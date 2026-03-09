@@ -12,7 +12,8 @@
  * Do not edit the class manually.
  */
 
-import { CodecForGetExecutionOutput } from './codec-for-get-execution-output';
+import { AudioForGetExecutionOutput } from './audio-for-get-execution-output';
+import { VideoForGetExecutionOutput } from './video-for-get-execution-output';
  /**
  * 
  *
@@ -22,56 +23,14 @@ import { CodecForGetExecutionOutput } from './codec-for-get-execution-output';
 export interface OutputForGetExecutionOutput {
 
     /**
-     * @type {boolean}
+     * @type {AudioForGetExecutionOutput}
      * @memberof OutputForGetExecutionOutput
      */
-    Alpha?: boolean;
+    Audio?: AudioForGetExecutionOutput;
 
     /**
-     * @type {boolean}
+     * @type {VideoForGetExecutionOutput}
      * @memberof OutputForGetExecutionOutput
      */
-    AudioPhaseDetect?: boolean;
-
-    /**
-     * @type {boolean}
-     * @memberof OutputForGetExecutionOutput
-     */
-    CanvasWithMax?: boolean;
-
-    /**
-     * @type {boolean}
-     * @memberof OutputForGetExecutionOutput
-     */
-    CanvasWithRatio?: boolean;
-
-    /**
-     * @type {CodecForGetExecutionOutput}
-     * @memberof OutputForGetExecutionOutput
-     */
-    Codec?: CodecForGetExecutionOutput;
-
-    /**
-     * @type {boolean}
-     * @memberof OutputForGetExecutionOutput
-     */
-    DisableAudio?: boolean;
-
-    /**
-     * @type {boolean}
-     * @memberof OutputForGetExecutionOutput
-     */
-    DisableVideo?: boolean;
-
-    /**
-     * @type {string}
-     * @memberof OutputForGetExecutionOutput
-     */
-    Format?: string;
-
-    /**
-     * @type {number}
-     * @memberof OutputForGetExecutionOutput
-     */
-    Fps?: number;
+    Video?: VideoForGetExecutionOutput;
 }

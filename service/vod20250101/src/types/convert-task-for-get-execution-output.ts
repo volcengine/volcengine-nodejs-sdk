@@ -12,16 +12,19 @@
  * Do not edit the class manually.
  */
 
+import { ConvertABRTranscodeForGetExecutionOutput } from './convert-abrtranscode-for-get-execution-output';
 import { ConvertAdAuditForGetExecutionOutput } from './convert-ad-audit-for-get-execution-output';
 import { ConvertAsrForGetExecutionOutput } from './convert-asr-for-get-execution-output';
 import { ConvertAudioExtractForGetExecutionOutput } from './convert-audio-extract-for-get-execution-output';
-import { ConvertConvertConvertConvertConvertSegmentForGetExecutionOutput } from './convert-convert-convert-convert-convert-segment-for-get-execution-output';
+import { ConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput } from './convert-convert-convert-convert-convert-convert-segment-for-get-execution-output';
+import { ConvertConvertConvertEnhanceForGetExecutionOutput } from './convert-convert-convert-enhance-for-get-execution-output';
 import { ConvertConvertConvertStorylineForGetExecutionOutput } from './convert-convert-convert-storyline-for-get-execution-output';
-import { ConvertConvertEnhanceForGetExecutionOutput } from './convert-convert-enhance-for-get-execution-output';
+import { ConvertConvertFormatForGetExecutionOutput } from './convert-convert-format-for-get-execution-output';
 import { ConvertEraseForGetExecutionOutput } from './convert-erase-for-get-execution-output';
 import { ConvertFileDeleteForGetExecutionOutput } from './convert-file-delete-for-get-execution-output';
 import { ConvertHighlightForGetExecutionOutput } from './convert-highlight-for-get-execution-output';
 import { ConvertOcrForGetExecutionOutput } from './convert-ocr-for-get-execution-output';
+import { ConvertTranscodeForGetExecutionOutput } from './convert-transcode-for-get-execution-output';
 import { ConvertVideoGenerationForGetExecutionOutput } from './convert-video-generation-for-get-execution-output';
 import { ConvertVideoMattingForGetExecutionOutput } from './convert-video-matting-for-get-execution-output';
 import { ConvertVideoSummaryForGetExecutionOutput } from './convert-video-summary-for-get-execution-output';
@@ -34,6 +37,12 @@ import { ConvertVisionForGetExecutionOutput } from './convert-vision-for-get-exe
  * @interface ConvertTaskForGetExecutionOutput
  */
 export interface ConvertTaskForGetExecutionOutput {
+
+    /**
+     * @type {ConvertABRTranscodeForGetExecutionOutput}
+     * @memberof ConvertTaskForGetExecutionOutput
+     */
+    ABRTranscode?: ConvertABRTranscodeForGetExecutionOutput;
 
     /**
      * @type {ConvertAdAuditForGetExecutionOutput}
@@ -54,10 +63,16 @@ export interface ConvertTaskForGetExecutionOutput {
     AudioExtract?: ConvertAudioExtractForGetExecutionOutput;
 
     /**
-     * @type {ConvertConvertEnhanceForGetExecutionOutput}
+     * @type {ConvertConvertFormatForGetExecutionOutput}
      * @memberof ConvertTaskForGetExecutionOutput
      */
-    Enhance?: ConvertConvertEnhanceForGetExecutionOutput;
+    ConvertFormat?: ConvertConvertFormatForGetExecutionOutput;
+
+    /**
+     * @type {ConvertConvertConvertEnhanceForGetExecutionOutput}
+     * @memberof ConvertTaskForGetExecutionOutput
+     */
+    Enhance?: ConvertConvertConvertEnhanceForGetExecutionOutput;
 
     /**
      * @type {ConvertEraseForGetExecutionOutput}
@@ -84,16 +99,22 @@ export interface ConvertTaskForGetExecutionOutput {
     Ocr?: ConvertOcrForGetExecutionOutput;
 
     /**
-     * @type {ConvertConvertConvertConvertConvertSegmentForGetExecutionOutput}
+     * @type {ConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput}
      * @memberof ConvertTaskForGetExecutionOutput
      */
-    Segment?: ConvertConvertConvertConvertConvertSegmentForGetExecutionOutput;
+    Segment?: ConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput;
 
     /**
      * @type {ConvertConvertConvertStorylineForGetExecutionOutput}
      * @memberof ConvertTaskForGetExecutionOutput
      */
     Storyline?: ConvertConvertConvertStorylineForGetExecutionOutput;
+
+    /**
+     * @type {ConvertTranscodeForGetExecutionOutput}
+     * @memberof ConvertTaskForGetExecutionOutput
+     */
+    Transcode?: ConvertTranscodeForGetExecutionOutput;
 
     /**
      * @type {string}

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertSegmentForGetExecutionOutput } from './convert-segment-for-get-execution-output';
+import { ConvertConvertSegmentForGetExecutionOutput } from './convert-convert-segment-for-get-execution-output';
 import { ModelForGetExecutionOutput } from './model-for-get-execution-output';
  /**
  * 
@@ -35,10 +35,10 @@ export interface VideoUnderstandingForGetExecutionOutput {
     Prompt?: string;
 
     /**
-     * @type {ConvertSegmentForGetExecutionOutput}
+     * @type {ConvertConvertSegmentForGetExecutionOutput}
      * @memberof VideoUnderstandingForGetExecutionOutput
      */
-    Segment?: ConvertSegmentForGetExecutionOutput;
+    Segment?: ConvertConvertSegmentForGetExecutionOutput;
 
     /**
      * @type {boolean}

@@ -13,7 +13,7 @@
  */
 
 import { ControlForGetExecutionOutput } from './control-for-get-execution-output';
-import { ConvertConvertOutputForGetExecutionOutput } from './convert-convert-output-for-get-execution-output';
+import { ConvertConvertConvertOutputForGetExecutionOutput } from './convert-convert-convert-output-for-get-execution-output';
 import { ConvertOperationForGetExecutionOutput } from './convert-operation-for-get-execution-output';
 import { InputForGetExecutionOutput } from './input-for-get-execution-output';
 import { MetaForGetExecutionOutput } from './meta-for-get-execution-output';
@@ -63,10 +63,10 @@ export interface GetExecutionResponse {
     Operation?: ConvertOperationForGetExecutionOutput;
 
     /**
-     * @type {ConvertConvertOutputForGetExecutionOutput}
+     * @type {ConvertConvertConvertOutputForGetExecutionOutput}
      * @memberof GetExecutionResponse
      */
-    Output?: ConvertConvertOutputForGetExecutionOutput;
+    Output?: ConvertConvertConvertOutputForGetExecutionOutput;
 
     /**
      * @type {string}
