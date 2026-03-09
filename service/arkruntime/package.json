@@ -1,6 +1,6 @@
 {
   "name": "@volcengine/ark-runtime",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "files": [
     "dist",
     "src",
