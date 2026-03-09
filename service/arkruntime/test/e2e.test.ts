@@ -3,7 +3,7 @@
  * Run with: ARK_E2E=1 npx jest --testPathPattern=e2e
  */
 
-const API_KEY = "4f7dc464-371a-49a1-8502-093056d9a958";
+const API_KEY = "your-api-key";
 const MODEL = "doubao-seed-2-0-pro-260215";
 
 // Skip if not in E2E mode
@@ -22,9 +22,7 @@ describeE2E("E2E: Chat Completions", () => {
   it("should create a chat completion", async () => {
     const response = await client.createChatCompletion({
       model: MODEL,
-      messages: [
-        { role: "user", content: "请回答1+1等于几，只回答数字" },
-      ],
+      messages: [{ role: "user", content: "请回答1+1等于几，只回答数字" }],
     });
 
     expect(response).toBeDefined();
@@ -39,9 +37,7 @@ describeE2E("E2E: Chat Completions", () => {
   it("should stream a chat completion", async () => {
     const stream = await client.createChatCompletionStream({
       model: MODEL,
-      messages: [
-        { role: "user", content: "请回答1+1等于几，只回答数字" },
-      ],
+      messages: [{ role: "user", content: "请回答1+1等于几，只回答数字" }],
     });
 
     const chunks: string[] = [];
