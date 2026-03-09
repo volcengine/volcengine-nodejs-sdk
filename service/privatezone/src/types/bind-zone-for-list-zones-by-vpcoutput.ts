@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface CreateAuthorizedUserRequest
+ * @interface BindZoneForListZonesByVPCOutput
  */
-export interface CreateAuthorizedUserRequest {
+export interface BindZoneForListZonesByVPCOutput {
 
     /**
      * @type {string}
-     * @memberof CreateAuthorizedUserRequest
+     * @memberof BindZoneForListZonesByVPCOutput
      */
-    AccountID: string;
+    AccountID?: string;
 
     /**
      * @type {number}
-     * @memberof CreateAuthorizedUserRequest
+     * @memberof BindZoneForListZonesByVPCOutput
      */
-    AuthType: number;
-
-    /**
-     * @type {string}
-     * @memberof CreateAuthorizedUserRequest
-     */
-    VerifyCode?: string;
+    ZID?: number;
 }

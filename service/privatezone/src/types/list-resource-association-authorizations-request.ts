@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface CreateAuthorizedUserRequest
+ * @interface ListResourceAssociationAuthorizationsRequest
  */
-export interface CreateAuthorizedUserRequest {
-
-    /**
-     * @type {string}
-     * @memberof CreateAuthorizedUserRequest
-     */
-    AccountID: string;
+export interface ListResourceAssociationAuthorizationsRequest {
 
     /**
      * @type {number}
-     * @memberof CreateAuthorizedUserRequest
+     * @memberof ListResourceAssociationAuthorizationsRequest
      */
-    AuthType: number;
+    PageNumber?: number;
 
     /**
-     * @type {string}
-     * @memberof CreateAuthorizedUserRequest
+     * @type {number}
+     * @memberof ListResourceAssociationAuthorizationsRequest
      */
-    VerifyCode?: string;
+    PageSize?: number;
+
+    /**
+     * @type {number}
+     * @memberof ListResourceAssociationAuthorizationsRequest
+     */
+    ZID?: number;
 }
