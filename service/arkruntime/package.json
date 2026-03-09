@@ -43,8 +43,5 @@
     "ts-jest": "^29.4.5",
     "typescript": "^5.2.2"
   },
-  "sideEffects": false,
-  "publishConfig": {
-    "registry": "https://bnpm.byted.org"
-  }
+  "sideEffects": false
 }
