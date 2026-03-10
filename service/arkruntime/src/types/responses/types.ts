@@ -304,7 +304,7 @@ export interface ItemFunctionWebSearch {
 // ---------------------------------------------------------------------------
 
 export interface ResponseImageProcessAction {
-  type: string;
+  type: ResponseImageProcessType;
   result_image_url?: string;
 }
 

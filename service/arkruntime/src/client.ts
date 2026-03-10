@@ -735,10 +735,8 @@ export class ArkRuntimeClient {
       mergedOpts,
     );
 
-    // Retrieve keyNonce for stream decryption
-    const keyNonce = this.keyNonceMap.get(
-      headers[ClientRequestHeader.toLowerCase()] ?? requestId,
-    );
+    // Retrieve keyNonce for stream decryption (use local requestId to match encryptRequestBody's store key)
+    const keyNonce = this.keyNonceMap.get(requestId);
     const cleanup = keyNonce
       ? () => { this.keyNonceMap.delete(requestId); }
       : undefined;

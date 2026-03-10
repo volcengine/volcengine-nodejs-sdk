@@ -3,7 +3,6 @@
  * 对齐 Go SDK: example/responses/basic/main.go
  */
 import { ArkRuntimeClient } from "@volcengine/ark-runtime";
-import type { responses } from "@volcengine/ark-runtime";
 
 const client = ArkRuntimeClient.withApiKey(process.env.ARK_API_KEY!);
 const MODEL = "doubao-seed-2-0-pro-260215";
