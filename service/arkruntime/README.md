@@ -101,5 +101,4 @@ try {
 ```
 
 ## 文档
-- [测试报告](./TEST_REPORT.md)：功能对齐、性能测试结果
-- 完整示例：参考 [example](../example/) 目录
+- 完整示例：参考 [example](./example/) 目录

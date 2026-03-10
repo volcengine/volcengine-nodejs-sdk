@@ -14,15 +14,12 @@ pnpm add @volcengine/ark-runtime
 
 ```bash
 export ARK_API_KEY="your-api-key"
-# 或使用 AK/SK 鉴权
-export VOLC_ACCESSKEY="your-access-key"
-export VOLC_SECRETKEY="your-secret-key"
 ```
 
 ## 运行示例
 
 ```bash
-npx ts-node example/chat-completion.ts
+npx ts-node chat-completion.ts
 ```
 
 ## 示例列表
@@ -90,13 +87,23 @@ npx ts-node example/chat-completion.ts
 ```typescript
 import { ArkRuntimeClient } from "@volcengine/ark-runtime";
 
+// 方式1：静态方法
 const client = ArkRuntimeClient.withApiKey("your-api-key");
+
+// 方式2：从环境变量读取
+const client = new ArkRuntimeClient({
+  apiKey: process.env.ARK_API_KEY!,
+});
 ```
 
 ### AK/SK（IAM 鉴权）
 
 ```typescript
-const client = ArkRuntimeClient.withAkSk("access-key", "secret-key");
+// AK/SK 需要从环境变量读取后手动传入
+const client = ArkRuntimeClient.withAkSk(
+  process.env.VOLC_ACCESSKEY!,
+  process.env.VOLC_SECRETKEY!
+);
 ```
 
 ### 构造函数
