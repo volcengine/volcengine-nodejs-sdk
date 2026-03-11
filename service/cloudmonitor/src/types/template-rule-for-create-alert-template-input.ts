@@ -34,6 +34,12 @@ export interface TemplateRuleForCreateAlertTemplateInput {
     EvaluationCount?: number;
 
     /**
+     * @type {number}
+     * @memberof TemplateRuleForCreateAlertTemplateInput
+     */
+    EvaluationInterval?: number;
+
+    /**
      * @type {Array<LevelConditionForCreateAlertTemplateInput>}
      * @memberof TemplateRuleForCreateAlertTemplateInput
      */

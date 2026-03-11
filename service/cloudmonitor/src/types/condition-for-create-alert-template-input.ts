@@ -27,6 +27,12 @@ export interface ConditionForCreateAlertTemplateInput {
     ComparisonOperator?: string;
 
     /**
+     * @type {number}
+     * @memberof ConditionForCreateAlertTemplateInput
+     */
+    EvaluationWindow?: number;
+
+    /**
      * @type {string}
      * @memberof ConditionForCreateAlertTemplateInput
      */

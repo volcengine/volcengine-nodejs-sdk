@@ -47,6 +47,12 @@ export interface TemplateRuleForListAlertTemplatesOutput {
     EvaluationCount?: number;
 
     /**
+     * @type {number}
+     * @memberof TemplateRuleForListAlertTemplatesOutput
+     */
+    EvaluationInterval?: number;
+
+    /**
      * @type {Array<LevelConditionForListAlertTemplatesOutput>}
      * @memberof TemplateRuleForListAlertTemplatesOutput
      */
