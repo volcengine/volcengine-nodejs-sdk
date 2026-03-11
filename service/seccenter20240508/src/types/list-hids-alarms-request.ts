@@ -171,6 +171,18 @@ export interface ListHidsAlarmsRequest {
     ImageName?: string;
 
     /**
+     * @type {number}
+     * @memberof ListHidsAlarmsRequest
+     */
+    LastAlarmTimeEnd?: number;
+
+    /**
+     * @type {number}
+     * @memberof ListHidsAlarmsRequest
+     */
+    LastAlarmTimeStart?: number;
+
+    /**
      * @type {Array<string>}
      * @memberof ListHidsAlarmsRequest
      */
@@ -193,6 +205,12 @@ export interface ListHidsAlarmsRequest {
      * @memberof ListHidsAlarmsRequest
      */
     Name?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof ListHidsAlarmsRequest
+     */
+    OperationList?: Array<string>;
 
     /**
      * @type {number}

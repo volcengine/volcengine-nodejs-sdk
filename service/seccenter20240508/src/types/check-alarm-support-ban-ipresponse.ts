@@ -36,6 +36,12 @@ export interface CheckAlarmSupportBanIPResponse {
      * @type {string}
      * @memberof CheckAlarmSupportBanIPResponse
      */
+    BanType?: string;
+
+    /**
+     * @type {string}
+     * @memberof CheckAlarmSupportBanIPResponse
+     */
     Direction?: string;
 
     /**

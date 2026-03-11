@@ -24,6 +24,12 @@ export interface ControlMonitorPolicyRequest {
      * @type {string}
      * @memberof ControlMonitorPolicyRequest
      */
+    AgentID?: string;
+
+    /**
+     * @type {string}
+     * @memberof ControlMonitorPolicyRequest
+     */
     ID?: string;
 
     /**

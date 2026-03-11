@@ -36,6 +36,12 @@ export interface RiskForListHostsBasicInfosInput {
      * @type {boolean}
      * @memberof RiskForListHostsBasicInfosInput
      */
+    IsRealRiskVul?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof RiskForListHostsBasicInfosInput
+     */
     Virus?: boolean;
 
     /**

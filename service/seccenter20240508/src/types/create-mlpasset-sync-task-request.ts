@@ -24,5 +24,5 @@ export interface CreateMLPAssetSyncTaskRequest {
      * @type {string}
      * @memberof CreateMLPAssetSyncTaskRequest
      */
-    AssetType: string;
+    AssetType?: string;
 }

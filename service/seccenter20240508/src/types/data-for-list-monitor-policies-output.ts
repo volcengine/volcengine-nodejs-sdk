@@ -115,6 +115,12 @@ export interface DataForListMonitorPoliciesOutput {
      * @type {string}
      * @memberof DataForListMonitorPoliciesOutput
      */
+    PolicyNameEN?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListMonitorPoliciesOutput
+     */
     PolicyPlatform?: string;
 
     /**

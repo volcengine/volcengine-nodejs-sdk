@@ -36,6 +36,12 @@ export interface RiskForListAssetCenterHostsOutput {
      * @type {number}
      * @memberof RiskForListAssetCenterHostsOutput
      */
+    RealRiskVul?: number;
+
+    /**
+     * @type {number}
+     * @memberof RiskForListAssetCenterHostsOutput
+     */
     Virus?: number;
 
     /**

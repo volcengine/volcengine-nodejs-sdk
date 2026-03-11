@@ -75,6 +75,12 @@ export interface ListVulByPodRequest {
     IfHighAvailability?: boolean;
 
     /**
+     * @type {boolean}
+     * @memberof ListVulByPodRequest
+     */
+    IsRealRiskVul?: boolean;
+
+    /**
      * @type {Array<string>}
      * @memberof ListVulByPodRequest
      */

@@ -24,5 +24,5 @@ export interface StopMLPAssetSyncTaskRequest {
      * @type {string}
      * @memberof StopMLPAssetSyncTaskRequest
      */
-    TaskID: string;
+    TaskID?: string;
 }

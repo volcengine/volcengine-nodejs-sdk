@@ -42,7 +42,7 @@ export interface ListBaselineHostItemHostsRequest {
      * @type {string}
      * @memberof ListBaselineHostItemHostsRequest
      */
-    AssetType?: ListBaselineHostItemHostsRequestAssetTypeEnum;
+    AssetType?: string;
 
     /**
      * @type {number}
@@ -140,13 +140,3 @@ export interface ListBaselineHostItemHostsRequest {
      */
     TopGroupID?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum ListBaselineHostItemHostsRequestAssetTypeEnum {
-    Host = 'Host',
-    Dev = 'Dev'
-}
-

@@ -22,8 +22,56 @@ import { DataForGetMLPAssetSyncTaskDetailOutput } from './data-for-get-mlpasset-
 export interface GetMLPAssetSyncTaskDetailResponse {
 
     /**
+     * @type {string}
+     * @memberof GetMLPAssetSyncTaskDetailResponse
+     */
+    AccountID?: string;
+
+    /**
+     * @type {number}
+     * @memberof GetMLPAssetSyncTaskDetailResponse
+     */
+    AssetCount?: number;
+
+    /**
+     * @type {string}
+     * @memberof GetMLPAssetSyncTaskDetailResponse
+     */
+    Creator?: string;
+
+    /**
      * @type {DataForGetMLPAssetSyncTaskDetailOutput}
      * @memberof GetMLPAssetSyncTaskDetailResponse
      */
     Data?: DataForGetMLPAssetSyncTaskDetailOutput;
+
+    /**
+     * @type {number}
+     * @memberof GetMLPAssetSyncTaskDetailResponse
+     */
+    EndTime?: number;
+
+    /**
+     * @type {number}
+     * @memberof GetMLPAssetSyncTaskDetailResponse
+     */
+    StartTime?: number;
+
+    /**
+     * @type {string}
+     * @memberof GetMLPAssetSyncTaskDetailResponse
+     */
+    Status?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetMLPAssetSyncTaskDetailResponse
+     */
+    TaskID?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetMLPAssetSyncTaskDetailResponse
+     */
+    TaskType?: string;
 }

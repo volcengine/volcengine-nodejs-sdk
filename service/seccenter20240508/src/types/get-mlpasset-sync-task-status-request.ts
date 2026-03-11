@@ -24,5 +24,5 @@ export interface GetMLPAssetSyncTaskStatusRequest {
      * @type {string}
      * @memberof GetMLPAssetSyncTaskStatusRequest
      */
-    AssetType: string;
+    AssetType?: string;
 }

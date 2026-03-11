@@ -32,6 +32,12 @@ export interface DataForGetOfflineNotificationListOutput {
      * @type {string}
      * @memberof DataForGetOfflineNotificationListOutput
      */
+    AccountID?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForGetOfflineNotificationListOutput
+     */
     AgentID?: string;
 
     /**
@@ -104,6 +110,12 @@ export interface DataForGetOfflineNotificationListOutput {
      * @type {string}
      * @memberof DataForGetOfflineNotificationListOutput
      */
+    GroupPathEn?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForGetOfflineNotificationListOutput
+     */
     KernelVersion?: string;
 
     /**
@@ -147,6 +159,12 @@ export interface DataForGetOfflineNotificationListOutput {
      * @memberof DataForGetOfflineNotificationListOutput
      */
     Platform?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForGetOfflineNotificationListOutput
+     */
+    PlatformVersion?: string;
 
     /**
      * @type {string}
@@ -213,4 +231,10 @@ export interface DataForGetOfflineNotificationListOutput {
      * @memberof DataForGetOfflineNotificationListOutput
      */
     UserStatusReason?: string;
+
+    /**
+     * @type {number}
+     * @memberof DataForGetOfflineNotificationListOutput
+     */
+    UserStatusReasonCode?: number;
 }

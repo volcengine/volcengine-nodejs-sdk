@@ -24,6 +24,12 @@ export interface ListClustersAndVarmorAppsRequest {
      * @type {string}
      * @memberof ListClustersAndVarmorAppsRequest
      */
+    ClusterID?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListClustersAndVarmorAppsRequest
+     */
     ClusterIDs?: string;
 
     /**
@@ -67,6 +73,18 @@ export interface ListClustersAndVarmorAppsRequest {
      * @memberof ListClustersAndVarmorAppsRequest
      */
     VarmorInstallStatus?: Array<string>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof ListClustersAndVarmorAppsRequest
+     */
+    VarmorInstalled?: Array<string>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof ListClustersAndVarmorAppsRequest
+     */
+    VarmorStatus?: Array<string>;
 
     /**
      * @type {string}
