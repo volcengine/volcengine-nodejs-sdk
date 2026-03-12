@@ -97,6 +97,12 @@ export interface CreatePodOneStepRequest {
     IsPreinstall?: boolean;
 
     /**
+     * @type {boolean}
+     * @memberof CreatePodOneStepRequest
+     */
+    IsSelinuxOn?: boolean;
+
+    /**
      * @type {Array<OverlayPersistPropertyForCreatePodOneStepInput>}
      * @memberof CreatePodOneStepRequest
      */
