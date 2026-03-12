@@ -1,0 +1,47 @@
+{
+  "name": "@volcengine/ark-runtime",
+  "version": "1.0.0",
+  "files": [
+    "dist",
+    "src",
+    "example",
+    "package.json"
+  ],
+  "description": "Ark runtime data-plane client for model inference",
+  "license": "Apache-2.0",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.mjs",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "rslib build",
+    "dev": "rslib build --watch",
+    "clean": "rm -rf dist",
+    "test": "jest",
+    "test:e2e": "ARK_E2E=1 jest --testPathPattern=e2e"
+  },
+  "dependencies": {
+    "@types/axios": "^0.9.36",
+    "axios": "^1.13.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.8.0",
+    "@types/uuid": "^10.0.0",
+    "axios-mock-adapter": "^2.1.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
+    "typescript": "^5.2.2"
+  },
+  "sideEffects": false
+}
