@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConditionForUpdateRuleInput } from './condition-for-update-rule-input';
+import { ConvertConditionForUpdateRuleInput } from './convert-condition-for-update-rule-input';
  /**
  * 
  *
@@ -22,10 +22,10 @@ import { ConditionForUpdateRuleInput } from './condition-for-update-rule-input';
 export interface LevelConditionForUpdateRuleInput {
 
     /**
-     * @type {Array<ConditionForUpdateRuleInput>}
+     * @type {Array<ConvertConditionForUpdateRuleInput>}
      * @memberof LevelConditionForUpdateRuleInput
      */
-    Conditions?: Array<ConditionForUpdateRuleInput>;
+    Conditions?: Array<ConvertConditionForUpdateRuleInput>;
 
     /**
      * @type {string}

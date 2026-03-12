@@ -16,43 +16,49 @@
  * 
  *
  * @export
- * @interface ConditionForListAlertTemplatesOutput
+ * @interface ConvertConditionForUpdateRuleInput
  */
-export interface ConditionForListAlertTemplatesOutput {
+export interface ConvertConditionForUpdateRuleInput {
 
     /**
      * @type {string}
-     * @memberof ConditionForListAlertTemplatesOutput
+     * @memberof ConvertConditionForUpdateRuleInput
      */
     ComparisonOperator?: string;
 
     /**
      * @type {number}
-     * @memberof ConditionForListAlertTemplatesOutput
+     * @memberof ConvertConditionForUpdateRuleInput
      */
     EvaluationWindow?: number;
 
     /**
      * @type {string}
-     * @memberof ConditionForListAlertTemplatesOutput
+     * @memberof ConvertConditionForUpdateRuleInput
      */
     MetricName?: string;
 
     /**
      * @type {string}
-     * @memberof ConditionForListAlertTemplatesOutput
+     * @memberof ConvertConditionForUpdateRuleInput
      */
     MetricUnit?: string;
 
     /**
      * @type {string}
-     * @memberof ConditionForListAlertTemplatesOutput
+     * @memberof ConvertConditionForUpdateRuleInput
+     */
+    Period?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertConditionForUpdateRuleInput
      */
     Statistics?: string;
 
     /**
      * @type {string}
-     * @memberof ConditionForListAlertTemplatesOutput
+     * @memberof ConvertConditionForUpdateRuleInput
      */
     Threshold?: string;
 }

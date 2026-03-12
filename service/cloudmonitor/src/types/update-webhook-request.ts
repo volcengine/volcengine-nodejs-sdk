@@ -36,6 +36,12 @@ export interface UpdateWebhookRequest {
      * @type {string}
      * @memberof UpdateWebhookRequest
      */
+    Token?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateWebhookRequest
+     */
     Type: string;
 
     /**
@@ -43,4 +49,10 @@ export interface UpdateWebhookRequest {
      * @memberof UpdateWebhookRequest
      */
     Url: string;
+
+    /**
+     * @type {boolean}
+     * @memberof UpdateWebhookRequest
+     */
+    WithToken?: boolean;
 }

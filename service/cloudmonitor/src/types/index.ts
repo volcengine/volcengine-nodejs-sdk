@@ -15,6 +15,7 @@ export * from './condition-for-update-rule-input';
 export * from './contact-for-list-contact-group-by-ids-output';
 export * from './contact-for-list-contact-groups-output';
 export * from './contact-group-for-list-contacts-output';
+export * from './convert-condition-for-update-rule-input';
 export * from './convert-tag-for-create-rule-input';
 export * from './convert-tag-for-list-rules-by-ids-output';
 export * from './convert-tag-for-list-rules-output';

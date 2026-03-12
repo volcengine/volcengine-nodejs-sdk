@@ -30,6 +30,12 @@ export interface CreateWebhookRequest {
      * @type {string}
      * @memberof CreateWebhookRequest
      */
+    Token?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateWebhookRequest
+     */
     Type: CreateWebhookRequestTypeEnum;
 
     /**

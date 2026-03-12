@@ -33,6 +33,12 @@ export interface ConditionForListRulesOutput {
     DisplayName?: string;
 
     /**
+     * @type {number}
+     * @memberof ConditionForListRulesOutput
+     */
+    EvaluationWindow?: number;
+
+    /**
      * @type {string}
      * @memberof ConditionForListRulesOutput
      */
