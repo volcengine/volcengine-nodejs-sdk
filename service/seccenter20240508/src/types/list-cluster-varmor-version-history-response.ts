@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DataForListClusterVarmorVersionHistoryOutput } from './data-for-list-cluster-varmor-version-history-output';
  /**
  * 
  *
@@ -19,4 +20,28 @@
  * @interface ListClusterVarmorVersionHistoryResponse
  */
 export interface ListClusterVarmorVersionHistoryResponse {
+
+    /**
+     * @type {Array<DataForListClusterVarmorVersionHistoryOutput>}
+     * @memberof ListClusterVarmorVersionHistoryResponse
+     */
+    Data?: Array<DataForListClusterVarmorVersionHistoryOutput>;
+
+    /**
+     * @type {number}
+     * @memberof ListClusterVarmorVersionHistoryResponse
+     */
+    PageNumber?: number;
+
+    /**
+     * @type {number}
+     * @memberof ListClusterVarmorVersionHistoryResponse
+     */
+    PageSize?: number;
+
+    /**
+     * @type {number}
+     * @memberof ListClusterVarmorVersionHistoryResponse
+     */
+    TotalCount?: number;
 }

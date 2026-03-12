@@ -24,5 +24,5 @@ export interface GetMLPAssetSyncTaskDetailRequest {
      * @type {string}
      * @memberof GetMLPAssetSyncTaskDetailRequest
      */
-    TaskID: string;
+    TaskID?: string;
 }

@@ -22,6 +22,12 @@ import { OperationListForListBatchEndpointHandleMethodsOutput } from './operatio
 export interface ListBatchEndpointHandleMethodsResponse {
 
     /**
+     * @type {string}
+     * @memberof ListBatchEndpointHandleMethodsResponse
+     */
+    NotSupportReason?: string;
+
+    /**
      * @type {Array<OperationListForListBatchEndpointHandleMethodsOutput>}
      * @memberof ListBatchEndpointHandleMethodsResponse
      */

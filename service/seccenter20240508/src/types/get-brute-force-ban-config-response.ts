@@ -55,6 +55,12 @@ export interface GetBruteForceBanConfigResponse {
      * @type {Array<string>}
      * @memberof GetBruteForceBanConfigResponse
      */
+    BanTypeList?: Array<string>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof GetBruteForceBanConfigResponse
+     */
     CloudProviders?: Array<string>;
 
     /**
@@ -73,6 +79,12 @@ export interface GetBruteForceBanConfigResponse {
      * @type {string}
      * @memberof GetBruteForceBanConfigResponse
      */
+    ManagerID?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetBruteForceBanConfigResponse
+     */
     Operator?: string;
 
     /**
@@ -80,6 +92,18 @@ export interface GetBruteForceBanConfigResponse {
      * @memberof GetBruteForceBanConfigResponse
      */
     RuleList?: Array<RuleListForGetBruteForceBanConfigOutput>;
+
+    /**
+     * @type {string}
+     * @memberof GetBruteForceBanConfigResponse
+     */
+    SingleGroupPath?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetBruteForceBanConfigResponse
+     */
+    SingleHostname?: string;
 
     /**
      * @type {string}

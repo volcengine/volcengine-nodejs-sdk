@@ -72,6 +72,12 @@ export interface DataForListHidsAlarmsOutput {
     AlertTags?: Array<string>;
 
     /**
+     * @type {string}
+     * @memberof DataForListHidsAlarmsOutput
+     */
+    AnalysisRecordUUID?: string;
+
+    /**
      * @type {Array<string>}
      * @memberof DataForListHidsAlarmsOutput
      */
@@ -106,6 +112,12 @@ export interface DataForListHidsAlarmsOutput {
      * @memberof DataForListHidsAlarmsOutput
      */
     Cluster?: ClusterForListHidsAlarmsOutput;
+
+    /**
+     * @type {string}
+     * @memberof DataForListHidsAlarmsOutput
+     */
+    Confidence?: string;
 
     /**
      * @type {string}
@@ -160,6 +172,12 @@ export interface DataForListHidsAlarmsOutput {
      * @memberof DataForListHidsAlarmsOutput
      */
     GroupPath?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListHidsAlarmsOutput
+     */
+    HandleFailReason?: string;
 
     /**
      * @type {number}
@@ -262,6 +280,18 @@ export interface DataForListHidsAlarmsOutput {
      * @memberof DataForListHidsAlarmsOutput
      */
     Region?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof DataForListHidsAlarmsOutput
+     */
+    SecurityIntelligenceComplete?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof DataForListHidsAlarmsOutput
+     */
+    SecurityIntelligenceResult?: string;
 
     /**
      * @type {string}

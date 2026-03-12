@@ -103,5 +103,17 @@ export interface SetBruteForceBanConfigRequest {
      * @type {string}
      * @memberof SetBruteForceBanConfigRequest
      */
+    SingleGroupPath?: string;
+
+    /**
+     * @type {string}
+     * @memberof SetBruteForceBanConfigRequest
+     */
+    SingleHostname?: string;
+
+    /**
+     * @type {string}
+     * @memberof SetBruteForceBanConfigRequest
+     */
     TopGroupID?: string;
 }

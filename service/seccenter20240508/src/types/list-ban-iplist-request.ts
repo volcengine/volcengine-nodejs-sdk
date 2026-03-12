@@ -48,6 +48,12 @@ export interface ListBanIPListRequest {
      * @type {number}
      * @memberof ListBanIPListRequest
      */
+    BanPort?: number;
+
+    /**
+     * @type {number}
+     * @memberof ListBanIPListRequest
+     */
     BanStartTimeEndUnix?: number;
 
     /**
@@ -61,6 +67,12 @@ export interface ListBanIPListRequest {
      * @memberof ListBanIPListRequest
      */
     BanType?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof ListBanIPListRequest
+     */
+    BanTypeList?: Array<string>;
 
     /**
      * @type {Array<string>}

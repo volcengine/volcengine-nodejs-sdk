@@ -21,10 +21,22 @@
 export interface RelateAlarmInfoForListBanIPListOutput {
 
     /**
+     * @type {number}
+     * @memberof RelateAlarmInfoForListBanIPListOutput
+     */
+    AlarmHandleMethod?: number;
+
+    /**
      * @type {string}
      * @memberof RelateAlarmInfoForListBanIPListOutput
      */
     AlarmType?: string;
+
+    /**
+     * @type {string}
+     * @memberof RelateAlarmInfoForListBanIPListOutput
+     */
+    CloudProvider?: string;
 
     /**
      * @type {string}

@@ -31,4 +31,16 @@ export interface DescribeFileMonitorOverviewResponse {
      * @memberof DescribeFileMonitorOverviewResponse
      */
     MonitorDirectoryCount?: number;
+
+    /**
+     * @type {number}
+     * @memberof DescribeFileMonitorOverviewResponse
+     */
+    monitor_agent_count?: number;
+
+    /**
+     * @type {number}
+     * @memberof DescribeFileMonitorOverviewResponse
+     */
+    monitor_directory_count?: number;
 }

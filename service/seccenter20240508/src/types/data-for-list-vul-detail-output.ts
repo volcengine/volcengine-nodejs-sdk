@@ -181,5 +181,11 @@ export interface DataForListVulDetailOutput {
      * @type {string}
      * @memberof DataForListVulDetailOutput
      */
+    VulnNameEn?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListVulDetailOutput
+     */
     WorkloadName?: string;
 }

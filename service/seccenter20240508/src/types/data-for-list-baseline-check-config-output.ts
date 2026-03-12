@@ -52,6 +52,12 @@ export interface DataForListBaselineCheckConfigOutput {
     ConfigName?: string;
 
     /**
+     * @type {string}
+     * @memberof DataForListBaselineCheckConfigOutput
+     */
+    ConfigNameEn?: string;
+
+    /**
      * @type {boolean}
      * @memberof DataForListBaselineCheckConfigOutput
      */

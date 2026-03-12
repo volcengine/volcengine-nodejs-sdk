@@ -85,6 +85,12 @@ export interface AddMonitorPolicyRequest {
      * @type {string}
      * @memberof AddMonitorPolicyRequest
      */
+    PolicyNameEN?: string;
+
+    /**
+     * @type {string}
+     * @memberof AddMonitorPolicyRequest
+     */
     PolicyPlatform: string;
 
     /**
