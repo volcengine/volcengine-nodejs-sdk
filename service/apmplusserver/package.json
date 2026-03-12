@@ -1,7 +1,7 @@
 {
-  "name": "@volcengine/i18nopenapi",
-  "version": "1.0.4",
-  "description": "swagger client for @volcengine/i18nopenapi",
+  "name": "@volcengine/apmplusserver",
+  "version": "1.0.1",
+  "description": "swagger client for @volcengine/apmplusserver",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
