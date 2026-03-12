@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DeletePolicyForDescribeDataFlowTasksOutput } from './delete-policy-for-describe-data-flow-tasks-output';
 import { EntryListFileInfoForDescribeDataFlowTasksOutput } from './entry-list-file-info-for-describe-data-flow-tasks-output';
 import { ReportForDescribeDataFlowTasksOutput } from './report-for-describe-data-flow-tasks-output';
  /**
@@ -51,6 +52,12 @@ export interface DataFlowTaskForDescribeDataFlowTasksOutput {
      * @memberof DataFlowTaskForDescribeDataFlowTasksOutput
      */
     DataType?: DataFlowTaskForDescribeDataFlowTasksOutputDataTypeEnum;
+
+    /**
+     * @type {DeletePolicyForDescribeDataFlowTasksOutput}
+     * @memberof DataFlowTaskForDescribeDataFlowTasksOutput
+     */
+    DeletePolicy?: DeletePolicyForDescribeDataFlowTasksOutput;
 
     /**
      * @type {string}
