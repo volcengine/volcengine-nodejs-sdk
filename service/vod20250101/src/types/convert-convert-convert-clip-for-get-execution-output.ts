@@ -21,10 +21,16 @@
 export interface ConvertConvertConvertClipForGetExecutionOutput {
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof ConvertConvertConvertClipForGetExecutionOutput
      */
-    Dialogue?: string;
+    CutEnd?: number;
+
+    /**
+     * @type {number}
+     * @memberof ConvertConvertConvertClipForGetExecutionOutput
+     */
+    CutStart?: number;
 
     /**
      * @type {number}
@@ -36,19 +42,7 @@ export interface ConvertConvertConvertClipForGetExecutionOutput {
      * @type {number}
      * @memberof ConvertConvertConvertClipForGetExecutionOutput
      */
-    Offset?: number;
-
-    /**
-     * @type {number}
-     * @memberof ConvertConvertConvertClipForGetExecutionOutput
-     */
     Score?: number;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertConvertClipForGetExecutionOutput
-     */
-    Snapshot?: string;
 
     /**
      * @type {number}
@@ -60,13 +54,7 @@ export interface ConvertConvertConvertClipForGetExecutionOutput {
      * @type {string}
      * @memberof ConvertConvertConvertClipForGetExecutionOutput
      */
-    Summary?: string;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertConvertClipForGetExecutionOutput
-     */
-    Title?: string;
+    Type?: string;
 
     /**
      * @type {number}

@@ -12,7 +12,8 @@
  * Do not edit the class manually.
  */
 
-import { CodecForStartExecutionInput } from './codec-for-start-execution-input';
+import { AudioForStartExecutionInput } from './audio-for-start-execution-input';
+import { VideoForStartExecutionInput } from './video-for-start-execution-input';
  /**
  * 
  *
@@ -22,56 +23,14 @@ import { CodecForStartExecutionInput } from './codec-for-start-execution-input';
 export interface OutputForStartExecutionInput {
 
     /**
-     * @type {boolean}
+     * @type {AudioForStartExecutionInput}
      * @memberof OutputForStartExecutionInput
      */
-    Alpha?: boolean;
+    Audio?: AudioForStartExecutionInput;
 
     /**
-     * @type {boolean}
+     * @type {VideoForStartExecutionInput}
      * @memberof OutputForStartExecutionInput
      */
-    AudioPhaseDetect?: boolean;
-
-    /**
-     * @type {boolean}
-     * @memberof OutputForStartExecutionInput
-     */
-    CanvasWithMax?: boolean;
-
-    /**
-     * @type {boolean}
-     * @memberof OutputForStartExecutionInput
-     */
-    CanvasWithRatio?: boolean;
-
-    /**
-     * @type {CodecForStartExecutionInput}
-     * @memberof OutputForStartExecutionInput
-     */
-    Codec?: CodecForStartExecutionInput;
-
-    /**
-     * @type {boolean}
-     * @memberof OutputForStartExecutionInput
-     */
-    DisableAudio?: boolean;
-
-    /**
-     * @type {boolean}
-     * @memberof OutputForStartExecutionInput
-     */
-    DisableVideo?: boolean;
-
-    /**
-     * @type {string}
-     * @memberof OutputForStartExecutionInput
-     */
-    Format?: string;
-
-    /**
-     * @type {number}
-     * @memberof OutputForStartExecutionInput
-     */
-    Fps?: number;
+    Video?: VideoForStartExecutionInput;
 }

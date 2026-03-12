@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertConvertSegmentForStartExecutionInput } from './convert-convert-segment-for-start-execution-input';
+import { ConvertConvertConvertSegmentForStartExecutionInput } from './convert-convert-convert-segment-for-start-execution-input';
 import { ConvertModelForStartExecutionInput } from './convert-model-for-start-execution-input';
 import { SnapshotParamForStartExecutionInput } from './snapshot-param-for-start-execution-input';
  /**
@@ -48,10 +48,10 @@ export interface VisionForStartExecutionInput {
     ResponseFormatType?: string;
 
     /**
-     * @type {ConvertConvertSegmentForStartExecutionInput}
+     * @type {ConvertConvertConvertSegmentForStartExecutionInput}
      * @memberof VisionForStartExecutionInput
      */
-    Segment?: ConvertConvertSegmentForStartExecutionInput;
+    Segment?: ConvertConvertConvertSegmentForStartExecutionInput;
 
     /**
      * @type {SnapshotParamForStartExecutionInput}

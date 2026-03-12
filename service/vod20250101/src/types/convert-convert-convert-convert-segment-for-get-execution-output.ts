@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { ConvertEditForGetExecutionOutput } from './convert-edit-for-get-execution-output';
  /**
  * 
  *
@@ -22,26 +21,50 @@ import { ConvertEditForGetExecutionOutput } from './convert-edit-for-get-executi
 export interface ConvertConvertConvertConvertSegmentForGetExecutionOutput {
 
     /**
+     * @type {string}
+     * @memberof ConvertConvertConvertConvertSegmentForGetExecutionOutput
+     */
+    Description?: string;
+
+    /**
      * @type {number}
      * @memberof ConvertConvertConvertConvertSegmentForGetExecutionOutput
      */
     End?: number;
 
     /**
-     * @type {ConvertEditForGetExecutionOutput}
+     * @type {string}
      * @memberof ConvertConvertConvertConvertSegmentForGetExecutionOutput
      */
-    File?: ConvertEditForGetExecutionOutput;
+    Location?: string;
 
     /**
-     * @type {Array<number>}
+     * @type {string}
      * @memberof ConvertConvertConvertConvertSegmentForGetExecutionOutput
      */
-    Frames?: Array<number>;
+    Ocr?: string;
+
+    /**
+     * @type {number}
+     * @memberof ConvertConvertConvertConvertSegmentForGetExecutionOutput
+     */
+    Score?: number;
+
+    /**
+     * @type {string}
+     * @memberof ConvertConvertConvertConvertSegmentForGetExecutionOutput
+     */
+    Shot?: string;
 
     /**
      * @type {number}
      * @memberof ConvertConvertConvertConvertSegmentForGetExecutionOutput
      */
     Start?: number;
+
+    /**
+     * @type {number}
+     * @memberof ConvertConvertConvertConvertSegmentForGetExecutionOutput
+     */
+    VideoIndex?: number;
 }

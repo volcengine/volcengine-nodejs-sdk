@@ -12,6 +12,9 @@
  * Do not edit the class manually.
  */
 
+import { ConvertBitrateControlForGetExecutionOutput } from './convert-bitrate-control-for-get-execution-output';
+import { FpsControlForGetExecutionOutput } from './fps-control-for-get-execution-output';
+import { ScaleControlForGetExecutionOutput } from './scale-control-for-get-execution-output';
  /**
  * 
  *
@@ -21,20 +24,49 @@
 export interface VideoForGetExecutionOutput {
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof VideoForGetExecutionOutput
      */
-    FileName?: string;
+    BitDepth?: number;
+
+    /**
+     * @type {ConvertBitrateControlForGetExecutionOutput}
+     * @memberof VideoForGetExecutionOutput
+     */
+    BitrateControl?: ConvertBitrateControlForGetExecutionOutput;
 
     /**
      * @type {string}
      * @memberof VideoForGetExecutionOutput
      */
-    Size?: string;
+    Codec?: VideoForGetExecutionOutputCodecEnum;
 
     /**
-     * @type {string}
+     * @type {FpsControlForGetExecutionOutput}
      * @memberof VideoForGetExecutionOutput
      */
-    Vid?: string;
+    FpsControl?: FpsControlForGetExecutionOutput;
+
+    /**
+     * @type {number}
+     * @memberof VideoForGetExecutionOutput
+     */
+    HDRMode?: number;
+
+    /**
+     * @type {ScaleControlForGetExecutionOutput}
+     * @memberof VideoForGetExecutionOutput
+     */
+    ScaleControl?: ScaleControlForGetExecutionOutput;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum VideoForGetExecutionOutputCodecEnum {
+    H264 = 'h264',
+    H265 = 'h265',
+    H266 = 'h266'
+}
+

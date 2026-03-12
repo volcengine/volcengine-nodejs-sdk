@@ -13,7 +13,7 @@
  */
 
 import { CanvasForStartExecutionInput } from './canvas-for-start-execution-input';
-import { OutputForStartExecutionInput } from './output-for-start-execution-input';
+import { ConvertOutputForStartExecutionInput } from './convert-output-for-start-execution-input';
  /**
  * 
  *
@@ -29,8 +29,8 @@ export interface CustomEditForStartExecutionInput {
     Canvas?: CanvasForStartExecutionInput;
 
     /**
-     * @type {OutputForStartExecutionInput}
+     * @type {ConvertOutputForStartExecutionInput}
      * @memberof CustomEditForStartExecutionInput
      */
-    Output?: OutputForStartExecutionInput;
+    Output?: ConvertOutputForStartExecutionInput;
 }

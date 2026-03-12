@@ -13,7 +13,7 @@
  */
 
 import { ByteHDForStartExecutionInput } from './byte-hdfor-start-execution-input';
-import { ConvertEnhanceForStartExecutionInput } from './convert-enhance-for-start-execution-input';
+import { ConvertConvertEnhanceForStartExecutionInput } from './convert-convert-enhance-for-start-execution-input';
 import { TranscodeAudioForStartExecutionInput } from './transcode-audio-for-start-execution-input';
 import { TranscodeVideoForStartExecutionInput } from './transcode-video-for-start-execution-input';
  /**
@@ -31,10 +31,10 @@ export interface TemplateForStartExecutionInput {
     ByteHD?: ByteHDForStartExecutionInput;
 
     /**
-     * @type {ConvertEnhanceForStartExecutionInput}
+     * @type {ConvertConvertEnhanceForStartExecutionInput}
      * @memberof TemplateForStartExecutionInput
      */
-    Enhance?: ConvertEnhanceForStartExecutionInput;
+    Enhance?: ConvertConvertEnhanceForStartExecutionInput;
 
     /**
      * @type {TranscodeAudioForStartExecutionInput}

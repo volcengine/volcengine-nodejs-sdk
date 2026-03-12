@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { VideoForGetExecutionOutput } from './video-for-get-execution-output';
+import { ConvertConvertConvertConvertConvertSegmentForGetExecutionOutput } from './convert-convert-convert-convert-convert-segment-for-get-execution-output';
  /**
  * 
  *
@@ -22,32 +22,14 @@ import { VideoForGetExecutionOutput } from './video-for-get-execution-output';
 export interface ConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput {
 
     /**
-     * @type {string}
-     * @memberof ConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput
-     */
-    Content?: string;
-
-    /**
      * @type {number}
      * @memberof ConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput
      */
-    End?: number;
+    Duration?: number;
 
     /**
-     * @type {VideoForGetExecutionOutput}
+     * @type {Array<ConvertConvertConvertConvertConvertSegmentForGetExecutionOutput>}
      * @memberof ConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput
      */
-    File?: VideoForGetExecutionOutput;
-
-    /**
-     * @type {Array<number>}
-     * @memberof ConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput
-     */
-    Frames?: Array<number>;
-
-    /**
-     * @type {number}
-     * @memberof ConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput
-     */
-    Start?: number;
+    Segments?: Array<ConvertConvertConvertConvertConvertSegmentForGetExecutionOutput>;
 }

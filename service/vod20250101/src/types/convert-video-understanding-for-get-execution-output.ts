@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput } from './convert-convert-convert-convert-convert-convert-segment-for-get-execution-output';
+import { ConvertConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput } from './convert-convert-convert-convert-convert-convert-convert-segment-for-get-execution-output';
  /**
  * 
  *
@@ -34,8 +34,8 @@ export interface ConvertVideoUnderstandingForGetExecutionOutput {
     Duration?: number;
 
     /**
-     * @type {Array<ConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput>}
+     * @type {Array<ConvertConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput>}
      * @memberof ConvertVideoUnderstandingForGetExecutionOutput
      */
-    Segments?: Array<ConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput>;
+    Segments?: Array<ConvertConvertConvertConvertConvertConvertConvertSegmentForGetExecutionOutput>;
 }

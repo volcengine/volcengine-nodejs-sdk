@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ConvertMoeEnhanceForStartExecutionInput } from './convert-moe-enhance-for-start-execution-input';
  /**
  * 
  *
@@ -21,8 +22,23 @@
 export interface ConvertEnhanceForStartExecutionInput {
 
     /**
+     * @type {ConvertMoeEnhanceForStartExecutionInput}
+     * @memberof ConvertEnhanceForStartExecutionInput
+     */
+    MoeEnhance?: ConvertMoeEnhanceForStartExecutionInput;
+
+    /**
      * @type {string}
      * @memberof ConvertEnhanceForStartExecutionInput
      */
-    TemplateId?: string;
+    Type?: ConvertEnhanceForStartExecutionInputTypeEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ConvertEnhanceForStartExecutionInputTypeEnum {
+    Moe = 'Moe'
+}
+

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertConvertConvertSegmentForGetExecutionOutput } from './convert-convert-convert-segment-for-get-execution-output';
+import { ConvertConvertConvertConvertSegmentForGetExecutionOutput } from './convert-convert-convert-convert-segment-for-get-execution-output';
 import { ConvertStorylineForGetExecutionOutput } from './convert-storyline-for-get-execution-output';
 import { CutSegmentForGetExecutionOutput } from './cut-segment-for-get-execution-output';
  /**
@@ -30,10 +30,10 @@ export interface ConvertStorylineCutsForGetExecutionOutput {
     CutSegments?: Array<CutSegmentForGetExecutionOutput>;
 
     /**
-     * @type {Array<ConvertConvertConvertSegmentForGetExecutionOutput>}
+     * @type {Array<ConvertConvertConvertConvertSegmentForGetExecutionOutput>}
      * @memberof ConvertStorylineCutsForGetExecutionOutput
      */
-    Segments?: Array<ConvertConvertConvertSegmentForGetExecutionOutput>;
+    Segments?: Array<ConvertConvertConvertConvertSegmentForGetExecutionOutput>;
 
     /**
      * @type {Array<ConvertStorylineForGetExecutionOutput>}

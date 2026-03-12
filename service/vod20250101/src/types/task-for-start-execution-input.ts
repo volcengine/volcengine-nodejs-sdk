@@ -12,16 +12,19 @@
  * Do not edit the class manually.
  */
 
+import { ABRTranscodeForStartExecutionInput } from './abrtranscode-for-start-execution-input';
 import { AdAuditForStartExecutionInput } from './ad-audit-for-start-execution-input';
 import { AsrForStartExecutionInput } from './asr-for-start-execution-input';
 import { AudioExtractForStartExecutionInput } from './audio-extract-for-start-execution-input';
+import { ConvertFormatForStartExecutionInput } from './convert-format-for-start-execution-input';
+import { ConvertSegmentForStartExecutionInput } from './convert-segment-for-start-execution-input';
 import { EnhanceForStartExecutionInput } from './enhance-for-start-execution-input';
 import { EraseForStartExecutionInput } from './erase-for-start-execution-input';
 import { FileDeleteForStartExecutionInput } from './file-delete-for-start-execution-input';
 import { HighlightForStartExecutionInput } from './highlight-for-start-execution-input';
 import { OcrForStartExecutionInput } from './ocr-for-start-execution-input';
-import { SegmentForStartExecutionInput } from './segment-for-start-execution-input';
 import { StorylineForStartExecutionInput } from './storyline-for-start-execution-input';
+import { TranscodeForStartExecutionInput } from './transcode-for-start-execution-input';
 import { VideoGenerationForStartExecutionInput } from './video-generation-for-start-execution-input';
 import { VideoMattingForStartExecutionInput } from './video-matting-for-start-execution-input';
 import { VideoSummaryForStartExecutionInput } from './video-summary-for-start-execution-input';
@@ -34,6 +37,12 @@ import { VisionForStartExecutionInput } from './vision-for-start-execution-input
  * @interface TaskForStartExecutionInput
  */
 export interface TaskForStartExecutionInput {
+
+    /**
+     * @type {ABRTranscodeForStartExecutionInput}
+     * @memberof TaskForStartExecutionInput
+     */
+    ABRTranscode?: ABRTranscodeForStartExecutionInput;
 
     /**
      * @type {AdAuditForStartExecutionInput}
@@ -52,6 +61,12 @@ export interface TaskForStartExecutionInput {
      * @memberof TaskForStartExecutionInput
      */
     AudioExtract?: AudioExtractForStartExecutionInput;
+
+    /**
+     * @type {ConvertFormatForStartExecutionInput}
+     * @memberof TaskForStartExecutionInput
+     */
+    ConvertFormat?: ConvertFormatForStartExecutionInput;
 
     /**
      * @type {EnhanceForStartExecutionInput}
@@ -84,16 +99,28 @@ export interface TaskForStartExecutionInput {
     Ocr?: OcrForStartExecutionInput;
 
     /**
-     * @type {SegmentForStartExecutionInput}
+     * @type {ConvertSegmentForStartExecutionInput}
      * @memberof TaskForStartExecutionInput
      */
-    Segment?: SegmentForStartExecutionInput;
+    Segment?: ConvertSegmentForStartExecutionInput;
 
     /**
      * @type {StorylineForStartExecutionInput}
      * @memberof TaskForStartExecutionInput
      */
     Storyline?: StorylineForStartExecutionInput;
+
+    /**
+     * @type {string}
+     * @memberof TaskForStartExecutionInput
+     */
+    StrategyTag?: string;
+
+    /**
+     * @type {TranscodeForStartExecutionInput}
+     * @memberof TaskForStartExecutionInput
+     */
+    Transcode?: TranscodeForStartExecutionInput;
 
     /**
      * @type {string}

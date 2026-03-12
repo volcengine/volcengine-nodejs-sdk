@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertConvertSegmentForGetExecutionOutput } from './convert-convert-segment-for-get-execution-output';
+import { ConvertConvertConvertSegmentForGetExecutionOutput } from './convert-convert-convert-segment-for-get-execution-output';
 import { ConvertModelForGetExecutionOutput } from './convert-model-for-get-execution-output';
 import { SnapshotParamForGetExecutionOutput } from './snapshot-param-for-get-execution-output';
  /**
@@ -48,10 +48,10 @@ export interface VisionForGetExecutionOutput {
     ResponseFormatType?: string;
 
     /**
-     * @type {ConvertConvertSegmentForGetExecutionOutput}
+     * @type {ConvertConvertConvertSegmentForGetExecutionOutput}
      * @memberof VisionForGetExecutionOutput
      */
-    Segment?: ConvertConvertSegmentForGetExecutionOutput;
+    Segment?: ConvertConvertConvertSegmentForGetExecutionOutput;
 
     /**
      * @type {SnapshotParamForGetExecutionOutput}

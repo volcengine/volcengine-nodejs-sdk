@@ -24,11 +24,17 @@ export interface ConvertConvertSegmentForGetExecutionOutput {
      * @type {number}
      * @memberof ConvertConvertSegmentForGetExecutionOutput
      */
-    End?: number;
+    MaxDuration?: number;
 
     /**
      * @type {number}
      * @memberof ConvertConvertSegmentForGetExecutionOutput
      */
-    Start?: number;
+    MinDuration?: number;
+
+    /**
+     * @type {number}
+     * @memberof ConvertConvertSegmentForGetExecutionOutput
+     */
+    Threshold?: number;
 }
