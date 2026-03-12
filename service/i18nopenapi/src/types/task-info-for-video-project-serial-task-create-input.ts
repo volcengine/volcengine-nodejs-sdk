@@ -101,6 +101,12 @@ export interface TaskInfoForVideoProjectSerialTaskCreateInput {
     needTranslateTitleAndDesc?: boolean;
 
     /**
+     * @type {boolean}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
+    needVideoSpeed?: boolean;
+
+    /**
      * @type {number}
      * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
      */
