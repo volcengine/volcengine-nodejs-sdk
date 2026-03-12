@@ -31,8 +31,8 @@
     "test:e2e": "ARK_E2E=1 jest --testPathPattern=e2e"
   },
   "dependencies": {
-    "@types/axios": "^0.9.36",
-    "axios": "^1.13.6"
+    "axios": "^1.13.6",
+    "@volcengine/ark": "workspace:*"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
