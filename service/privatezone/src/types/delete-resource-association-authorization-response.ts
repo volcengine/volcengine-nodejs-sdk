@@ -16,25 +16,7 @@
  * 
  *
  * @export
- * @interface CreateAuthorizedUserRequest
+ * @interface DeleteResourceAssociationAuthorizationResponse
  */
-export interface CreateAuthorizedUserRequest {
-
-    /**
-     * @type {string}
-     * @memberof CreateAuthorizedUserRequest
-     */
-    AccountID: string;
-
-    /**
-     * @type {number}
-     * @memberof CreateAuthorizedUserRequest
-     */
-    AuthType: number;
-
-    /**
-     * @type {string}
-     * @memberof CreateAuthorizedUserRequest
-     */
-    VerifyCode?: string;
+export interface DeleteResourceAssociationAuthorizationResponse {
 }

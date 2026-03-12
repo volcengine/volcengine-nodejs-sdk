@@ -16,25 +16,31 @@
  * 
  *
  * @export
- * @interface CreateAuthorizedUserRequest
+ * @interface ListZonesByVPCRequest
  */
-export interface CreateAuthorizedUserRequest {
-
-    /**
-     * @type {string}
-     * @memberof CreateAuthorizedUserRequest
-     */
-    AccountID: string;
+export interface ListZonesByVPCRequest {
 
     /**
      * @type {number}
-     * @memberof CreateAuthorizedUserRequest
+     * @memberof ListZonesByVPCRequest
      */
-    AuthType: number;
+    PageNumber?: number;
+
+    /**
+     * @type {number}
+     * @memberof ListZonesByVPCRequest
+     */
+    PageSize?: number;
 
     /**
      * @type {string}
-     * @memberof CreateAuthorizedUserRequest
+     * @memberof ListZonesByVPCRequest
      */
-    VerifyCode?: string;
+    VpcID: string;
+
+    /**
+     * @type {string}
+     * @memberof ListZonesByVPCRequest
+     */
+    VpcRegion: string;
 }

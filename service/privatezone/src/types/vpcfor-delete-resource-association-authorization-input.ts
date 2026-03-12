@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface CreateAuthorizedUserRequest
+ * @interface VPCForDeleteResourceAssociationAuthorizationInput
  */
-export interface CreateAuthorizedUserRequest {
+export interface VPCForDeleteResourceAssociationAuthorizationInput {
 
     /**
      * @type {string}
-     * @memberof CreateAuthorizedUserRequest
+     * @memberof VPCForDeleteResourceAssociationAuthorizationInput
      */
-    AccountID: string;
-
-    /**
-     * @type {number}
-     * @memberof CreateAuthorizedUserRequest
-     */
-    AuthType: number;
+    VpcID?: string;
 
     /**
      * @type {string}
-     * @memberof CreateAuthorizedUserRequest
+     * @memberof VPCForDeleteResourceAssociationAuthorizationInput
      */
-    VerifyCode?: string;
+    VpcRegion?: string;
 }
