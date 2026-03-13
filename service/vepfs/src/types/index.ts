@@ -156,6 +156,7 @@ export * from './tag-resources-request';
 export * from './tag-resources-response';
 export * from './target-info-for-create-lens-task-input';
 export * from './target-info-for-describe-lens-tasks-output';
+export * from './tls-info-for-describe-data-flow-tasks-output';
 export * from './untag-resources-request';
 export * from './untag-resources-response';
 export * from './update-audit-request';
