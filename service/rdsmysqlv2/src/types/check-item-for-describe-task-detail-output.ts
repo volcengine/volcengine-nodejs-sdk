@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { CheckDetailForDescribeTaskDetailOutput } from './check-detail-for-describe-task-detail-output';
  /**
  * 
  *
@@ -20,12 +19,6 @@ import { CheckDetailForDescribeTaskDetailOutput } from './check-detail-for-descr
  * @interface CheckItemForDescribeTaskDetailOutput
  */
 export interface CheckItemForDescribeTaskDetailOutput {
-
-    /**
-     * @type {CheckDetailForDescribeTaskDetailOutput}
-     * @memberof CheckItemForDescribeTaskDetailOutput
-     */
-    CheckDetail?: CheckDetailForDescribeTaskDetailOutput;
 
     /**
      * @type {string}

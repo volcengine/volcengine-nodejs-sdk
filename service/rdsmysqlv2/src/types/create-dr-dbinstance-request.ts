@@ -60,6 +60,12 @@ export interface CreateDrDBInstanceRequest {
     NodeInfo?: Array<NodeInfoForCreateDrDBInstanceInput>;
 
     /**
+     * @type {string}
+     * @memberof CreateDrDBInstanceRequest
+     */
+    PrivateIpAddress?: string;
+
+    /**
      * @type {ProxyNodeCustomForCreateDrDBInstanceInput}
      * @memberof CreateDrDBInstanceRequest
      */
