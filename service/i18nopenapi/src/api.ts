@@ -16,20 +16,152 @@ import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandO
 
 import { CreateVideoCreateRequest } from './types/index';
 import { CreateVideoCreateResponse } from './types/index';
+import { DocumentCreateRequest } from './types/index';
+import { DocumentCreateResponse } from './types/index';
+import { DocumentTaskCreateRequest } from './types/index';
+import { DocumentTaskCreateResponse } from './types/index';
+import { DocumentTaskDeleteRequest } from './types/index';
+import { DocumentTaskDeleteResponse } from './types/index';
+import { DocumentTaskDetailRequest } from './types/index';
+import { DocumentTaskDetailResponse } from './types/index';
+import { DocumentTaskStopRequest } from './types/index';
+import { DocumentTaskStopResponse } from './types/index';
+import { LanguagesRequest } from './types/index';
+import { LanguagesResponse } from './types/index';
+import { MtSupportLangRequest } from './types/index';
+import { MtSupportLangResponse } from './types/index';
 import { ProjectDetailRequest } from './types/index';
 import { ProjectDetailResponse } from './types/index';
+import { ProjectDownloadProgressQueryRequest } from './types/index';
+import { ProjectDownloadProgressQueryResponse } from './types/index';
+import { ProjectDownloadTaskDeleteRequest } from './types/index';
+import { ProjectDownloadTaskDeleteResponse } from './types/index';
+import { ProjectMtDetectRequest } from './types/index';
+import { ProjectMtDetectResponse } from './types/index';
+import { ProjectMtTranslateRequest } from './types/index';
+import { ProjectMtTranslateResponse } from './types/index';
 import { ProjectNamespaceCreateRequest } from './types/index';
 import { ProjectNamespaceCreateResponse } from './types/index';
 import { ProjectNamespaceDetailRequest } from './types/index';
 import { ProjectNamespaceDetailResponse } from './types/index';
+import { ProjectNamespaceSourceAddRequest } from './types/index';
+import { ProjectNamespaceSourceAddResponse } from './types/index';
+import { ProjectNamespaceSourceDeleteByIdsRequest } from './types/index';
+import { ProjectNamespaceSourceDeleteByIdsResponse } from './types/index';
+import { ProjectNamespaceSourceDeleteByKeysRequest } from './types/index';
+import { ProjectNamespaceSourceDeleteByKeysResponse } from './types/index';
+import { ProjectNamespaceSourceDetailRequest } from './types/index';
+import { ProjectNamespaceSourceDetailResponse } from './types/index';
+import { ProjectNamespaceSourceDownloadRequest } from './types/index';
+import { ProjectNamespaceSourceDownloadResponse } from './types/index';
+import { ProjectNamespaceSourceMultiUpdateRequest } from './types/index';
+import { ProjectNamespaceSourceMultiUpdateResponse } from './types/index';
+import { ProjectNamespaceSourceUpdateRequest } from './types/index';
+import { ProjectNamespaceSourceUpdateResponse } from './types/index';
+import { ProjectNamespaceTargetDeleteByIdRequest } from './types/index';
+import { ProjectNamespaceTargetDeleteByIdResponse } from './types/index';
+import { ProjectNamespaceTargetDeleteByIdsRequest } from './types/index';
+import { ProjectNamespaceTargetDeleteByIdsResponse } from './types/index';
+import { ProjectNamespaceTargetDeleteByKeysRequest } from './types/index';
+import { ProjectNamespaceTargetDeleteByKeysResponse } from './types/index';
+import { ProjectNamespaceTargetDownloadRequest } from './types/index';
+import { ProjectNamespaceTargetDownloadResponse } from './types/index';
+import { ProjectNamespaceTargetUpdateRequest } from './types/index';
+import { ProjectNamespaceTargetUpdateResponse } from './types/index';
+import { ProjectNamespaceTargetsRequest } from './types/index';
+import { ProjectNamespaceTargetsResponse } from './types/index';
+import { ProjectNamespaceTextImportRequest } from './types/index';
+import { ProjectNamespaceTextImportResponse } from './types/index';
+import { ProjectNamespaceUpdateRequest } from './types/index';
+import { ProjectNamespaceUpdateResponse } from './types/index';
 import { ProjectNamespacesRequest } from './types/index';
 import { ProjectNamespacesResponse } from './types/index';
+import { ProjectNamespacesTargetTextsRequest } from './types/index';
+import { ProjectNamespacesTargetTextsResponse } from './types/index';
+import { ProjectOperableListRequest } from './types/index';
+import { ProjectOperableListResponse } from './types/index';
+import { ProjectScreenshotsAddRequest } from './types/index';
+import { ProjectScreenshotsAddResponse } from './types/index';
+import { ProjectScreenshotsIdentifyRequest } from './types/index';
+import { ProjectScreenshotsIdentifyResponse } from './types/index';
+import { ProjectScreenshotsRelationsDeleteRequest } from './types/index';
+import { ProjectScreenshotsRelationsDeleteResponse } from './types/index';
+import { ProjectTargetTextStatusUpdateRequest } from './types/index';
+import { ProjectTargetTextStatusUpdateResponse } from './types/index';
+import { ProjectTaskCreateRequest } from './types/index';
+import { ProjectTaskCreateResponse } from './types/index';
+import { ProjectTaskDetailRequest } from './types/index';
+import { ProjectTaskDetailResponse } from './types/index';
+import { ProjectTaskSourceAddRequest } from './types/index';
+import { ProjectTaskSourceAddResponse } from './types/index';
+import { ProjectTaskSourceDeleteByIdsRequest } from './types/index';
+import { ProjectTaskSourceDeleteByIdsResponse } from './types/index';
+import { ProjectTaskSourceDeleteByKeysRequest } from './types/index';
+import { ProjectTaskSourceDeleteByKeysResponse } from './types/index';
+import { ProjectTaskSourceDetailRequest } from './types/index';
+import { ProjectTaskSourceDetailResponse } from './types/index';
+import { ProjectTaskSourceDownloadRequest } from './types/index';
+import { ProjectTaskSourceDownloadResponse } from './types/index';
+import { ProjectTaskSourceMultiUpdateRequest } from './types/index';
+import { ProjectTaskSourceMultiUpdateResponse } from './types/index';
+import { ProjectTaskSourceUpdateRequest } from './types/index';
+import { ProjectTaskSourceUpdateResponse } from './types/index';
+import { ProjectTaskSourcesRequest } from './types/index';
+import { ProjectTaskSourcesResponse } from './types/index';
+import { ProjectTaskTargetDeleteByIdRequest } from './types/index';
+import { ProjectTaskTargetDeleteByIdResponse } from './types/index';
+import { ProjectTaskTargetDeleteByIdsRequest } from './types/index';
+import { ProjectTaskTargetDeleteByIdsResponse } from './types/index';
+import { ProjectTaskTargetDeleteByKeysRequest } from './types/index';
+import { ProjectTaskTargetDeleteByKeysResponse } from './types/index';
+import { ProjectTaskTargetUpdateRequest } from './types/index';
+import { ProjectTaskTargetUpdateResponse } from './types/index';
+import { ProjectTaskTargetsRequest } from './types/index';
+import { ProjectTaskTargetsResponse } from './types/index';
+import { ProjectTaskTextCountRequest } from './types/index';
+import { ProjectTaskTextCountResponse } from './types/index';
+import { ProjectTaskTextDownloadRequest } from './types/index';
+import { ProjectTaskTextDownloadResponse } from './types/index';
+import { ProjectTaskTextImportRequest } from './types/index';
+import { ProjectTaskTextImportResponse } from './types/index';
+import { ProjectTasksRequest } from './types/index';
+import { ProjectTasksResponse } from './types/index';
+import { ProjectTermDetailRequest } from './types/index';
+import { ProjectTermDetailResponse } from './types/index';
+import { ProjectTermSourceDeleteRequest } from './types/index';
+import { ProjectTermSourceDeleteResponse } from './types/index';
+import { ProjectTermSourceUpdateRequest } from './types/index';
+import { ProjectTermSourceUpdateResponse } from './types/index';
+import { ProjectTermTargetAddRequest } from './types/index';
+import { ProjectTermTargetAddResponse } from './types/index';
+import { ProjectTermTargetDeleteRequest } from './types/index';
+import { ProjectTermTargetDeleteResponse } from './types/index';
+import { ProjectTermTargetUpdateRequest } from './types/index';
+import { ProjectTermTargetUpdateResponse } from './types/index';
+import { ProjectTermsRequest } from './types/index';
+import { ProjectTermsResponse } from './types/index';
+import { ProjectTextAcrossImportCheckRequest } from './types/index';
+import { ProjectTextAcrossImportCheckResponse } from './types/index';
+import { ProjectTextAcrossImportRequest } from './types/index';
+import { ProjectTextAcrossImportResponse } from './types/index';
+import { ProjectTextImportConfirmRequest } from './types/index';
+import { ProjectTextImportConfirmResponse } from './types/index';
+import { ProjectTextImportStatusQueryRequest } from './types/index';
+import { ProjectTextImportStatusQueryResponse } from './types/index';
 import { ProjectUserRoleRequest } from './types/index';
 import { ProjectUserRoleResponse } from './types/index';
 import { ProjectUsersRequest } from './types/index';
 import { ProjectUsersResponse } from './types/index';
 import { ProjectsRequest } from './types/index';
 import { ProjectsResponse } from './types/index';
+import { TermBaseTermGroupImportRequest } from './types/index';
+import { TermBaseTermGroupImportResponse } from './types/index';
+import { TermBaseTermGroupImportTaskRequest } from './types/index';
+import { TermBaseTermGroupImportTaskResponse } from './types/index';
+import { TermBaseTermGroupsRequest } from './types/index';
+import { TermBaseTermGroupsResponse } from './types/index';
+import { TextGetTextListWithKeyOrSourceRequest } from './types/index';
+import { TextGetTextListWithKeyOrSourceResponse } from './types/index';
 import { VideoProjectCreateRequest } from './types/index';
 import { VideoProjectCreateResponse } from './types/index';
 import { VideoProjectListRequest } from './types/index';
@@ -40,12 +172,16 @@ import { VideoProjectSerialTaskCreateRequest } from './types/index';
 import { VideoProjectSerialTaskCreateResponse } from './types/index';
 import { VideoProjectSuppressionStartRequest } from './types/index';
 import { VideoProjectSuppressionStartResponse } from './types/index';
+import { VideoProjectTaskBatchStartAIFlowRequest } from './types/index';
+import { VideoProjectTaskBatchStartAIFlowResponse } from './types/index';
 import { VideoProjectTaskDetailRequest } from './types/index';
 import { VideoProjectTaskDetailResponse } from './types/index';
 import { VideoProjectTaskListRequest } from './types/index';
 import { VideoProjectTaskListResponse } from './types/index';
 import { VideoResourceUploadRequest } from './types/index';
 import { VideoResourceUploadResponse } from './types/index';
+import { VideoTermBasesRequest } from './types/index';
+import { VideoTermBasesResponse } from './types/index';
 import { WebhooksCreateRequest } from './types/index';
 import { WebhooksCreateResponse } from './types/index';
 
@@ -53,21 +189,89 @@ import { WebhooksCreateResponse } from './types/index';
 // Output Type Definitions
 // ============================================================================
 export type CreateVideoCreateCommandOutput = CommandOutput<CreateVideoCreateResponse>;
+export type DocumentCreateCommandOutput = CommandOutput<DocumentCreateResponse>;
+export type DocumentTaskCreateCommandOutput = CommandOutput<DocumentTaskCreateResponse>;
+export type DocumentTaskDeleteCommandOutput = CommandOutput<DocumentTaskDeleteResponse>;
+export type DocumentTaskDetailCommandOutput = CommandOutput<DocumentTaskDetailResponse>;
+export type DocumentTaskStopCommandOutput = CommandOutput<DocumentTaskStopResponse>;
+export type LanguagesCommandOutput = CommandOutput<LanguagesResponse>;
+export type MtSupportLangCommandOutput = CommandOutput<MtSupportLangResponse>;
 export type ProjectDetailCommandOutput = CommandOutput<ProjectDetailResponse>;
+export type ProjectDownloadProgressQueryCommandOutput = CommandOutput<ProjectDownloadProgressQueryResponse>;
+export type ProjectDownloadTaskDeleteCommandOutput = CommandOutput<ProjectDownloadTaskDeleteResponse>;
+export type ProjectMtDetectCommandOutput = CommandOutput<ProjectMtDetectResponse>;
+export type ProjectMtTranslateCommandOutput = CommandOutput<ProjectMtTranslateResponse>;
 export type ProjectNamespaceCreateCommandOutput = CommandOutput<ProjectNamespaceCreateResponse>;
 export type ProjectNamespaceDetailCommandOutput = CommandOutput<ProjectNamespaceDetailResponse>;
+export type ProjectNamespaceSourceAddCommandOutput = CommandOutput<ProjectNamespaceSourceAddResponse>;
+export type ProjectNamespaceSourceDeleteByIdsCommandOutput = CommandOutput<ProjectNamespaceSourceDeleteByIdsResponse>;
+export type ProjectNamespaceSourceDeleteByKeysCommandOutput = CommandOutput<ProjectNamespaceSourceDeleteByKeysResponse>;
+export type ProjectNamespaceSourceDetailCommandOutput = CommandOutput<ProjectNamespaceSourceDetailResponse>;
+export type ProjectNamespaceSourceDownloadCommandOutput = CommandOutput<ProjectNamespaceSourceDownloadResponse>;
+export type ProjectNamespaceSourceMultiUpdateCommandOutput = CommandOutput<ProjectNamespaceSourceMultiUpdateResponse>;
+export type ProjectNamespaceSourceUpdateCommandOutput = CommandOutput<ProjectNamespaceSourceUpdateResponse>;
+export type ProjectNamespaceTargetDeleteByIdCommandOutput = CommandOutput<ProjectNamespaceTargetDeleteByIdResponse>;
+export type ProjectNamespaceTargetDeleteByIdsCommandOutput = CommandOutput<ProjectNamespaceTargetDeleteByIdsResponse>;
+export type ProjectNamespaceTargetDeleteByKeysCommandOutput = CommandOutput<ProjectNamespaceTargetDeleteByKeysResponse>;
+export type ProjectNamespaceTargetDownloadCommandOutput = CommandOutput<ProjectNamespaceTargetDownloadResponse>;
+export type ProjectNamespaceTargetUpdateCommandOutput = CommandOutput<ProjectNamespaceTargetUpdateResponse>;
+export type ProjectNamespaceTargetsCommandOutput = CommandOutput<ProjectNamespaceTargetsResponse>;
+export type ProjectNamespaceTextImportCommandOutput = CommandOutput<ProjectNamespaceTextImportResponse>;
+export type ProjectNamespaceUpdateCommandOutput = CommandOutput<ProjectNamespaceUpdateResponse>;
 export type ProjectNamespacesCommandOutput = CommandOutput<ProjectNamespacesResponse>;
+export type ProjectNamespacesTargetTextsCommandOutput = CommandOutput<ProjectNamespacesTargetTextsResponse>;
+export type ProjectOperableListCommandOutput = CommandOutput<ProjectOperableListResponse>;
+export type ProjectScreenshotsAddCommandOutput = CommandOutput<ProjectScreenshotsAddResponse>;
+export type ProjectScreenshotsIdentifyCommandOutput = CommandOutput<ProjectScreenshotsIdentifyResponse>;
+export type ProjectScreenshotsRelationsDeleteCommandOutput = CommandOutput<ProjectScreenshotsRelationsDeleteResponse>;
+export type ProjectTargetTextStatusUpdateCommandOutput = CommandOutput<ProjectTargetTextStatusUpdateResponse>;
+export type ProjectTaskCreateCommandOutput = CommandOutput<ProjectTaskCreateResponse>;
+export type ProjectTaskDetailCommandOutput = CommandOutput<ProjectTaskDetailResponse>;
+export type ProjectTaskSourceAddCommandOutput = CommandOutput<ProjectTaskSourceAddResponse>;
+export type ProjectTaskSourceDeleteByIdsCommandOutput = CommandOutput<ProjectTaskSourceDeleteByIdsResponse>;
+export type ProjectTaskSourceDeleteByKeysCommandOutput = CommandOutput<ProjectTaskSourceDeleteByKeysResponse>;
+export type ProjectTaskSourceDetailCommandOutput = CommandOutput<ProjectTaskSourceDetailResponse>;
+export type ProjectTaskSourceDownloadCommandOutput = CommandOutput<ProjectTaskSourceDownloadResponse>;
+export type ProjectTaskSourceMultiUpdateCommandOutput = CommandOutput<ProjectTaskSourceMultiUpdateResponse>;
+export type ProjectTaskSourceUpdateCommandOutput = CommandOutput<ProjectTaskSourceUpdateResponse>;
+export type ProjectTaskSourcesCommandOutput = CommandOutput<ProjectTaskSourcesResponse>;
+export type ProjectTaskTargetDeleteByIdCommandOutput = CommandOutput<ProjectTaskTargetDeleteByIdResponse>;
+export type ProjectTaskTargetDeleteByIdsCommandOutput = CommandOutput<ProjectTaskTargetDeleteByIdsResponse>;
+export type ProjectTaskTargetDeleteByKeysCommandOutput = CommandOutput<ProjectTaskTargetDeleteByKeysResponse>;
+export type ProjectTaskTargetUpdateCommandOutput = CommandOutput<ProjectTaskTargetUpdateResponse>;
+export type ProjectTaskTargetsCommandOutput = CommandOutput<ProjectTaskTargetsResponse>;
+export type ProjectTaskTextCountCommandOutput = CommandOutput<ProjectTaskTextCountResponse>;
+export type ProjectTaskTextDownloadCommandOutput = CommandOutput<ProjectTaskTextDownloadResponse>;
+export type ProjectTaskTextImportCommandOutput = CommandOutput<ProjectTaskTextImportResponse>;
+export type ProjectTasksCommandOutput = CommandOutput<ProjectTasksResponse>;
+export type ProjectTermDetailCommandOutput = CommandOutput<ProjectTermDetailResponse>;
+export type ProjectTermSourceDeleteCommandOutput = CommandOutput<ProjectTermSourceDeleteResponse>;
+export type ProjectTermSourceUpdateCommandOutput = CommandOutput<ProjectTermSourceUpdateResponse>;
+export type ProjectTermTargetAddCommandOutput = CommandOutput<ProjectTermTargetAddResponse>;
+export type ProjectTermTargetDeleteCommandOutput = CommandOutput<ProjectTermTargetDeleteResponse>;
+export type ProjectTermTargetUpdateCommandOutput = CommandOutput<ProjectTermTargetUpdateResponse>;
+export type ProjectTermsCommandOutput = CommandOutput<ProjectTermsResponse>;
+export type ProjectTextAcrossImportCommandOutput = CommandOutput<ProjectTextAcrossImportResponse>;
+export type ProjectTextAcrossImportCheckCommandOutput = CommandOutput<ProjectTextAcrossImportCheckResponse>;
+export type ProjectTextImportConfirmCommandOutput = CommandOutput<ProjectTextImportConfirmResponse>;
+export type ProjectTextImportStatusQueryCommandOutput = CommandOutput<ProjectTextImportStatusQueryResponse>;
 export type ProjectUserRoleCommandOutput = CommandOutput<ProjectUserRoleResponse>;
 export type ProjectUsersCommandOutput = CommandOutput<ProjectUsersResponse>;
 export type ProjectsCommandOutput = CommandOutput<ProjectsResponse>;
+export type TermBaseTermGroupImportCommandOutput = CommandOutput<TermBaseTermGroupImportResponse>;
+export type TermBaseTermGroupImportTaskCommandOutput = CommandOutput<TermBaseTermGroupImportTaskResponse>;
+export type TermBaseTermGroupsCommandOutput = CommandOutput<TermBaseTermGroupsResponse>;
+export type TextGetTextListWithKeyOrSourceCommandOutput = CommandOutput<TextGetTextListWithKeyOrSourceResponse>;
 export type VideoProjectCreateCommandOutput = CommandOutput<VideoProjectCreateResponse>;
 export type VideoProjectListCommandOutput = CommandOutput<VideoProjectListResponse>;
 export type VideoProjectSerialDubTaskCreateCommandOutput = CommandOutput<VideoProjectSerialDubTaskCreateResponse>;
 export type VideoProjectSerialTaskCreateCommandOutput = CommandOutput<VideoProjectSerialTaskCreateResponse>;
 export type VideoProjectSuppressionStartCommandOutput = CommandOutput<VideoProjectSuppressionStartResponse>;
+export type VideoProjectTaskBatchStartAIFlowCommandOutput = CommandOutput<VideoProjectTaskBatchStartAIFlowResponse>;
 export type VideoProjectTaskDetailCommandOutput = CommandOutput<VideoProjectTaskDetailResponse>;
 export type VideoProjectTaskListCommandOutput = CommandOutput<VideoProjectTaskListResponse>;
 export type VideoResourceUploadCommandOutput = CommandOutput<VideoResourceUploadResponse>;
+export type VideoTermBasesCommandOutput = CommandOutput<VideoTermBasesResponse>;
 export type WebhooksCreateCommandOutput = CommandOutput<WebhooksCreateResponse>;
 
 /**
@@ -99,6 +303,111 @@ export class CreateVideoCreateCommand extends Command<
   }
 }
 /**
+ * Command to DocumentCreate
+ */
+export class DocumentCreateCommand extends Command<
+  DocumentCreateRequest,
+  DocumentCreateCommandOutput,
+  'DocumentCreateCommand'
+> {
+  static readonly metaPath = '/DocumentCreate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: DocumentCreateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DocumentCreateCommand.metaPath);
+  }
+}
+/**
+ * Command to DocumentTaskCreate
+ */
+export class DocumentTaskCreateCommand extends Command<
+  DocumentTaskCreateRequest,
+  DocumentTaskCreateCommandOutput,
+  'DocumentTaskCreateCommand'
+> {
+  static readonly metaPath = '/DocumentTaskCreate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: DocumentTaskCreateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DocumentTaskCreateCommand.metaPath);
+  }
+}
+/**
+ * Command to DocumentTaskDelete
+ */
+export class DocumentTaskDeleteCommand extends Command<
+  DocumentTaskDeleteRequest,
+  DocumentTaskDeleteCommandOutput,
+  'DocumentTaskDeleteCommand'
+> {
+  static readonly metaPath = '/DocumentTaskDelete/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: DocumentTaskDeleteRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DocumentTaskDeleteCommand.metaPath);
+  }
+}
+/**
+ * Command to DocumentTaskDetail
+ */
+export class DocumentTaskDetailCommand extends Command<
+  DocumentTaskDetailRequest,
+  DocumentTaskDetailCommandOutput,
+  'DocumentTaskDetailCommand'
+> {
+  static readonly metaPath = '/DocumentTaskDetail/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: DocumentTaskDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DocumentTaskDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to DocumentTaskStop
+ */
+export class DocumentTaskStopCommand extends Command<
+  DocumentTaskStopRequest,
+  DocumentTaskStopCommandOutput,
+  'DocumentTaskStopCommand'
+> {
+  static readonly metaPath = '/DocumentTaskStop/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: DocumentTaskStopRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DocumentTaskStopCommand.metaPath);
+  }
+}
+/**
+ * Command to Languages
+ */
+export class LanguagesCommand extends Command<
+  LanguagesRequest,
+  LanguagesCommandOutput,
+  'LanguagesCommand'
+> {
+  static readonly metaPath = '/Languages/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: LanguagesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(LanguagesCommand.metaPath);
+  }
+}
+/**
+ * Command to MtSupportLang
+ */
+export class MtSupportLangCommand extends Command<
+  MtSupportLangRequest,
+  MtSupportLangCommandOutput,
+  'MtSupportLangCommand'
+> {
+  static readonly metaPath = '/MtSupportLang/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: MtSupportLangRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(MtSupportLangCommand.metaPath);
+  }
+}
+/**
  * Command to ProjectDetail
  */
 export class ProjectDetailCommand extends Command<
@@ -111,6 +420,66 @@ export class ProjectDetailCommand extends Command<
   constructor(input: ProjectDetailRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ProjectDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectDownloadProgressQuery
+ */
+export class ProjectDownloadProgressQueryCommand extends Command<
+  ProjectDownloadProgressQueryRequest,
+  ProjectDownloadProgressQueryCommandOutput,
+  'ProjectDownloadProgressQueryCommand'
+> {
+  static readonly metaPath = '/ProjectDownloadProgressQuery/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectDownloadProgressQueryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectDownloadProgressQueryCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectDownloadTaskDelete
+ */
+export class ProjectDownloadTaskDeleteCommand extends Command<
+  ProjectDownloadTaskDeleteRequest,
+  ProjectDownloadTaskDeleteCommandOutput,
+  'ProjectDownloadTaskDeleteCommand'
+> {
+  static readonly metaPath = '/ProjectDownloadTaskDelete/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectDownloadTaskDeleteRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectDownloadTaskDeleteCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectMtDetect
+ */
+export class ProjectMtDetectCommand extends Command<
+  ProjectMtDetectRequest,
+  ProjectMtDetectCommandOutput,
+  'ProjectMtDetectCommand'
+> {
+  static readonly metaPath = '/ProjectMtDetect/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectMtDetectRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectMtDetectCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectMtTranslate
+ */
+export class ProjectMtTranslateCommand extends Command<
+  ProjectMtTranslateRequest,
+  ProjectMtTranslateCommandOutput,
+  'ProjectMtTranslateCommand'
+> {
+  static readonly metaPath = '/ProjectMtTranslate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectMtTranslateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectMtTranslateCommand.metaPath);
   }
 }
 /**
@@ -144,6 +513,231 @@ export class ProjectNamespaceDetailCommand extends Command<
   }
 }
 /**
+ * Command to ProjectNamespaceSourceAdd
+ */
+export class ProjectNamespaceSourceAddCommand extends Command<
+  ProjectNamespaceSourceAddRequest,
+  ProjectNamespaceSourceAddCommandOutput,
+  'ProjectNamespaceSourceAddCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceSourceAdd/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectNamespaceSourceAddRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceSourceAddCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceSourceDeleteByIds
+ */
+export class ProjectNamespaceSourceDeleteByIdsCommand extends Command<
+  ProjectNamespaceSourceDeleteByIdsRequest,
+  ProjectNamespaceSourceDeleteByIdsCommandOutput,
+  'ProjectNamespaceSourceDeleteByIdsCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceSourceDeleteByIds/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectNamespaceSourceDeleteByIdsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceSourceDeleteByIdsCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceSourceDeleteByKeys
+ */
+export class ProjectNamespaceSourceDeleteByKeysCommand extends Command<
+  ProjectNamespaceSourceDeleteByKeysRequest,
+  ProjectNamespaceSourceDeleteByKeysCommandOutput,
+  'ProjectNamespaceSourceDeleteByKeysCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceSourceDeleteByKeys/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectNamespaceSourceDeleteByKeysRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceSourceDeleteByKeysCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceSourceDetail
+ */
+export class ProjectNamespaceSourceDetailCommand extends Command<
+  ProjectNamespaceSourceDetailRequest,
+  ProjectNamespaceSourceDetailCommandOutput,
+  'ProjectNamespaceSourceDetailCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceSourceDetail/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: ProjectNamespaceSourceDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceSourceDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceSourceDownload
+ */
+export class ProjectNamespaceSourceDownloadCommand extends Command<
+  ProjectNamespaceSourceDownloadRequest,
+  ProjectNamespaceSourceDownloadCommandOutput,
+  'ProjectNamespaceSourceDownloadCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceSourceDownload/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: ProjectNamespaceSourceDownloadRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceSourceDownloadCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceSourceMultiUpdate
+ */
+export class ProjectNamespaceSourceMultiUpdateCommand extends Command<
+  ProjectNamespaceSourceMultiUpdateRequest,
+  ProjectNamespaceSourceMultiUpdateCommandOutput,
+  'ProjectNamespaceSourceMultiUpdateCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceSourceMultiUpdate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectNamespaceSourceMultiUpdateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceSourceMultiUpdateCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceSourceUpdate
+ */
+export class ProjectNamespaceSourceUpdateCommand extends Command<
+  ProjectNamespaceSourceUpdateRequest,
+  ProjectNamespaceSourceUpdateCommandOutput,
+  'ProjectNamespaceSourceUpdateCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceSourceUpdate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectNamespaceSourceUpdateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceSourceUpdateCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceTargetDeleteById
+ */
+export class ProjectNamespaceTargetDeleteByIdCommand extends Command<
+  ProjectNamespaceTargetDeleteByIdRequest,
+  ProjectNamespaceTargetDeleteByIdCommandOutput,
+  'ProjectNamespaceTargetDeleteByIdCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceTargetDeleteById/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectNamespaceTargetDeleteByIdRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceTargetDeleteByIdCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceTargetDeleteByIds
+ */
+export class ProjectNamespaceTargetDeleteByIdsCommand extends Command<
+  ProjectNamespaceTargetDeleteByIdsRequest,
+  ProjectNamespaceTargetDeleteByIdsCommandOutput,
+  'ProjectNamespaceTargetDeleteByIdsCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceTargetDeleteByIds/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectNamespaceTargetDeleteByIdsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceTargetDeleteByIdsCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceTargetDeleteByKeys
+ */
+export class ProjectNamespaceTargetDeleteByKeysCommand extends Command<
+  ProjectNamespaceTargetDeleteByKeysRequest,
+  ProjectNamespaceTargetDeleteByKeysCommandOutput,
+  'ProjectNamespaceTargetDeleteByKeysCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceTargetDeleteByKeys/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectNamespaceTargetDeleteByKeysRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceTargetDeleteByKeysCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceTargetDownload
+ */
+export class ProjectNamespaceTargetDownloadCommand extends Command<
+  ProjectNamespaceTargetDownloadRequest,
+  ProjectNamespaceTargetDownloadCommandOutput,
+  'ProjectNamespaceTargetDownloadCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceTargetDownload/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: ProjectNamespaceTargetDownloadRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceTargetDownloadCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceTargetUpdate
+ */
+export class ProjectNamespaceTargetUpdateCommand extends Command<
+  ProjectNamespaceTargetUpdateRequest,
+  ProjectNamespaceTargetUpdateCommandOutput,
+  'ProjectNamespaceTargetUpdateCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceTargetUpdate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectNamespaceTargetUpdateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceTargetUpdateCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceTargets
+ */
+export class ProjectNamespaceTargetsCommand extends Command<
+  ProjectNamespaceTargetsRequest,
+  ProjectNamespaceTargetsCommandOutput,
+  'ProjectNamespaceTargetsCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceTargets/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: ProjectNamespaceTargetsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceTargetsCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceTextImport
+ */
+export class ProjectNamespaceTextImportCommand extends Command<
+  ProjectNamespaceTextImportRequest,
+  ProjectNamespaceTextImportCommandOutput,
+  'ProjectNamespaceTextImportCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceTextImport/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectNamespaceTextImportRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceTextImportCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespaceUpdate
+ */
+export class ProjectNamespaceUpdateCommand extends Command<
+  ProjectNamespaceUpdateRequest,
+  ProjectNamespaceUpdateCommandOutput,
+  'ProjectNamespaceUpdateCommand'
+> {
+  static readonly metaPath = '/ProjectNamespaceUpdate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectNamespaceUpdateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespaceUpdateCommand.metaPath);
+  }
+}
+/**
  * Command to ProjectNamespaces
  */
 export class ProjectNamespacesCommand extends Command<
@@ -156,6 +750,546 @@ export class ProjectNamespacesCommand extends Command<
   constructor(input: ProjectNamespacesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespacesCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectNamespacesTargetTexts
+ */
+export class ProjectNamespacesTargetTextsCommand extends Command<
+  ProjectNamespacesTargetTextsRequest,
+  ProjectNamespacesTargetTextsCommandOutput,
+  'ProjectNamespacesTargetTextsCommand'
+> {
+  static readonly metaPath = '/ProjectNamespacesTargetTexts/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectNamespacesTargetTextsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectNamespacesTargetTextsCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectOperableList
+ */
+export class ProjectOperableListCommand extends Command<
+  ProjectOperableListRequest,
+  ProjectOperableListCommandOutput,
+  'ProjectOperableListCommand'
+> {
+  static readonly metaPath = '/ProjectOperableList/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectOperableListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectOperableListCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectScreenshotsAdd
+ */
+export class ProjectScreenshotsAddCommand extends Command<
+  ProjectScreenshotsAddRequest,
+  ProjectScreenshotsAddCommandOutput,
+  'ProjectScreenshotsAddCommand'
+> {
+  static readonly metaPath = '/ProjectScreenshotsAdd/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectScreenshotsAddRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectScreenshotsAddCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectScreenshotsIdentify
+ */
+export class ProjectScreenshotsIdentifyCommand extends Command<
+  ProjectScreenshotsIdentifyRequest,
+  ProjectScreenshotsIdentifyCommandOutput,
+  'ProjectScreenshotsIdentifyCommand'
+> {
+  static readonly metaPath = '/ProjectScreenshotsIdentify/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectScreenshotsIdentifyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectScreenshotsIdentifyCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectScreenshotsRelationsDelete
+ */
+export class ProjectScreenshotsRelationsDeleteCommand extends Command<
+  ProjectScreenshotsRelationsDeleteRequest,
+  ProjectScreenshotsRelationsDeleteCommandOutput,
+  'ProjectScreenshotsRelationsDeleteCommand'
+> {
+  static readonly metaPath = '/ProjectScreenshotsRelationsDelete/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectScreenshotsRelationsDeleteRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectScreenshotsRelationsDeleteCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTargetTextStatusUpdate
+ */
+export class ProjectTargetTextStatusUpdateCommand extends Command<
+  ProjectTargetTextStatusUpdateRequest,
+  ProjectTargetTextStatusUpdateCommandOutput,
+  'ProjectTargetTextStatusUpdateCommand'
+> {
+  static readonly metaPath = '/ProjectTargetTextStatusUpdate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTargetTextStatusUpdateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTargetTextStatusUpdateCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskCreate
+ */
+export class ProjectTaskCreateCommand extends Command<
+  ProjectTaskCreateRequest,
+  ProjectTaskCreateCommandOutput,
+  'ProjectTaskCreateCommand'
+> {
+  static readonly metaPath = '/ProjectTaskCreate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskCreateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskCreateCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskDetail
+ */
+export class ProjectTaskDetailCommand extends Command<
+  ProjectTaskDetailRequest,
+  ProjectTaskDetailCommandOutput,
+  'ProjectTaskDetailCommand'
+> {
+  static readonly metaPath = '/ProjectTaskDetail/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: ProjectTaskDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskSourceAdd
+ */
+export class ProjectTaskSourceAddCommand extends Command<
+  ProjectTaskSourceAddRequest,
+  ProjectTaskSourceAddCommandOutput,
+  'ProjectTaskSourceAddCommand'
+> {
+  static readonly metaPath = '/ProjectTaskSourceAdd/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskSourceAddRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskSourceAddCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskSourceDeleteByIds
+ */
+export class ProjectTaskSourceDeleteByIdsCommand extends Command<
+  ProjectTaskSourceDeleteByIdsRequest,
+  ProjectTaskSourceDeleteByIdsCommandOutput,
+  'ProjectTaskSourceDeleteByIdsCommand'
+> {
+  static readonly metaPath = '/ProjectTaskSourceDeleteByIds/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskSourceDeleteByIdsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskSourceDeleteByIdsCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskSourceDeleteByKeys
+ */
+export class ProjectTaskSourceDeleteByKeysCommand extends Command<
+  ProjectTaskSourceDeleteByKeysRequest,
+  ProjectTaskSourceDeleteByKeysCommandOutput,
+  'ProjectTaskSourceDeleteByKeysCommand'
+> {
+  static readonly metaPath = '/ProjectTaskSourceDeleteByKeys/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskSourceDeleteByKeysRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskSourceDeleteByKeysCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskSourceDetail
+ */
+export class ProjectTaskSourceDetailCommand extends Command<
+  ProjectTaskSourceDetailRequest,
+  ProjectTaskSourceDetailCommandOutput,
+  'ProjectTaskSourceDetailCommand'
+> {
+  static readonly metaPath = '/ProjectTaskSourceDetail/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskSourceDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskSourceDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskSourceDownload
+ */
+export class ProjectTaskSourceDownloadCommand extends Command<
+  ProjectTaskSourceDownloadRequest,
+  ProjectTaskSourceDownloadCommandOutput,
+  'ProjectTaskSourceDownloadCommand'
+> {
+  static readonly metaPath = '/ProjectTaskSourceDownload/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskSourceDownloadRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskSourceDownloadCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskSourceMultiUpdate
+ */
+export class ProjectTaskSourceMultiUpdateCommand extends Command<
+  ProjectTaskSourceMultiUpdateRequest,
+  ProjectTaskSourceMultiUpdateCommandOutput,
+  'ProjectTaskSourceMultiUpdateCommand'
+> {
+  static readonly metaPath = '/ProjectTaskSourceMultiUpdate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskSourceMultiUpdateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskSourceMultiUpdateCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskSourceUpdate
+ */
+export class ProjectTaskSourceUpdateCommand extends Command<
+  ProjectTaskSourceUpdateRequest,
+  ProjectTaskSourceUpdateCommandOutput,
+  'ProjectTaskSourceUpdateCommand'
+> {
+  static readonly metaPath = '/ProjectTaskSourceUpdate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskSourceUpdateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskSourceUpdateCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskSources
+ */
+export class ProjectTaskSourcesCommand extends Command<
+  ProjectTaskSourcesRequest,
+  ProjectTaskSourcesCommandOutput,
+  'ProjectTaskSourcesCommand'
+> {
+  static readonly metaPath = '/ProjectTaskSources/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskSourcesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskSourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskTargetDeleteById
+ */
+export class ProjectTaskTargetDeleteByIdCommand extends Command<
+  ProjectTaskTargetDeleteByIdRequest,
+  ProjectTaskTargetDeleteByIdCommandOutput,
+  'ProjectTaskTargetDeleteByIdCommand'
+> {
+  static readonly metaPath = '/ProjectTaskTargetDeleteById/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskTargetDeleteByIdRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskTargetDeleteByIdCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskTargetDeleteByIds
+ */
+export class ProjectTaskTargetDeleteByIdsCommand extends Command<
+  ProjectTaskTargetDeleteByIdsRequest,
+  ProjectTaskTargetDeleteByIdsCommandOutput,
+  'ProjectTaskTargetDeleteByIdsCommand'
+> {
+  static readonly metaPath = '/ProjectTaskTargetDeleteByIds/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskTargetDeleteByIdsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskTargetDeleteByIdsCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskTargetDeleteByKeys
+ */
+export class ProjectTaskTargetDeleteByKeysCommand extends Command<
+  ProjectTaskTargetDeleteByKeysRequest,
+  ProjectTaskTargetDeleteByKeysCommandOutput,
+  'ProjectTaskTargetDeleteByKeysCommand'
+> {
+  static readonly metaPath = '/ProjectTaskTargetDeleteByKeys/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskTargetDeleteByKeysRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskTargetDeleteByKeysCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskTargetUpdate
+ */
+export class ProjectTaskTargetUpdateCommand extends Command<
+  ProjectTaskTargetUpdateRequest,
+  ProjectTaskTargetUpdateCommandOutput,
+  'ProjectTaskTargetUpdateCommand'
+> {
+  static readonly metaPath = '/ProjectTaskTargetUpdate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskTargetUpdateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskTargetUpdateCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskTargets
+ */
+export class ProjectTaskTargetsCommand extends Command<
+  ProjectTaskTargetsRequest,
+  ProjectTaskTargetsCommandOutput,
+  'ProjectTaskTargetsCommand'
+> {
+  static readonly metaPath = '/ProjectTaskTargets/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskTargetsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskTargetsCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskTextCount
+ */
+export class ProjectTaskTextCountCommand extends Command<
+  ProjectTaskTextCountRequest,
+  ProjectTaskTextCountCommandOutput,
+  'ProjectTaskTextCountCommand'
+> {
+  static readonly metaPath = '/ProjectTaskTextCount/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskTextCountRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskTextCountCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskTextDownload
+ */
+export class ProjectTaskTextDownloadCommand extends Command<
+  ProjectTaskTextDownloadRequest,
+  ProjectTaskTextDownloadCommandOutput,
+  'ProjectTaskTextDownloadCommand'
+> {
+  static readonly metaPath = '/ProjectTaskTextDownload/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskTextDownloadRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskTextDownloadCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTaskTextImport
+ */
+export class ProjectTaskTextImportCommand extends Command<
+  ProjectTaskTextImportRequest,
+  ProjectTaskTextImportCommandOutput,
+  'ProjectTaskTextImportCommand'
+> {
+  static readonly metaPath = '/ProjectTaskTextImport/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTaskTextImportRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTaskTextImportCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTasks
+ */
+export class ProjectTasksCommand extends Command<
+  ProjectTasksRequest,
+  ProjectTasksCommandOutput,
+  'ProjectTasksCommand'
+> {
+  static readonly metaPath = '/ProjectTasks/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTasksRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTasksCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTermDetail
+ */
+export class ProjectTermDetailCommand extends Command<
+  ProjectTermDetailRequest,
+  ProjectTermDetailCommandOutput,
+  'ProjectTermDetailCommand'
+> {
+  static readonly metaPath = '/ProjectTermDetail/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTermDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTermDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTermSourceDelete
+ */
+export class ProjectTermSourceDeleteCommand extends Command<
+  ProjectTermSourceDeleteRequest,
+  ProjectTermSourceDeleteCommandOutput,
+  'ProjectTermSourceDeleteCommand'
+> {
+  static readonly metaPath = '/ProjectTermSourceDelete/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTermSourceDeleteRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTermSourceDeleteCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTermSourceUpdate
+ */
+export class ProjectTermSourceUpdateCommand extends Command<
+  ProjectTermSourceUpdateRequest,
+  ProjectTermSourceUpdateCommandOutput,
+  'ProjectTermSourceUpdateCommand'
+> {
+  static readonly metaPath = '/ProjectTermSourceUpdate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTermSourceUpdateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTermSourceUpdateCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTermTargetAdd
+ */
+export class ProjectTermTargetAddCommand extends Command<
+  ProjectTermTargetAddRequest,
+  ProjectTermTargetAddCommandOutput,
+  'ProjectTermTargetAddCommand'
+> {
+  static readonly metaPath = '/ProjectTermTargetAdd/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTermTargetAddRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTermTargetAddCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTermTargetDelete
+ */
+export class ProjectTermTargetDeleteCommand extends Command<
+  ProjectTermTargetDeleteRequest,
+  ProjectTermTargetDeleteCommandOutput,
+  'ProjectTermTargetDeleteCommand'
+> {
+  static readonly metaPath = '/ProjectTermTargetDelete/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTermTargetDeleteRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTermTargetDeleteCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTermTargetUpdate
+ */
+export class ProjectTermTargetUpdateCommand extends Command<
+  ProjectTermTargetUpdateRequest,
+  ProjectTermTargetUpdateCommandOutput,
+  'ProjectTermTargetUpdateCommand'
+> {
+  static readonly metaPath = '/ProjectTermTargetUpdate/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTermTargetUpdateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTermTargetUpdateCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTerms
+ */
+export class ProjectTermsCommand extends Command<
+  ProjectTermsRequest,
+  ProjectTermsCommandOutput,
+  'ProjectTermsCommand'
+> {
+  static readonly metaPath = '/ProjectTerms/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTermsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTermsCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTextAcrossImport
+ */
+export class ProjectTextAcrossImportCommand extends Command<
+  ProjectTextAcrossImportRequest,
+  ProjectTextAcrossImportCommandOutput,
+  'ProjectTextAcrossImportCommand'
+> {
+  static readonly metaPath = '/ProjectTextAcrossImport/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTextAcrossImportRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTextAcrossImportCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTextAcrossImportCheck
+ */
+export class ProjectTextAcrossImportCheckCommand extends Command<
+  ProjectTextAcrossImportCheckRequest,
+  ProjectTextAcrossImportCheckCommandOutput,
+  'ProjectTextAcrossImportCheckCommand'
+> {
+  static readonly metaPath = '/ProjectTextAcrossImportCheck/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTextAcrossImportCheckRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTextAcrossImportCheckCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTextImportConfirm
+ */
+export class ProjectTextImportConfirmCommand extends Command<
+  ProjectTextImportConfirmRequest,
+  ProjectTextImportConfirmCommandOutput,
+  'ProjectTextImportConfirmCommand'
+> {
+  static readonly metaPath = '/ProjectTextImportConfirm/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTextImportConfirmRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTextImportConfirmCommand.metaPath);
+  }
+}
+/**
+ * Command to ProjectTextImportStatusQuery
+ */
+export class ProjectTextImportStatusQueryCommand extends Command<
+  ProjectTextImportStatusQueryRequest,
+  ProjectTextImportStatusQueryCommandOutput,
+  'ProjectTextImportStatusQueryCommand'
+> {
+  static readonly metaPath = '/ProjectTextImportStatusQuery/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: ProjectTextImportStatusQueryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProjectTextImportStatusQueryCommand.metaPath);
   }
 }
 /**
@@ -201,6 +1335,66 @@ export class ProjectsCommand extends Command<
   constructor(input: ProjectsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ProjectsCommand.metaPath);
+  }
+}
+/**
+ * Command to TermBaseTermGroupImport
+ */
+export class TermBaseTermGroupImportCommand extends Command<
+  TermBaseTermGroupImportRequest,
+  TermBaseTermGroupImportCommandOutput,
+  'TermBaseTermGroupImportCommand'
+> {
+  static readonly metaPath = '/TermBaseTermGroupImport/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: TermBaseTermGroupImportRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(TermBaseTermGroupImportCommand.metaPath);
+  }
+}
+/**
+ * Command to TermBaseTermGroupImportTask
+ */
+export class TermBaseTermGroupImportTaskCommand extends Command<
+  TermBaseTermGroupImportTaskRequest,
+  TermBaseTermGroupImportTaskCommandOutput,
+  'TermBaseTermGroupImportTaskCommand'
+> {
+  static readonly metaPath = '/TermBaseTermGroupImportTask/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: TermBaseTermGroupImportTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(TermBaseTermGroupImportTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to TermBaseTermGroups
+ */
+export class TermBaseTermGroupsCommand extends Command<
+  TermBaseTermGroupsRequest,
+  TermBaseTermGroupsCommandOutput,
+  'TermBaseTermGroupsCommand'
+> {
+  static readonly metaPath = '/TermBaseTermGroups/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: TermBaseTermGroupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(TermBaseTermGroupsCommand.metaPath);
+  }
+}
+/**
+ * Command to TextGetTextListWithKeyOrSource
+ */
+export class TextGetTextListWithKeyOrSourceCommand extends Command<
+  TextGetTextListWithKeyOrSourceRequest,
+  TextGetTextListWithKeyOrSourceCommandOutput,
+  'TextGetTextListWithKeyOrSourceCommand'
+> {
+  static readonly metaPath = '/TextGetTextListWithKeyOrSource/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: TextGetTextListWithKeyOrSourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(TextGetTextListWithKeyOrSourceCommand.metaPath);
   }
 }
 /**
@@ -279,6 +1473,21 @@ export class VideoProjectSuppressionStartCommand extends Command<
   }
 }
 /**
+ * Command to VideoProjectTaskBatchStartAIFlow
+ */
+export class VideoProjectTaskBatchStartAIFlowCommand extends Command<
+  VideoProjectTaskBatchStartAIFlowRequest,
+  VideoProjectTaskBatchStartAIFlowCommandOutput,
+  'VideoProjectTaskBatchStartAIFlowCommand'
+> {
+  static readonly metaPath = '/VideoProjectTaskBatchStartAIFlow/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoProjectTaskBatchStartAIFlowRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectTaskBatchStartAIFlowCommand.metaPath);
+  }
+}
+/**
  * Command to VideoProjectTaskDetail
  */
 export class VideoProjectTaskDetailCommand extends Command<
@@ -324,6 +1533,21 @@ export class VideoResourceUploadCommand extends Command<
   }
 }
 /**
+ * Command to VideoTermBases
+ */
+export class VideoTermBasesCommand extends Command<
+  VideoTermBasesRequest,
+  VideoTermBasesCommandOutput,
+  'VideoTermBasesCommand'
+> {
+  static readonly metaPath = '/VideoTermBases/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoTermBasesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoTermBasesCommand.metaPath);
+  }
+}
+/**
  * Command to WebhooksCreate
  */
 export class WebhooksCreateCommand extends Command<
@@ -342,20 +1566,88 @@ export class WebhooksCreateCommand extends Command<
 export default {
   I18NOPENAPIClient,
   CreateVideoCreateCommand,
+  DocumentCreateCommand,
+  DocumentTaskCreateCommand,
+  DocumentTaskDeleteCommand,
+  DocumentTaskDetailCommand,
+  DocumentTaskStopCommand,
+  LanguagesCommand,
+  MtSupportLangCommand,
   ProjectDetailCommand,
+  ProjectDownloadProgressQueryCommand,
+  ProjectDownloadTaskDeleteCommand,
+  ProjectMtDetectCommand,
+  ProjectMtTranslateCommand,
   ProjectNamespaceCreateCommand,
   ProjectNamespaceDetailCommand,
+  ProjectNamespaceSourceAddCommand,
+  ProjectNamespaceSourceDeleteByIdsCommand,
+  ProjectNamespaceSourceDeleteByKeysCommand,
+  ProjectNamespaceSourceDetailCommand,
+  ProjectNamespaceSourceDownloadCommand,
+  ProjectNamespaceSourceMultiUpdateCommand,
+  ProjectNamespaceSourceUpdateCommand,
+  ProjectNamespaceTargetDeleteByIdCommand,
+  ProjectNamespaceTargetDeleteByIdsCommand,
+  ProjectNamespaceTargetDeleteByKeysCommand,
+  ProjectNamespaceTargetDownloadCommand,
+  ProjectNamespaceTargetUpdateCommand,
+  ProjectNamespaceTargetsCommand,
+  ProjectNamespaceTextImportCommand,
+  ProjectNamespaceUpdateCommand,
   ProjectNamespacesCommand,
+  ProjectNamespacesTargetTextsCommand,
+  ProjectOperableListCommand,
+  ProjectScreenshotsAddCommand,
+  ProjectScreenshotsIdentifyCommand,
+  ProjectScreenshotsRelationsDeleteCommand,
+  ProjectTargetTextStatusUpdateCommand,
+  ProjectTaskCreateCommand,
+  ProjectTaskDetailCommand,
+  ProjectTaskSourceAddCommand,
+  ProjectTaskSourceDeleteByIdsCommand,
+  ProjectTaskSourceDeleteByKeysCommand,
+  ProjectTaskSourceDetailCommand,
+  ProjectTaskSourceDownloadCommand,
+  ProjectTaskSourceMultiUpdateCommand,
+  ProjectTaskSourceUpdateCommand,
+  ProjectTaskSourcesCommand,
+  ProjectTaskTargetDeleteByIdCommand,
+  ProjectTaskTargetDeleteByIdsCommand,
+  ProjectTaskTargetDeleteByKeysCommand,
+  ProjectTaskTargetUpdateCommand,
+  ProjectTaskTargetsCommand,
+  ProjectTaskTextCountCommand,
+  ProjectTaskTextDownloadCommand,
+  ProjectTaskTextImportCommand,
+  ProjectTasksCommand,
+  ProjectTermDetailCommand,
+  ProjectTermSourceDeleteCommand,
+  ProjectTermSourceUpdateCommand,
+  ProjectTermTargetAddCommand,
+  ProjectTermTargetDeleteCommand,
+  ProjectTermTargetUpdateCommand,
+  ProjectTermsCommand,
+  ProjectTextAcrossImportCommand,
+  ProjectTextAcrossImportCheckCommand,
+  ProjectTextImportConfirmCommand,
+  ProjectTextImportStatusQueryCommand,
   ProjectUserRoleCommand,
   ProjectUsersCommand,
   ProjectsCommand,
+  TermBaseTermGroupImportCommand,
+  TermBaseTermGroupImportTaskCommand,
+  TermBaseTermGroupsCommand,
+  TextGetTextListWithKeyOrSourceCommand,
   VideoProjectCreateCommand,
   VideoProjectListCommand,
   VideoProjectSerialDubTaskCreateCommand,
   VideoProjectSerialTaskCreateCommand,
   VideoProjectSuppressionStartCommand,
+  VideoProjectTaskBatchStartAIFlowCommand,
   VideoProjectTaskDetailCommand,
   VideoProjectTaskListCommand,
   VideoResourceUploadCommand,
+  VideoTermBasesCommand,
   WebhooksCreateCommand,
 };
