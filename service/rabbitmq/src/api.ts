@@ -97,7 +97,6 @@ export type ModifyUserPasswordCommandOutput = CommandOutput<ModifyUserPasswordRe
 export type RemoveTagsFromResourceCommandOutput = CommandOutput<RemoveTagsFromResourceResponse>;
 export type RestartInstanceCommandOutput = CommandOutput<RestartInstanceResponse>;
 
-
 /**
  * RABBITMQClient Service Client
  */

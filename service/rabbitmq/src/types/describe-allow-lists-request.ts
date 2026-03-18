@@ -24,5 +24,5 @@ export interface DescribeAllowListsRequest {
      * @type {string}
      * @memberof DescribeAllowListsRequest
      */
-    RegionID: string;
+    RegionId: string;
 }
