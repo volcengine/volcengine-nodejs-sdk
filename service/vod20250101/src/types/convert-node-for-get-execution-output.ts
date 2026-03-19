@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertOutputForGetExecutionOutput } from './convert-output-for-get-execution-output';
+import { ConvertConvertOutputForGetExecutionOutput } from './convert-convert-output-for-get-execution-output';
  /**
  * 
  *
@@ -34,10 +34,10 @@ export interface ConvertNodeForGetExecutionOutput {
     Name?: string;
 
     /**
-     * @type {ConvertOutputForGetExecutionOutput}
+     * @type {ConvertConvertOutputForGetExecutionOutput}
      * @memberof ConvertNodeForGetExecutionOutput
      */
-    Output?: ConvertOutputForGetExecutionOutput;
+    Output?: ConvertConvertOutputForGetExecutionOutput;
 
     /**
      * @type {string}

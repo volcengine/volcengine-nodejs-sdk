@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DeletePolicyForCreateDataFlowTaskInput } from './delete-policy-for-create-data-flow-task-input';
 import { EntryListFileInfoForCreateDataFlowTaskInput } from './entry-list-file-info-for-create-data-flow-task-input';
  /**
  * 
@@ -38,6 +39,18 @@ export interface CreateDataFlowTaskRequest {
      * @memberof CreateDataFlowTaskRequest
      */
     DataType: CreateDataFlowTaskRequestDataTypeEnum;
+
+    /**
+     * @type {DeletePolicyForCreateDataFlowTaskInput}
+     * @memberof CreateDataFlowTaskRequest
+     */
+    DeletePolicy?: DeletePolicyForCreateDataFlowTaskInput;
+
+    /**
+     * @type {boolean}
+     * @memberof CreateDataFlowTaskRequest
+     */
+    EnableTlsLog?: boolean;
 
     /**
      * @type {EntryListFileInfoForCreateDataFlowTaskInput}
@@ -114,6 +127,7 @@ export enum CreateDataFlowTaskRequestSameNameFilePolicyEnum {
 export enum CreateDataFlowTaskRequestTaskActionEnum {
     Import = 'Import',
     Export = 'Export',
-    Inventory = 'Inventory'
+    Inventory = 'Inventory',
+    Delete = 'Delete'
 }
 

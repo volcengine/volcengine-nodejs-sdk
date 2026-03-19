@@ -70,6 +70,12 @@ export interface DataForListOrderedHostsBasicInfosOutput {
     LastHeartbeatTime?: number;
 
     /**
+     * @type {number}
+     * @memberof DataForListOrderedHostsBasicInfosOutput
+     */
+    OldValidCode?: number;
+
+    /**
      * @type {boolean}
      * @memberof DataForListOrderedHostsBasicInfosOutput
      */
@@ -122,4 +128,10 @@ export interface DataForListOrderedHostsBasicInfosOutput {
      * @memberof DataForListOrderedHostsBasicInfosOutput
      */
     UserStatusReason?: string;
+
+    /**
+     * @type {number}
+     * @memberof DataForListOrderedHostsBasicInfosOutput
+     */
+    UserStatusReasonCode?: number;
 }

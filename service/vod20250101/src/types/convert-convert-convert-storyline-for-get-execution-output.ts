@@ -13,7 +13,7 @@
  */
 
 import { AllTagForGetExecutionOutput } from './all-tag-for-get-execution-output';
-import { ConvertConvertConvertClipForGetExecutionOutput } from './convert-convert-convert-clip-for-get-execution-output';
+import { ConvertConvertConvertConvertClipForGetExecutionOutput } from './convert-convert-convert-convert-clip-for-get-execution-output';
 import { ConvertConvertStorylineForGetExecutionOutput } from './convert-convert-storyline-for-get-execution-output';
  /**
  * 
@@ -30,10 +30,10 @@ export interface ConvertConvertConvertStorylineForGetExecutionOutput {
     AllTags?: Array<AllTagForGetExecutionOutput>;
 
     /**
-     * @type {Array<ConvertConvertConvertClipForGetExecutionOutput>}
+     * @type {Array<ConvertConvertConvertConvertClipForGetExecutionOutput>}
      * @memberof ConvertConvertConvertStorylineForGetExecutionOutput
      */
-    Clips?: Array<ConvertConvertConvertClipForGetExecutionOutput>;
+    Clips?: Array<ConvertConvertConvertConvertClipForGetExecutionOutput>;
 
     /**
      * @type {number}

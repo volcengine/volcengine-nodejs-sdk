@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { VideoForGetExecutionOutput } from './video-for-get-execution-output';
+import { ConvertConvertVideoForGetExecutionOutput } from './convert-convert-video-for-get-execution-output';
  /**
  * 
  *
@@ -34,8 +34,8 @@ export interface ConvertVideoMattingForGetExecutionOutput {
     Model?: string;
 
     /**
-     * @type {VideoForGetExecutionOutput}
+     * @type {ConvertConvertVideoForGetExecutionOutput}
      * @memberof ConvertVideoMattingForGetExecutionOutput
      */
-    Video?: VideoForGetExecutionOutput;
+    Video?: ConvertConvertVideoForGetExecutionOutput;
 }

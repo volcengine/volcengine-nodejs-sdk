@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertTaskForGetExecutionOutput } from './convert-task-for-get-execution-output';
+import { CodecForGetExecutionOutput } from './codec-for-get-execution-output';
  /**
  * 
  *
@@ -22,14 +22,56 @@ import { ConvertTaskForGetExecutionOutput } from './convert-task-for-get-executi
 export interface ConvertOutputForGetExecutionOutput {
 
     /**
-     * @type {ConvertTaskForGetExecutionOutput}
+     * @type {boolean}
      * @memberof ConvertOutputForGetExecutionOutput
      */
-    Task?: ConvertTaskForGetExecutionOutput;
+    Alpha?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof ConvertOutputForGetExecutionOutput
+     */
+    AudioPhaseDetect?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof ConvertOutputForGetExecutionOutput
+     */
+    CanvasWithMax?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof ConvertOutputForGetExecutionOutput
+     */
+    CanvasWithRatio?: boolean;
+
+    /**
+     * @type {CodecForGetExecutionOutput}
+     * @memberof ConvertOutputForGetExecutionOutput
+     */
+    Codec?: CodecForGetExecutionOutput;
+
+    /**
+     * @type {boolean}
+     * @memberof ConvertOutputForGetExecutionOutput
+     */
+    DisableAudio?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof ConvertOutputForGetExecutionOutput
+     */
+    DisableVideo?: boolean;
 
     /**
      * @type {string}
      * @memberof ConvertOutputForGetExecutionOutput
      */
-    Type?: string;
+    Format?: string;
+
+    /**
+     * @type {number}
+     * @memberof ConvertOutputForGetExecutionOutput
+     */
+    Fps?: number;
 }

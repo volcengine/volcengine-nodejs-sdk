@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertConvertConvertConvertSegmentForGetExecutionOutput } from './convert-convert-convert-convert-segment-for-get-execution-output';
+import { ConvertEditForGetExecutionOutput } from './convert-edit-for-get-execution-output';
  /**
  * 
  *
@@ -25,11 +25,23 @@ export interface ConvertConvertConvertConvertConvertSegmentForGetExecutionOutput
      * @type {number}
      * @memberof ConvertConvertConvertConvertConvertSegmentForGetExecutionOutput
      */
-    Duration?: number;
+    End?: number;
 
     /**
-     * @type {Array<ConvertConvertConvertConvertSegmentForGetExecutionOutput>}
+     * @type {ConvertEditForGetExecutionOutput}
      * @memberof ConvertConvertConvertConvertConvertSegmentForGetExecutionOutput
      */
-    Segments?: Array<ConvertConvertConvertConvertSegmentForGetExecutionOutput>;
+    File?: ConvertEditForGetExecutionOutput;
+
+    /**
+     * @type {Array<number>}
+     * @memberof ConvertConvertConvertConvertConvertSegmentForGetExecutionOutput
+     */
+    Frames?: Array<number>;
+
+    /**
+     * @type {number}
+     * @memberof ConvertConvertConvertConvertConvertSegmentForGetExecutionOutput
+     */
+    Start?: number;
 }

@@ -72,6 +72,12 @@ export interface DataForListFileMonitorAlarmsOutput {
     AlertTags?: Array<string>;
 
     /**
+     * @type {string}
+     * @memberof DataForListFileMonitorAlarmsOutput
+     */
+    AnalysisRecordUUID?: string;
+
+    /**
      * @type {Array<string>}
      * @memberof DataForListFileMonitorAlarmsOutput
      */
@@ -106,6 +112,12 @@ export interface DataForListFileMonitorAlarmsOutput {
      * @memberof DataForListFileMonitorAlarmsOutput
      */
     Cluster?: ClusterForListFileMonitorAlarmsOutput;
+
+    /**
+     * @type {string}
+     * @memberof DataForListFileMonitorAlarmsOutput
+     */
+    Confidence?: string;
 
     /**
      * @type {string}
@@ -160,6 +172,12 @@ export interface DataForListFileMonitorAlarmsOutput {
      * @memberof DataForListFileMonitorAlarmsOutput
      */
     GroupPath?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListFileMonitorAlarmsOutput
+     */
+    HandleFailReason?: string;
 
     /**
      * @type {number}
@@ -262,6 +280,18 @@ export interface DataForListFileMonitorAlarmsOutput {
      * @memberof DataForListFileMonitorAlarmsOutput
      */
     Region?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof DataForListFileMonitorAlarmsOutput
+     */
+    SecurityIntelligenceComplete?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof DataForListFileMonitorAlarmsOutput
+     */
+    SecurityIntelligenceResult?: string;
 
     /**
      * @type {string}

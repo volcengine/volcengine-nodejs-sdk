@@ -90,6 +90,12 @@ export interface PodSpecListForCreatePodInput {
     ImageId?: string;
 
     /**
+     * @type {boolean}
+     * @memberof PodSpecListForCreatePodInput
+     */
+    IsSelinuxOn?: boolean;
+
+    /**
      * @type {Array<OverlayPersistPropertyForCreatePodInput>}
      * @memberof PodSpecListForCreatePodInput
      */

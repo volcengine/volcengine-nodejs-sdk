@@ -27,6 +27,12 @@ export interface ConditionForListAlertTemplatesOutput {
     ComparisonOperator?: string;
 
     /**
+     * @type {number}
+     * @memberof ConditionForListAlertTemplatesOutput
+     */
+    EvaluationWindow?: number;
+
+    /**
      * @type {string}
      * @memberof ConditionForListAlertTemplatesOutput
      */

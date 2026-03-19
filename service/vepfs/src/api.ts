@@ -22,6 +22,8 @@ import { CancelLensTaskRequest } from './types/index';
 import { CancelLensTaskResponse } from './types/index';
 import { ConfigDataFlowBandwidthRequest } from './types/index';
 import { ConfigDataFlowBandwidthResponse } from './types/index';
+import { CreateAuditRequest } from './types/index';
+import { CreateAuditResponse } from './types/index';
 import { CreateDataFlowTaskRequest } from './types/index';
 import { CreateDataFlowTaskResponse } from './types/index';
 import { CreateFileSystemRequest } from './types/index';
@@ -36,6 +38,8 @@ import { CreateMountServiceRequest } from './types/index';
 import { CreateMountServiceResponse } from './types/index';
 import { CreatePreSignedUrlRequest } from './types/index';
 import { CreatePreSignedUrlResponse } from './types/index';
+import { DeleteAuditRequest } from './types/index';
+import { DeleteAuditResponse } from './types/index';
 import { DeleteDataFlowTaskRequest } from './types/index';
 import { DeleteDataFlowTaskResponse } from './types/index';
 import { DeleteFileSystemRequest } from './types/index';
@@ -48,6 +52,8 @@ import { DeleteLensTaskRequest } from './types/index';
 import { DeleteLensTaskResponse } from './types/index';
 import { DeleteMountServiceRequest } from './types/index';
 import { DeleteMountServiceResponse } from './types/index';
+import { DescribeAuditsRequest } from './types/index';
+import { DescribeAuditsResponse } from './types/index';
 import { DescribeDataFlowBandwidthRequest } from './types/index';
 import { DescribeDataFlowBandwidthResponse } from './types/index';
 import { DescribeDataFlowTasksRequest } from './types/index';
@@ -84,14 +90,20 @@ import { SetFilesetQosRequest } from './types/index';
 import { SetFilesetQosResponse } from './types/index';
 import { SetFilesetQuotaRequest } from './types/index';
 import { SetFilesetQuotaResponse } from './types/index';
+import { StartAuditRequest } from './types/index';
+import { StartAuditResponse } from './types/index';
 import { StartLensServiceRequest } from './types/index';
 import { StartLensServiceResponse } from './types/index';
+import { StopAuditRequest } from './types/index';
+import { StopAuditResponse } from './types/index';
 import { StopLensServiceRequest } from './types/index';
 import { StopLensServiceResponse } from './types/index';
 import { TagResourcesRequest } from './types/index';
 import { TagResourcesResponse } from './types/index';
 import { UntagResourcesRequest } from './types/index';
 import { UntagResourcesResponse } from './types/index';
+import { UpdateAuditRequest } from './types/index';
+import { UpdateAuditResponse } from './types/index';
 import { UpdateFileSystemRequest } from './types/index';
 import { UpdateFileSystemResponse } from './types/index';
 import { UpdateFilesetRequest } from './types/index';
@@ -110,6 +122,7 @@ export type AttachMountServiceToSelfFileSystemCommandOutput = CommandOutput<Atta
 export type CancelDataFlowTaskCommandOutput = CommandOutput<CancelDataFlowTaskResponse>;
 export type CancelLensTaskCommandOutput = CommandOutput<CancelLensTaskResponse>;
 export type ConfigDataFlowBandwidthCommandOutput = CommandOutput<ConfigDataFlowBandwidthResponse>;
+export type CreateAuditCommandOutput = CommandOutput<CreateAuditResponse>;
 export type CreateDataFlowTaskCommandOutput = CommandOutput<CreateDataFlowTaskResponse>;
 export type CreateFileSystemCommandOutput = CommandOutput<CreateFileSystemResponse>;
 export type CreateFilesetCommandOutput = CommandOutput<CreateFilesetResponse>;
@@ -117,12 +130,14 @@ export type CreateLensPolicyCommandOutput = CommandOutput<CreateLensPolicyRespon
 export type CreateLensTaskCommandOutput = CommandOutput<CreateLensTaskResponse>;
 export type CreateMountServiceCommandOutput = CommandOutput<CreateMountServiceResponse>;
 export type CreatePreSignedUrlCommandOutput = CommandOutput<CreatePreSignedUrlResponse>;
+export type DeleteAuditCommandOutput = CommandOutput<DeleteAuditResponse>;
 export type DeleteDataFlowTaskCommandOutput = CommandOutput<DeleteDataFlowTaskResponse>;
 export type DeleteFileSystemCommandOutput = CommandOutput<DeleteFileSystemResponse>;
 export type DeleteFilesetCommandOutput = CommandOutput<DeleteFilesetResponse>;
 export type DeleteLensPolicyCommandOutput = CommandOutput<DeleteLensPolicyResponse>;
 export type DeleteLensTaskCommandOutput = CommandOutput<DeleteLensTaskResponse>;
 export type DeleteMountServiceCommandOutput = CommandOutput<DeleteMountServiceResponse>;
+export type DescribeAuditsCommandOutput = CommandOutput<DescribeAuditsResponse>;
 export type DescribeDataFlowBandwidthCommandOutput = CommandOutput<DescribeDataFlowBandwidthResponse>;
 export type DescribeDataFlowTasksCommandOutput = CommandOutput<DescribeDataFlowTasksResponse>;
 export type DescribeFileSystemOverviewCommandOutput = CommandOutput<DescribeFileSystemOverviewResponse>;
@@ -141,16 +156,18 @@ export type ExpandFileSystemCommandOutput = CommandOutput<ExpandFileSystemRespon
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
 export type SetFilesetQosCommandOutput = CommandOutput<SetFilesetQosResponse>;
 export type SetFilesetQuotaCommandOutput = CommandOutput<SetFilesetQuotaResponse>;
+export type StartAuditCommandOutput = CommandOutput<StartAuditResponse>;
 export type StartLensServiceCommandOutput = CommandOutput<StartLensServiceResponse>;
+export type StopAuditCommandOutput = CommandOutput<StopAuditResponse>;
 export type StopLensServiceCommandOutput = CommandOutput<StopLensServiceResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
+export type UpdateAuditCommandOutput = CommandOutput<UpdateAuditResponse>;
 export type UpdateFileSystemCommandOutput = CommandOutput<UpdateFileSystemResponse>;
 export type UpdateFilesetCommandOutput = CommandOutput<UpdateFilesetResponse>;
 export type UpdateLensPolicyCommandOutput = CommandOutput<UpdateLensPolicyResponse>;
 export type UpdateLensTaskCommandOutput = CommandOutput<UpdateLensTaskResponse>;
 export type UpdateMountServiceCommandOutput = CommandOutput<UpdateMountServiceResponse>;
-
 
 /**
  * VEPFSClient Service Client
@@ -223,6 +240,21 @@ export class ConfigDataFlowBandwidthCommand extends Command<
   constructor(input: ConfigDataFlowBandwidthRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ConfigDataFlowBandwidthCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateAudit
+ */
+export class CreateAuditCommand extends Command<
+  CreateAuditRequest,
+  CreateAuditCommandOutput,
+  'CreateAuditCommand'
+> {
+  static readonly metaPath = '/CreateAudit/2022-01-01/vepfs/post/application_json/';
+
+  constructor(input: CreateAuditRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateAuditCommand.metaPath);
   }
 }
 /**
@@ -331,6 +363,21 @@ export class CreatePreSignedUrlCommand extends Command<
   }
 }
 /**
+ * Command to DeleteAudit
+ */
+export class DeleteAuditCommand extends Command<
+  DeleteAuditRequest,
+  DeleteAuditCommandOutput,
+  'DeleteAuditCommand'
+> {
+  static readonly metaPath = '/DeleteAudit/2022-01-01/vepfs/post/application_json/';
+
+  constructor(input: DeleteAuditRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAuditCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteDataFlowTask
  */
 export class DeleteDataFlowTaskCommand extends Command<
@@ -418,6 +465,21 @@ export class DeleteMountServiceCommand extends Command<
   constructor(input: DeleteMountServiceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteMountServiceCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAudits
+ */
+export class DescribeAuditsCommand extends Command<
+  DescribeAuditsRequest,
+  DescribeAuditsCommandOutput,
+  'DescribeAuditsCommand'
+> {
+  static readonly metaPath = '/DescribeAudits/2022-01-01/vepfs/post/application_json/';
+
+  constructor(input: DescribeAuditsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAuditsCommand.metaPath);
   }
 }
 /**
@@ -691,6 +753,21 @@ export class SetFilesetQuotaCommand extends Command<
   }
 }
 /**
+ * Command to StartAudit
+ */
+export class StartAuditCommand extends Command<
+  StartAuditRequest,
+  StartAuditCommandOutput,
+  'StartAuditCommand'
+> {
+  static readonly metaPath = '/StartAudit/2022-01-01/vepfs/post/application_json/';
+
+  constructor(input: StartAuditRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StartAuditCommand.metaPath);
+  }
+}
+/**
  * Command to StartLensService
  */
 export class StartLensServiceCommand extends Command<
@@ -703,6 +780,21 @@ export class StartLensServiceCommand extends Command<
   constructor(input: StartLensServiceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(StartLensServiceCommand.metaPath);
+  }
+}
+/**
+ * Command to StopAudit
+ */
+export class StopAuditCommand extends Command<
+  StopAuditRequest,
+  StopAuditCommandOutput,
+  'StopAuditCommand'
+> {
+  static readonly metaPath = '/StopAudit/2022-01-01/vepfs/post/application_json/';
+
+  constructor(input: StopAuditRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StopAuditCommand.metaPath);
   }
 }
 /**
@@ -748,6 +840,21 @@ export class UntagResourcesCommand extends Command<
   constructor(input: UntagResourcesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(UntagResourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateAudit
+ */
+export class UpdateAuditCommand extends Command<
+  UpdateAuditRequest,
+  UpdateAuditCommandOutput,
+  'UpdateAuditCommand'
+> {
+  static readonly metaPath = '/UpdateAudit/2022-01-01/vepfs/post/application_json/';
+
+  constructor(input: UpdateAuditRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAuditCommand.metaPath);
   }
 }
 /**
@@ -832,6 +939,7 @@ export default {
   CancelDataFlowTaskCommand,
   CancelLensTaskCommand,
   ConfigDataFlowBandwidthCommand,
+  CreateAuditCommand,
   CreateDataFlowTaskCommand,
   CreateFileSystemCommand,
   CreateFilesetCommand,
@@ -839,12 +947,14 @@ export default {
   CreateLensTaskCommand,
   CreateMountServiceCommand,
   CreatePreSignedUrlCommand,
+  DeleteAuditCommand,
   DeleteDataFlowTaskCommand,
   DeleteFileSystemCommand,
   DeleteFilesetCommand,
   DeleteLensPolicyCommand,
   DeleteLensTaskCommand,
   DeleteMountServiceCommand,
+  DescribeAuditsCommand,
   DescribeDataFlowBandwidthCommand,
   DescribeDataFlowTasksCommand,
   DescribeFileSystemOverviewCommand,
@@ -863,10 +973,13 @@ export default {
   ListTagsForResourcesCommand,
   SetFilesetQosCommand,
   SetFilesetQuotaCommand,
+  StartAuditCommand,
   StartLensServiceCommand,
+  StopAuditCommand,
   StopLensServiceCommand,
   TagResourcesCommand,
   UntagResourcesCommand,
+  UpdateAuditCommand,
   UpdateFileSystemCommand,
   UpdateFilesetCommand,
   UpdateLensPolicyCommand,

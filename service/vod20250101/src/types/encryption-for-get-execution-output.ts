@@ -24,5 +24,27 @@ export interface EncryptionForGetExecutionOutput {
      * @type {string}
      * @memberof EncryptionForGetExecutionOutput
      */
+    Host?: string;
+
+    /**
+     * @type {string}
+     * @memberof EncryptionForGetExecutionOutput
+     */
     Kid?: string;
+
+    /**
+     * @type {string}
+     * @memberof EncryptionForGetExecutionOutput
+     */
+    Type?: EncryptionForGetExecutionOutputTypeEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum EncryptionForGetExecutionOutputTypeEnum {
+    Standard = 'Standard',
+    Private = 'Private'
+}
+

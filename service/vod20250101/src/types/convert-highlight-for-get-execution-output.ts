@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertClipForGetExecutionOutput } from './convert-clip-for-get-execution-output';
+import { ConvertConvertClipForGetExecutionOutput } from './convert-convert-clip-for-get-execution-output';
 import { ConvertEditForGetExecutionOutput } from './convert-edit-for-get-execution-output';
 import { ConvertHighlightCutsForGetExecutionOutput } from './convert-highlight-cuts-for-get-execution-output';
 import { ConvertStorylineCutsForGetExecutionOutput } from './convert-storyline-cuts-for-get-execution-output';
@@ -25,10 +25,10 @@ import { ConvertStorylineCutsForGetExecutionOutput } from './convert-storyline-c
 export interface ConvertHighlightForGetExecutionOutput {
 
     /**
-     * @type {Array<ConvertClipForGetExecutionOutput>}
+     * @type {Array<ConvertConvertClipForGetExecutionOutput>}
      * @memberof ConvertHighlightForGetExecutionOutput
      */
-    Clips?: Array<ConvertClipForGetExecutionOutput>;
+    Clips?: Array<ConvertConvertClipForGetExecutionOutput>;
 
     /**
      * @type {number}

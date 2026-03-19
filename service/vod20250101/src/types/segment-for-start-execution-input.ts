@@ -21,32 +21,20 @@
 export interface SegmentForStartExecutionInput {
 
     /**
-     * @type {boolean}
-     * @memberof SegmentForStartExecutionInput
-     */
-    ClipFade?: boolean;
-
-    /**
      * @type {number}
      * @memberof SegmentForStartExecutionInput
      */
-    MaxDuration?: number;
+    Duration?: number;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof SegmentForStartExecutionInput
      */
-    MinDuration?: number;
+    Format?: string;
 
     /**
-     * @type {boolean}
+     * @type {string}
      * @memberof SegmentForStartExecutionInput
      */
-    NoFile?: boolean;
-
-    /**
-     * @type {number}
-     * @memberof SegmentForStartExecutionInput
-     */
-    Threshold?: number;
+    Type?: string;
 }

@@ -85,6 +85,12 @@ export interface CreatePodRequest {
     ImageId?: string;
 
     /**
+     * @type {boolean}
+     * @memberof CreatePodRequest
+     */
+    IsSelinuxOn?: boolean;
+
+    /**
      * @type {Array<OverlayPersistPropertyForCreatePodInput>}
      * @memberof CreatePodRequest
      */

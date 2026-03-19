@@ -34,6 +34,8 @@ import { CreateResolverEndpointRequest } from './types/index';
 import { CreateResolverEndpointResponse } from './types/index';
 import { CreateResolverRuleRequest } from './types/index';
 import { CreateResolverRuleResponse } from './types/index';
+import { CreateResourceAssociationAuthorizationRequest } from './types/index';
+import { CreateResourceAssociationAuthorizationResponse } from './types/index';
 import { DeleteAuthorizedUserRequest } from './types/index';
 import { DeleteAuthorizedUserResponse } from './types/index';
 import { DeletePrivateZoneRequest } from './types/index';
@@ -44,6 +46,8 @@ import { DeleteResolverEndpointRequest } from './types/index';
 import { DeleteResolverEndpointResponse } from './types/index';
 import { DeleteResolverRuleRequest } from './types/index';
 import { DeleteResolverRuleResponse } from './types/index';
+import { DeleteResourceAssociationAuthorizationRequest } from './types/index';
+import { DeleteResourceAssociationAuthorizationResponse } from './types/index';
 import { IncBindVPCRequest } from './types/index';
 import { IncBindVPCResponse } from './types/index';
 import { ListAuthorizedUsersRequest } from './types/index';
@@ -64,10 +68,14 @@ import { ListResolverEndpointsRequest } from './types/index';
 import { ListResolverEndpointsResponse } from './types/index';
 import { ListResolverRulesRequest } from './types/index';
 import { ListResolverRulesResponse } from './types/index';
+import { ListResourceAssociationAuthorizationsRequest } from './types/index';
+import { ListResourceAssociationAuthorizationsResponse } from './types/index';
 import { ListTagsForResourcesRequest } from './types/index';
 import { ListTagsForResourcesResponse } from './types/index';
 import { ListUserVPCRequest } from './types/index';
 import { ListUserVPCResponse } from './types/index';
+import { ListZonesByVPCRequest } from './types/index';
+import { ListZonesByVPCResponse } from './types/index';
 import { QueryEcsHostSyncTaskRequest } from './types/index';
 import { QueryEcsHostSyncTaskResponse } from './types/index';
 import { QueryPrivateZoneRequest } from './types/index';
@@ -114,11 +122,13 @@ export type CreatePrivateZoneCommandOutput = CommandOutput<CreatePrivateZoneResp
 export type CreateRecordCommandOutput = CommandOutput<CreateRecordResponse>;
 export type CreateResolverEndpointCommandOutput = CommandOutput<CreateResolverEndpointResponse>;
 export type CreateResolverRuleCommandOutput = CommandOutput<CreateResolverRuleResponse>;
+export type CreateResourceAssociationAuthorizationCommandOutput = CommandOutput<CreateResourceAssociationAuthorizationResponse>;
 export type DeleteAuthorizedUserCommandOutput = CommandOutput<DeleteAuthorizedUserResponse>;
 export type DeletePrivateZoneCommandOutput = CommandOutput<DeletePrivateZoneResponse>;
 export type DeleteRecordCommandOutput = CommandOutput<DeleteRecordResponse>;
 export type DeleteResolverEndpointCommandOutput = CommandOutput<DeleteResolverEndpointResponse>;
 export type DeleteResolverRuleCommandOutput = CommandOutput<DeleteResolverRuleResponse>;
+export type DeleteResourceAssociationAuthorizationCommandOutput = CommandOutput<DeleteResourceAssociationAuthorizationResponse>;
 export type IncBindVPCCommandOutput = CommandOutput<IncBindVPCResponse>;
 export type ListAuthorizedUsersCommandOutput = CommandOutput<ListAuthorizedUsersResponse>;
 export type ListBindVPCCommandOutput = CommandOutput<ListBindVPCResponse>;
@@ -129,8 +139,10 @@ export type ListRecordsCommandOutput = CommandOutput<ListRecordsResponse>;
 export type ListRegionsCommandOutput = CommandOutput<ListRegionsResponse>;
 export type ListResolverEndpointsCommandOutput = CommandOutput<ListResolverEndpointsResponse>;
 export type ListResolverRulesCommandOutput = CommandOutput<ListResolverRulesResponse>;
+export type ListResourceAssociationAuthorizationsCommandOutput = CommandOutput<ListResourceAssociationAuthorizationsResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
 export type ListUserVPCCommandOutput = CommandOutput<ListUserVPCResponse>;
+export type ListZonesByVPCCommandOutput = CommandOutput<ListZonesByVPCResponse>;
 export type QueryEcsHostSyncTaskCommandOutput = CommandOutput<QueryEcsHostSyncTaskResponse>;
 export type QueryPrivateZoneCommandOutput = CommandOutput<QueryPrivateZoneResponse>;
 export type QueryRecordCommandOutput = CommandOutput<QueryRecordResponse>;
@@ -147,7 +159,6 @@ export type UpdateRecordCommandOutput = CommandOutput<UpdateRecordResponse>;
 export type UpdateRecordSetCommandOutput = CommandOutput<UpdateRecordSetResponse>;
 export type UpdateResolverEndpointCommandOutput = CommandOutput<UpdateResolverEndpointResponse>;
 export type UpdateResolverRuleCommandOutput = CommandOutput<UpdateResolverRuleResponse>;
-
 
 /**
  * PRIVATEZONEClient Service Client
@@ -313,6 +324,21 @@ export class CreateResolverRuleCommand extends Command<
   }
 }
 /**
+ * Command to CreateResourceAssociationAuthorization
+ */
+export class CreateResourceAssociationAuthorizationCommand extends Command<
+  CreateResourceAssociationAuthorizationRequest,
+  CreateResourceAssociationAuthorizationCommandOutput,
+  'CreateResourceAssociationAuthorizationCommand'
+> {
+  static readonly metaPath = '/CreateResourceAssociationAuthorization/2022-06-01/private_zone/post/application_json/';
+
+  constructor(input: CreateResourceAssociationAuthorizationRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateResourceAssociationAuthorizationCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteAuthorizedUser
  */
 export class DeleteAuthorizedUserCommand extends Command<
@@ -385,6 +411,21 @@ export class DeleteResolverRuleCommand extends Command<
   constructor(input: DeleteResolverRuleRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteResolverRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteResourceAssociationAuthorization
+ */
+export class DeleteResourceAssociationAuthorizationCommand extends Command<
+  DeleteResourceAssociationAuthorizationRequest,
+  DeleteResourceAssociationAuthorizationCommandOutput,
+  'DeleteResourceAssociationAuthorizationCommand'
+> {
+  static readonly metaPath = '/DeleteResourceAssociationAuthorization/2022-06-01/private_zone/post/application_json/';
+
+  constructor(input: DeleteResourceAssociationAuthorizationRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteResourceAssociationAuthorizationCommand.metaPath);
   }
 }
 /**
@@ -538,6 +579,21 @@ export class ListResolverRulesCommand extends Command<
   }
 }
 /**
+ * Command to ListResourceAssociationAuthorizations
+ */
+export class ListResourceAssociationAuthorizationsCommand extends Command<
+  ListResourceAssociationAuthorizationsRequest,
+  ListResourceAssociationAuthorizationsCommandOutput,
+  'ListResourceAssociationAuthorizationsCommand'
+> {
+  static readonly metaPath = '/ListResourceAssociationAuthorizations/2022-06-01/private_zone/get/text_plain/';
+
+  constructor(input: ListResourceAssociationAuthorizationsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListResourceAssociationAuthorizationsCommand.metaPath);
+  }
+}
+/**
  * Command to ListTagsForResources
  */
 export class ListTagsForResourcesCommand extends Command<
@@ -565,6 +621,21 @@ export class ListUserVPCCommand extends Command<
   constructor(input: ListUserVPCRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListUserVPCCommand.metaPath);
+  }
+}
+/**
+ * Command to ListZonesByVPC
+ */
+export class ListZonesByVPCCommand extends Command<
+  ListZonesByVPCRequest,
+  ListZonesByVPCCommandOutput,
+  'ListZonesByVPCCommand'
+> {
+  static readonly metaPath = '/ListZonesByVPC/2022-06-01/private_zone/get/text_plain/';
+
+  constructor(input: ListZonesByVPCRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListZonesByVPCCommand.metaPath);
   }
 }
 /**
@@ -820,11 +891,13 @@ export default {
   CreateRecordCommand,
   CreateResolverEndpointCommand,
   CreateResolverRuleCommand,
+  CreateResourceAssociationAuthorizationCommand,
   DeleteAuthorizedUserCommand,
   DeletePrivateZoneCommand,
   DeleteRecordCommand,
   DeleteResolverEndpointCommand,
   DeleteResolverRuleCommand,
+  DeleteResourceAssociationAuthorizationCommand,
   IncBindVPCCommand,
   ListAuthorizedUsersCommand,
   ListBindVPCCommand,
@@ -835,8 +908,10 @@ export default {
   ListRegionsCommand,
   ListResolverEndpointsCommand,
   ListResolverRulesCommand,
+  ListResourceAssociationAuthorizationsCommand,
   ListTagsForResourcesCommand,
   ListUserVPCCommand,
+  ListZonesByVPCCommand,
   QueryEcsHostSyncTaskCommand,
   QueryPrivateZoneCommand,
   QueryRecordCommand,

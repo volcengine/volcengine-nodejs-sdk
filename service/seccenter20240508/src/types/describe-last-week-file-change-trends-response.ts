@@ -38,4 +38,22 @@ export interface DescribeLastWeekFileChangeTrendsResponse {
      * @memberof DescribeLastWeekFileChangeTrendsResponse
      */
     TodayChange?: number;
+
+    /**
+     * @type {number}
+     * @memberof DescribeLastWeekFileChangeTrendsResponse
+     */
+    last_seven_change?: number;
+
+    /**
+     * @type {Array<PointInfoForDescribeLastWeekFileChangeTrendsOutput>}
+     * @memberof DescribeLastWeekFileChangeTrendsResponse
+     */
+    point_info?: Array<PointInfoForDescribeLastWeekFileChangeTrendsOutput>;
+
+    /**
+     * @type {number}
+     * @memberof DescribeLastWeekFileChangeTrendsResponse
+     */
+    today_change?: number;
 }

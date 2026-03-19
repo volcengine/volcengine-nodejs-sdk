@@ -14,14 +14,38 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { AddAgentProxyRequest } from './types/index';
+import { AddAgentProxyResponse } from './types/index';
+import { AddAutoIsolateAgentListRequest } from './types/index';
+import { AddAutoIsolateAgentListResponse } from './types/index';
 import { AddBaselineCheckConfigRequest } from './types/index';
 import { AddBaselineCheckConfigResponse } from './types/index';
+import { AddCloudEnvRequest } from './types/index';
+import { AddCloudEnvResponse } from './types/index';
+import { AddLoginConfigRequest } from './types/index';
+import { AddLoginConfigResponse } from './types/index';
 import { AddMonitorPolicyRequest } from './types/index';
 import { AddMonitorPolicyResponse } from './types/index';
+import { AddRaspConfigRequest } from './types/index';
+import { AddRaspConfigResponse } from './types/index';
+import { AddWhiteListRequest } from './types/index';
+import { AddWhiteListResponse } from './types/index';
+import { AllAssetScanRequest } from './types/index';
+import { AllAssetScanResponse } from './types/index';
+import { AssetScanRequest } from './types/index';
+import { AssetScanResponse } from './types/index';
 import { BanAlarmIPRequest } from './types/index';
 import { BanAlarmIPResponse } from './types/index';
+import { BaselineChecklistWhiteRequest } from './types/index';
+import { BaselineChecklistWhiteResponse } from './types/index';
+import { BatchAddHostToGroupRequest } from './types/index';
+import { BatchAddHostToGroupResponse } from './types/index';
+import { BatchCreateRepoRegistryVpcAuthRequest } from './types/index';
+import { BatchCreateRepoRegistryVpcAuthResponse } from './types/index';
 import { BatchDeleteVarmorPoliciesRequest } from './types/index';
 import { BatchDeleteVarmorPoliciesResponse } from './types/index';
+import { BatchDetectWeakPasswordRequest } from './types/index';
+import { BatchDetectWeakPasswordResponse } from './types/index';
 import { BatchInstallVarmorAppsRequest } from './types/index';
 import { BatchInstallVarmorAppsResponse } from './types/index';
 import { BatchUninstallVarmorAppsRequest } from './types/index';
@@ -30,20 +54,60 @@ import { BatchUpgradeVarmorAppsRequest } from './types/index';
 import { BatchUpgradeVarmorAppsResponse } from './types/index';
 import { BindMLPAuthRequest } from './types/index';
 import { BindMLPAuthResponse } from './types/index';
+import { CalculateRepoImageScanQuotaRequest } from './types/index';
+import { CalculateRepoImageScanQuotaResponse } from './types/index';
 import { CheckAlarmSupportBanIPRequest } from './types/index';
 import { CheckAlarmSupportBanIPResponse } from './types/index';
+import { CheckInstallAgentClientRequest } from './types/index';
+import { CheckInstallAgentClientResponse } from './types/index';
+import { CheckInstallRaspRequest } from './types/index';
+import { CheckInstallRaspResponse } from './types/index';
 import { CheckMonitorPolicyRequest } from './types/index';
 import { CheckMonitorPolicyResponse } from './types/index';
 import { ControlMonitorPolicyRequest } from './types/index';
 import { ControlMonitorPolicyResponse } from './types/index';
+import { CreatFileScanTaskRequest } from './types/index';
+import { CreatFileScanTaskResponse } from './types/index';
+import { CreateHostTagRequest } from './types/index';
+import { CreateHostTagResponse } from './types/index';
+import { CreateLayeredGroupRequest } from './types/index';
+import { CreateLayeredGroupResponse } from './types/index';
 import { CreateMLPAssetSyncTaskRequest } from './types/index';
 import { CreateMLPAssetSyncTaskResponse } from './types/index';
+import { CreateMLPUpdateSoftwareTaskRequest } from './types/index';
+import { CreateMLPUpdateSoftwareTaskResponse } from './types/index';
+import { CreateMultiLevelInstitutionRequest } from './types/index';
+import { CreateMultiLevelInstitutionResponse } from './types/index';
+import { CreateRepoRegistryVpcAuthRequest } from './types/index';
+import { CreateRepoRegistryVpcAuthResponse } from './types/index';
 import { CreateVarmorPolicyRequest } from './types/index';
 import { CreateVarmorPolicyResponse } from './types/index';
+import { DeleteAgentProxyRequest } from './types/index';
+import { DeleteAgentProxyResponse } from './types/index';
+import { DeleteAgentProxyServerRequest } from './types/index';
+import { DeleteAgentProxyServerResponse } from './types/index';
+import { DeleteAutoIsolateAgentListRequest } from './types/index';
+import { DeleteAutoIsolateAgentListResponse } from './types/index';
 import { DeleteBaselineCheckConfigRequest } from './types/index';
 import { DeleteBaselineCheckConfigResponse } from './types/index';
+import { DeleteCloudEnvRequest } from './types/index';
+import { DeleteCloudEnvResponse } from './types/index';
+import { DeleteCommandRequest } from './types/index';
+import { DeleteCommandResponse } from './types/index';
+import { DeleteHostTagRequest } from './types/index';
+import { DeleteHostTagResponse } from './types/index';
+import { DeleteLayeredGroupRequest } from './types/index';
+import { DeleteLayeredGroupResponse } from './types/index';
+import { DeleteLoginConfigRequest } from './types/index';
+import { DeleteLoginConfigResponse } from './types/index';
 import { DeleteMonitorPolicyRequest } from './types/index';
 import { DeleteMonitorPolicyResponse } from './types/index';
+import { DeleteMultiLevelInstitutionRequest } from './types/index';
+import { DeleteMultiLevelInstitutionResponse } from './types/index';
+import { DeleteRaspConfigRequest } from './types/index';
+import { DeleteRaspConfigResponse } from './types/index';
+import { DeleteWhiteListsRequest } from './types/index';
+import { DeleteWhiteListsResponse } from './types/index';
 import { DescribeFileChangeTrendTop5Request } from './types/index';
 import { DescribeFileChangeTrendTop5Response } from './types/index';
 import { DescribeFileMonitorOverviewRequest } from './types/index';
@@ -52,58 +116,278 @@ import { DescribeLastWeekFileChangeTrendsRequest } from './types/index';
 import { DescribeLastWeekFileChangeTrendsResponse } from './types/index';
 import { DetectBaselineByCheckConfigRequest } from './types/index';
 import { DetectBaselineByCheckConfigResponse } from './types/index';
+import { DetectBaselineRequest } from './types/index';
+import { DetectBaselineResponse } from './types/index';
+import { DetectVulnForAIRequest } from './types/index';
+import { DetectVulnForAIResponse } from './types/index';
+import { DetectVulnRequest } from './types/index';
+import { DetectVulnResponse } from './types/index';
+import { DisableHostImportantProtectRequest } from './types/index';
+import { DisableHostImportantProtectResponse } from './types/index';
+import { DownloadAIVulnListRequest } from './types/index';
+import { DownloadAIVulnListResponse } from './types/index';
+import { DownloadBaselineCheckHostsRequest } from './types/index';
+import { DownloadBaselineCheckHostsResponse } from './types/index';
+import { DownloadBaselineCheckRequest } from './types/index';
+import { DownloadBaselineCheckResponse } from './types/index';
+import { DownloadRawTraceDataRequest } from './types/index';
+import { DownloadRawTraceDataResponse } from './types/index';
+import { DownloadVulHostListByPodRequest } from './types/index';
+import { DownloadVulHostListByPodResponse } from './types/index';
+import { DownloadVulListByPodRequest } from './types/index';
+import { DownloadVulListByPodResponse } from './types/index';
+import { DownloadVulnAffectAISessionRequest } from './types/index';
+import { DownloadVulnAffectAISessionResponse } from './types/index';
+import { DownloadVulnDatasRequest } from './types/index';
+import { DownloadVulnDatasResponse } from './types/index';
+import { DownloadVulnListRequest } from './types/index';
+import { DownloadVulnListResponse } from './types/index';
+import { EditAIApplicationSyncConfigRequest } from './types/index';
+import { EditAIApplicationSyncConfigResponse } from './types/index';
 import { EditBaselineCheckConfigRequest } from './types/index';
 import { EditBaselineCheckConfigResponse } from './types/index';
 import { EditFingerprintCollectConfigRequest } from './types/index';
 import { EditFingerprintCollectConfigResponse } from './types/index';
 import { EditMonitorPolicyRequest } from './types/index';
 import { EditMonitorPolicyResponse } from './types/index';
+import { EditRaspConfigRequest } from './types/index';
+import { EditRaspConfigResponse } from './types/index';
+import { EditVulnScanConfigRequest } from './types/index';
+import { EditVulnScanConfigResponse } from './types/index';
+import { EnableHostImportantProtectRequest } from './types/index';
+import { EnableHostImportantProtectResponse } from './types/index';
+import { ExportAIFingerprintDataRequest } from './types/index';
+import { ExportAIFingerprintDataResponse } from './types/index';
+import { ExportAlarmListDataForRaspRequest } from './types/index';
+import { ExportAlarmListDataForRaspResponse } from './types/index';
+import { ExportAssetCenterDevsRequest } from './types/index';
+import { ExportAssetCenterDevsResponse } from './types/index';
+import { ExportAssetCenterHostsRequest } from './types/index';
+import { ExportAssetCenterHostsResponse } from './types/index';
+import { ExportBaselineCheckListRequest } from './types/index';
+import { ExportBaselineCheckListResponse } from './types/index';
+import { ExportBaselineHostDetailsRequest } from './types/index';
+import { ExportBaselineHostDetailsResponse } from './types/index';
+import { ExportDevFingerprintDataRequest } from './types/index';
+import { ExportDevFingerprintDataResponse } from './types/index';
 import { ExportFileMonitorAlarmListDataRequest } from './types/index';
 import { ExportFileMonitorAlarmListDataResponse } from './types/index';
+import { ExportFingerprintDataRequest } from './types/index';
+import { ExportFingerprintDataResponse } from './types/index';
+import { ExportHidsAlarmListDataRequest } from './types/index';
+import { ExportHidsAlarmListDataResponse } from './types/index';
+import { ExportMlpAlarmListDataRequest } from './types/index';
+import { ExportMlpAlarmListDataResponse } from './types/index';
+import { ExportRepoImageAssetRequest } from './types/index';
+import { ExportRepoImageAssetResponse } from './types/index';
+import { ExportVirusAlarmListDataRequest } from './types/index';
+import { ExportVirusAlarmListDataResponse } from './types/index';
+import { ExportWeakPasswordRequest } from './types/index';
+import { ExportWeakPasswordResponse } from './types/index';
+import { GenerateInstallCommandRequest } from './types/index';
+import { GenerateInstallCommandResponse } from './types/index';
 import { GetAIAlarmJudgeConfigRequest } from './types/index';
 import { GetAIAlarmJudgeConfigResponse } from './types/index';
+import { GetAIApplicationSyncConfigRequest } from './types/index';
+import { GetAIApplicationSyncConfigResponse } from './types/index';
+import { GetAIFingerprintAppRequest } from './types/index';
+import { GetAIFingerprintAppResponse } from './types/index';
+import { GetAIFingerprintPortRequest } from './types/index';
+import { GetAIFingerprintPortResponse } from './types/index';
+import { GetAIFingerprintProcessRequest } from './types/index';
+import { GetAIFingerprintProcessResponse } from './types/index';
+import { GetAIFingerprintRefreshStatusRequest } from './types/index';
+import { GetAIFingerprintRefreshStatusResponse } from './types/index';
+import { GetAIFingerprintSoftwareRequest } from './types/index';
+import { GetAIFingerprintSoftwareResponse } from './types/index';
+import { GetAIFingerprintStatisticsRequest } from './types/index';
+import { GetAIFingerprintStatisticsResponse } from './types/index';
+import { GetAIFingerprintTop5Request } from './types/index';
+import { GetAIFingerprintTop5Response } from './types/index';
+import { GetAISessionVulnInfoRequest } from './types/index';
+import { GetAISessionVulnInfoResponse } from './types/index';
+import { GetAIVulnDetectProgressDetailRequest } from './types/index';
+import { GetAIVulnDetectProgressDetailResponse } from './types/index';
+import { GetAlarmBySmithKeyRequest } from './types/index';
+import { GetAlarmBySmithKeyResponse } from './types/index';
 import { GetAlarmRuleListRequest } from './types/index';
 import { GetAlarmRuleListResponse } from './types/index';
 import { GetAlarmTraceRawDataRequest } from './types/index';
 import { GetAlarmTraceRawDataResponse } from './types/index';
+import { GetAlarmTraceRequest } from './types/index';
+import { GetAlarmTraceResponse } from './types/index';
+import { GetAlarmVirusStatisticsRequest } from './types/index';
+import { GetAlarmVirusStatisticsResponse } from './types/index';
 import { GetAllMonitorSuffixListRequest } from './types/index';
 import { GetAllMonitorSuffixListResponse } from './types/index';
 import { GetArmorProfileRequest } from './types/index';
 import { GetArmorProfileResponse } from './types/index';
+import { GetAssetClusterStatisticRequest } from './types/index';
+import { GetAssetClusterStatisticResponse } from './types/index';
+import { GetAssetClustersSyncEndRequest } from './types/index';
+import { GetAssetClustersSyncEndResponse } from './types/index';
+import { GetAssetWorkloadStatisticRequest } from './types/index';
+import { GetAssetWorkloadStatisticResponse } from './types/index';
 import { GetAutoIsolateAgentListRequest } from './types/index';
 import { GetAutoIsolateAgentListResponse } from './types/index';
 import { GetAutoProtectConfigRequest } from './types/index';
 import { GetAutoProtectConfigResponse } from './types/index';
+import { GetBaselineDetectProgressDetailRequest } from './types/index';
+import { GetBaselineDetectProgressDetailResponse } from './types/index';
+import { GetBaselineGroupStatisticsRequest } from './types/index';
+import { GetBaselineGroupStatisticsResponse } from './types/index';
 import { GetBruteForceBanCapParamsRequest } from './types/index';
 import { GetBruteForceBanCapParamsResponse } from './types/index';
 import { GetBruteForceBanConfigRequest } from './types/index';
 import { GetBruteForceBanConfigResponse } from './types/index';
 import { GetBruteForceBanStatisticsRequest } from './types/index';
 import { GetBruteForceBanStatisticsResponse } from './types/index';
+import { GetCisDetailRequest } from './types/index';
+import { GetCisDetailResponse } from './types/index';
 import { GetClusterStatisticsRequest } from './types/index';
 import { GetClusterStatisticsResponse } from './types/index';
+import { GetClustersPermissionResultRequest } from './types/index';
+import { GetClustersPermissionResultResponse } from './types/index';
 import { GetCustomWeakPasswordsRequest } from './types/index';
 import { GetCustomWeakPasswordsResponse } from './types/index';
+import { GetDevAssetOverviewRequest } from './types/index';
+import { GetDevAssetOverviewResponse } from './types/index';
+import { GetDevDetailRequest } from './types/index';
+import { GetDevDetailResponse } from './types/index';
+import { GetDevFingerprintPortRequest } from './types/index';
+import { GetDevFingerprintPortResponse } from './types/index';
+import { GetDevFingerprintProcessRequest } from './types/index';
+import { GetDevFingerprintProcessResponse } from './types/index';
+import { GetDevFingerprintSoftwareRequest } from './types/index';
+import { GetDevFingerprintSoftwareResponse } from './types/index';
+import { GetDevFingerprintStatisticsRequest } from './types/index';
+import { GetDevFingerprintStatisticsResponse } from './types/index';
+import { GetDownloadStatusRequest } from './types/index';
+import { GetDownloadStatusResponse } from './types/index';
+import { GetFingerprintAppGroupRequest } from './types/index';
+import { GetFingerprintAppGroupResponse } from './types/index';
+import { GetFingerprintAppRequest } from './types/index';
+import { GetFingerprintAppResponse } from './types/index';
+import { GetFingerprintCronRequest } from './types/index';
+import { GetFingerprintCronResponse } from './types/index';
 import { GetFingerprintEnvRequest } from './types/index';
 import { GetFingerprintEnvResponse } from './types/index';
+import { GetFingerprintIntegrityRequest } from './types/index';
+import { GetFingerprintIntegrityResponse } from './types/index';
+import { GetFingerprintKmodRequest } from './types/index';
+import { GetFingerprintKmodResponse } from './types/index';
+import { GetFingerprintPortRequest } from './types/index';
+import { GetFingerprintPortResponse } from './types/index';
+import { GetFingerprintProcessRequest } from './types/index';
+import { GetFingerprintProcessResponse } from './types/index';
+import { GetFingerprintRefreshStatusRequest } from './types/index';
+import { GetFingerprintRefreshStatusResponse } from './types/index';
+import { GetFingerprintServiceRequest } from './types/index';
+import { GetFingerprintServiceResponse } from './types/index';
+import { GetFingerprintSoftwareRequest } from './types/index';
+import { GetFingerprintSoftwareResponse } from './types/index';
+import { GetFingerprintStatisticsRequest } from './types/index';
+import { GetFingerprintStatisticsResponse } from './types/index';
+import { GetFingerprintTop5Request } from './types/index';
+import { GetFingerprintTop5Response } from './types/index';
+import { GetFingerprintUserRequest } from './types/index';
+import { GetFingerprintUserResponse } from './types/index';
+import { GetFingerprintWebRequest } from './types/index';
+import { GetFingerprintWebResponse } from './types/index';
 import { GetGeoLocationRequest } from './types/index';
 import { GetGeoLocationResponse } from './types/index';
+import { GetGroupCheckStatusRequest } from './types/index';
+import { GetGroupCheckStatusResponse } from './types/index';
+import { GetHidsAlarmInfoRequest } from './types/index';
+import { GetHidsAlarmInfoResponse } from './types/index';
+import { GetHidsAlarmStatisticsRequest } from './types/index';
+import { GetHidsAlarmStatisticsResponse } from './types/index';
+import { GetHidsAlarmSummaryInfoRequest } from './types/index';
+import { GetHidsAlarmSummaryInfoResponse } from './types/index';
+import { GetHostAssetOverviewRequest } from './types/index';
+import { GetHostAssetOverviewResponse } from './types/index';
+import { GetHostBasicInfoRequest } from './types/index';
+import { GetHostBasicInfoResponse } from './types/index';
+import { GetHostImportantProtectStateRequest } from './types/index';
+import { GetHostImportantProtectStateResponse } from './types/index';
 import { GetHostVolumeRequest } from './types/index';
 import { GetHostVolumeResponse } from './types/index';
+import { GetHostVulnInfoRequest } from './types/index';
+import { GetHostVulnInfoResponse } from './types/index';
+import { GetIntrusionRealTimeUpdatesRequest } from './types/index';
+import { GetIntrusionRealTimeUpdatesResponse } from './types/index';
+import { GetIntrusionRiskTrendsRequest } from './types/index';
+import { GetIntrusionRiskTrendsResponse } from './types/index';
+import { GetK8sAssetStatisticRequest } from './types/index';
+import { GetK8sAssetStatisticResponse } from './types/index';
+import { GetLayeredGroupsRequest } from './types/index';
+import { GetLayeredGroupsResponse } from './types/index';
 import { GetMLPAssetSyncTaskDetailRequest } from './types/index';
 import { GetMLPAssetSyncTaskDetailResponse } from './types/index';
 import { GetMLPAssetSyncTaskStatusRequest } from './types/index';
 import { GetMLPAssetSyncTaskStatusResponse } from './types/index';
+import { GetManualSyncAIApplicationStatusRequest } from './types/index';
+import { GetManualSyncAIApplicationStatusResponse } from './types/index';
+import { GetMlpAlarmStatisticsRequest } from './types/index';
+import { GetMlpAlarmStatisticsResponse } from './types/index';
+import { GetMlpAlarmSummaryInfoRequest } from './types/index';
+import { GetMlpAlarmSummaryInfoResponse } from './types/index';
+import { GetMlpUpdateSoftwareTaskDetailRequest } from './types/index';
+import { GetMlpUpdateSoftwareTaskDetailResponse } from './types/index';
 import { GetMonitorPolicyDirectoryRequest } from './types/index';
 import { GetMonitorPolicyDirectoryResponse } from './types/index';
 import { GetMultiLevelAuthDetailRequest } from './types/index';
 import { GetMultiLevelAuthDetailResponse } from './types/index';
+import { GetMultiLevelHostAssetOverviewRequest } from './types/index';
+import { GetMultiLevelHostAssetOverviewResponse } from './types/index';
+import { GetMultiLevelInstitutionDetailRequest } from './types/index';
+import { GetMultiLevelInstitutionDetailResponse } from './types/index';
+import { GetNeighboringAlarmRequest } from './types/index';
+import { GetNeighboringAlarmResponse } from './types/index';
 import { GetOfflineNotificationConfigRequest } from './types/index';
 import { GetOfflineNotificationConfigResponse } from './types/index';
 import { GetOfflineNotificationListRequest } from './types/index';
 import { GetOfflineNotificationListResponse } from './types/index';
+import { GetOneRaspAlarmRequest } from './types/index';
+import { GetOneRaspAlarmResponse } from './types/index';
 import { GetPolicyStatisticsRequest } from './types/index';
 import { GetPolicyStatisticsResponse } from './types/index';
+import { GetRaspAlarmStatisticsRequest } from './types/index';
+import { GetRaspAlarmStatisticsResponse } from './types/index';
+import { GetRaspAlarmSummaryInfoRequest } from './types/index';
+import { GetRaspAlarmSummaryInfoResponse } from './types/index';
+import { GetRaspAuthorizationStatisticsRequest } from './types/index';
+import { GetRaspAuthorizationStatisticsResponse } from './types/index';
+import { GetRaspConfigStatisticsRequest } from './types/index';
+import { GetRaspConfigStatisticsResponse } from './types/index';
+import { GetRaspProcessDetailRequest } from './types/index';
+import { GetRaspProcessDetailResponse } from './types/index';
+import { GetRaspProtectStatisticsRequest } from './types/index';
+import { GetRaspProtectStatisticsResponse } from './types/index';
+import { GetRegistriesPermissionResultRequest } from './types/index';
+import { GetRegistriesPermissionResultResponse } from './types/index';
+import { GetRegistryImageDetailRequest } from './types/index';
+import { GetRegistryImageDetailResponse } from './types/index';
+import { GetRegistryImagesSyncStatusRequest } from './types/index';
+import { GetRegistryImagesSyncStatusResponse } from './types/index';
+import { GetRegistrySyncConfigRequest } from './types/index';
+import { GetRegistrySyncConfigResponse } from './types/index';
+import { GetRegularCleanRequest } from './types/index';
+import { GetRegularCleanResponse } from './types/index';
+import { GetRegularVirusScanConfigRequest } from './types/index';
+import { GetRegularVirusScanConfigResponse } from './types/index';
+import { GetRegularVirusTaskStatusRequest } from './types/index';
+import { GetRegularVirusTaskStatusResponse } from './types/index';
+import { GetRepoImageRiskCntRequest } from './types/index';
+import { GetRepoImageRiskCntResponse } from './types/index';
+import { GetRepoImageScanCronRequest } from './types/index';
+import { GetRepoImageScanCronResponse } from './types/index';
+import { GetRepoImageScanScopeRequest } from './types/index';
+import { GetRepoImageScanScopeResponse } from './types/index';
+import { GetRepoRegistrySummaryRequest } from './types/index';
+import { GetRepoRegistrySummaryResponse } from './types/index';
+import { GetRepoRegistryVpcAuthCreateInfoRequest } from './types/index';
+import { GetRepoRegistryVpcAuthCreateInfoResponse } from './types/index';
 import { GetSOCAssetAlarmStatsRequest } from './types/index';
 import { GetSOCAssetAlarmStatsResponse } from './types/index';
 import { GetSOCAssetInstanceProtectStatusRequest } from './types/index';
@@ -114,24 +398,100 @@ import { GetSOCAssetVulnStatsRequest } from './types/index';
 import { GetSOCAssetVulnStatsResponse } from './types/index';
 import { GetSOCPrecautionBaselineStatsRequest } from './types/index';
 import { GetSOCPrecautionBaselineStatsResponse } from './types/index';
+import { GetSecurityOverviewRequest } from './types/index';
+import { GetSecurityOverviewResponse } from './types/index';
 import { GetSecurityOverviewScoreStatsRequest } from './types/index';
 import { GetSecurityOverviewScoreStatsResponse } from './types/index';
+import { GetStackTraceRequest } from './types/index';
+import { GetStackTraceResponse } from './types/index';
+import { GetTLSInfoRequest } from './types/index';
+import { GetTLSInfoResponse } from './types/index';
+import { GetTenantQuotaRequest } from './types/index';
+import { GetTenantQuotaResponse } from './types/index';
+import { GetUserBatchScanStatusRequest } from './types/index';
+import { GetUserBatchScanStatusResponse } from './types/index';
 import { GetVarmorConfigYAMLRequest } from './types/index';
 import { GetVarmorConfigYAMLResponse } from './types/index';
 import { GetVarmorPolicyRequest } from './types/index';
 import { GetVarmorPolicyResponse } from './types/index';
 import { GetVarmorTLSInfoRequest } from './types/index';
 import { GetVarmorTLSInfoResponse } from './types/index';
+import { GetVirusAlarmSummaryInfoRequest } from './types/index';
+import { GetVirusAlarmSummaryInfoResponse } from './types/index';
+import { GetVirusDatabaseUpdateTimeRequest } from './types/index';
+import { GetVirusDatabaseUpdateTimeResponse } from './types/index';
+import { GetVirusTaskInfoRequest } from './types/index';
+import { GetVirusTaskInfoResponse } from './types/index';
+import { GetVirusTaskStatisticsRequest } from './types/index';
+import { GetVirusTaskStatisticsResponse } from './types/index';
+import { GetVulnCheckStatusForAIRequest } from './types/index';
+import { GetVulnCheckStatusForAIResponse } from './types/index';
+import { GetVulnCheckStatusRequest } from './types/index';
+import { GetVulnCheckStatusResponse } from './types/index';
+import { GetVulnDetailRequest } from './types/index';
+import { GetVulnDetailResponse } from './types/index';
+import { GetVulnInfoForAIRequest } from './types/index';
+import { GetVulnInfoForAIResponse } from './types/index';
+import { GetVulnInfoRequest } from './types/index';
+import { GetVulnInfoResponse } from './types/index';
+import { GetVulnScanConfigRequest } from './types/index';
+import { GetVulnScanConfigResponse } from './types/index';
+import { GetVulnStatisticsForAIRequest } from './types/index';
+import { GetVulnStatisticsForAIResponse } from './types/index';
+import { GetVulnStatisticsRequest } from './types/index';
+import { GetVulnStatisticsResponse } from './types/index';
+import { GetWhiteListFieldRequest } from './types/index';
+import { GetWhiteListFieldResponse } from './types/index';
+import { HandleAIVulnRequest } from './types/index';
+import { HandleAIVulnResponse } from './types/index';
+import { HandleAlarmByAgentRequest } from './types/index';
+import { HandleAlarmByAgentResponse } from './types/index';
 import { HandleEndpointAlarmsRequest } from './types/index';
 import { HandleEndpointAlarmsResponse } from './types/index';
+import { HandleVulnRequest } from './types/index';
+import { HandleVulnResponse } from './types/index';
+import { InstallAgentClientRequest } from './types/index';
+import { InstallAgentClientResponse } from './types/index';
+import { InstallAgentProxyServerCommandRequest } from './types/index';
+import { InstallAgentProxyServerCommandResponse } from './types/index';
+import { IsolateFileRequest } from './types/index';
+import { IsolateFileResponse } from './types/index';
+import { ListAIApplicationBasicInfoRequest } from './types/index';
+import { ListAIApplicationBasicInfoResponse } from './types/index';
 import { ListAgentProxiesRequest } from './types/index';
 import { ListAgentProxiesResponse } from './types/index';
 import { ListAgentProxyServersRequest } from './types/index';
 import { ListAgentProxyServersResponse } from './types/index';
+import { ListAgentkitSessionIDsRequest } from './types/index';
+import { ListAgentkitSessionIDsResponse } from './types/index';
+import { ListAlarmArchiveRecordsRequest } from './types/index';
+import { ListAlarmArchiveRecordsResponse } from './types/index';
+import { ListAlarmNameListRequest } from './types/index';
+import { ListAlarmNameListResponse } from './types/index';
+import { ListAlarmTagsRequest } from './types/index';
+import { ListAlarmTagsResponse } from './types/index';
+import { ListAllCntrStaticDictRequest } from './types/index';
+import { ListAllCntrStaticDictResponse } from './types/index';
+import { ListAssetCenterDevsRequest } from './types/index';
+import { ListAssetCenterDevsResponse } from './types/index';
 import { ListAssetCenterHostsRequest } from './types/index';
 import { ListAssetCenterHostsResponse } from './types/index';
+import { ListAssetClustersRequest } from './types/index';
+import { ListAssetClustersResponse } from './types/index';
+import { ListAssetGroupsRequest } from './types/index';
+import { ListAssetGroupsResponse } from './types/index';
 import { ListAssetNamespacesRequest } from './types/index';
 import { ListAssetNamespacesResponse } from './types/index';
+import { ListAssetPodsLinkedWorkloadRequest } from './types/index';
+import { ListAssetPodsLinkedWorkloadResponse } from './types/index';
+import { ListAssetPodsLinkedWorkloadWithNoPageRequest } from './types/index';
+import { ListAssetPodsLinkedWorkloadWithNoPageResponse } from './types/index';
+import { ListAssetTagsRequest } from './types/index';
+import { ListAssetTagsResponse } from './types/index';
+import { ListAssetWorkloadsRequest } from './types/index';
+import { ListAssetWorkloadsResponse } from './types/index';
+import { ListAutoDefenseHostsRequest } from './types/index';
+import { ListAutoDefenseHostsResponse } from './types/index';
 import { ListAutoDefenseRulesRequest } from './types/index';
 import { ListAutoDefenseRulesResponse } from './types/index';
 import { ListBanIPListRequest } from './types/index';
@@ -140,12 +500,22 @@ import { ListBaselineBasicInfoRequest } from './types/index';
 import { ListBaselineBasicInfoResponse } from './types/index';
 import { ListBaselineCheckConfigRequest } from './types/index';
 import { ListBaselineCheckConfigResponse } from './types/index';
+import { ListBaselineCheckDetailRequest } from './types/index';
+import { ListBaselineCheckDetailResponse } from './types/index';
+import { ListBaselineCheckItemHostsRequest } from './types/index';
+import { ListBaselineCheckItemHostsResponse } from './types/index';
 import { ListBaselineCheckItemsRequest } from './types/index';
 import { ListBaselineCheckItemsResponse } from './types/index';
+import { ListBaselineCheckResRequest } from './types/index';
+import { ListBaselineCheckResResponse } from './types/index';
 import { ListBaselineForGroupPolicyRequest } from './types/index';
 import { ListBaselineForGroupPolicyResponse } from './types/index';
+import { ListBaselineGroupsRequest } from './types/index';
+import { ListBaselineGroupsResponse } from './types/index';
 import { ListBaselineHostItemHostsRequest } from './types/index';
 import { ListBaselineHostItemHostsResponse } from './types/index';
+import { ListBaselinesRequest } from './types/index';
+import { ListBaselinesResponse } from './types/index';
 import { ListBatchEndpointHandleMethodsRequest } from './types/index';
 import { ListBatchEndpointHandleMethodsResponse } from './types/index';
 import { ListCheckConfigRelatedBaselineRequest } from './types/index';
@@ -154,60 +524,224 @@ import { ListCleanHistoryRequest } from './types/index';
 import { ListCleanHistoryResponse } from './types/index';
 import { ListCloudEnvsRequest } from './types/index';
 import { ListCloudEnvsResponse } from './types/index';
+import { ListCloudPlatformsRequest } from './types/index';
+import { ListCloudPlatformsResponse } from './types/index';
 import { ListClusterVarmorVersionHistoryRequest } from './types/index';
 import { ListClusterVarmorVersionHistoryResponse } from './types/index';
 import { ListClustersAndVarmorAppsRequest } from './types/index';
 import { ListClustersAndVarmorAppsResponse } from './types/index';
+import { ListDevAssetIDsRequest } from './types/index';
+import { ListDevAssetIDsResponse } from './types/index';
+import { ListDevBasicInfosRequest } from './types/index';
+import { ListDevBasicInfosResponse } from './types/index';
+import { ListDevPlatformRequest } from './types/index';
+import { ListDevPlatformResponse } from './types/index';
+import { ListDevRegionRequest } from './types/index';
+import { ListDevRegionResponse } from './types/index';
+import { ListEndpointHandleMethodsRequest } from './types/index';
+import { ListEndpointHandleMethodsResponse } from './types/index';
 import { ListFileMonitorAlarmsRequest } from './types/index';
 import { ListFileMonitorAlarmsResponse } from './types/index';
 import { ListFingerprintCollectConfigRequest } from './types/index';
 import { ListFingerprintCollectConfigResponse } from './types/index';
+import { ListGroupRelatedAgentRequest } from './types/index';
+import { ListGroupRelatedAgentResponse } from './types/index';
 import { ListHidsAlarmsRequest } from './types/index';
 import { ListHidsAlarmsResponse } from './types/index';
+import { ListHostPlatformRequest } from './types/index';
+import { ListHostPlatformResponse } from './types/index';
+import { ListHostRegionRequest } from './types/index';
+import { ListHostRegionResponse } from './types/index';
+import { ListHostVpcRequest } from './types/index';
+import { ListHostVpcResponse } from './types/index';
+import { ListHostsAgentIDsRequest } from './types/index';
+import { ListHostsAgentIDsResponse } from './types/index';
 import { ListHostsBasicInfosRequest } from './types/index';
 import { ListHostsBasicInfosResponse } from './types/index';
+import { ListInstallCommandsRequest } from './types/index';
+import { ListInstallCommandsResponse } from './types/index';
 import { ListIsolationFilesRequest } from './types/index';
 import { ListIsolationFilesResponse } from './types/index';
+import { ListLayeredGroupRelatedHostRequest } from './types/index';
+import { ListLayeredGroupRelatedHostResponse } from './types/index';
+import { ListLayeredGroupsDetailRequest } from './types/index';
+import { ListLayeredGroupsDetailResponse } from './types/index';
+import { ListLoginConfigsRequest } from './types/index';
+import { ListLoginConfigsResponse } from './types/index';
 import { ListMLPAssetTasksRequest } from './types/index';
 import { ListMLPAssetTasksResponse } from './types/index';
+import { ListMlpAlarmTagsRequest } from './types/index';
+import { ListMlpAlarmTagsResponse } from './types/index';
+import { ListMlpAlarmsRequest } from './types/index';
+import { ListMlpAlarmsResponse } from './types/index';
 import { ListMonitorPoliciesRequest } from './types/index';
 import { ListMonitorPoliciesResponse } from './types/index';
+import { ListMultiLevelAssetHostsRequest } from './types/index';
+import { ListMultiLevelAssetHostsResponse } from './types/index';
+import { ListMultiLevelInstitutionRequest } from './types/index';
+import { ListMultiLevelInstitutionResponse } from './types/index';
 import { ListOrderedHostsBasicInfosRequest } from './types/index';
 import { ListOrderedHostsBasicInfosResponse } from './types/index';
+import { ListRaspAlarmsRequest } from './types/index';
+import { ListRaspAlarmsResponse } from './types/index';
+import { ListRaspConfigAgentInfosRequest } from './types/index';
+import { ListRaspConfigAgentInfosResponse } from './types/index';
+import { ListRaspConfigsRequest } from './types/index';
+import { ListRaspConfigsResponse } from './types/index';
+import { ListRaspProcessesRequest } from './types/index';
+import { ListRaspProcessesResponse } from './types/index';
+import { ListRegistriesRequest } from './types/index';
+import { ListRegistriesResponse } from './types/index';
+import { ListRegistryImagesRequest } from './types/index';
+import { ListRegistryImagesResponse } from './types/index';
+import { ListRegistryNamespaceIDsRequest } from './types/index';
+import { ListRegistryNamespaceIDsResponse } from './types/index';
+import { ListRegistryNamespacesRequest } from './types/index';
+import { ListRegistryNamespacesResponse } from './types/index';
+import { ListRepoImageComplRequest } from './types/index';
+import { ListRepoImageComplResponse } from './types/index';
+import { ListRepoImageLayerRequest } from './types/index';
+import { ListRepoImageLayerResponse } from './types/index';
+import { ListRepoImageLayerSenfileRequest } from './types/index';
+import { ListRepoImageLayerSenfileResponse } from './types/index';
+import { ListRepoImageLayerVirusRequest } from './types/index';
+import { ListRepoImageLayerVirusResponse } from './types/index';
+import { ListRepoImageLayerVulnRequest } from './types/index';
+import { ListRepoImageLayerVulnResponse } from './types/index';
+import { ListRepoImagePackageRequest } from './types/index';
+import { ListRepoImagePackageResponse } from './types/index';
+import { ListRepoImageSenfileRequest } from './types/index';
+import { ListRepoImageSenfileResponse } from './types/index';
+import { ListRepoImageVirusRequest } from './types/index';
+import { ListRepoImageVirusResponse } from './types/index';
+import { ListRepoImageVulnRequest } from './types/index';
+import { ListRepoImageVulnResponse } from './types/index';
+import { ListRiskComplAffectRepoImageRequest } from './types/index';
+import { ListRiskComplAffectRepoImageResponse } from './types/index';
+import { ListRiskVulnAffectRepoImageRequest } from './types/index';
+import { ListRiskVulnAffectRepoImageResponse } from './types/index';
 import { ListScanSubTasksRequest } from './types/index';
 import { ListScanSubTasksResponse } from './types/index';
+import { ListScanTaskHostsRequest } from './types/index';
+import { ListScanTaskHostsResponse } from './types/index';
+import { ListScanTasksRequest } from './types/index';
+import { ListScanTasksResponse } from './types/index';
+import { ListTagRelatedAgentRequest } from './types/index';
+import { ListTagRelatedAgentResponse } from './types/index';
+import { ListTagsDetailRequest } from './types/index';
+import { ListTagsDetailResponse } from './types/index';
 import { ListVarmorPoliciesRequest } from './types/index';
 import { ListVarmorPoliciesResponse } from './types/index';
+import { ListVirusAlarmsRequest } from './types/index';
+import { ListVirusAlarmsResponse } from './types/index';
 import { ListVulByPodRequest } from './types/index';
 import { ListVulByPodResponse } from './types/index';
 import { ListVulDetailRequest } from './types/index';
 import { ListVulDetailResponse } from './types/index';
 import { ListVulHostByPodRequest } from './types/index';
 import { ListVulHostByPodResponse } from './types/index';
+import { ListVulnAffectAISessionRequest } from './types/index';
+import { ListVulnAffectAISessionResponse } from './types/index';
+import { ListVulnForAIRequest } from './types/index';
+import { ListVulnForAIResponse } from './types/index';
+import { ListVulnHostsRequest } from './types/index';
+import { ListVulnHostsResponse } from './types/index';
+import { ListVulnsRequest } from './types/index';
+import { ListVulnsResponse } from './types/index';
+import { ListWeakPasswordCheckDetailRequest } from './types/index';
+import { ListWeakPasswordCheckDetailResponse } from './types/index';
+import { ListWhiteListsRequest } from './types/index';
+import { ListWhiteListsResponse } from './types/index';
+import { ManualSyncAIApplicationRequest } from './types/index';
+import { ManualSyncAIApplicationResponse } from './types/index';
+import { ModifyAutoDefenseRuleRequest } from './types/index';
+import { ModifyAutoDefenseRuleResponse } from './types/index';
+import { ModifyCloudEnvRequest } from './types/index';
+import { ModifyCloudEnvResponse } from './types/index';
+import { ModifyLayeredGroupRequest } from './types/index';
+import { ModifyLayeredGroupResponse } from './types/index';
+import { ModifyMultiLevelInstitutionReportSwitchRequest } from './types/index';
+import { ModifyMultiLevelInstitutionReportSwitchResponse } from './types/index';
+import { ModifyMultiLevelInstitutionRequest } from './types/index';
+import { ModifyMultiLevelInstitutionResponse } from './types/index';
+import { ModifyTLSConfigRequest } from './types/index';
+import { ModifyTLSConfigResponse } from './types/index';
+import { ModifyWhiteListRequest } from './types/index';
+import { ModifyWhiteListResponse } from './types/index';
+import { MultiAssetScanRequest } from './types/index';
+import { MultiAssetScanResponse } from './types/index';
+import { MultiCloudAccessStatisticsRequest } from './types/index';
+import { MultiCloudAccessStatisticsResponse } from './types/index';
+import { MultiCloudAccessSyncRequest } from './types/index';
+import { MultiCloudAccessSyncResponse } from './types/index';
+import { MultiCloudAccessSyncStatusRequest } from './types/index';
+import { MultiCloudAccessSyncStatusResponse } from './types/index';
+import { OperateAgentRaspConfigSwitchRequest } from './types/index';
+import { OperateAgentRaspConfigSwitchResponse } from './types/index';
+import { PrecisionStatisticsRequest } from './types/index';
+import { PrecisionStatisticsResponse } from './types/index';
+import { RecoverFileRequest } from './types/index';
+import { RecoverFileResponse } from './types/index';
+import { RefreshAIFingerprintDataRequest } from './types/index';
+import { RefreshAIFingerprintDataResponse } from './types/index';
+import { RefreshFingerprintDataRequest } from './types/index';
+import { RefreshFingerprintDataResponse } from './types/index';
 import { RefreshVarmorInfoRequest } from './types/index';
 import { RefreshVarmorInfoResponse } from './types/index';
 import { RetryIPOperationRequest } from './types/index';
 import { RetryIPOperationResponse } from './types/index';
+import { SaveRepoImageScanCronRequest } from './types/index';
+import { SaveRepoImageScanCronResponse } from './types/index';
+import { SaveRepoImageScanScopeRequest } from './types/index';
+import { SaveRepoImageScanScopeResponse } from './types/index';
 import { SetAIAlarmJudgeConfigRequest } from './types/index';
 import { SetAIAlarmJudgeConfigResponse } from './types/index';
 import { SetBruteForceBanConfigRequest } from './types/index';
 import { SetBruteForceBanConfigResponse } from './types/index';
 import { SetCustomWeakPasswordsRequest } from './types/index';
 import { SetCustomWeakPasswordsResponse } from './types/index';
+import { SetRegularVirusScanConfigRequest } from './types/index';
+import { SetRegularVirusScanConfigResponse } from './types/index';
 import { StopMLPAssetSyncTaskRequest } from './types/index';
 import { StopMLPAssetSyncTaskResponse } from './types/index';
+import { SwitchCloudEnvSyncRequest } from './types/index';
+import { SwitchCloudEnvSyncResponse } from './types/index';
+import { SyncRegistryImagesRequest } from './types/index';
+import { SyncRegistryImagesResponse } from './types/index';
 import { UnBanIPItemRequest } from './types/index';
 import { UnBanIPItemResponse } from './types/index';
 import { UnbindMLPAuthRequest } from './types/index';
 import { UnbindMLPAuthResponse } from './types/index';
+import { UninstallAgentClientRequest } from './types/index';
+import { UninstallAgentClientResponse } from './types/index';
+import { UninstallCommandsRequest } from './types/index';
+import { UninstallCommandsResponse } from './types/index';
+import { UpdateAlarmTagsRequest } from './types/index';
+import { UpdateAlarmTagsResponse } from './types/index';
+import { UpdateAssetClustersRequest } from './types/index';
+import { UpdateAssetClustersResponse } from './types/index';
 import { UpdateAutoProtectConfigRequest } from './types/index';
 import { UpdateAutoProtectConfigResponse } from './types/index';
 import { UpdateBaselineCheckConfigSwitchRequest } from './types/index';
 import { UpdateBaselineCheckConfigSwitchResponse } from './types/index';
 import { UpdateCloudProviderRequest } from './types/index';
 import { UpdateCloudProviderResponse } from './types/index';
+import { UpdateCommonAlarmStatusRequest } from './types/index';
+import { UpdateCommonAlarmStatusResponse } from './types/index';
+import { UpdateHostTagRequest } from './types/index';
+import { UpdateHostTagResponse } from './types/index';
+import { UpdateLoginConfigRequest } from './types/index';
+import { UpdateLoginConfigResponse } from './types/index';
+import { UpdateMlpAlarmStatusRequest } from './types/index';
+import { UpdateMlpAlarmStatusResponse } from './types/index';
 import { UpdateOfflineNotificationConfigRequest } from './types/index';
 import { UpdateOfflineNotificationConfigResponse } from './types/index';
+import { UpdateRegistryFlowRateLimitRequest } from './types/index';
+import { UpdateRegistryFlowRateLimitResponse } from './types/index';
+import { UpdateRegistrySyncConfigRequest } from './types/index';
+import { UpdateRegistrySyncConfigResponse } from './types/index';
+import { UpdateRegularCleanRequest } from './types/index';
+import { UpdateRegularCleanResponse } from './types/index';
 import { UpdateVarmorAppConfigRequest } from './types/index';
 import { UpdateVarmorAppConfigResponse } from './types/index';
 import { UpdateVarmorPolicyRequest } from './types/index';
@@ -218,107 +752,373 @@ import { UpdateVarmorTLSInfoResponse } from './types/index';
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type AddAgentProxyCommandOutput = CommandOutput<AddAgentProxyResponse>;
+export type AddAutoIsolateAgentListCommandOutput = CommandOutput<AddAutoIsolateAgentListResponse>;
 export type AddBaselineCheckConfigCommandOutput = CommandOutput<AddBaselineCheckConfigResponse>;
+export type AddCloudEnvCommandOutput = CommandOutput<AddCloudEnvResponse>;
+export type AddLoginConfigCommandOutput = CommandOutput<AddLoginConfigResponse>;
 export type AddMonitorPolicyCommandOutput = CommandOutput<AddMonitorPolicyResponse>;
+export type AddRaspConfigCommandOutput = CommandOutput<AddRaspConfigResponse>;
+export type AddWhiteListCommandOutput = CommandOutput<AddWhiteListResponse>;
+export type AllAssetScanCommandOutput = CommandOutput<AllAssetScanResponse>;
+export type AssetScanCommandOutput = CommandOutput<AssetScanResponse>;
 export type BanAlarmIPCommandOutput = CommandOutput<BanAlarmIPResponse>;
+export type BaselineChecklistWhiteCommandOutput = CommandOutput<BaselineChecklistWhiteResponse>;
+export type BatchAddHostToGroupCommandOutput = CommandOutput<BatchAddHostToGroupResponse>;
+export type BatchCreateRepoRegistryVpcAuthCommandOutput = CommandOutput<BatchCreateRepoRegistryVpcAuthResponse>;
 export type BatchDeleteVarmorPoliciesCommandOutput = CommandOutput<BatchDeleteVarmorPoliciesResponse>;
+export type BatchDetectWeakPasswordCommandOutput = CommandOutput<BatchDetectWeakPasswordResponse>;
 export type BatchInstallVarmorAppsCommandOutput = CommandOutput<BatchInstallVarmorAppsResponse>;
 export type BatchUninstallVarmorAppsCommandOutput = CommandOutput<BatchUninstallVarmorAppsResponse>;
 export type BatchUpgradeVarmorAppsCommandOutput = CommandOutput<BatchUpgradeVarmorAppsResponse>;
 export type BindMLPAuthCommandOutput = CommandOutput<BindMLPAuthResponse>;
+export type CalculateRepoImageScanQuotaCommandOutput = CommandOutput<CalculateRepoImageScanQuotaResponse>;
 export type CheckAlarmSupportBanIPCommandOutput = CommandOutput<CheckAlarmSupportBanIPResponse>;
+export type CheckInstallAgentClientCommandOutput = CommandOutput<CheckInstallAgentClientResponse>;
+export type CheckInstallRaspCommandOutput = CommandOutput<CheckInstallRaspResponse>;
 export type CheckMonitorPolicyCommandOutput = CommandOutput<CheckMonitorPolicyResponse>;
 export type ControlMonitorPolicyCommandOutput = CommandOutput<ControlMonitorPolicyResponse>;
+export type CreatFileScanTaskCommandOutput = CommandOutput<CreatFileScanTaskResponse>;
+export type CreateHostTagCommandOutput = CommandOutput<CreateHostTagResponse>;
+export type CreateLayeredGroupCommandOutput = CommandOutput<CreateLayeredGroupResponse>;
 export type CreateMLPAssetSyncTaskCommandOutput = CommandOutput<CreateMLPAssetSyncTaskResponse>;
+export type CreateMLPUpdateSoftwareTaskCommandOutput = CommandOutput<CreateMLPUpdateSoftwareTaskResponse>;
+export type CreateMultiLevelInstitutionCommandOutput = CommandOutput<CreateMultiLevelInstitutionResponse>;
+export type CreateRepoRegistryVpcAuthCommandOutput = CommandOutput<CreateRepoRegistryVpcAuthResponse>;
 export type CreateVarmorPolicyCommandOutput = CommandOutput<CreateVarmorPolicyResponse>;
+export type DeleteAgentProxyCommandOutput = CommandOutput<DeleteAgentProxyResponse>;
+export type DeleteAgentProxyServerCommandOutput = CommandOutput<DeleteAgentProxyServerResponse>;
+export type DeleteAutoIsolateAgentListCommandOutput = CommandOutput<DeleteAutoIsolateAgentListResponse>;
 export type DeleteBaselineCheckConfigCommandOutput = CommandOutput<DeleteBaselineCheckConfigResponse>;
+export type DeleteCloudEnvCommandOutput = CommandOutput<DeleteCloudEnvResponse>;
+export type DeleteCommandCommandOutput = CommandOutput<DeleteCommandResponse>;
+export type DeleteHostTagCommandOutput = CommandOutput<DeleteHostTagResponse>;
+export type DeleteLayeredGroupCommandOutput = CommandOutput<DeleteLayeredGroupResponse>;
+export type DeleteLoginConfigCommandOutput = CommandOutput<DeleteLoginConfigResponse>;
 export type DeleteMonitorPolicyCommandOutput = CommandOutput<DeleteMonitorPolicyResponse>;
+export type DeleteMultiLevelInstitutionCommandOutput = CommandOutput<DeleteMultiLevelInstitutionResponse>;
+export type DeleteRaspConfigCommandOutput = CommandOutput<DeleteRaspConfigResponse>;
+export type DeleteWhiteListsCommandOutput = CommandOutput<DeleteWhiteListsResponse>;
 export type DescribeFileChangeTrendTop5CommandOutput = CommandOutput<DescribeFileChangeTrendTop5Response>;
 export type DescribeFileMonitorOverviewCommandOutput = CommandOutput<DescribeFileMonitorOverviewResponse>;
 export type DescribeLastWeekFileChangeTrendsCommandOutput = CommandOutput<DescribeLastWeekFileChangeTrendsResponse>;
+export type DetectBaselineCommandOutput = CommandOutput<DetectBaselineResponse>;
 export type DetectBaselineByCheckConfigCommandOutput = CommandOutput<DetectBaselineByCheckConfigResponse>;
+export type DetectVulnCommandOutput = CommandOutput<DetectVulnResponse>;
+export type DetectVulnForAICommandOutput = CommandOutput<DetectVulnForAIResponse>;
+export type DisableHostImportantProtectCommandOutput = CommandOutput<DisableHostImportantProtectResponse>;
+export type DownloadAIVulnListCommandOutput = CommandOutput<DownloadAIVulnListResponse>;
+export type DownloadBaselineCheckCommandOutput = CommandOutput<DownloadBaselineCheckResponse>;
+export type DownloadBaselineCheckHostsCommandOutput = CommandOutput<DownloadBaselineCheckHostsResponse>;
+export type DownloadRawTraceDataCommandOutput = CommandOutput<DownloadRawTraceDataResponse>;
+export type DownloadVulHostListByPodCommandOutput = CommandOutput<DownloadVulHostListByPodResponse>;
+export type DownloadVulListByPodCommandOutput = CommandOutput<DownloadVulListByPodResponse>;
+export type DownloadVulnAffectAISessionCommandOutput = CommandOutput<DownloadVulnAffectAISessionResponse>;
+export type DownloadVulnDatasCommandOutput = CommandOutput<DownloadVulnDatasResponse>;
+export type DownloadVulnListCommandOutput = CommandOutput<DownloadVulnListResponse>;
+export type EditAIApplicationSyncConfigCommandOutput = CommandOutput<EditAIApplicationSyncConfigResponse>;
 export type EditBaselineCheckConfigCommandOutput = CommandOutput<EditBaselineCheckConfigResponse>;
 export type EditFingerprintCollectConfigCommandOutput = CommandOutput<EditFingerprintCollectConfigResponse>;
 export type EditMonitorPolicyCommandOutput = CommandOutput<EditMonitorPolicyResponse>;
+export type EditRaspConfigCommandOutput = CommandOutput<EditRaspConfigResponse>;
+export type EditVulnScanConfigCommandOutput = CommandOutput<EditVulnScanConfigResponse>;
+export type EnableHostImportantProtectCommandOutput = CommandOutput<EnableHostImportantProtectResponse>;
+export type ExportAIFingerprintDataCommandOutput = CommandOutput<ExportAIFingerprintDataResponse>;
+export type ExportAlarmListDataForRaspCommandOutput = CommandOutput<ExportAlarmListDataForRaspResponse>;
+export type ExportAssetCenterDevsCommandOutput = CommandOutput<ExportAssetCenterDevsResponse>;
+export type ExportAssetCenterHostsCommandOutput = CommandOutput<ExportAssetCenterHostsResponse>;
+export type ExportBaselineCheckListCommandOutput = CommandOutput<ExportBaselineCheckListResponse>;
+export type ExportBaselineHostDetailsCommandOutput = CommandOutput<ExportBaselineHostDetailsResponse>;
+export type ExportDevFingerprintDataCommandOutput = CommandOutput<ExportDevFingerprintDataResponse>;
 export type ExportFileMonitorAlarmListDataCommandOutput = CommandOutput<ExportFileMonitorAlarmListDataResponse>;
+export type ExportFingerprintDataCommandOutput = CommandOutput<ExportFingerprintDataResponse>;
+export type ExportHidsAlarmListDataCommandOutput = CommandOutput<ExportHidsAlarmListDataResponse>;
+export type ExportMlpAlarmListDataCommandOutput = CommandOutput<ExportMlpAlarmListDataResponse>;
+export type ExportRepoImageAssetCommandOutput = CommandOutput<ExportRepoImageAssetResponse>;
+export type ExportVirusAlarmListDataCommandOutput = CommandOutput<ExportVirusAlarmListDataResponse>;
+export type ExportWeakPasswordCommandOutput = CommandOutput<ExportWeakPasswordResponse>;
+export type GenerateInstallCommandCommandOutput = CommandOutput<GenerateInstallCommandResponse>;
 export type GetAIAlarmJudgeConfigCommandOutput = CommandOutput<GetAIAlarmJudgeConfigResponse>;
+export type GetAIApplicationSyncConfigCommandOutput = CommandOutput<GetAIApplicationSyncConfigResponse>;
+export type GetAIFingerprintAppCommandOutput = CommandOutput<GetAIFingerprintAppResponse>;
+export type GetAIFingerprintPortCommandOutput = CommandOutput<GetAIFingerprintPortResponse>;
+export type GetAIFingerprintProcessCommandOutput = CommandOutput<GetAIFingerprintProcessResponse>;
+export type GetAIFingerprintRefreshStatusCommandOutput = CommandOutput<GetAIFingerprintRefreshStatusResponse>;
+export type GetAIFingerprintSoftwareCommandOutput = CommandOutput<GetAIFingerprintSoftwareResponse>;
+export type GetAIFingerprintStatisticsCommandOutput = CommandOutput<GetAIFingerprintStatisticsResponse>;
+export type GetAIFingerprintTop5CommandOutput = CommandOutput<GetAIFingerprintTop5Response>;
+export type GetAISessionVulnInfoCommandOutput = CommandOutput<GetAISessionVulnInfoResponse>;
+export type GetAIVulnDetectProgressDetailCommandOutput = CommandOutput<GetAIVulnDetectProgressDetailResponse>;
+export type GetAlarmBySmithKeyCommandOutput = CommandOutput<GetAlarmBySmithKeyResponse>;
 export type GetAlarmRuleListCommandOutput = CommandOutput<GetAlarmRuleListResponse>;
+export type GetAlarmTraceCommandOutput = CommandOutput<GetAlarmTraceResponse>;
 export type GetAlarmTraceRawDataCommandOutput = CommandOutput<GetAlarmTraceRawDataResponse>;
+export type GetAlarmVirusStatisticsCommandOutput = CommandOutput<GetAlarmVirusStatisticsResponse>;
 export type GetAllMonitorSuffixListCommandOutput = CommandOutput<GetAllMonitorSuffixListResponse>;
 export type GetArmorProfileCommandOutput = CommandOutput<GetArmorProfileResponse>;
+export type GetAssetClusterStatisticCommandOutput = CommandOutput<GetAssetClusterStatisticResponse>;
+export type GetAssetClustersSyncEndCommandOutput = CommandOutput<GetAssetClustersSyncEndResponse>;
+export type GetAssetWorkloadStatisticCommandOutput = CommandOutput<GetAssetWorkloadStatisticResponse>;
 export type GetAutoIsolateAgentListCommandOutput = CommandOutput<GetAutoIsolateAgentListResponse>;
 export type GetAutoProtectConfigCommandOutput = CommandOutput<GetAutoProtectConfigResponse>;
+export type GetBaselineDetectProgressDetailCommandOutput = CommandOutput<GetBaselineDetectProgressDetailResponse>;
+export type GetBaselineGroupStatisticsCommandOutput = CommandOutput<GetBaselineGroupStatisticsResponse>;
 export type GetBruteForceBanCapParamsCommandOutput = CommandOutput<GetBruteForceBanCapParamsResponse>;
 export type GetBruteForceBanConfigCommandOutput = CommandOutput<GetBruteForceBanConfigResponse>;
 export type GetBruteForceBanStatisticsCommandOutput = CommandOutput<GetBruteForceBanStatisticsResponse>;
+export type GetCisDetailCommandOutput = CommandOutput<GetCisDetailResponse>;
 export type GetClusterStatisticsCommandOutput = CommandOutput<GetClusterStatisticsResponse>;
+export type GetClustersPermissionResultCommandOutput = CommandOutput<GetClustersPermissionResultResponse>;
 export type GetCustomWeakPasswordsCommandOutput = CommandOutput<GetCustomWeakPasswordsResponse>;
+export type GetDevAssetOverviewCommandOutput = CommandOutput<GetDevAssetOverviewResponse>;
+export type GetDevDetailCommandOutput = CommandOutput<GetDevDetailResponse>;
+export type GetDevFingerprintPortCommandOutput = CommandOutput<GetDevFingerprintPortResponse>;
+export type GetDevFingerprintProcessCommandOutput = CommandOutput<GetDevFingerprintProcessResponse>;
+export type GetDevFingerprintSoftwareCommandOutput = CommandOutput<GetDevFingerprintSoftwareResponse>;
+export type GetDevFingerprintStatisticsCommandOutput = CommandOutput<GetDevFingerprintStatisticsResponse>;
+export type GetDownloadStatusCommandOutput = CommandOutput<GetDownloadStatusResponse>;
+export type GetFingerprintAppCommandOutput = CommandOutput<GetFingerprintAppResponse>;
+export type GetFingerprintAppGroupCommandOutput = CommandOutput<GetFingerprintAppGroupResponse>;
+export type GetFingerprintCronCommandOutput = CommandOutput<GetFingerprintCronResponse>;
 export type GetFingerprintEnvCommandOutput = CommandOutput<GetFingerprintEnvResponse>;
+export type GetFingerprintIntegrityCommandOutput = CommandOutput<GetFingerprintIntegrityResponse>;
+export type GetFingerprintKmodCommandOutput = CommandOutput<GetFingerprintKmodResponse>;
+export type GetFingerprintPortCommandOutput = CommandOutput<GetFingerprintPortResponse>;
+export type GetFingerprintProcessCommandOutput = CommandOutput<GetFingerprintProcessResponse>;
+export type GetFingerprintRefreshStatusCommandOutput = CommandOutput<GetFingerprintRefreshStatusResponse>;
+export type GetFingerprintServiceCommandOutput = CommandOutput<GetFingerprintServiceResponse>;
+export type GetFingerprintSoftwareCommandOutput = CommandOutput<GetFingerprintSoftwareResponse>;
+export type GetFingerprintStatisticsCommandOutput = CommandOutput<GetFingerprintStatisticsResponse>;
+export type GetFingerprintTop5CommandOutput = CommandOutput<GetFingerprintTop5Response>;
+export type GetFingerprintUserCommandOutput = CommandOutput<GetFingerprintUserResponse>;
+export type GetFingerprintWebCommandOutput = CommandOutput<GetFingerprintWebResponse>;
 export type GetGeoLocationCommandOutput = CommandOutput<GetGeoLocationResponse>;
+export type GetGroupCheckStatusCommandOutput = CommandOutput<GetGroupCheckStatusResponse>;
+export type GetHidsAlarmInfoCommandOutput = CommandOutput<GetHidsAlarmInfoResponse>;
+export type GetHidsAlarmStatisticsCommandOutput = CommandOutput<GetHidsAlarmStatisticsResponse>;
+export type GetHidsAlarmSummaryInfoCommandOutput = CommandOutput<GetHidsAlarmSummaryInfoResponse>;
+export type GetHostAssetOverviewCommandOutput = CommandOutput<GetHostAssetOverviewResponse>;
+export type GetHostBasicInfoCommandOutput = CommandOutput<GetHostBasicInfoResponse>;
+export type GetHostImportantProtectStateCommandOutput = CommandOutput<GetHostImportantProtectStateResponse>;
 export type GetHostVolumeCommandOutput = CommandOutput<GetHostVolumeResponse>;
+export type GetHostVulnInfoCommandOutput = CommandOutput<GetHostVulnInfoResponse>;
+export type GetIntrusionRealTimeUpdatesCommandOutput = CommandOutput<GetIntrusionRealTimeUpdatesResponse>;
+export type GetIntrusionRiskTrendsCommandOutput = CommandOutput<GetIntrusionRiskTrendsResponse>;
+export type GetK8sAssetStatisticCommandOutput = CommandOutput<GetK8sAssetStatisticResponse>;
+export type GetLayeredGroupsCommandOutput = CommandOutput<GetLayeredGroupsResponse>;
 export type GetMLPAssetSyncTaskDetailCommandOutput = CommandOutput<GetMLPAssetSyncTaskDetailResponse>;
 export type GetMLPAssetSyncTaskStatusCommandOutput = CommandOutput<GetMLPAssetSyncTaskStatusResponse>;
+export type GetManualSyncAIApplicationStatusCommandOutput = CommandOutput<GetManualSyncAIApplicationStatusResponse>;
+export type GetMlpAlarmStatisticsCommandOutput = CommandOutput<GetMlpAlarmStatisticsResponse>;
+export type GetMlpAlarmSummaryInfoCommandOutput = CommandOutput<GetMlpAlarmSummaryInfoResponse>;
+export type GetMlpUpdateSoftwareTaskDetailCommandOutput = CommandOutput<GetMlpUpdateSoftwareTaskDetailResponse>;
 export type GetMonitorPolicyDirectoryCommandOutput = CommandOutput<GetMonitorPolicyDirectoryResponse>;
 export type GetMultiLevelAuthDetailCommandOutput = CommandOutput<GetMultiLevelAuthDetailResponse>;
+export type GetMultiLevelHostAssetOverviewCommandOutput = CommandOutput<GetMultiLevelHostAssetOverviewResponse>;
+export type GetMultiLevelInstitutionDetailCommandOutput = CommandOutput<GetMultiLevelInstitutionDetailResponse>;
+export type GetNeighboringAlarmCommandOutput = CommandOutput<GetNeighboringAlarmResponse>;
 export type GetOfflineNotificationConfigCommandOutput = CommandOutput<GetOfflineNotificationConfigResponse>;
 export type GetOfflineNotificationListCommandOutput = CommandOutput<GetOfflineNotificationListResponse>;
+export type GetOneRaspAlarmCommandOutput = CommandOutput<GetOneRaspAlarmResponse>;
 export type GetPolicyStatisticsCommandOutput = CommandOutput<GetPolicyStatisticsResponse>;
+export type GetRaspAlarmStatisticsCommandOutput = CommandOutput<GetRaspAlarmStatisticsResponse>;
+export type GetRaspAlarmSummaryInfoCommandOutput = CommandOutput<GetRaspAlarmSummaryInfoResponse>;
+export type GetRaspAuthorizationStatisticsCommandOutput = CommandOutput<GetRaspAuthorizationStatisticsResponse>;
+export type GetRaspConfigStatisticsCommandOutput = CommandOutput<GetRaspConfigStatisticsResponse>;
+export type GetRaspProcessDetailCommandOutput = CommandOutput<GetRaspProcessDetailResponse>;
+export type GetRaspProtectStatisticsCommandOutput = CommandOutput<GetRaspProtectStatisticsResponse>;
+export type GetRegistriesPermissionResultCommandOutput = CommandOutput<GetRegistriesPermissionResultResponse>;
+export type GetRegistryImageDetailCommandOutput = CommandOutput<GetRegistryImageDetailResponse>;
+export type GetRegistryImagesSyncStatusCommandOutput = CommandOutput<GetRegistryImagesSyncStatusResponse>;
+export type GetRegistrySyncConfigCommandOutput = CommandOutput<GetRegistrySyncConfigResponse>;
+export type GetRegularCleanCommandOutput = CommandOutput<GetRegularCleanResponse>;
+export type GetRegularVirusScanConfigCommandOutput = CommandOutput<GetRegularVirusScanConfigResponse>;
+export type GetRegularVirusTaskStatusCommandOutput = CommandOutput<GetRegularVirusTaskStatusResponse>;
+export type GetRepoImageRiskCntCommandOutput = CommandOutput<GetRepoImageRiskCntResponse>;
+export type GetRepoImageScanCronCommandOutput = CommandOutput<GetRepoImageScanCronResponse>;
+export type GetRepoImageScanScopeCommandOutput = CommandOutput<GetRepoImageScanScopeResponse>;
+export type GetRepoRegistrySummaryCommandOutput = CommandOutput<GetRepoRegistrySummaryResponse>;
+export type GetRepoRegistryVpcAuthCreateInfoCommandOutput = CommandOutput<GetRepoRegistryVpcAuthCreateInfoResponse>;
 export type GetSOCAssetAlarmStatsCommandOutput = CommandOutput<GetSOCAssetAlarmStatsResponse>;
 export type GetSOCAssetInstanceProtectStatusCommandOutput = CommandOutput<GetSOCAssetInstanceProtectStatusResponse>;
 export type GetSOCAssetSecurityScoreCommandOutput = CommandOutput<GetSOCAssetSecurityScoreResponse>;
 export type GetSOCAssetVulnStatsCommandOutput = CommandOutput<GetSOCAssetVulnStatsResponse>;
 export type GetSOCPrecautionBaselineStatsCommandOutput = CommandOutput<GetSOCPrecautionBaselineStatsResponse>;
+export type GetSecurityOverviewCommandOutput = CommandOutput<GetSecurityOverviewResponse>;
 export type GetSecurityOverviewScoreStatsCommandOutput = CommandOutput<GetSecurityOverviewScoreStatsResponse>;
+export type GetStackTraceCommandOutput = CommandOutput<GetStackTraceResponse>;
+export type GetTLSInfoCommandOutput = CommandOutput<GetTLSInfoResponse>;
+export type GetTenantQuotaCommandOutput = CommandOutput<GetTenantQuotaResponse>;
+export type GetUserBatchScanStatusCommandOutput = CommandOutput<GetUserBatchScanStatusResponse>;
 export type GetVarmorConfigYAMLCommandOutput = CommandOutput<GetVarmorConfigYAMLResponse>;
 export type GetVarmorPolicyCommandOutput = CommandOutput<GetVarmorPolicyResponse>;
 export type GetVarmorTLSInfoCommandOutput = CommandOutput<GetVarmorTLSInfoResponse>;
+export type GetVirusAlarmSummaryInfoCommandOutput = CommandOutput<GetVirusAlarmSummaryInfoResponse>;
+export type GetVirusDatabaseUpdateTimeCommandOutput = CommandOutput<GetVirusDatabaseUpdateTimeResponse>;
+export type GetVirusTaskInfoCommandOutput = CommandOutput<GetVirusTaskInfoResponse>;
+export type GetVirusTaskStatisticsCommandOutput = CommandOutput<GetVirusTaskStatisticsResponse>;
+export type GetVulnCheckStatusCommandOutput = CommandOutput<GetVulnCheckStatusResponse>;
+export type GetVulnCheckStatusForAICommandOutput = CommandOutput<GetVulnCheckStatusForAIResponse>;
+export type GetVulnDetailCommandOutput = CommandOutput<GetVulnDetailResponse>;
+export type GetVulnInfoCommandOutput = CommandOutput<GetVulnInfoResponse>;
+export type GetVulnInfoForAICommandOutput = CommandOutput<GetVulnInfoForAIResponse>;
+export type GetVulnScanConfigCommandOutput = CommandOutput<GetVulnScanConfigResponse>;
+export type GetVulnStatisticsCommandOutput = CommandOutput<GetVulnStatisticsResponse>;
+export type GetVulnStatisticsForAICommandOutput = CommandOutput<GetVulnStatisticsForAIResponse>;
+export type GetWhiteListFieldCommandOutput = CommandOutput<GetWhiteListFieldResponse>;
+export type HandleAIVulnCommandOutput = CommandOutput<HandleAIVulnResponse>;
+export type HandleAlarmByAgentCommandOutput = CommandOutput<HandleAlarmByAgentResponse>;
 export type HandleEndpointAlarmsCommandOutput = CommandOutput<HandleEndpointAlarmsResponse>;
+export type HandleVulnCommandOutput = CommandOutput<HandleVulnResponse>;
+export type InstallAgentClientCommandOutput = CommandOutput<InstallAgentClientResponse>;
+export type InstallAgentProxyServerCommandCommandOutput = CommandOutput<InstallAgentProxyServerCommandResponse>;
+export type IsolateFileCommandOutput = CommandOutput<IsolateFileResponse>;
+export type ListAIApplicationBasicInfoCommandOutput = CommandOutput<ListAIApplicationBasicInfoResponse>;
 export type ListAgentProxiesCommandOutput = CommandOutput<ListAgentProxiesResponse>;
 export type ListAgentProxyServersCommandOutput = CommandOutput<ListAgentProxyServersResponse>;
+export type ListAgentkitSessionIDsCommandOutput = CommandOutput<ListAgentkitSessionIDsResponse>;
+export type ListAlarmArchiveRecordsCommandOutput = CommandOutput<ListAlarmArchiveRecordsResponse>;
+export type ListAlarmNameListCommandOutput = CommandOutput<ListAlarmNameListResponse>;
+export type ListAlarmTagsCommandOutput = CommandOutput<ListAlarmTagsResponse>;
+export type ListAllCntrStaticDictCommandOutput = CommandOutput<ListAllCntrStaticDictResponse>;
+export type ListAssetCenterDevsCommandOutput = CommandOutput<ListAssetCenterDevsResponse>;
 export type ListAssetCenterHostsCommandOutput = CommandOutput<ListAssetCenterHostsResponse>;
+export type ListAssetClustersCommandOutput = CommandOutput<ListAssetClustersResponse>;
+export type ListAssetGroupsCommandOutput = CommandOutput<ListAssetGroupsResponse>;
 export type ListAssetNamespacesCommandOutput = CommandOutput<ListAssetNamespacesResponse>;
+export type ListAssetPodsLinkedWorkloadCommandOutput = CommandOutput<ListAssetPodsLinkedWorkloadResponse>;
+export type ListAssetPodsLinkedWorkloadWithNoPageCommandOutput = CommandOutput<ListAssetPodsLinkedWorkloadWithNoPageResponse>;
+export type ListAssetTagsCommandOutput = CommandOutput<ListAssetTagsResponse>;
+export type ListAssetWorkloadsCommandOutput = CommandOutput<ListAssetWorkloadsResponse>;
+export type ListAutoDefenseHostsCommandOutput = CommandOutput<ListAutoDefenseHostsResponse>;
 export type ListAutoDefenseRulesCommandOutput = CommandOutput<ListAutoDefenseRulesResponse>;
 export type ListBanIPListCommandOutput = CommandOutput<ListBanIPListResponse>;
 export type ListBaselineBasicInfoCommandOutput = CommandOutput<ListBaselineBasicInfoResponse>;
 export type ListBaselineCheckConfigCommandOutput = CommandOutput<ListBaselineCheckConfigResponse>;
+export type ListBaselineCheckDetailCommandOutput = CommandOutput<ListBaselineCheckDetailResponse>;
+export type ListBaselineCheckItemHostsCommandOutput = CommandOutput<ListBaselineCheckItemHostsResponse>;
 export type ListBaselineCheckItemsCommandOutput = CommandOutput<ListBaselineCheckItemsResponse>;
+export type ListBaselineCheckResCommandOutput = CommandOutput<ListBaselineCheckResResponse>;
 export type ListBaselineForGroupPolicyCommandOutput = CommandOutput<ListBaselineForGroupPolicyResponse>;
+export type ListBaselineGroupsCommandOutput = CommandOutput<ListBaselineGroupsResponse>;
 export type ListBaselineHostItemHostsCommandOutput = CommandOutput<ListBaselineHostItemHostsResponse>;
+export type ListBaselinesCommandOutput = CommandOutput<ListBaselinesResponse>;
 export type ListBatchEndpointHandleMethodsCommandOutput = CommandOutput<ListBatchEndpointHandleMethodsResponse>;
 export type ListCheckConfigRelatedBaselineCommandOutput = CommandOutput<ListCheckConfigRelatedBaselineResponse>;
 export type ListCleanHistoryCommandOutput = CommandOutput<ListCleanHistoryResponse>;
 export type ListCloudEnvsCommandOutput = CommandOutput<ListCloudEnvsResponse>;
+export type ListCloudPlatformsCommandOutput = CommandOutput<ListCloudPlatformsResponse>;
 export type ListClusterVarmorVersionHistoryCommandOutput = CommandOutput<ListClusterVarmorVersionHistoryResponse>;
 export type ListClustersAndVarmorAppsCommandOutput = CommandOutput<ListClustersAndVarmorAppsResponse>;
+export type ListDevAssetIDsCommandOutput = CommandOutput<ListDevAssetIDsResponse>;
+export type ListDevBasicInfosCommandOutput = CommandOutput<ListDevBasicInfosResponse>;
+export type ListDevPlatformCommandOutput = CommandOutput<ListDevPlatformResponse>;
+export type ListDevRegionCommandOutput = CommandOutput<ListDevRegionResponse>;
+export type ListEndpointHandleMethodsCommandOutput = CommandOutput<ListEndpointHandleMethodsResponse>;
 export type ListFileMonitorAlarmsCommandOutput = CommandOutput<ListFileMonitorAlarmsResponse>;
 export type ListFingerprintCollectConfigCommandOutput = CommandOutput<ListFingerprintCollectConfigResponse>;
+export type ListGroupRelatedAgentCommandOutput = CommandOutput<ListGroupRelatedAgentResponse>;
 export type ListHidsAlarmsCommandOutput = CommandOutput<ListHidsAlarmsResponse>;
+export type ListHostPlatformCommandOutput = CommandOutput<ListHostPlatformResponse>;
+export type ListHostRegionCommandOutput = CommandOutput<ListHostRegionResponse>;
+export type ListHostVpcCommandOutput = CommandOutput<ListHostVpcResponse>;
+export type ListHostsAgentIDsCommandOutput = CommandOutput<ListHostsAgentIDsResponse>;
 export type ListHostsBasicInfosCommandOutput = CommandOutput<ListHostsBasicInfosResponse>;
+export type ListInstallCommandsCommandOutput = CommandOutput<ListInstallCommandsResponse>;
 export type ListIsolationFilesCommandOutput = CommandOutput<ListIsolationFilesResponse>;
+export type ListLayeredGroupRelatedHostCommandOutput = CommandOutput<ListLayeredGroupRelatedHostResponse>;
+export type ListLayeredGroupsDetailCommandOutput = CommandOutput<ListLayeredGroupsDetailResponse>;
+export type ListLoginConfigsCommandOutput = CommandOutput<ListLoginConfigsResponse>;
 export type ListMLPAssetTasksCommandOutput = CommandOutput<ListMLPAssetTasksResponse>;
+export type ListMlpAlarmTagsCommandOutput = CommandOutput<ListMlpAlarmTagsResponse>;
+export type ListMlpAlarmsCommandOutput = CommandOutput<ListMlpAlarmsResponse>;
 export type ListMonitorPoliciesCommandOutput = CommandOutput<ListMonitorPoliciesResponse>;
+export type ListMultiLevelAssetHostsCommandOutput = CommandOutput<ListMultiLevelAssetHostsResponse>;
+export type ListMultiLevelInstitutionCommandOutput = CommandOutput<ListMultiLevelInstitutionResponse>;
 export type ListOrderedHostsBasicInfosCommandOutput = CommandOutput<ListOrderedHostsBasicInfosResponse>;
+export type ListRaspAlarmsCommandOutput = CommandOutput<ListRaspAlarmsResponse>;
+export type ListRaspConfigAgentInfosCommandOutput = CommandOutput<ListRaspConfigAgentInfosResponse>;
+export type ListRaspConfigsCommandOutput = CommandOutput<ListRaspConfigsResponse>;
+export type ListRaspProcessesCommandOutput = CommandOutput<ListRaspProcessesResponse>;
+export type ListRegistriesCommandOutput = CommandOutput<ListRegistriesResponse>;
+export type ListRegistryImagesCommandOutput = CommandOutput<ListRegistryImagesResponse>;
+export type ListRegistryNamespaceIDsCommandOutput = CommandOutput<ListRegistryNamespaceIDsResponse>;
+export type ListRegistryNamespacesCommandOutput = CommandOutput<ListRegistryNamespacesResponse>;
+export type ListRepoImageComplCommandOutput = CommandOutput<ListRepoImageComplResponse>;
+export type ListRepoImageLayerCommandOutput = CommandOutput<ListRepoImageLayerResponse>;
+export type ListRepoImageLayerSenfileCommandOutput = CommandOutput<ListRepoImageLayerSenfileResponse>;
+export type ListRepoImageLayerVirusCommandOutput = CommandOutput<ListRepoImageLayerVirusResponse>;
+export type ListRepoImageLayerVulnCommandOutput = CommandOutput<ListRepoImageLayerVulnResponse>;
+export type ListRepoImagePackageCommandOutput = CommandOutput<ListRepoImagePackageResponse>;
+export type ListRepoImageSenfileCommandOutput = CommandOutput<ListRepoImageSenfileResponse>;
+export type ListRepoImageVirusCommandOutput = CommandOutput<ListRepoImageVirusResponse>;
+export type ListRepoImageVulnCommandOutput = CommandOutput<ListRepoImageVulnResponse>;
+export type ListRiskComplAffectRepoImageCommandOutput = CommandOutput<ListRiskComplAffectRepoImageResponse>;
+export type ListRiskVulnAffectRepoImageCommandOutput = CommandOutput<ListRiskVulnAffectRepoImageResponse>;
 export type ListScanSubTasksCommandOutput = CommandOutput<ListScanSubTasksResponse>;
+export type ListScanTaskHostsCommandOutput = CommandOutput<ListScanTaskHostsResponse>;
+export type ListScanTasksCommandOutput = CommandOutput<ListScanTasksResponse>;
+export type ListTagRelatedAgentCommandOutput = CommandOutput<ListTagRelatedAgentResponse>;
+export type ListTagsDetailCommandOutput = CommandOutput<ListTagsDetailResponse>;
 export type ListVarmorPoliciesCommandOutput = CommandOutput<ListVarmorPoliciesResponse>;
+export type ListVirusAlarmsCommandOutput = CommandOutput<ListVirusAlarmsResponse>;
 export type ListVulByPodCommandOutput = CommandOutput<ListVulByPodResponse>;
 export type ListVulDetailCommandOutput = CommandOutput<ListVulDetailResponse>;
 export type ListVulHostByPodCommandOutput = CommandOutput<ListVulHostByPodResponse>;
+export type ListVulnAffectAISessionCommandOutput = CommandOutput<ListVulnAffectAISessionResponse>;
+export type ListVulnForAICommandOutput = CommandOutput<ListVulnForAIResponse>;
+export type ListVulnHostsCommandOutput = CommandOutput<ListVulnHostsResponse>;
+export type ListVulnsCommandOutput = CommandOutput<ListVulnsResponse>;
+export type ListWeakPasswordCheckDetailCommandOutput = CommandOutput<ListWeakPasswordCheckDetailResponse>;
+export type ListWhiteListsCommandOutput = CommandOutput<ListWhiteListsResponse>;
+export type ManualSyncAIApplicationCommandOutput = CommandOutput<ManualSyncAIApplicationResponse>;
+export type ModifyAutoDefenseRuleCommandOutput = CommandOutput<ModifyAutoDefenseRuleResponse>;
+export type ModifyCloudEnvCommandOutput = CommandOutput<ModifyCloudEnvResponse>;
+export type ModifyLayeredGroupCommandOutput = CommandOutput<ModifyLayeredGroupResponse>;
+export type ModifyMultiLevelInstitutionCommandOutput = CommandOutput<ModifyMultiLevelInstitutionResponse>;
+export type ModifyMultiLevelInstitutionReportSwitchCommandOutput = CommandOutput<ModifyMultiLevelInstitutionReportSwitchResponse>;
+export type ModifyTLSConfigCommandOutput = CommandOutput<ModifyTLSConfigResponse>;
+export type ModifyWhiteListCommandOutput = CommandOutput<ModifyWhiteListResponse>;
+export type MultiAssetScanCommandOutput = CommandOutput<MultiAssetScanResponse>;
+export type MultiCloudAccessStatisticsCommandOutput = CommandOutput<MultiCloudAccessStatisticsResponse>;
+export type MultiCloudAccessSyncCommandOutput = CommandOutput<MultiCloudAccessSyncResponse>;
+export type MultiCloudAccessSyncStatusCommandOutput = CommandOutput<MultiCloudAccessSyncStatusResponse>;
+export type OperateAgentRaspConfigSwitchCommandOutput = CommandOutput<OperateAgentRaspConfigSwitchResponse>;
+export type PrecisionStatisticsCommandOutput = CommandOutput<PrecisionStatisticsResponse>;
+export type RecoverFileCommandOutput = CommandOutput<RecoverFileResponse>;
+export type RefreshAIFingerprintDataCommandOutput = CommandOutput<RefreshAIFingerprintDataResponse>;
+export type RefreshFingerprintDataCommandOutput = CommandOutput<RefreshFingerprintDataResponse>;
 export type RefreshVarmorInfoCommandOutput = CommandOutput<RefreshVarmorInfoResponse>;
 export type RetryIPOperationCommandOutput = CommandOutput<RetryIPOperationResponse>;
+export type SaveRepoImageScanCronCommandOutput = CommandOutput<SaveRepoImageScanCronResponse>;
+export type SaveRepoImageScanScopeCommandOutput = CommandOutput<SaveRepoImageScanScopeResponse>;
 export type SetAIAlarmJudgeConfigCommandOutput = CommandOutput<SetAIAlarmJudgeConfigResponse>;
 export type SetBruteForceBanConfigCommandOutput = CommandOutput<SetBruteForceBanConfigResponse>;
 export type SetCustomWeakPasswordsCommandOutput = CommandOutput<SetCustomWeakPasswordsResponse>;
+export type SetRegularVirusScanConfigCommandOutput = CommandOutput<SetRegularVirusScanConfigResponse>;
 export type StopMLPAssetSyncTaskCommandOutput = CommandOutput<StopMLPAssetSyncTaskResponse>;
+export type SwitchCloudEnvSyncCommandOutput = CommandOutput<SwitchCloudEnvSyncResponse>;
+export type SyncRegistryImagesCommandOutput = CommandOutput<SyncRegistryImagesResponse>;
 export type UnBanIPItemCommandOutput = CommandOutput<UnBanIPItemResponse>;
 export type UnbindMLPAuthCommandOutput = CommandOutput<UnbindMLPAuthResponse>;
+export type UninstallAgentClientCommandOutput = CommandOutput<UninstallAgentClientResponse>;
+export type UninstallCommandsCommandOutput = CommandOutput<UninstallCommandsResponse>;
+export type UpdateAlarmTagsCommandOutput = CommandOutput<UpdateAlarmTagsResponse>;
+export type UpdateAssetClustersCommandOutput = CommandOutput<UpdateAssetClustersResponse>;
 export type UpdateAutoProtectConfigCommandOutput = CommandOutput<UpdateAutoProtectConfigResponse>;
 export type UpdateBaselineCheckConfigSwitchCommandOutput = CommandOutput<UpdateBaselineCheckConfigSwitchResponse>;
 export type UpdateCloudProviderCommandOutput = CommandOutput<UpdateCloudProviderResponse>;
+export type UpdateCommonAlarmStatusCommandOutput = CommandOutput<UpdateCommonAlarmStatusResponse>;
+export type UpdateHostTagCommandOutput = CommandOutput<UpdateHostTagResponse>;
+export type UpdateLoginConfigCommandOutput = CommandOutput<UpdateLoginConfigResponse>;
+export type UpdateMlpAlarmStatusCommandOutput = CommandOutput<UpdateMlpAlarmStatusResponse>;
 export type UpdateOfflineNotificationConfigCommandOutput = CommandOutput<UpdateOfflineNotificationConfigResponse>;
+export type UpdateRegistryFlowRateLimitCommandOutput = CommandOutput<UpdateRegistryFlowRateLimitResponse>;
+export type UpdateRegistrySyncConfigCommandOutput = CommandOutput<UpdateRegistrySyncConfigResponse>;
+export type UpdateRegularCleanCommandOutput = CommandOutput<UpdateRegularCleanResponse>;
 export type UpdateVarmorAppConfigCommandOutput = CommandOutput<UpdateVarmorAppConfigResponse>;
 export type UpdateVarmorPolicyCommandOutput = CommandOutput<UpdateVarmorPolicyResponse>;
 export type UpdateVarmorTLSInfoCommandOutput = CommandOutput<UpdateVarmorTLSInfoResponse>;
-
 
 /**
  * SECCENTER20240508Client Service Client
@@ -334,6 +1134,36 @@ export class SECCENTER20240508Client extends Client {
 }
 
 /**
+ * Command to AddAgentProxy
+ */
+export class AddAgentProxyCommand extends Command<
+  AddAgentProxyRequest,
+  AddAgentProxyCommandOutput,
+  'AddAgentProxyCommand'
+> {
+  static readonly metaPath = '/AddAgentProxy/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: AddAgentProxyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddAgentProxyCommand.metaPath);
+  }
+}
+/**
+ * Command to AddAutoIsolateAgentList
+ */
+export class AddAutoIsolateAgentListCommand extends Command<
+  AddAutoIsolateAgentListRequest,
+  AddAutoIsolateAgentListCommandOutput,
+  'AddAutoIsolateAgentListCommand'
+> {
+  static readonly metaPath = '/AddAutoIsolateAgentList/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: AddAutoIsolateAgentListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddAutoIsolateAgentListCommand.metaPath);
+  }
+}
+/**
  * Command to AddBaselineCheckConfig
  */
 export class AddBaselineCheckConfigCommand extends Command<
@@ -346,6 +1176,36 @@ export class AddBaselineCheckConfigCommand extends Command<
   constructor(input: AddBaselineCheckConfigRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(AddBaselineCheckConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to AddCloudEnv
+ */
+export class AddCloudEnvCommand extends Command<
+  AddCloudEnvRequest,
+  AddCloudEnvCommandOutput,
+  'AddCloudEnvCommand'
+> {
+  static readonly metaPath = '/AddCloudEnv/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: AddCloudEnvRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddCloudEnvCommand.metaPath);
+  }
+}
+/**
+ * Command to AddLoginConfig
+ */
+export class AddLoginConfigCommand extends Command<
+  AddLoginConfigRequest,
+  AddLoginConfigCommandOutput,
+  'AddLoginConfigCommand'
+> {
+  static readonly metaPath = '/AddLoginConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: AddLoginConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddLoginConfigCommand.metaPath);
   }
 }
 /**
@@ -364,6 +1224,66 @@ export class AddMonitorPolicyCommand extends Command<
   }
 }
 /**
+ * Command to AddRaspConfig
+ */
+export class AddRaspConfigCommand extends Command<
+  AddRaspConfigRequest,
+  AddRaspConfigCommandOutput,
+  'AddRaspConfigCommand'
+> {
+  static readonly metaPath = '/AddRaspConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: AddRaspConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddRaspConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to AddWhiteList
+ */
+export class AddWhiteListCommand extends Command<
+  AddWhiteListRequest,
+  AddWhiteListCommandOutput,
+  'AddWhiteListCommand'
+> {
+  static readonly metaPath = '/AddWhiteList/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: AddWhiteListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddWhiteListCommand.metaPath);
+  }
+}
+/**
+ * Command to AllAssetScan
+ */
+export class AllAssetScanCommand extends Command<
+  AllAssetScanRequest,
+  AllAssetScanCommandOutput,
+  'AllAssetScanCommand'
+> {
+  static readonly metaPath = '/AllAssetScan/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: AllAssetScanRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AllAssetScanCommand.metaPath);
+  }
+}
+/**
+ * Command to AssetScan
+ */
+export class AssetScanCommand extends Command<
+  AssetScanRequest,
+  AssetScanCommandOutput,
+  'AssetScanCommand'
+> {
+  static readonly metaPath = '/AssetScan/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: AssetScanRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AssetScanCommand.metaPath);
+  }
+}
+/**
  * Command to BanAlarmIP
  */
 export class BanAlarmIPCommand extends Command<
@@ -379,6 +1299,51 @@ export class BanAlarmIPCommand extends Command<
   }
 }
 /**
+ * Command to BaselineChecklistWhite
+ */
+export class BaselineChecklistWhiteCommand extends Command<
+  BaselineChecklistWhiteRequest,
+  BaselineChecklistWhiteCommandOutput,
+  'BaselineChecklistWhiteCommand'
+> {
+  static readonly metaPath = '/BaselineChecklistWhite/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: BaselineChecklistWhiteRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BaselineChecklistWhiteCommand.metaPath);
+  }
+}
+/**
+ * Command to BatchAddHostToGroup
+ */
+export class BatchAddHostToGroupCommand extends Command<
+  BatchAddHostToGroupRequest,
+  BatchAddHostToGroupCommandOutput,
+  'BatchAddHostToGroupCommand'
+> {
+  static readonly metaPath = '/BatchAddHostToGroup/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: BatchAddHostToGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchAddHostToGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to BatchCreateRepoRegistryVpcAuth
+ */
+export class BatchCreateRepoRegistryVpcAuthCommand extends Command<
+  BatchCreateRepoRegistryVpcAuthRequest,
+  BatchCreateRepoRegistryVpcAuthCommandOutput,
+  'BatchCreateRepoRegistryVpcAuthCommand'
+> {
+  static readonly metaPath = '/BatchCreateRepoRegistryVpcAuth/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: BatchCreateRepoRegistryVpcAuthRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchCreateRepoRegistryVpcAuthCommand.metaPath);
+  }
+}
+/**
  * Command to BatchDeleteVarmorPolicies
  */
 export class BatchDeleteVarmorPoliciesCommand extends Command<
@@ -391,6 +1356,21 @@ export class BatchDeleteVarmorPoliciesCommand extends Command<
   constructor(input: BatchDeleteVarmorPoliciesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(BatchDeleteVarmorPoliciesCommand.metaPath);
+  }
+}
+/**
+ * Command to BatchDetectWeakPassword
+ */
+export class BatchDetectWeakPasswordCommand extends Command<
+  BatchDetectWeakPasswordRequest,
+  BatchDetectWeakPasswordCommandOutput,
+  'BatchDetectWeakPasswordCommand'
+> {
+  static readonly metaPath = '/BatchDetectWeakPassword/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: BatchDetectWeakPasswordRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchDetectWeakPasswordCommand.metaPath);
   }
 }
 /**
@@ -454,6 +1434,21 @@ export class BindMLPAuthCommand extends Command<
   }
 }
 /**
+ * Command to CalculateRepoImageScanQuota
+ */
+export class CalculateRepoImageScanQuotaCommand extends Command<
+  CalculateRepoImageScanQuotaRequest,
+  CalculateRepoImageScanQuotaCommandOutput,
+  'CalculateRepoImageScanQuotaCommand'
+> {
+  static readonly metaPath = '/CalculateRepoImageScanQuota/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: CalculateRepoImageScanQuotaRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CalculateRepoImageScanQuotaCommand.metaPath);
+  }
+}
+/**
  * Command to CheckAlarmSupportBanIP
  */
 export class CheckAlarmSupportBanIPCommand extends Command<
@@ -466,6 +1461,36 @@ export class CheckAlarmSupportBanIPCommand extends Command<
   constructor(input: CheckAlarmSupportBanIPRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CheckAlarmSupportBanIPCommand.metaPath);
+  }
+}
+/**
+ * Command to CheckInstallAgentClient
+ */
+export class CheckInstallAgentClientCommand extends Command<
+  CheckInstallAgentClientRequest,
+  CheckInstallAgentClientCommandOutput,
+  'CheckInstallAgentClientCommand'
+> {
+  static readonly metaPath = '/CheckInstallAgentClient/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: CheckInstallAgentClientRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CheckInstallAgentClientCommand.metaPath);
+  }
+}
+/**
+ * Command to CheckInstallRasp
+ */
+export class CheckInstallRaspCommand extends Command<
+  CheckInstallRaspRequest,
+  CheckInstallRaspCommandOutput,
+  'CheckInstallRaspCommand'
+> {
+  static readonly metaPath = '/CheckInstallRasp/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: CheckInstallRaspRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CheckInstallRaspCommand.metaPath);
   }
 }
 /**
@@ -499,6 +1524,51 @@ export class ControlMonitorPolicyCommand extends Command<
   }
 }
 /**
+ * Command to CreatFileScanTask
+ */
+export class CreatFileScanTaskCommand extends Command<
+  CreatFileScanTaskRequest,
+  CreatFileScanTaskCommandOutput,
+  'CreatFileScanTaskCommand'
+> {
+  static readonly metaPath = '/CreatFileScanTask/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: CreatFileScanTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreatFileScanTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateHostTag
+ */
+export class CreateHostTagCommand extends Command<
+  CreateHostTagRequest,
+  CreateHostTagCommandOutput,
+  'CreateHostTagCommand'
+> {
+  static readonly metaPath = '/CreateHostTag/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: CreateHostTagRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateHostTagCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateLayeredGroup
+ */
+export class CreateLayeredGroupCommand extends Command<
+  CreateLayeredGroupRequest,
+  CreateLayeredGroupCommandOutput,
+  'CreateLayeredGroupCommand'
+> {
+  static readonly metaPath = '/CreateLayeredGroup/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: CreateLayeredGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateLayeredGroupCommand.metaPath);
+  }
+}
+/**
  * Command to CreateMLPAssetSyncTask
  */
 export class CreateMLPAssetSyncTaskCommand extends Command<
@@ -511,6 +1581,51 @@ export class CreateMLPAssetSyncTaskCommand extends Command<
   constructor(input: CreateMLPAssetSyncTaskRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateMLPAssetSyncTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateMLPUpdateSoftwareTask
+ */
+export class CreateMLPUpdateSoftwareTaskCommand extends Command<
+  CreateMLPUpdateSoftwareTaskRequest,
+  CreateMLPUpdateSoftwareTaskCommandOutput,
+  'CreateMLPUpdateSoftwareTaskCommand'
+> {
+  static readonly metaPath = '/CreateMLPUpdateSoftwareTask/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: CreateMLPUpdateSoftwareTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateMLPUpdateSoftwareTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateMultiLevelInstitution
+ */
+export class CreateMultiLevelInstitutionCommand extends Command<
+  CreateMultiLevelInstitutionRequest,
+  CreateMultiLevelInstitutionCommandOutput,
+  'CreateMultiLevelInstitutionCommand'
+> {
+  static readonly metaPath = '/CreateMultiLevelInstitution/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: CreateMultiLevelInstitutionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateMultiLevelInstitutionCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateRepoRegistryVpcAuth
+ */
+export class CreateRepoRegistryVpcAuthCommand extends Command<
+  CreateRepoRegistryVpcAuthRequest,
+  CreateRepoRegistryVpcAuthCommandOutput,
+  'CreateRepoRegistryVpcAuthCommand'
+> {
+  static readonly metaPath = '/CreateRepoRegistryVpcAuth/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: CreateRepoRegistryVpcAuthRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateRepoRegistryVpcAuthCommand.metaPath);
   }
 }
 /**
@@ -529,6 +1644,51 @@ export class CreateVarmorPolicyCommand extends Command<
   }
 }
 /**
+ * Command to DeleteAgentProxy
+ */
+export class DeleteAgentProxyCommand extends Command<
+  DeleteAgentProxyRequest,
+  DeleteAgentProxyCommandOutput,
+  'DeleteAgentProxyCommand'
+> {
+  static readonly metaPath = '/DeleteAgentProxy/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteAgentProxyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAgentProxyCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteAgentProxyServer
+ */
+export class DeleteAgentProxyServerCommand extends Command<
+  DeleteAgentProxyServerRequest,
+  DeleteAgentProxyServerCommandOutput,
+  'DeleteAgentProxyServerCommand'
+> {
+  static readonly metaPath = '/DeleteAgentProxyServer/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteAgentProxyServerRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAgentProxyServerCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteAutoIsolateAgentList
+ */
+export class DeleteAutoIsolateAgentListCommand extends Command<
+  DeleteAutoIsolateAgentListRequest,
+  DeleteAutoIsolateAgentListCommandOutput,
+  'DeleteAutoIsolateAgentListCommand'
+> {
+  static readonly metaPath = '/DeleteAutoIsolateAgentList/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteAutoIsolateAgentListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAutoIsolateAgentListCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteBaselineCheckConfig
  */
 export class DeleteBaselineCheckConfigCommand extends Command<
@@ -544,6 +1704,81 @@ export class DeleteBaselineCheckConfigCommand extends Command<
   }
 }
 /**
+ * Command to DeleteCloudEnv
+ */
+export class DeleteCloudEnvCommand extends Command<
+  DeleteCloudEnvRequest,
+  DeleteCloudEnvCommandOutput,
+  'DeleteCloudEnvCommand'
+> {
+  static readonly metaPath = '/DeleteCloudEnv/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteCloudEnvRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteCloudEnvCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteCommand
+ */
+export class DeleteCommandCommand extends Command<
+  DeleteCommandRequest,
+  DeleteCommandCommandOutput,
+  'DeleteCommandCommand'
+> {
+  static readonly metaPath = '/DeleteCommand/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteCommandRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteCommandCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteHostTag
+ */
+export class DeleteHostTagCommand extends Command<
+  DeleteHostTagRequest,
+  DeleteHostTagCommandOutput,
+  'DeleteHostTagCommand'
+> {
+  static readonly metaPath = '/DeleteHostTag/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteHostTagRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteHostTagCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteLayeredGroup
+ */
+export class DeleteLayeredGroupCommand extends Command<
+  DeleteLayeredGroupRequest,
+  DeleteLayeredGroupCommandOutput,
+  'DeleteLayeredGroupCommand'
+> {
+  static readonly metaPath = '/DeleteLayeredGroup/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteLayeredGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteLayeredGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteLoginConfig
+ */
+export class DeleteLoginConfigCommand extends Command<
+  DeleteLoginConfigRequest,
+  DeleteLoginConfigCommandOutput,
+  'DeleteLoginConfigCommand'
+> {
+  static readonly metaPath = '/DeleteLoginConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteLoginConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteLoginConfigCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteMonitorPolicy
  */
 export class DeleteMonitorPolicyCommand extends Command<
@@ -556,6 +1791,51 @@ export class DeleteMonitorPolicyCommand extends Command<
   constructor(input: DeleteMonitorPolicyRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteMonitorPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteMultiLevelInstitution
+ */
+export class DeleteMultiLevelInstitutionCommand extends Command<
+  DeleteMultiLevelInstitutionRequest,
+  DeleteMultiLevelInstitutionCommandOutput,
+  'DeleteMultiLevelInstitutionCommand'
+> {
+  static readonly metaPath = '/DeleteMultiLevelInstitution/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteMultiLevelInstitutionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteMultiLevelInstitutionCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteRaspConfig
+ */
+export class DeleteRaspConfigCommand extends Command<
+  DeleteRaspConfigRequest,
+  DeleteRaspConfigCommandOutput,
+  'DeleteRaspConfigCommand'
+> {
+  static readonly metaPath = '/DeleteRaspConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteRaspConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteRaspConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteWhiteLists
+ */
+export class DeleteWhiteListsCommand extends Command<
+  DeleteWhiteListsRequest,
+  DeleteWhiteListsCommandOutput,
+  'DeleteWhiteListsCommand'
+> {
+  static readonly metaPath = '/DeleteWhiteLists/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteWhiteListsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteWhiteListsCommand.metaPath);
   }
 }
 /**
@@ -604,6 +1884,21 @@ export class DescribeLastWeekFileChangeTrendsCommand extends Command<
   }
 }
 /**
+ * Command to DetectBaseline
+ */
+export class DetectBaselineCommand extends Command<
+  DetectBaselineRequest,
+  DetectBaselineCommandOutput,
+  'DetectBaselineCommand'
+> {
+  static readonly metaPath = '/DetectBaseline/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DetectBaselineRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DetectBaselineCommand.metaPath);
+  }
+}
+/**
  * Command to DetectBaselineByCheckConfig
  */
 export class DetectBaselineByCheckConfigCommand extends Command<
@@ -616,6 +1911,201 @@ export class DetectBaselineByCheckConfigCommand extends Command<
   constructor(input: DetectBaselineByCheckConfigRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DetectBaselineByCheckConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to DetectVuln
+ */
+export class DetectVulnCommand extends Command<
+  DetectVulnRequest,
+  DetectVulnCommandOutput,
+  'DetectVulnCommand'
+> {
+  static readonly metaPath = '/DetectVuln/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DetectVulnRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DetectVulnCommand.metaPath);
+  }
+}
+/**
+ * Command to DetectVulnForAI
+ */
+export class DetectVulnForAICommand extends Command<
+  DetectVulnForAIRequest,
+  DetectVulnForAICommandOutput,
+  'DetectVulnForAICommand'
+> {
+  static readonly metaPath = '/DetectVulnForAI/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DetectVulnForAIRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DetectVulnForAICommand.metaPath);
+  }
+}
+/**
+ * Command to DisableHostImportantProtect
+ */
+export class DisableHostImportantProtectCommand extends Command<
+  DisableHostImportantProtectRequest,
+  DisableHostImportantProtectCommandOutput,
+  'DisableHostImportantProtectCommand'
+> {
+  static readonly metaPath = '/DisableHostImportantProtect/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DisableHostImportantProtectRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisableHostImportantProtectCommand.metaPath);
+  }
+}
+/**
+ * Command to DownloadAIVulnList
+ */
+export class DownloadAIVulnListCommand extends Command<
+  DownloadAIVulnListRequest,
+  DownloadAIVulnListCommandOutput,
+  'DownloadAIVulnListCommand'
+> {
+  static readonly metaPath = '/DownloadAIVulnList/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DownloadAIVulnListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DownloadAIVulnListCommand.metaPath);
+  }
+}
+/**
+ * Command to DownloadBaselineCheck
+ */
+export class DownloadBaselineCheckCommand extends Command<
+  DownloadBaselineCheckRequest,
+  DownloadBaselineCheckCommandOutput,
+  'DownloadBaselineCheckCommand'
+> {
+  static readonly metaPath = '/DownloadBaselineCheck/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DownloadBaselineCheckRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DownloadBaselineCheckCommand.metaPath);
+  }
+}
+/**
+ * Command to DownloadBaselineCheckHosts
+ */
+export class DownloadBaselineCheckHostsCommand extends Command<
+  DownloadBaselineCheckHostsRequest,
+  DownloadBaselineCheckHostsCommandOutput,
+  'DownloadBaselineCheckHostsCommand'
+> {
+  static readonly metaPath = '/DownloadBaselineCheckHosts/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DownloadBaselineCheckHostsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DownloadBaselineCheckHostsCommand.metaPath);
+  }
+}
+/**
+ * Command to DownloadRawTraceData
+ */
+export class DownloadRawTraceDataCommand extends Command<
+  DownloadRawTraceDataRequest,
+  DownloadRawTraceDataCommandOutput,
+  'DownloadRawTraceDataCommand'
+> {
+  static readonly metaPath = '/DownloadRawTraceData/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: DownloadRawTraceDataRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DownloadRawTraceDataCommand.metaPath);
+  }
+}
+/**
+ * Command to DownloadVulHostListByPod
+ */
+export class DownloadVulHostListByPodCommand extends Command<
+  DownloadVulHostListByPodRequest,
+  DownloadVulHostListByPodCommandOutput,
+  'DownloadVulHostListByPodCommand'
+> {
+  static readonly metaPath = '/DownloadVulHostListByPod/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DownloadVulHostListByPodRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DownloadVulHostListByPodCommand.metaPath);
+  }
+}
+/**
+ * Command to DownloadVulListByPod
+ */
+export class DownloadVulListByPodCommand extends Command<
+  DownloadVulListByPodRequest,
+  DownloadVulListByPodCommandOutput,
+  'DownloadVulListByPodCommand'
+> {
+  static readonly metaPath = '/DownloadVulListByPod/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DownloadVulListByPodRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DownloadVulListByPodCommand.metaPath);
+  }
+}
+/**
+ * Command to DownloadVulnAffectAISession
+ */
+export class DownloadVulnAffectAISessionCommand extends Command<
+  DownloadVulnAffectAISessionRequest,
+  DownloadVulnAffectAISessionCommandOutput,
+  'DownloadVulnAffectAISessionCommand'
+> {
+  static readonly metaPath = '/DownloadVulnAffectAISession/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DownloadVulnAffectAISessionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DownloadVulnAffectAISessionCommand.metaPath);
+  }
+}
+/**
+ * Command to DownloadVulnDatas
+ */
+export class DownloadVulnDatasCommand extends Command<
+  DownloadVulnDatasRequest,
+  DownloadVulnDatasCommandOutput,
+  'DownloadVulnDatasCommand'
+> {
+  static readonly metaPath = '/DownloadVulnDatas/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DownloadVulnDatasRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DownloadVulnDatasCommand.metaPath);
+  }
+}
+/**
+ * Command to DownloadVulnList
+ */
+export class DownloadVulnListCommand extends Command<
+  DownloadVulnListRequest,
+  DownloadVulnListCommandOutput,
+  'DownloadVulnListCommand'
+> {
+  static readonly metaPath = '/DownloadVulnList/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DownloadVulnListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DownloadVulnListCommand.metaPath);
+  }
+}
+/**
+ * Command to EditAIApplicationSyncConfig
+ */
+export class EditAIApplicationSyncConfigCommand extends Command<
+  EditAIApplicationSyncConfigRequest,
+  EditAIApplicationSyncConfigCommandOutput,
+  'EditAIApplicationSyncConfigCommand'
+> {
+  static readonly metaPath = '/EditAIApplicationSyncConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: EditAIApplicationSyncConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EditAIApplicationSyncConfigCommand.metaPath);
   }
 }
 /**
@@ -664,6 +2154,156 @@ export class EditMonitorPolicyCommand extends Command<
   }
 }
 /**
+ * Command to EditRaspConfig
+ */
+export class EditRaspConfigCommand extends Command<
+  EditRaspConfigRequest,
+  EditRaspConfigCommandOutput,
+  'EditRaspConfigCommand'
+> {
+  static readonly metaPath = '/EditRaspConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: EditRaspConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EditRaspConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to EditVulnScanConfig
+ */
+export class EditVulnScanConfigCommand extends Command<
+  EditVulnScanConfigRequest,
+  EditVulnScanConfigCommandOutput,
+  'EditVulnScanConfigCommand'
+> {
+  static readonly metaPath = '/EditVulnScanConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: EditVulnScanConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EditVulnScanConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to EnableHostImportantProtect
+ */
+export class EnableHostImportantProtectCommand extends Command<
+  EnableHostImportantProtectRequest,
+  EnableHostImportantProtectCommandOutput,
+  'EnableHostImportantProtectCommand'
+> {
+  static readonly metaPath = '/EnableHostImportantProtect/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: EnableHostImportantProtectRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnableHostImportantProtectCommand.metaPath);
+  }
+}
+/**
+ * Command to ExportAIFingerprintData
+ */
+export class ExportAIFingerprintDataCommand extends Command<
+  ExportAIFingerprintDataRequest,
+  ExportAIFingerprintDataCommandOutput,
+  'ExportAIFingerprintDataCommand'
+> {
+  static readonly metaPath = '/ExportAIFingerprintData/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ExportAIFingerprintDataRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportAIFingerprintDataCommand.metaPath);
+  }
+}
+/**
+ * Command to ExportAlarmListDataForRasp
+ */
+export class ExportAlarmListDataForRaspCommand extends Command<
+  ExportAlarmListDataForRaspRequest,
+  ExportAlarmListDataForRaspCommandOutput,
+  'ExportAlarmListDataForRaspCommand'
+> {
+  static readonly metaPath = '/ExportAlarmListDataForRasp/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ExportAlarmListDataForRaspRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportAlarmListDataForRaspCommand.metaPath);
+  }
+}
+/**
+ * Command to ExportAssetCenterDevs
+ */
+export class ExportAssetCenterDevsCommand extends Command<
+  ExportAssetCenterDevsRequest,
+  ExportAssetCenterDevsCommandOutput,
+  'ExportAssetCenterDevsCommand'
+> {
+  static readonly metaPath = '/ExportAssetCenterDevs/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ExportAssetCenterDevsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportAssetCenterDevsCommand.metaPath);
+  }
+}
+/**
+ * Command to ExportAssetCenterHosts
+ */
+export class ExportAssetCenterHostsCommand extends Command<
+  ExportAssetCenterHostsRequest,
+  ExportAssetCenterHostsCommandOutput,
+  'ExportAssetCenterHostsCommand'
+> {
+  static readonly metaPath = '/ExportAssetCenterHosts/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ExportAssetCenterHostsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportAssetCenterHostsCommand.metaPath);
+  }
+}
+/**
+ * Command to ExportBaselineCheckList
+ */
+export class ExportBaselineCheckListCommand extends Command<
+  ExportBaselineCheckListRequest,
+  ExportBaselineCheckListCommandOutput,
+  'ExportBaselineCheckListCommand'
+> {
+  static readonly metaPath = '/ExportBaselineCheckList/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ExportBaselineCheckListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportBaselineCheckListCommand.metaPath);
+  }
+}
+/**
+ * Command to ExportBaselineHostDetails
+ */
+export class ExportBaselineHostDetailsCommand extends Command<
+  ExportBaselineHostDetailsRequest,
+  ExportBaselineHostDetailsCommandOutput,
+  'ExportBaselineHostDetailsCommand'
+> {
+  static readonly metaPath = '/ExportBaselineHostDetails/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ExportBaselineHostDetailsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportBaselineHostDetailsCommand.metaPath);
+  }
+}
+/**
+ * Command to ExportDevFingerprintData
+ */
+export class ExportDevFingerprintDataCommand extends Command<
+  ExportDevFingerprintDataRequest,
+  ExportDevFingerprintDataCommandOutput,
+  'ExportDevFingerprintDataCommand'
+> {
+  static readonly metaPath = '/ExportDevFingerprintData/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ExportDevFingerprintDataRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportDevFingerprintDataCommand.metaPath);
+  }
+}
+/**
  * Command to ExportFileMonitorAlarmListData
  */
 export class ExportFileMonitorAlarmListDataCommand extends Command<
@@ -676,6 +2316,111 @@ export class ExportFileMonitorAlarmListDataCommand extends Command<
   constructor(input: ExportFileMonitorAlarmListDataRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ExportFileMonitorAlarmListDataCommand.metaPath);
+  }
+}
+/**
+ * Command to ExportFingerprintData
+ */
+export class ExportFingerprintDataCommand extends Command<
+  ExportFingerprintDataRequest,
+  ExportFingerprintDataCommandOutput,
+  'ExportFingerprintDataCommand'
+> {
+  static readonly metaPath = '/ExportFingerprintData/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ExportFingerprintDataRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportFingerprintDataCommand.metaPath);
+  }
+}
+/**
+ * Command to ExportHidsAlarmListData
+ */
+export class ExportHidsAlarmListDataCommand extends Command<
+  ExportHidsAlarmListDataRequest,
+  ExportHidsAlarmListDataCommandOutput,
+  'ExportHidsAlarmListDataCommand'
+> {
+  static readonly metaPath = '/ExportHidsAlarmListData/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ExportHidsAlarmListDataRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportHidsAlarmListDataCommand.metaPath);
+  }
+}
+/**
+ * Command to ExportMlpAlarmListData
+ */
+export class ExportMlpAlarmListDataCommand extends Command<
+  ExportMlpAlarmListDataRequest,
+  ExportMlpAlarmListDataCommandOutput,
+  'ExportMlpAlarmListDataCommand'
+> {
+  static readonly metaPath = '/ExportMlpAlarmListData/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ExportMlpAlarmListDataRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportMlpAlarmListDataCommand.metaPath);
+  }
+}
+/**
+ * Command to ExportRepoImageAsset
+ */
+export class ExportRepoImageAssetCommand extends Command<
+  ExportRepoImageAssetRequest,
+  ExportRepoImageAssetCommandOutput,
+  'ExportRepoImageAssetCommand'
+> {
+  static readonly metaPath = '/ExportRepoImageAsset/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ExportRepoImageAssetRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportRepoImageAssetCommand.metaPath);
+  }
+}
+/**
+ * Command to ExportVirusAlarmListData
+ */
+export class ExportVirusAlarmListDataCommand extends Command<
+  ExportVirusAlarmListDataRequest,
+  ExportVirusAlarmListDataCommandOutput,
+  'ExportVirusAlarmListDataCommand'
+> {
+  static readonly metaPath = '/ExportVirusAlarmListData/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ExportVirusAlarmListDataRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportVirusAlarmListDataCommand.metaPath);
+  }
+}
+/**
+ * Command to ExportWeakPassword
+ */
+export class ExportWeakPasswordCommand extends Command<
+  ExportWeakPasswordRequest,
+  ExportWeakPasswordCommandOutput,
+  'ExportWeakPasswordCommand'
+> {
+  static readonly metaPath = '/ExportWeakPassword/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ExportWeakPasswordRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportWeakPasswordCommand.metaPath);
+  }
+}
+/**
+ * Command to GenerateInstallCommand
+ */
+export class GenerateInstallCommandCommand extends Command<
+  GenerateInstallCommandRequest,
+  GenerateInstallCommandCommandOutput,
+  'GenerateInstallCommandCommand'
+> {
+  static readonly metaPath = '/GenerateInstallCommand/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GenerateInstallCommandRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GenerateInstallCommandCommand.metaPath);
   }
 }
 /**
@@ -694,6 +2439,171 @@ export class GetAIAlarmJudgeConfigCommand extends Command<
   }
 }
 /**
+ * Command to GetAIApplicationSyncConfig
+ */
+export class GetAIApplicationSyncConfigCommand extends Command<
+  GetAIApplicationSyncConfigRequest,
+  GetAIApplicationSyncConfigCommandOutput,
+  'GetAIApplicationSyncConfigCommand'
+> {
+  static readonly metaPath = '/GetAIApplicationSyncConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAIApplicationSyncConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAIApplicationSyncConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAIFingerprintApp
+ */
+export class GetAIFingerprintAppCommand extends Command<
+  GetAIFingerprintAppRequest,
+  GetAIFingerprintAppCommandOutput,
+  'GetAIFingerprintAppCommand'
+> {
+  static readonly metaPath = '/GetAIFingerprintApp/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAIFingerprintAppRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAIFingerprintAppCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAIFingerprintPort
+ */
+export class GetAIFingerprintPortCommand extends Command<
+  GetAIFingerprintPortRequest,
+  GetAIFingerprintPortCommandOutput,
+  'GetAIFingerprintPortCommand'
+> {
+  static readonly metaPath = '/GetAIFingerprintPort/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAIFingerprintPortRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAIFingerprintPortCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAIFingerprintProcess
+ */
+export class GetAIFingerprintProcessCommand extends Command<
+  GetAIFingerprintProcessRequest,
+  GetAIFingerprintProcessCommandOutput,
+  'GetAIFingerprintProcessCommand'
+> {
+  static readonly metaPath = '/GetAIFingerprintProcess/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAIFingerprintProcessRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAIFingerprintProcessCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAIFingerprintRefreshStatus
+ */
+export class GetAIFingerprintRefreshStatusCommand extends Command<
+  GetAIFingerprintRefreshStatusRequest,
+  GetAIFingerprintRefreshStatusCommandOutput,
+  'GetAIFingerprintRefreshStatusCommand'
+> {
+  static readonly metaPath = '/GetAIFingerprintRefreshStatus/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAIFingerprintRefreshStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAIFingerprintRefreshStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAIFingerprintSoftware
+ */
+export class GetAIFingerprintSoftwareCommand extends Command<
+  GetAIFingerprintSoftwareRequest,
+  GetAIFingerprintSoftwareCommandOutput,
+  'GetAIFingerprintSoftwareCommand'
+> {
+  static readonly metaPath = '/GetAIFingerprintSoftware/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAIFingerprintSoftwareRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAIFingerprintSoftwareCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAIFingerprintStatistics
+ */
+export class GetAIFingerprintStatisticsCommand extends Command<
+  GetAIFingerprintStatisticsRequest,
+  GetAIFingerprintStatisticsCommandOutput,
+  'GetAIFingerprintStatisticsCommand'
+> {
+  static readonly metaPath = '/GetAIFingerprintStatistics/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAIFingerprintStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAIFingerprintStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAIFingerprintTop5
+ */
+export class GetAIFingerprintTop5Command extends Command<
+  GetAIFingerprintTop5Request,
+  GetAIFingerprintTop5CommandOutput,
+  'GetAIFingerprintTop5Command'
+> {
+  static readonly metaPath = '/GetAIFingerprintTop5/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAIFingerprintTop5Request) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAIFingerprintTop5Command.metaPath);
+  }
+}
+/**
+ * Command to GetAISessionVulnInfo
+ */
+export class GetAISessionVulnInfoCommand extends Command<
+  GetAISessionVulnInfoRequest,
+  GetAISessionVulnInfoCommandOutput,
+  'GetAISessionVulnInfoCommand'
+> {
+  static readonly metaPath = '/GetAISessionVulnInfo/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAISessionVulnInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAISessionVulnInfoCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAIVulnDetectProgressDetail
+ */
+export class GetAIVulnDetectProgressDetailCommand extends Command<
+  GetAIVulnDetectProgressDetailRequest,
+  GetAIVulnDetectProgressDetailCommandOutput,
+  'GetAIVulnDetectProgressDetailCommand'
+> {
+  static readonly metaPath = '/GetAIVulnDetectProgressDetail/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAIVulnDetectProgressDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAIVulnDetectProgressDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAlarmBySmithKey
+ */
+export class GetAlarmBySmithKeyCommand extends Command<
+  GetAlarmBySmithKeyRequest,
+  GetAlarmBySmithKeyCommandOutput,
+  'GetAlarmBySmithKeyCommand'
+> {
+  static readonly metaPath = '/GetAlarmBySmithKey/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetAlarmBySmithKeyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAlarmBySmithKeyCommand.metaPath);
+  }
+}
+/**
  * Command to GetAlarmRuleList
  */
 export class GetAlarmRuleListCommand extends Command<
@@ -709,6 +2619,21 @@ export class GetAlarmRuleListCommand extends Command<
   }
 }
 /**
+ * Command to GetAlarmTrace
+ */
+export class GetAlarmTraceCommand extends Command<
+  GetAlarmTraceRequest,
+  GetAlarmTraceCommandOutput,
+  'GetAlarmTraceCommand'
+> {
+  static readonly metaPath = '/GetAlarmTrace/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetAlarmTraceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAlarmTraceCommand.metaPath);
+  }
+}
+/**
  * Command to GetAlarmTraceRawData
  */
 export class GetAlarmTraceRawDataCommand extends Command<
@@ -721,6 +2646,21 @@ export class GetAlarmTraceRawDataCommand extends Command<
   constructor(input: GetAlarmTraceRawDataRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetAlarmTraceRawDataCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAlarmVirusStatistics
+ */
+export class GetAlarmVirusStatisticsCommand extends Command<
+  GetAlarmVirusStatisticsRequest,
+  GetAlarmVirusStatisticsCommandOutput,
+  'GetAlarmVirusStatisticsCommand'
+> {
+  static readonly metaPath = '/GetAlarmVirusStatistics/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetAlarmVirusStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAlarmVirusStatisticsCommand.metaPath);
   }
 }
 /**
@@ -754,6 +2694,51 @@ export class GetArmorProfileCommand extends Command<
   }
 }
 /**
+ * Command to GetAssetClusterStatistic
+ */
+export class GetAssetClusterStatisticCommand extends Command<
+  GetAssetClusterStatisticRequest,
+  GetAssetClusterStatisticCommandOutput,
+  'GetAssetClusterStatisticCommand'
+> {
+  static readonly metaPath = '/GetAssetClusterStatistic/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAssetClusterStatisticRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAssetClusterStatisticCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAssetClustersSyncEnd
+ */
+export class GetAssetClustersSyncEndCommand extends Command<
+  GetAssetClustersSyncEndRequest,
+  GetAssetClustersSyncEndCommandOutput,
+  'GetAssetClustersSyncEndCommand'
+> {
+  static readonly metaPath = '/GetAssetClustersSyncEnd/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAssetClustersSyncEndRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAssetClustersSyncEndCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAssetWorkloadStatistic
+ */
+export class GetAssetWorkloadStatisticCommand extends Command<
+  GetAssetWorkloadStatisticRequest,
+  GetAssetWorkloadStatisticCommandOutput,
+  'GetAssetWorkloadStatisticCommand'
+> {
+  static readonly metaPath = '/GetAssetWorkloadStatistic/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAssetWorkloadStatisticRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAssetWorkloadStatisticCommand.metaPath);
+  }
+}
+/**
  * Command to GetAutoIsolateAgentList
  */
 export class GetAutoIsolateAgentListCommand extends Command<
@@ -781,6 +2766,36 @@ export class GetAutoProtectConfigCommand extends Command<
   constructor(input: GetAutoProtectConfigRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetAutoProtectConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to GetBaselineDetectProgressDetail
+ */
+export class GetBaselineDetectProgressDetailCommand extends Command<
+  GetBaselineDetectProgressDetailRequest,
+  GetBaselineDetectProgressDetailCommandOutput,
+  'GetBaselineDetectProgressDetailCommand'
+> {
+  static readonly metaPath = '/GetBaselineDetectProgressDetail/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetBaselineDetectProgressDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetBaselineDetectProgressDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to GetBaselineGroupStatistics
+ */
+export class GetBaselineGroupStatisticsCommand extends Command<
+  GetBaselineGroupStatisticsRequest,
+  GetBaselineGroupStatisticsCommandOutput,
+  'GetBaselineGroupStatisticsCommand'
+> {
+  static readonly metaPath = '/GetBaselineGroupStatistics/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetBaselineGroupStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetBaselineGroupStatisticsCommand.metaPath);
   }
 }
 /**
@@ -829,6 +2844,21 @@ export class GetBruteForceBanStatisticsCommand extends Command<
   }
 }
 /**
+ * Command to GetCisDetail
+ */
+export class GetCisDetailCommand extends Command<
+  GetCisDetailRequest,
+  GetCisDetailCommandOutput,
+  'GetCisDetailCommand'
+> {
+  static readonly metaPath = '/GetCisDetail/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetCisDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetCisDetailCommand.metaPath);
+  }
+}
+/**
  * Command to GetClusterStatistics
  */
 export class GetClusterStatisticsCommand extends Command<
@@ -841,6 +2871,21 @@ export class GetClusterStatisticsCommand extends Command<
   constructor(input: GetClusterStatisticsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetClusterStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetClustersPermissionResult
+ */
+export class GetClustersPermissionResultCommand extends Command<
+  GetClustersPermissionResultRequest,
+  GetClustersPermissionResultCommandOutput,
+  'GetClustersPermissionResultCommand'
+> {
+  static readonly metaPath = '/GetClustersPermissionResult/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetClustersPermissionResultRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetClustersPermissionResultCommand.metaPath);
   }
 }
 /**
@@ -859,6 +2904,156 @@ export class GetCustomWeakPasswordsCommand extends Command<
   }
 }
 /**
+ * Command to GetDevAssetOverview
+ */
+export class GetDevAssetOverviewCommand extends Command<
+  GetDevAssetOverviewRequest,
+  GetDevAssetOverviewCommandOutput,
+  'GetDevAssetOverviewCommand'
+> {
+  static readonly metaPath = '/GetDevAssetOverview/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetDevAssetOverviewRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDevAssetOverviewCommand.metaPath);
+  }
+}
+/**
+ * Command to GetDevDetail
+ */
+export class GetDevDetailCommand extends Command<
+  GetDevDetailRequest,
+  GetDevDetailCommandOutput,
+  'GetDevDetailCommand'
+> {
+  static readonly metaPath = '/GetDevDetail/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetDevDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDevDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to GetDevFingerprintPort
+ */
+export class GetDevFingerprintPortCommand extends Command<
+  GetDevFingerprintPortRequest,
+  GetDevFingerprintPortCommandOutput,
+  'GetDevFingerprintPortCommand'
+> {
+  static readonly metaPath = '/GetDevFingerprintPort/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetDevFingerprintPortRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDevFingerprintPortCommand.metaPath);
+  }
+}
+/**
+ * Command to GetDevFingerprintProcess
+ */
+export class GetDevFingerprintProcessCommand extends Command<
+  GetDevFingerprintProcessRequest,
+  GetDevFingerprintProcessCommandOutput,
+  'GetDevFingerprintProcessCommand'
+> {
+  static readonly metaPath = '/GetDevFingerprintProcess/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetDevFingerprintProcessRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDevFingerprintProcessCommand.metaPath);
+  }
+}
+/**
+ * Command to GetDevFingerprintSoftware
+ */
+export class GetDevFingerprintSoftwareCommand extends Command<
+  GetDevFingerprintSoftwareRequest,
+  GetDevFingerprintSoftwareCommandOutput,
+  'GetDevFingerprintSoftwareCommand'
+> {
+  static readonly metaPath = '/GetDevFingerprintSoftware/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetDevFingerprintSoftwareRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDevFingerprintSoftwareCommand.metaPath);
+  }
+}
+/**
+ * Command to GetDevFingerprintStatistics
+ */
+export class GetDevFingerprintStatisticsCommand extends Command<
+  GetDevFingerprintStatisticsRequest,
+  GetDevFingerprintStatisticsCommandOutput,
+  'GetDevFingerprintStatisticsCommand'
+> {
+  static readonly metaPath = '/GetDevFingerprintStatistics/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetDevFingerprintStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDevFingerprintStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetDownloadStatus
+ */
+export class GetDownloadStatusCommand extends Command<
+  GetDownloadStatusRequest,
+  GetDownloadStatusCommandOutput,
+  'GetDownloadStatusCommand'
+> {
+  static readonly metaPath = '/GetDownloadStatus/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetDownloadStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDownloadStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to GetFingerprintApp
+ */
+export class GetFingerprintAppCommand extends Command<
+  GetFingerprintAppRequest,
+  GetFingerprintAppCommandOutput,
+  'GetFingerprintAppCommand'
+> {
+  static readonly metaPath = '/GetFingerprintApp/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetFingerprintAppRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintAppCommand.metaPath);
+  }
+}
+/**
+ * Command to GetFingerprintAppGroup
+ */
+export class GetFingerprintAppGroupCommand extends Command<
+  GetFingerprintAppGroupRequest,
+  GetFingerprintAppGroupCommandOutput,
+  'GetFingerprintAppGroupCommand'
+> {
+  static readonly metaPath = '/GetFingerprintAppGroup/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetFingerprintAppGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintAppGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to GetFingerprintCron
+ */
+export class GetFingerprintCronCommand extends Command<
+  GetFingerprintCronRequest,
+  GetFingerprintCronCommandOutput,
+  'GetFingerprintCronCommand'
+> {
+  static readonly metaPath = '/GetFingerprintCron/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetFingerprintCronRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintCronCommand.metaPath);
+  }
+}
+/**
  * Command to GetFingerprintEnv
  */
 export class GetFingerprintEnvCommand extends Command<
@@ -874,6 +3069,171 @@ export class GetFingerprintEnvCommand extends Command<
   }
 }
 /**
+ * Command to GetFingerprintIntegrity
+ */
+export class GetFingerprintIntegrityCommand extends Command<
+  GetFingerprintIntegrityRequest,
+  GetFingerprintIntegrityCommandOutput,
+  'GetFingerprintIntegrityCommand'
+> {
+  static readonly metaPath = '/GetFingerprintIntegrity/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetFingerprintIntegrityRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintIntegrityCommand.metaPath);
+  }
+}
+/**
+ * Command to GetFingerprintKmod
+ */
+export class GetFingerprintKmodCommand extends Command<
+  GetFingerprintKmodRequest,
+  GetFingerprintKmodCommandOutput,
+  'GetFingerprintKmodCommand'
+> {
+  static readonly metaPath = '/GetFingerprintKmod/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetFingerprintKmodRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintKmodCommand.metaPath);
+  }
+}
+/**
+ * Command to GetFingerprintPort
+ */
+export class GetFingerprintPortCommand extends Command<
+  GetFingerprintPortRequest,
+  GetFingerprintPortCommandOutput,
+  'GetFingerprintPortCommand'
+> {
+  static readonly metaPath = '/GetFingerprintPort/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetFingerprintPortRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintPortCommand.metaPath);
+  }
+}
+/**
+ * Command to GetFingerprintProcess
+ */
+export class GetFingerprintProcessCommand extends Command<
+  GetFingerprintProcessRequest,
+  GetFingerprintProcessCommandOutput,
+  'GetFingerprintProcessCommand'
+> {
+  static readonly metaPath = '/GetFingerprintProcess/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetFingerprintProcessRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintProcessCommand.metaPath);
+  }
+}
+/**
+ * Command to GetFingerprintRefreshStatus
+ */
+export class GetFingerprintRefreshStatusCommand extends Command<
+  GetFingerprintRefreshStatusRequest,
+  GetFingerprintRefreshStatusCommandOutput,
+  'GetFingerprintRefreshStatusCommand'
+> {
+  static readonly metaPath = '/GetFingerprintRefreshStatus/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetFingerprintRefreshStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintRefreshStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to GetFingerprintService
+ */
+export class GetFingerprintServiceCommand extends Command<
+  GetFingerprintServiceRequest,
+  GetFingerprintServiceCommandOutput,
+  'GetFingerprintServiceCommand'
+> {
+  static readonly metaPath = '/GetFingerprintService/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetFingerprintServiceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintServiceCommand.metaPath);
+  }
+}
+/**
+ * Command to GetFingerprintSoftware
+ */
+export class GetFingerprintSoftwareCommand extends Command<
+  GetFingerprintSoftwareRequest,
+  GetFingerprintSoftwareCommandOutput,
+  'GetFingerprintSoftwareCommand'
+> {
+  static readonly metaPath = '/GetFingerprintSoftware/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetFingerprintSoftwareRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintSoftwareCommand.metaPath);
+  }
+}
+/**
+ * Command to GetFingerprintStatistics
+ */
+export class GetFingerprintStatisticsCommand extends Command<
+  GetFingerprintStatisticsRequest,
+  GetFingerprintStatisticsCommandOutput,
+  'GetFingerprintStatisticsCommand'
+> {
+  static readonly metaPath = '/GetFingerprintStatistics/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetFingerprintStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetFingerprintTop5
+ */
+export class GetFingerprintTop5Command extends Command<
+  GetFingerprintTop5Request,
+  GetFingerprintTop5CommandOutput,
+  'GetFingerprintTop5Command'
+> {
+  static readonly metaPath = '/GetFingerprintTop5/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetFingerprintTop5Request) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintTop5Command.metaPath);
+  }
+}
+/**
+ * Command to GetFingerprintUser
+ */
+export class GetFingerprintUserCommand extends Command<
+  GetFingerprintUserRequest,
+  GetFingerprintUserCommandOutput,
+  'GetFingerprintUserCommand'
+> {
+  static readonly metaPath = '/GetFingerprintUser/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetFingerprintUserRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintUserCommand.metaPath);
+  }
+}
+/**
+ * Command to GetFingerprintWeb
+ */
+export class GetFingerprintWebCommand extends Command<
+  GetFingerprintWebRequest,
+  GetFingerprintWebCommandOutput,
+  'GetFingerprintWebCommand'
+> {
+  static readonly metaPath = '/GetFingerprintWeb/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetFingerprintWebRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintWebCommand.metaPath);
+  }
+}
+/**
  * Command to GetGeoLocation
  */
 export class GetGeoLocationCommand extends Command<
@@ -881,11 +3241,116 @@ export class GetGeoLocationCommand extends Command<
   GetGeoLocationCommandOutput,
   'GetGeoLocationCommand'
 > {
-  static readonly metaPath = '/GetGeoLocation/2024-05-08/seccenter/post/application_json/';
+  static readonly metaPath = '/GetGeoLocation/2024-05-08/seccenter/get/text_plain/';
 
   constructor(input: GetGeoLocationRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetGeoLocationCommand.metaPath);
+  }
+}
+/**
+ * Command to GetGroupCheckStatus
+ */
+export class GetGroupCheckStatusCommand extends Command<
+  GetGroupCheckStatusRequest,
+  GetGroupCheckStatusCommandOutput,
+  'GetGroupCheckStatusCommand'
+> {
+  static readonly metaPath = '/GetGroupCheckStatus/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetGroupCheckStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetGroupCheckStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to GetHidsAlarmInfo
+ */
+export class GetHidsAlarmInfoCommand extends Command<
+  GetHidsAlarmInfoRequest,
+  GetHidsAlarmInfoCommandOutput,
+  'GetHidsAlarmInfoCommand'
+> {
+  static readonly metaPath = '/GetHidsAlarmInfo/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetHidsAlarmInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetHidsAlarmInfoCommand.metaPath);
+  }
+}
+/**
+ * Command to GetHidsAlarmStatistics
+ */
+export class GetHidsAlarmStatisticsCommand extends Command<
+  GetHidsAlarmStatisticsRequest,
+  GetHidsAlarmStatisticsCommandOutput,
+  'GetHidsAlarmStatisticsCommand'
+> {
+  static readonly metaPath = '/GetHidsAlarmStatistics/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetHidsAlarmStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetHidsAlarmStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetHidsAlarmSummaryInfo
+ */
+export class GetHidsAlarmSummaryInfoCommand extends Command<
+  GetHidsAlarmSummaryInfoRequest,
+  GetHidsAlarmSummaryInfoCommandOutput,
+  'GetHidsAlarmSummaryInfoCommand'
+> {
+  static readonly metaPath = '/GetHidsAlarmSummaryInfo/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetHidsAlarmSummaryInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetHidsAlarmSummaryInfoCommand.metaPath);
+  }
+}
+/**
+ * Command to GetHostAssetOverview
+ */
+export class GetHostAssetOverviewCommand extends Command<
+  GetHostAssetOverviewRequest,
+  GetHostAssetOverviewCommandOutput,
+  'GetHostAssetOverviewCommand'
+> {
+  static readonly metaPath = '/GetHostAssetOverview/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetHostAssetOverviewRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetHostAssetOverviewCommand.metaPath);
+  }
+}
+/**
+ * Command to GetHostBasicInfo
+ */
+export class GetHostBasicInfoCommand extends Command<
+  GetHostBasicInfoRequest,
+  GetHostBasicInfoCommandOutput,
+  'GetHostBasicInfoCommand'
+> {
+  static readonly metaPath = '/GetHostBasicInfo/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetHostBasicInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetHostBasicInfoCommand.metaPath);
+  }
+}
+/**
+ * Command to GetHostImportantProtectState
+ */
+export class GetHostImportantProtectStateCommand extends Command<
+  GetHostImportantProtectStateRequest,
+  GetHostImportantProtectStateCommandOutput,
+  'GetHostImportantProtectStateCommand'
+> {
+  static readonly metaPath = '/GetHostImportantProtectState/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetHostImportantProtectStateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetHostImportantProtectStateCommand.metaPath);
   }
 }
 /**
@@ -901,6 +3366,81 @@ export class GetHostVolumeCommand extends Command<
   constructor(input: GetHostVolumeRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetHostVolumeCommand.metaPath);
+  }
+}
+/**
+ * Command to GetHostVulnInfo
+ */
+export class GetHostVulnInfoCommand extends Command<
+  GetHostVulnInfoRequest,
+  GetHostVulnInfoCommandOutput,
+  'GetHostVulnInfoCommand'
+> {
+  static readonly metaPath = '/GetHostVulnInfo/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetHostVulnInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetHostVulnInfoCommand.metaPath);
+  }
+}
+/**
+ * Command to GetIntrusionRealTimeUpdates
+ */
+export class GetIntrusionRealTimeUpdatesCommand extends Command<
+  GetIntrusionRealTimeUpdatesRequest,
+  GetIntrusionRealTimeUpdatesCommandOutput,
+  'GetIntrusionRealTimeUpdatesCommand'
+> {
+  static readonly metaPath = '/GetIntrusionRealTimeUpdates/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetIntrusionRealTimeUpdatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetIntrusionRealTimeUpdatesCommand.metaPath);
+  }
+}
+/**
+ * Command to GetIntrusionRiskTrends
+ */
+export class GetIntrusionRiskTrendsCommand extends Command<
+  GetIntrusionRiskTrendsRequest,
+  GetIntrusionRiskTrendsCommandOutput,
+  'GetIntrusionRiskTrendsCommand'
+> {
+  static readonly metaPath = '/GetIntrusionRiskTrends/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetIntrusionRiskTrendsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetIntrusionRiskTrendsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetK8sAssetStatistic
+ */
+export class GetK8sAssetStatisticCommand extends Command<
+  GetK8sAssetStatisticRequest,
+  GetK8sAssetStatisticCommandOutput,
+  'GetK8sAssetStatisticCommand'
+> {
+  static readonly metaPath = '/GetK8sAssetStatistic/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetK8sAssetStatisticRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetK8sAssetStatisticCommand.metaPath);
+  }
+}
+/**
+ * Command to GetLayeredGroups
+ */
+export class GetLayeredGroupsCommand extends Command<
+  GetLayeredGroupsRequest,
+  GetLayeredGroupsCommandOutput,
+  'GetLayeredGroupsCommand'
+> {
+  static readonly metaPath = '/GetLayeredGroups/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetLayeredGroupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetLayeredGroupsCommand.metaPath);
   }
 }
 /**
@@ -934,6 +3474,66 @@ export class GetMLPAssetSyncTaskStatusCommand extends Command<
   }
 }
 /**
+ * Command to GetManualSyncAIApplicationStatus
+ */
+export class GetManualSyncAIApplicationStatusCommand extends Command<
+  GetManualSyncAIApplicationStatusRequest,
+  GetManualSyncAIApplicationStatusCommandOutput,
+  'GetManualSyncAIApplicationStatusCommand'
+> {
+  static readonly metaPath = '/GetManualSyncAIApplicationStatus/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetManualSyncAIApplicationStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetManualSyncAIApplicationStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to GetMlpAlarmStatistics
+ */
+export class GetMlpAlarmStatisticsCommand extends Command<
+  GetMlpAlarmStatisticsRequest,
+  GetMlpAlarmStatisticsCommandOutput,
+  'GetMlpAlarmStatisticsCommand'
+> {
+  static readonly metaPath = '/GetMlpAlarmStatistics/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetMlpAlarmStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetMlpAlarmStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetMlpAlarmSummaryInfo
+ */
+export class GetMlpAlarmSummaryInfoCommand extends Command<
+  GetMlpAlarmSummaryInfoRequest,
+  GetMlpAlarmSummaryInfoCommandOutput,
+  'GetMlpAlarmSummaryInfoCommand'
+> {
+  static readonly metaPath = '/GetMlpAlarmSummaryInfo/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetMlpAlarmSummaryInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetMlpAlarmSummaryInfoCommand.metaPath);
+  }
+}
+/**
+ * Command to GetMlpUpdateSoftwareTaskDetail
+ */
+export class GetMlpUpdateSoftwareTaskDetailCommand extends Command<
+  GetMlpUpdateSoftwareTaskDetailRequest,
+  GetMlpUpdateSoftwareTaskDetailCommandOutput,
+  'GetMlpUpdateSoftwareTaskDetailCommand'
+> {
+  static readonly metaPath = '/GetMlpUpdateSoftwareTaskDetail/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetMlpUpdateSoftwareTaskDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetMlpUpdateSoftwareTaskDetailCommand.metaPath);
+  }
+}
+/**
  * Command to GetMonitorPolicyDirectory
  */
 export class GetMonitorPolicyDirectoryCommand extends Command<
@@ -961,6 +3561,51 @@ export class GetMultiLevelAuthDetailCommand extends Command<
   constructor(input: GetMultiLevelAuthDetailRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetMultiLevelAuthDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to GetMultiLevelHostAssetOverview
+ */
+export class GetMultiLevelHostAssetOverviewCommand extends Command<
+  GetMultiLevelHostAssetOverviewRequest,
+  GetMultiLevelHostAssetOverviewCommandOutput,
+  'GetMultiLevelHostAssetOverviewCommand'
+> {
+  static readonly metaPath = '/GetMultiLevelHostAssetOverview/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetMultiLevelHostAssetOverviewRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetMultiLevelHostAssetOverviewCommand.metaPath);
+  }
+}
+/**
+ * Command to GetMultiLevelInstitutionDetail
+ */
+export class GetMultiLevelInstitutionDetailCommand extends Command<
+  GetMultiLevelInstitutionDetailRequest,
+  GetMultiLevelInstitutionDetailCommandOutput,
+  'GetMultiLevelInstitutionDetailCommand'
+> {
+  static readonly metaPath = '/GetMultiLevelInstitutionDetail/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetMultiLevelInstitutionDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetMultiLevelInstitutionDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to GetNeighboringAlarm
+ */
+export class GetNeighboringAlarmCommand extends Command<
+  GetNeighboringAlarmRequest,
+  GetNeighboringAlarmCommandOutput,
+  'GetNeighboringAlarmCommand'
+> {
+  static readonly metaPath = '/GetNeighboringAlarm/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetNeighboringAlarmRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetNeighboringAlarmCommand.metaPath);
   }
 }
 /**
@@ -994,6 +3639,21 @@ export class GetOfflineNotificationListCommand extends Command<
   }
 }
 /**
+ * Command to GetOneRaspAlarm
+ */
+export class GetOneRaspAlarmCommand extends Command<
+  GetOneRaspAlarmRequest,
+  GetOneRaspAlarmCommandOutput,
+  'GetOneRaspAlarmCommand'
+> {
+  static readonly metaPath = '/GetOneRaspAlarm/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetOneRaspAlarmRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetOneRaspAlarmCommand.metaPath);
+  }
+}
+/**
  * Command to GetPolicyStatistics
  */
 export class GetPolicyStatisticsCommand extends Command<
@@ -1006,6 +3666,276 @@ export class GetPolicyStatisticsCommand extends Command<
   constructor(input: GetPolicyStatisticsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetPolicyStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRaspAlarmStatistics
+ */
+export class GetRaspAlarmStatisticsCommand extends Command<
+  GetRaspAlarmStatisticsRequest,
+  GetRaspAlarmStatisticsCommandOutput,
+  'GetRaspAlarmStatisticsCommand'
+> {
+  static readonly metaPath = '/GetRaspAlarmStatistics/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetRaspAlarmStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRaspAlarmStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRaspAlarmSummaryInfo
+ */
+export class GetRaspAlarmSummaryInfoCommand extends Command<
+  GetRaspAlarmSummaryInfoRequest,
+  GetRaspAlarmSummaryInfoCommandOutput,
+  'GetRaspAlarmSummaryInfoCommand'
+> {
+  static readonly metaPath = '/GetRaspAlarmSummaryInfo/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetRaspAlarmSummaryInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRaspAlarmSummaryInfoCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRaspAuthorizationStatistics
+ */
+export class GetRaspAuthorizationStatisticsCommand extends Command<
+  GetRaspAuthorizationStatisticsRequest,
+  GetRaspAuthorizationStatisticsCommandOutput,
+  'GetRaspAuthorizationStatisticsCommand'
+> {
+  static readonly metaPath = '/GetRaspAuthorizationStatistics/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetRaspAuthorizationStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRaspAuthorizationStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRaspConfigStatistics
+ */
+export class GetRaspConfigStatisticsCommand extends Command<
+  GetRaspConfigStatisticsRequest,
+  GetRaspConfigStatisticsCommandOutput,
+  'GetRaspConfigStatisticsCommand'
+> {
+  static readonly metaPath = '/GetRaspConfigStatistics/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetRaspConfigStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRaspConfigStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRaspProcessDetail
+ */
+export class GetRaspProcessDetailCommand extends Command<
+  GetRaspProcessDetailRequest,
+  GetRaspProcessDetailCommandOutput,
+  'GetRaspProcessDetailCommand'
+> {
+  static readonly metaPath = '/GetRaspProcessDetail/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetRaspProcessDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRaspProcessDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRaspProtectStatistics
+ */
+export class GetRaspProtectStatisticsCommand extends Command<
+  GetRaspProtectStatisticsRequest,
+  GetRaspProtectStatisticsCommandOutput,
+  'GetRaspProtectStatisticsCommand'
+> {
+  static readonly metaPath = '/GetRaspProtectStatistics/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetRaspProtectStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRaspProtectStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRegistriesPermissionResult
+ */
+export class GetRegistriesPermissionResultCommand extends Command<
+  GetRegistriesPermissionResultRequest,
+  GetRegistriesPermissionResultCommandOutput,
+  'GetRegistriesPermissionResultCommand'
+> {
+  static readonly metaPath = '/GetRegistriesPermissionResult/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetRegistriesPermissionResultRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRegistriesPermissionResultCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRegistryImageDetail
+ */
+export class GetRegistryImageDetailCommand extends Command<
+  GetRegistryImageDetailRequest,
+  GetRegistryImageDetailCommandOutput,
+  'GetRegistryImageDetailCommand'
+> {
+  static readonly metaPath = '/GetRegistryImageDetail/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetRegistryImageDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRegistryImageDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRegistryImagesSyncStatus
+ */
+export class GetRegistryImagesSyncStatusCommand extends Command<
+  GetRegistryImagesSyncStatusRequest,
+  GetRegistryImagesSyncStatusCommandOutput,
+  'GetRegistryImagesSyncStatusCommand'
+> {
+  static readonly metaPath = '/GetRegistryImagesSyncStatus/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetRegistryImagesSyncStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRegistryImagesSyncStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRegistrySyncConfig
+ */
+export class GetRegistrySyncConfigCommand extends Command<
+  GetRegistrySyncConfigRequest,
+  GetRegistrySyncConfigCommandOutput,
+  'GetRegistrySyncConfigCommand'
+> {
+  static readonly metaPath = '/GetRegistrySyncConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetRegistrySyncConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRegistrySyncConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRegularClean
+ */
+export class GetRegularCleanCommand extends Command<
+  GetRegularCleanRequest,
+  GetRegularCleanCommandOutput,
+  'GetRegularCleanCommand'
+> {
+  static readonly metaPath = '/GetRegularClean/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetRegularCleanRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRegularCleanCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRegularVirusScanConfig
+ */
+export class GetRegularVirusScanConfigCommand extends Command<
+  GetRegularVirusScanConfigRequest,
+  GetRegularVirusScanConfigCommandOutput,
+  'GetRegularVirusScanConfigCommand'
+> {
+  static readonly metaPath = '/GetRegularVirusScanConfig/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetRegularVirusScanConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRegularVirusScanConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRegularVirusTaskStatus
+ */
+export class GetRegularVirusTaskStatusCommand extends Command<
+  GetRegularVirusTaskStatusRequest,
+  GetRegularVirusTaskStatusCommandOutput,
+  'GetRegularVirusTaskStatusCommand'
+> {
+  static readonly metaPath = '/GetRegularVirusTaskStatus/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetRegularVirusTaskStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRegularVirusTaskStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRepoImageRiskCnt
+ */
+export class GetRepoImageRiskCntCommand extends Command<
+  GetRepoImageRiskCntRequest,
+  GetRepoImageRiskCntCommandOutput,
+  'GetRepoImageRiskCntCommand'
+> {
+  static readonly metaPath = '/GetRepoImageRiskCnt/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetRepoImageRiskCntRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRepoImageRiskCntCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRepoImageScanCron
+ */
+export class GetRepoImageScanCronCommand extends Command<
+  GetRepoImageScanCronRequest,
+  GetRepoImageScanCronCommandOutput,
+  'GetRepoImageScanCronCommand'
+> {
+  static readonly metaPath = '/GetRepoImageScanCron/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetRepoImageScanCronRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRepoImageScanCronCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRepoImageScanScope
+ */
+export class GetRepoImageScanScopeCommand extends Command<
+  GetRepoImageScanScopeRequest,
+  GetRepoImageScanScopeCommandOutput,
+  'GetRepoImageScanScopeCommand'
+> {
+  static readonly metaPath = '/GetRepoImageScanScope/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetRepoImageScanScopeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRepoImageScanScopeCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRepoRegistrySummary
+ */
+export class GetRepoRegistrySummaryCommand extends Command<
+  GetRepoRegistrySummaryRequest,
+  GetRepoRegistrySummaryCommandOutput,
+  'GetRepoRegistrySummaryCommand'
+> {
+  static readonly metaPath = '/GetRepoRegistrySummary/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetRepoRegistrySummaryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRepoRegistrySummaryCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRepoRegistryVpcAuthCreateInfo
+ */
+export class GetRepoRegistryVpcAuthCreateInfoCommand extends Command<
+  GetRepoRegistryVpcAuthCreateInfoRequest,
+  GetRepoRegistryVpcAuthCreateInfoCommandOutput,
+  'GetRepoRegistryVpcAuthCreateInfoCommand'
+> {
+  static readonly metaPath = '/GetRepoRegistryVpcAuthCreateInfo/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetRepoRegistryVpcAuthCreateInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRepoRegistryVpcAuthCreateInfoCommand.metaPath);
   }
 }
 /**
@@ -1084,6 +4014,21 @@ export class GetSOCPrecautionBaselineStatsCommand extends Command<
   }
 }
 /**
+ * Command to GetSecurityOverview
+ */
+export class GetSecurityOverviewCommand extends Command<
+  GetSecurityOverviewRequest,
+  GetSecurityOverviewCommandOutput,
+  'GetSecurityOverviewCommand'
+> {
+  static readonly metaPath = '/GetSecurityOverview/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetSecurityOverviewRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetSecurityOverviewCommand.metaPath);
+  }
+}
+/**
  * Command to GetSecurityOverviewScoreStats
  */
 export class GetSecurityOverviewScoreStatsCommand extends Command<
@@ -1096,6 +4041,66 @@ export class GetSecurityOverviewScoreStatsCommand extends Command<
   constructor(input: GetSecurityOverviewScoreStatsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetSecurityOverviewScoreStatsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetStackTrace
+ */
+export class GetStackTraceCommand extends Command<
+  GetStackTraceRequest,
+  GetStackTraceCommandOutput,
+  'GetStackTraceCommand'
+> {
+  static readonly metaPath = '/GetStackTrace/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetStackTraceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetStackTraceCommand.metaPath);
+  }
+}
+/**
+ * Command to GetTLSInfo
+ */
+export class GetTLSInfoCommand extends Command<
+  GetTLSInfoRequest,
+  GetTLSInfoCommandOutput,
+  'GetTLSInfoCommand'
+> {
+  static readonly metaPath = '/GetTLSInfo/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetTLSInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetTLSInfoCommand.metaPath);
+  }
+}
+/**
+ * Command to GetTenantQuota
+ */
+export class GetTenantQuotaCommand extends Command<
+  GetTenantQuotaRequest,
+  GetTenantQuotaCommandOutput,
+  'GetTenantQuotaCommand'
+> {
+  static readonly metaPath = '/GetTenantQuota/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetTenantQuotaRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetTenantQuotaCommand.metaPath);
+  }
+}
+/**
+ * Command to GetUserBatchScanStatus
+ */
+export class GetUserBatchScanStatusCommand extends Command<
+  GetUserBatchScanStatusRequest,
+  GetUserBatchScanStatusCommandOutput,
+  'GetUserBatchScanStatusCommand'
+> {
+  static readonly metaPath = '/GetUserBatchScanStatus/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetUserBatchScanStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetUserBatchScanStatusCommand.metaPath);
   }
 }
 /**
@@ -1144,6 +4149,231 @@ export class GetVarmorTLSInfoCommand extends Command<
   }
 }
 /**
+ * Command to GetVirusAlarmSummaryInfo
+ */
+export class GetVirusAlarmSummaryInfoCommand extends Command<
+  GetVirusAlarmSummaryInfoRequest,
+  GetVirusAlarmSummaryInfoCommandOutput,
+  'GetVirusAlarmSummaryInfoCommand'
+> {
+  static readonly metaPath = '/GetVirusAlarmSummaryInfo/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetVirusAlarmSummaryInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetVirusAlarmSummaryInfoCommand.metaPath);
+  }
+}
+/**
+ * Command to GetVirusDatabaseUpdateTime
+ */
+export class GetVirusDatabaseUpdateTimeCommand extends Command<
+  GetVirusDatabaseUpdateTimeRequest,
+  GetVirusDatabaseUpdateTimeCommandOutput,
+  'GetVirusDatabaseUpdateTimeCommand'
+> {
+  static readonly metaPath = '/GetVirusDatabaseUpdateTime/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetVirusDatabaseUpdateTimeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetVirusDatabaseUpdateTimeCommand.metaPath);
+  }
+}
+/**
+ * Command to GetVirusTaskInfo
+ */
+export class GetVirusTaskInfoCommand extends Command<
+  GetVirusTaskInfoRequest,
+  GetVirusTaskInfoCommandOutput,
+  'GetVirusTaskInfoCommand'
+> {
+  static readonly metaPath = '/GetVirusTaskInfo/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetVirusTaskInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetVirusTaskInfoCommand.metaPath);
+  }
+}
+/**
+ * Command to GetVirusTaskStatistics
+ */
+export class GetVirusTaskStatisticsCommand extends Command<
+  GetVirusTaskStatisticsRequest,
+  GetVirusTaskStatisticsCommandOutput,
+  'GetVirusTaskStatisticsCommand'
+> {
+  static readonly metaPath = '/GetVirusTaskStatistics/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetVirusTaskStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetVirusTaskStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetVulnCheckStatus
+ */
+export class GetVulnCheckStatusCommand extends Command<
+  GetVulnCheckStatusRequest,
+  GetVulnCheckStatusCommandOutput,
+  'GetVulnCheckStatusCommand'
+> {
+  static readonly metaPath = '/GetVulnCheckStatus/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetVulnCheckStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetVulnCheckStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to GetVulnCheckStatusForAI
+ */
+export class GetVulnCheckStatusForAICommand extends Command<
+  GetVulnCheckStatusForAIRequest,
+  GetVulnCheckStatusForAICommandOutput,
+  'GetVulnCheckStatusForAICommand'
+> {
+  static readonly metaPath = '/GetVulnCheckStatusForAI/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetVulnCheckStatusForAIRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetVulnCheckStatusForAICommand.metaPath);
+  }
+}
+/**
+ * Command to GetVulnDetail
+ */
+export class GetVulnDetailCommand extends Command<
+  GetVulnDetailRequest,
+  GetVulnDetailCommandOutput,
+  'GetVulnDetailCommand'
+> {
+  static readonly metaPath = '/GetVulnDetail/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetVulnDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetVulnDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to GetVulnInfo
+ */
+export class GetVulnInfoCommand extends Command<
+  GetVulnInfoRequest,
+  GetVulnInfoCommandOutput,
+  'GetVulnInfoCommand'
+> {
+  static readonly metaPath = '/GetVulnInfo/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetVulnInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetVulnInfoCommand.metaPath);
+  }
+}
+/**
+ * Command to GetVulnInfoForAI
+ */
+export class GetVulnInfoForAICommand extends Command<
+  GetVulnInfoForAIRequest,
+  GetVulnInfoForAICommandOutput,
+  'GetVulnInfoForAICommand'
+> {
+  static readonly metaPath = '/GetVulnInfoForAI/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetVulnInfoForAIRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetVulnInfoForAICommand.metaPath);
+  }
+}
+/**
+ * Command to GetVulnScanConfig
+ */
+export class GetVulnScanConfigCommand extends Command<
+  GetVulnScanConfigRequest,
+  GetVulnScanConfigCommandOutput,
+  'GetVulnScanConfigCommand'
+> {
+  static readonly metaPath = '/GetVulnScanConfig/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: GetVulnScanConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetVulnScanConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to GetVulnStatistics
+ */
+export class GetVulnStatisticsCommand extends Command<
+  GetVulnStatisticsRequest,
+  GetVulnStatisticsCommandOutput,
+  'GetVulnStatisticsCommand'
+> {
+  static readonly metaPath = '/GetVulnStatistics/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetVulnStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetVulnStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetVulnStatisticsForAI
+ */
+export class GetVulnStatisticsForAICommand extends Command<
+  GetVulnStatisticsForAIRequest,
+  GetVulnStatisticsForAICommandOutput,
+  'GetVulnStatisticsForAICommand'
+> {
+  static readonly metaPath = '/GetVulnStatisticsForAI/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetVulnStatisticsForAIRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetVulnStatisticsForAICommand.metaPath);
+  }
+}
+/**
+ * Command to GetWhiteListField
+ */
+export class GetWhiteListFieldCommand extends Command<
+  GetWhiteListFieldRequest,
+  GetWhiteListFieldCommandOutput,
+  'GetWhiteListFieldCommand'
+> {
+  static readonly metaPath = '/GetWhiteListField/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetWhiteListFieldRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetWhiteListFieldCommand.metaPath);
+  }
+}
+/**
+ * Command to HandleAIVuln
+ */
+export class HandleAIVulnCommand extends Command<
+  HandleAIVulnRequest,
+  HandleAIVulnCommandOutput,
+  'HandleAIVulnCommand'
+> {
+  static readonly metaPath = '/HandleAIVuln/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: HandleAIVulnRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(HandleAIVulnCommand.metaPath);
+  }
+}
+/**
+ * Command to HandleAlarmByAgent
+ */
+export class HandleAlarmByAgentCommand extends Command<
+  HandleAlarmByAgentRequest,
+  HandleAlarmByAgentCommandOutput,
+  'HandleAlarmByAgentCommand'
+> {
+  static readonly metaPath = '/HandleAlarmByAgent/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: HandleAlarmByAgentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(HandleAlarmByAgentCommand.metaPath);
+  }
+}
+/**
  * Command to HandleEndpointAlarms
  */
 export class HandleEndpointAlarmsCommand extends Command<
@@ -1156,6 +4386,81 @@ export class HandleEndpointAlarmsCommand extends Command<
   constructor(input: HandleEndpointAlarmsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(HandleEndpointAlarmsCommand.metaPath);
+  }
+}
+/**
+ * Command to HandleVuln
+ */
+export class HandleVulnCommand extends Command<
+  HandleVulnRequest,
+  HandleVulnCommandOutput,
+  'HandleVulnCommand'
+> {
+  static readonly metaPath = '/HandleVuln/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: HandleVulnRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(HandleVulnCommand.metaPath);
+  }
+}
+/**
+ * Command to InstallAgentClient
+ */
+export class InstallAgentClientCommand extends Command<
+  InstallAgentClientRequest,
+  InstallAgentClientCommandOutput,
+  'InstallAgentClientCommand'
+> {
+  static readonly metaPath = '/InstallAgentClient/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: InstallAgentClientRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(InstallAgentClientCommand.metaPath);
+  }
+}
+/**
+ * Command to InstallAgentProxyServerCommand
+ */
+export class InstallAgentProxyServerCommandCommand extends Command<
+  InstallAgentProxyServerCommandRequest,
+  InstallAgentProxyServerCommandCommandOutput,
+  'InstallAgentProxyServerCommandCommand'
+> {
+  static readonly metaPath = '/InstallAgentProxyServerCommand/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: InstallAgentProxyServerCommandRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(InstallAgentProxyServerCommandCommand.metaPath);
+  }
+}
+/**
+ * Command to IsolateFile
+ */
+export class IsolateFileCommand extends Command<
+  IsolateFileRequest,
+  IsolateFileCommandOutput,
+  'IsolateFileCommand'
+> {
+  static readonly metaPath = '/IsolateFile/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: IsolateFileRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(IsolateFileCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAIApplicationBasicInfo
+ */
+export class ListAIApplicationBasicInfoCommand extends Command<
+  ListAIApplicationBasicInfoRequest,
+  ListAIApplicationBasicInfoCommandOutput,
+  'ListAIApplicationBasicInfoCommand'
+> {
+  static readonly metaPath = '/ListAIApplicationBasicInfo/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListAIApplicationBasicInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAIApplicationBasicInfoCommand.metaPath);
   }
 }
 /**
@@ -1189,6 +4494,96 @@ export class ListAgentProxyServersCommand extends Command<
   }
 }
 /**
+ * Command to ListAgentkitSessionIDs
+ */
+export class ListAgentkitSessionIDsCommand extends Command<
+  ListAgentkitSessionIDsRequest,
+  ListAgentkitSessionIDsCommandOutput,
+  'ListAgentkitSessionIDsCommand'
+> {
+  static readonly metaPath = '/ListAgentkitSessionIDs/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListAgentkitSessionIDsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAgentkitSessionIDsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAlarmArchiveRecords
+ */
+export class ListAlarmArchiveRecordsCommand extends Command<
+  ListAlarmArchiveRecordsRequest,
+  ListAlarmArchiveRecordsCommandOutput,
+  'ListAlarmArchiveRecordsCommand'
+> {
+  static readonly metaPath = '/ListAlarmArchiveRecords/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListAlarmArchiveRecordsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAlarmArchiveRecordsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAlarmNameList
+ */
+export class ListAlarmNameListCommand extends Command<
+  ListAlarmNameListRequest,
+  ListAlarmNameListCommandOutput,
+  'ListAlarmNameListCommand'
+> {
+  static readonly metaPath = '/ListAlarmNameList/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: ListAlarmNameListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAlarmNameListCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAlarmTags
+ */
+export class ListAlarmTagsCommand extends Command<
+  ListAlarmTagsRequest,
+  ListAlarmTagsCommandOutput,
+  'ListAlarmTagsCommand'
+> {
+  static readonly metaPath = '/ListAlarmTags/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: ListAlarmTagsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAlarmTagsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAllCntrStaticDict
+ */
+export class ListAllCntrStaticDictCommand extends Command<
+  ListAllCntrStaticDictRequest,
+  ListAllCntrStaticDictCommandOutput,
+  'ListAllCntrStaticDictCommand'
+> {
+  static readonly metaPath = '/ListAllCntrStaticDict/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListAllCntrStaticDictRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAllCntrStaticDictCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAssetCenterDevs
+ */
+export class ListAssetCenterDevsCommand extends Command<
+  ListAssetCenterDevsRequest,
+  ListAssetCenterDevsCommandOutput,
+  'ListAssetCenterDevsCommand'
+> {
+  static readonly metaPath = '/ListAssetCenterDevs/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListAssetCenterDevsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAssetCenterDevsCommand.metaPath);
+  }
+}
+/**
  * Command to ListAssetCenterHosts
  */
 export class ListAssetCenterHostsCommand extends Command<
@@ -1204,6 +4599,36 @@ export class ListAssetCenterHostsCommand extends Command<
   }
 }
 /**
+ * Command to ListAssetClusters
+ */
+export class ListAssetClustersCommand extends Command<
+  ListAssetClustersRequest,
+  ListAssetClustersCommandOutput,
+  'ListAssetClustersCommand'
+> {
+  static readonly metaPath = '/ListAssetClusters/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListAssetClustersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAssetClustersCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAssetGroups
+ */
+export class ListAssetGroupsCommand extends Command<
+  ListAssetGroupsRequest,
+  ListAssetGroupsCommandOutput,
+  'ListAssetGroupsCommand'
+> {
+  static readonly metaPath = '/ListAssetGroups/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListAssetGroupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAssetGroupsCommand.metaPath);
+  }
+}
+/**
  * Command to ListAssetNamespaces
  */
 export class ListAssetNamespacesCommand extends Command<
@@ -1216,6 +4641,81 @@ export class ListAssetNamespacesCommand extends Command<
   constructor(input: ListAssetNamespacesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListAssetNamespacesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAssetPodsLinkedWorkload
+ */
+export class ListAssetPodsLinkedWorkloadCommand extends Command<
+  ListAssetPodsLinkedWorkloadRequest,
+  ListAssetPodsLinkedWorkloadCommandOutput,
+  'ListAssetPodsLinkedWorkloadCommand'
+> {
+  static readonly metaPath = '/ListAssetPodsLinkedWorkload/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListAssetPodsLinkedWorkloadRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAssetPodsLinkedWorkloadCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAssetPodsLinkedWorkloadWithNoPage
+ */
+export class ListAssetPodsLinkedWorkloadWithNoPageCommand extends Command<
+  ListAssetPodsLinkedWorkloadWithNoPageRequest,
+  ListAssetPodsLinkedWorkloadWithNoPageCommandOutput,
+  'ListAssetPodsLinkedWorkloadWithNoPageCommand'
+> {
+  static readonly metaPath = '/ListAssetPodsLinkedWorkloadWithNoPage/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListAssetPodsLinkedWorkloadWithNoPageRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAssetPodsLinkedWorkloadWithNoPageCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAssetTags
+ */
+export class ListAssetTagsCommand extends Command<
+  ListAssetTagsRequest,
+  ListAssetTagsCommandOutput,
+  'ListAssetTagsCommand'
+> {
+  static readonly metaPath = '/ListAssetTags/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: ListAssetTagsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAssetTagsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAssetWorkloads
+ */
+export class ListAssetWorkloadsCommand extends Command<
+  ListAssetWorkloadsRequest,
+  ListAssetWorkloadsCommandOutput,
+  'ListAssetWorkloadsCommand'
+> {
+  static readonly metaPath = '/ListAssetWorkloads/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListAssetWorkloadsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAssetWorkloadsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAutoDefenseHosts
+ */
+export class ListAutoDefenseHostsCommand extends Command<
+  ListAutoDefenseHostsRequest,
+  ListAutoDefenseHostsCommandOutput,
+  'ListAutoDefenseHostsCommand'
+> {
+  static readonly metaPath = '/ListAutoDefenseHosts/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListAutoDefenseHostsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAutoDefenseHostsCommand.metaPath);
   }
 }
 /**
@@ -1256,7 +4756,7 @@ export class ListBaselineBasicInfoCommand extends Command<
   ListBaselineBasicInfoCommandOutput,
   'ListBaselineBasicInfoCommand'
 > {
-  static readonly metaPath = '/ListBaselineBasicInfo/2024-05-08/seccenter/get/text_plain/';
+  static readonly metaPath = '/ListBaselineBasicInfo/2024-05-08/seccenter/post/application_json/';
 
   constructor(input: ListBaselineBasicInfoRequest) {
     super(input);
@@ -1271,11 +4771,41 @@ export class ListBaselineCheckConfigCommand extends Command<
   ListBaselineCheckConfigCommandOutput,
   'ListBaselineCheckConfigCommand'
 > {
-  static readonly metaPath = '/ListBaselineCheckConfig/2024-05-08/seccenter/get/text_plain/';
+  static readonly metaPath = '/ListBaselineCheckConfig/2024-05-08/seccenter/post/application_json/';
 
   constructor(input: ListBaselineCheckConfigRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListBaselineCheckConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to ListBaselineCheckDetail
+ */
+export class ListBaselineCheckDetailCommand extends Command<
+  ListBaselineCheckDetailRequest,
+  ListBaselineCheckDetailCommandOutput,
+  'ListBaselineCheckDetailCommand'
+> {
+  static readonly metaPath = '/ListBaselineCheckDetail/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListBaselineCheckDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListBaselineCheckDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to ListBaselineCheckItemHosts
+ */
+export class ListBaselineCheckItemHostsCommand extends Command<
+  ListBaselineCheckItemHostsRequest,
+  ListBaselineCheckItemHostsCommandOutput,
+  'ListBaselineCheckItemHostsCommand'
+> {
+  static readonly metaPath = '/ListBaselineCheckItemHosts/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListBaselineCheckItemHostsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListBaselineCheckItemHostsCommand.metaPath);
   }
 }
 /**
@@ -1294,6 +4824,21 @@ export class ListBaselineCheckItemsCommand extends Command<
   }
 }
 /**
+ * Command to ListBaselineCheckRes
+ */
+export class ListBaselineCheckResCommand extends Command<
+  ListBaselineCheckResRequest,
+  ListBaselineCheckResCommandOutput,
+  'ListBaselineCheckResCommand'
+> {
+  static readonly metaPath = '/ListBaselineCheckRes/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListBaselineCheckResRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListBaselineCheckResCommand.metaPath);
+  }
+}
+/**
  * Command to ListBaselineForGroupPolicy
  */
 export class ListBaselineForGroupPolicyCommand extends Command<
@@ -1309,6 +4854,21 @@ export class ListBaselineForGroupPolicyCommand extends Command<
   }
 }
 /**
+ * Command to ListBaselineGroups
+ */
+export class ListBaselineGroupsCommand extends Command<
+  ListBaselineGroupsRequest,
+  ListBaselineGroupsCommandOutput,
+  'ListBaselineGroupsCommand'
+> {
+  static readonly metaPath = '/ListBaselineGroups/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: ListBaselineGroupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListBaselineGroupsCommand.metaPath);
+  }
+}
+/**
  * Command to ListBaselineHostItemHosts
  */
 export class ListBaselineHostItemHostsCommand extends Command<
@@ -1321,6 +4881,21 @@ export class ListBaselineHostItemHostsCommand extends Command<
   constructor(input: ListBaselineHostItemHostsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListBaselineHostItemHostsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListBaselines
+ */
+export class ListBaselinesCommand extends Command<
+  ListBaselinesRequest,
+  ListBaselinesCommandOutput,
+  'ListBaselinesCommand'
+> {
+  static readonly metaPath = '/ListBaselines/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListBaselinesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListBaselinesCommand.metaPath);
   }
 }
 /**
@@ -1384,6 +4959,21 @@ export class ListCloudEnvsCommand extends Command<
   }
 }
 /**
+ * Command to ListCloudPlatforms
+ */
+export class ListCloudPlatformsCommand extends Command<
+  ListCloudPlatformsRequest,
+  ListCloudPlatformsCommandOutput,
+  'ListCloudPlatformsCommand'
+> {
+  static readonly metaPath = '/ListCloudPlatforms/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListCloudPlatformsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListCloudPlatformsCommand.metaPath);
+  }
+}
+/**
  * Command to ListClusterVarmorVersionHistory
  */
 export class ListClusterVarmorVersionHistoryCommand extends Command<
@@ -1411,6 +5001,81 @@ export class ListClustersAndVarmorAppsCommand extends Command<
   constructor(input: ListClustersAndVarmorAppsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListClustersAndVarmorAppsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListDevAssetIDs
+ */
+export class ListDevAssetIDsCommand extends Command<
+  ListDevAssetIDsRequest,
+  ListDevAssetIDsCommandOutput,
+  'ListDevAssetIDsCommand'
+> {
+  static readonly metaPath = '/ListDevAssetIDs/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListDevAssetIDsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDevAssetIDsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListDevBasicInfos
+ */
+export class ListDevBasicInfosCommand extends Command<
+  ListDevBasicInfosRequest,
+  ListDevBasicInfosCommandOutput,
+  'ListDevBasicInfosCommand'
+> {
+  static readonly metaPath = '/ListDevBasicInfos/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListDevBasicInfosRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDevBasicInfosCommand.metaPath);
+  }
+}
+/**
+ * Command to ListDevPlatform
+ */
+export class ListDevPlatformCommand extends Command<
+  ListDevPlatformRequest,
+  ListDevPlatformCommandOutput,
+  'ListDevPlatformCommand'
+> {
+  static readonly metaPath = '/ListDevPlatform/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListDevPlatformRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDevPlatformCommand.metaPath);
+  }
+}
+/**
+ * Command to ListDevRegion
+ */
+export class ListDevRegionCommand extends Command<
+  ListDevRegionRequest,
+  ListDevRegionCommandOutput,
+  'ListDevRegionCommand'
+> {
+  static readonly metaPath = '/ListDevRegion/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListDevRegionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDevRegionCommand.metaPath);
+  }
+}
+/**
+ * Command to ListEndpointHandleMethods
+ */
+export class ListEndpointHandleMethodsCommand extends Command<
+  ListEndpointHandleMethodsRequest,
+  ListEndpointHandleMethodsCommandOutput,
+  'ListEndpointHandleMethodsCommand'
+> {
+  static readonly metaPath = '/ListEndpointHandleMethods/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListEndpointHandleMethodsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListEndpointHandleMethodsCommand.metaPath);
   }
 }
 /**
@@ -1444,6 +5109,21 @@ export class ListFingerprintCollectConfigCommand extends Command<
   }
 }
 /**
+ * Command to ListGroupRelatedAgent
+ */
+export class ListGroupRelatedAgentCommand extends Command<
+  ListGroupRelatedAgentRequest,
+  ListGroupRelatedAgentCommandOutput,
+  'ListGroupRelatedAgentCommand'
+> {
+  static readonly metaPath = '/ListGroupRelatedAgent/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: ListGroupRelatedAgentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListGroupRelatedAgentCommand.metaPath);
+  }
+}
+/**
  * Command to ListHidsAlarms
  */
 export class ListHidsAlarmsCommand extends Command<
@@ -1456,6 +5136,66 @@ export class ListHidsAlarmsCommand extends Command<
   constructor(input: ListHidsAlarmsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListHidsAlarmsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListHostPlatform
+ */
+export class ListHostPlatformCommand extends Command<
+  ListHostPlatformRequest,
+  ListHostPlatformCommandOutput,
+  'ListHostPlatformCommand'
+> {
+  static readonly metaPath = '/ListHostPlatform/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: ListHostPlatformRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListHostPlatformCommand.metaPath);
+  }
+}
+/**
+ * Command to ListHostRegion
+ */
+export class ListHostRegionCommand extends Command<
+  ListHostRegionRequest,
+  ListHostRegionCommandOutput,
+  'ListHostRegionCommand'
+> {
+  static readonly metaPath = '/ListHostRegion/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: ListHostRegionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListHostRegionCommand.metaPath);
+  }
+}
+/**
+ * Command to ListHostVpc
+ */
+export class ListHostVpcCommand extends Command<
+  ListHostVpcRequest,
+  ListHostVpcCommandOutput,
+  'ListHostVpcCommand'
+> {
+  static readonly metaPath = '/ListHostVpc/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: ListHostVpcRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListHostVpcCommand.metaPath);
+  }
+}
+/**
+ * Command to ListHostsAgentIDs
+ */
+export class ListHostsAgentIDsCommand extends Command<
+  ListHostsAgentIDsRequest,
+  ListHostsAgentIDsCommandOutput,
+  'ListHostsAgentIDsCommand'
+> {
+  static readonly metaPath = '/ListHostsAgentIDs/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListHostsAgentIDsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListHostsAgentIDsCommand.metaPath);
   }
 }
 /**
@@ -1474,6 +5214,21 @@ export class ListHostsBasicInfosCommand extends Command<
   }
 }
 /**
+ * Command to ListInstallCommands
+ */
+export class ListInstallCommandsCommand extends Command<
+  ListInstallCommandsRequest,
+  ListInstallCommandsCommandOutput,
+  'ListInstallCommandsCommand'
+> {
+  static readonly metaPath = '/ListInstallCommands/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListInstallCommandsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListInstallCommandsCommand.metaPath);
+  }
+}
+/**
  * Command to ListIsolationFiles
  */
 export class ListIsolationFilesCommand extends Command<
@@ -1486,6 +5241,51 @@ export class ListIsolationFilesCommand extends Command<
   constructor(input: ListIsolationFilesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListIsolationFilesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListLayeredGroupRelatedHost
+ */
+export class ListLayeredGroupRelatedHostCommand extends Command<
+  ListLayeredGroupRelatedHostRequest,
+  ListLayeredGroupRelatedHostCommandOutput,
+  'ListLayeredGroupRelatedHostCommand'
+> {
+  static readonly metaPath = '/ListLayeredGroupRelatedHost/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListLayeredGroupRelatedHostRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListLayeredGroupRelatedHostCommand.metaPath);
+  }
+}
+/**
+ * Command to ListLayeredGroupsDetail
+ */
+export class ListLayeredGroupsDetailCommand extends Command<
+  ListLayeredGroupsDetailRequest,
+  ListLayeredGroupsDetailCommandOutput,
+  'ListLayeredGroupsDetailCommand'
+> {
+  static readonly metaPath = '/ListLayeredGroupsDetail/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListLayeredGroupsDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListLayeredGroupsDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to ListLoginConfigs
+ */
+export class ListLoginConfigsCommand extends Command<
+  ListLoginConfigsRequest,
+  ListLoginConfigsCommandOutput,
+  'ListLoginConfigsCommand'
+> {
+  static readonly metaPath = '/ListLoginConfigs/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListLoginConfigsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListLoginConfigsCommand.metaPath);
   }
 }
 /**
@@ -1504,6 +5304,36 @@ export class ListMLPAssetTasksCommand extends Command<
   }
 }
 /**
+ * Command to ListMlpAlarmTags
+ */
+export class ListMlpAlarmTagsCommand extends Command<
+  ListMlpAlarmTagsRequest,
+  ListMlpAlarmTagsCommandOutput,
+  'ListMlpAlarmTagsCommand'
+> {
+  static readonly metaPath = '/ListMlpAlarmTags/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: ListMlpAlarmTagsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListMlpAlarmTagsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListMlpAlarms
+ */
+export class ListMlpAlarmsCommand extends Command<
+  ListMlpAlarmsRequest,
+  ListMlpAlarmsCommandOutput,
+  'ListMlpAlarmsCommand'
+> {
+  static readonly metaPath = '/ListMlpAlarms/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListMlpAlarmsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListMlpAlarmsCommand.metaPath);
+  }
+}
+/**
  * Command to ListMonitorPolicies
  */
 export class ListMonitorPoliciesCommand extends Command<
@@ -1516,6 +5346,36 @@ export class ListMonitorPoliciesCommand extends Command<
   constructor(input: ListMonitorPoliciesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListMonitorPoliciesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListMultiLevelAssetHosts
+ */
+export class ListMultiLevelAssetHostsCommand extends Command<
+  ListMultiLevelAssetHostsRequest,
+  ListMultiLevelAssetHostsCommandOutput,
+  'ListMultiLevelAssetHostsCommand'
+> {
+  static readonly metaPath = '/ListMultiLevelAssetHosts/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListMultiLevelAssetHostsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListMultiLevelAssetHostsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListMultiLevelInstitution
+ */
+export class ListMultiLevelInstitutionCommand extends Command<
+  ListMultiLevelInstitutionRequest,
+  ListMultiLevelInstitutionCommandOutput,
+  'ListMultiLevelInstitutionCommand'
+> {
+  static readonly metaPath = '/ListMultiLevelInstitution/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListMultiLevelInstitutionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListMultiLevelInstitutionCommand.metaPath);
   }
 }
 /**
@@ -1534,6 +5394,291 @@ export class ListOrderedHostsBasicInfosCommand extends Command<
   }
 }
 /**
+ * Command to ListRaspAlarms
+ */
+export class ListRaspAlarmsCommand extends Command<
+  ListRaspAlarmsRequest,
+  ListRaspAlarmsCommandOutput,
+  'ListRaspAlarmsCommand'
+> {
+  static readonly metaPath = '/ListRaspAlarms/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRaspAlarmsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRaspAlarmsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRaspConfigAgentInfos
+ */
+export class ListRaspConfigAgentInfosCommand extends Command<
+  ListRaspConfigAgentInfosRequest,
+  ListRaspConfigAgentInfosCommandOutput,
+  'ListRaspConfigAgentInfosCommand'
+> {
+  static readonly metaPath = '/ListRaspConfigAgentInfos/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRaspConfigAgentInfosRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRaspConfigAgentInfosCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRaspConfigs
+ */
+export class ListRaspConfigsCommand extends Command<
+  ListRaspConfigsRequest,
+  ListRaspConfigsCommandOutput,
+  'ListRaspConfigsCommand'
+> {
+  static readonly metaPath = '/ListRaspConfigs/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRaspConfigsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRaspConfigsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRaspProcesses
+ */
+export class ListRaspProcessesCommand extends Command<
+  ListRaspProcessesRequest,
+  ListRaspProcessesCommandOutput,
+  'ListRaspProcessesCommand'
+> {
+  static readonly metaPath = '/ListRaspProcesses/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRaspProcessesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRaspProcessesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRegistries
+ */
+export class ListRegistriesCommand extends Command<
+  ListRegistriesRequest,
+  ListRegistriesCommandOutput,
+  'ListRegistriesCommand'
+> {
+  static readonly metaPath = '/ListRegistries/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRegistriesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRegistriesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRegistryImages
+ */
+export class ListRegistryImagesCommand extends Command<
+  ListRegistryImagesRequest,
+  ListRegistryImagesCommandOutput,
+  'ListRegistryImagesCommand'
+> {
+  static readonly metaPath = '/ListRegistryImages/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRegistryImagesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRegistryImagesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRegistryNamespaceIDs
+ */
+export class ListRegistryNamespaceIDsCommand extends Command<
+  ListRegistryNamespaceIDsRequest,
+  ListRegistryNamespaceIDsCommandOutput,
+  'ListRegistryNamespaceIDsCommand'
+> {
+  static readonly metaPath = '/ListRegistryNamespaceIDs/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRegistryNamespaceIDsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRegistryNamespaceIDsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRegistryNamespaces
+ */
+export class ListRegistryNamespacesCommand extends Command<
+  ListRegistryNamespacesRequest,
+  ListRegistryNamespacesCommandOutput,
+  'ListRegistryNamespacesCommand'
+> {
+  static readonly metaPath = '/ListRegistryNamespaces/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRegistryNamespacesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRegistryNamespacesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRepoImageCompl
+ */
+export class ListRepoImageComplCommand extends Command<
+  ListRepoImageComplRequest,
+  ListRepoImageComplCommandOutput,
+  'ListRepoImageComplCommand'
+> {
+  static readonly metaPath = '/ListRepoImageCompl/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRepoImageComplRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRepoImageComplCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRepoImageLayer
+ */
+export class ListRepoImageLayerCommand extends Command<
+  ListRepoImageLayerRequest,
+  ListRepoImageLayerCommandOutput,
+  'ListRepoImageLayerCommand'
+> {
+  static readonly metaPath = '/ListRepoImageLayer/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRepoImageLayerRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRepoImageLayerCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRepoImageLayerSenfile
+ */
+export class ListRepoImageLayerSenfileCommand extends Command<
+  ListRepoImageLayerSenfileRequest,
+  ListRepoImageLayerSenfileCommandOutput,
+  'ListRepoImageLayerSenfileCommand'
+> {
+  static readonly metaPath = '/ListRepoImageLayerSenfile/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRepoImageLayerSenfileRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRepoImageLayerSenfileCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRepoImageLayerVirus
+ */
+export class ListRepoImageLayerVirusCommand extends Command<
+  ListRepoImageLayerVirusRequest,
+  ListRepoImageLayerVirusCommandOutput,
+  'ListRepoImageLayerVirusCommand'
+> {
+  static readonly metaPath = '/ListRepoImageLayerVirus/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRepoImageLayerVirusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRepoImageLayerVirusCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRepoImageLayerVuln
+ */
+export class ListRepoImageLayerVulnCommand extends Command<
+  ListRepoImageLayerVulnRequest,
+  ListRepoImageLayerVulnCommandOutput,
+  'ListRepoImageLayerVulnCommand'
+> {
+  static readonly metaPath = '/ListRepoImageLayerVuln/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRepoImageLayerVulnRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRepoImageLayerVulnCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRepoImagePackage
+ */
+export class ListRepoImagePackageCommand extends Command<
+  ListRepoImagePackageRequest,
+  ListRepoImagePackageCommandOutput,
+  'ListRepoImagePackageCommand'
+> {
+  static readonly metaPath = '/ListRepoImagePackage/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRepoImagePackageRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRepoImagePackageCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRepoImageSenfile
+ */
+export class ListRepoImageSenfileCommand extends Command<
+  ListRepoImageSenfileRequest,
+  ListRepoImageSenfileCommandOutput,
+  'ListRepoImageSenfileCommand'
+> {
+  static readonly metaPath = '/ListRepoImageSenfile/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRepoImageSenfileRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRepoImageSenfileCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRepoImageVirus
+ */
+export class ListRepoImageVirusCommand extends Command<
+  ListRepoImageVirusRequest,
+  ListRepoImageVirusCommandOutput,
+  'ListRepoImageVirusCommand'
+> {
+  static readonly metaPath = '/ListRepoImageVirus/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRepoImageVirusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRepoImageVirusCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRepoImageVuln
+ */
+export class ListRepoImageVulnCommand extends Command<
+  ListRepoImageVulnRequest,
+  ListRepoImageVulnCommandOutput,
+  'ListRepoImageVulnCommand'
+> {
+  static readonly metaPath = '/ListRepoImageVuln/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRepoImageVulnRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRepoImageVulnCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRiskComplAffectRepoImage
+ */
+export class ListRiskComplAffectRepoImageCommand extends Command<
+  ListRiskComplAffectRepoImageRequest,
+  ListRiskComplAffectRepoImageCommandOutput,
+  'ListRiskComplAffectRepoImageCommand'
+> {
+  static readonly metaPath = '/ListRiskComplAffectRepoImage/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRiskComplAffectRepoImageRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRiskComplAffectRepoImageCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRiskVulnAffectRepoImage
+ */
+export class ListRiskVulnAffectRepoImageCommand extends Command<
+  ListRiskVulnAffectRepoImageRequest,
+  ListRiskVulnAffectRepoImageCommandOutput,
+  'ListRiskVulnAffectRepoImageCommand'
+> {
+  static readonly metaPath = '/ListRiskVulnAffectRepoImage/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListRiskVulnAffectRepoImageRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRiskVulnAffectRepoImageCommand.metaPath);
+  }
+}
+/**
  * Command to ListScanSubTasks
  */
 export class ListScanSubTasksCommand extends Command<
@@ -1549,6 +5694,66 @@ export class ListScanSubTasksCommand extends Command<
   }
 }
 /**
+ * Command to ListScanTaskHosts
+ */
+export class ListScanTaskHostsCommand extends Command<
+  ListScanTaskHostsRequest,
+  ListScanTaskHostsCommandOutput,
+  'ListScanTaskHostsCommand'
+> {
+  static readonly metaPath = '/ListScanTaskHosts/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListScanTaskHostsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListScanTaskHostsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListScanTasks
+ */
+export class ListScanTasksCommand extends Command<
+  ListScanTasksRequest,
+  ListScanTasksCommandOutput,
+  'ListScanTasksCommand'
+> {
+  static readonly metaPath = '/ListScanTasks/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListScanTasksRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListScanTasksCommand.metaPath);
+  }
+}
+/**
+ * Command to ListTagRelatedAgent
+ */
+export class ListTagRelatedAgentCommand extends Command<
+  ListTagRelatedAgentRequest,
+  ListTagRelatedAgentCommandOutput,
+  'ListTagRelatedAgentCommand'
+> {
+  static readonly metaPath = '/ListTagRelatedAgent/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: ListTagRelatedAgentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListTagRelatedAgentCommand.metaPath);
+  }
+}
+/**
+ * Command to ListTagsDetail
+ */
+export class ListTagsDetailCommand extends Command<
+  ListTagsDetailRequest,
+  ListTagsDetailCommandOutput,
+  'ListTagsDetailCommand'
+> {
+  static readonly metaPath = '/ListTagsDetail/2024-05-08/seccenter/get/text_plain/';
+
+  constructor(input: ListTagsDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListTagsDetailCommand.metaPath);
+  }
+}
+/**
  * Command to ListVarmorPolicies
  */
 export class ListVarmorPoliciesCommand extends Command<
@@ -1561,6 +5766,21 @@ export class ListVarmorPoliciesCommand extends Command<
   constructor(input: ListVarmorPoliciesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListVarmorPoliciesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListVirusAlarms
+ */
+export class ListVirusAlarmsCommand extends Command<
+  ListVirusAlarmsRequest,
+  ListVirusAlarmsCommandOutput,
+  'ListVirusAlarmsCommand'
+> {
+  static readonly metaPath = '/ListVirusAlarms/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListVirusAlarmsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListVirusAlarmsCommand.metaPath);
   }
 }
 /**
@@ -1609,6 +5829,351 @@ export class ListVulHostByPodCommand extends Command<
   }
 }
 /**
+ * Command to ListVulnAffectAISession
+ */
+export class ListVulnAffectAISessionCommand extends Command<
+  ListVulnAffectAISessionRequest,
+  ListVulnAffectAISessionCommandOutput,
+  'ListVulnAffectAISessionCommand'
+> {
+  static readonly metaPath = '/ListVulnAffectAISession/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListVulnAffectAISessionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListVulnAffectAISessionCommand.metaPath);
+  }
+}
+/**
+ * Command to ListVulnForAI
+ */
+export class ListVulnForAICommand extends Command<
+  ListVulnForAIRequest,
+  ListVulnForAICommandOutput,
+  'ListVulnForAICommand'
+> {
+  static readonly metaPath = '/ListVulnForAI/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListVulnForAIRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListVulnForAICommand.metaPath);
+  }
+}
+/**
+ * Command to ListVulnHosts
+ */
+export class ListVulnHostsCommand extends Command<
+  ListVulnHostsRequest,
+  ListVulnHostsCommandOutput,
+  'ListVulnHostsCommand'
+> {
+  static readonly metaPath = '/ListVulnHosts/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListVulnHostsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListVulnHostsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListVulns
+ */
+export class ListVulnsCommand extends Command<
+  ListVulnsRequest,
+  ListVulnsCommandOutput,
+  'ListVulnsCommand'
+> {
+  static readonly metaPath = '/ListVulns/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListVulnsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListVulnsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListWeakPasswordCheckDetail
+ */
+export class ListWeakPasswordCheckDetailCommand extends Command<
+  ListWeakPasswordCheckDetailRequest,
+  ListWeakPasswordCheckDetailCommandOutput,
+  'ListWeakPasswordCheckDetailCommand'
+> {
+  static readonly metaPath = '/ListWeakPasswordCheckDetail/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListWeakPasswordCheckDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListWeakPasswordCheckDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to ListWhiteLists
+ */
+export class ListWhiteListsCommand extends Command<
+  ListWhiteListsRequest,
+  ListWhiteListsCommandOutput,
+  'ListWhiteListsCommand'
+> {
+  static readonly metaPath = '/ListWhiteLists/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListWhiteListsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListWhiteListsCommand.metaPath);
+  }
+}
+/**
+ * Command to ManualSyncAIApplication
+ */
+export class ManualSyncAIApplicationCommand extends Command<
+  ManualSyncAIApplicationRequest,
+  ManualSyncAIApplicationCommandOutput,
+  'ManualSyncAIApplicationCommand'
+> {
+  static readonly metaPath = '/ManualSyncAIApplication/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ManualSyncAIApplicationRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ManualSyncAIApplicationCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyAutoDefenseRule
+ */
+export class ModifyAutoDefenseRuleCommand extends Command<
+  ModifyAutoDefenseRuleRequest,
+  ModifyAutoDefenseRuleCommandOutput,
+  'ModifyAutoDefenseRuleCommand'
+> {
+  static readonly metaPath = '/ModifyAutoDefenseRule/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ModifyAutoDefenseRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyAutoDefenseRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyCloudEnv
+ */
+export class ModifyCloudEnvCommand extends Command<
+  ModifyCloudEnvRequest,
+  ModifyCloudEnvCommandOutput,
+  'ModifyCloudEnvCommand'
+> {
+  static readonly metaPath = '/ModifyCloudEnv/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ModifyCloudEnvRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyCloudEnvCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyLayeredGroup
+ */
+export class ModifyLayeredGroupCommand extends Command<
+  ModifyLayeredGroupRequest,
+  ModifyLayeredGroupCommandOutput,
+  'ModifyLayeredGroupCommand'
+> {
+  static readonly metaPath = '/ModifyLayeredGroup/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ModifyLayeredGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyLayeredGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyMultiLevelInstitution
+ */
+export class ModifyMultiLevelInstitutionCommand extends Command<
+  ModifyMultiLevelInstitutionRequest,
+  ModifyMultiLevelInstitutionCommandOutput,
+  'ModifyMultiLevelInstitutionCommand'
+> {
+  static readonly metaPath = '/ModifyMultiLevelInstitution/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ModifyMultiLevelInstitutionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyMultiLevelInstitutionCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyMultiLevelInstitutionReportSwitch
+ */
+export class ModifyMultiLevelInstitutionReportSwitchCommand extends Command<
+  ModifyMultiLevelInstitutionReportSwitchRequest,
+  ModifyMultiLevelInstitutionReportSwitchCommandOutput,
+  'ModifyMultiLevelInstitutionReportSwitchCommand'
+> {
+  static readonly metaPath = '/ModifyMultiLevelInstitutionReportSwitch/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ModifyMultiLevelInstitutionReportSwitchRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyMultiLevelInstitutionReportSwitchCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyTLSConfig
+ */
+export class ModifyTLSConfigCommand extends Command<
+  ModifyTLSConfigRequest,
+  ModifyTLSConfigCommandOutput,
+  'ModifyTLSConfigCommand'
+> {
+  static readonly metaPath = '/ModifyTLSConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ModifyTLSConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyTLSConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyWhiteList
+ */
+export class ModifyWhiteListCommand extends Command<
+  ModifyWhiteListRequest,
+  ModifyWhiteListCommandOutput,
+  'ModifyWhiteListCommand'
+> {
+  static readonly metaPath = '/ModifyWhiteList/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ModifyWhiteListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyWhiteListCommand.metaPath);
+  }
+}
+/**
+ * Command to MultiAssetScan
+ */
+export class MultiAssetScanCommand extends Command<
+  MultiAssetScanRequest,
+  MultiAssetScanCommandOutput,
+  'MultiAssetScanCommand'
+> {
+  static readonly metaPath = '/MultiAssetScan/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: MultiAssetScanRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(MultiAssetScanCommand.metaPath);
+  }
+}
+/**
+ * Command to MultiCloudAccessStatistics
+ */
+export class MultiCloudAccessStatisticsCommand extends Command<
+  MultiCloudAccessStatisticsRequest,
+  MultiCloudAccessStatisticsCommandOutput,
+  'MultiCloudAccessStatisticsCommand'
+> {
+  static readonly metaPath = '/MultiCloudAccessStatistics/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: MultiCloudAccessStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(MultiCloudAccessStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to MultiCloudAccessSync
+ */
+export class MultiCloudAccessSyncCommand extends Command<
+  MultiCloudAccessSyncRequest,
+  MultiCloudAccessSyncCommandOutput,
+  'MultiCloudAccessSyncCommand'
+> {
+  static readonly metaPath = '/MultiCloudAccessSync/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: MultiCloudAccessSyncRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(MultiCloudAccessSyncCommand.metaPath);
+  }
+}
+/**
+ * Command to MultiCloudAccessSyncStatus
+ */
+export class MultiCloudAccessSyncStatusCommand extends Command<
+  MultiCloudAccessSyncStatusRequest,
+  MultiCloudAccessSyncStatusCommandOutput,
+  'MultiCloudAccessSyncStatusCommand'
+> {
+  static readonly metaPath = '/MultiCloudAccessSyncStatus/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: MultiCloudAccessSyncStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(MultiCloudAccessSyncStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to OperateAgentRaspConfigSwitch
+ */
+export class OperateAgentRaspConfigSwitchCommand extends Command<
+  OperateAgentRaspConfigSwitchRequest,
+  OperateAgentRaspConfigSwitchCommandOutput,
+  'OperateAgentRaspConfigSwitchCommand'
+> {
+  static readonly metaPath = '/OperateAgentRaspConfigSwitch/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: OperateAgentRaspConfigSwitchRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(OperateAgentRaspConfigSwitchCommand.metaPath);
+  }
+}
+/**
+ * Command to PrecisionStatistics
+ */
+export class PrecisionStatisticsCommand extends Command<
+  PrecisionStatisticsRequest,
+  PrecisionStatisticsCommandOutput,
+  'PrecisionStatisticsCommand'
+> {
+  static readonly metaPath = '/PrecisionStatistics/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: PrecisionStatisticsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(PrecisionStatisticsCommand.metaPath);
+  }
+}
+/**
+ * Command to RecoverFile
+ */
+export class RecoverFileCommand extends Command<
+  RecoverFileRequest,
+  RecoverFileCommandOutput,
+  'RecoverFileCommand'
+> {
+  static readonly metaPath = '/RecoverFile/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: RecoverFileRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RecoverFileCommand.metaPath);
+  }
+}
+/**
+ * Command to RefreshAIFingerprintData
+ */
+export class RefreshAIFingerprintDataCommand extends Command<
+  RefreshAIFingerprintDataRequest,
+  RefreshAIFingerprintDataCommandOutput,
+  'RefreshAIFingerprintDataCommand'
+> {
+  static readonly metaPath = '/RefreshAIFingerprintData/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: RefreshAIFingerprintDataRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RefreshAIFingerprintDataCommand.metaPath);
+  }
+}
+/**
+ * Command to RefreshFingerprintData
+ */
+export class RefreshFingerprintDataCommand extends Command<
+  RefreshFingerprintDataRequest,
+  RefreshFingerprintDataCommandOutput,
+  'RefreshFingerprintDataCommand'
+> {
+  static readonly metaPath = '/RefreshFingerprintData/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: RefreshFingerprintDataRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RefreshFingerprintDataCommand.metaPath);
+  }
+}
+/**
  * Command to RefreshVarmorInfo
  */
 export class RefreshVarmorInfoCommand extends Command<
@@ -1636,6 +6201,36 @@ export class RetryIPOperationCommand extends Command<
   constructor(input: RetryIPOperationRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(RetryIPOperationCommand.metaPath);
+  }
+}
+/**
+ * Command to SaveRepoImageScanCron
+ */
+export class SaveRepoImageScanCronCommand extends Command<
+  SaveRepoImageScanCronRequest,
+  SaveRepoImageScanCronCommandOutput,
+  'SaveRepoImageScanCronCommand'
+> {
+  static readonly metaPath = '/SaveRepoImageScanCron/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: SaveRepoImageScanCronRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(SaveRepoImageScanCronCommand.metaPath);
+  }
+}
+/**
+ * Command to SaveRepoImageScanScope
+ */
+export class SaveRepoImageScanScopeCommand extends Command<
+  SaveRepoImageScanScopeRequest,
+  SaveRepoImageScanScopeCommandOutput,
+  'SaveRepoImageScanScopeCommand'
+> {
+  static readonly metaPath = '/SaveRepoImageScanScope/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: SaveRepoImageScanScopeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(SaveRepoImageScanScopeCommand.metaPath);
   }
 }
 /**
@@ -1684,6 +6279,21 @@ export class SetCustomWeakPasswordsCommand extends Command<
   }
 }
 /**
+ * Command to SetRegularVirusScanConfig
+ */
+export class SetRegularVirusScanConfigCommand extends Command<
+  SetRegularVirusScanConfigRequest,
+  SetRegularVirusScanConfigCommandOutput,
+  'SetRegularVirusScanConfigCommand'
+> {
+  static readonly metaPath = '/SetRegularVirusScanConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: SetRegularVirusScanConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(SetRegularVirusScanConfigCommand.metaPath);
+  }
+}
+/**
  * Command to StopMLPAssetSyncTask
  */
 export class StopMLPAssetSyncTaskCommand extends Command<
@@ -1696,6 +6306,36 @@ export class StopMLPAssetSyncTaskCommand extends Command<
   constructor(input: StopMLPAssetSyncTaskRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(StopMLPAssetSyncTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to SwitchCloudEnvSync
+ */
+export class SwitchCloudEnvSyncCommand extends Command<
+  SwitchCloudEnvSyncRequest,
+  SwitchCloudEnvSyncCommandOutput,
+  'SwitchCloudEnvSyncCommand'
+> {
+  static readonly metaPath = '/SwitchCloudEnvSync/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: SwitchCloudEnvSyncRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(SwitchCloudEnvSyncCommand.metaPath);
+  }
+}
+/**
+ * Command to SyncRegistryImages
+ */
+export class SyncRegistryImagesCommand extends Command<
+  SyncRegistryImagesRequest,
+  SyncRegistryImagesCommandOutput,
+  'SyncRegistryImagesCommand'
+> {
+  static readonly metaPath = '/SyncRegistryImages/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: SyncRegistryImagesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(SyncRegistryImagesCommand.metaPath);
   }
 }
 /**
@@ -1726,6 +6366,66 @@ export class UnbindMLPAuthCommand extends Command<
   constructor(input: UnbindMLPAuthRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(UnbindMLPAuthCommand.metaPath);
+  }
+}
+/**
+ * Command to UninstallAgentClient
+ */
+export class UninstallAgentClientCommand extends Command<
+  UninstallAgentClientRequest,
+  UninstallAgentClientCommandOutput,
+  'UninstallAgentClientCommand'
+> {
+  static readonly metaPath = '/UninstallAgentClient/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: UninstallAgentClientRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UninstallAgentClientCommand.metaPath);
+  }
+}
+/**
+ * Command to UninstallCommands
+ */
+export class UninstallCommandsCommand extends Command<
+  UninstallCommandsRequest,
+  UninstallCommandsCommandOutput,
+  'UninstallCommandsCommand'
+> {
+  static readonly metaPath = '/UninstallCommands/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: UninstallCommandsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UninstallCommandsCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateAlarmTags
+ */
+export class UpdateAlarmTagsCommand extends Command<
+  UpdateAlarmTagsRequest,
+  UpdateAlarmTagsCommandOutput,
+  'UpdateAlarmTagsCommand'
+> {
+  static readonly metaPath = '/UpdateAlarmTags/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: UpdateAlarmTagsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAlarmTagsCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateAssetClusters
+ */
+export class UpdateAssetClustersCommand extends Command<
+  UpdateAssetClustersRequest,
+  UpdateAssetClustersCommandOutput,
+  'UpdateAssetClustersCommand'
+> {
+  static readonly metaPath = '/UpdateAssetClusters/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: UpdateAssetClustersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAssetClustersCommand.metaPath);
   }
 }
 /**
@@ -1774,6 +6474,66 @@ export class UpdateCloudProviderCommand extends Command<
   }
 }
 /**
+ * Command to UpdateCommonAlarmStatus
+ */
+export class UpdateCommonAlarmStatusCommand extends Command<
+  UpdateCommonAlarmStatusRequest,
+  UpdateCommonAlarmStatusCommandOutput,
+  'UpdateCommonAlarmStatusCommand'
+> {
+  static readonly metaPath = '/UpdateCommonAlarmStatus/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: UpdateCommonAlarmStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateCommonAlarmStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateHostTag
+ */
+export class UpdateHostTagCommand extends Command<
+  UpdateHostTagRequest,
+  UpdateHostTagCommandOutput,
+  'UpdateHostTagCommand'
+> {
+  static readonly metaPath = '/UpdateHostTag/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: UpdateHostTagRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateHostTagCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateLoginConfig
+ */
+export class UpdateLoginConfigCommand extends Command<
+  UpdateLoginConfigRequest,
+  UpdateLoginConfigCommandOutput,
+  'UpdateLoginConfigCommand'
+> {
+  static readonly metaPath = '/UpdateLoginConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: UpdateLoginConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateLoginConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateMlpAlarmStatus
+ */
+export class UpdateMlpAlarmStatusCommand extends Command<
+  UpdateMlpAlarmStatusRequest,
+  UpdateMlpAlarmStatusCommandOutput,
+  'UpdateMlpAlarmStatusCommand'
+> {
+  static readonly metaPath = '/UpdateMlpAlarmStatus/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: UpdateMlpAlarmStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateMlpAlarmStatusCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateOfflineNotificationConfig
  */
 export class UpdateOfflineNotificationConfigCommand extends Command<
@@ -1786,6 +6546,51 @@ export class UpdateOfflineNotificationConfigCommand extends Command<
   constructor(input: UpdateOfflineNotificationConfigRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateOfflineNotificationConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateRegistryFlowRateLimit
+ */
+export class UpdateRegistryFlowRateLimitCommand extends Command<
+  UpdateRegistryFlowRateLimitRequest,
+  UpdateRegistryFlowRateLimitCommandOutput,
+  'UpdateRegistryFlowRateLimitCommand'
+> {
+  static readonly metaPath = '/UpdateRegistryFlowRateLimit/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: UpdateRegistryFlowRateLimitRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateRegistryFlowRateLimitCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateRegistrySyncConfig
+ */
+export class UpdateRegistrySyncConfigCommand extends Command<
+  UpdateRegistrySyncConfigRequest,
+  UpdateRegistrySyncConfigCommandOutput,
+  'UpdateRegistrySyncConfigCommand'
+> {
+  static readonly metaPath = '/UpdateRegistrySyncConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: UpdateRegistrySyncConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateRegistrySyncConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateRegularClean
+ */
+export class UpdateRegularCleanCommand extends Command<
+  UpdateRegularCleanRequest,
+  UpdateRegularCleanCommandOutput,
+  'UpdateRegularCleanCommand'
+> {
+  static readonly metaPath = '/UpdateRegularClean/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: UpdateRegularCleanRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateRegularCleanCommand.metaPath);
   }
 }
 /**
@@ -1836,103 +6641,370 @@ export class UpdateVarmorTLSInfoCommand extends Command<
 
 export default {
   SECCENTER20240508Client,
+  AddAgentProxyCommand,
+  AddAutoIsolateAgentListCommand,
   AddBaselineCheckConfigCommand,
+  AddCloudEnvCommand,
+  AddLoginConfigCommand,
   AddMonitorPolicyCommand,
+  AddRaspConfigCommand,
+  AddWhiteListCommand,
+  AllAssetScanCommand,
+  AssetScanCommand,
   BanAlarmIPCommand,
+  BaselineChecklistWhiteCommand,
+  BatchAddHostToGroupCommand,
+  BatchCreateRepoRegistryVpcAuthCommand,
   BatchDeleteVarmorPoliciesCommand,
+  BatchDetectWeakPasswordCommand,
   BatchInstallVarmorAppsCommand,
   BatchUninstallVarmorAppsCommand,
   BatchUpgradeVarmorAppsCommand,
   BindMLPAuthCommand,
+  CalculateRepoImageScanQuotaCommand,
   CheckAlarmSupportBanIPCommand,
+  CheckInstallAgentClientCommand,
+  CheckInstallRaspCommand,
   CheckMonitorPolicyCommand,
   ControlMonitorPolicyCommand,
+  CreatFileScanTaskCommand,
+  CreateHostTagCommand,
+  CreateLayeredGroupCommand,
   CreateMLPAssetSyncTaskCommand,
+  CreateMLPUpdateSoftwareTaskCommand,
+  CreateMultiLevelInstitutionCommand,
+  CreateRepoRegistryVpcAuthCommand,
   CreateVarmorPolicyCommand,
+  DeleteAgentProxyCommand,
+  DeleteAgentProxyServerCommand,
+  DeleteAutoIsolateAgentListCommand,
   DeleteBaselineCheckConfigCommand,
+  DeleteCloudEnvCommand,
+  DeleteCommandCommand,
+  DeleteHostTagCommand,
+  DeleteLayeredGroupCommand,
+  DeleteLoginConfigCommand,
   DeleteMonitorPolicyCommand,
+  DeleteMultiLevelInstitutionCommand,
+  DeleteRaspConfigCommand,
+  DeleteWhiteListsCommand,
   DescribeFileChangeTrendTop5Command,
   DescribeFileMonitorOverviewCommand,
   DescribeLastWeekFileChangeTrendsCommand,
+  DetectBaselineCommand,
   DetectBaselineByCheckConfigCommand,
+  DetectVulnCommand,
+  DetectVulnForAICommand,
+  DisableHostImportantProtectCommand,
+  DownloadAIVulnListCommand,
+  DownloadBaselineCheckCommand,
+  DownloadBaselineCheckHostsCommand,
+  DownloadRawTraceDataCommand,
+  DownloadVulHostListByPodCommand,
+  DownloadVulListByPodCommand,
+  DownloadVulnAffectAISessionCommand,
+  DownloadVulnDatasCommand,
+  DownloadVulnListCommand,
+  EditAIApplicationSyncConfigCommand,
   EditBaselineCheckConfigCommand,
   EditFingerprintCollectConfigCommand,
   EditMonitorPolicyCommand,
+  EditRaspConfigCommand,
+  EditVulnScanConfigCommand,
+  EnableHostImportantProtectCommand,
+  ExportAIFingerprintDataCommand,
+  ExportAlarmListDataForRaspCommand,
+  ExportAssetCenterDevsCommand,
+  ExportAssetCenterHostsCommand,
+  ExportBaselineCheckListCommand,
+  ExportBaselineHostDetailsCommand,
+  ExportDevFingerprintDataCommand,
   ExportFileMonitorAlarmListDataCommand,
+  ExportFingerprintDataCommand,
+  ExportHidsAlarmListDataCommand,
+  ExportMlpAlarmListDataCommand,
+  ExportRepoImageAssetCommand,
+  ExportVirusAlarmListDataCommand,
+  ExportWeakPasswordCommand,
+  GenerateInstallCommandCommand,
   GetAIAlarmJudgeConfigCommand,
+  GetAIApplicationSyncConfigCommand,
+  GetAIFingerprintAppCommand,
+  GetAIFingerprintPortCommand,
+  GetAIFingerprintProcessCommand,
+  GetAIFingerprintRefreshStatusCommand,
+  GetAIFingerprintSoftwareCommand,
+  GetAIFingerprintStatisticsCommand,
+  GetAIFingerprintTop5Command,
+  GetAISessionVulnInfoCommand,
+  GetAIVulnDetectProgressDetailCommand,
+  GetAlarmBySmithKeyCommand,
   GetAlarmRuleListCommand,
+  GetAlarmTraceCommand,
   GetAlarmTraceRawDataCommand,
+  GetAlarmVirusStatisticsCommand,
   GetAllMonitorSuffixListCommand,
   GetArmorProfileCommand,
+  GetAssetClusterStatisticCommand,
+  GetAssetClustersSyncEndCommand,
+  GetAssetWorkloadStatisticCommand,
   GetAutoIsolateAgentListCommand,
   GetAutoProtectConfigCommand,
+  GetBaselineDetectProgressDetailCommand,
+  GetBaselineGroupStatisticsCommand,
   GetBruteForceBanCapParamsCommand,
   GetBruteForceBanConfigCommand,
   GetBruteForceBanStatisticsCommand,
+  GetCisDetailCommand,
   GetClusterStatisticsCommand,
+  GetClustersPermissionResultCommand,
   GetCustomWeakPasswordsCommand,
+  GetDevAssetOverviewCommand,
+  GetDevDetailCommand,
+  GetDevFingerprintPortCommand,
+  GetDevFingerprintProcessCommand,
+  GetDevFingerprintSoftwareCommand,
+  GetDevFingerprintStatisticsCommand,
+  GetDownloadStatusCommand,
+  GetFingerprintAppCommand,
+  GetFingerprintAppGroupCommand,
+  GetFingerprintCronCommand,
   GetFingerprintEnvCommand,
+  GetFingerprintIntegrityCommand,
+  GetFingerprintKmodCommand,
+  GetFingerprintPortCommand,
+  GetFingerprintProcessCommand,
+  GetFingerprintRefreshStatusCommand,
+  GetFingerprintServiceCommand,
+  GetFingerprintSoftwareCommand,
+  GetFingerprintStatisticsCommand,
+  GetFingerprintTop5Command,
+  GetFingerprintUserCommand,
+  GetFingerprintWebCommand,
   GetGeoLocationCommand,
+  GetGroupCheckStatusCommand,
+  GetHidsAlarmInfoCommand,
+  GetHidsAlarmStatisticsCommand,
+  GetHidsAlarmSummaryInfoCommand,
+  GetHostAssetOverviewCommand,
+  GetHostBasicInfoCommand,
+  GetHostImportantProtectStateCommand,
   GetHostVolumeCommand,
+  GetHostVulnInfoCommand,
+  GetIntrusionRealTimeUpdatesCommand,
+  GetIntrusionRiskTrendsCommand,
+  GetK8sAssetStatisticCommand,
+  GetLayeredGroupsCommand,
   GetMLPAssetSyncTaskDetailCommand,
   GetMLPAssetSyncTaskStatusCommand,
+  GetManualSyncAIApplicationStatusCommand,
+  GetMlpAlarmStatisticsCommand,
+  GetMlpAlarmSummaryInfoCommand,
+  GetMlpUpdateSoftwareTaskDetailCommand,
   GetMonitorPolicyDirectoryCommand,
   GetMultiLevelAuthDetailCommand,
+  GetMultiLevelHostAssetOverviewCommand,
+  GetMultiLevelInstitutionDetailCommand,
+  GetNeighboringAlarmCommand,
   GetOfflineNotificationConfigCommand,
   GetOfflineNotificationListCommand,
+  GetOneRaspAlarmCommand,
   GetPolicyStatisticsCommand,
+  GetRaspAlarmStatisticsCommand,
+  GetRaspAlarmSummaryInfoCommand,
+  GetRaspAuthorizationStatisticsCommand,
+  GetRaspConfigStatisticsCommand,
+  GetRaspProcessDetailCommand,
+  GetRaspProtectStatisticsCommand,
+  GetRegistriesPermissionResultCommand,
+  GetRegistryImageDetailCommand,
+  GetRegistryImagesSyncStatusCommand,
+  GetRegistrySyncConfigCommand,
+  GetRegularCleanCommand,
+  GetRegularVirusScanConfigCommand,
+  GetRegularVirusTaskStatusCommand,
+  GetRepoImageRiskCntCommand,
+  GetRepoImageScanCronCommand,
+  GetRepoImageScanScopeCommand,
+  GetRepoRegistrySummaryCommand,
+  GetRepoRegistryVpcAuthCreateInfoCommand,
   GetSOCAssetAlarmStatsCommand,
   GetSOCAssetInstanceProtectStatusCommand,
   GetSOCAssetSecurityScoreCommand,
   GetSOCAssetVulnStatsCommand,
   GetSOCPrecautionBaselineStatsCommand,
+  GetSecurityOverviewCommand,
   GetSecurityOverviewScoreStatsCommand,
+  GetStackTraceCommand,
+  GetTLSInfoCommand,
+  GetTenantQuotaCommand,
+  GetUserBatchScanStatusCommand,
   GetVarmorConfigYAMLCommand,
   GetVarmorPolicyCommand,
   GetVarmorTLSInfoCommand,
+  GetVirusAlarmSummaryInfoCommand,
+  GetVirusDatabaseUpdateTimeCommand,
+  GetVirusTaskInfoCommand,
+  GetVirusTaskStatisticsCommand,
+  GetVulnCheckStatusCommand,
+  GetVulnCheckStatusForAICommand,
+  GetVulnDetailCommand,
+  GetVulnInfoCommand,
+  GetVulnInfoForAICommand,
+  GetVulnScanConfigCommand,
+  GetVulnStatisticsCommand,
+  GetVulnStatisticsForAICommand,
+  GetWhiteListFieldCommand,
+  HandleAIVulnCommand,
+  HandleAlarmByAgentCommand,
   HandleEndpointAlarmsCommand,
+  HandleVulnCommand,
+  InstallAgentClientCommand,
+  InstallAgentProxyServerCommandCommand,
+  IsolateFileCommand,
+  ListAIApplicationBasicInfoCommand,
   ListAgentProxiesCommand,
   ListAgentProxyServersCommand,
+  ListAgentkitSessionIDsCommand,
+  ListAlarmArchiveRecordsCommand,
+  ListAlarmNameListCommand,
+  ListAlarmTagsCommand,
+  ListAllCntrStaticDictCommand,
+  ListAssetCenterDevsCommand,
   ListAssetCenterHostsCommand,
+  ListAssetClustersCommand,
+  ListAssetGroupsCommand,
   ListAssetNamespacesCommand,
+  ListAssetPodsLinkedWorkloadCommand,
+  ListAssetPodsLinkedWorkloadWithNoPageCommand,
+  ListAssetTagsCommand,
+  ListAssetWorkloadsCommand,
+  ListAutoDefenseHostsCommand,
   ListAutoDefenseRulesCommand,
   ListBanIPListCommand,
   ListBaselineBasicInfoCommand,
   ListBaselineCheckConfigCommand,
+  ListBaselineCheckDetailCommand,
+  ListBaselineCheckItemHostsCommand,
   ListBaselineCheckItemsCommand,
+  ListBaselineCheckResCommand,
   ListBaselineForGroupPolicyCommand,
+  ListBaselineGroupsCommand,
   ListBaselineHostItemHostsCommand,
+  ListBaselinesCommand,
   ListBatchEndpointHandleMethodsCommand,
   ListCheckConfigRelatedBaselineCommand,
   ListCleanHistoryCommand,
   ListCloudEnvsCommand,
+  ListCloudPlatformsCommand,
   ListClusterVarmorVersionHistoryCommand,
   ListClustersAndVarmorAppsCommand,
+  ListDevAssetIDsCommand,
+  ListDevBasicInfosCommand,
+  ListDevPlatformCommand,
+  ListDevRegionCommand,
+  ListEndpointHandleMethodsCommand,
   ListFileMonitorAlarmsCommand,
   ListFingerprintCollectConfigCommand,
+  ListGroupRelatedAgentCommand,
   ListHidsAlarmsCommand,
+  ListHostPlatformCommand,
+  ListHostRegionCommand,
+  ListHostVpcCommand,
+  ListHostsAgentIDsCommand,
   ListHostsBasicInfosCommand,
+  ListInstallCommandsCommand,
   ListIsolationFilesCommand,
+  ListLayeredGroupRelatedHostCommand,
+  ListLayeredGroupsDetailCommand,
+  ListLoginConfigsCommand,
   ListMLPAssetTasksCommand,
+  ListMlpAlarmTagsCommand,
+  ListMlpAlarmsCommand,
   ListMonitorPoliciesCommand,
+  ListMultiLevelAssetHostsCommand,
+  ListMultiLevelInstitutionCommand,
   ListOrderedHostsBasicInfosCommand,
+  ListRaspAlarmsCommand,
+  ListRaspConfigAgentInfosCommand,
+  ListRaspConfigsCommand,
+  ListRaspProcessesCommand,
+  ListRegistriesCommand,
+  ListRegistryImagesCommand,
+  ListRegistryNamespaceIDsCommand,
+  ListRegistryNamespacesCommand,
+  ListRepoImageComplCommand,
+  ListRepoImageLayerCommand,
+  ListRepoImageLayerSenfileCommand,
+  ListRepoImageLayerVirusCommand,
+  ListRepoImageLayerVulnCommand,
+  ListRepoImagePackageCommand,
+  ListRepoImageSenfileCommand,
+  ListRepoImageVirusCommand,
+  ListRepoImageVulnCommand,
+  ListRiskComplAffectRepoImageCommand,
+  ListRiskVulnAffectRepoImageCommand,
   ListScanSubTasksCommand,
+  ListScanTaskHostsCommand,
+  ListScanTasksCommand,
+  ListTagRelatedAgentCommand,
+  ListTagsDetailCommand,
   ListVarmorPoliciesCommand,
+  ListVirusAlarmsCommand,
   ListVulByPodCommand,
   ListVulDetailCommand,
   ListVulHostByPodCommand,
+  ListVulnAffectAISessionCommand,
+  ListVulnForAICommand,
+  ListVulnHostsCommand,
+  ListVulnsCommand,
+  ListWeakPasswordCheckDetailCommand,
+  ListWhiteListsCommand,
+  ManualSyncAIApplicationCommand,
+  ModifyAutoDefenseRuleCommand,
+  ModifyCloudEnvCommand,
+  ModifyLayeredGroupCommand,
+  ModifyMultiLevelInstitutionCommand,
+  ModifyMultiLevelInstitutionReportSwitchCommand,
+  ModifyTLSConfigCommand,
+  ModifyWhiteListCommand,
+  MultiAssetScanCommand,
+  MultiCloudAccessStatisticsCommand,
+  MultiCloudAccessSyncCommand,
+  MultiCloudAccessSyncStatusCommand,
+  OperateAgentRaspConfigSwitchCommand,
+  PrecisionStatisticsCommand,
+  RecoverFileCommand,
+  RefreshAIFingerprintDataCommand,
+  RefreshFingerprintDataCommand,
   RefreshVarmorInfoCommand,
   RetryIPOperationCommand,
+  SaveRepoImageScanCronCommand,
+  SaveRepoImageScanScopeCommand,
   SetAIAlarmJudgeConfigCommand,
   SetBruteForceBanConfigCommand,
   SetCustomWeakPasswordsCommand,
+  SetRegularVirusScanConfigCommand,
   StopMLPAssetSyncTaskCommand,
+  SwitchCloudEnvSyncCommand,
+  SyncRegistryImagesCommand,
   UnBanIPItemCommand,
   UnbindMLPAuthCommand,
+  UninstallAgentClientCommand,
+  UninstallCommandsCommand,
+  UpdateAlarmTagsCommand,
+  UpdateAssetClustersCommand,
   UpdateAutoProtectConfigCommand,
   UpdateBaselineCheckConfigSwitchCommand,
   UpdateCloudProviderCommand,
+  UpdateCommonAlarmStatusCommand,
+  UpdateHostTagCommand,
+  UpdateLoginConfigCommand,
+  UpdateMlpAlarmStatusCommand,
   UpdateOfflineNotificationConfigCommand,
+  UpdateRegistryFlowRateLimitCommand,
+  UpdateRegistrySyncConfigCommand,
+  UpdateRegularCleanCommand,
   UpdateVarmorAppConfigCommand,
   UpdateVarmorPolicyCommand,
   UpdateVarmorTLSInfoCommand,

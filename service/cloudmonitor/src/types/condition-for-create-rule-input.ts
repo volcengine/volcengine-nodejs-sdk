@@ -27,6 +27,12 @@ export interface ConditionForCreateRuleInput {
     ComparisonOperator?: string;
 
     /**
+     * @type {number}
+     * @memberof ConditionForCreateRuleInput
+     */
+    EvaluationWindow?: number;
+
+    /**
      * @type {string}
      * @memberof ConditionForCreateRuleInput
      */

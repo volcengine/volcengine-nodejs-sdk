@@ -12,9 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { AudioStreamMetaForGetExecutionOutput } from './audio-stream-meta-for-get-execution-output';
-import { EncryptionForGetExecutionOutput } from './encryption-for-get-execution-output';
-import { VideoStreamMetaForGetExecutionOutput } from './video-stream-meta-for-get-execution-output';
  /**
  * 
  *
@@ -24,98 +21,8 @@ import { VideoStreamMetaForGetExecutionOutput } from './video-stream-meta-for-ge
 export interface ConvertConvertEnhanceForGetExecutionOutput {
 
     /**
-     * @type {AudioStreamMetaForGetExecutionOutput}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    AudioStreamMeta?: AudioStreamMetaForGetExecutionOutput;
-
-    /**
      * @type {string}
      * @memberof ConvertConvertEnhanceForGetExecutionOutput
      */
-    CreateTime?: string;
-
-    /**
-     * @type {number}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    Duration?: number;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    DynamicRange?: string;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    EncodedType?: string;
-
-    /**
-     * @type {boolean}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    Encrypt?: boolean;
-
-    /**
-     * @type {EncryptionForGetExecutionOutput}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    Encryption?: EncryptionForGetExecutionOutput;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    FileId?: string;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    FileType?: string;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    Format?: string;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    LogoType?: string;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    Md5?: string;
-
-    /**
-     * @type {number}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    Size?: number;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    StoreUri?: string;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    TosStorageClass?: string;
-
-    /**
-     * @type {VideoStreamMetaForGetExecutionOutput}
-     * @memberof ConvertConvertEnhanceForGetExecutionOutput
-     */
-    VideoStreamMeta?: VideoStreamMetaForGetExecutionOutput;
+    TemplateId?: string;
 }

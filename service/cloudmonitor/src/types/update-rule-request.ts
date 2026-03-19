@@ -88,6 +88,12 @@ export interface UpdateRuleRequest {
     EvaluationCount: number;
 
     /**
+     * @type {number}
+     * @memberof UpdateRuleRequest
+     */
+    EvaluationInterval?: number;
+
+    /**
      * @type {string}
      * @memberof UpdateRuleRequest
      */

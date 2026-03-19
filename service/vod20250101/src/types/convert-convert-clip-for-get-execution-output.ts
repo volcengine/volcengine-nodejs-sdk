@@ -24,37 +24,13 @@ export interface ConvertConvertClipForGetExecutionOutput {
      * @type {number}
      * @memberof ConvertConvertClipForGetExecutionOutput
      */
-    CutEnd?: number;
-
-    /**
-     * @type {number}
-     * @memberof ConvertConvertClipForGetExecutionOutput
-     */
-    CutStart?: number;
-
-    /**
-     * @type {number}
-     * @memberof ConvertConvertClipForGetExecutionOutput
-     */
     End?: number;
 
     /**
      * @type {number}
      * @memberof ConvertConvertClipForGetExecutionOutput
      */
-    Score?: number;
-
-    /**
-     * @type {number}
-     * @memberof ConvertConvertClipForGetExecutionOutput
-     */
     Start?: number;
-
-    /**
-     * @type {string}
-     * @memberof ConvertConvertClipForGetExecutionOutput
-     */
-    Type?: string;
 
     /**
      * @type {number}

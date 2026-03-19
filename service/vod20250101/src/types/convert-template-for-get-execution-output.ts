@@ -13,7 +13,7 @@
  */
 
 import { ConvertByteHDForGetExecutionOutput } from './convert-byte-hdfor-get-execution-output';
-import { ConvertConvertEnhanceForGetExecutionOutput } from './convert-convert-enhance-for-get-execution-output';
+import { ConvertConvertConvertEnhanceForGetExecutionOutput } from './convert-convert-convert-enhance-for-get-execution-output';
 import { ConvertTranscodeAudioForGetExecutionOutput } from './convert-transcode-audio-for-get-execution-output';
 import { ConvertTranscodeVideoForGetExecutionOutput } from './convert-transcode-video-for-get-execution-output';
  /**
@@ -31,10 +31,10 @@ export interface ConvertTemplateForGetExecutionOutput {
     ByteHD?: ConvertByteHDForGetExecutionOutput;
 
     /**
-     * @type {ConvertConvertEnhanceForGetExecutionOutput}
+     * @type {ConvertConvertConvertEnhanceForGetExecutionOutput}
      * @memberof ConvertTemplateForGetExecutionOutput
      */
-    Enhance?: ConvertConvertEnhanceForGetExecutionOutput;
+    Enhance?: ConvertConvertConvertEnhanceForGetExecutionOutput;
 
     /**
      * @type {ConvertTranscodeAudioForGetExecutionOutput}

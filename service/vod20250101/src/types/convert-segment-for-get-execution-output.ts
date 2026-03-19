@@ -21,6 +21,12 @@
 export interface ConvertSegmentForGetExecutionOutput {
 
     /**
+     * @type {boolean}
+     * @memberof ConvertSegmentForGetExecutionOutput
+     */
+    ClipFade?: boolean;
+
+    /**
      * @type {number}
      * @memberof ConvertSegmentForGetExecutionOutput
      */
@@ -31,6 +37,12 @@ export interface ConvertSegmentForGetExecutionOutput {
      * @memberof ConvertSegmentForGetExecutionOutput
      */
     MinDuration?: number;
+
+    /**
+     * @type {boolean}
+     * @memberof ConvertSegmentForGetExecutionOutput
+     */
+    NoFile?: boolean;
 
     /**
      * @type {number}

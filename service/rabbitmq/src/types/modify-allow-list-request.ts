@@ -48,7 +48,7 @@ export interface ModifyAllowListRequest {
      * @type {number}
      * @memberof ModifyAllowListRequest
      */
-    ApplyDBInstanceNum: number;
+    ApplyInstanceNum?: number;
 
     /**
      * @type {string}

@@ -24,11 +24,11 @@ export interface PointInfoForDescribeLastWeekFileChangeTrendsOutput {
      * @type {string}
      * @memberof PointInfoForDescribeLastWeekFileChangeTrendsOutput
      */
-    Key?: string;
+    key?: string;
 
     /**
      * @type {number}
      * @memberof PointInfoForDescribeLastWeekFileChangeTrendsOutput
      */
-    Value?: number;
+    value?: number;
 }

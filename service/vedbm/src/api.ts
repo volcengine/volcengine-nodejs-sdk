@@ -14,6 +14,8 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { AddTagsToResourceRequest } from './types/index';
+import { AddTagsToResourceResponse } from './types/index';
 import { ApplyParameterTemplateRequest } from './types/index';
 import { ApplyParameterTemplateResponse } from './types/index';
 import { AssociateAllowListRequest } from './types/index';
@@ -22,6 +24,8 @@ import { CancelScheduleEventsRequest } from './types/index';
 import { CancelScheduleEventsResponse } from './types/index';
 import { ChangeMasterRequest } from './types/index';
 import { ChangeMasterResponse } from './types/index';
+import { CopyParameterTemplateRequest } from './types/index';
+import { CopyParameterTemplateResponse } from './types/index';
 import { CreateAllowListRequest } from './types/index';
 import { CreateAllowListResponse } from './types/index';
 import { CreateBackupRequest } from './types/index';
@@ -140,8 +144,12 @@ import { ModifyDBNodeConfigRequest } from './types/index';
 import { ModifyDBNodeConfigResponse } from './types/index';
 import { ModifyDatabaseDescriptionRequest } from './types/index';
 import { ModifyDatabaseDescriptionResponse } from './types/index';
+import { ModifyParameterTemplateRequest } from './types/index';
+import { ModifyParameterTemplateResponse } from './types/index';
 import { ModifyScheduleEventsRequest } from './types/index';
 import { ModifyScheduleEventsResponse } from './types/index';
+import { RemoveTagsFromResourceRequest } from './types/index';
+import { RemoveTagsFromResourceResponse } from './types/index';
 import { ResetAccountRequest } from './types/index';
 import { ResetAccountResponse } from './types/index';
 import { ResetDBAccountRequest } from './types/index';
@@ -160,10 +168,12 @@ import { SaveAsParameterTemplateResponse } from './types/index';
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type AddTagsToResourceCommandOutput = CommandOutput<AddTagsToResourceResponse>;
 export type ApplyParameterTemplateCommandOutput = CommandOutput<ApplyParameterTemplateResponse>;
 export type AssociateAllowListCommandOutput = CommandOutput<AssociateAllowListResponse>;
 export type CancelScheduleEventsCommandOutput = CommandOutput<CancelScheduleEventsResponse>;
 export type ChangeMasterCommandOutput = CommandOutput<ChangeMasterResponse>;
+export type CopyParameterTemplateCommandOutput = CommandOutput<CopyParameterTemplateResponse>;
 export type CreateAllowListCommandOutput = CommandOutput<CreateAllowListResponse>;
 export type CreateBackupCommandOutput = CommandOutput<CreateBackupResponse>;
 export type CreateDBAccountCommandOutput = CommandOutput<CreateDBAccountResponse>;
@@ -223,7 +233,9 @@ export type ModifyDBInstanceParametersCommandOutput = CommandOutput<ModifyDBInst
 export type ModifyDBInstanceSpecCommandOutput = CommandOutput<ModifyDBInstanceSpecResponse>;
 export type ModifyDBNodeConfigCommandOutput = CommandOutput<ModifyDBNodeConfigResponse>;
 export type ModifyDatabaseDescriptionCommandOutput = CommandOutput<ModifyDatabaseDescriptionResponse>;
+export type ModifyParameterTemplateCommandOutput = CommandOutput<ModifyParameterTemplateResponse>;
 export type ModifyScheduleEventsCommandOutput = CommandOutput<ModifyScheduleEventsResponse>;
+export type RemoveTagsFromResourceCommandOutput = CommandOutput<RemoveTagsFromResourceResponse>;
 export type ResetAccountCommandOutput = CommandOutput<ResetAccountResponse>;
 export type ResetDBAccountCommandOutput = CommandOutput<ResetDBAccountResponse>;
 export type RestartDBInstanceCommandOutput = CommandOutput<RestartDBInstanceResponse>;
@@ -231,7 +243,6 @@ export type RestoreTableCommandOutput = CommandOutput<RestoreTableResponse>;
 export type RestoreToNewInstanceCommandOutput = CommandOutput<RestoreToNewInstanceResponse>;
 export type RevokeDBAccountPrivilegeCommandOutput = CommandOutput<RevokeDBAccountPrivilegeResponse>;
 export type SaveAsParameterTemplateCommandOutput = CommandOutput<SaveAsParameterTemplateResponse>;
-
 
 /**
  * VEDBMClient Service Client
@@ -246,6 +257,21 @@ export class VEDBMClient extends Client {
   }
 }
 
+/**
+ * Command to AddTagsToResource
+ */
+export class AddTagsToResourceCommand extends Command<
+  AddTagsToResourceRequest,
+  AddTagsToResourceCommandOutput,
+  'AddTagsToResourceCommand'
+> {
+  static readonly metaPath = '/AddTagsToResource/2022-01-01/vedbm/post/application_json/';
+
+  constructor(input: AddTagsToResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddTagsToResourceCommand.metaPath);
+  }
+}
 /**
  * Command to ApplyParameterTemplate
  */
@@ -304,6 +330,21 @@ export class ChangeMasterCommand extends Command<
   constructor(input: ChangeMasterRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ChangeMasterCommand.metaPath);
+  }
+}
+/**
+ * Command to CopyParameterTemplate
+ */
+export class CopyParameterTemplateCommand extends Command<
+  CopyParameterTemplateRequest,
+  CopyParameterTemplateCommandOutput,
+  'CopyParameterTemplateCommand'
+> {
+  static readonly metaPath = '/CopyParameterTemplate/2022-01-01/vedbm/post/application_json/';
+
+  constructor(input: CopyParameterTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CopyParameterTemplateCommand.metaPath);
   }
 }
 /**
@@ -1192,6 +1233,21 @@ export class ModifyDatabaseDescriptionCommand extends Command<
   }
 }
 /**
+ * Command to ModifyParameterTemplate
+ */
+export class ModifyParameterTemplateCommand extends Command<
+  ModifyParameterTemplateRequest,
+  ModifyParameterTemplateCommandOutput,
+  'ModifyParameterTemplateCommand'
+> {
+  static readonly metaPath = '/ModifyParameterTemplate/2022-01-01/vedbm/post/application_json/';
+
+  constructor(input: ModifyParameterTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyParameterTemplateCommand.metaPath);
+  }
+}
+/**
  * Command to ModifyScheduleEvents
  */
 export class ModifyScheduleEventsCommand extends Command<
@@ -1204,6 +1260,21 @@ export class ModifyScheduleEventsCommand extends Command<
   constructor(input: ModifyScheduleEventsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ModifyScheduleEventsCommand.metaPath);
+  }
+}
+/**
+ * Command to RemoveTagsFromResource
+ */
+export class RemoveTagsFromResourceCommand extends Command<
+  RemoveTagsFromResourceRequest,
+  RemoveTagsFromResourceCommandOutput,
+  'RemoveTagsFromResourceCommand'
+> {
+  static readonly metaPath = '/RemoveTagsFromResource/2022-01-01/vedbm/post/application_json/';
+
+  constructor(input: RemoveTagsFromResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RemoveTagsFromResourceCommand.metaPath);
   }
 }
 /**
@@ -1314,10 +1385,12 @@ export class SaveAsParameterTemplateCommand extends Command<
 
 export default {
   VEDBMClient,
+  AddTagsToResourceCommand,
   ApplyParameterTemplateCommand,
   AssociateAllowListCommand,
   CancelScheduleEventsCommand,
   ChangeMasterCommand,
+  CopyParameterTemplateCommand,
   CreateAllowListCommand,
   CreateBackupCommand,
   CreateDBAccountCommand,
@@ -1377,7 +1450,9 @@ export default {
   ModifyDBInstanceSpecCommand,
   ModifyDBNodeConfigCommand,
   ModifyDatabaseDescriptionCommand,
+  ModifyParameterTemplateCommand,
   ModifyScheduleEventsCommand,
+  RemoveTagsFromResourceCommand,
   ResetAccountCommand,
   ResetDBAccountCommand,
   RestartDBInstanceCommand,

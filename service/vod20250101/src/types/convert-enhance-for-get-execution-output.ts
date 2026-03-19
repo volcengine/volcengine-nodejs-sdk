@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ConvertMoeEnhanceForGetExecutionOutput } from './convert-moe-enhance-for-get-execution-output';
  /**
  * 
  *
@@ -21,8 +22,23 @@
 export interface ConvertEnhanceForGetExecutionOutput {
 
     /**
+     * @type {ConvertMoeEnhanceForGetExecutionOutput}
+     * @memberof ConvertEnhanceForGetExecutionOutput
+     */
+    MoeEnhance?: ConvertMoeEnhanceForGetExecutionOutput;
+
+    /**
      * @type {string}
      * @memberof ConvertEnhanceForGetExecutionOutput
      */
-    TemplateId?: string;
+    Type?: ConvertEnhanceForGetExecutionOutputTypeEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ConvertEnhanceForGetExecutionOutputTypeEnum {
+    Moe = 'Moe'
+}
+

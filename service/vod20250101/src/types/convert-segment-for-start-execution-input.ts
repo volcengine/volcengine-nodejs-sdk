@@ -21,6 +21,12 @@
 export interface ConvertSegmentForStartExecutionInput {
 
     /**
+     * @type {boolean}
+     * @memberof ConvertSegmentForStartExecutionInput
+     */
+    ClipFade?: boolean;
+
+    /**
      * @type {number}
      * @memberof ConvertSegmentForStartExecutionInput
      */
@@ -31,6 +37,12 @@ export interface ConvertSegmentForStartExecutionInput {
      * @memberof ConvertSegmentForStartExecutionInput
      */
     MinDuration?: number;
+
+    /**
+     * @type {boolean}
+     * @memberof ConvertSegmentForStartExecutionInput
+     */
+    NoFile?: boolean;
 
     /**
      * @type {number}

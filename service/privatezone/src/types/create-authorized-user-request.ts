@@ -33,8 +33,8 @@ export interface CreateAuthorizedUserRequest {
     AuthType: number;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof CreateAuthorizedUserRequest
      */
-    VerifyCode?: number;
+    VerifyCode?: string;
 }

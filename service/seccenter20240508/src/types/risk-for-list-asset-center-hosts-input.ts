@@ -36,6 +36,12 @@ export interface RiskForListAssetCenterHostsInput {
      * @type {boolean}
      * @memberof RiskForListAssetCenterHostsInput
      */
+    IsRealRiskVul?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof RiskForListAssetCenterHostsInput
+     */
     Virus?: boolean;
 
     /**

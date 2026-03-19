@@ -100,6 +100,12 @@ export interface DataForListRulesOutput {
     EvaluationCount?: number;
 
     /**
+     * @type {number}
+     * @memberof DataForListRulesOutput
+     */
+    EvaluationInterval?: number;
+
+    /**
      * @type {string}
      * @memberof DataForListRulesOutput
      */

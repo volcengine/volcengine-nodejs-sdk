@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AutoStorageScalingConfigForDescribeDBInstanceHAConfigOutput } from './auto-storage-scaling-config-for-describe-dbinstance-haconfig-output';
 import { NodeForDescribeDBInstanceHAConfigOutput } from './node-for-describe-dbinstance-haconfig-output';
  /**
  * 
@@ -20,6 +21,12 @@ import { NodeForDescribeDBInstanceHAConfigOutput } from './node-for-describe-dbi
  * @interface DescribeDBInstanceHAConfigResponse
  */
 export interface DescribeDBInstanceHAConfigResponse {
+
+    /**
+     * @type {AutoStorageScalingConfigForDescribeDBInstanceHAConfigOutput}
+     * @memberof DescribeDBInstanceHAConfigResponse
+     */
+    AutoStorageScalingConfig?: AutoStorageScalingConfigForDescribeDBInstanceHAConfigOutput;
 
     /**
      * @type {string}

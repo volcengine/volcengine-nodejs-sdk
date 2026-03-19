@@ -24,11 +24,17 @@ export interface ConvertConvertSegmentForStartExecutionInput {
      * @type {number}
      * @memberof ConvertConvertSegmentForStartExecutionInput
      */
-    End?: number;
+    MaxDuration?: number;
 
     /**
      * @type {number}
      * @memberof ConvertConvertSegmentForStartExecutionInput
      */
-    Start?: number;
+    MinDuration?: number;
+
+    /**
+     * @type {number}
+     * @memberof ConvertConvertSegmentForStartExecutionInput
+     */
+    Threshold?: number;
 }

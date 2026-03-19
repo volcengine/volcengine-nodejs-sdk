@@ -13,7 +13,7 @@
  */
 
 import { CanvasForGetExecutionOutput } from './canvas-for-get-execution-output';
-import { OutputForGetExecutionOutput } from './output-for-get-execution-output';
+import { ConvertOutputForGetExecutionOutput } from './convert-output-for-get-execution-output';
  /**
  * 
  *
@@ -29,8 +29,8 @@ export interface CustomEditForGetExecutionOutput {
     Canvas?: CanvasForGetExecutionOutput;
 
     /**
-     * @type {OutputForGetExecutionOutput}
+     * @type {ConvertOutputForGetExecutionOutput}
      * @memberof CustomEditForGetExecutionOutput
      */
-    Output?: OutputForGetExecutionOutput;
+    Output?: ConvertOutputForGetExecutionOutput;
 }

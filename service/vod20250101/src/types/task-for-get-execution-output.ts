@@ -12,16 +12,19 @@
  * Do not edit the class manually.
  */
 
+import { ABRTranscodeForGetExecutionOutput } from './abrtranscode-for-get-execution-output';
 import { AdAuditForGetExecutionOutput } from './ad-audit-for-get-execution-output';
 import { AsrForGetExecutionOutput } from './asr-for-get-execution-output';
 import { AudioExtractForGetExecutionOutput } from './audio-extract-for-get-execution-output';
+import { ConvertFormatForGetExecutionOutput } from './convert-format-for-get-execution-output';
+import { ConvertSegmentForGetExecutionOutput } from './convert-segment-for-get-execution-output';
 import { EnhanceForGetExecutionOutput } from './enhance-for-get-execution-output';
 import { EraseForGetExecutionOutput } from './erase-for-get-execution-output';
 import { FileDeleteForGetExecutionOutput } from './file-delete-for-get-execution-output';
 import { HighlightForGetExecutionOutput } from './highlight-for-get-execution-output';
 import { OcrForGetExecutionOutput } from './ocr-for-get-execution-output';
-import { SegmentForGetExecutionOutput } from './segment-for-get-execution-output';
 import { StorylineForGetExecutionOutput } from './storyline-for-get-execution-output';
+import { TranscodeForGetExecutionOutput } from './transcode-for-get-execution-output';
 import { VideoGenerationForGetExecutionOutput } from './video-generation-for-get-execution-output';
 import { VideoMattingForGetExecutionOutput } from './video-matting-for-get-execution-output';
 import { VideoSummaryForGetExecutionOutput } from './video-summary-for-get-execution-output';
@@ -34,6 +37,12 @@ import { VisionForGetExecutionOutput } from './vision-for-get-execution-output';
  * @interface TaskForGetExecutionOutput
  */
 export interface TaskForGetExecutionOutput {
+
+    /**
+     * @type {ABRTranscodeForGetExecutionOutput}
+     * @memberof TaskForGetExecutionOutput
+     */
+    ABRTranscode?: ABRTranscodeForGetExecutionOutput;
 
     /**
      * @type {AdAuditForGetExecutionOutput}
@@ -52,6 +61,12 @@ export interface TaskForGetExecutionOutput {
      * @memberof TaskForGetExecutionOutput
      */
     AudioExtract?: AudioExtractForGetExecutionOutput;
+
+    /**
+     * @type {ConvertFormatForGetExecutionOutput}
+     * @memberof TaskForGetExecutionOutput
+     */
+    ConvertFormat?: ConvertFormatForGetExecutionOutput;
 
     /**
      * @type {EnhanceForGetExecutionOutput}
@@ -84,16 +99,28 @@ export interface TaskForGetExecutionOutput {
     Ocr?: OcrForGetExecutionOutput;
 
     /**
-     * @type {SegmentForGetExecutionOutput}
+     * @type {ConvertSegmentForGetExecutionOutput}
      * @memberof TaskForGetExecutionOutput
      */
-    Segment?: SegmentForGetExecutionOutput;
+    Segment?: ConvertSegmentForGetExecutionOutput;
 
     /**
      * @type {StorylineForGetExecutionOutput}
      * @memberof TaskForGetExecutionOutput
      */
     Storyline?: StorylineForGetExecutionOutput;
+
+    /**
+     * @type {string}
+     * @memberof TaskForGetExecutionOutput
+     */
+    StrategyTag?: string;
+
+    /**
+     * @type {TranscodeForGetExecutionOutput}
+     * @memberof TaskForGetExecutionOutput
+     */
+    Transcode?: TranscodeForGetExecutionOutput;
 
     /**
      * @type {string}

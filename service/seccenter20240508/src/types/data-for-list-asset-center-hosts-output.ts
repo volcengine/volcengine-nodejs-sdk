@@ -104,6 +104,12 @@ export interface DataForListAssetCenterHostsOutput {
      * @type {string}
      * @memberof DataForListAssetCenterHostsOutput
      */
+    GroupPathEn?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListAssetCenterHostsOutput
+     */
     KernelVersion?: string;
 
     /**
@@ -207,4 +213,10 @@ export interface DataForListAssetCenterHostsOutput {
      * @memberof DataForListAssetCenterHostsOutput
      */
     UserStatusReason?: string;
+
+    /**
+     * @type {number}
+     * @memberof DataForListAssetCenterHostsOutput
+     */
+    UserStatusReasonCode?: number;
 }

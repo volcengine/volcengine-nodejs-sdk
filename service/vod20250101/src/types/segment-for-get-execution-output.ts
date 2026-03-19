@@ -21,32 +21,20 @@
 export interface SegmentForGetExecutionOutput {
 
     /**
-     * @type {boolean}
-     * @memberof SegmentForGetExecutionOutput
-     */
-    ClipFade?: boolean;
-
-    /**
      * @type {number}
      * @memberof SegmentForGetExecutionOutput
      */
-    MaxDuration?: number;
+    Duration?: number;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof SegmentForGetExecutionOutput
      */
-    MinDuration?: number;
+    Format?: string;
 
     /**
-     * @type {boolean}
+     * @type {string}
      * @memberof SegmentForGetExecutionOutput
      */
-    NoFile?: boolean;
-
-    /**
-     * @type {number}
-     * @memberof SegmentForGetExecutionOutput
-     */
-    Threshold?: number;
+    Type?: string;
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { HostInfoForListBanIPListOutput } from './host-info-for-list-ban-iplist-output';
+import { EcsInstanceForListBanIPListOutput } from './ecs-instance-for-list-ban-iplist-output';
 import { RelateAlarmInfoForListBanIPListOutput } from './relate-alarm-info-for-list-ban-iplist-output';
  /**
  * 
@@ -27,6 +27,12 @@ export interface DataForListBanIPListOutput {
      * @memberof DataForListBanIPListOutput
      */
     AccountID?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListBanIPListOutput
+     */
+    AgentID?: string;
 
     /**
      * @type {number}
@@ -56,13 +62,43 @@ export interface DataForListBanIPListOutput {
      * @type {string}
      * @memberof DataForListBanIPListOutput
      */
+    CloudProvider?: string;
+
+    /**
+     * @type {EcsInstanceForListBanIPListOutput}
+     * @memberof DataForListBanIPListOutput
+     */
+    EcsInstance?: EcsInstanceForListBanIPListOutput;
+
+    /**
+     * @type {string}
+     * @memberof DataForListBanIPListOutput
+     */
+    GroupID?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListBanIPListOutput
+     */
     ID?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListBanIPListOutput
+     */
+    IPtablesID?: string;
 
     /**
      * @type {number}
      * @memberof DataForListBanIPListOutput
      */
     InsertTime?: number;
+
+    /**
+     * @type {string}
+     * @memberof DataForListBanIPListOutput
+     */
+    Platform?: string;
 
     /**
      * @type {number}
@@ -107,8 +143,20 @@ export interface DataForListBanIPListOutput {
     Status?: string;
 
     /**
-     * @type {HostInfoForListBanIPListOutput}
+     * @type {Array<string>}
      * @memberof DataForListBanIPListOutput
      */
-    hostInfo?: HostInfoForListBanIPListOutput;
+    Tags?: Array<string>;
+
+    /**
+     * @type {string}
+     * @memberof DataForListBanIPListOutput
+     */
+    TopGroupID?: string;
+
+    /**
+     * @type {number}
+     * @memberof DataForListBanIPListOutput
+     */
+    UpdateTime?: number;
 }

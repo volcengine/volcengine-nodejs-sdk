@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ReferenceDocForVideoProjectSerialDubTaskCreateInput } from './reference-doc-for-video-project-serial-dub-task-create-input';
 import { SuppressionParamsForVideoProjectSerialDubTaskCreateInput } from './suppression-params-for-video-project-serial-dub-task-create-input';
 import { TargetStyleMapForVideoProjectSerialDubTaskCreateInput } from './target-style-map-for-video-project-serial-dub-task-create-input';
  /**
@@ -47,10 +48,16 @@ export interface TaskInfoForVideoProjectSerialDubTaskCreateInput {
     comment?: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
      */
-    deadline?: number;
+    createdAt?: string;
+
+    /**
+     * @type {string}
+     * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
+     */
+    deadline?: string;
 
     /**
      * @type {string}
@@ -69,6 +76,12 @@ export interface TaskInfoForVideoProjectSerialDubTaskCreateInput {
      * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
      */
     dramaTitle?: string;
+
+    /**
+     * @type {string}
+     * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
+     */
+    dubOrTranslationTaskID?: string;
 
     /**
      * @type {boolean}
@@ -101,6 +114,24 @@ export interface TaskInfoForVideoProjectSerialDubTaskCreateInput {
     needTranslateTitleAndDesc?: boolean;
 
     /**
+     * @type {boolean}
+     * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
+     */
+    needVideoSpeed?: boolean;
+
+    /**
+     * @type {number}
+     * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
+     */
+    procedures?: number;
+
+    /**
+     * @type {ReferenceDocForVideoProjectSerialDubTaskCreateInput}
+     * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
+     */
+    referenceDoc?: ReferenceDocForVideoProjectSerialDubTaskCreateInput;
+
+    /**
      * @type {number}
      * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
      */
@@ -111,6 +142,18 @@ export interface TaskInfoForVideoProjectSerialDubTaskCreateInput {
      * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
      */
     sourceLang?: string;
+
+    /**
+     * @type {string}
+     * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
+     */
+    sourceLocale?: string;
+
+    /**
+     * @type {number}
+     * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
+     */
+    state?: number;
 
     /**
      * @type {SuppressionParamsForVideoProjectSerialDubTaskCreateInput}
@@ -125,10 +168,22 @@ export interface TaskInfoForVideoProjectSerialDubTaskCreateInput {
     targetLangs?: Array<string>;
 
     /**
+     * @type {Array<string>}
+     * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
+     */
+    targetLocale?: Array<string>;
+
+    /**
      * @type {TargetStyleMapForVideoProjectSerialDubTaskCreateInput}
      * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
      */
     targetStyleMap?: TargetStyleMapForVideoProjectSerialDubTaskCreateInput;
+
+    /**
+     * @type {number}
+     * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
+     */
+    taskId?: number;
 
     /**
      * @type {string}

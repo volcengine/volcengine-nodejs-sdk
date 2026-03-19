@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertConvertClipForGetExecutionOutput } from './convert-convert-clip-for-get-execution-output';
+import { ConvertConvertConvertClipForGetExecutionOutput } from './convert-convert-convert-clip-for-get-execution-output';
  /**
  * 
  *
@@ -22,8 +22,8 @@ import { ConvertConvertClipForGetExecutionOutput } from './convert-convert-clip-
 export interface CutForGetExecutionOutput {
 
     /**
-     * @type {Array<ConvertConvertClipForGetExecutionOutput>}
+     * @type {Array<ConvertConvertConvertClipForGetExecutionOutput>}
      * @memberof CutForGetExecutionOutput
      */
-    Clips?: Array<ConvertConvertClipForGetExecutionOutput>;
+    Clips?: Array<ConvertConvertConvertClipForGetExecutionOutput>;
 }

@@ -36,6 +36,12 @@ export interface RiskForGetOfflineNotificationListOutput {
      * @type {number}
      * @memberof RiskForGetOfflineNotificationListOutput
      */
+    RealRiskVul?: number;
+
+    /**
+     * @type {number}
+     * @memberof RiskForGetOfflineNotificationListOutput
+     */
     Virus?: number;
 
     /**

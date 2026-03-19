@@ -13,8 +13,6 @@
  */
 
 import { ConvertTaskForGetExecutionOutput } from './convert-task-for-get-execution-output';
-import { ConvertTemplateForGetExecutionOutput } from './convert-template-for-get-execution-output';
-import { ConvertWorkflowForGetExecutionOutput } from './convert-workflow-for-get-execution-output';
  /**
  * 
  *
@@ -30,20 +28,8 @@ export interface ConvertConvertOutputForGetExecutionOutput {
     Task?: ConvertTaskForGetExecutionOutput;
 
     /**
-     * @type {ConvertTemplateForGetExecutionOutput}
-     * @memberof ConvertConvertOutputForGetExecutionOutput
-     */
-    Template?: ConvertTemplateForGetExecutionOutput;
-
-    /**
      * @type {string}
      * @memberof ConvertConvertOutputForGetExecutionOutput
      */
     Type?: string;
-
-    /**
-     * @type {ConvertWorkflowForGetExecutionOutput}
-     * @memberof ConvertConvertOutputForGetExecutionOutput
-     */
-    Workflow?: ConvertWorkflowForGetExecutionOutput;
 }

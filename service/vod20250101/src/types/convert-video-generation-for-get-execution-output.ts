@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { VideoForGetExecutionOutput } from './video-for-get-execution-output';
+import { ConvertConvertVideoForGetExecutionOutput } from './convert-convert-video-for-get-execution-output';
  /**
  * 
  *
@@ -40,8 +40,8 @@ export interface ConvertVideoGenerationForGetExecutionOutput {
     Resolution?: string;
 
     /**
-     * @type {VideoForGetExecutionOutput}
+     * @type {ConvertConvertVideoForGetExecutionOutput}
      * @memberof ConvertVideoGenerationForGetExecutionOutput
      */
-    Video?: VideoForGetExecutionOutput;
+    Video?: ConvertConvertVideoForGetExecutionOutput;
 }

@@ -232,7 +232,6 @@ export type UpdateRuleCommandOutput = CommandOutput<UpdateRuleResponse>;
 export type UpdateSilencePolicyCommandOutput = CommandOutput<UpdateSilencePolicyResponse>;
 export type UpdateWebhookCommandOutput = CommandOutput<UpdateWebhookResponse>;
 
-
 /**
  * CLOUDMONITORClient Service Client
  */

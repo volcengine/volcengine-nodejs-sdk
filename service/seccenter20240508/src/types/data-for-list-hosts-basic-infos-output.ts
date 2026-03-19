@@ -31,6 +31,12 @@ export interface DataForListHostsBasicInfosOutput {
      * @type {string}
      * @memberof DataForListHostsBasicInfosOutput
      */
+    AccountID?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListHostsBasicInfosOutput
+     */
     AgentID?: string;
 
     /**
@@ -38,6 +44,12 @@ export interface DataForListHostsBasicInfosOutput {
      * @memberof DataForListHostsBasicInfosOutput
      */
     AgentStatus?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListHostsBasicInfosOutput
+     */
+    ClientPublicIP?: string;
 
     /**
      * @type {string}
@@ -97,6 +109,12 @@ export interface DataForListHostsBasicInfosOutput {
      * @type {string}
      * @memberof DataForListHostsBasicInfosOutput
      */
+    GroupPathEn?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListHostsBasicInfosOutput
+     */
     KernelVersion?: string;
 
     /**
@@ -112,6 +130,12 @@ export interface DataForListHostsBasicInfosOutput {
     MemUsage?: number;
 
     /**
+     * @type {number}
+     * @memberof DataForListHostsBasicInfosOutput
+     */
+    OldValidCode?: number;
+
+    /**
      * @type {boolean}
      * @memberof DataForListHostsBasicInfosOutput
      */
@@ -122,6 +146,12 @@ export interface DataForListHostsBasicInfosOutput {
      * @memberof DataForListHostsBasicInfosOutput
      */
     Platform?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListHostsBasicInfosOutput
+     */
+    PlatformVersion?: string;
 
     /**
      * @type {string}
@@ -182,4 +212,10 @@ export interface DataForListHostsBasicInfosOutput {
      * @memberof DataForListHostsBasicInfosOutput
      */
     UserStatusReason?: string;
+
+    /**
+     * @type {number}
+     * @memberof DataForListHostsBasicInfosOutput
+     */
+    UserStatusReasonCode?: number;
 }
