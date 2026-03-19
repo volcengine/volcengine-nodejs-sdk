@@ -95,6 +95,12 @@ export interface RestoreToNewInstanceFromUserTosRequest {
      * @type {string}
      * @memberof RestoreToNewInstanceFromUserTosRequest
      */
+    PrivateIpAddress?: string;
+
+    /**
+     * @type {string}
+     * @memberof RestoreToNewInstanceFromUserTosRequest
+     */
     ProjectName?: string;
 
     /**

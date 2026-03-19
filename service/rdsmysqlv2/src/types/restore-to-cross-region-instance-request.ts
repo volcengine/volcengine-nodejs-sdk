@@ -95,6 +95,12 @@ export interface RestoreToCrossRegionInstanceRequest {
      * @type {string}
      * @memberof RestoreToCrossRegionInstanceRequest
      */
+    PrivateIpAddress?: string;
+
+    /**
+     * @type {string}
+     * @memberof RestoreToCrossRegionInstanceRequest
+     */
     ProjectName?: string;
 
     /**

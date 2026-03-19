@@ -12,23 +12,18 @@
  * Do not edit the class manually.
  */
 
+import { AllowListForDescribeAllowListsOutput } from './allow-list-for-describe-allow-lists-output';
  /**
  * 
  *
  * @export
- * @interface CheckDetailForDescribeTaskDetailOutput
+ * @interface DescribeAllowListsResponse
  */
-export interface CheckDetailForDescribeTaskDetailOutput {
+export interface DescribeAllowListsResponse {
 
     /**
-     * @type {string}
-     * @memberof CheckDetailForDescribeTaskDetailOutput
+     * @type {Array<AllowListForDescribeAllowListsOutput>}
+     * @memberof DescribeAllowListsResponse
      */
-    Impact?: string;
-
-    /**
-     * @type {string}
-     * @memberof CheckDetailForDescribeTaskDetailOutput
-     */
-    Issue?: string;
+    AllowLists?: Array<AllowListForDescribeAllowListsOutput>;
 }

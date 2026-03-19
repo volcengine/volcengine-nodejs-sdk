@@ -27,6 +27,12 @@ export interface AutoStorageScalingConfigForRestoreToNewInstanceFromUserTosInput
     EnableStorageAutoScale?: boolean;
 
     /**
+     * @type {string}
+     * @memberof AutoStorageScalingConfigForRestoreToNewInstanceFromUserTosInput
+     */
+    ScalingDetectNode?: string;
+
+    /**
      * @type {number}
      * @memberof AutoStorageScalingConfigForRestoreToNewInstanceFromUserTosInput
      */
