@@ -153,6 +153,8 @@ export enum SecretForCreateSecretOutputSecretTypeEnum {
     IAM = 'IAM',
     RDS = 'RDS',
     Redis = 'Redis',
-    ECS = 'ECS'
+    ECS = 'ECS',
+    PGSQL = 'PGSQL',
+    SQLServer = 'SQLServer'
 }
 
