@@ -21,10 +21,10 @@
 export interface ProjectNamespaceDetailRequest {
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof ProjectNamespaceDetailRequest
      */
-    namespaceId: string;
+    namespaceId: number;
 
     /**
      * @type {number}
