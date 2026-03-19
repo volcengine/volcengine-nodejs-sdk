@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ReferenceDocForVideoProjectSerialTaskCreateInput } from './reference-doc-for-video-project-serial-task-create-input';
 import { SuppressionParamsForVideoProjectSerialTaskCreateInput } from './suppression-params-for-video-project-serial-task-create-input';
 import { TargetStyleMapForVideoProjectSerialTaskCreateInput } from './target-style-map-for-video-project-serial-task-create-input';
  /**
@@ -47,10 +48,16 @@ export interface TaskInfoForVideoProjectSerialTaskCreateInput {
     comment?: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
      */
-    deadline?: number;
+    createdAt?: string;
+
+    /**
+     * @type {string}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
+    deadline?: string;
 
     /**
      * @type {string}
@@ -69,6 +76,12 @@ export interface TaskInfoForVideoProjectSerialTaskCreateInput {
      * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
      */
     dramaTitle?: string;
+
+    /**
+     * @type {string}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
+    dubOrTranslationTaskID?: string;
 
     /**
      * @type {boolean}
@@ -110,6 +123,18 @@ export interface TaskInfoForVideoProjectSerialTaskCreateInput {
      * @type {number}
      * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
      */
+    procedures?: number;
+
+    /**
+     * @type {ReferenceDocForVideoProjectSerialTaskCreateInput}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
+    referenceDoc?: ReferenceDocForVideoProjectSerialTaskCreateInput;
+
+    /**
+     * @type {number}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
     serialNumber?: number;
 
     /**
@@ -117,6 +142,18 @@ export interface TaskInfoForVideoProjectSerialTaskCreateInput {
      * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
      */
     sourceLang?: string;
+
+    /**
+     * @type {string}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
+    sourceLocale?: string;
+
+    /**
+     * @type {number}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
+    state?: number;
 
     /**
      * @type {SuppressionParamsForVideoProjectSerialTaskCreateInput}
@@ -131,10 +168,22 @@ export interface TaskInfoForVideoProjectSerialTaskCreateInput {
     targetLangs?: Array<string>;
 
     /**
+     * @type {Array<string>}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
+    targetLocale?: Array<string>;
+
+    /**
      * @type {TargetStyleMapForVideoProjectSerialTaskCreateInput}
      * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
      */
     targetStyleMap?: TargetStyleMapForVideoProjectSerialTaskCreateInput;
+
+    /**
+     * @type {number}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
+    taskId?: number;
 
     /**
      * @type {string}

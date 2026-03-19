@@ -15,6 +15,7 @@
 import { DeletePolicyForDescribeDataFlowTasksOutput } from './delete-policy-for-describe-data-flow-tasks-output';
 import { EntryListFileInfoForDescribeDataFlowTasksOutput } from './entry-list-file-info-for-describe-data-flow-tasks-output';
 import { ReportForDescribeDataFlowTasksOutput } from './report-for-describe-data-flow-tasks-output';
+import { TlsInfoForDescribeDataFlowTasksOutput } from './tls-info-for-describe-data-flow-tasks-output';
  /**
  * 
  *
@@ -160,6 +161,12 @@ export interface DataFlowTaskForDescribeDataFlowTasksOutput {
      * @memberof DataFlowTaskForDescribeDataFlowTasksOutput
      */
     TaskAction?: DataFlowTaskForDescribeDataFlowTasksOutputTaskActionEnum;
+
+    /**
+     * @type {TlsInfoForDescribeDataFlowTasksOutput}
+     * @memberof DataFlowTaskForDescribeDataFlowTasksOutput
+     */
+    TlsInfo?: TlsInfoForDescribeDataFlowTasksOutput;
 
     /**
      * @type {string}
