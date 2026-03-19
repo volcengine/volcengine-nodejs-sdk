@@ -27,6 +27,12 @@ export interface AutoStorageScalingConfigForRestoreToCrossRegionInstanceInput {
     EnableStorageAutoScale?: boolean;
 
     /**
+     * @type {string}
+     * @memberof AutoStorageScalingConfigForRestoreToCrossRegionInstanceInput
+     */
+    ScalingDetectNode?: string;
+
+    /**
      * @type {number}
      * @memberof AutoStorageScalingConfigForRestoreToCrossRegionInstanceInput
      */

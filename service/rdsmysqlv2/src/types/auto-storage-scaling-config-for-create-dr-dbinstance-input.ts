@@ -27,6 +27,12 @@ export interface AutoStorageScalingConfigForCreateDrDBInstanceInput {
     EnableStorageAutoScale?: boolean;
 
     /**
+     * @type {string}
+     * @memberof AutoStorageScalingConfigForCreateDrDBInstanceInput
+     */
+    ScalingDetectNode?: string;
+
+    /**
      * @type {number}
      * @memberof AutoStorageScalingConfigForCreateDrDBInstanceInput
      */

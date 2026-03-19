@@ -95,6 +95,12 @@ export interface RebuildDBInstanceRequest {
      * @type {string}
      * @memberof RebuildDBInstanceRequest
      */
+    PrivateIpAddress?: string;
+
+    /**
+     * @type {string}
+     * @memberof RebuildDBInstanceRequest
+     */
     ProjectName?: string;
 
     /**

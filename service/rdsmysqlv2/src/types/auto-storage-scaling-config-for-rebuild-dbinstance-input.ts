@@ -27,6 +27,12 @@ export interface AutoStorageScalingConfigForRebuildDBInstanceInput {
     EnableStorageAutoScale?: boolean;
 
     /**
+     * @type {string}
+     * @memberof AutoStorageScalingConfigForRebuildDBInstanceInput
+     */
+    ScalingDetectNode?: string;
+
+    /**
      * @type {number}
      * @memberof AutoStorageScalingConfigForRebuildDBInstanceInput
      */

@@ -47,6 +47,12 @@ export interface CreateDataFlowTaskRequest {
     DeletePolicy?: DeletePolicyForCreateDataFlowTaskInput;
 
     /**
+     * @type {boolean}
+     * @memberof CreateDataFlowTaskRequest
+     */
+    EnableTlsLog?: boolean;
+
+    /**
      * @type {EntryListFileInfoForCreateDataFlowTaskInput}
      * @memberof CreateDataFlowTaskRequest
      */

@@ -18,6 +18,10 @@ import { CreateInstanceOneStepRequest } from './types/index';
 import { CreateInstanceOneStepResponse } from './types/index';
 import { CreateInstanceRequest } from './types/index';
 import { CreateInstanceResponse } from './types/index';
+import { DescribeAvailableSpecRequest } from './types/index';
+import { DescribeAvailableSpecResponse } from './types/index';
+import { DescribeAvailableVersionRequest } from './types/index';
+import { DescribeAvailableVersionResponse } from './types/index';
 import { DescribeConfigModulesRequest } from './types/index';
 import { DescribeConfigModulesResponse } from './types/index';
 import { DescribeInstanceConfigRequest } from './types/index';
@@ -28,8 +32,26 @@ import { DescribeInstancesRequest } from './types/index';
 import { DescribeInstancesResponse } from './types/index';
 import { DescribeNodeInfoRequest } from './types/index';
 import { DescribeNodeInfoResponse } from './types/index';
+import { DescribePriceRequest } from './types/index';
+import { DescribePriceResponse } from './types/index';
+import { DescribeZonesRequest } from './types/index';
+import { DescribeZonesResponse } from './types/index';
 import { ListTagsForResourcesRequest } from './types/index';
 import { ListTagsForResourcesResponse } from './types/index';
+import { MSCreateInstanceOneStepRequest } from './types/index';
+import { MSCreateInstanceOneStepResponse } from './types/index';
+import { MSCreateInstanceRequest } from './types/index';
+import { MSCreateInstanceResponse } from './types/index';
+import { MSDescribeInstanceRequest } from './types/index';
+import { MSDescribeInstanceResponse } from './types/index';
+import { MSDescribeInstancesRequest } from './types/index';
+import { MSDescribeInstancesResponse } from './types/index';
+import { MSModifyEndpointAllowGroupRequest } from './types/index';
+import { MSModifyEndpointAllowGroupResponse } from './types/index';
+import { MSModifyPublicDomainRequest } from './types/index';
+import { MSModifyPublicDomainResponse } from './types/index';
+import { MSReleaseInstanceRequest } from './types/index';
+import { MSReleaseInstanceResponse } from './types/index';
 import { ModifyDeleteProtectRequest } from './types/index';
 import { ModifyDeleteProtectResponse } from './types/index';
 import { ModifyInstanceConfigRequest } from './types/index';
@@ -56,12 +78,23 @@ import { UntagResourcesResponse } from './types/index';
 // ============================================================================
 export type CreateInstanceCommandOutput = CommandOutput<CreateInstanceResponse>;
 export type CreateInstanceOneStepCommandOutput = CommandOutput<CreateInstanceOneStepResponse>;
+export type DescribeAvailableSpecCommandOutput = CommandOutput<DescribeAvailableSpecResponse>;
+export type DescribeAvailableVersionCommandOutput = CommandOutput<DescribeAvailableVersionResponse>;
 export type DescribeConfigModulesCommandOutput = CommandOutput<DescribeConfigModulesResponse>;
 export type DescribeInstanceConfigCommandOutput = CommandOutput<DescribeInstanceConfigResponse>;
 export type DescribeInstanceDetailCommandOutput = CommandOutput<DescribeInstanceDetailResponse>;
 export type DescribeInstancesCommandOutput = CommandOutput<DescribeInstancesResponse>;
 export type DescribeNodeInfoCommandOutput = CommandOutput<DescribeNodeInfoResponse>;
+export type DescribePriceCommandOutput = CommandOutput<DescribePriceResponse>;
+export type DescribeZonesCommandOutput = CommandOutput<DescribeZonesResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
+export type MSCreateInstanceCommandOutput = CommandOutput<MSCreateInstanceResponse>;
+export type MSCreateInstanceOneStepCommandOutput = CommandOutput<MSCreateInstanceOneStepResponse>;
+export type MSDescribeInstanceCommandOutput = CommandOutput<MSDescribeInstanceResponse>;
+export type MSDescribeInstancesCommandOutput = CommandOutput<MSDescribeInstancesResponse>;
+export type MSModifyEndpointAllowGroupCommandOutput = CommandOutput<MSModifyEndpointAllowGroupResponse>;
+export type MSModifyPublicDomainCommandOutput = CommandOutput<MSModifyPublicDomainResponse>;
+export type MSReleaseInstanceCommandOutput = CommandOutput<MSReleaseInstanceResponse>;
 export type ModifyDeleteProtectCommandOutput = CommandOutput<ModifyDeleteProtectResponse>;
 export type ModifyInstanceConfigCommandOutput = CommandOutput<ModifyInstanceConfigResponse>;
 export type ModifyInstanceNameCommandOutput = CommandOutput<ModifyInstanceNameResponse>;
@@ -72,7 +105,6 @@ export type ReleaseInstanceCommandOutput = CommandOutput<ReleaseInstanceResponse
 export type ScaleInstanceCommandOutput = CommandOutput<ScaleInstanceResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
-
 
 /**
  * MILVUSClient Service Client
@@ -115,6 +147,36 @@ export class CreateInstanceOneStepCommand extends Command<
   constructor(input: CreateInstanceOneStepRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateInstanceOneStepCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAvailableSpec
+ */
+export class DescribeAvailableSpecCommand extends Command<
+  DescribeAvailableSpecRequest,
+  DescribeAvailableSpecCommandOutput,
+  'DescribeAvailableSpecCommand'
+> {
+  static readonly metaPath = '/DescribeAvailableSpec/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: DescribeAvailableSpecRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAvailableSpecCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAvailableVersion
+ */
+export class DescribeAvailableVersionCommand extends Command<
+  DescribeAvailableVersionRequest,
+  DescribeAvailableVersionCommandOutput,
+  'DescribeAvailableVersionCommand'
+> {
+  static readonly metaPath = '/DescribeAvailableVersion/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: DescribeAvailableVersionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAvailableVersionCommand.metaPath);
   }
 }
 /**
@@ -193,6 +255,36 @@ export class DescribeNodeInfoCommand extends Command<
   }
 }
 /**
+ * Command to DescribePrice
+ */
+export class DescribePriceCommand extends Command<
+  DescribePriceRequest,
+  DescribePriceCommandOutput,
+  'DescribePriceCommand'
+> {
+  static readonly metaPath = '/DescribePrice/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: DescribePriceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePriceCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeZones
+ */
+export class DescribeZonesCommand extends Command<
+  DescribeZonesRequest,
+  DescribeZonesCommandOutput,
+  'DescribeZonesCommand'
+> {
+  static readonly metaPath = '/DescribeZones/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: DescribeZonesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeZonesCommand.metaPath);
+  }
+}
+/**
  * Command to ListTagsForResources
  */
 export class ListTagsForResourcesCommand extends Command<
@@ -205,6 +297,111 @@ export class ListTagsForResourcesCommand extends Command<
   constructor(input: ListTagsForResourcesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListTagsForResourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to MSCreateInstance
+ */
+export class MSCreateInstanceCommand extends Command<
+  MSCreateInstanceRequest,
+  MSCreateInstanceCommandOutput,
+  'MSCreateInstanceCommand'
+> {
+  static readonly metaPath = '/MSCreateInstance/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: MSCreateInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(MSCreateInstanceCommand.metaPath);
+  }
+}
+/**
+ * Command to MSCreateInstanceOneStep
+ */
+export class MSCreateInstanceOneStepCommand extends Command<
+  MSCreateInstanceOneStepRequest,
+  MSCreateInstanceOneStepCommandOutput,
+  'MSCreateInstanceOneStepCommand'
+> {
+  static readonly metaPath = '/MSCreateInstanceOneStep/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: MSCreateInstanceOneStepRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(MSCreateInstanceOneStepCommand.metaPath);
+  }
+}
+/**
+ * Command to MSDescribeInstance
+ */
+export class MSDescribeInstanceCommand extends Command<
+  MSDescribeInstanceRequest,
+  MSDescribeInstanceCommandOutput,
+  'MSDescribeInstanceCommand'
+> {
+  static readonly metaPath = '/MSDescribeInstance/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: MSDescribeInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(MSDescribeInstanceCommand.metaPath);
+  }
+}
+/**
+ * Command to MSDescribeInstances
+ */
+export class MSDescribeInstancesCommand extends Command<
+  MSDescribeInstancesRequest,
+  MSDescribeInstancesCommandOutput,
+  'MSDescribeInstancesCommand'
+> {
+  static readonly metaPath = '/MSDescribeInstances/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: MSDescribeInstancesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(MSDescribeInstancesCommand.metaPath);
+  }
+}
+/**
+ * Command to MSModifyEndpointAllowGroup
+ */
+export class MSModifyEndpointAllowGroupCommand extends Command<
+  MSModifyEndpointAllowGroupRequest,
+  MSModifyEndpointAllowGroupCommandOutput,
+  'MSModifyEndpointAllowGroupCommand'
+> {
+  static readonly metaPath = '/MSModifyEndpointAllowGroup/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: MSModifyEndpointAllowGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(MSModifyEndpointAllowGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to MSModifyPublicDomain
+ */
+export class MSModifyPublicDomainCommand extends Command<
+  MSModifyPublicDomainRequest,
+  MSModifyPublicDomainCommandOutput,
+  'MSModifyPublicDomainCommand'
+> {
+  static readonly metaPath = '/MSModifyPublicDomain/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: MSModifyPublicDomainRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(MSModifyPublicDomainCommand.metaPath);
+  }
+}
+/**
+ * Command to MSReleaseInstance
+ */
+export class MSReleaseInstanceCommand extends Command<
+  MSReleaseInstanceRequest,
+  MSReleaseInstanceCommandOutput,
+  'MSReleaseInstanceCommand'
+> {
+  static readonly metaPath = '/MSReleaseInstance/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: MSReleaseInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(MSReleaseInstanceCommand.metaPath);
   }
 }
 /**
@@ -362,12 +559,23 @@ export default {
   MILVUSClient,
   CreateInstanceCommand,
   CreateInstanceOneStepCommand,
+  DescribeAvailableSpecCommand,
+  DescribeAvailableVersionCommand,
   DescribeConfigModulesCommand,
   DescribeInstanceConfigCommand,
   DescribeInstanceDetailCommand,
   DescribeInstancesCommand,
   DescribeNodeInfoCommand,
+  DescribePriceCommand,
+  DescribeZonesCommand,
   ListTagsForResourcesCommand,
+  MSCreateInstanceCommand,
+  MSCreateInstanceOneStepCommand,
+  MSDescribeInstanceCommand,
+  MSDescribeInstancesCommand,
+  MSModifyEndpointAllowGroupCommand,
+  MSModifyPublicDomainCommand,
+  MSReleaseInstanceCommand,
   ModifyDeleteProtectCommand,
   ModifyInstanceConfigCommand,
   ModifyInstanceNameCommand,
