@@ -80,6 +80,8 @@ export * from './reset-subscription-offset-response';
 export * from './resource-tag-for-describe-instance-output';
 export * from './resource-tag-for-search-instances-output';
 export * from './resources-for-describe-instance-output';
+export * from './scale-down-instance-request';
+export * from './scale-down-instance-response';
 export * from './scale-up-topic-request';
 export * from './scale-up-topic-response';
 export * from './search-groups-request';
