@@ -40,7 +40,6 @@ export type RefreshDeviceCredentialCommandOutput = CommandOutput<RefreshDeviceCr
 export type RegisterDeviceCredentialCommandOutput = CommandOutput<RegisterDeviceCredentialResponse>;
 export type UnRegisterDeviceCredentialCommandOutput = CommandOutput<UnRegisterDeviceCredentialResponse>;
 
-
 /**
  * BMQ20240901Client Service Client
  */
