@@ -16,25 +16,7 @@
  * 
  *
  * @export
- * @interface TransitionSandboxResponse
+ * @interface UpsertSecretTokenResponse
  */
-export interface TransitionSandboxResponse {
-
-    /**
-     * @type {string}
-     * @memberof TransitionSandboxResponse
-     */
-    FunctionId?: string;
-
-    /**
-     * @type {string}
-     * @memberof TransitionSandboxResponse
-     */
-    SandboxId?: string;
-
-    /**
-     * @type {string}
-     * @memberof TransitionSandboxResponse
-     */
-    Status?: string;
+export interface UpsertSecretTokenResponse {
 }

@@ -71,6 +71,12 @@ export interface CreateFunctionRequest {
     EnableApmplus?: boolean;
 
     /**
+     * @type {string}
+     * @memberof CreateFunctionRequest
+     */
+    EnableZTIToken?: string;
+
+    /**
      * @type {Array<EnvForCreateFunctionInput>}
      * @memberof CreateFunctionRequest
      */

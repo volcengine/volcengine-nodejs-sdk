@@ -106,8 +106,6 @@ import { TerminateAsyncTaskRequest } from './types/index';
 import { TerminateAsyncTaskResponse } from './types/index';
 import { TerminateDependencyInstallTaskRequest } from './types/index';
 import { TerminateDependencyInstallTaskResponse } from './types/index';
-import { TransitionSandboxRequest } from './types/index';
-import { TransitionSandboxResponse } from './types/index';
 import { UpdateFunctionMetricScaleStrategyRulesRequest } from './types/index';
 import { UpdateFunctionMetricScaleStrategyRulesResponse } from './types/index';
 import { UpdateFunctionRequest } from './types/index';
@@ -120,6 +118,8 @@ import { UpdateReleaseRequest } from './types/index';
 import { UpdateReleaseResponse } from './types/index';
 import { UpdateTimerRequest } from './types/index';
 import { UpdateTimerResponse } from './types/index';
+import { UpsertSecretTokenRequest } from './types/index';
+import { UpsertSecretTokenResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
@@ -170,14 +170,13 @@ export type ReleaseCommandOutput = CommandOutput<ReleaseResponse>;
 export type SetSandboxTimeoutCommandOutput = CommandOutput<SetSandboxTimeoutResponse>;
 export type TerminateAsyncTaskCommandOutput = CommandOutput<TerminateAsyncTaskResponse>;
 export type TerminateDependencyInstallTaskCommandOutput = CommandOutput<TerminateDependencyInstallTaskResponse>;
-export type TransitionSandboxCommandOutput = CommandOutput<TransitionSandboxResponse>;
 export type UpdateFunctionCommandOutput = CommandOutput<UpdateFunctionResponse>;
 export type UpdateFunctionMetricScaleStrategyRulesCommandOutput = CommandOutput<UpdateFunctionMetricScaleStrategyRulesResponse>;
 export type UpdateFunctionResourceCommandOutput = CommandOutput<UpdateFunctionResourceResponse>;
 export type UpdateKafkaTriggerCommandOutput = CommandOutput<UpdateKafkaTriggerResponse>;
 export type UpdateReleaseCommandOutput = CommandOutput<UpdateReleaseResponse>;
 export type UpdateTimerCommandOutput = CommandOutput<UpdateTimerResponse>;
-
+export type UpsertSecretTokenCommandOutput = CommandOutput<UpsertSecretTokenResponse>;
 
 /**
  * VEFAASClient Service Client
@@ -883,21 +882,6 @@ export class TerminateDependencyInstallTaskCommand extends Command<
   }
 }
 /**
- * Command to TransitionSandbox
- */
-export class TransitionSandboxCommand extends Command<
-  TransitionSandboxRequest,
-  TransitionSandboxCommandOutput,
-  'TransitionSandboxCommand'
-> {
-  static readonly metaPath = '/TransitionSandbox/2024-06-06/vefaas/post/application_json/';
-
-  constructor(input: TransitionSandboxRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(TransitionSandboxCommand.metaPath);
-  }
-}
-/**
  * Command to UpdateFunction
  */
 export class UpdateFunctionCommand extends Command<
@@ -987,6 +971,21 @@ export class UpdateTimerCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateTimerCommand.metaPath);
   }
 }
+/**
+ * Command to UpsertSecretToken
+ */
+export class UpsertSecretTokenCommand extends Command<
+  UpsertSecretTokenRequest,
+  UpsertSecretTokenCommandOutput,
+  'UpsertSecretTokenCommand'
+> {
+  static readonly metaPath = '/UpsertSecretToken/2024-06-06/vefaas/post/application_json/';
+
+  constructor(input: UpsertSecretTokenRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpsertSecretTokenCommand.metaPath);
+  }
+}
 
 export default {
   VEFAASClient,
@@ -1036,11 +1035,11 @@ export default {
   SetSandboxTimeoutCommand,
   TerminateAsyncTaskCommand,
   TerminateDependencyInstallTaskCommand,
-  TransitionSandboxCommand,
   UpdateFunctionCommand,
   UpdateFunctionMetricScaleStrategyRulesCommand,
   UpdateFunctionResourceCommand,
   UpdateKafkaTriggerCommand,
   UpdateReleaseCommand,
   UpdateTimerCommand,
+  UpsertSecretTokenCommand,
 };
