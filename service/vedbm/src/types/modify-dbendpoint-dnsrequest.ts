@@ -19,4 +19,37 @@
  * @interface ModifyDBEndpointDNSRequest
  */
 export interface ModifyDBEndpointDNSRequest {
+
+    /**
+     * @type {boolean}
+     * @memberof ModifyDBEndpointDNSRequest
+     */
+    DNSVisibility: boolean;
+
+    /**
+     * @type {string}
+     * @memberof ModifyDBEndpointDNSRequest
+     */
+    EndpointId: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyDBEndpointDNSRequest
+     */
+    InstanceId: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyDBEndpointDNSRequest
+     */
+    NetworkType: ModifyDBEndpointDNSRequestNetworkTypeEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ModifyDBEndpointDNSRequestNetworkTypeEnum {
+    Private = 'Private'
+}
+
