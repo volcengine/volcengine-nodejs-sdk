@@ -616,6 +616,19 @@ importers:
         specifier: ^5.2.2
         version: 5.9.3
 
+  service/emr:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.29
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
   service/escloud:
     dependencies:
       '@volcengine/sdk-core':
@@ -773,6 +786,19 @@ importers:
         version: 5.9.3
 
   service/id:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.29
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/insight:
     dependencies:
       '@volcengine/sdk-core':
         specifier: workspace:*
