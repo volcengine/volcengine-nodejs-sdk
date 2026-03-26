@@ -1,6 +1,6 @@
 {
   "name": "@volcengine/bmq20240901",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "swagger client for @volcengine/bmq20240901",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",

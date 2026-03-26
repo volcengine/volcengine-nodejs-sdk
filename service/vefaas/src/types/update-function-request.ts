@@ -59,6 +59,12 @@ export interface UpdateFunctionRequest {
     EnableApmplus?: boolean;
 
     /**
+     * @type {string}
+     * @memberof UpdateFunctionRequest
+     */
+    EnableZTIToken?: string;
+
+    /**
      * @type {Array<EnvForUpdateFunctionInput>}
      * @memberof UpdateFunctionRequest
      */
