@@ -74,6 +74,8 @@ import { PreviewTopicDataRequest } from './types/index';
 import { PreviewTopicDataResponse } from './types/index';
 import { ResetSubscriptionOffsetRequest } from './types/index';
 import { ResetSubscriptionOffsetResponse } from './types/index';
+import { ScaleDownInstanceRequest } from './types/index';
+import { ScaleDownInstanceResponse } from './types/index';
 import { ScaleUpTopicRequest } from './types/index';
 import { ScaleUpTopicResponse } from './types/index';
 import { SearchGroupsRequest } from './types/index';
@@ -122,6 +124,7 @@ export type ModifyInstanceTagCommandOutput = CommandOutput<ModifyInstanceTagResp
 export type ModifyOverlayAccessCommandOutput = CommandOutput<ModifyOverlayAccessResponse>;
 export type PreviewTopicDataCommandOutput = CommandOutput<PreviewTopicDataResponse>;
 export type ResetSubscriptionOffsetCommandOutput = CommandOutput<ResetSubscriptionOffsetResponse>;
+export type ScaleDownInstanceCommandOutput = CommandOutput<ScaleDownInstanceResponse>;
 export type ScaleUpTopicCommandOutput = CommandOutput<ScaleUpTopicResponse>;
 export type SearchGroupsCommandOutput = CommandOutput<SearchGroupsResponse>;
 export type SearchInstancesCommandOutput = CommandOutput<SearchInstancesResponse>;
@@ -129,7 +132,6 @@ export type SearchTopicsCommandOutput = CommandOutput<SearchTopicsResponse>;
 export type TopicExistCommandOutput = CommandOutput<TopicExistResponse>;
 export type UpdateInstanceMessageRetentionCommandOutput = CommandOutput<UpdateInstanceMessageRetentionResponse>;
 export type UpdateTopicMessageRetentionCommandOutput = CommandOutput<UpdateTopicMessageRetentionResponse>;
-
 
 /**
  * BMQClient Service Client
@@ -595,6 +597,21 @@ export class ResetSubscriptionOffsetCommand extends Command<
   }
 }
 /**
+ * Command to ScaleDownInstance
+ */
+export class ScaleDownInstanceCommand extends Command<
+  ScaleDownInstanceRequest,
+  ScaleDownInstanceCommandOutput,
+  'ScaleDownInstanceCommand'
+> {
+  static readonly metaPath = '/ScaleDownInstance/2023-06-01/bmq/post/application_json/';
+
+  constructor(input: ScaleDownInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ScaleDownInstanceCommand.metaPath);
+  }
+}
+/**
  * Command to ScaleUpTopic
  */
 export class ScaleUpTopicCommand extends Command<
@@ -732,6 +749,7 @@ export default {
   ModifyOverlayAccessCommand,
   PreviewTopicDataCommand,
   ResetSubscriptionOffsetCommand,
+  ScaleDownInstanceCommand,
   ScaleUpTopicCommand,
   SearchGroupsCommand,
   SearchInstancesCommand,
