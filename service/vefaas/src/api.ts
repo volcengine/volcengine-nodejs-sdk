@@ -94,12 +94,16 @@ import { ListSandboxesRequest } from './types/index';
 import { ListSandboxesResponse } from './types/index';
 import { ListTriggersRequest } from './types/index';
 import { ListTriggersResponse } from './types/index';
+import { PauseSandboxRequest } from './types/index';
+import { PauseSandboxResponse } from './types/index';
 import { PrecacheSandboxImagesRequest } from './types/index';
 import { PrecacheSandboxImagesResponse } from './types/index';
 import { QueryUserCrVpcTunnelRequest } from './types/index';
 import { QueryUserCrVpcTunnelResponse } from './types/index';
 import { ReleaseRequest } from './types/index';
 import { ReleaseResponse } from './types/index';
+import { ResumeSandboxRequest } from './types/index';
+import { ResumeSandboxResponse } from './types/index';
 import { SetSandboxTimeoutRequest } from './types/index';
 import { SetSandboxTimeoutResponse } from './types/index';
 import { TerminateAsyncTaskRequest } from './types/index';
@@ -164,9 +168,11 @@ export type ListSandboxImagePrecacheTicketsCommandOutput = CommandOutput<ListSan
 export type ListSandboxImagesCommandOutput = CommandOutput<ListSandboxImagesResponse>;
 export type ListSandboxesCommandOutput = CommandOutput<ListSandboxesResponse>;
 export type ListTriggersCommandOutput = CommandOutput<ListTriggersResponse>;
+export type PauseSandboxCommandOutput = CommandOutput<PauseSandboxResponse>;
 export type PrecacheSandboxImagesCommandOutput = CommandOutput<PrecacheSandboxImagesResponse>;
 export type QueryUserCrVpcTunnelCommandOutput = CommandOutput<QueryUserCrVpcTunnelResponse>;
 export type ReleaseCommandOutput = CommandOutput<ReleaseResponse>;
+export type ResumeSandboxCommandOutput = CommandOutput<ResumeSandboxResponse>;
 export type SetSandboxTimeoutCommandOutput = CommandOutput<SetSandboxTimeoutResponse>;
 export type TerminateAsyncTaskCommandOutput = CommandOutput<TerminateAsyncTaskResponse>;
 export type TerminateDependencyInstallTaskCommandOutput = CommandOutput<TerminateDependencyInstallTaskResponse>;
@@ -792,6 +798,21 @@ export class ListTriggersCommand extends Command<
   }
 }
 /**
+ * Command to PauseSandbox
+ */
+export class PauseSandboxCommand extends Command<
+  PauseSandboxRequest,
+  PauseSandboxCommandOutput,
+  'PauseSandboxCommand'
+> {
+  static readonly metaPath = '/PauseSandbox/2024-06-06/vefaas/post/application_json/';
+
+  constructor(input: PauseSandboxRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(PauseSandboxCommand.metaPath);
+  }
+}
+/**
  * Command to PrecacheSandboxImages
  */
 export class PrecacheSandboxImagesCommand extends Command<
@@ -834,6 +855,21 @@ export class ReleaseCommand extends Command<
   constructor(input: ReleaseRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ReleaseCommand.metaPath);
+  }
+}
+/**
+ * Command to ResumeSandbox
+ */
+export class ResumeSandboxCommand extends Command<
+  ResumeSandboxRequest,
+  ResumeSandboxCommandOutput,
+  'ResumeSandboxCommand'
+> {
+  static readonly metaPath = '/ResumeSandbox/2024-06-06/vefaas/post/application_json/';
+
+  constructor(input: ResumeSandboxRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ResumeSandboxCommand.metaPath);
   }
 }
 /**
@@ -1029,9 +1065,11 @@ export default {
   ListSandboxImagesCommand,
   ListSandboxesCommand,
   ListTriggersCommand,
+  PauseSandboxCommand,
   PrecacheSandboxImagesCommand,
   QueryUserCrVpcTunnelCommand,
   ReleaseCommand,
+  ResumeSandboxCommand,
   SetSandboxTimeoutCommand,
   TerminateAsyncTaskCommand,
   TerminateDependencyInstallTaskCommand,
