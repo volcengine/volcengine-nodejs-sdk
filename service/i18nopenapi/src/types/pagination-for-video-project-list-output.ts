@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface PaginationForVideoProjectListOutput
  */
-export interface VideoProjectTaskDetailRequest {
+export interface PaginationForVideoProjectListOutput {
 
     /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @type {number}
+     * @memberof PaginationForVideoProjectListOutput
      */
-    projectId: string;
+    limit?: number;
 
     /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @type {number}
+     * @memberof PaginationForVideoProjectListOutput
      */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    offset?: number;
 }

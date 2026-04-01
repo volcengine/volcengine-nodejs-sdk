@@ -24,10 +24,10 @@ import { TargetStyleMapForVideoProjectSerialDubTaskCreateInput } from './target-
 export interface TaskInfoForVideoProjectSerialDubTaskCreateInput {
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
      */
-    aiRemoveType?: string;
+    aiRemoveType?: number;
 
     /**
      * @type {number}

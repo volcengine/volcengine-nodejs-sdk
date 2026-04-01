@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface CreatorForProjectsOutput
  */
-export interface VideoProjectTaskDetailRequest {
+export interface CreatorForProjectsOutput {
 
     /**
      * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @memberof CreatorForProjectsOutput
      */
-    projectId: string;
+    avatar?: string;
 
     /**
      * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @memberof CreatorForProjectsOutput
      */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    username?: string;
 }

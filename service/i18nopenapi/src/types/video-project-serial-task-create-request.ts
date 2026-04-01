@@ -23,10 +23,10 @@ import { TaskInfoForVideoProjectSerialTaskCreateInput } from './task-info-for-vi
 export interface VideoProjectSerialTaskCreateRequest {
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoProjectSerialTaskCreateRequest
      */
-    projectId: number;
+    projectId: string;
 
     /**
      * @type {Array<SerialInfoForVideoProjectSerialTaskCreateInput>}

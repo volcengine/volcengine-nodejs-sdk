@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface BaseRespForVideoEditorSaveSubtitleOutput
  */
-export interface VideoProjectTaskDetailRequest {
+export interface BaseRespForVideoEditorSaveSubtitleOutput {
+
+    /**
+     * @type {number}
+     * @memberof BaseRespForVideoEditorSaveSubtitleOutput
+     */
+    statusCode?: number;
 
     /**
      * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @memberof BaseRespForVideoEditorSaveSubtitleOutput
      */
-    projectId: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    statusMessage?: string;
 }

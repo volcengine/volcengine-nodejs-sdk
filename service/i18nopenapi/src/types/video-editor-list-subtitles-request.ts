@@ -16,25 +16,13 @@
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface VideoEditorListSubtitlesRequest
  */
-export interface VideoProjectTaskDetailRequest {
+export interface VideoEditorListSubtitlesRequest {
 
     /**
      * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @memberof VideoEditorListSubtitlesRequest
      */
-    projectId: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    subtaskId: string;
 }

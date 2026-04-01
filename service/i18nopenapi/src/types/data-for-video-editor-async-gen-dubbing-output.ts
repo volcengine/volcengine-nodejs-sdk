@@ -12,29 +12,18 @@
  * Do not edit the class manually.
  */
 
+import { BaseRespForVideoEditorAsyncGenDubbingOutput } from './base-resp-for-video-editor-async-gen-dubbing-output';
  /**
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface DataForVideoEditorAsyncGenDubbingOutput
  */
-export interface VideoProjectTaskDetailRequest {
+export interface DataForVideoEditorAsyncGenDubbingOutput {
 
     /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @type {BaseRespForVideoEditorAsyncGenDubbingOutput}
+     * @memberof DataForVideoEditorAsyncGenDubbingOutput
      */
-    projectId: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    baseResp?: BaseRespForVideoEditorAsyncGenDubbingOutput;
 }

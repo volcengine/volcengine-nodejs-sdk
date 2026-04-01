@@ -24,10 +24,10 @@ import { TargetStyleMapForVideoProjectSerialTaskCreateInput } from './target-sty
 export interface TaskInfoForVideoProjectSerialTaskCreateInput {
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
      */
-    aiRemoveType?: string;
+    aiRemoveType?: number;
 
     /**
      * @type {number}

@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { CreatorForProjectsOutput } from './creator-for-projects-output';
 import { ExtraForProjectsOutput } from './extra-for-projects-output';
  /**
  * 
@@ -26,6 +27,12 @@ export interface DataForProjectsOutput {
      * @memberof DataForProjectsOutput
      */
     createdAt?: string;
+
+    /**
+     * @type {CreatorForProjectsOutput}
+     * @memberof DataForProjectsOutput
+     */
+    creator?: CreatorForProjectsOutput;
 
     /**
      * @type {string}
@@ -46,10 +53,10 @@ export interface DataForProjectsOutput {
     extra?: ExtraForProjectsOutput;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof DataForProjectsOutput
      */
-    id?: number;
+    id?: string;
 
     /**
      * @type {string}
@@ -61,7 +68,19 @@ export interface DataForProjectsOutput {
      * @type {string}
      * @memberof DataForProjectsOutput
      */
+    sourceLang?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForProjectsOutput
+     */
     sourceLocale?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof DataForProjectsOutput
+     */
+    targetLangs?: Array<string>;
 
     /**
      * @type {Array<string>}

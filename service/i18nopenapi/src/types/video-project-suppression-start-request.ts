@@ -57,10 +57,10 @@ export interface VideoProjectSuppressionStartRequest {
     manualStyle?: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoProjectSuppressionStartRequest
      */
-    projectId: number;
+    projectId: string;
 
     /**
      * @type {number}

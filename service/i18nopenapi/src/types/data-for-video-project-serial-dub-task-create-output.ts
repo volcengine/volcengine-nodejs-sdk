@@ -29,6 +29,12 @@ export interface DataForVideoProjectSerialDubTaskCreateOutput {
     BaseResp?: BaseRespForVideoProjectSerialDubTaskCreateOutput;
 
     /**
+     * @type {Array<string>}
+     * @memberof DataForVideoProjectSerialDubTaskCreateOutput
+     */
+    DubTaskIDs?: Array<string>;
+
+    /**
      * @type {Array<SubtitleFileCheckReportForVideoProjectSerialDubTaskCreateOutput>}
      * @memberof DataForVideoProjectSerialDubTaskCreateOutput
      */

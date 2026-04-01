@@ -23,10 +23,10 @@ import { TaskInfoForVideoProjectSerialDubTaskCreateInput } from './task-info-for
 export interface VideoProjectSerialDubTaskCreateRequest {
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoProjectSerialDubTaskCreateRequest
      */
-    projectId: number;
+    projectId: string;
 
     /**
      * @type {Array<SerialInfoForVideoProjectSerialDubTaskCreateInput>}

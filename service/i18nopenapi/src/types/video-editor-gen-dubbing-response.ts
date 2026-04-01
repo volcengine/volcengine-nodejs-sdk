@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface VideoEditorGenDubbingResponse
  */
-export interface VideoProjectTaskDetailRequest {
+export interface VideoEditorGenDubbingResponse {
 
     /**
      * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @memberof VideoEditorGenDubbingResponse
      */
-    projectId: string;
+    tosUrl?: string;
 
     /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @type {Array<string>}
+     * @memberof VideoEditorGenDubbingResponse
      */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    tosUrllist?: Array<string>;
 }

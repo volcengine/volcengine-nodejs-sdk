@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface BaseRespForVideoEditorSubmitSubtaskOutput
  */
-export interface VideoProjectTaskDetailRequest {
+export interface BaseRespForVideoEditorSubmitSubtaskOutput {
+
+    /**
+     * @type {number}
+     * @memberof BaseRespForVideoEditorSubmitSubtaskOutput
+     */
+    statusCode?: number;
 
     /**
      * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @memberof BaseRespForVideoEditorSubmitSubtaskOutput
      */
-    projectId: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    statusMessage?: string;
 }

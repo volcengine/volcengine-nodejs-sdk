@@ -16,25 +16,13 @@
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface VideoEditorGetSpeakersRequest
  */
-export interface VideoProjectTaskDetailRequest {
+export interface VideoEditorGetSpeakersRequest {
 
     /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @type {number}
+     * @memberof VideoEditorGetSpeakersRequest
      */
-    projectId: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    subtaskId: number;
 }

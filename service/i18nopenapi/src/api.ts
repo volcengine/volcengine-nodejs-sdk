@@ -162,6 +162,20 @@ import { TermBaseTermGroupsRequest } from './types/index';
 import { TermBaseTermGroupsResponse } from './types/index';
 import { TextGetTextListWithKeyOrSourceRequest } from './types/index';
 import { TextGetTextListWithKeyOrSourceResponse } from './types/index';
+import { VideoEditorAsyncGenDubbingRequest } from './types/index';
+import { VideoEditorAsyncGenDubbingResponse } from './types/index';
+import { VideoEditorGenDubbingRequest } from './types/index';
+import { VideoEditorGenDubbingResponse } from './types/index';
+import { VideoEditorGetSpeakersRequest } from './types/index';
+import { VideoEditorGetSpeakersResponse } from './types/index';
+import { VideoEditorListSubtitlesRequest } from './types/index';
+import { VideoEditorListSubtitlesResponse } from './types/index';
+import { VideoEditorQueryAsyncGenDubbingResultRequest } from './types/index';
+import { VideoEditorQueryAsyncGenDubbingResultResponse } from './types/index';
+import { VideoEditorSaveSubtitleRequest } from './types/index';
+import { VideoEditorSaveSubtitleResponse } from './types/index';
+import { VideoEditorSubmitSubtaskRequest } from './types/index';
+import { VideoEditorSubmitSubtaskResponse } from './types/index';
 import { VideoProjectCreateRequest } from './types/index';
 import { VideoProjectCreateResponse } from './types/index';
 import { VideoProjectListRequest } from './types/index';
@@ -262,6 +276,13 @@ export type TermBaseTermGroupImportCommandOutput = CommandOutput<TermBaseTermGro
 export type TermBaseTermGroupImportTaskCommandOutput = CommandOutput<TermBaseTermGroupImportTaskResponse>;
 export type TermBaseTermGroupsCommandOutput = CommandOutput<TermBaseTermGroupsResponse>;
 export type TextGetTextListWithKeyOrSourceCommandOutput = CommandOutput<TextGetTextListWithKeyOrSourceResponse>;
+export type VideoEditorAsyncGenDubbingCommandOutput = CommandOutput<VideoEditorAsyncGenDubbingResponse>;
+export type VideoEditorGenDubbingCommandOutput = CommandOutput<VideoEditorGenDubbingResponse>;
+export type VideoEditorGetSpeakersCommandOutput = CommandOutput<VideoEditorGetSpeakersResponse>;
+export type VideoEditorListSubtitlesCommandOutput = CommandOutput<VideoEditorListSubtitlesResponse>;
+export type VideoEditorQueryAsyncGenDubbingResultCommandOutput = CommandOutput<VideoEditorQueryAsyncGenDubbingResultResponse>;
+export type VideoEditorSaveSubtitleCommandOutput = CommandOutput<VideoEditorSaveSubtitleResponse>;
+export type VideoEditorSubmitSubtaskCommandOutput = CommandOutput<VideoEditorSubmitSubtaskResponse>;
 export type VideoProjectCreateCommandOutput = CommandOutput<VideoProjectCreateResponse>;
 export type VideoProjectListCommandOutput = CommandOutput<VideoProjectListResponse>;
 export type VideoProjectSerialDubTaskCreateCommandOutput = CommandOutput<VideoProjectSerialDubTaskCreateResponse>;
@@ -1398,6 +1419,111 @@ export class TextGetTextListWithKeyOrSourceCommand extends Command<
   }
 }
 /**
+ * Command to VideoEditorAsyncGenDubbing
+ */
+export class VideoEditorAsyncGenDubbingCommand extends Command<
+  VideoEditorAsyncGenDubbingRequest,
+  VideoEditorAsyncGenDubbingCommandOutput,
+  'VideoEditorAsyncGenDubbingCommand'
+> {
+  static readonly metaPath = '/VideoEditorAsyncGenDubbing/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorAsyncGenDubbingRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorAsyncGenDubbingCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorGenDubbing
+ */
+export class VideoEditorGenDubbingCommand extends Command<
+  VideoEditorGenDubbingRequest,
+  VideoEditorGenDubbingCommandOutput,
+  'VideoEditorGenDubbingCommand'
+> {
+  static readonly metaPath = '/VideoEditorGenDubbing/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorGenDubbingRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorGenDubbingCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorGetSpeakers
+ */
+export class VideoEditorGetSpeakersCommand extends Command<
+  VideoEditorGetSpeakersRequest,
+  VideoEditorGetSpeakersCommandOutput,
+  'VideoEditorGetSpeakersCommand'
+> {
+  static readonly metaPath = '/VideoEditorGetSpeakers/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorGetSpeakersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorGetSpeakersCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorListSubtitles
+ */
+export class VideoEditorListSubtitlesCommand extends Command<
+  VideoEditorListSubtitlesRequest,
+  VideoEditorListSubtitlesCommandOutput,
+  'VideoEditorListSubtitlesCommand'
+> {
+  static readonly metaPath = '/VideoEditorListSubtitles/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorListSubtitlesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorListSubtitlesCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorQueryAsyncGenDubbingResult
+ */
+export class VideoEditorQueryAsyncGenDubbingResultCommand extends Command<
+  VideoEditorQueryAsyncGenDubbingResultRequest,
+  VideoEditorQueryAsyncGenDubbingResultCommandOutput,
+  'VideoEditorQueryAsyncGenDubbingResultCommand'
+> {
+  static readonly metaPath = '/VideoEditorQueryAsyncGenDubbingResult/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorQueryAsyncGenDubbingResultRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorQueryAsyncGenDubbingResultCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorSaveSubtitle
+ */
+export class VideoEditorSaveSubtitleCommand extends Command<
+  VideoEditorSaveSubtitleRequest,
+  VideoEditorSaveSubtitleCommandOutput,
+  'VideoEditorSaveSubtitleCommand'
+> {
+  static readonly metaPath = '/VideoEditorSaveSubtitle/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoEditorSaveSubtitleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorSaveSubtitleCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorSubmitSubtask
+ */
+export class VideoEditorSubmitSubtaskCommand extends Command<
+  VideoEditorSubmitSubtaskRequest,
+  VideoEditorSubmitSubtaskCommandOutput,
+  'VideoEditorSubmitSubtaskCommand'
+> {
+  static readonly metaPath = '/VideoEditorSubmitSubtask/2021-05-21/i18n_openapi/post/application_x-www-form-urlencoded/';
+
+  constructor(input: VideoEditorSubmitSubtaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorSubmitSubtaskCommand.metaPath);
+  }
+}
+/**
  * Command to VideoProjectCreate
  */
 export class VideoProjectCreateCommand extends Command<
@@ -1639,6 +1765,13 @@ export default {
   TermBaseTermGroupImportTaskCommand,
   TermBaseTermGroupsCommand,
   TextGetTextListWithKeyOrSourceCommand,
+  VideoEditorAsyncGenDubbingCommand,
+  VideoEditorGenDubbingCommand,
+  VideoEditorGetSpeakersCommand,
+  VideoEditorListSubtitlesCommand,
+  VideoEditorQueryAsyncGenDubbingResultCommand,
+  VideoEditorSaveSubtitleCommand,
+  VideoEditorSubmitSubtaskCommand,
   VideoProjectCreateCommand,
   VideoProjectListCommand,
   VideoProjectSerialDubTaskCreateCommand,
