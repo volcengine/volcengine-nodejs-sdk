@@ -43,6 +43,7 @@ export interface CreateContentGenerationTaskRequest {
   ratio?: string;
   duration?: number;
   frames?: number;
+  safety_identifier?: string;
   /** Extra fields merged into request body */
   [key: string]: unknown;
 }
@@ -86,6 +87,7 @@ export interface GetContentGenerationTaskResponse {
   generate_audio?: boolean;
   draft?: boolean;
   draft_task_id?: string;
+  safety_identifier?: string;
   headers?: HttpHeaders;
 }
 
@@ -122,6 +124,7 @@ export interface ListContentGenerationTaskItem {
   generate_audio?: boolean;
   draft?: boolean;
   draft_task_id?: string;
+  safety_identifier?: string;
 }
 
 export interface ListContentGenerationTasksResponse {
