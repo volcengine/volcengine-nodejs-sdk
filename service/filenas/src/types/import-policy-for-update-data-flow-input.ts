@@ -22,6 +22,12 @@ import { FilterInfoForUpdateDataFlowInput } from './filter-info-for-update-data-
 export interface ImportPolicyForUpdateDataFlowInput {
 
     /**
+     * @type {Array<string>}
+     * @memberof ImportPolicyForUpdateDataFlowInput
+     */
+    EventTypes?: Array<ImportPolicyForUpdateDataFlowInputEventTypesEnum>;
+
+    /**
      * @type {FilterInfoForUpdateDataFlowInput}
      * @memberof ImportPolicyForUpdateDataFlowInput
      */
@@ -40,6 +46,14 @@ export interface ImportPolicyForUpdateDataFlowInput {
     Type?: ImportPolicyForUpdateDataFlowInputTypeEnum;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ImportPolicyForUpdateDataFlowInputEventTypesEnum {
+    CreateAndUpdate = 'CreateAndUpdate',
+    Delete = 'Delete'
+}
 /**
  * @export
  * @enum {string}

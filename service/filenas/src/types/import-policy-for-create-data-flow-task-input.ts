@@ -22,6 +22,12 @@ import { FilterInfoForCreateDataFlowTaskInput } from './filter-info-for-create-d
 export interface ImportPolicyForCreateDataFlowTaskInput {
 
     /**
+     * @type {Array<string>}
+     * @memberof ImportPolicyForCreateDataFlowTaskInput
+     */
+    EventTypes?: Array<ImportPolicyForCreateDataFlowTaskInputEventTypesEnum>;
+
+    /**
      * @type {FilterInfoForCreateDataFlowTaskInput}
      * @memberof ImportPolicyForCreateDataFlowTaskInput
      */
@@ -40,6 +46,14 @@ export interface ImportPolicyForCreateDataFlowTaskInput {
     Type?: ImportPolicyForCreateDataFlowTaskInputTypeEnum;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ImportPolicyForCreateDataFlowTaskInputEventTypesEnum {
+    CreateAndUpdate = 'CreateAndUpdate',
+    Delete = 'Delete'
+}
 /**
  * @export
  * @enum {string}

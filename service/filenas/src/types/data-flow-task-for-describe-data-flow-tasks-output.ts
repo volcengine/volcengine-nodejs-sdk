@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DeletePolicyForDescribeDataFlowTasksOutput } from './delete-policy-for-describe-data-flow-tasks-output';
 import { EvictPolicyForDescribeDataFlowTasksOutput } from './evict-policy-for-describe-data-flow-tasks-output';
 import { ExportPolicyForDescribeDataFlowTasksOutput } from './export-policy-for-describe-data-flow-tasks-output';
 import { ImportPolicyForDescribeDataFlowTasksOutput } from './import-policy-for-describe-data-flow-tasks-output';
@@ -46,6 +47,12 @@ export interface DataFlowTaskForDescribeDataFlowTasksOutput {
      * @memberof DataFlowTaskForDescribeDataFlowTasksOutput
      */
     DataFlowId?: string;
+
+    /**
+     * @type {DeletePolicyForDescribeDataFlowTasksOutput}
+     * @memberof DataFlowTaskForDescribeDataFlowTasksOutput
+     */
+    DeletePolicy?: DeletePolicyForDescribeDataFlowTasksOutput;
 
     /**
      * @type {string}
@@ -191,6 +198,7 @@ export enum DataFlowTaskForDescribeDataFlowTasksOutputStatusEnum {
 export enum DataFlowTaskForDescribeDataFlowTasksOutputTypeEnum {
     Import = 'Import',
     Export = 'Export',
-    Evict = 'Evict'
+    Evict = 'Evict',
+    Delete = 'Delete'
 }
 
