@@ -16,7 +16,7 @@
  * 
  *
  * @export
- * @interface MetadataForListSandboxesInput
+ * @interface PauseSandboxResponse
  */
-export interface MetadataForListSandboxesInput {
+export interface PauseSandboxResponse {
 }

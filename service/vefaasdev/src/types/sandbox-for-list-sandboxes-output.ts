@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { MetadataForListSandboxesOutput } from './metadata-for-list-sandboxes-output';
  /**
  * 
  *
@@ -28,10 +27,28 @@ export interface SandboxForListSandboxesOutput {
     AvailabilityZone?: string;
 
     /**
+     * @type {number}
+     * @memberof SandboxForListSandboxesOutput
+     */
+    CpuMilli?: number;
+
+    /**
      * @type {string}
      * @memberof SandboxForListSandboxesOutput
      */
     CreatedAt?: string;
+
+    /**
+     * @type {string}
+     * @memberof SandboxForListSandboxesOutput
+     */
+    ErrorCode?: string;
+
+    /**
+     * @type {string}
+     * @memberof SandboxForListSandboxesOutput
+     */
+    ErrorMessage?: string;
 
     /**
      * @type {string}
@@ -64,10 +81,22 @@ export interface SandboxForListSandboxesOutput {
     InstanceType?: string;
 
     /**
-     * @type {MetadataForListSandboxesOutput}
+     * @type {number}
      * @memberof SandboxForListSandboxesOutput
      */
-    Metadata?: MetadataForListSandboxesOutput;
+    MemoryMB?: number;
+
+    /**
+     * @type {{ [key: string]: string; }}
+     * @memberof SandboxForListSandboxesOutput
+     */
+    Metadata?: { [key: string]: string; };
+
+    /**
+     * @type {boolean}
+     * @memberof SandboxForListSandboxesOutput
+     */
+    Pending?: boolean;
 
     /**
      * @type {number}

@@ -50,15 +50,23 @@ import { ListRevisionsRequest } from './types/index';
 import { ListRevisionsResponse } from './types/index';
 import { ListSandboxesRequest } from './types/index';
 import { ListSandboxesResponse } from './types/index';
+import { PauseSandboxRequest } from './types/index';
+import { PauseSandboxResponse } from './types/index';
 import { ReadFilesRequest } from './types/index';
 import { ReadFilesResponse } from './types/index';
 import { ReleaseRequest } from './types/index';
 import { ReleaseResponse } from './types/index';
+import { ResumeSandboxRequest } from './types/index';
+import { ResumeSandboxResponse } from './types/index';
 import { RunCodeRequest } from './types/index';
 import { RunCodeResponse } from './types/index';
 import { SetSandboxTimeoutRequest } from './types/index';
 import { SetSandboxTimeoutResponse } from './types/index';
+import { TransitionSandboxRequest } from './types/index';
+import { TransitionSandboxResponse } from './types/index';
 import { UpdateFunctionRequest } from './types/index';
+import { UpdateFunctionResourceRequest } from './types/index';
+import { UpdateFunctionResourceResponse } from './types/index';
 import { UpdateFunctionResponse } from './types/index';
 import { UpdateReleaseRequest } from './types/index';
 import { UpdateReleaseResponse } from './types/index';
@@ -86,14 +94,17 @@ export type ListFunctionsCommandOutput = CommandOutput<ListFunctionsResponse>;
 export type ListReleaseRecordsCommandOutput = CommandOutput<ListReleaseRecordsResponse>;
 export type ListRevisionsCommandOutput = CommandOutput<ListRevisionsResponse>;
 export type ListSandboxesCommandOutput = CommandOutput<ListSandboxesResponse>;
+export type PauseSandboxCommandOutput = CommandOutput<PauseSandboxResponse>;
 export type ReadFilesCommandOutput = CommandOutput<ReadFilesResponse>;
 export type ReleaseCommandOutput = CommandOutput<ReleaseResponse>;
+export type ResumeSandboxCommandOutput = CommandOutput<ResumeSandboxResponse>;
 export type RunCodeCommandOutput = CommandOutput<RunCodeResponse>;
 export type SetSandboxTimeoutCommandOutput = CommandOutput<SetSandboxTimeoutResponse>;
+export type TransitionSandboxCommandOutput = CommandOutput<TransitionSandboxResponse>;
 export type UpdateFunctionCommandOutput = CommandOutput<UpdateFunctionResponse>;
+export type UpdateFunctionResourceCommandOutput = CommandOutput<UpdateFunctionResourceResponse>;
 export type UpdateReleaseCommandOutput = CommandOutput<UpdateReleaseResponse>;
 export type WriteFilesCommandOutput = CommandOutput<WriteFilesResponse>;
-
 
 /**
  * VEFAASDEVClient Service Client
@@ -379,6 +390,21 @@ export class ListSandboxesCommand extends Command<
   }
 }
 /**
+ * Command to PauseSandbox
+ */
+export class PauseSandboxCommand extends Command<
+  PauseSandboxRequest,
+  PauseSandboxCommandOutput,
+  'PauseSandboxCommand'
+> {
+  static readonly metaPath = '/PauseSandbox/2024-06-06/vefaas_dev/post/application_json/';
+
+  constructor(input: PauseSandboxRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(PauseSandboxCommand.metaPath);
+  }
+}
+/**
  * Command to ReadFiles
  */
 export class ReadFilesCommand extends Command<
@@ -406,6 +432,21 @@ export class ReleaseCommand extends Command<
   constructor(input: ReleaseRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ReleaseCommand.metaPath);
+  }
+}
+/**
+ * Command to ResumeSandbox
+ */
+export class ResumeSandboxCommand extends Command<
+  ResumeSandboxRequest,
+  ResumeSandboxCommandOutput,
+  'ResumeSandboxCommand'
+> {
+  static readonly metaPath = '/ResumeSandbox/2024-06-06/vefaas_dev/post/application_json/';
+
+  constructor(input: ResumeSandboxRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ResumeSandboxCommand.metaPath);
   }
 }
 /**
@@ -439,6 +480,21 @@ export class SetSandboxTimeoutCommand extends Command<
   }
 }
 /**
+ * Command to TransitionSandbox
+ */
+export class TransitionSandboxCommand extends Command<
+  TransitionSandboxRequest,
+  TransitionSandboxCommandOutput,
+  'TransitionSandboxCommand'
+> {
+  static readonly metaPath = '/TransitionSandbox/2024-06-06/vefaas_dev/post/application_json/';
+
+  constructor(input: TransitionSandboxRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(TransitionSandboxCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateFunction
  */
 export class UpdateFunctionCommand extends Command<
@@ -451,6 +507,21 @@ export class UpdateFunctionCommand extends Command<
   constructor(input: UpdateFunctionRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateFunctionCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateFunctionResource
+ */
+export class UpdateFunctionResourceCommand extends Command<
+  UpdateFunctionResourceRequest,
+  UpdateFunctionResourceCommandOutput,
+  'UpdateFunctionResourceCommand'
+> {
+  static readonly metaPath = '/UpdateFunctionResource/2024-06-06/vefaas_dev/post/application_json/';
+
+  constructor(input: UpdateFunctionResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateFunctionResourceCommand.metaPath);
   }
 }
 /**
@@ -504,11 +575,15 @@ export default {
   ListReleaseRecordsCommand,
   ListRevisionsCommand,
   ListSandboxesCommand,
+  PauseSandboxCommand,
   ReadFilesCommand,
   ReleaseCommand,
+  ResumeSandboxCommand,
   RunCodeCommand,
   SetSandboxTimeoutCommand,
+  TransitionSandboxCommand,
   UpdateFunctionCommand,
+  UpdateFunctionResourceCommand,
   UpdateReleaseCommand,
   WriteFilesCommand,
 };
