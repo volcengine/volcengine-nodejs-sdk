@@ -22,6 +22,12 @@ import { FilterInfoForDescribeDataFlowsOutput } from './filter-info-for-describe
 export interface ExportPolicyForDescribeDataFlowsOutput {
 
     /**
+     * @type {Array<string>}
+     * @memberof ExportPolicyForDescribeDataFlowsOutput
+     */
+    EventTypes?: Array<ExportPolicyForDescribeDataFlowsOutputEventTypesEnum>;
+
+    /**
      * @type {FilterInfoForDescribeDataFlowsOutput}
      * @memberof ExportPolicyForDescribeDataFlowsOutput
      */
@@ -37,9 +43,23 @@ export interface ExportPolicyForDescribeDataFlowsOutput {
      * @type {string}
      * @memberof ExportPolicyForDescribeDataFlowsOutput
      */
+    TosDeletePolicy?: ExportPolicyForDescribeDataFlowsOutputTosDeletePolicyEnum;
+
+    /**
+     * @type {string}
+     * @memberof ExportPolicyForDescribeDataFlowsOutput
+     */
     Type?: ExportPolicyForDescribeDataFlowsOutputTypeEnum;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ExportPolicyForDescribeDataFlowsOutputEventTypesEnum {
+    CreateAndUpdate = 'CreateAndUpdate',
+    Delete = 'Delete'
+}
 /**
  * @export
  * @enum {string}
@@ -50,6 +70,16 @@ export enum ExportPolicyForDescribeDataFlowsOutputStatusEnum {
     Stopping = 'Stopping',
     Stopped = 'Stopped',
     Error = 'Error'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ExportPolicyForDescribeDataFlowsOutputTosDeletePolicyEnum {
+    None = 'None',
+    LatestVersionOnly = 'LatestVersionOnly',
+    AllVersions = 'AllVersions',
+    SpecifiedVersion = 'SpecifiedVersion'
 }
 /**
  * @export

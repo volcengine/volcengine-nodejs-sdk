@@ -99,7 +99,6 @@ export interface ConvertMountPointForDescribeMountPointsOutput {
  * @enum {string}
  */
 export enum ConvertMountPointForDescribeMountPointsOutputStatusEnum {
-    Unknown = 'Unknown',
     Creating = 'Creating',
     Running = 'Running',
     Updating = 'Updating',

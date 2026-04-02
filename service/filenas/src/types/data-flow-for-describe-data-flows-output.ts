@@ -49,6 +49,12 @@ export interface DataFlowForDescribeDataFlowsOutput {
     EnableBucketVersioning?: boolean;
 
     /**
+     * @type {string}
+     * @memberof DataFlowForDescribeDataFlowsOutput
+     */
+    ErrorMessage?: string;
+
+    /**
      * @type {EvictPolicyForDescribeDataFlowsOutput}
      * @memberof DataFlowForDescribeDataFlowsOutput
      */
