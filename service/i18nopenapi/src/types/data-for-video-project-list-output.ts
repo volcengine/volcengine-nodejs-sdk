@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { CreatorForVideoProjectListOutput } from './creator-for-video-project-list-output';
 import { ExtraForVideoProjectListOutput } from './extra-for-video-project-list-output';
  /**
  * 
@@ -26,6 +27,12 @@ export interface DataForVideoProjectListOutput {
      * @memberof DataForVideoProjectListOutput
      */
     createdAt?: string;
+
+    /**
+     * @type {CreatorForVideoProjectListOutput}
+     * @memberof DataForVideoProjectListOutput
+     */
+    creator?: CreatorForVideoProjectListOutput;
 
     /**
      * @type {string}
@@ -46,10 +53,10 @@ export interface DataForVideoProjectListOutput {
     extra?: ExtraForVideoProjectListOutput;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof DataForVideoProjectListOutput
      */
-    id?: number;
+    id?: string;
 
     /**
      * @type {string}
@@ -61,7 +68,19 @@ export interface DataForVideoProjectListOutput {
      * @type {string}
      * @memberof DataForVideoProjectListOutput
      */
+    sourceLang?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForVideoProjectListOutput
+     */
     sourceLocale?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof DataForVideoProjectListOutput
+     */
+    targetLangs?: Array<string>;
 
     /**
      * @type {Array<string>}

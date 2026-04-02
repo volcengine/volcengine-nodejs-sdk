@@ -22,6 +22,12 @@ import { FilterInfoForDescribeDataFlowTasksOutput } from './filter-info-for-desc
 export interface ExportPolicyForDescribeDataFlowTasksOutput {
 
     /**
+     * @type {Array<string>}
+     * @memberof ExportPolicyForDescribeDataFlowTasksOutput
+     */
+    EventTypes?: Array<ExportPolicyForDescribeDataFlowTasksOutputEventTypesEnum>;
+
+    /**
      * @type {FilterInfoForDescribeDataFlowTasksOutput}
      * @memberof ExportPolicyForDescribeDataFlowTasksOutput
      */
@@ -37,9 +43,23 @@ export interface ExportPolicyForDescribeDataFlowTasksOutput {
      * @type {string}
      * @memberof ExportPolicyForDescribeDataFlowTasksOutput
      */
+    TosDeletePolicy?: ExportPolicyForDescribeDataFlowTasksOutputTosDeletePolicyEnum;
+
+    /**
+     * @type {string}
+     * @memberof ExportPolicyForDescribeDataFlowTasksOutput
+     */
     Type?: ExportPolicyForDescribeDataFlowTasksOutputTypeEnum;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ExportPolicyForDescribeDataFlowTasksOutputEventTypesEnum {
+    CreateAndUpdate = 'CreateAndUpdate',
+    Delete = 'Delete'
+}
 /**
  * @export
  * @enum {string}
@@ -50,6 +70,16 @@ export enum ExportPolicyForDescribeDataFlowTasksOutputStatusEnum {
     Stopping = 'Stopping',
     Stopped = 'Stopped',
     Error = 'Error'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ExportPolicyForDescribeDataFlowTasksOutputTosDeletePolicyEnum {
+    None = 'None',
+    LatestVersionOnly = 'LatestVersionOnly',
+    AllVersions = 'AllVersions',
+    SpecifiedVersion = 'SpecifiedVersion'
 }
 /**
  * @export

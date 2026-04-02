@@ -33,8 +33,8 @@ export interface VideoProjectTaskDetailRequest {
     subtaskIds?: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoProjectTaskDetailRequest
      */
-    taskId: number;
+    taskId: string;
 }
