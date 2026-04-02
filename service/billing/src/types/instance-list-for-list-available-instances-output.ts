@@ -72,6 +72,12 @@ export interface InstanceListForListAvailableInstancesOutput {
      * @type {string}
      * @memberof InstanceListForListAvailableInstancesOutput
      */
+    ProductName?: string;
+
+    /**
+     * @type {string}
+     * @memberof InstanceListForListAvailableInstancesOutput
+     */
     RemainRenewTimes?: string;
 
     /**
