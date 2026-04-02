@@ -14,8 +14,8 @@
 
 import { EnvForCreateSandboxInput } from './env-for-create-sandbox-input';
 import { InstanceImageInfoForCreateSandboxInput } from './instance-image-info-for-create-sandbox-input';
+import { InstanceNasMountConfigForCreateSandboxInput } from './instance-nas-mount-config-for-create-sandbox-input';
 import { InstanceTosMountConfigForCreateSandboxInput } from './instance-tos-mount-config-for-create-sandbox-input';
-import { MetadataForCreateSandboxInput } from './metadata-for-create-sandbox-input';
  /**
  * 
  *
@@ -55,6 +55,12 @@ export interface CreateSandboxRequest {
     InstanceImageInfo?: InstanceImageInfoForCreateSandboxInput;
 
     /**
+     * @type {InstanceNasMountConfigForCreateSandboxInput}
+     * @memberof CreateSandboxRequest
+     */
+    InstanceNasMountConfig?: InstanceNasMountConfigForCreateSandboxInput;
+
+    /**
      * @type {InstanceTosMountConfigForCreateSandboxInput}
      * @memberof CreateSandboxRequest
      */
@@ -73,10 +79,10 @@ export interface CreateSandboxRequest {
     MemoryMB?: number;
 
     /**
-     * @type {MetadataForCreateSandboxInput}
+     * @type {{ [key: string]: string; }}
      * @memberof CreateSandboxRequest
      */
-    Metadata?: MetadataForCreateSandboxInput;
+    Metadata?: { [key: string]: string; };
 
     /**
      * @type {number}

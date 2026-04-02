@@ -13,7 +13,6 @@
  */
 
 import { FilterForListSandboxesInput } from './filter-for-list-sandboxes-input';
-import { MetadataForListSandboxesInput } from './metadata-for-list-sandboxes-input';
  /**
  * 
  *
@@ -35,10 +34,16 @@ export interface ListSandboxesRequest {
     FunctionId: string;
 
     /**
-     * @type {MetadataForListSandboxesInput}
+     * @type {string}
      * @memberof ListSandboxesRequest
      */
-    Metadata?: MetadataForListSandboxesInput;
+    ImageUrl?: string;
+
+    /**
+     * @type {{ [key: string]: string; }}
+     * @memberof ListSandboxesRequest
+     */
+    Metadata?: { [key: string]: string; };
 
     /**
      * @type {number}
@@ -57,4 +62,10 @@ export interface ListSandboxesRequest {
      * @memberof ListSandboxesRequest
      */
     SandboxId?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListSandboxesRequest
+     */
+    Status?: string;
 }

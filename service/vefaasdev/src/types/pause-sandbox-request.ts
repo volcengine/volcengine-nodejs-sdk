@@ -16,7 +16,19 @@
  * 
  *
  * @export
- * @interface MetadataForCreateSandboxInput
+ * @interface PauseSandboxRequest
  */
-export interface MetadataForCreateSandboxInput {
+export interface PauseSandboxRequest {
+
+    /**
+     * @type {string}
+     * @memberof PauseSandboxRequest
+     */
+    FunctionId: string;
+
+    /**
+     * @type {string}
+     * @memberof PauseSandboxRequest
+     */
+    SandboxId: string;
 }

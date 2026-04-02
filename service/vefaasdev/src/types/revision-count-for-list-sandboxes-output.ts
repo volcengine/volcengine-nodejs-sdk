@@ -16,7 +16,7 @@
  * 
  *
  * @export
- * @interface MetadataForListSandboxesOutput
+ * @interface RevisionCountForListSandboxesOutput
  */
-export interface MetadataForListSandboxesOutput {
+export interface RevisionCountForListSandboxesOutput {
 }
