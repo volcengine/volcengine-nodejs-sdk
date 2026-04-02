@@ -22,6 +22,12 @@ import { FilterInfoForDescribeDataFlowTasksOutput } from './filter-info-for-desc
 export interface ImportPolicyForDescribeDataFlowTasksOutput {
 
     /**
+     * @type {Array<string>}
+     * @memberof ImportPolicyForDescribeDataFlowTasksOutput
+     */
+    EventTypes?: Array<ImportPolicyForDescribeDataFlowTasksOutputEventTypesEnum>;
+
+    /**
      * @type {FilterInfoForDescribeDataFlowTasksOutput}
      * @memberof ImportPolicyForDescribeDataFlowTasksOutput
      */
@@ -40,6 +46,14 @@ export interface ImportPolicyForDescribeDataFlowTasksOutput {
     Type?: ImportPolicyForDescribeDataFlowTasksOutputTypeEnum;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ImportPolicyForDescribeDataFlowTasksOutputEventTypesEnum {
+    CreateAndUpdate = 'CreateAndUpdate',
+    Delete = 'Delete'
+}
 /**
  * @export
  * @enum {string}

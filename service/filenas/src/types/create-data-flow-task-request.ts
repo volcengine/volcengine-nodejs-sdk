@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DeletePolicyForCreateDataFlowTaskInput } from './delete-policy-for-create-data-flow-task-input';
 import { EvictPolicyForCreateDataFlowTaskInput } from './evict-policy-for-create-data-flow-task-input';
 import { ExportPolicyForCreateDataFlowTaskInput } from './export-policy-for-create-data-flow-task-input';
 import { ImportPolicyForCreateDataFlowTaskInput } from './import-policy-for-create-data-flow-task-input';
@@ -40,6 +41,12 @@ export interface CreateDataFlowTaskRequest {
      * @memberof CreateDataFlowTaskRequest
      */
     DataFlowId?: string;
+
+    /**
+     * @type {DeletePolicyForCreateDataFlowTaskInput}
+     * @memberof CreateDataFlowTaskRequest
+     */
+    DeletePolicy?: DeletePolicyForCreateDataFlowTaskInput;
 
     /**
      * @type {string}
@@ -124,6 +131,7 @@ export enum CreateDataFlowTaskRequestSameNameFilePolicyEnum {
 export enum CreateDataFlowTaskRequestTypeEnum {
     Import = 'Import',
     Export = 'Export',
-    Evict = 'Evict'
+    Evict = 'Evict',
+    Delete = 'Delete'
 }
 

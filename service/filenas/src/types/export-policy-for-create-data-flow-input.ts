@@ -22,6 +22,12 @@ import { FilterInfoForCreateDataFlowInput } from './filter-info-for-create-data-
 export interface ExportPolicyForCreateDataFlowInput {
 
     /**
+     * @type {Array<string>}
+     * @memberof ExportPolicyForCreateDataFlowInput
+     */
+    EventTypes?: Array<ExportPolicyForCreateDataFlowInputEventTypesEnum>;
+
+    /**
      * @type {FilterInfoForCreateDataFlowInput}
      * @memberof ExportPolicyForCreateDataFlowInput
      */
@@ -37,9 +43,23 @@ export interface ExportPolicyForCreateDataFlowInput {
      * @type {string}
      * @memberof ExportPolicyForCreateDataFlowInput
      */
+    TosDeletePolicy?: ExportPolicyForCreateDataFlowInputTosDeletePolicyEnum;
+
+    /**
+     * @type {string}
+     * @memberof ExportPolicyForCreateDataFlowInput
+     */
     Type?: ExportPolicyForCreateDataFlowInputTypeEnum;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ExportPolicyForCreateDataFlowInputEventTypesEnum {
+    CreateAndUpdate = 'CreateAndUpdate',
+    Delete = 'Delete'
+}
 /**
  * @export
  * @enum {string}
@@ -50,6 +70,16 @@ export enum ExportPolicyForCreateDataFlowInputStatusEnum {
     Stopping = 'Stopping',
     Stopped = 'Stopped',
     Error = 'Error'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ExportPolicyForCreateDataFlowInputTosDeletePolicyEnum {
+    None = 'None',
+    LatestVersionOnly = 'LatestVersionOnly',
+    AllVersions = 'AllVersions',
+    SpecifiedVersion = 'SpecifiedVersion'
 }
 /**
  * @export

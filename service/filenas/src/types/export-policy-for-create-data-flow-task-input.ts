@@ -22,6 +22,12 @@ import { FilterInfoForCreateDataFlowTaskInput } from './filter-info-for-create-d
 export interface ExportPolicyForCreateDataFlowTaskInput {
 
     /**
+     * @type {Array<string>}
+     * @memberof ExportPolicyForCreateDataFlowTaskInput
+     */
+    EventTypes?: Array<ExportPolicyForCreateDataFlowTaskInputEventTypesEnum>;
+
+    /**
      * @type {FilterInfoForCreateDataFlowTaskInput}
      * @memberof ExportPolicyForCreateDataFlowTaskInput
      */
@@ -37,9 +43,23 @@ export interface ExportPolicyForCreateDataFlowTaskInput {
      * @type {string}
      * @memberof ExportPolicyForCreateDataFlowTaskInput
      */
+    TosDeletePolicy?: ExportPolicyForCreateDataFlowTaskInputTosDeletePolicyEnum;
+
+    /**
+     * @type {string}
+     * @memberof ExportPolicyForCreateDataFlowTaskInput
+     */
     Type?: ExportPolicyForCreateDataFlowTaskInputTypeEnum;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ExportPolicyForCreateDataFlowTaskInputEventTypesEnum {
+    CreateAndUpdate = 'CreateAndUpdate',
+    Delete = 'Delete'
+}
 /**
  * @export
  * @enum {string}
@@ -50,6 +70,16 @@ export enum ExportPolicyForCreateDataFlowTaskInputStatusEnum {
     Stopping = 'Stopping',
     Stopped = 'Stopped',
     Error = 'Error'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ExportPolicyForCreateDataFlowTaskInputTosDeletePolicyEnum {
+    None = 'None',
+    LatestVersionOnly = 'LatestVersionOnly',
+    AllVersions = 'AllVersions',
+    SpecifiedVersion = 'SpecifiedVersion'
 }
 /**
  * @export

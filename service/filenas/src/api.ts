@@ -32,8 +32,6 @@ import { CreatePermissionGroupRequest } from './types/index';
 import { CreatePermissionGroupResponse } from './types/index';
 import { CreatePreSignedUrlRequest } from './types/index';
 import { CreatePreSignedUrlResponse } from './types/index';
-import { CreateReservedCapacityRequest } from './types/index';
-import { CreateReservedCapacityResponse } from './types/index';
 import { CreateSnapshotRequest } from './types/index';
 import { CreateSnapshotResponse } from './types/index';
 import { DeleteAccessPointRequest } from './types/index';
@@ -74,8 +72,6 @@ import { DescribePermissionRulesRequest } from './types/index';
 import { DescribePermissionRulesResponse } from './types/index';
 import { DescribeRegionsRequest } from './types/index';
 import { DescribeRegionsResponse } from './types/index';
-import { DescribeReservedCapacitysRequest } from './types/index';
-import { DescribeReservedCapacitysResponse } from './types/index';
 import { DescribeSnapshotsRequest } from './types/index';
 import { DescribeSnapshotsResponse } from './types/index';
 import { DescribeZonesRequest } from './types/index';
@@ -117,7 +113,6 @@ export type CreateFileSystemCommandOutput = CommandOutput<CreateFileSystemRespon
 export type CreateMountPointCommandOutput = CommandOutput<CreateMountPointResponse>;
 export type CreatePermissionGroupCommandOutput = CommandOutput<CreatePermissionGroupResponse>;
 export type CreatePreSignedUrlCommandOutput = CommandOutput<CreatePreSignedUrlResponse>;
-export type CreateReservedCapacityCommandOutput = CommandOutput<CreateReservedCapacityResponse>;
 export type CreateSnapshotCommandOutput = CommandOutput<CreateSnapshotResponse>;
 export type DeleteAccessPointCommandOutput = CommandOutput<DeleteAccessPointResponse>;
 export type DeleteDataFlowCommandOutput = CommandOutput<DeleteDataFlowResponse>;
@@ -138,7 +133,6 @@ export type DescribeMountedClientsCommandOutput = CommandOutput<DescribeMountedC
 export type DescribePermissionGroupsCommandOutput = CommandOutput<DescribePermissionGroupsResponse>;
 export type DescribePermissionRulesCommandOutput = CommandOutput<DescribePermissionRulesResponse>;
 export type DescribeRegionsCommandOutput = CommandOutput<DescribeRegionsResponse>;
-export type DescribeReservedCapacitysCommandOutput = CommandOutput<DescribeReservedCapacitysResponse>;
 export type DescribeSnapshotsCommandOutput = CommandOutput<DescribeSnapshotsResponse>;
 export type DescribeZonesCommandOutput = CommandOutput<DescribeZonesResponse>;
 export type ExpandFileSystemCommandOutput = CommandOutput<ExpandFileSystemResponse>;
@@ -153,7 +147,6 @@ export type UpdateMountPointCommandOutput = CommandOutput<UpdateMountPointRespon
 export type UpdatePermissionGroupCommandOutput = CommandOutput<UpdatePermissionGroupResponse>;
 export type UpdatePermissionRuleCommandOutput = CommandOutput<UpdatePermissionRuleResponse>;
 export type UpdateSnapshotCommandOutput = CommandOutput<UpdateSnapshotResponse>;
-
 
 /**
  * FILENASClient Service Client
@@ -301,21 +294,6 @@ export class CreatePreSignedUrlCommand extends Command<
   constructor(input: CreatePreSignedUrlRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreatePreSignedUrlCommand.metaPath);
-  }
-}
-/**
- * Command to CreateReservedCapacity
- */
-export class CreateReservedCapacityCommand extends Command<
-  CreateReservedCapacityRequest,
-  CreateReservedCapacityCommandOutput,
-  'CreateReservedCapacityCommand'
-> {
-  static readonly metaPath = '/CreateReservedCapacity/2022-01-01/filenas/post/application_json/';
-
-  constructor(input: CreateReservedCapacityRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(CreateReservedCapacityCommand.metaPath);
   }
 }
 /**
@@ -619,21 +597,6 @@ export class DescribeRegionsCommand extends Command<
   }
 }
 /**
- * Command to DescribeReservedCapacitys
- */
-export class DescribeReservedCapacitysCommand extends Command<
-  DescribeReservedCapacitysRequest,
-  DescribeReservedCapacitysCommandOutput,
-  'DescribeReservedCapacitysCommand'
-> {
-  static readonly metaPath = '/DescribeReservedCapacitys/2022-01-01/filenas/post/application_json/';
-
-  constructor(input: DescribeReservedCapacitysRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(DescribeReservedCapacitysCommand.metaPath);
-  }
-}
-/**
  * Command to DescribeSnapshots
  */
 export class DescribeSnapshotsCommand extends Command<
@@ -855,7 +818,6 @@ export default {
   CreateMountPointCommand,
   CreatePermissionGroupCommand,
   CreatePreSignedUrlCommand,
-  CreateReservedCapacityCommand,
   CreateSnapshotCommand,
   DeleteAccessPointCommand,
   DeleteDataFlowCommand,
@@ -876,7 +838,6 @@ export default {
   DescribePermissionGroupsCommand,
   DescribePermissionRulesCommand,
   DescribeRegionsCommand,
-  DescribeReservedCapacitysCommand,
   DescribeSnapshotsCommand,
   DescribeZonesCommand,
   ExpandFileSystemCommand,
