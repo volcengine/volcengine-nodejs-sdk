@@ -12,29 +12,18 @@
  * Do not edit the class manually.
  */
 
+import { DataForVideoEditorListSubtitlesOutput } from './data-for-video-editor-list-subtitles-output';
  /**
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface VideoEditorListSubtitlesResponse
  */
-export interface VideoProjectTaskDetailRequest {
+export interface VideoEditorListSubtitlesResponse {
 
     /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @type {Array<DataForVideoEditorListSubtitlesOutput>}
+     * @memberof VideoEditorListSubtitlesResponse
      */
-    projectId: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    data?: Array<DataForVideoEditorListSubtitlesOutput>;
 }

@@ -46,10 +46,10 @@ export interface TaskForVideoProjectTaskDetailOutput {
     deadline?: string;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof TaskForVideoProjectTaskDetailOutput
      */
-    dramaTaskWorkflow?: string;
+    dramaTaskWorkflow?: number;
 
     /**
      * @type {string}
@@ -94,10 +94,10 @@ export interface TaskForVideoProjectTaskDetailOutput {
     sourceVideos?: string;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof TaskForVideoProjectTaskDetailOutput
      */
-    status?: string;
+    status?: number;
 
     /**
      * @type {Array<string>}
@@ -106,16 +106,16 @@ export interface TaskForVideoProjectTaskDetailOutput {
     targetLanguages?: Array<string>;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof TaskForVideoProjectTaskDetailOutput
      */
-    taskType?: string;
+    taskType?: number;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof TaskForVideoProjectTaskDetailOutput
      */
-    translationTeam?: string;
+    translationTeam?: number;
 
     /**
      * @type {string}
@@ -136,8 +136,8 @@ export interface TaskForVideoProjectTaskDetailOutput {
     wordsCount?: string;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof TaskForVideoProjectTaskDetailOutput
      */
-    workflowType?: string;
+    workflowType?: number;
 }

@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface VideoEditorQueryAsyncGenDubbingResultRequest
  */
-export interface VideoProjectTaskDetailRequest {
+export interface VideoEditorQueryAsyncGenDubbingResultRequest {
 
     /**
      * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @memberof VideoEditorQueryAsyncGenDubbingResultRequest
      */
-    projectId: string;
+    segmentId: string;
 
     /**
      * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @memberof VideoEditorQueryAsyncGenDubbingResultRequest
      */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    subtaskId: string;
 }

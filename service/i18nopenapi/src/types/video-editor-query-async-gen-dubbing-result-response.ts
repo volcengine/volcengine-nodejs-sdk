@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface VideoEditorQueryAsyncGenDubbingResultResponse
  */
-export interface VideoProjectTaskDetailRequest {
+export interface VideoEditorQueryAsyncGenDubbingResultResponse {
+
+    /**
+     * @type {number}
+     * @memberof VideoEditorQueryAsyncGenDubbingResultResponse
+     */
+    status?: number;
 
     /**
      * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @memberof VideoEditorQueryAsyncGenDubbingResultResponse
      */
-    projectId: string;
+    tosUrl?: string;
 
     /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @type {Array<string>}
+     * @memberof VideoEditorQueryAsyncGenDubbingResultResponse
      */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    tosUrlList?: Array<string>;
 }

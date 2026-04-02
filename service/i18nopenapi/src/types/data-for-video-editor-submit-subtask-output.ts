@@ -12,29 +12,18 @@
  * Do not edit the class manually.
  */
 
+import { BaseRespForVideoEditorSubmitSubtaskOutput } from './base-resp-for-video-editor-submit-subtask-output';
  /**
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface DataForVideoEditorSubmitSubtaskOutput
  */
-export interface VideoProjectTaskDetailRequest {
+export interface DataForVideoEditorSubmitSubtaskOutput {
 
     /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @type {BaseRespForVideoEditorSubmitSubtaskOutput}
+     * @memberof DataForVideoEditorSubmitSubtaskOutput
      */
-    projectId: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    baseResp?: BaseRespForVideoEditorSubmitSubtaskOutput;
 }

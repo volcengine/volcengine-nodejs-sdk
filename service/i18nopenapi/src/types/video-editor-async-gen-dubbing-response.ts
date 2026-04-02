@@ -12,29 +12,24 @@
  * Do not edit the class manually.
  */
 
+import { DataForVideoEditorAsyncGenDubbingOutput } from './data-for-video-editor-async-gen-dubbing-output';
  /**
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface VideoEditorAsyncGenDubbingResponse
  */
-export interface VideoProjectTaskDetailRequest {
+export interface VideoEditorAsyncGenDubbingResponse {
+
+    /**
+     * @type {DataForVideoEditorAsyncGenDubbingOutput}
+     * @memberof VideoEditorAsyncGenDubbingResponse
+     */
+    data?: DataForVideoEditorAsyncGenDubbingOutput;
 
     /**
      * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @memberof VideoEditorAsyncGenDubbingResponse
      */
-    projectId: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    message?: string;
 }

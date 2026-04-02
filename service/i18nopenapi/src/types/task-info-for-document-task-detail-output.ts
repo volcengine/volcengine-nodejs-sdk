@@ -24,10 +24,10 @@ import { TargetStyleMapForDocumentTaskDetailOutput } from './target-style-map-fo
 export interface TaskInfoForDocumentTaskDetailOutput {
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof TaskInfoForDocumentTaskDetailOutput
      */
-    aiRemoveType?: string;
+    aiRemoveType?: number;
 
     /**
      * @type {number}

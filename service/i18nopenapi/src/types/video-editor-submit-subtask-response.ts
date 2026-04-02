@@ -12,29 +12,18 @@
  * Do not edit the class manually.
  */
 
+import { DataForVideoEditorSubmitSubtaskOutput } from './data-for-video-editor-submit-subtask-output';
  /**
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface VideoEditorSubmitSubtaskResponse
  */
-export interface VideoProjectTaskDetailRequest {
+export interface VideoEditorSubmitSubtaskResponse {
 
     /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @type {DataForVideoEditorSubmitSubtaskOutput}
+     * @memberof VideoEditorSubmitSubtaskResponse
      */
-    projectId: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    data?: DataForVideoEditorSubmitSubtaskOutput;
 }

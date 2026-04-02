@@ -12,29 +12,24 @@
  * Do not edit the class manually.
  */
 
+import { SubForVideoEditorSaveSubtitleInput } from './sub-for-video-editor-save-subtitle-input';
  /**
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface VideoEditorSaveSubtitleRequest
  */
-export interface VideoProjectTaskDetailRequest {
+export interface VideoEditorSaveSubtitleRequest {
+
+    /**
+     * @type {Array<SubForVideoEditorSaveSubtitleInput>}
+     * @memberof VideoEditorSaveSubtitleRequest
+     */
+    subs?: Array<SubForVideoEditorSaveSubtitleInput>;
 
     /**
      * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @memberof VideoEditorSaveSubtitleRequest
      */
-    projectId: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    subtaskId: string;
 }

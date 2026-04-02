@@ -30,10 +30,10 @@ export interface SubTaskForVideoProjectTaskDetailOutput {
     createTime?: string;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof SubTaskForVideoProjectTaskDetailOutput
      */
-    currentStage?: string;
+    currentStage?: number;
 
     /**
      * @type {string}
@@ -42,10 +42,10 @@ export interface SubTaskForVideoProjectTaskDetailOutput {
     defaultStyle?: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof SubTaskForVideoProjectTaskDetailOutput
      */
-    episodeNum?: number;
+    episodeNum?: string;
 
     /**
      * @type {string}
@@ -54,10 +54,10 @@ export interface SubTaskForVideoProjectTaskDetailOutput {
     id?: string;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof SubTaskForVideoProjectTaskDetailOutput
      */
-    opStatus?: string;
+    opStatus?: number;
 
     /**
      * @type {string}
@@ -72,10 +72,10 @@ export interface SubTaskForVideoProjectTaskDetailOutput {
     sourceSubtitleFileInfo?: SourceSubtitleFileInfoForVideoProjectTaskDetailOutput;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof SubTaskForVideoProjectTaskDetailOutput
      */
-    status?: string;
+    status?: number;
 
     /**
      * @type {number}
@@ -126,10 +126,10 @@ export interface SubTaskForVideoProjectTaskDetailOutput {
     updateTime?: string;
 
     /**
-     * @type {string}
+     * @type {boolean}
      * @memberof SubTaskForVideoProjectTaskDetailOutput
      */
-    useDubTask?: string;
+    useDubTask?: boolean;
 
     /**
      * @type {boolean}

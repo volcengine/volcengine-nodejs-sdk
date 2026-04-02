@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface VideoProjectTaskDetailRequest
+ * @interface VideoEditorSubmitSubtaskRequest
  */
-export interface VideoProjectTaskDetailRequest {
+export interface VideoEditorSubmitSubtaskRequest {
+
+    /**
+     * @type {boolean}
+     * @memberof VideoEditorSubmitSubtaskRequest
+     */
+    needSuppression?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof VideoEditorSubmitSubtaskRequest
+     */
+    needSyncSource?: boolean;
 
     /**
      * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
+     * @memberof VideoEditorSubmitSubtaskRequest
      */
-    projectId: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    subtaskIds?: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectTaskDetailRequest
-     */
-    taskId: string;
+    subtaskId: string;
 }
