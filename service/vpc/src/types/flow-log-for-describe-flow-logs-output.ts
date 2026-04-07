@@ -82,12 +82,6 @@ export interface FlowLogForDescribeFlowLogsOutput {
     LogTopicId?: string;
 
     /**
-     * @type {boolean}
-     * @memberof FlowLogForDescribeFlowLogsOutput
-     */
-    OpenAnalyzeProductLog?: boolean;
-
-    /**
      * @type {string}
      * @memberof FlowLogForDescribeFlowLogsOutput
      */

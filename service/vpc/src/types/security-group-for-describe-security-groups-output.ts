@@ -25,6 +25,24 @@ export interface SecurityGroupForDescribeSecurityGroupsOutput {
      * @type {string}
      * @memberof SecurityGroupForDescribeSecurityGroupsOutput
      */
+    AccountId?: string;
+
+    /**
+     * @type {number}
+     * @memberof SecurityGroupForDescribeSecurityGroupsOutput
+     */
+    AvailableIpCount?: number;
+
+    /**
+     * @type {number}
+     * @memberof SecurityGroupForDescribeSecurityGroupsOutput
+     */
+    AvailableNetworkInterfaceCount?: number;
+
+    /**
+     * @type {string}
+     * @memberof SecurityGroupForDescribeSecurityGroupsOutput
+     */
     CreationTime?: string;
 
     /**
@@ -74,6 +92,18 @@ export interface SecurityGroupForDescribeSecurityGroupsOutput {
      * @memberof SecurityGroupForDescribeSecurityGroupsOutput
      */
     Type?: string;
+
+    /**
+     * @type {number}
+     * @memberof SecurityGroupForDescribeSecurityGroupsOutput
+     */
+    UsedIpCount?: number;
+
+    /**
+     * @type {number}
+     * @memberof SecurityGroupForDescribeSecurityGroupsOutput
+     */
+    UsedNetworkInterfaceCount?: number;
 
     /**
      * @type {string}

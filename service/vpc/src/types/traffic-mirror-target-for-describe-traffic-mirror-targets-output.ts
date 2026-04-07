@@ -74,4 +74,10 @@ export interface TrafficMirrorTargetForDescribeTrafficMirrorTargetsOutput {
      * @memberof TrafficMirrorTargetForDescribeTrafficMirrorTargetsOutput
      */
     TrafficMirrorTargetName?: string;
+
+    /**
+     * @type {string}
+     * @memberof TrafficMirrorTargetForDescribeTrafficMirrorTargetsOutput
+     */
+    UpdatedAt?: string;
 }

@@ -24,6 +24,12 @@ export interface DisassociateVpcCidrBlockRequest {
      * @type {string}
      * @memberof DisassociateVpcCidrBlockRequest
      */
+    Ipv6CidrBlock?: string;
+
+    /**
+     * @type {string}
+     * @memberof DisassociateVpcCidrBlockRequest
+     */
     SecondaryCidrBlock?: string;
 
     /**

@@ -40,6 +40,12 @@ export interface CreateFlowLogRequest {
     Description?: string;
 
     /**
+     * @type {boolean}
+     * @memberof CreateFlowLogRequest
+     */
+    EnableIndex?: boolean;
+
+    /**
      * @type {string}
      * @memberof CreateFlowLogRequest
      */

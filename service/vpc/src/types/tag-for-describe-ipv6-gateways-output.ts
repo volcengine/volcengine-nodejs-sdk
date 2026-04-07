@@ -16,31 +16,19 @@
  * 
  *
  * @export
- * @interface CreateInstanceGroupRequest
+ * @interface TagForDescribeIpv6GatewaysOutput
  */
-export interface CreateInstanceGroupRequest {
+export interface TagForDescribeIpv6GatewaysOutput {
 
     /**
      * @type {string}
-     * @memberof CreateInstanceGroupRequest
+     * @memberof TagForDescribeIpv6GatewaysOutput
      */
-    ClientToken?: string;
+    Key?: string;
 
     /**
      * @type {string}
-     * @memberof CreateInstanceGroupRequest
+     * @memberof TagForDescribeIpv6GatewaysOutput
      */
-    Description?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateInstanceGroupRequest
-     */
-    Name?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateInstanceGroupRequest
-     */
-    VpcId: string;
+    Value?: string;
 }

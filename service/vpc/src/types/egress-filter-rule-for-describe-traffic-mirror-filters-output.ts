@@ -24,6 +24,12 @@ export interface EgressFilterRuleForDescribeTrafficMirrorFiltersOutput {
      * @type {string}
      * @memberof EgressFilterRuleForDescribeTrafficMirrorFiltersOutput
      */
+    CreatedAt?: string;
+
+    /**
+     * @type {string}
+     * @memberof EgressFilterRuleForDescribeTrafficMirrorFiltersOutput
+     */
     Description?: string;
 
     /**
@@ -49,12 +55,6 @@ export interface EgressFilterRuleForDescribeTrafficMirrorFiltersOutput {
      * @memberof EgressFilterRuleForDescribeTrafficMirrorFiltersOutput
      */
     Priority?: number;
-
-    /**
-     * @type {string}
-     * @memberof EgressFilterRuleForDescribeTrafficMirrorFiltersOutput
-     */
-    ProjectName?: string;
 
     /**
      * @type {string}
@@ -97,4 +97,10 @@ export interface EgressFilterRuleForDescribeTrafficMirrorFiltersOutput {
      * @memberof EgressFilterRuleForDescribeTrafficMirrorFiltersOutput
      */
     TrafficMirrorFilterRuleId?: string;
+
+    /**
+     * @type {string}
+     * @memberof EgressFilterRuleForDescribeTrafficMirrorFiltersOutput
+     */
+    UpdatedAt?: string;
 }

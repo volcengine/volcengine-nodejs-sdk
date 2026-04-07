@@ -13,6 +13,7 @@
  */
 
 import { AssociateCenForDescribeVpcAttributesOutput } from './associate-cen-for-describe-vpc-attributes-output';
+import { Ipv6CidrBlockForDescribeVpcAttributesOutput } from './ipv6-cidr-block-for-describe-vpc-attributes-output';
 import { TagForDescribeVpcAttributesOutput } from './tag-for-describe-vpc-attributes-output';
  /**
  * 
@@ -69,6 +70,12 @@ export interface DescribeVpcAttributesResponse {
      * @memberof DescribeVpcAttributesResponse
      */
     Ipv6CidrBlock?: string;
+
+    /**
+     * @type {Array<Ipv6CidrBlockForDescribeVpcAttributesOutput>}
+     * @memberof DescribeVpcAttributesResponse
+     */
+    Ipv6CidrBlocks?: Array<Ipv6CidrBlockForDescribeVpcAttributesOutput>;
 
     /**
      * @type {boolean}

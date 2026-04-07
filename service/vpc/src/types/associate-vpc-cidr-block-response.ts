@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { Ipv6CidrBlockForAssociateVpcCidrBlockOutput } from './ipv6-cidr-block-for-associate-vpc-cidr-block-output';
  /**
  * 
  *
@@ -25,6 +26,12 @@ export interface AssociateVpcCidrBlockResponse {
      * @memberof AssociateVpcCidrBlockResponse
      */
     AsyncTaskId?: string;
+
+    /**
+     * @type {Array<Ipv6CidrBlockForAssociateVpcCidrBlockOutput>}
+     * @memberof AssociateVpcCidrBlockResponse
+     */
+    Ipv6CidrBlocks?: Array<Ipv6CidrBlockForAssociateVpcCidrBlockOutput>;
 
     /**
      * @type {string}

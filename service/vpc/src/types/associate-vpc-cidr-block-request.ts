@@ -24,6 +24,24 @@ export interface AssociateVpcCidrBlockRequest {
      * @type {string}
      * @memberof AssociateVpcCidrBlockRequest
      */
+    Ipv6CidrBlock?: string;
+
+    /**
+     * @type {string}
+     * @memberof AssociateVpcCidrBlockRequest
+     */
+    Ipv6Isp?: string;
+
+    /**
+     * @type {number}
+     * @memberof AssociateVpcCidrBlockRequest
+     */
+    Ipv6MaskLen?: number;
+
+    /**
+     * @type {string}
+     * @memberof AssociateVpcCidrBlockRequest
+     */
     SecondaryCidrBlock?: string;
 
     /**

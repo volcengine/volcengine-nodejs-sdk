@@ -32,6 +32,12 @@ export interface ModifyInstanceGroupMembersRequest {
      * @type {string}
      * @memberof ModifyInstanceGroupMembersRequest
      */
+    ClientToken?: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyInstanceGroupMembersRequest
+     */
     InstanceGroupId: string;
 
     /**

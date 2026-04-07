@@ -48,6 +48,18 @@ export interface ModifyVpcAttributesRequest {
      * @type {string}
      * @memberof ModifyVpcAttributesRequest
      */
+    Ipv6Isp?: string;
+
+    /**
+     * @type {number}
+     * @memberof ModifyVpcAttributesRequest
+     */
+    Ipv6MaskLen?: number;
+
+    /**
+     * @type {string}
+     * @memberof ModifyVpcAttributesRequest
+     */
     VpcId: string;
 
     /**

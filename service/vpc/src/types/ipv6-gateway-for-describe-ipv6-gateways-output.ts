@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { TagForDescribeIpv6GatewaysOutput } from './tag-for-describe-ipv6-gateways-output';
  /**
  * 
  *
@@ -61,6 +62,12 @@ export interface Ipv6GatewayForDescribeIpv6GatewaysOutput {
      * @memberof Ipv6GatewayForDescribeIpv6GatewaysOutput
      */
     Status?: string;
+
+    /**
+     * @type {Array<TagForDescribeIpv6GatewaysOutput>}
+     * @memberof Ipv6GatewayForDescribeIpv6GatewaysOutput
+     */
+    Tags?: Array<TagForDescribeIpv6GatewaysOutput>;
 
     /**
      * @type {string}

@@ -21,16 +21,16 @@
 export interface MemberForDescribeInstanceGroupsOutput {
 
     /**
-     * @type {boolean}
+     * @type {string}
      * @memberof MemberForDescribeInstanceGroupsOutput
      */
-    Enabled?: boolean;
+    Id?: string;
 
     /**
      * @type {string}
      * @memberof MemberForDescribeInstanceGroupsOutput
      */
-    Id?: string;
+    Status?: string;
 
     /**
      * @type {string}

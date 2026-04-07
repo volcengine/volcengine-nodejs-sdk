@@ -106,6 +106,12 @@ export interface TrafficMirrorSessionForDescribeTrafficMirrorSessionsOutput {
     TrafficMirrorTargetId?: string;
 
     /**
+     * @type {string}
+     * @memberof TrafficMirrorSessionForDescribeTrafficMirrorSessionsOutput
+     */
+    UpdatedAt?: string;
+
+    /**
      * @type {number}
      * @memberof TrafficMirrorSessionForDescribeTrafficMirrorSessionsOutput
      */

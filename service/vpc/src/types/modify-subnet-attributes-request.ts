@@ -49,4 +49,10 @@ export interface ModifySubnetAttributesRequest {
      * @memberof ModifySubnetAttributesRequest
      */
     SubnetName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifySubnetAttributesRequest
+     */
+    VpcIpv6CidrBlock?: string;
 }

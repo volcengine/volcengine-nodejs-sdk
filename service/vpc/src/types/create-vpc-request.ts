@@ -49,6 +49,12 @@ export interface CreateVpcRequest {
      * @type {boolean}
      * @memberof CreateVpcRequest
      */
+    DryRun?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof CreateVpcRequest
+     */
     EnableIpv6?: boolean;
 
     /**
@@ -56,6 +62,18 @@ export interface CreateVpcRequest {
      * @memberof CreateVpcRequest
      */
     Ipv6CidrBlock?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateVpcRequest
+     */
+    Ipv6Isp?: string;
+
+    /**
+     * @type {number}
+     * @memberof CreateVpcRequest
+     */
+    Ipv6MaskLen?: number;
 
     /**
      * @type {string}
