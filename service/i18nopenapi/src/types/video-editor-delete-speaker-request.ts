@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface DataForTermBaseTermGroupImportOutput
+ * @interface VideoEditorDeleteSpeakerRequest
  */
-export interface DataForTermBaseTermGroupImportOutput {
+export interface VideoEditorDeleteSpeakerRequest {
 
     /**
      * @type {number}
-     * @memberof DataForTermBaseTermGroupImportOutput
+     * @memberof VideoEditorDeleteSpeakerRequest
      */
-    code?: number;
-
-    /**
-     * @type {string}
-     * @memberof DataForTermBaseTermGroupImportOutput
-     */
-    message?: string;
+    id: number;
 
     /**
      * @type {number}
-     * @memberof DataForTermBaseTermGroupImportOutput
+     * @memberof VideoEditorDeleteSpeakerRequest
      */
-    taskId?: number;
+    subtaskId: number;
+
+    /**
+     * @type {number}
+     * @memberof VideoEditorDeleteSpeakerRequest
+     */
+    type?: number;
 }

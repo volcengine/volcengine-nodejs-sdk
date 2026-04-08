@@ -90,6 +90,12 @@ export interface TaskInfoForDocumentTaskDetailOutput {
     isDub?: boolean;
 
     /**
+     * @type {number}
+     * @memberof TaskInfoForDocumentTaskDetailOutput
+     */
+    llmVideoUnderstandingType?: number;
+
+    /**
      * @type {boolean}
      * @memberof TaskInfoForDocumentTaskDetailOutput
      */

@@ -16,19 +16,7 @@
  * 
  *
  * @export
- * @interface AutoFillTargetTextForProjectsOutput
+ * @interface VideoEditorDeleteSpeakerResponse
  */
-export interface AutoFillTargetTextForProjectsOutput {
-
-    /**
-     * @type {boolean}
-     * @memberof AutoFillTargetTextForProjectsOutput
-     */
-    onCreate?: boolean;
-
-    /**
-     * @type {boolean}
-     * @memberof AutoFillTargetTextForProjectsOutput
-     */
-    onUpdate?: boolean;
+export interface VideoEditorDeleteSpeakerResponse {
 }

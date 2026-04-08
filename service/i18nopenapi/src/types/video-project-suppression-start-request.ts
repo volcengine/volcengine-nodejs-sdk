@@ -69,8 +69,8 @@ export interface VideoProjectSuppressionStartRequest {
     startTime?: number;
 
     /**
-     * @type {Array<number>}
+     * @type {Array<string>}
      * @memberof VideoProjectSuppressionStartRequest
      */
-    subtaskIds?: Array<number>;
+    subtaskIds?: Array<string>;
 }

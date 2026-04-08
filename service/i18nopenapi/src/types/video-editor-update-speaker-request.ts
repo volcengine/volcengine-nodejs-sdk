@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface DataForTermBaseTermGroupImportOutput
+ * @interface VideoEditorUpdateSpeakerRequest
  */
-export interface DataForTermBaseTermGroupImportOutput {
+export interface VideoEditorUpdateSpeakerRequest {
 
     /**
      * @type {number}
-     * @memberof DataForTermBaseTermGroupImportOutput
+     * @memberof VideoEditorUpdateSpeakerRequest
      */
-    code?: number;
+    id: number;
 
     /**
      * @type {string}
-     * @memberof DataForTermBaseTermGroupImportOutput
+     * @memberof VideoEditorUpdateSpeakerRequest
      */
-    message?: string;
+    speakerName: string;
 
     /**
      * @type {number}
-     * @memberof DataForTermBaseTermGroupImportOutput
+     * @memberof VideoEditorUpdateSpeakerRequest
      */
-    taskId?: number;
+    subtaskId: number;
 }

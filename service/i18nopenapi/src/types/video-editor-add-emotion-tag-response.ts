@@ -16,25 +16,13 @@
  * 
  *
  * @export
- * @interface DataForTermBaseTermGroupImportOutput
+ * @interface VideoEditorAddEmotionTagResponse
  */
-export interface DataForTermBaseTermGroupImportOutput {
+export interface VideoEditorAddEmotionTagResponse {
 
     /**
      * @type {number}
-     * @memberof DataForTermBaseTermGroupImportOutput
+     * @memberof VideoEditorAddEmotionTagResponse
      */
-    code?: number;
-
-    /**
-     * @type {string}
-     * @memberof DataForTermBaseTermGroupImportOutput
-     */
-    message?: string;
-
-    /**
-     * @type {number}
-     * @memberof DataForTermBaseTermGroupImportOutput
-     */
-    taskId?: number;
+    id?: number;
 }

@@ -51,8 +51,8 @@ export interface TermBaseTermGroupsRequest {
     sorting?: number;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof TermBaseTermGroupsRequest
      */
-    termBaseId: number;
+    termBaseId: string;
 }

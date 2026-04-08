@@ -16,19 +16,7 @@
  * 
  *
  * @export
- * @interface DataForVideoProjectTaskBatchStartAIFlowOutput
+ * @interface VideoEditorSyncSpeakerToSubTaskResponse
  */
-export interface DataForVideoProjectTaskBatchStartAIFlowOutput {
-
-    /**
-     * @type {string}
-     * @memberof DataForVideoProjectTaskBatchStartAIFlowOutput
-     */
-    statusCode?: string;
-
-    /**
-     * @type {string}
-     * @memberof DataForVideoProjectTaskBatchStartAIFlowOutput
-     */
-    statusMessage?: string;
+export interface VideoEditorSyncSpeakerToSubTaskResponse {
 }
