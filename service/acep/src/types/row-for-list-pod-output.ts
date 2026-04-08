@@ -14,6 +14,7 @@
 
 import { ConfigurationForListPodOutput } from './configuration-for-list-pod-output';
 import { DcInfoForListPodOutput } from './dc-info-for-list-pod-output';
+import { EipForListPodOutput } from './eip-for-list-pod-output';
 import { PortMappingRuleListForListPodOutput } from './port-mapping-rule-list-for-list-pod-output';
 import { TagForListPodOutput } from './tag-for-list-pod-output';
  /**
@@ -121,6 +122,12 @@ export interface RowForListPodOutput {
     DownBandwidthLimit?: number;
 
     /**
+     * @type {EipForListPodOutput}
+     * @memberof RowForListPodOutput
+     */
+    Eip?: EipForListPodOutput;
+
+    /**
      * @type {string}
      * @memberof RowForListPodOutput
      */
@@ -149,6 +156,12 @@ export interface RowForListPodOutput {
      * @memberof RowForListPodOutput
      */
     Online?: number;
+
+    /**
+     * @type {string}
+     * @memberof RowForListPodOutput
+     */
+    PhoneTemplateId?: string;
 
     /**
      * @type {string}
