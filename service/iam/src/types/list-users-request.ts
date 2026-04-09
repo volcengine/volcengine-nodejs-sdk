@@ -33,6 +33,12 @@ export interface ListUsersRequest {
     Offset?: number;
 
     /**
+     * @type {number}
+     * @memberof ListUsersRequest
+     */
+    PiiRedaction?: number;
+
+    /**
      * @type {string}
      * @memberof ListUsersRequest
      */
