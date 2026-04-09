@@ -98,6 +98,8 @@ import { GetPodPropertyRequest } from './types/index';
 import { GetPodPropertyResponse } from './types/index';
 import { GetProductResourceRequest } from './types/index';
 import { GetProductResourceResponse } from './types/index';
+import { GetProxyRequest } from './types/index';
+import { GetProxyResponse } from './types/index';
 import { GetTaskInfoRequest } from './types/index';
 import { GetTaskInfoResponse } from './types/index';
 import { InstallAppRequest } from './types/index';
@@ -112,20 +114,38 @@ import { ListAOSPImageRequest } from './types/index';
 import { ListAOSPImageResponse } from './types/index';
 import { ListAppRequest } from './types/index';
 import { ListAppResponse } from './types/index';
+import { ListAppVersionDeployRequest } from './types/index';
+import { ListAppVersionDeployResponse } from './types/index';
 import { ListBackupDataRequest } from './types/index';
 import { ListBackupDataResponse } from './types/index';
 import { ListConfigurationRequest } from './types/index';
 import { ListConfigurationResponse } from './types/index';
 import { ListCustomRouteRequest } from './types/index';
 import { ListCustomRouteResponse } from './types/index';
+import { ListDNSRuleRequest } from './types/index';
+import { ListDNSRuleResponse } from './types/index';
 import { ListDcRequest } from './types/index';
 import { ListDcResponse } from './types/index';
+import { ListDisplayLayoutMiniRequest } from './types/index';
+import { ListDisplayLayoutMiniResponse } from './types/index';
+import { ListHostRequest } from './types/index';
+import { ListHostResponse } from './types/index';
 import { ListImageResourceRequest } from './types/index';
 import { ListImageResourceResponse } from './types/index';
 import { ListPhoneTemplateRequest } from './types/index';
 import { ListPhoneTemplateResponse } from './types/index';
 import { ListPodRequest } from './types/index';
+import { ListPodResourceRequest } from './types/index';
+import { ListPodResourceResponse } from './types/index';
+import { ListPodResourceSetRequest } from './types/index';
+import { ListPodResourceSetResponse } from './types/index';
 import { ListPodResponse } from './types/index';
+import { ListPortMappingRuleRequest } from './types/index';
+import { ListPortMappingRuleResponse } from './types/index';
+import { ListTagRequest } from './types/index';
+import { ListTagResponse } from './types/index';
+import { ListTaskRequest } from './types/index';
+import { ListTaskResponse } from './types/index';
 import { MigratePodRequest } from './types/index';
 import { MigratePodResponse } from './types/index';
 import { PodAdbRequest } from './types/index';
@@ -252,6 +272,7 @@ export type GetPodAppListCommandOutput = CommandOutput<GetPodAppListResponse>;
 export type GetPodMetricCommandOutput = CommandOutput<GetPodMetricResponse>;
 export type GetPodPropertyCommandOutput = CommandOutput<GetPodPropertyResponse>;
 export type GetProductResourceCommandOutput = CommandOutput<GetProductResourceResponse>;
+export type GetProxyCommandOutput = CommandOutput<GetProxyResponse>;
 export type GetTaskInfoCommandOutput = CommandOutput<GetTaskInfoResponse>;
 export type InstallAppCommandOutput = CommandOutput<InstallAppResponse>;
 export type InstallAppsCommandOutput = CommandOutput<InstallAppsResponse>;
@@ -259,13 +280,22 @@ export type LaunchAppCommandOutput = CommandOutput<LaunchAppResponse>;
 export type LaunchAppsCommandOutput = CommandOutput<LaunchAppsResponse>;
 export type ListAOSPImageCommandOutput = CommandOutput<ListAOSPImageResponse>;
 export type ListAppCommandOutput = CommandOutput<ListAppResponse>;
+export type ListAppVersionDeployCommandOutput = CommandOutput<ListAppVersionDeployResponse>;
 export type ListBackupDataCommandOutput = CommandOutput<ListBackupDataResponse>;
 export type ListConfigurationCommandOutput = CommandOutput<ListConfigurationResponse>;
 export type ListCustomRouteCommandOutput = CommandOutput<ListCustomRouteResponse>;
+export type ListDNSRuleCommandOutput = CommandOutput<ListDNSRuleResponse>;
 export type ListDcCommandOutput = CommandOutput<ListDcResponse>;
+export type ListDisplayLayoutMiniCommandOutput = CommandOutput<ListDisplayLayoutMiniResponse>;
+export type ListHostCommandOutput = CommandOutput<ListHostResponse>;
 export type ListImageResourceCommandOutput = CommandOutput<ListImageResourceResponse>;
 export type ListPhoneTemplateCommandOutput = CommandOutput<ListPhoneTemplateResponse>;
 export type ListPodCommandOutput = CommandOutput<ListPodResponse>;
+export type ListPodResourceCommandOutput = CommandOutput<ListPodResourceResponse>;
+export type ListPodResourceSetCommandOutput = CommandOutput<ListPodResourceSetResponse>;
+export type ListPortMappingRuleCommandOutput = CommandOutput<ListPortMappingRuleResponse>;
+export type ListTagCommandOutput = CommandOutput<ListTagResponse>;
+export type ListTaskCommandOutput = CommandOutput<ListTaskResponse>;
 export type MigratePodCommandOutput = CommandOutput<MigratePodResponse>;
 export type PodAdbCommandOutput = CommandOutput<PodAdbResponse>;
 export type PodDataDeleteCommandOutput = CommandOutput<PodDataDeleteResponse>;
@@ -951,6 +981,21 @@ export class GetProductResourceCommand extends Command<
   }
 }
 /**
+ * Command to GetProxy
+ */
+export class GetProxyCommand extends Command<
+  GetProxyRequest,
+  GetProxyCommandOutput,
+  'GetProxyCommand'
+> {
+  static readonly metaPath = '/GetProxy/2025-05-01/acep/post/application_json/';
+
+  constructor(input: GetProxyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetProxyCommand.metaPath);
+  }
+}
+/**
  * Command to GetTaskInfo
  */
 export class GetTaskInfoCommand extends Command<
@@ -1056,6 +1101,21 @@ export class ListAppCommand extends Command<
   }
 }
 /**
+ * Command to ListAppVersionDeploy
+ */
+export class ListAppVersionDeployCommand extends Command<
+  ListAppVersionDeployRequest,
+  ListAppVersionDeployCommandOutput,
+  'ListAppVersionDeployCommand'
+> {
+  static readonly metaPath = '/ListAppVersionDeploy/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListAppVersionDeployRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAppVersionDeployCommand.metaPath);
+  }
+}
+/**
  * Command to ListBackupData
  */
 export class ListBackupDataCommand extends Command<
@@ -1101,6 +1161,21 @@ export class ListCustomRouteCommand extends Command<
   }
 }
 /**
+ * Command to ListDNSRule
+ */
+export class ListDNSRuleCommand extends Command<
+  ListDNSRuleRequest,
+  ListDNSRuleCommandOutput,
+  'ListDNSRuleCommand'
+> {
+  static readonly metaPath = '/ListDNSRule/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListDNSRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDNSRuleCommand.metaPath);
+  }
+}
+/**
  * Command to ListDc
  */
 export class ListDcCommand extends Command<
@@ -1113,6 +1188,36 @@ export class ListDcCommand extends Command<
   constructor(input: ListDcRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListDcCommand.metaPath);
+  }
+}
+/**
+ * Command to ListDisplayLayoutMini
+ */
+export class ListDisplayLayoutMiniCommand extends Command<
+  ListDisplayLayoutMiniRequest,
+  ListDisplayLayoutMiniCommandOutput,
+  'ListDisplayLayoutMiniCommand'
+> {
+  static readonly metaPath = '/ListDisplayLayoutMini/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListDisplayLayoutMiniRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDisplayLayoutMiniCommand.metaPath);
+  }
+}
+/**
+ * Command to ListHost
+ */
+export class ListHostCommand extends Command<
+  ListHostRequest,
+  ListHostCommandOutput,
+  'ListHostCommand'
+> {
+  static readonly metaPath = '/ListHost/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListHostRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListHostCommand.metaPath);
   }
 }
 /**
@@ -1158,6 +1263,81 @@ export class ListPodCommand extends Command<
   constructor(input: ListPodRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListPodCommand.metaPath);
+  }
+}
+/**
+ * Command to ListPodResource
+ */
+export class ListPodResourceCommand extends Command<
+  ListPodResourceRequest,
+  ListPodResourceCommandOutput,
+  'ListPodResourceCommand'
+> {
+  static readonly metaPath = '/ListPodResource/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListPodResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListPodResourceCommand.metaPath);
+  }
+}
+/**
+ * Command to ListPodResourceSet
+ */
+export class ListPodResourceSetCommand extends Command<
+  ListPodResourceSetRequest,
+  ListPodResourceSetCommandOutput,
+  'ListPodResourceSetCommand'
+> {
+  static readonly metaPath = '/ListPodResourceSet/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListPodResourceSetRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListPodResourceSetCommand.metaPath);
+  }
+}
+/**
+ * Command to ListPortMappingRule
+ */
+export class ListPortMappingRuleCommand extends Command<
+  ListPortMappingRuleRequest,
+  ListPortMappingRuleCommandOutput,
+  'ListPortMappingRuleCommand'
+> {
+  static readonly metaPath = '/ListPortMappingRule/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListPortMappingRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListPortMappingRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to ListTag
+ */
+export class ListTagCommand extends Command<
+  ListTagRequest,
+  ListTagCommandOutput,
+  'ListTagCommand'
+> {
+  static readonly metaPath = '/ListTag/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListTagRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListTagCommand.metaPath);
+  }
+}
+/**
+ * Command to ListTask
+ */
+export class ListTaskCommand extends Command<
+  ListTaskRequest,
+  ListTaskCommandOutput,
+  'ListTaskCommand'
+> {
+  static readonly metaPath = '/ListTask/2025-05-01/acep/get/text_plain/';
+
+  constructor(input: ListTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListTaskCommand.metaPath);
   }
 }
 /**
@@ -1805,6 +1985,7 @@ export default {
   GetPodMetricCommand,
   GetPodPropertyCommand,
   GetProductResourceCommand,
+  GetProxyCommand,
   GetTaskInfoCommand,
   InstallAppCommand,
   InstallAppsCommand,
@@ -1812,13 +1993,22 @@ export default {
   LaunchAppsCommand,
   ListAOSPImageCommand,
   ListAppCommand,
+  ListAppVersionDeployCommand,
   ListBackupDataCommand,
   ListConfigurationCommand,
   ListCustomRouteCommand,
+  ListDNSRuleCommand,
   ListDcCommand,
+  ListDisplayLayoutMiniCommand,
+  ListHostCommand,
   ListImageResourceCommand,
   ListPhoneTemplateCommand,
   ListPodCommand,
+  ListPodResourceCommand,
+  ListPodResourceSetCommand,
+  ListPortMappingRuleCommand,
+  ListTagCommand,
+  ListTaskCommand,
   MigratePodCommand,
   PodAdbCommand,
   PodDataDeleteCommand,
