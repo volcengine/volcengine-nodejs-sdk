@@ -33,6 +33,12 @@ export interface GetUserRequest {
     ID?: number;
 
     /**
+     * @type {number}
+     * @memberof GetUserRequest
+     */
+    PiiRedaction?: number;
+
+    /**
      * @type {string}
      * @memberof GetUserRequest
      */
