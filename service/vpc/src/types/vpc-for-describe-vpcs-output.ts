@@ -13,6 +13,7 @@
  */
 
 import { AssociateCenForDescribeVpcsOutput } from './associate-cen-for-describe-vpcs-output';
+import { Ipv6CidrBlockForDescribeVpcsOutput } from './ipv6-cidr-block-for-describe-vpcs-output';
 import { TagForDescribeVpcsOutput } from './tag-for-describe-vpcs-output';
  /**
  * 
@@ -63,6 +64,18 @@ export interface VpcForDescribeVpcsOutput {
      * @memberof VpcForDescribeVpcsOutput
      */
     Ipv4GatewayId?: string;
+
+    /**
+     * @type {string}
+     * @memberof VpcForDescribeVpcsOutput
+     */
+    Ipv6CidrBlock?: string;
+
+    /**
+     * @type {Array<Ipv6CidrBlockForDescribeVpcsOutput>}
+     * @memberof VpcForDescribeVpcsOutput
+     */
+    Ipv6CidrBlocks?: Array<Ipv6CidrBlockForDescribeVpcsOutput>;
 
     /**
      * @type {boolean}

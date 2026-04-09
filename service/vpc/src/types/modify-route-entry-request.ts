@@ -30,6 +30,18 @@ export interface ModifyRouteEntryRequest {
      * @type {string}
      * @memberof ModifyRouteEntryRequest
      */
+    NextHopId?: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyRouteEntryRequest
+     */
+    NextHopType?: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyRouteEntryRequest
+     */
     RouteEntryId: string;
 
     /**

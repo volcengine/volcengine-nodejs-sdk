@@ -24,6 +24,12 @@ export interface ModifyInstanceGroupAttributesRequest {
      * @type {string}
      * @memberof ModifyInstanceGroupAttributesRequest
      */
+    ClientToken?: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyInstanceGroupAttributesRequest
+     */
     Description?: string;
 
     /**

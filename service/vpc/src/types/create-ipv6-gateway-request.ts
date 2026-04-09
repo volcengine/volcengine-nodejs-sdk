@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { TagForCreateIpv6GatewayInput } from './tag-for-create-ipv6-gateway-input';
  /**
  * 
  *
@@ -43,6 +44,12 @@ export interface CreateIpv6GatewayRequest {
      * @memberof CreateIpv6GatewayRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {Array<TagForCreateIpv6GatewayInput>}
+     * @memberof CreateIpv6GatewayRequest
+     */
+    Tags?: Array<TagForCreateIpv6GatewayInput>;
 
     /**
      * @type {string}

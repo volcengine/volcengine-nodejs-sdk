@@ -21,6 +21,12 @@
 export interface UnassignIpv6AddressesRequest {
 
     /**
+     * @type {string}
+     * @memberof UnassignIpv6AddressesRequest
+     */
+    ClientToken?: string;
+
+    /**
      * @type {Array<string>}
      * @memberof UnassignIpv6AddressesRequest
      */

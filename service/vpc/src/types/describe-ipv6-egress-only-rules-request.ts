@@ -33,10 +33,10 @@ export interface DescribeIpv6EgressOnlyRulesRequest {
     Ipv6Address?: string;
 
     /**
-     * @type {string}
+     * @type {Array<string>}
      * @memberof DescribeIpv6EgressOnlyRulesRequest
      */
-    Ipv6EgressOnlyRuleIds?: string;
+    Ipv6EgressOnlyRuleIds?: Array<string>;
 
     /**
      * @type {string}

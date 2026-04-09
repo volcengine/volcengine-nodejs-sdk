@@ -28,6 +28,12 @@ export interface NetworkAclForDescribeNetworkAclsOutput {
      * @type {string}
      * @memberof NetworkAclForDescribeNetworkAclsOutput
      */
+    AccountId?: string;
+
+    /**
+     * @type {string}
+     * @memberof NetworkAclForDescribeNetworkAclsOutput
+     */
     CreationTime?: string;
 
     /**

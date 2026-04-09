@@ -67,5 +67,11 @@ export interface CreateSubnetRequest {
      * @type {string}
      * @memberof CreateSubnetRequest
      */
+    VpcIpv6CidrBlock?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateSubnetRequest
+     */
     ZoneId: string;
 }

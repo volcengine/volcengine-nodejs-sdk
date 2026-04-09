@@ -13,6 +13,7 @@
  */
 
 import { AssociatedElasticIpForDescribeNetworkInterfaceAttributesOutput } from './associated-elastic-ip-for-describe-network-interface-attributes-output';
+import { AttachmentForDescribeNetworkInterfaceAttributesOutput } from './attachment-for-describe-network-interface-attributes-output';
 import { PrivateIpSetsForDescribeNetworkInterfaceAttributesOutput } from './private-ip-sets-for-describe-network-interface-attributes-output';
 import { TagForDescribeNetworkInterfaceAttributesOutput } from './tag-for-describe-network-interface-attributes-output';
  /**
@@ -34,6 +35,12 @@ export interface DescribeNetworkInterfaceAttributesResponse {
      * @memberof DescribeNetworkInterfaceAttributesResponse
      */
     AssociatedElasticIp?: AssociatedElasticIpForDescribeNetworkInterfaceAttributesOutput;
+
+    /**
+     * @type {AttachmentForDescribeNetworkInterfaceAttributesOutput}
+     * @memberof DescribeNetworkInterfaceAttributesResponse
+     */
+    Attachment?: AttachmentForDescribeNetworkInterfaceAttributesOutput;
 
     /**
      * @type {string}

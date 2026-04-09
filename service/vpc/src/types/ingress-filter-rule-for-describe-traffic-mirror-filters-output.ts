@@ -24,6 +24,12 @@ export interface IngressFilterRuleForDescribeTrafficMirrorFiltersOutput {
      * @type {string}
      * @memberof IngressFilterRuleForDescribeTrafficMirrorFiltersOutput
      */
+    CreatedAt?: string;
+
+    /**
+     * @type {string}
+     * @memberof IngressFilterRuleForDescribeTrafficMirrorFiltersOutput
+     */
     Description?: string;
 
     /**
@@ -49,12 +55,6 @@ export interface IngressFilterRuleForDescribeTrafficMirrorFiltersOutput {
      * @memberof IngressFilterRuleForDescribeTrafficMirrorFiltersOutput
      */
     Priority?: number;
-
-    /**
-     * @type {string}
-     * @memberof IngressFilterRuleForDescribeTrafficMirrorFiltersOutput
-     */
-    ProjectName?: string;
 
     /**
      * @type {string}
@@ -97,4 +97,10 @@ export interface IngressFilterRuleForDescribeTrafficMirrorFiltersOutput {
      * @memberof IngressFilterRuleForDescribeTrafficMirrorFiltersOutput
      */
     TrafficMirrorFilterRuleId?: string;
+
+    /**
+     * @type {string}
+     * @memberof IngressFilterRuleForDescribeTrafficMirrorFiltersOutput
+     */
+    UpdatedAt?: string;
 }

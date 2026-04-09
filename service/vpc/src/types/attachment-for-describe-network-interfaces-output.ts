@@ -16,31 +16,19 @@
  * 
  *
  * @export
- * @interface CreateInstanceGroupRequest
+ * @interface AttachmentForDescribeNetworkInterfacesOutput
  */
-export interface CreateInstanceGroupRequest {
+export interface AttachmentForDescribeNetworkInterfacesOutput {
+
+    /**
+     * @type {boolean}
+     * @memberof AttachmentForDescribeNetworkInterfacesOutput
+     */
+    DeleteOnTermination?: boolean;
 
     /**
      * @type {string}
-     * @memberof CreateInstanceGroupRequest
+     * @memberof AttachmentForDescribeNetworkInterfacesOutput
      */
-    ClientToken?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateInstanceGroupRequest
-     */
-    Description?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateInstanceGroupRequest
-     */
-    Name?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateInstanceGroupRequest
-     */
-    VpcId: string;
+    InstanceId?: string;
 }

@@ -16,31 +16,19 @@
  * 
  *
  * @export
- * @interface CreateInstanceGroupRequest
+ * @interface Ipv6CidrBlockForDescribeVpcAttributesOutput
  */
-export interface CreateInstanceGroupRequest {
+export interface Ipv6CidrBlockForDescribeVpcAttributesOutput {
 
     /**
      * @type {string}
-     * @memberof CreateInstanceGroupRequest
+     * @memberof Ipv6CidrBlockForDescribeVpcAttributesOutput
      */
-    ClientToken?: string;
+    Ipv6CidrBlock?: string;
 
     /**
      * @type {string}
-     * @memberof CreateInstanceGroupRequest
+     * @memberof Ipv6CidrBlockForDescribeVpcAttributesOutput
      */
-    Description?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateInstanceGroupRequest
-     */
-    Name?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateInstanceGroupRequest
-     */
-    VpcId: string;
+    Ipv6Isp?: string;
 }

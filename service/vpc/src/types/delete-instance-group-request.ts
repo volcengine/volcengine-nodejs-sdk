@@ -24,5 +24,11 @@ export interface DeleteInstanceGroupRequest {
      * @type {string}
      * @memberof DeleteInstanceGroupRequest
      */
+    ClientToken?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteInstanceGroupRequest
+     */
     InstanceGroupId: string;
 }
