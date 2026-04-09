@@ -16,19 +16,13 @@
  * 
  *
  * @export
- * @interface BaseRespForVideoProjectTaskBatchStartAIFlowOutput
+ * @interface VideoEditorGetEmotionTagsRequest
  */
-export interface BaseRespForVideoProjectTaskBatchStartAIFlowOutput {
+export interface VideoEditorGetEmotionTagsRequest {
 
     /**
      * @type {number}
-     * @memberof BaseRespForVideoProjectTaskBatchStartAIFlowOutput
+     * @memberof VideoEditorGetEmotionTagsRequest
      */
-    StatusCode?: number;
-
-    /**
-     * @type {string}
-     * @memberof BaseRespForVideoProjectTaskBatchStartAIFlowOutput
-     */
-    StatusMessage?: string;
+    subtaskId: number;
 }

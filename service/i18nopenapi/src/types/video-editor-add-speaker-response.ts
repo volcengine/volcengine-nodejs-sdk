@@ -16,19 +16,13 @@
  * 
  *
  * @export
- * @interface AutoFillTargetTextForVideoProjectListOutput
+ * @interface VideoEditorAddSpeakerResponse
  */
-export interface AutoFillTargetTextForVideoProjectListOutput {
+export interface VideoEditorAddSpeakerResponse {
 
     /**
-     * @type {boolean}
-     * @memberof AutoFillTargetTextForVideoProjectListOutput
+     * @type {number}
+     * @memberof VideoEditorAddSpeakerResponse
      */
-    onCreate?: boolean;
-
-    /**
-     * @type {boolean}
-     * @memberof AutoFillTargetTextForVideoProjectListOutput
-     */
-    onUpdate?: boolean;
+    id?: number;
 }

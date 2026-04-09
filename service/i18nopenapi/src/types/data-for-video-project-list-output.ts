@@ -13,7 +13,6 @@
  */
 
 import { CreatorForVideoProjectListOutput } from './creator-for-video-project-list-output';
-import { ExtraForVideoProjectListOutput } from './extra-for-video-project-list-output';
  /**
  * 
  *
@@ -26,6 +25,12 @@ export interface DataForVideoProjectListOutput {
      * @type {string}
      * @memberof DataForVideoProjectListOutput
      */
+    comment?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForVideoProjectListOutput
+     */
     createdAt?: string;
 
     /**
@@ -33,24 +38,6 @@ export interface DataForVideoProjectListOutput {
      * @memberof DataForVideoProjectListOutput
      */
     creator?: CreatorForVideoProjectListOutput;
-
-    /**
-     * @type {string}
-     * @memberof DataForVideoProjectListOutput
-     */
-    creatorId?: string;
-
-    /**
-     * @type {string}
-     * @memberof DataForVideoProjectListOutput
-     */
-    description?: string;
-
-    /**
-     * @type {ExtraForVideoProjectListOutput}
-     * @memberof DataForVideoProjectListOutput
-     */
-    extra?: ExtraForVideoProjectListOutput;
 
     /**
      * @type {string}

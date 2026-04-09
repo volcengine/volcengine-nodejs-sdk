@@ -90,6 +90,12 @@ export interface TaskInfoForVideoProjectSerialTaskCreateInput {
     isDub?: boolean;
 
     /**
+     * @type {number}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
+    llmVideoUnderstandingType?: number;
+
+    /**
      * @type {boolean}
      * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
      */

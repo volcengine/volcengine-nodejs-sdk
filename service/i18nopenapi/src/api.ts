@@ -162,10 +162,20 @@ import { TermBaseTermGroupsRequest } from './types/index';
 import { TermBaseTermGroupsResponse } from './types/index';
 import { TextGetTextListWithKeyOrSourceRequest } from './types/index';
 import { TextGetTextListWithKeyOrSourceResponse } from './types/index';
+import { VideoEditorAddEmotionTagRequest } from './types/index';
+import { VideoEditorAddEmotionTagResponse } from './types/index';
+import { VideoEditorAddSpeakerRequest } from './types/index';
+import { VideoEditorAddSpeakerResponse } from './types/index';
 import { VideoEditorAsyncGenDubbingRequest } from './types/index';
 import { VideoEditorAsyncGenDubbingResponse } from './types/index';
+import { VideoEditorDeleteEmotionTagRequest } from './types/index';
+import { VideoEditorDeleteEmotionTagResponse } from './types/index';
+import { VideoEditorDeleteSpeakerRequest } from './types/index';
+import { VideoEditorDeleteSpeakerResponse } from './types/index';
 import { VideoEditorGenDubbingRequest } from './types/index';
 import { VideoEditorGenDubbingResponse } from './types/index';
+import { VideoEditorGetEmotionTagsRequest } from './types/index';
+import { VideoEditorGetEmotionTagsResponse } from './types/index';
 import { VideoEditorGetSpeakersRequest } from './types/index';
 import { VideoEditorGetSpeakersResponse } from './types/index';
 import { VideoEditorListSubtitlesRequest } from './types/index';
@@ -176,6 +186,10 @@ import { VideoEditorSaveSubtitleRequest } from './types/index';
 import { VideoEditorSaveSubtitleResponse } from './types/index';
 import { VideoEditorSubmitSubtaskRequest } from './types/index';
 import { VideoEditorSubmitSubtaskResponse } from './types/index';
+import { VideoEditorSyncSpeakerToSubTaskRequest } from './types/index';
+import { VideoEditorSyncSpeakerToSubTaskResponse } from './types/index';
+import { VideoEditorUpdateSpeakerRequest } from './types/index';
+import { VideoEditorUpdateSpeakerResponse } from './types/index';
 import { VideoProjectCreateRequest } from './types/index';
 import { VideoProjectCreateResponse } from './types/index';
 import { VideoProjectListRequest } from './types/index';
@@ -276,13 +290,20 @@ export type TermBaseTermGroupImportCommandOutput = CommandOutput<TermBaseTermGro
 export type TermBaseTermGroupImportTaskCommandOutput = CommandOutput<TermBaseTermGroupImportTaskResponse>;
 export type TermBaseTermGroupsCommandOutput = CommandOutput<TermBaseTermGroupsResponse>;
 export type TextGetTextListWithKeyOrSourceCommandOutput = CommandOutput<TextGetTextListWithKeyOrSourceResponse>;
+export type VideoEditorAddEmotionTagCommandOutput = CommandOutput<VideoEditorAddEmotionTagResponse>;
+export type VideoEditorAddSpeakerCommandOutput = CommandOutput<VideoEditorAddSpeakerResponse>;
 export type VideoEditorAsyncGenDubbingCommandOutput = CommandOutput<VideoEditorAsyncGenDubbingResponse>;
+export type VideoEditorDeleteEmotionTagCommandOutput = CommandOutput<VideoEditorDeleteEmotionTagResponse>;
+export type VideoEditorDeleteSpeakerCommandOutput = CommandOutput<VideoEditorDeleteSpeakerResponse>;
 export type VideoEditorGenDubbingCommandOutput = CommandOutput<VideoEditorGenDubbingResponse>;
+export type VideoEditorGetEmotionTagsCommandOutput = CommandOutput<VideoEditorGetEmotionTagsResponse>;
 export type VideoEditorGetSpeakersCommandOutput = CommandOutput<VideoEditorGetSpeakersResponse>;
 export type VideoEditorListSubtitlesCommandOutput = CommandOutput<VideoEditorListSubtitlesResponse>;
 export type VideoEditorQueryAsyncGenDubbingResultCommandOutput = CommandOutput<VideoEditorQueryAsyncGenDubbingResultResponse>;
 export type VideoEditorSaveSubtitleCommandOutput = CommandOutput<VideoEditorSaveSubtitleResponse>;
 export type VideoEditorSubmitSubtaskCommandOutput = CommandOutput<VideoEditorSubmitSubtaskResponse>;
+export type VideoEditorSyncSpeakerToSubTaskCommandOutput = CommandOutput<VideoEditorSyncSpeakerToSubTaskResponse>;
+export type VideoEditorUpdateSpeakerCommandOutput = CommandOutput<VideoEditorUpdateSpeakerResponse>;
 export type VideoProjectCreateCommandOutput = CommandOutput<VideoProjectCreateResponse>;
 export type VideoProjectListCommandOutput = CommandOutput<VideoProjectListResponse>;
 export type VideoProjectSerialDubTaskCreateCommandOutput = CommandOutput<VideoProjectSerialDubTaskCreateResponse>;
@@ -1419,6 +1440,36 @@ export class TextGetTextListWithKeyOrSourceCommand extends Command<
   }
 }
 /**
+ * Command to VideoEditorAddEmotionTag
+ */
+export class VideoEditorAddEmotionTagCommand extends Command<
+  VideoEditorAddEmotionTagRequest,
+  VideoEditorAddEmotionTagCommandOutput,
+  'VideoEditorAddEmotionTagCommand'
+> {
+  static readonly metaPath = '/VideoEditorAddEmotionTag/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorAddEmotionTagRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorAddEmotionTagCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorAddSpeaker
+ */
+export class VideoEditorAddSpeakerCommand extends Command<
+  VideoEditorAddSpeakerRequest,
+  VideoEditorAddSpeakerCommandOutput,
+  'VideoEditorAddSpeakerCommand'
+> {
+  static readonly metaPath = '/VideoEditorAddSpeaker/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorAddSpeakerRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorAddSpeakerCommand.metaPath);
+  }
+}
+/**
  * Command to VideoEditorAsyncGenDubbing
  */
 export class VideoEditorAsyncGenDubbingCommand extends Command<
@@ -1426,11 +1477,41 @@ export class VideoEditorAsyncGenDubbingCommand extends Command<
   VideoEditorAsyncGenDubbingCommandOutput,
   'VideoEditorAsyncGenDubbingCommand'
 > {
-  static readonly metaPath = '/VideoEditorAsyncGenDubbing/2021-05-21/i18n_openapi/get/text_plain/';
+  static readonly metaPath = '/VideoEditorAsyncGenDubbing/2021-05-21/i18n_openapi/post/application_json/';
 
   constructor(input: VideoEditorAsyncGenDubbingRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorAsyncGenDubbingCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorDeleteEmotionTag
+ */
+export class VideoEditorDeleteEmotionTagCommand extends Command<
+  VideoEditorDeleteEmotionTagRequest,
+  VideoEditorDeleteEmotionTagCommandOutput,
+  'VideoEditorDeleteEmotionTagCommand'
+> {
+  static readonly metaPath = '/VideoEditorDeleteEmotionTag/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorDeleteEmotionTagRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorDeleteEmotionTagCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorDeleteSpeaker
+ */
+export class VideoEditorDeleteSpeakerCommand extends Command<
+  VideoEditorDeleteSpeakerRequest,
+  VideoEditorDeleteSpeakerCommandOutput,
+  'VideoEditorDeleteSpeakerCommand'
+> {
+  static readonly metaPath = '/VideoEditorDeleteSpeaker/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorDeleteSpeakerRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorDeleteSpeakerCommand.metaPath);
   }
 }
 /**
@@ -1446,6 +1527,21 @@ export class VideoEditorGenDubbingCommand extends Command<
   constructor(input: VideoEditorGenDubbingRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorGenDubbingCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorGetEmotionTags
+ */
+export class VideoEditorGetEmotionTagsCommand extends Command<
+  VideoEditorGetEmotionTagsRequest,
+  VideoEditorGetEmotionTagsCommandOutput,
+  'VideoEditorGetEmotionTagsCommand'
+> {
+  static readonly metaPath = '/VideoEditorGetEmotionTags/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorGetEmotionTagsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorGetEmotionTagsCommand.metaPath);
   }
 }
 /**
@@ -1516,11 +1612,41 @@ export class VideoEditorSubmitSubtaskCommand extends Command<
   VideoEditorSubmitSubtaskCommandOutput,
   'VideoEditorSubmitSubtaskCommand'
 > {
-  static readonly metaPath = '/VideoEditorSubmitSubtask/2021-05-21/i18n_openapi/post/application_x-www-form-urlencoded/';
+  static readonly metaPath = '/VideoEditorSubmitSubtask/2021-05-21/i18n_openapi/post/application_json/';
 
   constructor(input: VideoEditorSubmitSubtaskRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorSubmitSubtaskCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorSyncSpeakerToSubTask
+ */
+export class VideoEditorSyncSpeakerToSubTaskCommand extends Command<
+  VideoEditorSyncSpeakerToSubTaskRequest,
+  VideoEditorSyncSpeakerToSubTaskCommandOutput,
+  'VideoEditorSyncSpeakerToSubTaskCommand'
+> {
+  static readonly metaPath = '/VideoEditorSyncSpeakerToSubTask/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorSyncSpeakerToSubTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorSyncSpeakerToSubTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorUpdateSpeaker
+ */
+export class VideoEditorUpdateSpeakerCommand extends Command<
+  VideoEditorUpdateSpeakerRequest,
+  VideoEditorUpdateSpeakerCommandOutput,
+  'VideoEditorUpdateSpeakerCommand'
+> {
+  static readonly metaPath = '/VideoEditorUpdateSpeaker/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorUpdateSpeakerRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorUpdateSpeakerCommand.metaPath);
   }
 }
 /**
@@ -1765,13 +1891,20 @@ export default {
   TermBaseTermGroupImportTaskCommand,
   TermBaseTermGroupsCommand,
   TextGetTextListWithKeyOrSourceCommand,
+  VideoEditorAddEmotionTagCommand,
+  VideoEditorAddSpeakerCommand,
   VideoEditorAsyncGenDubbingCommand,
+  VideoEditorDeleteEmotionTagCommand,
+  VideoEditorDeleteSpeakerCommand,
   VideoEditorGenDubbingCommand,
+  VideoEditorGetEmotionTagsCommand,
   VideoEditorGetSpeakersCommand,
   VideoEditorListSubtitlesCommand,
   VideoEditorQueryAsyncGenDubbingResultCommand,
   VideoEditorSaveSubtitleCommand,
   VideoEditorSubmitSubtaskCommand,
+  VideoEditorSyncSpeakerToSubTaskCommand,
+  VideoEditorUpdateSpeakerCommand,
   VideoProjectCreateCommand,
   VideoProjectListCommand,
   VideoProjectSerialDubTaskCreateCommand,

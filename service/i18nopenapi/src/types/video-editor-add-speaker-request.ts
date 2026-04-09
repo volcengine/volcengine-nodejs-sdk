@@ -12,18 +12,29 @@
  * Do not edit the class manually.
  */
 
-import { SettingForProjectsOutput } from './setting-for-projects-output';
  /**
  * 
  *
  * @export
- * @interface ExtraForProjectsOutput
+ * @interface VideoEditorAddSpeakerRequest
  */
-export interface ExtraForProjectsOutput {
+export interface VideoEditorAddSpeakerRequest {
 
     /**
-     * @type {SettingForProjectsOutput}
-     * @memberof ExtraForProjectsOutput
+     * @type {string}
+     * @memberof VideoEditorAddSpeakerRequest
      */
-    setting?: SettingForProjectsOutput;
+    speakerName: string;
+
+    /**
+     * @type {number}
+     * @memberof VideoEditorAddSpeakerRequest
+     */
+    subtaskId: number;
+
+    /**
+     * @type {number}
+     * @memberof VideoEditorAddSpeakerRequest
+     */
+    type?: number;
 }

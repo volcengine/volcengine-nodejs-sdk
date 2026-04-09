@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DataForTermBaseTermGroupImportTaskOutput } from './data-for-term-base-term-group-import-task-output';
  /**
  * 
  *
@@ -19,4 +20,22 @@
  * @interface TermBaseTermGroupImportTaskResponse
  */
 export interface TermBaseTermGroupImportTaskResponse {
+
+    /**
+     * @type {number}
+     * @memberof TermBaseTermGroupImportTaskResponse
+     */
+    code?: number;
+
+    /**
+     * @type {DataForTermBaseTermGroupImportTaskOutput}
+     * @memberof TermBaseTermGroupImportTaskResponse
+     */
+    data?: DataForTermBaseTermGroupImportTaskOutput;
+
+    /**
+     * @type {string}
+     * @memberof TermBaseTermGroupImportTaskResponse
+     */
+    message?: string;
 }

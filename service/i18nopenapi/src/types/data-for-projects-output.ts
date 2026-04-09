@@ -13,7 +13,6 @@
  */
 
 import { CreatorForProjectsOutput } from './creator-for-projects-output';
-import { ExtraForProjectsOutput } from './extra-for-projects-output';
  /**
  * 
  *
@@ -26,6 +25,12 @@ export interface DataForProjectsOutput {
      * @type {string}
      * @memberof DataForProjectsOutput
      */
+    comment?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForProjectsOutput
+     */
     createdAt?: string;
 
     /**
@@ -33,24 +38,6 @@ export interface DataForProjectsOutput {
      * @memberof DataForProjectsOutput
      */
     creator?: CreatorForProjectsOutput;
-
-    /**
-     * @type {string}
-     * @memberof DataForProjectsOutput
-     */
-    creatorId?: string;
-
-    /**
-     * @type {string}
-     * @memberof DataForProjectsOutput
-     */
-    description?: string;
-
-    /**
-     * @type {ExtraForProjectsOutput}
-     * @memberof DataForProjectsOutput
-     */
-    extra?: ExtraForProjectsOutput;
 
     /**
      * @type {string}

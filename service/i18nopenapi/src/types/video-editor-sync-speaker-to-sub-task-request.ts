@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface TextValidateForVideoProjectListOutput
+ * @interface VideoEditorSyncSpeakerToSubTaskRequest
  */
-export interface TextValidateForVideoProjectListOutput {
+export interface VideoEditorSyncSpeakerToSubTaskRequest {
 
     /**
-     * @type {boolean}
-     * @memberof TextValidateForVideoProjectListOutput
+     * @type {number}
+     * @memberof VideoEditorSyncSpeakerToSubTaskRequest
      */
-    sourceTextValidate?: boolean;
+    id: number;
 
     /**
-     * @type {boolean}
-     * @memberof TextValidateForVideoProjectListOutput
+     * @type {number}
+     * @memberof VideoEditorSyncSpeakerToSubTaskRequest
      */
-    targetTextValidate?: boolean;
+    subtaskId: number;
 }

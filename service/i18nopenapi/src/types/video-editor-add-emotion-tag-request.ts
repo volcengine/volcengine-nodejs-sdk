@@ -12,18 +12,29 @@
  * Do not edit the class manually.
  */
 
-import { SettingForVideoProjectListOutput } from './setting-for-video-project-list-output';
  /**
  * 
  *
  * @export
- * @interface ExtraForVideoProjectListOutput
+ * @interface VideoEditorAddEmotionTagRequest
  */
-export interface ExtraForVideoProjectListOutput {
+export interface VideoEditorAddEmotionTagRequest {
 
     /**
-     * @type {SettingForVideoProjectListOutput}
-     * @memberof ExtraForVideoProjectListOutput
+     * @type {string}
+     * @memberof VideoEditorAddEmotionTagRequest
      */
-    setting?: SettingForVideoProjectListOutput;
+    emotionTag: string;
+
+    /**
+     * @type {string}
+     * @memberof VideoEditorAddEmotionTagRequest
+     */
+    name: string;
+
+    /**
+     * @type {number}
+     * @memberof VideoEditorAddEmotionTagRequest
+     */
+    subtaskId: number;
 }

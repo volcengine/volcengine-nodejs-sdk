@@ -40,12 +40,6 @@ export interface DataForVideoProjectTaskListOutput {
     tasks?: Array<TaskForVideoProjectTaskListOutput>;
 
     /**
-     * @type {number}
-     * @memberof DataForVideoProjectTaskListOutput
-     */
-    total?: number;
-
-    /**
      * @type {string}
      * @memberof DataForVideoProjectTaskListOutput
      */

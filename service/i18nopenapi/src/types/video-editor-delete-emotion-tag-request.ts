@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface TextValidateForProjectsOutput
+ * @interface VideoEditorDeleteEmotionTagRequest
  */
-export interface TextValidateForProjectsOutput {
+export interface VideoEditorDeleteEmotionTagRequest {
 
     /**
-     * @type {boolean}
-     * @memberof TextValidateForProjectsOutput
+     * @type {number}
+     * @memberof VideoEditorDeleteEmotionTagRequest
      */
-    sourceTextValidate?: boolean;
+    id: number;
 
     /**
-     * @type {boolean}
-     * @memberof TextValidateForProjectsOutput
+     * @type {number}
+     * @memberof VideoEditorDeleteEmotionTagRequest
      */
-    targetTextValidate?: boolean;
+    subtaskId: number;
 }
