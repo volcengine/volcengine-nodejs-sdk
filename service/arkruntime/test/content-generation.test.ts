@@ -272,6 +272,7 @@ describe("Content Generation", () => {
           prompt_tokens: 0,
           completion_tokens: 411300,
           total_tokens: 411300,
+          tool_usage: { web_search: 1 },
         },
         frames: 264,
         framespersecond: 24,
@@ -301,6 +302,8 @@ describe("Content Generation", () => {
       expect(result.content.video_url).toBe("https://example.com/output.mp4");
       expect(result.content.last_frame_url).toBe("https://example.com/frame.jpg");
       expect(result.usage.completion_tokens).toBe(411300);
+      expect(result.usage.tool_usage).toBeDefined();
+      expect(result.usage.tool_usage!.web_search).toBe(1);
       expect(result.frames).toBe(264);
       expect(result.framespersecond).toBe(24);
       expect(result.ratio).toBe("16:9");
@@ -355,7 +358,7 @@ describe("Content Generation", () => {
             safety_identifier: "safe-x",
             status: "succeeded",
             content: { video_url: "https://example.com/v1.mp4", last_frame_url: "", file_url: "" },
-            usage: { prompt_tokens: 0, completion_tokens: 100, total_tokens: 100 },
+            usage: { prompt_tokens: 0, completion_tokens: 100, total_tokens: 100, tool_usage: { web_search: 2 } },
             created_at: 1776073000,
             updated_at: 1776074000,
             generate_audio: true,
@@ -391,6 +394,8 @@ describe("Content Generation", () => {
       expect(result.items).toHaveLength(2);
       expect(result.items[0].id).toBe("cgt-list-001");
       expect(result.items[0].safety_identifier).toBe("safe-x");
+      expect(result.items[0].usage.tool_usage).toBeDefined();
+      expect(result.items[0].usage.tool_usage!.web_search).toBe(2);
       expect(result.items[0].tools).toHaveLength(1);
       expect(result.items[0].tools![0].type).toBe("web_search");
       expect(result.items[1].id).toBe("cgt-list-002");

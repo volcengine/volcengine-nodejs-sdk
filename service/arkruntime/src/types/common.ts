@@ -26,12 +26,17 @@ export interface CompletionTokensDetails {
   provisioned_tokens?: number;
 }
 
+export interface ToolUsage {
+  web_search?: number;
+}
+
 export interface Usage {
   prompt_tokens: number;
   completion_tokens: number;
   total_tokens: number;
   prompt_tokens_details: PromptTokensDetail;
   completion_tokens_details: CompletionTokensDetails;
+  tool_usage?: ToolUsage;
 }
 
 export type HttpHeaders = Record<string, string>;
