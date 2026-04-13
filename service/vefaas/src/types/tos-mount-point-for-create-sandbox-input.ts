@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { CredentialsForCreateSandboxInput } from './credentials-for-create-sandbox-input';
+import { EncryptionConfigForCreateSandboxInput } from './encryption-config-for-create-sandbox-input';
  /**
  * 
  *
@@ -24,11 +26,47 @@ export interface TosMountPointForCreateSandboxInput {
      * @type {string}
      * @memberof TosMountPointForCreateSandboxInput
      */
+    AuthMode?: string;
+
+    /**
+     * @type {string}
+     * @memberof TosMountPointForCreateSandboxInput
+     */
+    BucketName?: string;
+
+    /**
+     * @type {string}
+     * @memberof TosMountPointForCreateSandboxInput
+     */
     BucketPath?: string;
+
+    /**
+     * @type {CredentialsForCreateSandboxInput}
+     * @memberof TosMountPointForCreateSandboxInput
+     */
+    Credentials?: CredentialsForCreateSandboxInput;
+
+    /**
+     * @type {EncryptionConfigForCreateSandboxInput}
+     * @memberof TosMountPointForCreateSandboxInput
+     */
+    EncryptionConfig?: EncryptionConfigForCreateSandboxInput;
+
+    /**
+     * @type {string}
+     * @memberof TosMountPointForCreateSandboxInput
+     */
+    Endpoint?: string;
 
     /**
      * @type {string}
      * @memberof TosMountPointForCreateSandboxInput
      */
     LocalMountPath?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof TosMountPointForCreateSandboxInput
+     */
+    ReadOnly?: boolean;
 }
