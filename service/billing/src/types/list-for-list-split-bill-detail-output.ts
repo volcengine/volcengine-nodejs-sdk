@@ -78,6 +78,12 @@ export interface ListForListSplitBillDetailOutput {
      * @type {string}
      * @memberof ListForListSplitBillDetailOutput
      */
+    ChargeItemCode?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListSplitBillDetailOutput
+     */
     ConfigName?: string;
 
     /**
@@ -199,6 +205,12 @@ export interface ListForListSplitBillDetailOutput {
      * @memberof ListForListSplitBillDetailOutput
      */
     ExpandField?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListSplitBillDetailOutput
+     */
+    ExpenseDate?: string;
 
     /**
      * @type {string}
