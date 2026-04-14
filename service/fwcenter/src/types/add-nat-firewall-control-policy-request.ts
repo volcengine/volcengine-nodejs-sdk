@@ -63,6 +63,12 @@ export interface AddNatFirewallControlPolicyRequest {
     Direction: AddNatFirewallControlPolicyRequestDirectionEnum;
 
     /**
+     * @type {string}
+     * @memberof AddNatFirewallControlPolicyRequest
+     */
+    DomainResolutionMode?: AddNatFirewallControlPolicyRequestDomainResolutionModeEnum;
+
+    /**
      * @type {number}
      * @memberof AddNatFirewallControlPolicyRequest
      */
@@ -169,6 +175,14 @@ export enum AddNatFirewallControlPolicyRequestDestinationTypeEnum {
 export enum AddNatFirewallControlPolicyRequestDirectionEnum {
     In = 'in',
     Out = 'out'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum AddNatFirewallControlPolicyRequestDomainResolutionModeEnum {
+    Fqdn = 'fqdn',
+    Dns = 'dns'
 }
 /**
  * @export

@@ -114,6 +114,12 @@ export interface DataForDescribeControlPolicyOutput {
     Direction?: string;
 
     /**
+     * @type {string}
+     * @memberof DataForDescribeControlPolicyOutput
+     */
+    DomainResolutionMode?: string;
+
+    /**
      * @type {number}
      * @memberof DataForDescribeControlPolicyOutput
      */

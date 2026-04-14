@@ -43,18 +43,6 @@ export interface SrcCandidateListForCreateVpcFirewallRoutePolicyInput {
      * @memberof SrcCandidateListForCreateVpcFirewallRoutePolicyInput
      */
     CandidateType?: SrcCandidateListForCreateVpcFirewallRoutePolicyInputCandidateTypeEnum;
-
-    /**
-     * @type {string}
-     * @memberof SrcCandidateListForCreateVpcFirewallRoutePolicyInput
-     */
-    SubnetCidrs?: string;
-
-    /**
-     * @type {string}
-     * @memberof SrcCandidateListForCreateVpcFirewallRoutePolicyInput
-     */
-    TrRouteTableId?: string;
 }
 
 /**

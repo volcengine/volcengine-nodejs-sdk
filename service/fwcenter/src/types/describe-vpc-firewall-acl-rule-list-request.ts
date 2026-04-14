@@ -42,6 +42,12 @@ export interface DescribeVpcFirewallAclRuleListRequest {
      * @type {string}
      * @memberof DescribeVpcFirewallAclRuleListRequest
      */
+    IpType?: DescribeVpcFirewallAclRuleListRequestIpTypeEnum;
+
+    /**
+     * @type {string}
+     * @memberof DescribeVpcFirewallAclRuleListRequest
+     */
     OrderDir?: DescribeVpcFirewallAclRuleListRequestOrderDirEnum;
 
     /**
@@ -93,6 +99,14 @@ export interface DescribeVpcFirewallAclRuleListRequest {
     VpcFirewallId: string;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum DescribeVpcFirewallAclRuleListRequestIpTypeEnum {
+    V4 = 'v4',
+    V6 = 'v6'
+}
 /**
  * @export
  * @enum {string}
