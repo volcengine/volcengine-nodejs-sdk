@@ -182,6 +182,19 @@ importers:
         specifier: ^5.2.2
         version: 5.9.3
 
+  service/arkclaw:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.29
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
   service/arkruntime:
     dependencies:
       '@volcengine/ark':
@@ -487,6 +500,19 @@ importers:
         version: 5.9.3
 
   service/dataleap:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.29
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/dataleap20260301:
     dependencies:
       '@volcengine/sdk-core':
         specifier: workspace:*
