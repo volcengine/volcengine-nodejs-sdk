@@ -16,25 +16,13 @@
  * 
  *
  * @export
- * @interface CheckUserUploadBackupResponse
+ * @interface RebuildDBGreenInstanceRequest
  */
-export interface CheckUserUploadBackupResponse {
+export interface RebuildDBGreenInstanceRequest {
 
     /**
      * @type {string}
-     * @memberof CheckUserUploadBackupResponse
+     * @memberof RebuildDBGreenInstanceRequest
      */
-    Reason?: string;
-
-    /**
-     * @type {string}
-     * @memberof CheckUserUploadBackupResponse
-     */
-    Status?: string;
-
-    /**
-     * @type {number}
-     * @memberof CheckUserUploadBackupResponse
-     */
-    StatusCode?: number;
+    InstanceId: string;
 }

@@ -16,19 +16,7 @@
  * 
  *
  * @export
- * @interface AssociateInfoForDescribeUserTosBackupAssociateOutput
+ * @interface RebuildDBGreenInstanceResponse
  */
-export interface AssociateInfoForDescribeUserTosBackupAssociateOutput {
-
-    /**
-     * @type {boolean}
-     * @memberof AssociateInfoForDescribeUserTosBackupAssociateOutput
-     */
-    Associated?: boolean;
-
-    /**
-     * @type {string}
-     * @memberof AssociateInfoForDescribeUserTosBackupAssociateOutput
-     */
-    ObjectFileName?: string;
+export interface RebuildDBGreenInstanceResponse {
 }

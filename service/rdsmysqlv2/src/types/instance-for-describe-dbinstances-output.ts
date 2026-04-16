@@ -115,12 +115,6 @@ export interface InstanceForDescribeDBInstancesOutput {
     MaintenanceWindow?: MaintenanceWindowForDescribeDBInstancesOutput;
 
     /**
-     * @type {string}
-     * @memberof InstanceForDescribeDBInstancesOutput
-     */
-    NewNodeSpec?: string;
-
-    /**
      * @type {number}
      * @memberof InstanceForDescribeDBInstancesOutput
      */
@@ -161,12 +155,6 @@ export interface InstanceForDescribeDBInstancesOutput {
      * @memberof InstanceForDescribeDBInstancesOutput
      */
     RegionId?: string;
-
-    /**
-     * @type {string}
-     * @memberof InstanceForDescribeDBInstancesOutput
-     */
-    SecondsMonitorConfig?: string;
 
     /**
      * @type {number}
