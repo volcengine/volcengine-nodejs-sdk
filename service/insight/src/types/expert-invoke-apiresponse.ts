@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { ResultForExpertInvokeAPIOutput } from './result-for-expert-invoke-apioutput';
  /**
  * 
  *
@@ -22,8 +21,92 @@ import { ResultForExpertInvokeAPIOutput } from './result-for-expert-invoke-apiou
 export interface ExpertInvokeAPIResponse {
 
     /**
-     * @type {ResultForExpertInvokeAPIOutput}
+     * @type {string}
      * @memberof ExpertInvokeAPIResponse
      */
-    Result?: ResultForExpertInvokeAPIOutput;
+    Asr?: string;
+
+    /**
+     * @type {string}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    Content?: string;
+
+    /**
+     * @type {number}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    DomainLevel?: number;
+
+    /**
+     * @type {number}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    FansCnt?: number;
+
+    /**
+     * @type {boolean}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    HasRisk?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    Ocr?: string;
+
+    /**
+     * @type {string}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    OriginId?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    Related?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    RelatedReason?: string;
+
+    /**
+     * @type {string}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    RiskLevel?: string;
+
+    /**
+     * @type {string}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    RiskReason?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    RiskTags?: Array<string>;
+
+    /**
+     * @type {string}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    Suggestion?: string;
+
+    /**
+     * @type {string}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    Summary?: string;
+
+    /**
+     * @type {string}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    Title?: string;
 }

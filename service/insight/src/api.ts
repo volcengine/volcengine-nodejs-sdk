@@ -16,6 +16,10 @@ import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandO
 
 import { ExpertInvokeAPIRequest } from './types/index';
 import { ExpertInvokeAPIResponse } from './types/index';
+import { GetTaskListRequest } from './types/index';
+import { GetTaskListResponse } from './types/index';
+import { GetTaskResultRequest } from './types/index';
+import { GetTaskResultResponse } from './types/index';
 import { ListCustomSubsTaskRequest } from './types/index';
 import { ListCustomSubsTaskResponse } from './types/index';
 import { ListSubsTaskAPIRequest } from './types/index';
@@ -29,6 +33,8 @@ import { QueryClueInfoResponse } from './types/index';
 // Output Type Definitions
 // ============================================================================
 export type ExpertInvokeAPICommandOutput = CommandOutput<ExpertInvokeAPIResponse>;
+export type GetTaskListCommandOutput = CommandOutput<GetTaskListResponse>;
+export type GetTaskResultCommandOutput = CommandOutput<GetTaskResultResponse>;
 export type ListCustomSubsTaskCommandOutput = CommandOutput<ListCustomSubsTaskResponse>;
 export type ListSubsTaskAPICommandOutput = CommandOutput<ListSubsTaskAPIResponse>;
 export type PullPostCommandOutput = CommandOutput<PullPostResponse>;
@@ -60,6 +66,36 @@ export class ExpertInvokeAPICommand extends Command<
   constructor(input: ExpertInvokeAPIRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ExpertInvokeAPICommand.metaPath);
+  }
+}
+/**
+ * Command to GetTaskList
+ */
+export class GetTaskListCommand extends Command<
+  GetTaskListRequest,
+  GetTaskListCommandOutput,
+  'GetTaskListCommand'
+> {
+  static readonly metaPath = '/GetTaskList/2025-09-05/insight/get/text_plain/';
+
+  constructor(input: GetTaskListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetTaskListCommand.metaPath);
+  }
+}
+/**
+ * Command to GetTaskResult
+ */
+export class GetTaskResultCommand extends Command<
+  GetTaskResultRequest,
+  GetTaskResultCommandOutput,
+  'GetTaskResultCommand'
+> {
+  static readonly metaPath = '/GetTaskResult/2025-09-05/insight/get/text_plain/';
+
+  constructor(input: GetTaskResultRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetTaskResultCommand.metaPath);
   }
 }
 /**
@@ -126,6 +162,8 @@ export class QueryClueInfoCommand extends Command<
 export default {
   INSIGHTClient,
   ExpertInvokeAPICommand,
+  GetTaskListCommand,
+  GetTaskResultCommand,
   ListCustomSubsTaskCommand,
   ListSubsTaskAPICommand,
   PullPostCommand,
