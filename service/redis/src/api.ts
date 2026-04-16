@@ -78,6 +78,8 @@ import { DescribeCrossRegionBackupPolicyRequest } from './types/index';
 import { DescribeCrossRegionBackupPolicyResponse } from './types/index';
 import { DescribeCrossRegionBackupsRequest } from './types/index';
 import { DescribeCrossRegionBackupsResponse } from './types/index';
+import { DescribeDBEngineVersionsRequest } from './types/index';
+import { DescribeDBEngineVersionsResponse } from './types/index';
 import { DescribeDBInstanceAclCategoriesRequest } from './types/index';
 import { DescribeDBInstanceAclCategoriesResponse } from './types/index';
 import { DescribeDBInstanceAclCommandsRequest } from './types/index';
@@ -126,6 +128,8 @@ import { DescribeZonesRequest } from './types/index';
 import { DescribeZonesResponse } from './types/index';
 import { DisassociateAllowListRequest } from './types/index';
 import { DisassociateAllowListResponse } from './types/index';
+import { EnableDBInstanceHARequest } from './types/index';
+import { EnableDBInstanceHAResponse } from './types/index';
 import { EnableShardedClusterRequest } from './types/index';
 import { EnableShardedClusterResponse } from './types/index';
 import { ExecutePlannedEventRequest } from './types/index';
@@ -158,6 +162,8 @@ import { ModifyDBInstanceDeletionProtectionPolicyRequest } from './types/index';
 import { ModifyDBInstanceDeletionProtectionPolicyResponse } from './types/index';
 import { ModifyDBInstanceMaxConnRequest } from './types/index';
 import { ModifyDBInstanceMaxConnResponse } from './types/index';
+import { ModifyDBInstanceMinorVersionRequest } from './types/index';
+import { ModifyDBInstanceMinorVersionResponse } from './types/index';
 import { ModifyDBInstanceNameRequest } from './types/index';
 import { ModifyDBInstanceNameResponse } from './types/index';
 import { ModifyDBInstanceParamsRequest } from './types/index';
@@ -242,6 +248,7 @@ export type DescribeBigKeysCommandOutput = CommandOutput<DescribeBigKeysResponse
 export type DescribeBlueGreenDeploymentsCommandOutput = CommandOutput<DescribeBlueGreenDeploymentsResponse>;
 export type DescribeCrossRegionBackupPolicyCommandOutput = CommandOutput<DescribeCrossRegionBackupPolicyResponse>;
 export type DescribeCrossRegionBackupsCommandOutput = CommandOutput<DescribeCrossRegionBackupsResponse>;
+export type DescribeDBEngineVersionsCommandOutput = CommandOutput<DescribeDBEngineVersionsResponse>;
 export type DescribeDBInstanceAclCategoriesCommandOutput = CommandOutput<DescribeDBInstanceAclCategoriesResponse>;
 export type DescribeDBInstanceAclCommandsCommandOutput = CommandOutput<DescribeDBInstanceAclCommandsResponse>;
 export type DescribeDBInstanceBandwidthPerShardCommandOutput = CommandOutput<DescribeDBInstanceBandwidthPerShardResponse>;
@@ -266,6 +273,7 @@ export type DescribeSlowLogsCommandOutput = CommandOutput<DescribeSlowLogsRespon
 export type DescribeTagsByResourceCommandOutput = CommandOutput<DescribeTagsByResourceResponse>;
 export type DescribeZonesCommandOutput = CommandOutput<DescribeZonesResponse>;
 export type DisassociateAllowListCommandOutput = CommandOutput<DisassociateAllowListResponse>;
+export type EnableDBInstanceHACommandOutput = CommandOutput<EnableDBInstanceHAResponse>;
 export type EnableShardedClusterCommandOutput = CommandOutput<EnableShardedClusterResponse>;
 export type ExecutePlannedEventCommandOutput = CommandOutput<ExecutePlannedEventResponse>;
 export type FlushDBInstanceCommandOutput = CommandOutput<FlushDBInstanceResponse>;
@@ -282,6 +290,7 @@ export type ModifyDBInstanceAdditionalBandwidthPerShardCommandOutput = CommandOu
 export type ModifyDBInstanceChargeTypeCommandOutput = CommandOutput<ModifyDBInstanceChargeTypeResponse>;
 export type ModifyDBInstanceDeletionProtectionPolicyCommandOutput = CommandOutput<ModifyDBInstanceDeletionProtectionPolicyResponse>;
 export type ModifyDBInstanceMaxConnCommandOutput = CommandOutput<ModifyDBInstanceMaxConnResponse>;
+export type ModifyDBInstanceMinorVersionCommandOutput = CommandOutput<ModifyDBInstanceMinorVersionResponse>;
 export type ModifyDBInstanceNameCommandOutput = CommandOutput<ModifyDBInstanceNameResponse>;
 export type ModifyDBInstanceParamsCommandOutput = CommandOutput<ModifyDBInstanceParamsResponse>;
 export type ModifyDBInstancePrivateDNSVisibilityCommandOutput = CommandOutput<ModifyDBInstancePrivateDNSVisibilityResponse>;
@@ -801,6 +810,21 @@ export class DescribeCrossRegionBackupsCommand extends Command<
   }
 }
 /**
+ * Command to DescribeDBEngineVersions
+ */
+export class DescribeDBEngineVersionsCommand extends Command<
+  DescribeDBEngineVersionsRequest,
+  DescribeDBEngineVersionsCommandOutput,
+  'DescribeDBEngineVersionsCommand'
+> {
+  static readonly metaPath = '/DescribeDBEngineVersions/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribeDBEngineVersionsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeDBEngineVersionsCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeDBInstanceAclCategories
  */
 export class DescribeDBInstanceAclCategoriesCommand extends Command<
@@ -1161,6 +1185,21 @@ export class DisassociateAllowListCommand extends Command<
   }
 }
 /**
+ * Command to EnableDBInstanceHA
+ */
+export class EnableDBInstanceHACommand extends Command<
+  EnableDBInstanceHARequest,
+  EnableDBInstanceHACommandOutput,
+  'EnableDBInstanceHACommand'
+> {
+  static readonly metaPath = '/EnableDBInstanceHA/2020-12-07/redis/post/application_json/';
+
+  constructor(input: EnableDBInstanceHARequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnableDBInstanceHACommand.metaPath);
+  }
+}
+/**
  * Command to EnableShardedCluster
  */
 export class EnableShardedClusterCommand extends Command<
@@ -1398,6 +1437,21 @@ export class ModifyDBInstanceMaxConnCommand extends Command<
   constructor(input: ModifyDBInstanceMaxConnRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ModifyDBInstanceMaxConnCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyDBInstanceMinorVersion
+ */
+export class ModifyDBInstanceMinorVersionCommand extends Command<
+  ModifyDBInstanceMinorVersionRequest,
+  ModifyDBInstanceMinorVersionCommandOutput,
+  'ModifyDBInstanceMinorVersionCommand'
+> {
+  static readonly metaPath = '/ModifyDBInstanceMinorVersion/2020-12-07/redis/post/application_json/';
+
+  constructor(input: ModifyDBInstanceMinorVersionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyDBInstanceMinorVersionCommand.metaPath);
   }
 }
 /**
@@ -1795,6 +1849,7 @@ export default {
   DescribeBlueGreenDeploymentsCommand,
   DescribeCrossRegionBackupPolicyCommand,
   DescribeCrossRegionBackupsCommand,
+  DescribeDBEngineVersionsCommand,
   DescribeDBInstanceAclCategoriesCommand,
   DescribeDBInstanceAclCommandsCommand,
   DescribeDBInstanceBandwidthPerShardCommand,
@@ -1819,6 +1874,7 @@ export default {
   DescribeTagsByResourceCommand,
   DescribeZonesCommand,
   DisassociateAllowListCommand,
+  EnableDBInstanceHACommand,
   EnableShardedClusterCommand,
   ExecutePlannedEventCommand,
   FlushDBInstanceCommand,
@@ -1835,6 +1891,7 @@ export default {
   ModifyDBInstanceChargeTypeCommand,
   ModifyDBInstanceDeletionProtectionPolicyCommand,
   ModifyDBInstanceMaxConnCommand,
+  ModifyDBInstanceMinorVersionCommand,
   ModifyDBInstanceNameCommand,
   ModifyDBInstanceParamsCommand,
   ModifyDBInstancePrivateDNSVisibilityCommand,

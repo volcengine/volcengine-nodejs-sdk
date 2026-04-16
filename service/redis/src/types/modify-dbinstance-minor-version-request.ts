@@ -16,31 +16,31 @@
  * 
  *
  * @export
- * @interface SwitchOverRequest
+ * @interface ModifyDBInstanceMinorVersionRequest
  */
-export interface SwitchOverRequest {
+export interface ModifyDBInstanceMinorVersionRequest {
 
     /**
      * @type {string}
-     * @memberof SwitchOverRequest
-     */
-    ClientToken?: string;
-
-    /**
-     * @type {string}
-     * @memberof SwitchOverRequest
+     * @memberof ModifyDBInstanceMinorVersionRequest
      */
     InstanceId: string;
 
     /**
      * @type {string}
-     * @memberof SwitchOverRequest
+     * @memberof ModifyDBInstanceMinorVersionRequest
      */
-    TargetPrimaryNodeId?: string;
+    ProxyVersion?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof SwitchOverRequest
+     * @type {string}
+     * @memberof ModifyDBInstanceMinorVersionRequest
      */
-    TargetPrimaryNodeIds?: Array<string>;
+    ServerVersion?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof ModifyDBInstanceMinorVersionRequest
+     */
+    SwitchoverImmediately: boolean;
 }
