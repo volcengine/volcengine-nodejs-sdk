@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface DescribeUserTosBackupAssociateRequest
+ * @interface ModifyBackupNameRequest
  */
-export interface DescribeUserTosBackupAssociateRequest {
+export interface ModifyBackupNameRequest {
 
     /**
      * @type {string}
-     * @memberof DescribeUserTosBackupAssociateRequest
+     * @memberof ModifyBackupNameRequest
      */
-    BucketName: string;
-
-    /**
-     * @type {Array<string>}
-     * @memberof DescribeUserTosBackupAssociateRequest
-     */
-    ObjectFileNames?: Array<string>;
+    BackupId: string;
 
     /**
      * @type {string}
-     * @memberof DescribeUserTosBackupAssociateRequest
+     * @memberof ModifyBackupNameRequest
      */
-    ProjectName: string;
+    BackupName: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyBackupNameRequest
+     */
+    InstanceId: string;
 }
