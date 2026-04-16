@@ -16,13 +16,7 @@
  * 
  *
  * @export
- * @interface ProxyNodeCustomForRestoreToNewInstanceFromUserTosInput
+ * @interface ModifyBackupNameResponse
  */
-export interface ProxyNodeCustomForRestoreToNewInstanceFromUserTosInput {
-
-    /**
-     * @type {number}
-     * @memberof ProxyNodeCustomForRestoreToNewInstanceFromUserTosInput
-     */
-    CpuNum?: number;
+export interface ModifyBackupNameResponse {
 }

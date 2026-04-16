@@ -28,12 +28,6 @@ export interface DescribeDBProxyPriceDetailRequest {
     InstanceId: string;
 
     /**
-     * @type {string}
-     * @memberof DescribeDBProxyPriceDetailRequest
-     */
-    ProjectName?: string;
-
-    /**
      * @type {ProxyNodeCustomForDescribeDBProxyPriceDetailInput}
      * @memberof DescribeDBProxyPriceDetailRequest
      */
