@@ -102,7 +102,19 @@ export interface ListForListAmortizedCostBillDetailOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillDetailOutput
      */
+    ChargeItemCode?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillDetailOutput
+     */
     ConfigName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillDetailOutput
+     */
+    ConfigurationCode?: string;
 
     /**
      * @type {string}
