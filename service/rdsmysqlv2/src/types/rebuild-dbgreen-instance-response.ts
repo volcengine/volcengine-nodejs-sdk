@@ -16,19 +16,7 @@
  * 
  *
  * @export
- * @interface RestoreToNewInstanceFromUserTosResponse
+ * @interface RebuildDBGreenInstanceResponse
  */
-export interface RestoreToNewInstanceFromUserTosResponse {
-
-    /**
-     * @type {string}
-     * @memberof RestoreToNewInstanceFromUserTosResponse
-     */
-    InstanceId?: string;
-
-    /**
-     * @type {string}
-     * @memberof RestoreToNewInstanceFromUserTosResponse
-     */
-    OrderId?: string;
+export interface RebuildDBGreenInstanceResponse {
 }

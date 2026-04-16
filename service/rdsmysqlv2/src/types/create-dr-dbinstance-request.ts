@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { AutoStorageScalingConfigForCreateDrDBInstanceInput } from './auto-storage-scaling-config-for-create-dr-dbinstance-input';
 import { NodeInfoForCreateDrDBInstanceInput } from './node-info-for-create-dr-dbinstance-input';
 import { ProxyNodeCustomForCreateDrDBInstanceInput } from './proxy-node-custom-for-create-dr-dbinstance-input';
  /**
@@ -22,12 +21,6 @@ import { ProxyNodeCustomForCreateDrDBInstanceInput } from './proxy-node-custom-f
  * @interface CreateDrDBInstanceRequest
  */
 export interface CreateDrDBInstanceRequest {
-
-    /**
-     * @type {AutoStorageScalingConfigForCreateDrDBInstanceInput}
-     * @memberof CreateDrDBInstanceRequest
-     */
-    AutoStorageScalingConfig?: AutoStorageScalingConfigForCreateDrDBInstanceInput;
 
     /**
      * @type {string}

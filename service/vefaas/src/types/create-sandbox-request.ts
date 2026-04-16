@@ -12,10 +12,12 @@
  * Do not edit the class manually.
  */
 
+import { EmptyDirVolumeForCreateSandboxInput } from './empty-dir-volume-for-create-sandbox-input';
 import { EnvForCreateSandboxInput } from './env-for-create-sandbox-input';
 import { InstanceImageInfoForCreateSandboxInput } from './instance-image-info-for-create-sandbox-input';
 import { InstanceNasMountConfigForCreateSandboxInput } from './instance-nas-mount-config-for-create-sandbox-input';
 import { InstanceTosMountConfigForCreateSandboxInput } from './instance-tos-mount-config-for-create-sandbox-input';
+import { SidecarForCreateSandboxInput } from './sidecar-for-create-sandbox-input';
  /**
  * 
  *
@@ -35,6 +37,12 @@ export interface CreateSandboxRequest {
      * @memberof CreateSandboxRequest
      */
     CpuMilli?: number;
+
+    /**
+     * @type {Array<EmptyDirVolumeForCreateSandboxInput>}
+     * @memberof CreateSandboxRequest
+     */
+    EmptyDirVolume?: Array<EmptyDirVolumeForCreateSandboxInput>;
 
     /**
      * @type {Array<EnvForCreateSandboxInput>}
@@ -95,6 +103,12 @@ export interface CreateSandboxRequest {
      * @memberof CreateSandboxRequest
      */
     SessionId?: string;
+
+    /**
+     * @type {Array<SidecarForCreateSandboxInput>}
+     * @memberof CreateSandboxRequest
+     */
+    Sidecars?: Array<SidecarForCreateSandboxInput>;
 
     /**
      * @type {number}

@@ -20,6 +20,8 @@ import { CancelSandboxImagePrecacheTicketRequest } from './types/index';
 import { CancelSandboxImagePrecacheTicketResponse } from './types/index';
 import { CreateDependencyInstallTaskRequest } from './types/index';
 import { CreateDependencyInstallTaskResponse } from './types/index';
+import { CreateE2BAPIKeyRequest } from './types/index';
+import { CreateE2BAPIKeyResponse } from './types/index';
 import { CreateFunctionRequest } from './types/index';
 import { CreateFunctionResponse } from './types/index';
 import { CreateKafkaTriggerRequest } from './types/index';
@@ -76,6 +78,8 @@ import { KillSandboxRequest } from './types/index';
 import { KillSandboxResponse } from './types/index';
 import { ListAsyncTasksRequest } from './types/index';
 import { ListAsyncTasksResponse } from './types/index';
+import { ListE2BAPIKeysRequest } from './types/index';
+import { ListE2BAPIKeysResponse } from './types/index';
 import { ListFunctionElasticScaleStrategyRequest } from './types/index';
 import { ListFunctionElasticScaleStrategyResponse } from './types/index';
 import { ListFunctionInstancesRequest } from './types/index';
@@ -131,6 +135,7 @@ import { UpsertSecretTokenResponse } from './types/index';
 export type AbortReleaseCommandOutput = CommandOutput<AbortReleaseResponse>;
 export type CancelSandboxImagePrecacheTicketCommandOutput = CommandOutput<CancelSandboxImagePrecacheTicketResponse>;
 export type CreateDependencyInstallTaskCommandOutput = CommandOutput<CreateDependencyInstallTaskResponse>;
+export type CreateE2BAPIKeyCommandOutput = CommandOutput<CreateE2BAPIKeyResponse>;
 export type CreateFunctionCommandOutput = CommandOutput<CreateFunctionResponse>;
 export type CreateKafkaTriggerCommandOutput = CommandOutput<CreateKafkaTriggerResponse>;
 export type CreateSandboxCommandOutput = CommandOutput<CreateSandboxResponse>;
@@ -159,6 +164,7 @@ export type GetSandboxImagePrecacheTicketCommandOutput = CommandOutput<GetSandbo
 export type GetTimerCommandOutput = CommandOutput<GetTimerResponse>;
 export type KillSandboxCommandOutput = CommandOutput<KillSandboxResponse>;
 export type ListAsyncTasksCommandOutput = CommandOutput<ListAsyncTasksResponse>;
+export type ListE2BAPIKeysCommandOutput = CommandOutput<ListE2BAPIKeysResponse>;
 export type ListFunctionElasticScaleStrategyCommandOutput = CommandOutput<ListFunctionElasticScaleStrategyResponse>;
 export type ListFunctionInstancesCommandOutput = CommandOutput<ListFunctionInstancesResponse>;
 export type ListFunctionsCommandOutput = CommandOutput<ListFunctionsResponse>;
@@ -240,6 +246,21 @@ export class CreateDependencyInstallTaskCommand extends Command<
   constructor(input: CreateDependencyInstallTaskRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateDependencyInstallTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateE2BAPIKey
+ */
+export class CreateE2BAPIKeyCommand extends Command<
+  CreateE2BAPIKeyRequest,
+  CreateE2BAPIKeyCommandOutput,
+  'CreateE2BAPIKeyCommand'
+> {
+  static readonly metaPath = '/CreateE2BAPIKey/2024-06-06/vefaas/post/application_json/';
+
+  constructor(input: CreateE2BAPIKeyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateE2BAPIKeyCommand.metaPath);
   }
 }
 /**
@@ -663,6 +684,21 @@ export class ListAsyncTasksCommand extends Command<
   }
 }
 /**
+ * Command to ListE2BAPIKeys
+ */
+export class ListE2BAPIKeysCommand extends Command<
+  ListE2BAPIKeysRequest,
+  ListE2BAPIKeysCommandOutput,
+  'ListE2BAPIKeysCommand'
+> {
+  static readonly metaPath = '/ListE2BAPIKeys/2024-06-06/vefaas/post/application_json/';
+
+  constructor(input: ListE2BAPIKeysRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListE2BAPIKeysCommand.metaPath);
+  }
+}
+/**
  * Command to ListFunctionElasticScaleStrategy
  */
 export class ListFunctionElasticScaleStrategyCommand extends Command<
@@ -1028,6 +1064,7 @@ export default {
   AbortReleaseCommand,
   CancelSandboxImagePrecacheTicketCommand,
   CreateDependencyInstallTaskCommand,
+  CreateE2BAPIKeyCommand,
   CreateFunctionCommand,
   CreateKafkaTriggerCommand,
   CreateSandboxCommand,
@@ -1056,6 +1093,7 @@ export default {
   GetTimerCommand,
   KillSandboxCommand,
   ListAsyncTasksCommand,
+  ListE2BAPIKeysCommand,
   ListFunctionElasticScaleStrategyCommand,
   ListFunctionInstancesCommand,
   ListFunctionsCommand,

@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { CredentialsForCreateSandboxInput } from './credentials-for-create-sandbox-input';
 import { TosMountPointForCreateSandboxInput } from './tos-mount-point-for-create-sandbox-input';
  /**
  * 
@@ -22,10 +23,28 @@ import { TosMountPointForCreateSandboxInput } from './tos-mount-point-for-create
 export interface InstanceTosMountConfigForCreateSandboxInput {
 
     /**
+     * @type {string}
+     * @memberof InstanceTosMountConfigForCreateSandboxInput
+     */
+    AuthMode?: string;
+
+    /**
+     * @type {CredentialsForCreateSandboxInput}
+     * @memberof InstanceTosMountConfigForCreateSandboxInput
+     */
+    Credentials?: CredentialsForCreateSandboxInput;
+
+    /**
      * @type {boolean}
      * @memberof InstanceTosMountConfigForCreateSandboxInput
      */
     Enable?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof InstanceTosMountConfigForCreateSandboxInput
+     */
+    Mode?: string;
 
     /**
      * @type {Array<TosMountPointForCreateSandboxInput>}

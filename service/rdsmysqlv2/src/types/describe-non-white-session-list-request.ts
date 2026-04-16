@@ -28,8 +28,8 @@ export interface DescribeNonWhiteSessionListRequest {
     DisassociateAllowListInfos?: Array<DisassociateAllowListInfoForDescribeNonWhiteSessionListInput>;
 
     /**
-     * @type {string}
+     * @type {Array<string>}
      * @memberof DescribeNonWhiteSessionListRequest
      */
-    InstanceIds?: string;
+    InstanceIds?: Array<string>;
 }
