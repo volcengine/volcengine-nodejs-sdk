@@ -16,19 +16,13 @@
  * 
  *
  * @export
- * @interface InstanceTagForRestoreToNewInstanceFromUserTosInput
+ * @interface RebuildDBGreenInstanceRequest
  */
-export interface InstanceTagForRestoreToNewInstanceFromUserTosInput {
+export interface RebuildDBGreenInstanceRequest {
 
     /**
      * @type {string}
-     * @memberof InstanceTagForRestoreToNewInstanceFromUserTosInput
+     * @memberof RebuildDBGreenInstanceRequest
      */
-    Key?: string;
-
-    /**
-     * @type {string}
-     * @memberof InstanceTagForRestoreToNewInstanceFromUserTosInput
-     */
-    Value?: string;
+    InstanceId: string;
 }

@@ -16,16 +16,10 @@ import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandO
 
 import { AddDiagnosticsEntityRequest } from './types/index';
 import { AddDiagnosticsEntityResponse } from './types/index';
-import { AddTagFromUserBackupInfoRequest } from './types/index';
-import { AddTagFromUserBackupInfoResponse } from './types/index';
 import { AddTagsToResourceRequest } from './types/index';
 import { AddTagsToResourceResponse } from './types/index';
 import { AssociateAllowListRequest } from './types/index';
 import { AssociateAllowListResponse } from './types/index';
-import { AssociateUserBackupRequest } from './types/index';
-import { AssociateUserBackupResponse } from './types/index';
-import { CheckUserUploadBackupRequest } from './types/index';
-import { CheckUserUploadBackupResponse } from './types/index';
 import { CleanNonWhiteSessionRequest } from './types/index';
 import { CleanNonWhiteSessionResponse } from './types/index';
 import { CopyParameterTemplateRequest } from './types/index';
@@ -78,8 +72,6 @@ import { DeleteDatabaseRequest } from './types/index';
 import { DeleteDatabaseResponse } from './types/index';
 import { DeleteParameterTemplateRequest } from './types/index';
 import { DeleteParameterTemplateResponse } from './types/index';
-import { DeleteUserUploadBackupRequest } from './types/index';
-import { DeleteUserUploadBackupResponse } from './types/index';
 import { DescribeAllowListDetailRequest } from './types/index';
 import { DescribeAllowListDetailResponse } from './types/index';
 import { DescribeAllowListsRequest } from './types/index';
@@ -192,10 +184,6 @@ import { DescribeTasksRequest } from './types/index';
 import { DescribeTasksResponse } from './types/index';
 import { DescribeUpgradeEngineMajorVersionPrecheckResultRequest } from './types/index';
 import { DescribeUpgradeEngineMajorVersionPrecheckResultResponse } from './types/index';
-import { DescribeUserTosBackupAssociateRequest } from './types/index';
-import { DescribeUserTosBackupAssociateResponse } from './types/index';
-import { DescribeUserUploadBackupsRequest } from './types/index';
-import { DescribeUserUploadBackupsResponse } from './types/index';
 import { DisassociateAllowListRequest } from './types/index';
 import { DisassociateAllowListResponse } from './types/index';
 import { DownloadBackupRequest } from './types/index';
@@ -218,6 +206,8 @@ import { ModifyAllowListRequest } from './types/index';
 import { ModifyAllowListResponse } from './types/index';
 import { ModifyBackupEncryptionPolicyRequest } from './types/index';
 import { ModifyBackupEncryptionPolicyResponse } from './types/index';
+import { ModifyBackupNameRequest } from './types/index';
+import { ModifyBackupNameResponse } from './types/index';
 import { ModifyBackupPolicyRequest } from './types/index';
 import { ModifyBackupPolicyResponse } from './types/index';
 import { ModifyBackupPublicAccessPolicyRequest } from './types/index';
@@ -280,14 +270,14 @@ import { ModifyReadOnlyNodeDelayReplicationTimeRequest } from './types/index';
 import { ModifyReadOnlyNodeDelayReplicationTimeResponse } from './types/index';
 import { ModifyTaskRequest } from './types/index';
 import { ModifyTaskResponse } from './types/index';
+import { RebuildDBGreenInstanceRequest } from './types/index';
+import { RebuildDBGreenInstanceResponse } from './types/index';
 import { RebuildDBInstanceRequest } from './types/index';
 import { RebuildDBInstanceResponse } from './types/index';
 import { RebuildDrInstanceRequest } from './types/index';
 import { RebuildDrInstanceResponse } from './types/index';
 import { RemoveDiagnosticsEntityRequest } from './types/index';
 import { RemoveDiagnosticsEntityResponse } from './types/index';
-import { RemoveTagFromUserBackupInfoRequest } from './types/index';
-import { RemoveTagFromUserBackupInfoResponse } from './types/index';
 import { RemoveTagsFromResourceRequest } from './types/index';
 import { RemoveTagsFromResourceResponse } from './types/index';
 import { ResetDBAccountRequest } from './types/index';
@@ -298,8 +288,6 @@ import { RestoreToCrossRegionInstanceRequest } from './types/index';
 import { RestoreToCrossRegionInstanceResponse } from './types/index';
 import { RestoreToExistedInstanceRequest } from './types/index';
 import { RestoreToExistedInstanceResponse } from './types/index';
-import { RestoreToNewInstanceFromUserTosRequest } from './types/index';
-import { RestoreToNewInstanceFromUserTosResponse } from './types/index';
 import { RestoreToNewInstanceRequest } from './types/index';
 import { RestoreToNewInstanceResponse } from './types/index';
 import { RevokeDBAccountPrivilegeRequest } from './types/index';
@@ -335,11 +323,8 @@ import { UpgradeDBInstanceEngineMinorVersionResponse } from './types/index';
 // Output Type Definitions
 // ============================================================================
 export type AddDiagnosticsEntityCommandOutput = CommandOutput<AddDiagnosticsEntityResponse>;
-export type AddTagFromUserBackupInfoCommandOutput = CommandOutput<AddTagFromUserBackupInfoResponse>;
 export type AddTagsToResourceCommandOutput = CommandOutput<AddTagsToResourceResponse>;
 export type AssociateAllowListCommandOutput = CommandOutput<AssociateAllowListResponse>;
-export type AssociateUserBackupCommandOutput = CommandOutput<AssociateUserBackupResponse>;
-export type CheckUserUploadBackupCommandOutput = CommandOutput<CheckUserUploadBackupResponse>;
 export type CleanNonWhiteSessionCommandOutput = CommandOutput<CleanNonWhiteSessionResponse>;
 export type CopyParameterTemplateCommandOutput = CommandOutput<CopyParameterTemplateResponse>;
 export type CreateAllowListCommandOutput = CommandOutput<CreateAllowListResponse>;
@@ -366,7 +351,6 @@ export type DeleteDBNodesCommandOutput = CommandOutput<DeleteDBNodesResponse>;
 export type DeleteDataBackupCommandOutput = CommandOutput<DeleteDataBackupResponse>;
 export type DeleteDatabaseCommandOutput = CommandOutput<DeleteDatabaseResponse>;
 export type DeleteParameterTemplateCommandOutput = CommandOutput<DeleteParameterTemplateResponse>;
-export type DeleteUserUploadBackupCommandOutput = CommandOutput<DeleteUserUploadBackupResponse>;
 export type DescribeAllowListDetailCommandOutput = CommandOutput<DescribeAllowListDetailResponse>;
 export type DescribeAllowListsCommandOutput = CommandOutput<DescribeAllowListsResponse>;
 export type DescribeApplyParameterTemplateCommandOutput = CommandOutput<DescribeApplyParameterTemplateResponse>;
@@ -423,8 +407,6 @@ export type DescribeTagsByResourceCommandOutput = CommandOutput<DescribeTagsByRe
 export type DescribeTaskDetailCommandOutput = CommandOutput<DescribeTaskDetailResponse>;
 export type DescribeTasksCommandOutput = CommandOutput<DescribeTasksResponse>;
 export type DescribeUpgradeEngineMajorVersionPrecheckResultCommandOutput = CommandOutput<DescribeUpgradeEngineMajorVersionPrecheckResultResponse>;
-export type DescribeUserTosBackupAssociateCommandOutput = CommandOutput<DescribeUserTosBackupAssociateResponse>;
-export type DescribeUserUploadBackupsCommandOutput = CommandOutput<DescribeUserUploadBackupsResponse>;
 export type DisassociateAllowListCommandOutput = CommandOutput<DisassociateAllowListResponse>;
 export type DownloadBackupCommandOutput = CommandOutput<DownloadBackupResponse>;
 export type DownloadSSLCertificateCommandOutput = CommandOutput<DownloadSSLCertificateResponse>;
@@ -436,6 +418,7 @@ export type ListResourcePackagesCommandOutput = CommandOutput<ListResourcePackag
 export type MigrateToOtherZoneCommandOutput = CommandOutput<MigrateToOtherZoneResponse>;
 export type ModifyAllowListCommandOutput = CommandOutput<ModifyAllowListResponse>;
 export type ModifyBackupEncryptionPolicyCommandOutput = CommandOutput<ModifyBackupEncryptionPolicyResponse>;
+export type ModifyBackupNameCommandOutput = CommandOutput<ModifyBackupNameResponse>;
 export type ModifyBackupPolicyCommandOutput = CommandOutput<ModifyBackupPolicyResponse>;
 export type ModifyBackupPublicAccessPolicyCommandOutput = CommandOutput<ModifyBackupPublicAccessPolicyResponse>;
 export type ModifyCrossBackupPolicyCommandOutput = CommandOutput<ModifyCrossBackupPolicyResponse>;
@@ -467,17 +450,16 @@ export type ModifyParameterTemplateCommandOutput = CommandOutput<ModifyParameter
 export type ModifyPlannedEventExecuteTimeCommandOutput = CommandOutput<ModifyPlannedEventExecuteTimeResponse>;
 export type ModifyReadOnlyNodeDelayReplicationTimeCommandOutput = CommandOutput<ModifyReadOnlyNodeDelayReplicationTimeResponse>;
 export type ModifyTaskCommandOutput = CommandOutput<ModifyTaskResponse>;
+export type RebuildDBGreenInstanceCommandOutput = CommandOutput<RebuildDBGreenInstanceResponse>;
 export type RebuildDBInstanceCommandOutput = CommandOutput<RebuildDBInstanceResponse>;
 export type RebuildDrInstanceCommandOutput = CommandOutput<RebuildDrInstanceResponse>;
 export type RemoveDiagnosticsEntityCommandOutput = CommandOutput<RemoveDiagnosticsEntityResponse>;
-export type RemoveTagFromUserBackupInfoCommandOutput = CommandOutput<RemoveTagFromUserBackupInfoResponse>;
 export type RemoveTagsFromResourceCommandOutput = CommandOutput<RemoveTagsFromResourceResponse>;
 export type ResetDBAccountCommandOutput = CommandOutput<ResetDBAccountResponse>;
 export type RestartDBInstanceCommandOutput = CommandOutput<RestartDBInstanceResponse>;
 export type RestoreToCrossRegionInstanceCommandOutput = CommandOutput<RestoreToCrossRegionInstanceResponse>;
 export type RestoreToExistedInstanceCommandOutput = CommandOutput<RestoreToExistedInstanceResponse>;
 export type RestoreToNewInstanceCommandOutput = CommandOutput<RestoreToNewInstanceResponse>;
-export type RestoreToNewInstanceFromUserTosCommandOutput = CommandOutput<RestoreToNewInstanceFromUserTosResponse>;
 export type RevokeDBAccountPrivilegeCommandOutput = CommandOutput<RevokeDBAccountPrivilegeResponse>;
 export type RevokeDatabasePrivilegeCommandOutput = CommandOutput<RevokeDatabasePrivilegeResponse>;
 export type SaveAsParameterTemplateCommandOutput = CommandOutput<SaveAsParameterTemplateResponse>;
@@ -522,21 +504,6 @@ export class AddDiagnosticsEntityCommand extends Command<
   }
 }
 /**
- * Command to AddTagFromUserBackupInfo
- */
-export class AddTagFromUserBackupInfoCommand extends Command<
-  AddTagFromUserBackupInfoRequest,
-  AddTagFromUserBackupInfoCommandOutput,
-  'AddTagFromUserBackupInfoCommand'
-> {
-  static readonly metaPath = '/AddTagFromUserBackupInfo/2022-01-01/rds_mysql/post/application_json/';
-
-  constructor(input: AddTagFromUserBackupInfoRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(AddTagFromUserBackupInfoCommand.metaPath);
-  }
-}
-/**
  * Command to AddTagsToResource
  */
 export class AddTagsToResourceCommand extends Command<
@@ -564,36 +531,6 @@ export class AssociateAllowListCommand extends Command<
   constructor(input: AssociateAllowListRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(AssociateAllowListCommand.metaPath);
-  }
-}
-/**
- * Command to AssociateUserBackup
- */
-export class AssociateUserBackupCommand extends Command<
-  AssociateUserBackupRequest,
-  AssociateUserBackupCommandOutput,
-  'AssociateUserBackupCommand'
-> {
-  static readonly metaPath = '/AssociateUserBackup/2022-01-01/rds_mysql/post/application_json/';
-
-  constructor(input: AssociateUserBackupRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(AssociateUserBackupCommand.metaPath);
-  }
-}
-/**
- * Command to CheckUserUploadBackup
- */
-export class CheckUserUploadBackupCommand extends Command<
-  CheckUserUploadBackupRequest,
-  CheckUserUploadBackupCommandOutput,
-  'CheckUserUploadBackupCommand'
-> {
-  static readonly metaPath = '/CheckUserUploadBackup/2022-01-01/rds_mysql/post/application_json/';
-
-  constructor(input: CheckUserUploadBackupRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(CheckUserUploadBackupCommand.metaPath);
   }
 }
 /**
@@ -984,21 +921,6 @@ export class DeleteParameterTemplateCommand extends Command<
   constructor(input: DeleteParameterTemplateRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteParameterTemplateCommand.metaPath);
-  }
-}
-/**
- * Command to DeleteUserUploadBackup
- */
-export class DeleteUserUploadBackupCommand extends Command<
-  DeleteUserUploadBackupRequest,
-  DeleteUserUploadBackupCommandOutput,
-  'DeleteUserUploadBackupCommand'
-> {
-  static readonly metaPath = '/DeleteUserUploadBackup/2022-01-01/rds_mysql/post/application_json/';
-
-  constructor(input: DeleteUserUploadBackupRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(DeleteUserUploadBackupCommand.metaPath);
   }
 }
 /**
@@ -1842,36 +1764,6 @@ export class DescribeUpgradeEngineMajorVersionPrecheckResultCommand extends Comm
   }
 }
 /**
- * Command to DescribeUserTosBackupAssociate
- */
-export class DescribeUserTosBackupAssociateCommand extends Command<
-  DescribeUserTosBackupAssociateRequest,
-  DescribeUserTosBackupAssociateCommandOutput,
-  'DescribeUserTosBackupAssociateCommand'
-> {
-  static readonly metaPath = '/DescribeUserTosBackupAssociate/2022-01-01/rds_mysql/post/application_json/';
-
-  constructor(input: DescribeUserTosBackupAssociateRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(DescribeUserTosBackupAssociateCommand.metaPath);
-  }
-}
-/**
- * Command to DescribeUserUploadBackups
- */
-export class DescribeUserUploadBackupsCommand extends Command<
-  DescribeUserUploadBackupsRequest,
-  DescribeUserUploadBackupsCommandOutput,
-  'DescribeUserUploadBackupsCommand'
-> {
-  static readonly metaPath = '/DescribeUserUploadBackups/2022-01-01/rds_mysql/post/application_json/';
-
-  constructor(input: DescribeUserUploadBackupsRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(DescribeUserUploadBackupsCommand.metaPath);
-  }
-}
-/**
  * Command to DisassociateAllowList
  */
 export class DisassociateAllowListCommand extends Command<
@@ -2034,6 +1926,21 @@ export class ModifyBackupEncryptionPolicyCommand extends Command<
   constructor(input: ModifyBackupEncryptionPolicyRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ModifyBackupEncryptionPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyBackupName
+ */
+export class ModifyBackupNameCommand extends Command<
+  ModifyBackupNameRequest,
+  ModifyBackupNameCommandOutput,
+  'ModifyBackupNameCommand'
+> {
+  static readonly metaPath = '/ModifyBackupName/2022-01-01/rds_mysql/get/text_plain/';
+
+  constructor(input: ModifyBackupNameRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyBackupNameCommand.metaPath);
   }
 }
 /**
@@ -2502,6 +2409,21 @@ export class ModifyTaskCommand extends Command<
   }
 }
 /**
+ * Command to RebuildDBGreenInstance
+ */
+export class RebuildDBGreenInstanceCommand extends Command<
+  RebuildDBGreenInstanceRequest,
+  RebuildDBGreenInstanceCommandOutput,
+  'RebuildDBGreenInstanceCommand'
+> {
+  static readonly metaPath = '/RebuildDBGreenInstance/2022-01-01/rds_mysql/post/application_json/';
+
+  constructor(input: RebuildDBGreenInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RebuildDBGreenInstanceCommand.metaPath);
+  }
+}
+/**
  * Command to RebuildDBInstance
  */
 export class RebuildDBInstanceCommand extends Command<
@@ -2544,21 +2466,6 @@ export class RemoveDiagnosticsEntityCommand extends Command<
   constructor(input: RemoveDiagnosticsEntityRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(RemoveDiagnosticsEntityCommand.metaPath);
-  }
-}
-/**
- * Command to RemoveTagFromUserBackupInfo
- */
-export class RemoveTagFromUserBackupInfoCommand extends Command<
-  RemoveTagFromUserBackupInfoRequest,
-  RemoveTagFromUserBackupInfoCommandOutput,
-  'RemoveTagFromUserBackupInfoCommand'
-> {
-  static readonly metaPath = '/RemoveTagFromUserBackupInfo/2022-01-01/rds_mysql/post/application_json/';
-
-  constructor(input: RemoveTagFromUserBackupInfoRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(RemoveTagFromUserBackupInfoCommand.metaPath);
   }
 }
 /**
@@ -2649,21 +2556,6 @@ export class RestoreToNewInstanceCommand extends Command<
   constructor(input: RestoreToNewInstanceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(RestoreToNewInstanceCommand.metaPath);
-  }
-}
-/**
- * Command to RestoreToNewInstanceFromUserTos
- */
-export class RestoreToNewInstanceFromUserTosCommand extends Command<
-  RestoreToNewInstanceFromUserTosRequest,
-  RestoreToNewInstanceFromUserTosCommandOutput,
-  'RestoreToNewInstanceFromUserTosCommand'
-> {
-  static readonly metaPath = '/RestoreToNewInstanceFromUserTos/2022-01-01/rds_mysql/post/application_json/';
-
-  constructor(input: RestoreToNewInstanceFromUserTosRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(RestoreToNewInstanceFromUserTosCommand.metaPath);
   }
 }
 /**
@@ -2880,11 +2772,8 @@ export class UpgradeDBInstanceEngineMinorVersionCommand extends Command<
 export default {
   RDSMYSQLV2Client,
   AddDiagnosticsEntityCommand,
-  AddTagFromUserBackupInfoCommand,
   AddTagsToResourceCommand,
   AssociateAllowListCommand,
-  AssociateUserBackupCommand,
-  CheckUserUploadBackupCommand,
   CleanNonWhiteSessionCommand,
   CopyParameterTemplateCommand,
   CreateAllowListCommand,
@@ -2911,7 +2800,6 @@ export default {
   DeleteDataBackupCommand,
   DeleteDatabaseCommand,
   DeleteParameterTemplateCommand,
-  DeleteUserUploadBackupCommand,
   DescribeAllowListDetailCommand,
   DescribeAllowListsCommand,
   DescribeApplyParameterTemplateCommand,
@@ -2968,8 +2856,6 @@ export default {
   DescribeTaskDetailCommand,
   DescribeTasksCommand,
   DescribeUpgradeEngineMajorVersionPrecheckResultCommand,
-  DescribeUserTosBackupAssociateCommand,
-  DescribeUserUploadBackupsCommand,
   DisassociateAllowListCommand,
   DownloadBackupCommand,
   DownloadSSLCertificateCommand,
@@ -2981,6 +2867,7 @@ export default {
   MigrateToOtherZoneCommand,
   ModifyAllowListCommand,
   ModifyBackupEncryptionPolicyCommand,
+  ModifyBackupNameCommand,
   ModifyBackupPolicyCommand,
   ModifyBackupPublicAccessPolicyCommand,
   ModifyCrossBackupPolicyCommand,
@@ -3012,17 +2899,16 @@ export default {
   ModifyPlannedEventExecuteTimeCommand,
   ModifyReadOnlyNodeDelayReplicationTimeCommand,
   ModifyTaskCommand,
+  RebuildDBGreenInstanceCommand,
   RebuildDBInstanceCommand,
   RebuildDrInstanceCommand,
   RemoveDiagnosticsEntityCommand,
-  RemoveTagFromUserBackupInfoCommand,
   RemoveTagsFromResourceCommand,
   ResetDBAccountCommand,
   RestartDBInstanceCommand,
   RestoreToCrossRegionInstanceCommand,
   RestoreToExistedInstanceCommand,
   RestoreToNewInstanceCommand,
-  RestoreToNewInstanceFromUserTosCommand,
   RevokeDBAccountPrivilegeCommand,
   RevokeDatabasePrivilegeCommand,
   SaveAsParameterTemplateCommand,
