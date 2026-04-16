@@ -168,6 +168,12 @@ export interface DescribeBackupPolicyResponse {
      * @type {number}
      * @memberof DescribeBackupPolicyResponse
      */
+    LockDDLTimeSecond?: number;
+
+    /**
+     * @type {number}
+     * @memberof DescribeBackupPolicyResponse
+     */
     LogBackupRetentionDay?: number;
 
     /**
