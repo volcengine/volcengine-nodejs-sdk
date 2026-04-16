@@ -53,12 +53,6 @@ export interface DescribeDBInstancePriceDetailRequest {
     PeriodUnit?: string;
 
     /**
-     * @type {string}
-     * @memberof DescribeDBInstancePriceDetailRequest
-     */
-    ProjectName?: string;
-
-    /**
      * @type {ProxyNodeCustomForDescribeDBInstancePriceDetailInput}
      * @memberof DescribeDBInstancePriceDetailRequest
      */
