@@ -16,19 +16,25 @@
  * 
  *
  * @export
- * @interface ModelConfigForCreateClawOmniInstanceInput
+ * @interface ExecuteClawOmniInstanceCommandResponse
  */
-export interface ModelConfigForCreateClawOmniInstanceInput {
+export interface ExecuteClawOmniInstanceCommandResponse {
 
     /**
      * @type {string}
-     * @memberof ModelConfigForCreateClawOmniInstanceInput
+     * @memberof ExecuteClawOmniInstanceCommandResponse
      */
-    ModelId?: string;
+    ErrorOutput?: string;
+
+    /**
+     * @type {number}
+     * @memberof ExecuteClawOmniInstanceCommandResponse
+     */
+    ExitCode?: number;
 
     /**
      * @type {string}
-     * @memberof ModelConfigForCreateClawOmniInstanceInput
+     * @memberof ExecuteClawOmniInstanceCommandResponse
      */
-    ModelSource?: string;
+    Output?: string;
 }

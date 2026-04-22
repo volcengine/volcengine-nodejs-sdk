@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface ModelConfigForCreateClawOmniInstanceInput
+ * @interface EnvVarForExecuteClawOmniInstanceCommandInput
  */
-export interface ModelConfigForCreateClawOmniInstanceInput {
+export interface EnvVarForExecuteClawOmniInstanceCommandInput {
 
     /**
      * @type {string}
-     * @memberof ModelConfigForCreateClawOmniInstanceInput
+     * @memberof EnvVarForExecuteClawOmniInstanceCommandInput
      */
-    ModelId?: string;
+    Key: string;
 
     /**
      * @type {string}
-     * @memberof ModelConfigForCreateClawOmniInstanceInput
+     * @memberof EnvVarForExecuteClawOmniInstanceCommandInput
      */
-    ModelSource?: string;
+    Value?: string;
 }

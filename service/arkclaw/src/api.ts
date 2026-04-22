@@ -18,6 +18,8 @@ import { CreateClawOmniInstanceRequest } from './types/index';
 import { CreateClawOmniInstanceResponse } from './types/index';
 import { DeleteClawOmniInstanceRequest } from './types/index';
 import { DeleteClawOmniInstanceResponse } from './types/index';
+import { ExecuteClawOmniInstanceCommandRequest } from './types/index';
+import { ExecuteClawOmniInstanceCommandResponse } from './types/index';
 import { GetClawOmniInstanceRequest } from './types/index';
 import { GetClawOmniInstanceResponse } from './types/index';
 import { ListClawOmniInstancesRequest } from './types/index';
@@ -32,6 +34,7 @@ import { ResumeClawOmniInstanceResponse } from './types/index';
 // ============================================================================
 export type CreateClawOmniInstanceCommandOutput = CommandOutput<CreateClawOmniInstanceResponse>;
 export type DeleteClawOmniInstanceCommandOutput = CommandOutput<DeleteClawOmniInstanceResponse>;
+export type ExecuteClawOmniInstanceCommandCommandOutput = CommandOutput<ExecuteClawOmniInstanceCommandResponse>;
 export type GetClawOmniInstanceCommandOutput = CommandOutput<GetClawOmniInstanceResponse>;
 export type ListClawOmniInstancesCommandOutput = CommandOutput<ListClawOmniInstancesResponse>;
 export type PauseClawOmniInstanceCommandOutput = CommandOutput<PauseClawOmniInstanceResponse>;
@@ -78,6 +81,21 @@ export class DeleteClawOmniInstanceCommand extends Command<
   constructor(input: DeleteClawOmniInstanceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteClawOmniInstanceCommand.metaPath);
+  }
+}
+/**
+ * Command to ExecuteClawOmniInstanceCommand
+ */
+export class ExecuteClawOmniInstanceCommandCommand extends Command<
+  ExecuteClawOmniInstanceCommandRequest,
+  ExecuteClawOmniInstanceCommandCommandOutput,
+  'ExecuteClawOmniInstanceCommandCommand'
+> {
+  static readonly metaPath = '/ExecuteClawOmniInstanceCommand/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: ExecuteClawOmniInstanceCommandRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExecuteClawOmniInstanceCommandCommand.metaPath);
   }
 }
 /**
@@ -145,6 +163,7 @@ export default {
   ARKCLAWClient,
   CreateClawOmniInstanceCommand,
   DeleteClawOmniInstanceCommand,
+  ExecuteClawOmniInstanceCommandCommand,
   GetClawOmniInstanceCommand,
   ListClawOmniInstancesCommand,
   PauseClawOmniInstanceCommand,
