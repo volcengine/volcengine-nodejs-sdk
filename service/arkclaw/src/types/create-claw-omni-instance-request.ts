@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { EnvVarForCreateClawOmniInstanceInput } from './env-var-for-create-claw-omni-instance-input';
 import { ModelConfigForCreateClawOmniInstanceInput } from './model-config-for-create-claw-omni-instance-input';
 import { TagForCreateClawOmniInstanceInput } from './tag-for-create-claw-omni-instance-input';
  /**
@@ -33,6 +34,12 @@ export interface CreateClawOmniInstanceRequest {
      * @memberof CreateClawOmniInstanceRequest
      */
     Description?: string;
+
+    /**
+     * @type {Array<EnvVarForCreateClawOmniInstanceInput>}
+     * @memberof CreateClawOmniInstanceRequest
+     */
+    EnvVars?: Array<EnvVarForCreateClawOmniInstanceInput>;
 
     /**
      * @type {string}
