@@ -1,0 +1,92 @@
+# .github/workflows/main.yml
+name: Release Node.js SDK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - '.changelog/v*.md'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      # 1. Checkout 代码
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. 安装 pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
+      # 3. 设置 Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      # 4. 获取版本号并设置 tag
+      - name: Extract Version
+        id: version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "tag=v$VERSION" >> $GITHUB_OUTPUT
+
+      # 5. 安装依赖（保证 lockfile 存在）
+      - name: Install Dependencies
+        run: pnpm install
+
+      # 6. 编译项目
+      - name: Build
+        run: pnpm build
+
+      # 7. 运行测试
+      - name: Test
+        run: pnpm test:core
+
+      # 8. 创建 Git tag
+      - name: Create Tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a ${{ steps.version.outputs.tag }} -m "Release ${{ steps.version.outputs.tag }}"
+          git push origin ${{ steps.version.outputs.tag }}
+
+      # 9. 读取 Changelog
+      - name: Read Changelog
+        id: changelog
+        run: |
+          CHANGELOG_FILE=".changelog/${{ steps.version.outputs.tag }}.md"
+          if [ -f "$CHANGELOG_FILE" ]; then
+            delimiter="$(openssl rand -hex 8)"
+            echo "content<<$delimiter" >> $GITHUB_OUTPUT
+            cat "$CHANGELOG_FILE" >> $GITHUB_OUTPUT
+            echo "" >> $GITHUB_OUTPUT
+            echo "$delimiter" >> $GITHUB_OUTPUT
+          else
+            echo "content=Release ${{ steps.version.outputs.tag }}" >> $GITHUB_OUTPUT
+          fi
+
+      # 10. 创建 GitHub Release
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: Release ${{ steps.version.outputs.tag }}
+          body: ${{ steps.changelog.outputs.content }}
+
+      # 11. 发布到 npm
+      - name: Publish to npm
+        run: pnpm -w publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
