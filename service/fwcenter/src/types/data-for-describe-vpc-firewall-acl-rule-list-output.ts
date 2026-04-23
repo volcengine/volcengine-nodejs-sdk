@@ -108,6 +108,12 @@ export interface DataForDescribeVpcFirewallAclRuleListOutput {
     DestinationType?: string;
 
     /**
+     * @type {string}
+     * @memberof DataForDescribeVpcFirewallAclRuleListOutput
+     */
+    DomainResolutionMode?: string;
+
+    /**
      * @type {number}
      * @memberof DataForDescribeVpcFirewallAclRuleListOutput
      */

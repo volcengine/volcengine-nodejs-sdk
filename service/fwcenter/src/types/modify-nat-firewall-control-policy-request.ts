@@ -63,6 +63,12 @@ export interface ModifyNatFirewallControlPolicyRequest {
     Direction: ModifyNatFirewallControlPolicyRequestDirectionEnum;
 
     /**
+     * @type {string}
+     * @memberof ModifyNatFirewallControlPolicyRequest
+     */
+    DomainResolutionMode?: ModifyNatFirewallControlPolicyRequestDomainResolutionModeEnum;
+
+    /**
      * @type {number}
      * @memberof ModifyNatFirewallControlPolicyRequest
      */
@@ -169,6 +175,14 @@ export enum ModifyNatFirewallControlPolicyRequestDestinationTypeEnum {
 export enum ModifyNatFirewallControlPolicyRequestDirectionEnum {
     In = 'in',
     Out = 'out'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ModifyNatFirewallControlPolicyRequestDomainResolutionModeEnum {
+    Fqdn = 'fqdn',
+    Dns = 'dns'
 }
 /**
  * @export

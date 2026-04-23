@@ -126,6 +126,12 @@ export interface DataForDescribeNatFirewallControlPolicyOutput {
     Direction?: string;
 
     /**
+     * @type {string}
+     * @memberof DataForDescribeNatFirewallControlPolicyOutput
+     */
+    DomainResolutionMode?: string;
+
+    /**
      * @type {number}
      * @memberof DataForDescribeNatFirewallControlPolicyOutput
      */
@@ -148,6 +154,12 @@ export interface DataForDescribeNatFirewallControlPolicyOutput {
      * @memberof DataForDescribeNatFirewallControlPolicyOutput
      */
     HitCnt?: number;
+
+    /**
+     * @type {string}
+     * @memberof DataForDescribeNatFirewallControlPolicyOutput
+     */
+    InsertTime?: string;
 
     /**
      * @type {string}

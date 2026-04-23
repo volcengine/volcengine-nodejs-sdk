@@ -57,10 +57,22 @@ export interface ModifyVpcFirewallAclRuleRequest {
     DestinationType: ModifyVpcFirewallAclRuleRequestDestinationTypeEnum;
 
     /**
+     * @type {string}
+     * @memberof ModifyVpcFirewallAclRuleRequest
+     */
+    DomainResolutionMode?: ModifyVpcFirewallAclRuleRequestDomainResolutionModeEnum;
+
+    /**
      * @type {number}
      * @memberof ModifyVpcFirewallAclRuleRequest
      */
     EndTime?: number;
+
+    /**
+     * @type {string}
+     * @memberof ModifyVpcFirewallAclRuleRequest
+     */
+    IpType?: ModifyVpcFirewallAclRuleRequestIpTypeEnum;
 
     /**
      * @type {string}
@@ -154,6 +166,22 @@ export enum ModifyVpcFirewallAclRuleRequestDestinationTypeEnum {
     Net = 'net',
     Group = 'group',
     Domain = 'domain'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ModifyVpcFirewallAclRuleRequestDomainResolutionModeEnum {
+    Fqdn = 'fqdn',
+    Dns = 'dns'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ModifyVpcFirewallAclRuleRequestIpTypeEnum {
+    V4 = 'v4',
+    V6 = 'v6'
 }
 /**
  * @export

@@ -63,6 +63,12 @@ export interface AddControlPolicyRequest {
     Direction: AddControlPolicyRequestDirectionEnum;
 
     /**
+     * @type {string}
+     * @memberof AddControlPolicyRequest
+     */
+    DomainResolutionMode?: AddControlPolicyRequestDomainResolutionModeEnum;
+
+    /**
      * @type {number}
      * @memberof AddControlPolicyRequest
      */
@@ -175,6 +181,14 @@ export enum AddControlPolicyRequestDestinationTypeEnum {
 export enum AddControlPolicyRequestDirectionEnum {
     In = 'in',
     Out = 'out'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum AddControlPolicyRequestDomainResolutionModeEnum {
+    Fqdn = 'fqdn',
+    Dns = 'dns'
 }
 /**
  * @export

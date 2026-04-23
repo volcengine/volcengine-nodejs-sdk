@@ -33,6 +33,12 @@ export interface DataForDescribeVpcFirewallListOutput {
     BypassStatus?: string;
 
     /**
+     * @type {boolean}
+     * @memberof DataForDescribeVpcFirewallListOutput
+     */
+    EnableIpv6?: boolean;
+
+    /**
      * @type {string}
      * @memberof DataForDescribeVpcFirewallListOutput
      */

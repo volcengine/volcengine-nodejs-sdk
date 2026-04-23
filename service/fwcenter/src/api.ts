@@ -205,7 +205,6 @@ export type UpdateVpcFirewallAclRuleSwitchCommandOutput = CommandOutput<UpdateVp
 export type UpdateVpcFirewallRoutePolicySwitchCommandOutput = CommandOutput<UpdateVpcFirewallRoutePolicySwitchResponse>;
 export type UseAclBackupCommandOutput = CommandOutput<UseAclBackupResponse>;
 
-
 /**
  * FWCENTERClient Service Client
  */

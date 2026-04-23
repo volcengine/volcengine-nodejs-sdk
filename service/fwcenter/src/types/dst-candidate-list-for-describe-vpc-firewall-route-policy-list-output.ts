@@ -43,18 +43,6 @@ export interface DstCandidateListForDescribeVpcFirewallRoutePolicyListOutput {
      * @memberof DstCandidateListForDescribeVpcFirewallRoutePolicyListOutput
      */
     CandidateType?: DstCandidateListForDescribeVpcFirewallRoutePolicyListOutputCandidateTypeEnum;
-
-    /**
-     * @type {string}
-     * @memberof DstCandidateListForDescribeVpcFirewallRoutePolicyListOutput
-     */
-    SubnetCidrs?: string;
-
-    /**
-     * @type {string}
-     * @memberof DstCandidateListForDescribeVpcFirewallRoutePolicyListOutput
-     */
-    TrRouteTableId?: string;
 }
 
 /**
