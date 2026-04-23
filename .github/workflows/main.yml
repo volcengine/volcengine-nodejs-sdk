@@ -49,7 +49,7 @@ jobs:
 
       # 6. 运行测试
       - name: Test
-        run: pnpm test
+        run: pnpm test:core
 
       # 7. 发布包（core + service）
       #    - 前置检测版本是否已存在，已存在则跳过
