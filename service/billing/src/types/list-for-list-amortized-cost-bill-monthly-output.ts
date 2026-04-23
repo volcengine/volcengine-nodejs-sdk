@@ -228,7 +228,19 @@ export interface ListForListAmortizedCostBillMonthlyOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillMonthlyOutput
      */
+    ChargeItemCode?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillMonthlyOutput
+     */
     ConfigName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillMonthlyOutput
+     */
+    ConfigurationCode?: string;
 
     /**
      * @type {string}

@@ -102,6 +102,12 @@ export interface ListForListAmortizedCostBillDailyOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillDailyOutput
      */
+    ChargeItemCode?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillDailyOutput
+     */
     ConfigName?: string;
 
     /**

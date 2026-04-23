@@ -1,8 +1,11 @@
 import type { Usage, HttpHeaders } from "./common";
+import type { ContentGenerationTool } from "./images";
 
 export type ContentGenerationContentItemType =
   | "text"
   | "image_url"
+  | "audio_url"
+  | "video_url"
   | "draft_task";
 
 export const StatusSucceeded = "succeeded";
@@ -15,6 +18,14 @@ export interface ImageURL {
   url: string;
 }
 
+export interface AudioURL {
+  url: string;
+}
+
+export interface VideoURL {
+  url: string;
+}
+
 export interface DraftTask {
   id: string;
 }
@@ -23,6 +34,8 @@ export interface CreateContentGenerationContentItem {
   type: ContentGenerationContentItemType;
   text?: string;
   image_url?: ImageURL;
+  audio_url?: AudioURL;
+  video_url?: VideoURL;
   role?: string;
   draft_task?: DraftTask;
 }
@@ -30,6 +43,7 @@ export interface CreateContentGenerationContentItem {
 export interface CreateContentGenerationTaskRequest {
   model: string;
   content: CreateContentGenerationContentItem[];
+  safety_identifier?: string;
   callback_url?: string;
   return_last_frame?: boolean;
   service_tier?: string;
@@ -43,13 +57,14 @@ export interface CreateContentGenerationTaskRequest {
   ratio?: string;
   duration?: number;
   frames?: number;
-  safety_identifier?: string;
+  tools?: ContentGenerationTool[];
   /** Extra fields merged into request body */
   [key: string]: unknown;
 }
 
 export interface CreateContentGenerationTaskResponse {
   id: string;
+  safety_identifier?: string;
   headers?: HttpHeaders;
 }
 
@@ -67,6 +82,7 @@ export interface Content {
 export interface GetContentGenerationTaskResponse {
   id: string;
   model: string;
+  safety_identifier?: string;
   status: string;
   error?: ContentGenerationError;
   content: Content;
@@ -87,7 +103,7 @@ export interface GetContentGenerationTaskResponse {
   generate_audio?: boolean;
   draft?: boolean;
   draft_task_id?: string;
-  safety_identifier?: string;
+  tools?: ContentGenerationTool[];
   headers?: HttpHeaders;
 }
 
@@ -107,6 +123,7 @@ export interface ListContentGenerationTasksRequest {
 export interface ListContentGenerationTaskItem {
   id: string;
   model: string;
+  safety_identifier?: string;
   status: string;
   failure_reason?: ContentGenerationError;
   content: Content;
@@ -124,7 +141,7 @@ export interface ListContentGenerationTaskItem {
   generate_audio?: boolean;
   draft?: boolean;
   draft_task_id?: string;
-  safety_identifier?: string;
+  tools?: ContentGenerationTool[];
 }
 
 export interface ListContentGenerationTasksResponse {

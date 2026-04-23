@@ -1,4 +1,4 @@
-import type { HttpHeaders } from "./common";
+import type { HttpHeaders, ToolUsage } from "./common";
 
 // Constants
 export const GenerateImagesResponseFormatBase64 = "b64_json";
@@ -28,10 +28,6 @@ export type ContentGenerationToolType = "web_search";
 
 export interface ContentGenerationTool {
   type: ContentGenerationToolType;
-}
-
-export interface ToolUsage {
-  web_search?: number;
 }
 
 export interface OptimizePromptOptions {

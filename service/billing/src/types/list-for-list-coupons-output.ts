@@ -116,4 +116,10 @@ export interface ListForListCouponsOutput {
      * @memberof ListForListCouponsOutput
      */
     UsageLimit?: number;
+
+    /**
+     * @type {string}
+     * @memberof ListForListCouponsOutput
+     */
+    VoidReason?: string;
 }

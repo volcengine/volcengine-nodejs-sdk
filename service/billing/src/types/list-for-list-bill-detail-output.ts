@@ -78,6 +78,12 @@ export interface ListForListBillDetailOutput {
      * @type {string}
      * @memberof ListForListBillDetailOutput
      */
+    ChargeItemCode?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
     ConfigName?: string;
 
     /**

@@ -36,5 +36,11 @@ export interface SwitchOverRequest {
      * @type {string}
      * @memberof SwitchOverRequest
      */
-    TargetPrimaryNodeId: string;
+    TargetPrimaryNodeId?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof SwitchOverRequest
+     */
+    TargetPrimaryNodeIds?: Array<string>;
 }

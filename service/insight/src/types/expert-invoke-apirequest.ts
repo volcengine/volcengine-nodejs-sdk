@@ -69,10 +69,10 @@ export interface ExpertInvokeAPIRequest {
     Ocr?: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof ExpertInvokeAPIRequest
      */
-    OriginId?: number;
+    OriginId?: string;
 
     /**
      * @type {string}
