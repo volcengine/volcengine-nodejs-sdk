@@ -1,6 +1,6 @@
 {
   "name": "@volcengine/billing",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "swagger client for @volcengine/billing",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
