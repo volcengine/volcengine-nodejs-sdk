@@ -49,6 +49,12 @@ export interface ItemDocForPullPostOutput {
      * @type {string}
      * @memberof ItemDocForPullPostOutput
      */
+    DocStatus?: string;
+
+    /**
+     * @type {string}
+     * @memberof ItemDocForPullPostOutput
+     */
     Emotion?: string;
 
     /**
