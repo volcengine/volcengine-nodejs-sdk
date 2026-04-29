@@ -16,43 +16,37 @@
  * 
  *
  * @export
- * @interface ListAutoDefenseRulesRequest
+ * @interface UserAutoDefenseRuleForListAutoDefenseRulesOutput
  */
-export interface ListAutoDefenseRulesRequest {
-
-    /**
-     * @type {number}
-     * @memberof ListAutoDefenseRulesRequest
-     */
-    PageNumber: number;
-
-    /**
-     * @type {number}
-     * @memberof ListAutoDefenseRulesRequest
-     */
-    PageSize: number;
+export interface UserAutoDefenseRuleForListAutoDefenseRulesOutput {
 
     /**
      * @type {string}
-     * @memberof ListAutoDefenseRulesRequest
+     * @memberof UserAutoDefenseRuleForListAutoDefenseRulesOutput
      */
-    RuleScope?: string;
+    Argv?: string;
 
     /**
      * @type {string}
-     * @memberof ListAutoDefenseRulesRequest
+     * @memberof UserAutoDefenseRuleForListAutoDefenseRulesOutput
      */
-    SortBy?: string;
+    Domain?: string;
 
     /**
      * @type {string}
-     * @memberof ListAutoDefenseRulesRequest
+     * @memberof UserAutoDefenseRuleForListAutoDefenseRulesOutput
      */
-    SortOrder?: string;
+    Exe?: string;
 
     /**
      * @type {string}
-     * @memberof ListAutoDefenseRulesRequest
+     * @memberof UserAutoDefenseRuleForListAutoDefenseRulesOutput
      */
-    TopGroupID?: string;
+    ID?: string;
+
+    /**
+     * @type {string}
+     * @memberof UserAutoDefenseRuleForListAutoDefenseRulesOutput
+     */
+    M2MD5?: string;
 }

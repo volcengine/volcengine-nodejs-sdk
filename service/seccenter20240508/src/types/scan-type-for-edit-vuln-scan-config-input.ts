@@ -24,6 +24,12 @@ export interface ScanTypeForEditVulnScanConfigInput {
      * @type {boolean}
      * @memberof ScanTypeForEditVulnScanConfigInput
      */
+    AIApp?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof ScanTypeForEditVulnScanConfigInput
+     */
     App?: boolean;
 
     /**

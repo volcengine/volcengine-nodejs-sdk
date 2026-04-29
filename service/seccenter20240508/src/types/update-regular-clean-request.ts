@@ -27,6 +27,12 @@ export interface UpdateRegularCleanRequest {
     CleanDays?: number;
 
     /**
+     * @type {number}
+     * @memberof UpdateRegularCleanRequest
+     */
+    CleanHours?: number;
+
+    /**
      * @type {boolean}
      * @memberof UpdateRegularCleanRequest
      */
