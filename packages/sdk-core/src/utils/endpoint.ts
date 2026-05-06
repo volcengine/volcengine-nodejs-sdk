@@ -146,6 +146,7 @@ const defaultEndpoint: Record<string, ServiceEndpointInfo> = {
   vms: { Service: "vms", IsGlobal: false },
   eco_partner: { Service: "eco_partner", IsGlobal: true },
   smc: { Service: "smc", IsGlobal: true },
+  i18n_openapi: { Service: "i18n_openapi", IsGlobal: true },
 };
 
 const bootstrapRegion: Record<string, unknown> = {

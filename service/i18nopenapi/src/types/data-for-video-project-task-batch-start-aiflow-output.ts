@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { BaseRespForVideoProjectTaskBatchStartAIFlowOutput } from './base-resp-for-video-project-task-batch-start-aiflow-output';
  /**
  * 
  *
@@ -21,14 +22,8 @@
 export interface DataForVideoProjectTaskBatchStartAIFlowOutput {
 
     /**
-     * @type {string}
+     * @type {BaseRespForVideoProjectTaskBatchStartAIFlowOutput}
      * @memberof DataForVideoProjectTaskBatchStartAIFlowOutput
      */
-    statusCode?: string;
-
-    /**
-     * @type {string}
-     * @memberof DataForVideoProjectTaskBatchStartAIFlowOutput
-     */
-    statusMessage?: string;
+    baseResp?: BaseRespForVideoProjectTaskBatchStartAIFlowOutput;
 }
