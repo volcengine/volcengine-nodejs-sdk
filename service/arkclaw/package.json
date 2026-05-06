@@ -1,6 +1,6 @@
 {
   "name": "@volcengine/arkclaw",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "swagger client for @volcengine/arkclaw",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
@@ -17,6 +17,10 @@
   "engines": {
     "node": ">=18"
   },
+  "files": [
+    "dist",
+    "!dist/tsconfig.tsbuildinfo"
+  ],
   "scripts": {
     "build": "rslib build",
     "dev": "rslib build --watch",

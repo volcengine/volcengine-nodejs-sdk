@@ -128,5 +128,11 @@ export interface InstanceForListClawOmniInstancesOutput {
      * @type {string}
      * @memberof InstanceForListClawOmniInstancesOutput
      */
+    TemplateId?: string;
+
+    /**
+     * @type {string}
+     * @memberof InstanceForListClawOmniInstancesOutput
+     */
     UpdatedAt?: string;
 }
