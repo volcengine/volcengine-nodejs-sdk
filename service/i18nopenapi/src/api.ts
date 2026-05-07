@@ -166,12 +166,24 @@ import { VideoEditorAddEmotionTagRequest } from './types/index';
 import { VideoEditorAddEmotionTagResponse } from './types/index';
 import { VideoEditorAddSpeakerRequest } from './types/index';
 import { VideoEditorAddSpeakerResponse } from './types/index';
+import { VideoEditorAddSubtitleRequest } from './types/index';
+import { VideoEditorAddSubtitleResponse } from './types/index';
+import { VideoEditorAiMTBySegmentRequest } from './types/index';
+import { VideoEditorAiMTBySegmentResponse } from './types/index';
 import { VideoEditorAsyncGenDubbingRequest } from './types/index';
 import { VideoEditorAsyncGenDubbingResponse } from './types/index';
+import { VideoEditorBatchAddSubtitleRequest } from './types/index';
+import { VideoEditorBatchAddSubtitleResponse } from './types/index';
+import { VideoEditorBatchUpdateStyleRequest } from './types/index';
+import { VideoEditorBatchUpdateStyleResponse } from './types/index';
 import { VideoEditorDeleteEmotionTagRequest } from './types/index';
 import { VideoEditorDeleteEmotionTagResponse } from './types/index';
 import { VideoEditorDeleteSpeakerRequest } from './types/index';
 import { VideoEditorDeleteSpeakerResponse } from './types/index';
+import { VideoEditorDeleteSubtitleRequest } from './types/index';
+import { VideoEditorDeleteSubtitleResponse } from './types/index';
+import { VideoEditorDownloadSubtitleFileUrlRequest } from './types/index';
+import { VideoEditorDownloadSubtitleFileUrlResponse } from './types/index';
 import { VideoEditorGenDubbingRequest } from './types/index';
 import { VideoEditorGenDubbingResponse } from './types/index';
 import { VideoEditorGetEmotionTagsRequest } from './types/index';
@@ -180,6 +192,8 @@ import { VideoEditorGetSpeakersRequest } from './types/index';
 import { VideoEditorGetSpeakersResponse } from './types/index';
 import { VideoEditorListSubtitlesRequest } from './types/index';
 import { VideoEditorListSubtitlesResponse } from './types/index';
+import { VideoEditorQueryAIMTBySegmentResultRequest } from './types/index';
+import { VideoEditorQueryAIMTBySegmentResultResponse } from './types/index';
 import { VideoEditorQueryAsyncGenDubbingResultRequest } from './types/index';
 import { VideoEditorQueryAsyncGenDubbingResultResponse } from './types/index';
 import { VideoEditorSaveSubtitleRequest } from './types/index';
@@ -188,6 +202,8 @@ import { VideoEditorSubmitSubtaskRequest } from './types/index';
 import { VideoEditorSubmitSubtaskResponse } from './types/index';
 import { VideoEditorSyncSpeakerToSubTaskRequest } from './types/index';
 import { VideoEditorSyncSpeakerToSubTaskResponse } from './types/index';
+import { VideoEditorUpdateGlobalStyleRequest } from './types/index';
+import { VideoEditorUpdateGlobalStyleResponse } from './types/index';
 import { VideoEditorUpdateSpeakerRequest } from './types/index';
 import { VideoEditorUpdateSpeakerResponse } from './types/index';
 import { VideoProjectCreateRequest } from './types/index';
@@ -292,17 +308,25 @@ export type TermBaseTermGroupsCommandOutput = CommandOutput<TermBaseTermGroupsRe
 export type TextGetTextListWithKeyOrSourceCommandOutput = CommandOutput<TextGetTextListWithKeyOrSourceResponse>;
 export type VideoEditorAddEmotionTagCommandOutput = CommandOutput<VideoEditorAddEmotionTagResponse>;
 export type VideoEditorAddSpeakerCommandOutput = CommandOutput<VideoEditorAddSpeakerResponse>;
+export type VideoEditorAddSubtitleCommandOutput = CommandOutput<VideoEditorAddSubtitleResponse>;
+export type VideoEditorAiMTBySegmentCommandOutput = CommandOutput<VideoEditorAiMTBySegmentResponse>;
 export type VideoEditorAsyncGenDubbingCommandOutput = CommandOutput<VideoEditorAsyncGenDubbingResponse>;
+export type VideoEditorBatchAddSubtitleCommandOutput = CommandOutput<VideoEditorBatchAddSubtitleResponse>;
+export type VideoEditorBatchUpdateStyleCommandOutput = CommandOutput<VideoEditorBatchUpdateStyleResponse>;
 export type VideoEditorDeleteEmotionTagCommandOutput = CommandOutput<VideoEditorDeleteEmotionTagResponse>;
 export type VideoEditorDeleteSpeakerCommandOutput = CommandOutput<VideoEditorDeleteSpeakerResponse>;
+export type VideoEditorDeleteSubtitleCommandOutput = CommandOutput<VideoEditorDeleteSubtitleResponse>;
+export type VideoEditorDownloadSubtitleFileUrlCommandOutput = CommandOutput<VideoEditorDownloadSubtitleFileUrlResponse>;
 export type VideoEditorGenDubbingCommandOutput = CommandOutput<VideoEditorGenDubbingResponse>;
 export type VideoEditorGetEmotionTagsCommandOutput = CommandOutput<VideoEditorGetEmotionTagsResponse>;
 export type VideoEditorGetSpeakersCommandOutput = CommandOutput<VideoEditorGetSpeakersResponse>;
 export type VideoEditorListSubtitlesCommandOutput = CommandOutput<VideoEditorListSubtitlesResponse>;
+export type VideoEditorQueryAIMTBySegmentResultCommandOutput = CommandOutput<VideoEditorQueryAIMTBySegmentResultResponse>;
 export type VideoEditorQueryAsyncGenDubbingResultCommandOutput = CommandOutput<VideoEditorQueryAsyncGenDubbingResultResponse>;
 export type VideoEditorSaveSubtitleCommandOutput = CommandOutput<VideoEditorSaveSubtitleResponse>;
 export type VideoEditorSubmitSubtaskCommandOutput = CommandOutput<VideoEditorSubmitSubtaskResponse>;
 export type VideoEditorSyncSpeakerToSubTaskCommandOutput = CommandOutput<VideoEditorSyncSpeakerToSubTaskResponse>;
+export type VideoEditorUpdateGlobalStyleCommandOutput = CommandOutput<VideoEditorUpdateGlobalStyleResponse>;
 export type VideoEditorUpdateSpeakerCommandOutput = CommandOutput<VideoEditorUpdateSpeakerResponse>;
 export type VideoProjectCreateCommandOutput = CommandOutput<VideoProjectCreateResponse>;
 export type VideoProjectListCommandOutput = CommandOutput<VideoProjectListResponse>;
@@ -1447,7 +1471,7 @@ export class VideoEditorAddEmotionTagCommand extends Command<
   VideoEditorAddEmotionTagCommandOutput,
   'VideoEditorAddEmotionTagCommand'
 > {
-  static readonly metaPath = '/VideoEditorAddEmotionTag/2021-05-21/i18n_openapi/get/text_plain/';
+  static readonly metaPath = '/VideoEditorAddEmotionTag/2021-05-21/i18n_openapi/post/application_json/';
 
   constructor(input: VideoEditorAddEmotionTagRequest) {
     super(input);
@@ -1462,11 +1486,41 @@ export class VideoEditorAddSpeakerCommand extends Command<
   VideoEditorAddSpeakerCommandOutput,
   'VideoEditorAddSpeakerCommand'
 > {
-  static readonly metaPath = '/VideoEditorAddSpeaker/2021-05-21/i18n_openapi/get/text_plain/';
+  static readonly metaPath = '/VideoEditorAddSpeaker/2021-05-21/i18n_openapi/post/application_json/';
 
   constructor(input: VideoEditorAddSpeakerRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorAddSpeakerCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorAddSubtitle
+ */
+export class VideoEditorAddSubtitleCommand extends Command<
+  VideoEditorAddSubtitleRequest,
+  VideoEditorAddSubtitleCommandOutput,
+  'VideoEditorAddSubtitleCommand'
+> {
+  static readonly metaPath = '/VideoEditorAddSubtitle/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoEditorAddSubtitleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorAddSubtitleCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorAiMTBySegment
+ */
+export class VideoEditorAiMTBySegmentCommand extends Command<
+  VideoEditorAiMTBySegmentRequest,
+  VideoEditorAiMTBySegmentCommandOutput,
+  'VideoEditorAiMTBySegmentCommand'
+> {
+  static readonly metaPath = '/VideoEditorAiMTBySegment/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoEditorAiMTBySegmentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorAiMTBySegmentCommand.metaPath);
   }
 }
 /**
@@ -1485,6 +1539,36 @@ export class VideoEditorAsyncGenDubbingCommand extends Command<
   }
 }
 /**
+ * Command to VideoEditorBatchAddSubtitle
+ */
+export class VideoEditorBatchAddSubtitleCommand extends Command<
+  VideoEditorBatchAddSubtitleRequest,
+  VideoEditorBatchAddSubtitleCommandOutput,
+  'VideoEditorBatchAddSubtitleCommand'
+> {
+  static readonly metaPath = '/VideoEditorBatchAddSubtitle/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoEditorBatchAddSubtitleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorBatchAddSubtitleCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorBatchUpdateStyle
+ */
+export class VideoEditorBatchUpdateStyleCommand extends Command<
+  VideoEditorBatchUpdateStyleRequest,
+  VideoEditorBatchUpdateStyleCommandOutput,
+  'VideoEditorBatchUpdateStyleCommand'
+> {
+  static readonly metaPath = '/VideoEditorBatchUpdateStyle/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoEditorBatchUpdateStyleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorBatchUpdateStyleCommand.metaPath);
+  }
+}
+/**
  * Command to VideoEditorDeleteEmotionTag
  */
 export class VideoEditorDeleteEmotionTagCommand extends Command<
@@ -1492,7 +1576,7 @@ export class VideoEditorDeleteEmotionTagCommand extends Command<
   VideoEditorDeleteEmotionTagCommandOutput,
   'VideoEditorDeleteEmotionTagCommand'
 > {
-  static readonly metaPath = '/VideoEditorDeleteEmotionTag/2021-05-21/i18n_openapi/get/text_plain/';
+  static readonly metaPath = '/VideoEditorDeleteEmotionTag/2021-05-21/i18n_openapi/post/application_json/';
 
   constructor(input: VideoEditorDeleteEmotionTagRequest) {
     super(input);
@@ -1507,11 +1591,41 @@ export class VideoEditorDeleteSpeakerCommand extends Command<
   VideoEditorDeleteSpeakerCommandOutput,
   'VideoEditorDeleteSpeakerCommand'
 > {
-  static readonly metaPath = '/VideoEditorDeleteSpeaker/2021-05-21/i18n_openapi/get/text_plain/';
+  static readonly metaPath = '/VideoEditorDeleteSpeaker/2021-05-21/i18n_openapi/post/application_json/';
 
   constructor(input: VideoEditorDeleteSpeakerRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorDeleteSpeakerCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorDeleteSubtitle
+ */
+export class VideoEditorDeleteSubtitleCommand extends Command<
+  VideoEditorDeleteSubtitleRequest,
+  VideoEditorDeleteSubtitleCommandOutput,
+  'VideoEditorDeleteSubtitleCommand'
+> {
+  static readonly metaPath = '/VideoEditorDeleteSubtitle/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorDeleteSubtitleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorDeleteSubtitleCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorDownloadSubtitleFileUrl
+ */
+export class VideoEditorDownloadSubtitleFileUrlCommand extends Command<
+  VideoEditorDownloadSubtitleFileUrlRequest,
+  VideoEditorDownloadSubtitleFileUrlCommandOutput,
+  'VideoEditorDownloadSubtitleFileUrlCommand'
+> {
+  static readonly metaPath = '/VideoEditorDownloadSubtitleFileUrl/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorDownloadSubtitleFileUrlRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorDownloadSubtitleFileUrlCommand.metaPath);
   }
 }
 /**
@@ -1575,6 +1689,21 @@ export class VideoEditorListSubtitlesCommand extends Command<
   }
 }
 /**
+ * Command to VideoEditorQueryAIMTBySegmentResult
+ */
+export class VideoEditorQueryAIMTBySegmentResultCommand extends Command<
+  VideoEditorQueryAIMTBySegmentResultRequest,
+  VideoEditorQueryAIMTBySegmentResultCommandOutput,
+  'VideoEditorQueryAIMTBySegmentResultCommand'
+> {
+  static readonly metaPath = '/VideoEditorQueryAIMTBySegmentResult/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoEditorQueryAIMTBySegmentResultRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorQueryAIMTBySegmentResultCommand.metaPath);
+  }
+}
+/**
  * Command to VideoEditorQueryAsyncGenDubbingResult
  */
 export class VideoEditorQueryAsyncGenDubbingResultCommand extends Command<
@@ -1627,11 +1756,26 @@ export class VideoEditorSyncSpeakerToSubTaskCommand extends Command<
   VideoEditorSyncSpeakerToSubTaskCommandOutput,
   'VideoEditorSyncSpeakerToSubTaskCommand'
 > {
-  static readonly metaPath = '/VideoEditorSyncSpeakerToSubTask/2021-05-21/i18n_openapi/get/text_plain/';
+  static readonly metaPath = '/VideoEditorSyncSpeakerToSubTask/2021-05-21/i18n_openapi/post/application_json/';
 
   constructor(input: VideoEditorSyncSpeakerToSubTaskRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorSyncSpeakerToSubTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoEditorUpdateGlobalStyle
+ */
+export class VideoEditorUpdateGlobalStyleCommand extends Command<
+  VideoEditorUpdateGlobalStyleRequest,
+  VideoEditorUpdateGlobalStyleCommandOutput,
+  'VideoEditorUpdateGlobalStyleCommand'
+> {
+  static readonly metaPath = '/VideoEditorUpdateGlobalStyle/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoEditorUpdateGlobalStyleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorUpdateGlobalStyleCommand.metaPath);
   }
 }
 /**
@@ -1642,7 +1786,7 @@ export class VideoEditorUpdateSpeakerCommand extends Command<
   VideoEditorUpdateSpeakerCommandOutput,
   'VideoEditorUpdateSpeakerCommand'
 > {
-  static readonly metaPath = '/VideoEditorUpdateSpeaker/2021-05-21/i18n_openapi/get/text_plain/';
+  static readonly metaPath = '/VideoEditorUpdateSpeaker/2021-05-21/i18n_openapi/post/application_json/';
 
   constructor(input: VideoEditorUpdateSpeakerRequest) {
     super(input);
@@ -1893,17 +2037,25 @@ export default {
   TextGetTextListWithKeyOrSourceCommand,
   VideoEditorAddEmotionTagCommand,
   VideoEditorAddSpeakerCommand,
+  VideoEditorAddSubtitleCommand,
+  VideoEditorAiMTBySegmentCommand,
   VideoEditorAsyncGenDubbingCommand,
+  VideoEditorBatchAddSubtitleCommand,
+  VideoEditorBatchUpdateStyleCommand,
   VideoEditorDeleteEmotionTagCommand,
   VideoEditorDeleteSpeakerCommand,
+  VideoEditorDeleteSubtitleCommand,
+  VideoEditorDownloadSubtitleFileUrlCommand,
   VideoEditorGenDubbingCommand,
   VideoEditorGetEmotionTagsCommand,
   VideoEditorGetSpeakersCommand,
   VideoEditorListSubtitlesCommand,
+  VideoEditorQueryAIMTBySegmentResultCommand,
   VideoEditorQueryAsyncGenDubbingResultCommand,
   VideoEditorSaveSubtitleCommand,
   VideoEditorSubmitSubtaskCommand,
   VideoEditorSyncSpeakerToSubTaskCommand,
+  VideoEditorUpdateGlobalStyleCommand,
   VideoEditorUpdateSpeakerCommand,
   VideoProjectCreateCommand,
   VideoProjectListCommand,

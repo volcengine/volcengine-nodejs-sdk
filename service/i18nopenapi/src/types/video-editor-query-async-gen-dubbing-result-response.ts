@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DataForVideoEditorQueryAsyncGenDubbingResultOutput } from './data-for-video-editor-query-async-gen-dubbing-result-output';
  /**
  * 
  *
@@ -21,20 +22,8 @@
 export interface VideoEditorQueryAsyncGenDubbingResultResponse {
 
     /**
-     * @type {number}
+     * @type {DataForVideoEditorQueryAsyncGenDubbingResultOutput}
      * @memberof VideoEditorQueryAsyncGenDubbingResultResponse
      */
-    status?: number;
-
-    /**
-     * @type {string}
-     * @memberof VideoEditorQueryAsyncGenDubbingResultResponse
-     */
-    tosUrl?: string;
-
-    /**
-     * @type {Array<string>}
-     * @memberof VideoEditorQueryAsyncGenDubbingResultResponse
-     */
-    tosUrlList?: Array<string>;
+    data?: DataForVideoEditorQueryAsyncGenDubbingResultOutput;
 }

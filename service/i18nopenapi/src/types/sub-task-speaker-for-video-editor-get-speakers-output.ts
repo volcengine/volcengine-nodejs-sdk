@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { VoiceForVideoEditorGetSpeakersOutput } from './voice-for-video-editor-get-speakers-output';
  /**
  * 
  *
@@ -22,16 +21,16 @@ import { VoiceForVideoEditorGetSpeakersOutput } from './voice-for-video-editor-g
 export interface SubTaskSpeakerForVideoEditorGetSpeakersOutput {
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof SubTaskSpeakerForVideoEditorGetSpeakersOutput
      */
-    createAt?: number;
+    createAt?: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof SubTaskSpeakerForVideoEditorGetSpeakersOutput
      */
-    id?: number;
+    id?: string;
 
     /**
      * @type {string}
@@ -40,10 +39,10 @@ export interface SubTaskSpeakerForVideoEditorGetSpeakersOutput {
     speakerDesc?: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof SubTaskSpeakerForVideoEditorGetSpeakersOutput
      */
-    speakerId?: number;
+    speakerId?: string;
 
     /**
      * @type {string}
@@ -58,20 +57,8 @@ export interface SubTaskSpeakerForVideoEditorGetSpeakersOutput {
     speakerType?: number;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof SubTaskSpeakerForVideoEditorGetSpeakersOutput
      */
-    status?: number;
-
-    /**
-     * @type {number}
-     * @memberof SubTaskSpeakerForVideoEditorGetSpeakersOutput
-     */
-    updateAt?: number;
-
-    /**
-     * @type {Array<VoiceForVideoEditorGetSpeakersOutput>}
-     * @memberof SubTaskSpeakerForVideoEditorGetSpeakersOutput
-     */
-    voices?: Array<VoiceForVideoEditorGetSpeakersOutput>;
+    updateAt?: string;
 }

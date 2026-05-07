@@ -27,14 +27,14 @@ export interface VideoEditorAddSpeakerRequest {
     speakerName: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoEditorAddSpeakerRequest
      */
-    subtaskId: number;
+    subtaskId: string;
 
     /**
      * @type {number}
      * @memberof VideoEditorAddSpeakerRequest
      */
-    type?: number;
+    type: number;
 }

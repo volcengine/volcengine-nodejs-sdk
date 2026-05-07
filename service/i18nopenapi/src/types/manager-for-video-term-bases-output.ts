@@ -16,37 +16,43 @@
  * 
  *
  * @export
- * @interface VoiceForVideoEditorGetSpeakersOutput
+ * @interface ManagerForVideoTermBasesOutput
  */
-export interface VoiceForVideoEditorGetSpeakersOutput {
-
-    /**
-     * @type {number}
-     * @memberof VoiceForVideoEditorGetSpeakersOutput
-     */
-    createAt?: number;
+export interface ManagerForVideoTermBasesOutput {
 
     /**
      * @type {string}
-     * @memberof VoiceForVideoEditorGetSpeakersOutput
+     * @memberof ManagerForVideoTermBasesOutput
      */
-    emotionTag?: string;
-
-    /**
-     * @type {number}
-     * @memberof VoiceForVideoEditorGetSpeakersOutput
-     */
-    id?: number;
+    avatar?: string;
 
     /**
      * @type {string}
-     * @memberof VoiceForVideoEditorGetSpeakersOutput
+     * @memberof ManagerForVideoTermBasesOutput
+     */
+    createAt?: string;
+
+    /**
+     * @type {string}
+     * @memberof ManagerForVideoTermBasesOutput
      */
     name?: string;
 
     /**
-     * @type {string}
-     * @memberof VoiceForVideoEditorGetSpeakersOutput
+     * @type {number}
+     * @memberof ManagerForVideoTermBasesOutput
      */
-    voiceId?: string;
+    role?: number;
+
+    /**
+     * @type {string}
+     * @memberof ManagerForVideoTermBasesOutput
+     */
+    updatedAt?: string;
+
+    /**
+     * @type {string}
+     * @memberof ManagerForVideoTermBasesOutput
+     */
+    userId?: string;
 }

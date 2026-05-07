@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DataForVideoEditorAddSpeakerOutput } from './data-for-video-editor-add-speaker-output';
  /**
  * 
  *
@@ -21,8 +22,8 @@
 export interface VideoEditorAddSpeakerResponse {
 
     /**
-     * @type {number}
+     * @type {DataForVideoEditorAddSpeakerOutput}
      * @memberof VideoEditorAddSpeakerResponse
      */
-    id?: number;
+    data?: DataForVideoEditorAddSpeakerOutput;
 }
