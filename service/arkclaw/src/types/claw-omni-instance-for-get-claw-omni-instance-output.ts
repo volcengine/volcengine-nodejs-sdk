@@ -128,5 +128,11 @@ export interface ClawOmniInstanceForGetClawOmniInstanceOutput {
      * @type {string}
      * @memberof ClawOmniInstanceForGetClawOmniInstanceOutput
      */
+    TemplateId?: string;
+
+    /**
+     * @type {string}
+     * @memberof ClawOmniInstanceForGetClawOmniInstanceOutput
+     */
     UpdatedAt?: string;
 }
