@@ -12,90 +12,90 @@
  * Do not edit the class manually.
  */
 
-import { TagForSearchResourcesOutput } from './tag-for-search-resources-output';
+import { TagForSearchMultiAccountResourcesOutput } from './tag-for-search-multi-account-resources-output';
  /**
  * 
  *
  * @export
- * @interface ResourceForSearchResourcesOutput
+ * @interface ResourceForSearchMultiAccountResourcesOutput
  */
-export interface ResourceForSearchResourcesOutput {
+export interface ResourceForSearchMultiAccountResourcesOutput {
 
     /**
      * @type {number}
-     * @memberof ResourceForSearchResourcesOutput
+     * @memberof ResourceForSearchMultiAccountResourcesOutput
      */
     AccountID?: number;
 
     /**
      * @type {string}
-     * @memberof ResourceForSearchResourcesOutput
+     * @memberof ResourceForSearchMultiAccountResourcesOutput
      */
     CreateTime?: string;
 
     /**
      * @type {string}
-     * @memberof ResourceForSearchResourcesOutput
+     * @memberof ResourceForSearchMultiAccountResourcesOutput
      */
     Identifier?: string;
 
     /**
      * @type {Array<string>}
-     * @memberof ResourceForSearchResourcesOutput
+     * @memberof ResourceForSearchMultiAccountResourcesOutput
      */
     PrivateIpAddress?: Array<string>;
 
     /**
      * @type {string}
-     * @memberof ResourceForSearchResourcesOutput
+     * @memberof ResourceForSearchMultiAccountResourcesOutput
      */
     ProjectName?: string;
 
     /**
      * @type {Array<string>}
-     * @memberof ResourceForSearchResourcesOutput
+     * @memberof ResourceForSearchMultiAccountResourcesOutput
      */
     PublicIpAddress?: Array<string>;
 
     /**
      * @type {string}
-     * @memberof ResourceForSearchResourcesOutput
+     * @memberof ResourceForSearchMultiAccountResourcesOutput
      */
     Region?: string;
 
     /**
      * @type {string}
-     * @memberof ResourceForSearchResourcesOutput
+     * @memberof ResourceForSearchMultiAccountResourcesOutput
      */
     ResourceID?: string;
 
     /**
      * @type {string}
-     * @memberof ResourceForSearchResourcesOutput
+     * @memberof ResourceForSearchMultiAccountResourcesOutput
      */
     ResourceName?: string;
 
     /**
      * @type {string}
-     * @memberof ResourceForSearchResourcesOutput
+     * @memberof ResourceForSearchMultiAccountResourcesOutput
      */
     ResourceType?: string;
 
     /**
      * @type {string}
-     * @memberof ResourceForSearchResourcesOutput
+     * @memberof ResourceForSearchMultiAccountResourcesOutput
      */
     Service?: string;
 
     /**
-     * @type {Array<TagForSearchResourcesOutput>}
-     * @memberof ResourceForSearchResourcesOutput
+     * @type {Array<TagForSearchMultiAccountResourcesOutput>}
+     * @memberof ResourceForSearchMultiAccountResourcesOutput
      */
-    Tags?: Array<TagForSearchResourcesOutput>;
+    Tags?: Array<TagForSearchMultiAccountResourcesOutput>;
 
     /**
      * @type {string}
-     * @memberof ResourceForSearchResourcesOutput
+     * @memberof ResourceForSearchMultiAccountResourcesOutput
      */
     TypeName?: string;
 }

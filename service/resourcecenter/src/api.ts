@@ -14,32 +14,67 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { CreateQueryRequest } from './types/index';
+import { CreateQueryResponse } from './types/index';
+import { DeleteQueryRequest } from './types/index';
+import { DeleteQueryResponse } from './types/index';
+import { DisableMultiAccountResourceCenterRequest } from './types/index';
+import { DisableMultiAccountResourceCenterResponse } from './types/index';
 import { DisableResourceCenterRequest } from './types/index';
 import { DisableResourceCenterResponse } from './types/index';
+import { EnableMultiAccountResourceCenterRequest } from './types/index';
+import { EnableMultiAccountResourceCenterResponse } from './types/index';
 import { EnableResourceCenterRequest } from './types/index';
 import { EnableResourceCenterResponse } from './types/index';
 import { ExecuteSQLQueryRequest } from './types/index';
 import { ExecuteSQLQueryResponse } from './types/index';
+import { GetExampleQueryRequest } from './types/index';
+import { GetExampleQueryResponse } from './types/index';
+import { GetMultiAccountResourceCenterStatusRequest } from './types/index';
+import { GetMultiAccountResourceCenterStatusResponse } from './types/index';
+import { GetMultiAccountResourceCountsRequest } from './types/index';
+import { GetMultiAccountResourceCountsResponse } from './types/index';
+import { GetQueryRequest } from './types/index';
+import { GetQueryResponse } from './types/index';
 import { GetResourceCenterStatusRequest } from './types/index';
 import { GetResourceCenterStatusResponse } from './types/index';
 import { GetResourceCountsRequest } from './types/index';
 import { GetResourceCountsResponse } from './types/index';
+import { ListExampleQueriesRequest } from './types/index';
+import { ListExampleQueriesResponse } from './types/index';
+import { ListQueriesRequest } from './types/index';
+import { ListQueriesResponse } from './types/index';
 import { ListResourceTypesRequest } from './types/index';
 import { ListResourceTypesResponse } from './types/index';
+import { SearchMultiAccountResourcesRequest } from './types/index';
+import { SearchMultiAccountResourcesResponse } from './types/index';
 import { SearchResourcesRequest } from './types/index';
 import { SearchResourcesResponse } from './types/index';
+import { UpdateQueryRequest } from './types/index';
+import { UpdateQueryResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type CreateQueryCommandOutput = CommandOutput<CreateQueryResponse>;
+export type DeleteQueryCommandOutput = CommandOutput<DeleteQueryResponse>;
+export type DisableMultiAccountResourceCenterCommandOutput = CommandOutput<DisableMultiAccountResourceCenterResponse>;
 export type DisableResourceCenterCommandOutput = CommandOutput<DisableResourceCenterResponse>;
+export type EnableMultiAccountResourceCenterCommandOutput = CommandOutput<EnableMultiAccountResourceCenterResponse>;
 export type EnableResourceCenterCommandOutput = CommandOutput<EnableResourceCenterResponse>;
 export type ExecuteSQLQueryCommandOutput = CommandOutput<ExecuteSQLQueryResponse>;
+export type GetExampleQueryCommandOutput = CommandOutput<GetExampleQueryResponse>;
+export type GetMultiAccountResourceCenterStatusCommandOutput = CommandOutput<GetMultiAccountResourceCenterStatusResponse>;
+export type GetMultiAccountResourceCountsCommandOutput = CommandOutput<GetMultiAccountResourceCountsResponse>;
+export type GetQueryCommandOutput = CommandOutput<GetQueryResponse>;
 export type GetResourceCenterStatusCommandOutput = CommandOutput<GetResourceCenterStatusResponse>;
 export type GetResourceCountsCommandOutput = CommandOutput<GetResourceCountsResponse>;
+export type ListExampleQueriesCommandOutput = CommandOutput<ListExampleQueriesResponse>;
+export type ListQueriesCommandOutput = CommandOutput<ListQueriesResponse>;
 export type ListResourceTypesCommandOutput = CommandOutput<ListResourceTypesResponse>;
+export type SearchMultiAccountResourcesCommandOutput = CommandOutput<SearchMultiAccountResourcesResponse>;
 export type SearchResourcesCommandOutput = CommandOutput<SearchResourcesResponse>;
-
+export type UpdateQueryCommandOutput = CommandOutput<UpdateQueryResponse>;
 
 /**
  * RESOURCECENTERClient Service Client
@@ -55,6 +90,51 @@ export class RESOURCECENTERClient extends Client {
 }
 
 /**
+ * Command to CreateQuery
+ */
+export class CreateQueryCommand extends Command<
+  CreateQueryRequest,
+  CreateQueryCommandOutput,
+  'CreateQueryCommand'
+> {
+  static readonly metaPath = '/CreateQuery/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: CreateQueryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateQueryCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteQuery
+ */
+export class DeleteQueryCommand extends Command<
+  DeleteQueryRequest,
+  DeleteQueryCommandOutput,
+  'DeleteQueryCommand'
+> {
+  static readonly metaPath = '/DeleteQuery/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: DeleteQueryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteQueryCommand.metaPath);
+  }
+}
+/**
+ * Command to DisableMultiAccountResourceCenter
+ */
+export class DisableMultiAccountResourceCenterCommand extends Command<
+  DisableMultiAccountResourceCenterRequest,
+  DisableMultiAccountResourceCenterCommandOutput,
+  'DisableMultiAccountResourceCenterCommand'
+> {
+  static readonly metaPath = '/DisableMultiAccountResourceCenter/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: DisableMultiAccountResourceCenterRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisableMultiAccountResourceCenterCommand.metaPath);
+  }
+}
+/**
  * Command to DisableResourceCenter
  */
 export class DisableResourceCenterCommand extends Command<
@@ -67,6 +147,21 @@ export class DisableResourceCenterCommand extends Command<
   constructor(input: DisableResourceCenterRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DisableResourceCenterCommand.metaPath);
+  }
+}
+/**
+ * Command to EnableMultiAccountResourceCenter
+ */
+export class EnableMultiAccountResourceCenterCommand extends Command<
+  EnableMultiAccountResourceCenterRequest,
+  EnableMultiAccountResourceCenterCommandOutput,
+  'EnableMultiAccountResourceCenterCommand'
+> {
+  static readonly metaPath = '/EnableMultiAccountResourceCenter/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: EnableMultiAccountResourceCenterRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnableMultiAccountResourceCenterCommand.metaPath);
   }
 }
 /**
@@ -100,6 +195,66 @@ export class ExecuteSQLQueryCommand extends Command<
   }
 }
 /**
+ * Command to GetExampleQuery
+ */
+export class GetExampleQueryCommand extends Command<
+  GetExampleQueryRequest,
+  GetExampleQueryCommandOutput,
+  'GetExampleQueryCommand'
+> {
+  static readonly metaPath = '/GetExampleQuery/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: GetExampleQueryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetExampleQueryCommand.metaPath);
+  }
+}
+/**
+ * Command to GetMultiAccountResourceCenterStatus
+ */
+export class GetMultiAccountResourceCenterStatusCommand extends Command<
+  GetMultiAccountResourceCenterStatusRequest,
+  GetMultiAccountResourceCenterStatusCommandOutput,
+  'GetMultiAccountResourceCenterStatusCommand'
+> {
+  static readonly metaPath = '/GetMultiAccountResourceCenterStatus/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: GetMultiAccountResourceCenterStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetMultiAccountResourceCenterStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to GetMultiAccountResourceCounts
+ */
+export class GetMultiAccountResourceCountsCommand extends Command<
+  GetMultiAccountResourceCountsRequest,
+  GetMultiAccountResourceCountsCommandOutput,
+  'GetMultiAccountResourceCountsCommand'
+> {
+  static readonly metaPath = '/GetMultiAccountResourceCounts/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: GetMultiAccountResourceCountsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetMultiAccountResourceCountsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetQuery
+ */
+export class GetQueryCommand extends Command<
+  GetQueryRequest,
+  GetQueryCommandOutput,
+  'GetQueryCommand'
+> {
+  static readonly metaPath = '/GetQuery/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: GetQueryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetQueryCommand.metaPath);
+  }
+}
+/**
  * Command to GetResourceCenterStatus
  */
 export class GetResourceCenterStatusCommand extends Command<
@@ -130,6 +285,36 @@ export class GetResourceCountsCommand extends Command<
   }
 }
 /**
+ * Command to ListExampleQueries
+ */
+export class ListExampleQueriesCommand extends Command<
+  ListExampleQueriesRequest,
+  ListExampleQueriesCommandOutput,
+  'ListExampleQueriesCommand'
+> {
+  static readonly metaPath = '/ListExampleQueries/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: ListExampleQueriesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListExampleQueriesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListQueries
+ */
+export class ListQueriesCommand extends Command<
+  ListQueriesRequest,
+  ListQueriesCommandOutput,
+  'ListQueriesCommand'
+> {
+  static readonly metaPath = '/ListQueries/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: ListQueriesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListQueriesCommand.metaPath);
+  }
+}
+/**
  * Command to ListResourceTypes
  */
 export class ListResourceTypesCommand extends Command<
@@ -142,6 +327,21 @@ export class ListResourceTypesCommand extends Command<
   constructor(input: ListResourceTypesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListResourceTypesCommand.metaPath);
+  }
+}
+/**
+ * Command to SearchMultiAccountResources
+ */
+export class SearchMultiAccountResourcesCommand extends Command<
+  SearchMultiAccountResourcesRequest,
+  SearchMultiAccountResourcesCommandOutput,
+  'SearchMultiAccountResourcesCommand'
+> {
+  static readonly metaPath = '/SearchMultiAccountResources/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: SearchMultiAccountResourcesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(SearchMultiAccountResourcesCommand.metaPath);
   }
 }
 /**
@@ -159,14 +359,41 @@ export class SearchResourcesCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(SearchResourcesCommand.metaPath);
   }
 }
+/**
+ * Command to UpdateQuery
+ */
+export class UpdateQueryCommand extends Command<
+  UpdateQueryRequest,
+  UpdateQueryCommandOutput,
+  'UpdateQueryCommand'
+> {
+  static readonly metaPath = '/UpdateQuery/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: UpdateQueryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateQueryCommand.metaPath);
+  }
+}
 
 export default {
   RESOURCECENTERClient,
+  CreateQueryCommand,
+  DeleteQueryCommand,
+  DisableMultiAccountResourceCenterCommand,
   DisableResourceCenterCommand,
+  EnableMultiAccountResourceCenterCommand,
   EnableResourceCenterCommand,
   ExecuteSQLQueryCommand,
+  GetExampleQueryCommand,
+  GetMultiAccountResourceCenterStatusCommand,
+  GetMultiAccountResourceCountsCommand,
+  GetQueryCommand,
   GetResourceCenterStatusCommand,
   GetResourceCountsCommand,
+  ListExampleQueriesCommand,
+  ListQueriesCommand,
   ListResourceTypesCommand,
+  SearchMultiAccountResourcesCommand,
   SearchResourcesCommand,
+  UpdateQueryCommand,
 };
