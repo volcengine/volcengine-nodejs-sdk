@@ -147,6 +147,8 @@ const defaultEndpoint: Record<string, ServiceEndpointInfo> = {
   eco_partner: { Service: "eco_partner", IsGlobal: true },
   smc: { Service: "smc", IsGlobal: true },
   arkclaw: { Service: "arkclaw", IsGlobal: false },
+  insight: { Service: "insight", IsGlobal: true },
+  cbr: { Service: "cbr", IsGlobal: false },
 };
 
 const bootstrapRegion: Record<string, unknown> = {
