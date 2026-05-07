@@ -6,6 +6,10 @@
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
   "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist",
+    "!dist/tsconfig.tsbuildinfo"
+  ],
   "exports": {
     ".": {
       "types": "./dist/esm/index.d.ts",

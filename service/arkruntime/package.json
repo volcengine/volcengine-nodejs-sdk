@@ -5,7 +5,8 @@
     "dist",
     "src",
     "example",
-    "package.json"
+    "package.json",
+    "!dist/tsconfig.tsbuildinfo"
   ],
   "description": "Ark runtime data-plane client for model inference",
   "license": "Apache-2.0",
