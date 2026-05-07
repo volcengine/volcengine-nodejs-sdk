@@ -146,6 +146,7 @@ const defaultEndpoint: Record<string, ServiceEndpointInfo> = {
   vms: { Service: "vms", IsGlobal: false },
   eco_partner: { Service: "eco_partner", IsGlobal: true },
   smc: { Service: "smc", IsGlobal: true },
+  insight: { Service: "insight", IsGlobal: true },
   cbr: { Service: "cbr", IsGlobal: false },
 };
 
