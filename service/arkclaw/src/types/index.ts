@@ -18,6 +18,8 @@ export * from './model-config-for-get-claw-omni-instance-output';
 export * from './model-config-for-list-claw-omni-instances-output';
 export * from './pause-claw-omni-instance-request';
 export * from './pause-claw-omni-instance-response';
+export * from './reset-claw-omni-instance-request';
+export * from './reset-claw-omni-instance-response';
 export * from './resume-claw-omni-instance-request';
 export * from './resume-claw-omni-instance-response';
 export * from './tag-for-create-claw-omni-instance-input';
