@@ -66,5 +66,11 @@ export interface ConditionForListRulesByIdsOutput {
      * @type {string}
      * @memberof ConditionForListRulesByIdsOutput
      */
+    SubNamespace?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConditionForListRulesByIdsOutput
+     */
     Threshold?: string;
 }
