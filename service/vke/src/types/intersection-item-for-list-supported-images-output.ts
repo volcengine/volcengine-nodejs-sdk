@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface ListSupportedImagesRequest
+ * @interface IntersectionItemForListSupportedImagesOutput
  */
-export interface ListSupportedImagesRequest {
-
-    /**
-     * @type {Array<string>}
-     * @memberof ListSupportedImagesRequest
-     */
-    InstanceTypeIds?: Array<string>;
-
-    /**
-     * @type {boolean}
-     * @memberof ListSupportedImagesRequest
-     */
-    Intersection?: boolean;
+export interface IntersectionItemForListSupportedImagesOutput {
 
     /**
      * @type {string}
-     * @memberof ListSupportedImagesRequest
+     * @memberof IntersectionItemForListSupportedImagesOutput
      */
-    KubernetesVersion?: string;
+    ImageId?: string;
+
+    /**
+     * @type {string}
+     * @memberof IntersectionItemForListSupportedImagesOutput
+     */
+    ImageName?: string;
 }

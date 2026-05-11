@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface VpcCniConfigForListClustersOutput
+ * @interface AffinityGroupConfigForCreateNodePoolInput
  */
-export interface VpcCniConfigForListClustersOutput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof VpcCniConfigForListClustersOutput
-     */
-    SubnetIds?: Array<string>;
+export interface AffinityGroupConfigForCreateNodePoolInput {
 
     /**
      * @type {boolean}
-     * @memberof VpcCniConfigForListClustersOutput
+     * @memberof AffinityGroupConfigForCreateNodePoolInput
      */
-    TrunkEniEnabled?: boolean;
+    Enabled?: boolean;
 
     /**
-     * @type {Array<string>}
-     * @memberof VpcCniConfigForListClustersOutput
+     * @type {number}
+     * @memberof AffinityGroupConfigForCreateNodePoolInput
      */
-    VciSubnetIds?: Array<string>;
+    Size?: number;
 }

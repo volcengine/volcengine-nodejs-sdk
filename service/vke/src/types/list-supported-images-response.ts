@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { IntersectionItemForListSupportedImagesOutput } from './intersection-item-for-list-supported-images-output';
 import { ItemForListSupportedImagesOutput } from './item-for-list-supported-images-output';
  /**
  * 
@@ -20,6 +21,12 @@ import { ItemForListSupportedImagesOutput } from './item-for-list-supported-imag
  * @interface ListSupportedImagesResponse
  */
 export interface ListSupportedImagesResponse {
+
+    /**
+     * @type {Array<IntersectionItemForListSupportedImagesOutput>}
+     * @memberof ListSupportedImagesResponse
+     */
+    IntersectionItems?: Array<IntersectionItemForListSupportedImagesOutput>;
 
     /**
      * @type {Array<ItemForListSupportedImagesOutput>}

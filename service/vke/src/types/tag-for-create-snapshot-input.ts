@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface ListSupportedImagesRequest
+ * @interface TagForCreateSnapshotInput
  */
-export interface ListSupportedImagesRequest {
-
-    /**
-     * @type {Array<string>}
-     * @memberof ListSupportedImagesRequest
-     */
-    InstanceTypeIds?: Array<string>;
-
-    /**
-     * @type {boolean}
-     * @memberof ListSupportedImagesRequest
-     */
-    Intersection?: boolean;
+export interface TagForCreateSnapshotInput {
 
     /**
      * @type {string}
-     * @memberof ListSupportedImagesRequest
+     * @memberof TagForCreateSnapshotInput
      */
-    KubernetesVersion?: string;
+    Key?: string;
+
+    /**
+     * @type {string}
+     * @memberof TagForCreateSnapshotInput
+     */
+    Value?: string;
 }

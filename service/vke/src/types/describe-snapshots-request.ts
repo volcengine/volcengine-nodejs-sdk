@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface VpcCniConfigForListClustersOutput
+ * @interface DescribeSnapshotsRequest
  */
-export interface VpcCniConfigForListClustersOutput {
+export interface DescribeSnapshotsRequest {
+
+    /**
+     * @type {number}
+     * @memberof DescribeSnapshotsRequest
+     */
+    MaxResults?: number;
+
+    /**
+     * @type {string}
+     * @memberof DescribeSnapshotsRequest
+     */
+    NextToken?: string;
 
     /**
      * @type {Array<string>}
-     * @memberof VpcCniConfigForListClustersOutput
+     * @memberof DescribeSnapshotsRequest
      */
-    SubnetIds?: Array<string>;
-
-    /**
-     * @type {boolean}
-     * @memberof VpcCniConfigForListClustersOutput
-     */
-    TrunkEniEnabled?: boolean;
-
-    /**
-     * @type {Array<string>}
-     * @memberof VpcCniConfigForListClustersOutput
-     */
-    VciSubnetIds?: Array<string>;
+    SnapshotIds?: Array<string>;
 }

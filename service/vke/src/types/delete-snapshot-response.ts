@@ -16,25 +16,13 @@
  * 
  *
  * @export
- * @interface ListSupportedImagesRequest
+ * @interface DeleteSnapshotResponse
  */
-export interface ListSupportedImagesRequest {
-
-    /**
-     * @type {Array<string>}
-     * @memberof ListSupportedImagesRequest
-     */
-    InstanceTypeIds?: Array<string>;
-
-    /**
-     * @type {boolean}
-     * @memberof ListSupportedImagesRequest
-     */
-    Intersection?: boolean;
+export interface DeleteSnapshotResponse {
 
     /**
      * @type {string}
-     * @memberof ListSupportedImagesRequest
+     * @memberof DeleteSnapshotResponse
      */
-    KubernetesVersion?: string;
+    SnapshotId?: string;
 }

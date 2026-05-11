@@ -12,29 +12,24 @@
  * Do not edit the class manually.
  */
 
+import { SnapshotForDescribeSnapshotsOutput } from './snapshot-for-describe-snapshots-output';
  /**
  * 
  *
  * @export
- * @interface ListSupportedImagesRequest
+ * @interface DescribeSnapshotsResponse
  */
-export interface ListSupportedImagesRequest {
-
-    /**
-     * @type {Array<string>}
-     * @memberof ListSupportedImagesRequest
-     */
-    InstanceTypeIds?: Array<string>;
-
-    /**
-     * @type {boolean}
-     * @memberof ListSupportedImagesRequest
-     */
-    Intersection?: boolean;
+export interface DescribeSnapshotsResponse {
 
     /**
      * @type {string}
-     * @memberof ListSupportedImagesRequest
+     * @memberof DescribeSnapshotsResponse
      */
-    KubernetesVersion?: string;
+    NextToken?: string;
+
+    /**
+     * @type {Array<SnapshotForDescribeSnapshotsOutput>}
+     * @memberof DescribeSnapshotsResponse
+     */
+    Snapshots?: Array<SnapshotForDescribeSnapshotsOutput>;
 }

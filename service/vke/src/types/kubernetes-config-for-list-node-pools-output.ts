@@ -15,6 +15,7 @@
 import { ContainerdConfigForListNodePoolsOutput } from './containerd-config-for-list-node-pools-output';
 import { KubeletConfigForListNodePoolsOutput } from './kubelet-config-for-list-node-pools-output';
 import { LabelForListNodePoolsOutput } from './label-for-list-node-pools-output';
+import { RuntimeForListNodePoolsOutput } from './runtime-for-list-node-pools-output';
 import { TaintForListNodePoolsOutput } from './taint-for-list-node-pools-output';
  /**
  * 
@@ -71,6 +72,12 @@ export interface KubernetesConfigForListNodePoolsOutput {
      * @memberof KubernetesConfigForListNodePoolsOutput
      */
     NameUseHostname?: boolean;
+
+    /**
+     * @type {RuntimeForListNodePoolsOutput}
+     * @memberof KubernetesConfigForListNodePoolsOutput
+     */
+    Runtime?: RuntimeForListNodePoolsOutput;
 
     /**
      * @type {Array<TaintForListNodePoolsOutput>}

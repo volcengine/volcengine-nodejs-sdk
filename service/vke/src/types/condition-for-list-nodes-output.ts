@@ -24,5 +24,23 @@ export interface ConditionForListNodesOutput {
      * @type {string}
      * @memberof ConditionForListNodesOutput
      */
-    Type?: string;
+    Type?: ConditionForListNodesOutputTypeEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ConditionForListNodesOutputTypeEnum {
+    Ok = 'Ok',
+    Unschedulable = 'Unschedulable',
+    NotReady = 'NotReady',
+    InitializeFailed = 'InitializeFailed',
+    ResourceCleanupFailed = 'ResourceCleanupFailed',
+    Security = 'Security',
+    Balance = 'Balance',
+    Unknown = 'Unknown',
+    Progressing = 'Progressing',
+    ClusterVersionUpgrading = 'ClusterVersionUpgrading'
+}
+
