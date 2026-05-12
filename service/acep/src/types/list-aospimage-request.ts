@@ -72,5 +72,11 @@ export interface ListAOSPImageRequest {
      * @type {string}
      * @memberof ListAOSPImageRequest
      */
+    PlatformType?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListAOSPImageRequest
+     */
     ProductId: string;
 }
