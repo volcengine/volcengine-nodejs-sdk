@@ -21,14 +21,14 @@
 export interface VideoEditorSyncSpeakerToSubTaskRequest {
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoEditorSyncSpeakerToSubTaskRequest
      */
-    id: number;
+    id: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoEditorSyncSpeakerToSubTaskRequest
      */
-    subtaskId: number;
+    subtaskId: string;
 }

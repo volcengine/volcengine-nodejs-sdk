@@ -49,7 +49,6 @@ export type ListProjectsCommandOutput = CommandOutput<ListProjectsResponse>;
 export type MoveProjectResourceCommandOutput = CommandOutput<MoveProjectResourceResponse>;
 export type UpdateProjectCommandOutput = CommandOutput<UpdateProjectResponse>;
 
-
 /**
  * IAM20210801Client Service Client
  */

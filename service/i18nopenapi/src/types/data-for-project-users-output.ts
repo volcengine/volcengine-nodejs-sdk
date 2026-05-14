@@ -24,7 +24,19 @@ export interface DataForProjectUsersOutput {
      * @type {string}
      * @memberof DataForProjectUsersOutput
      */
+    avatar?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForProjectUsersOutput
+     */
     createAt?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForProjectUsersOutput
+     */
+    name?: string;
 
     /**
      * @type {number}
@@ -39,8 +51,8 @@ export interface DataForProjectUsersOutput {
     updatedAt?: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof DataForProjectUsersOutput
      */
-    userId?: number;
+    userId?: string;
 }

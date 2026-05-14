@@ -58,22 +58,10 @@ export interface DataForProjectsOutput {
     sourceLang?: string;
 
     /**
-     * @type {string}
-     * @memberof DataForProjectsOutput
-     */
-    sourceLocale?: string;
-
-    /**
      * @type {Array<string>}
      * @memberof DataForProjectsOutput
      */
     targetLangs?: Array<string>;
-
-    /**
-     * @type {Array<string>}
-     * @memberof DataForProjectsOutput
-     */
-    targetLocales?: Array<string>;
 
     /**
      * @type {string}

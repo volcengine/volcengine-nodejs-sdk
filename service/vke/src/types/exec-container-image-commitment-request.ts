@@ -32,6 +32,12 @@ export interface ExecContainerImageCommitmentRequest {
      * @type {string}
      * @memberof ExecContainerImageCommitmentRequest
      */
+    ClientToken?: string;
+
+    /**
+     * @type {string}
+     * @memberof ExecContainerImageCommitmentRequest
+     */
     ContainerName: string;
 
     /**

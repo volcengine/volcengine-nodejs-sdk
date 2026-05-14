@@ -26,6 +26,8 @@ import { ListClawOmniInstancesRequest } from './types/index';
 import { ListClawOmniInstancesResponse } from './types/index';
 import { PauseClawOmniInstanceRequest } from './types/index';
 import { PauseClawOmniInstanceResponse } from './types/index';
+import { ResetClawOmniInstanceRequest } from './types/index';
+import { ResetClawOmniInstanceResponse } from './types/index';
 import { ResumeClawOmniInstanceRequest } from './types/index';
 import { ResumeClawOmniInstanceResponse } from './types/index';
 
@@ -38,6 +40,7 @@ export type ExecuteClawOmniInstanceCommandCommandOutput = CommandOutput<ExecuteC
 export type GetClawOmniInstanceCommandOutput = CommandOutput<GetClawOmniInstanceResponse>;
 export type ListClawOmniInstancesCommandOutput = CommandOutput<ListClawOmniInstancesResponse>;
 export type PauseClawOmniInstanceCommandOutput = CommandOutput<PauseClawOmniInstanceResponse>;
+export type ResetClawOmniInstanceCommandOutput = CommandOutput<ResetClawOmniInstanceResponse>;
 export type ResumeClawOmniInstanceCommandOutput = CommandOutput<ResumeClawOmniInstanceResponse>;
 
 /**
@@ -144,6 +147,21 @@ export class PauseClawOmniInstanceCommand extends Command<
   }
 }
 /**
+ * Command to ResetClawOmniInstance
+ */
+export class ResetClawOmniInstanceCommand extends Command<
+  ResetClawOmniInstanceRequest,
+  ResetClawOmniInstanceCommandOutput,
+  'ResetClawOmniInstanceCommand'
+> {
+  static readonly metaPath = '/ResetClawOmniInstance/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: ResetClawOmniInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ResetClawOmniInstanceCommand.metaPath);
+  }
+}
+/**
  * Command to ResumeClawOmniInstance
  */
 export class ResumeClawOmniInstanceCommand extends Command<
@@ -167,5 +185,6 @@ export default {
   GetClawOmniInstanceCommand,
   ListClawOmniInstancesCommand,
   PauseClawOmniInstanceCommand,
+  ResetClawOmniInstanceCommand,
   ResumeClawOmniInstanceCommand,
 };

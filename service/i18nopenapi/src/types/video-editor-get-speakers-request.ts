@@ -21,8 +21,8 @@
 export interface VideoEditorGetSpeakersRequest {
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoEditorGetSpeakersRequest
      */
-    subtaskId: number;
+    subtaskId: string;
 }
