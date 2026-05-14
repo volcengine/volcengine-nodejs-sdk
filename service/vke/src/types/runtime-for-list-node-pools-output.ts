@@ -16,25 +16,28 @@
  * 
  *
  * @export
- * @interface ListSupportedImagesRequest
+ * @interface RuntimeForListNodePoolsOutput
  */
-export interface ListSupportedImagesRequest {
-
-    /**
-     * @type {Array<string>}
-     * @memberof ListSupportedImagesRequest
-     */
-    InstanceTypeIds?: Array<string>;
-
-    /**
-     * @type {boolean}
-     * @memberof ListSupportedImagesRequest
-     */
-    Intersection?: boolean;
+export interface RuntimeForListNodePoolsOutput {
 
     /**
      * @type {string}
-     * @memberof ListSupportedImagesRequest
+     * @memberof RuntimeForListNodePoolsOutput
      */
-    KubernetesVersion?: string;
+    Type?: RuntimeForListNodePoolsOutputTypeEnum;
+
+    /**
+     * @type {string}
+     * @memberof RuntimeForListNodePoolsOutput
+     */
+    Version?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum RuntimeForListNodePoolsOutputTypeEnum {
+    Containerd = 'containerd'
+}
+

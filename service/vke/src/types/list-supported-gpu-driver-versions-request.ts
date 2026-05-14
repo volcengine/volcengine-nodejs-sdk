@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface VpcCniConfigForListClustersOutput
+ * @interface ListSupportedGpuDriverVersionsRequest
  */
-export interface VpcCniConfigForListClustersOutput {
+export interface ListSupportedGpuDriverVersionsRequest {
+
+    /**
+     * @type {string}
+     * @memberof ListSupportedGpuDriverVersionsRequest
+     */
+    ImageId: string;
 
     /**
      * @type {Array<string>}
-     * @memberof VpcCniConfigForListClustersOutput
+     * @memberof ListSupportedGpuDriverVersionsRequest
      */
-    SubnetIds?: Array<string>;
-
-    /**
-     * @type {boolean}
-     * @memberof VpcCniConfigForListClustersOutput
-     */
-    TrunkEniEnabled?: boolean;
+    InstanceTypeFamilies?: Array<string>;
 
     /**
      * @type {Array<string>}
-     * @memberof VpcCniConfigForListClustersOutput
+     * @memberof ListSupportedGpuDriverVersionsRequest
      */
-    VciSubnetIds?: Array<string>;
+    InstanceTypeIds?: Array<string>;
 }

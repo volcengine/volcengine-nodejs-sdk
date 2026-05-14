@@ -16,25 +16,13 @@
  * 
  *
  * @export
- * @interface ListSupportedImagesRequest
+ * @interface CreateSnapshotResponse
  */
-export interface ListSupportedImagesRequest {
-
-    /**
-     * @type {Array<string>}
-     * @memberof ListSupportedImagesRequest
-     */
-    InstanceTypeIds?: Array<string>;
-
-    /**
-     * @type {boolean}
-     * @memberof ListSupportedImagesRequest
-     */
-    Intersection?: boolean;
+export interface CreateSnapshotResponse {
 
     /**
      * @type {string}
-     * @memberof ListSupportedImagesRequest
+     * @memberof CreateSnapshotResponse
      */
-    KubernetesVersion?: string;
+    SnapshotId?: string;
 }

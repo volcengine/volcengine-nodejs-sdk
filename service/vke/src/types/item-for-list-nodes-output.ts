@@ -32,6 +32,12 @@ export interface ItemForListNodesOutput {
      * @type {string}
      * @memberof ItemForListNodesOutput
      */
+    AffinityGroupId?: string;
+
+    /**
+     * @type {string}
+     * @memberof ItemForListNodesOutput
+     */
     ClusterId?: string;
 
     /**
@@ -51,6 +57,12 @@ export interface ItemForListNodesOutput {
      * @memberof ItemForListNodesOutput
      */
     CreateTime?: string;
+
+    /**
+     * @type {string}
+     * @memberof ItemForListNodesOutput
+     */
+    GpuDriverVersion?: string;
 
     /**
      * @type {string}
@@ -92,6 +104,12 @@ export interface ItemForListNodesOutput {
      * @type {string}
      * @memberof ItemForListNodesOutput
      */
+    MetadataName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ItemForListNodesOutput
+     */
     Name?: string;
 
     /**
@@ -110,7 +128,7 @@ export interface ItemForListNodesOutput {
      * @type {Array<string>}
      * @memberof ItemForListNodesOutput
      */
-    Roles?: Array<string>;
+    Roles?: Array<ItemForListNodesOutputRolesEnum>;
 
     /**
      * @type {StatusForListNodesOutput}
@@ -130,3 +148,14 @@ export interface ItemForListNodesOutput {
      */
     ZoneId?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ItemForListNodesOutputRolesEnum {
+    Master = 'Master',
+    Etcd = 'Etcd',
+    Worker = 'Worker'
+}
+
