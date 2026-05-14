@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AffinityGroupConfigForListNodePoolsOutput } from './affinity-group-config-for-list-node-pools-output';
 import { DataVolumeForListNodePoolsOutput } from './data-volume-for-list-node-pools-output';
 import { InstancesDistributionForListNodePoolsOutput } from './instances-distribution-for-list-node-pools-output';
 import { PublicAccessConfigForListNodePoolsOutput } from './public-access-config-for-list-node-pools-output';
@@ -31,6 +32,12 @@ export interface NodeConfigForListNodePoolsOutput {
      * @memberof NodeConfigForListNodePoolsOutput
      */
     AdditionalContainerStorageEnabled?: boolean;
+
+    /**
+     * @type {AffinityGroupConfigForListNodePoolsOutput}
+     * @memberof NodeConfigForListNodePoolsOutput
+     */
+    AffinityGroupConfig?: AffinityGroupConfigForListNodePoolsOutput;
 
     /**
      * @type {boolean}
@@ -61,6 +68,12 @@ export interface NodeConfigForListNodePoolsOutput {
      * @memberof NodeConfigForListNodePoolsOutput
      */
     DeploymentSetId?: string;
+
+    /**
+     * @type {string}
+     * @memberof NodeConfigForListNodePoolsOutput
+     */
+    GpuDriverVersion?: string;
 
     /**
      * @type {string}

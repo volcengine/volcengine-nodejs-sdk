@@ -31,4 +31,10 @@ export interface VpcCniConfigForListClustersOutput {
      * @memberof VpcCniConfigForListClustersOutput
      */
     TrunkEniEnabled?: boolean;
+
+    /**
+     * @type {Array<string>}
+     * @memberof VpcCniConfigForListClustersOutput
+     */
+    VciSubnetIds?: Array<string>;
 }

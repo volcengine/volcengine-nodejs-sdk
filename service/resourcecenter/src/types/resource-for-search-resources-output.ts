@@ -34,6 +34,12 @@ export interface ResourceForSearchResourcesOutput {
     CreateTime?: string;
 
     /**
+     * @type {string}
+     * @memberof ResourceForSearchResourcesOutput
+     */
+    Identifier?: string;
+
+    /**
      * @type {Array<string>}
      * @memberof ResourceForSearchResourcesOutput
      */
@@ -86,4 +92,10 @@ export interface ResourceForSearchResourcesOutput {
      * @memberof ResourceForSearchResourcesOutput
      */
     Tags?: Array<TagForSearchResourcesOutput>;
+
+    /**
+     * @type {string}
+     * @memberof ResourceForSearchResourcesOutput
+     */
+    TypeName?: string;
 }

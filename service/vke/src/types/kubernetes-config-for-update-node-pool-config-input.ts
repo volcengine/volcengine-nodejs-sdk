@@ -15,6 +15,7 @@
 import { ContainerdConfigForUpdateNodePoolConfigInput } from './containerd-config-for-update-node-pool-config-input';
 import { KubeletConfigForUpdateNodePoolConfigInput } from './kubelet-config-for-update-node-pool-config-input';
 import { LabelForUpdateNodePoolConfigInput } from './label-for-update-node-pool-config-input';
+import { RuntimeForUpdateNodePoolConfigInput } from './runtime-for-update-node-pool-config-input';
 import { TaintForUpdateNodePoolConfigInput } from './taint-for-update-node-pool-config-input';
  /**
  * 
@@ -71,6 +72,12 @@ export interface KubernetesConfigForUpdateNodePoolConfigInput {
      * @memberof KubernetesConfigForUpdateNodePoolConfigInput
      */
     NameUseHostname?: boolean;
+
+    /**
+     * @type {RuntimeForUpdateNodePoolConfigInput}
+     * @memberof KubernetesConfigForUpdateNodePoolConfigInput
+     */
+    Runtime?: RuntimeForUpdateNodePoolConfigInput;
 
     /**
      * @type {Array<TaintForUpdateNodePoolConfigInput>}
