@@ -25,4 +25,16 @@ export interface ListSupportedImagesRequest {
      * @memberof ListSupportedImagesRequest
      */
     InstanceTypeIds?: Array<string>;
+
+    /**
+     * @type {boolean}
+     * @memberof ListSupportedImagesRequest
+     */
+    Intersection?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof ListSupportedImagesRequest
+     */
+    KubernetesVersion?: string;
 }

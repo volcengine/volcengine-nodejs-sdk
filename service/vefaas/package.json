@@ -1,15 +1,11 @@
 {
   "name": "@volcengine/vefaas",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "swagger client for @volcengine/vefaas",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
   "types": "./dist/esm/index.d.ts",
-  "files": [
-    "dist",
-    "!dist/tsconfig.tsbuildinfo"
-  ],
   "exports": {
     ".": {
       "types": "./dist/esm/index.d.ts",
@@ -21,6 +17,10 @@
   "engines": {
     "node": ">=18"
   },
+  "files": [
+    "dist",
+    "!dist/tsconfig.tsbuildinfo"
+  ],
   "scripts": {
     "build": "rslib build",
     "dev": "rslib build --watch",
