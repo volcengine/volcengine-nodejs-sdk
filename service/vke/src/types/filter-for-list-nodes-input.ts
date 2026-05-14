@@ -25,6 +25,12 @@ export interface FilterForListNodesInput {
      * @type {Array<string>}
      * @memberof FilterForListNodesInput
      */
+    AffinityGroupIds?: Array<string>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof FilterForListNodesInput
+     */
     ClusterIds?: Array<string>;
 
     /**
@@ -44,6 +50,12 @@ export interface FilterForListNodesInput {
      * @memberof FilterForListNodesInput
      */
     InstanceIds?: Array<string>;
+
+    /**
+     * @type {string}
+     * @memberof FilterForListNodesInput
+     */
+    MetadataName?: string;
 
     /**
      * @type {string}

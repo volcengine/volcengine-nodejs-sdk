@@ -51,10 +51,10 @@ export interface ListHostRequest {
     HostId?: string;
 
     /**
-     * @type {string}
+     * @type {Array<string>}
      * @memberof ListHostRequest
      */
-    HostIdList?: string;
+    HostIdList?: Array<string>;
 
     /**
      * @type {number}
@@ -75,10 +75,10 @@ export interface ListHostRequest {
     PodId?: string;
 
     /**
-     * @type {string}
+     * @type {Array<string>}
      * @memberof ListHostRequest
      */
-    PodIdList?: string;
+    PodIdList?: Array<string>;
 
     /**
      * @type {string}
@@ -99,10 +99,10 @@ export interface ListHostRequest {
     ResourceSetId?: string;
 
     /**
-     * @type {string}
+     * @type {Array<number>}
      * @memberof ListHostRequest
      */
-    StatusList?: string;
+    StatusList?: Array<number>;
 
     /**
      * @type {boolean}

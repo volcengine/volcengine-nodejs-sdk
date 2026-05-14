@@ -46,7 +46,8 @@ export enum StatusForListNodesInputConditionsTypeEnum {
     Security = 'Security',
     Balance = 'Balance',
     Unknown = 'Unknown',
-    Progressing = 'Progressing'
+    Progressing = 'Progressing',
+    ClusterVersionUpgrading = 'ClusterVersionUpgrading'
 }
 /**
  * @export
@@ -57,9 +58,6 @@ export enum StatusForListNodesInputPhaseEnum {
     Running = 'Running',
     Deleting = 'Deleting',
     Updating = 'Updating',
-    Failed = 'Failed',
-    Starting = 'Starting',
-    Stopping = 'Stopping',
-    Stopped = 'Stopped'
+    Failed = 'Failed'
 }
 

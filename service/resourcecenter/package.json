@@ -1,6 +1,6 @@
 {
   "name": "@volcengine/resourcecenter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "swagger client for @volcengine/resourcecenter",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
@@ -21,6 +21,10 @@
   "engines": {
     "node": ">=18"
   },
+  "files": [
+    "dist",
+    "!dist/tsconfig.tsbuildinfo"
+  ],
   "scripts": {
     "build": "rslib build",
     "dev": "rslib build --watch",

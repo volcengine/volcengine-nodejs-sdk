@@ -25,4 +25,10 @@ export interface VpcCniConfigForUpdateClusterConfigInput {
      * @memberof VpcCniConfigForUpdateClusterConfigInput
      */
     SubnetIds?: Array<string>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof VpcCniConfigForUpdateClusterConfigInput
+     */
+    VciSubnetIds?: Array<string>;
 }
