@@ -60,7 +60,7 @@ export interface ConfigurationRecorderForDescribeConfigurationRecordersOutput {
      * @type {string}
      * @memberof ConfigurationRecorderForDescribeConfigurationRecordersOutput
      */
-    RecorderType?: string;
+    RecorderType?: ConfigurationRecorderForDescribeConfigurationRecordersOutputRecorderTypeEnum;
 }
 
 /**
@@ -74,5 +74,13 @@ export enum ConfigurationRecorderForDescribeConfigurationRecordersOutputConfigur
     Rebuilding = 'Rebuilding',
     Enabled = 'Enabled',
     PendingDisable = 'PendingDisable'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ConfigurationRecorderForDescribeConfigurationRecordersOutputRecorderTypeEnum {
+    SingleAccount = 'SingleAccount',
+    Organization = 'Organization'
 }
 
