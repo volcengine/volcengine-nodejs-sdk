@@ -12,18 +12,23 @@
  * Do not edit the class manually.
  */
 
-import { InstanceSpecsInfoForDescribeDBInstanceSpecsOutput } from './instance-specs-info-for-describe-dbinstance-specs-output';
  /**
  * 
  *
  * @export
- * @interface DescribeDBInstanceSpecsResponse
+ * @interface DeleteDBAccountRequest
  */
-export interface DescribeDBInstanceSpecsResponse {
+export interface DeleteDBAccountRequest {
 
     /**
-     * @type {Array<InstanceSpecsInfoForDescribeDBInstanceSpecsOutput>}
-     * @memberof DescribeDBInstanceSpecsResponse
+     * @type {string}
+     * @memberof DeleteDBAccountRequest
      */
-    InstanceSpecsInfo?: Array<InstanceSpecsInfoForDescribeDBInstanceSpecsOutput>;
+    AccountName: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteDBAccountRequest
+     */
+    InstanceId: string;
 }
