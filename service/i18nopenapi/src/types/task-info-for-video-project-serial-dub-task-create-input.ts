@@ -39,6 +39,12 @@ export interface TaskInfoForVideoProjectSerialDubTaskCreateInput {
      * @type {number}
      * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
      */
+    auditFailPolicy?: number;
+
+    /**
+     * @type {number}
+     * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
+     */
     bgmPolicy?: number;
 
     /**
