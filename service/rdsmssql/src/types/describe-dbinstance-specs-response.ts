@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { InstanceSpecInfoForDescribeDBInstanceSpecsOutput } from './instance-spec-info-for-describe-dbinstance-specs-output';
+import { InstanceSpecsInfoForDescribeDBInstanceSpecsOutput } from './instance-specs-info-for-describe-dbinstance-specs-output';
  /**
  * 
  *
@@ -22,8 +22,8 @@ import { InstanceSpecInfoForDescribeDBInstanceSpecsOutput } from './instance-spe
 export interface DescribeDBInstanceSpecsResponse {
 
     /**
-     * @type {Array<InstanceSpecInfoForDescribeDBInstanceSpecsOutput>}
+     * @type {Array<InstanceSpecsInfoForDescribeDBInstanceSpecsOutput>}
      * @memberof DescribeDBInstanceSpecsResponse
      */
-    InstanceSpecInfo?: Array<InstanceSpecInfoForDescribeDBInstanceSpecsOutput>;
+    InstanceSpecsInfo?: Array<InstanceSpecsInfoForDescribeDBInstanceSpecsOutput>;
 }

@@ -96,6 +96,8 @@ import { GetSAMLProviderRequest } from './types/index';
 import { GetSAMLProviderResponse } from './types/index';
 import { GetSecurityConfigRequest } from './types/index';
 import { GetSecurityConfigResponse } from './types/index';
+import { GetServiceLinkedRoleTemplateRequest } from './types/index';
+import { GetServiceLinkedRoleTemplateResponse } from './types/index';
 import { GetUserRequest } from './types/index';
 import { GetUserResponse } from './types/index';
 import { ListAccessKeysRequest } from './types/index';
@@ -209,6 +211,7 @@ export type GetPolicyCommandOutput = CommandOutput<GetPolicyResponse>;
 export type GetRoleCommandOutput = CommandOutput<GetRoleResponse>;
 export type GetSAMLProviderCommandOutput = CommandOutput<GetSAMLProviderResponse>;
 export type GetSecurityConfigCommandOutput = CommandOutput<GetSecurityConfigResponse>;
+export type GetServiceLinkedRoleTemplateCommandOutput = CommandOutput<GetServiceLinkedRoleTemplateResponse>;
 export type GetUserCommandOutput = CommandOutput<GetUserResponse>;
 export type ListAccessKeysCommandOutput = CommandOutput<ListAccessKeysResponse>;
 export type ListAttachedRolePoliciesCommandOutput = CommandOutput<ListAttachedRolePoliciesResponse>;
@@ -873,6 +876,21 @@ export class GetSecurityConfigCommand extends Command<
   }
 }
 /**
+ * Command to GetServiceLinkedRoleTemplate
+ */
+export class GetServiceLinkedRoleTemplateCommand extends Command<
+  GetServiceLinkedRoleTemplateRequest,
+  GetServiceLinkedRoleTemplateCommandOutput,
+  'GetServiceLinkedRoleTemplateCommand'
+> {
+  static readonly metaPath = '/GetServiceLinkedRoleTemplate/2018-01-01/iam/get/text_plain/';
+
+  constructor(input: GetServiceLinkedRoleTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetServiceLinkedRoleTemplateCommand.metaPath);
+  }
+}
+/**
  * Command to GetUser
  */
 export class GetUserCommand extends Command<
@@ -1426,6 +1444,7 @@ export default {
   GetRoleCommand,
   GetSAMLProviderCommand,
   GetSecurityConfigCommand,
+  GetServiceLinkedRoleTemplateCommand,
   GetUserCommand,
   ListAccessKeysCommand,
   ListAttachedRolePoliciesCommand,
