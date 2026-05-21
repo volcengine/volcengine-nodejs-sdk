@@ -106,4 +106,22 @@ export interface CreateClawOmniInstanceRequest {
      * @memberof CreateClawOmniInstanceRequest
      */
     Timeout: number;
+
+    /**
+     * @type {number}
+     * @memberof CreateClawOmniInstanceRequest
+     */
+    TokenLimitPerDay?: number;
+
+    /**
+     * @type {number}
+     * @memberof CreateClawOmniInstanceRequest
+     */
+    TokenLimitPerMin?: number;
+
+    /**
+     * @type {number}
+     * @memberof CreateClawOmniInstanceRequest
+     */
+    TokenLimitPerWeek?: number;
 }
