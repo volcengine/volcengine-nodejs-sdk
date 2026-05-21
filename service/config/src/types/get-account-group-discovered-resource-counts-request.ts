@@ -27,10 +27,16 @@ export interface GetAccountGroupDiscoveredResourceCountsRequest {
     AccountGroupId: string;
 
     /**
+     * @type {number}
+     * @memberof GetAccountGroupDiscoveredResourceCountsRequest
+     */
+    ResourceAccountId?: number;
+
+    /**
      * @type {string}
      * @memberof GetAccountGroupDiscoveredResourceCountsRequest
      */
-    ResourceStatus?: string;
+    ResourceStatus?: GetAccountGroupDiscoveredResourceCountsRequestResourceStatusEnum;
 
     /**
      * @type {Array<string>}
@@ -38,3 +44,13 @@ export interface GetAccountGroupDiscoveredResourceCountsRequest {
      */
     ResourceTypes?: Array<string>;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum GetAccountGroupDiscoveredResourceCountsRequestResourceStatusEnum {
+    Deleted = 'Deleted',
+    Held = 'Held'
+}
+

@@ -36,5 +36,15 @@ export interface PutConfigurationRecorderRequest {
      * @type {string}
      * @memberof PutConfigurationRecorderRequest
      */
-    RecorderType: string;
+    RecorderType: PutConfigurationRecorderRequestRecorderTypeEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum PutConfigurationRecorderRequestRecorderTypeEnum {
+    SingleAccount = 'SingleAccount',
+    Organization = 'Organization'
+}
+

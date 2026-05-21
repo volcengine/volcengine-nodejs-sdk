@@ -24,7 +24,7 @@ export interface GetOrganizationDiscoveredResourceCountsRequest {
      * @type {string}
      * @memberof GetOrganizationDiscoveredResourceCountsRequest
      */
-    ResourceStatus?: string;
+    ResourceStatus?: GetOrganizationDiscoveredResourceCountsRequestResourceStatusEnum;
 
     /**
      * @type {Array<string>}
@@ -32,3 +32,13 @@ export interface GetOrganizationDiscoveredResourceCountsRequest {
      */
     ResourceTypes?: Array<string>;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum GetOrganizationDiscoveredResourceCountsRequestResourceStatusEnum {
+    Deleted = 'Deleted',
+    Held = 'Held'
+}
+

@@ -48,7 +48,7 @@ export interface AccountGroupForDescribeAccountGroupsOutput {
      * @type {string}
      * @memberof AccountGroupForDescribeAccountGroupsOutput
      */
-    GroupType?: string;
+    GroupType?: AccountGroupForDescribeAccountGroupsOutputGroupTypeEnum;
 
     /**
      * @type {Array<string>}
@@ -60,7 +60,7 @@ export interface AccountGroupForDescribeAccountGroupsOutput {
      * @type {string}
      * @memberof AccountGroupForDescribeAccountGroupsOutput
      */
-    Status?: string;
+    Status?: AccountGroupForDescribeAccountGroupsOutputStatusEnum;
 
     /**
      * @type {string}
@@ -68,3 +68,22 @@ export interface AccountGroupForDescribeAccountGroupsOutput {
      */
     UpdatedTime?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum AccountGroupForDescribeAccountGroupsOutputGroupTypeEnum {
+    Org = 'Org',
+    OrgUnit = 'OrgUnit',
+    OrgMember = 'OrgMember'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum AccountGroupForDescribeAccountGroupsOutputStatusEnum {
+    Creating = 'Creating',
+    Enabled = 'Enabled'
+}
+

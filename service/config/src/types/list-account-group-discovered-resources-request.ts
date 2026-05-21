@@ -45,6 +45,12 @@ export interface ListAccountGroupDiscoveredResourcesRequest {
     Regions?: Array<string>;
 
     /**
+     * @type {number}
+     * @memberof ListAccountGroupDiscoveredResourcesRequest
+     */
+    ResourceAccountId?: number;
+
+    /**
      * @type {Array<string>}
      * @memberof ListAccountGroupDiscoveredResourcesRequest
      */
@@ -55,6 +61,12 @@ export interface ListAccountGroupDiscoveredResourcesRequest {
      * @memberof ListAccountGroupDiscoveredResourcesRequest
      */
     ResourceIds?: Array<string>;
+
+    /**
+     * @type {string}
+     * @memberof ListAccountGroupDiscoveredResourcesRequest
+     */
+    ResourceName?: string;
 
     /**
      * @type {string}
