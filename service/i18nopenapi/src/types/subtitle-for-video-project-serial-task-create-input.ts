@@ -24,6 +24,12 @@ export interface SubtitleForVideoProjectSerialTaskCreateInput {
      * @type {number}
      * @memberof SubtitleForVideoProjectSerialTaskCreateInput
      */
+    arrangement?: number;
+
+    /**
+     * @type {number}
+     * @memberof SubtitleForVideoProjectSerialTaskCreateInput
+     */
     fileType?: number;
 
     /**
@@ -31,6 +37,12 @@ export interface SubtitleForVideoProjectSerialTaskCreateInput {
      * @memberof SubtitleForVideoProjectSerialTaskCreateInput
      */
     name?: string;
+
+    /**
+     * @type {number}
+     * @memberof SubtitleForVideoProjectSerialTaskCreateInput
+     */
+    subtitleLang?: number;
 
     /**
      * @type {string}
