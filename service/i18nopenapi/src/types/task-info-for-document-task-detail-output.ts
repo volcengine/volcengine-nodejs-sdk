@@ -39,6 +39,12 @@ export interface TaskInfoForDocumentTaskDetailOutput {
      * @type {number}
      * @memberof TaskInfoForDocumentTaskDetailOutput
      */
+    auditFailPolicy?: number;
+
+    /**
+     * @type {number}
+     * @memberof TaskInfoForDocumentTaskDetailOutput
+     */
     bgmPolicy?: number;
 
     /**

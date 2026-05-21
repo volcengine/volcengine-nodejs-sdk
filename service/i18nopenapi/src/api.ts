@@ -208,6 +208,8 @@ import { VideoEditorUpdateSpeakerRequest } from './types/index';
 import { VideoEditorUpdateSpeakerResponse } from './types/index';
 import { VideoProjectCreateRequest } from './types/index';
 import { VideoProjectCreateResponse } from './types/index';
+import { VideoProjectGetVideoUploadStatusRequest } from './types/index';
+import { VideoProjectGetVideoUploadStatusResponse } from './types/index';
 import { VideoProjectListRequest } from './types/index';
 import { VideoProjectListResponse } from './types/index';
 import { VideoProjectSerialDubTaskCreateRequest } from './types/index';
@@ -222,6 +224,8 @@ import { VideoProjectTaskDetailRequest } from './types/index';
 import { VideoProjectTaskDetailResponse } from './types/index';
 import { VideoProjectTaskListRequest } from './types/index';
 import { VideoProjectTaskListResponse } from './types/index';
+import { VideoProjectVideoUploadRequest } from './types/index';
+import { VideoProjectVideoUploadResponse } from './types/index';
 import { VideoResourceUploadRequest } from './types/index';
 import { VideoResourceUploadResponse } from './types/index';
 import { VideoTermBasesRequest } from './types/index';
@@ -329,6 +333,7 @@ export type VideoEditorSyncSpeakerToSubTaskCommandOutput = CommandOutput<VideoEd
 export type VideoEditorUpdateGlobalStyleCommandOutput = CommandOutput<VideoEditorUpdateGlobalStyleResponse>;
 export type VideoEditorUpdateSpeakerCommandOutput = CommandOutput<VideoEditorUpdateSpeakerResponse>;
 export type VideoProjectCreateCommandOutput = CommandOutput<VideoProjectCreateResponse>;
+export type VideoProjectGetVideoUploadStatusCommandOutput = CommandOutput<VideoProjectGetVideoUploadStatusResponse>;
 export type VideoProjectListCommandOutput = CommandOutput<VideoProjectListResponse>;
 export type VideoProjectSerialDubTaskCreateCommandOutput = CommandOutput<VideoProjectSerialDubTaskCreateResponse>;
 export type VideoProjectSerialTaskCreateCommandOutput = CommandOutput<VideoProjectSerialTaskCreateResponse>;
@@ -336,6 +341,7 @@ export type VideoProjectSuppressionStartCommandOutput = CommandOutput<VideoProje
 export type VideoProjectTaskBatchStartAIFlowCommandOutput = CommandOutput<VideoProjectTaskBatchStartAIFlowResponse>;
 export type VideoProjectTaskDetailCommandOutput = CommandOutput<VideoProjectTaskDetailResponse>;
 export type VideoProjectTaskListCommandOutput = CommandOutput<VideoProjectTaskListResponse>;
+export type VideoProjectVideoUploadCommandOutput = CommandOutput<VideoProjectVideoUploadResponse>;
 export type VideoResourceUploadCommandOutput = CommandOutput<VideoResourceUploadResponse>;
 export type VideoTermBasesCommandOutput = CommandOutput<VideoTermBasesResponse>;
 export type WebhooksCreateCommandOutput = CommandOutput<WebhooksCreateResponse>;
@@ -1809,6 +1815,21 @@ export class VideoProjectCreateCommand extends Command<
   }
 }
 /**
+ * Command to VideoProjectGetVideoUploadStatus
+ */
+export class VideoProjectGetVideoUploadStatusCommand extends Command<
+  VideoProjectGetVideoUploadStatusRequest,
+  VideoProjectGetVideoUploadStatusCommandOutput,
+  'VideoProjectGetVideoUploadStatusCommand'
+> {
+  static readonly metaPath = '/VideoProjectGetVideoUploadStatus/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoProjectGetVideoUploadStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectGetVideoUploadStatusCommand.metaPath);
+  }
+}
+/**
  * Command to VideoProjectList
  */
 export class VideoProjectListCommand extends Command<
@@ -1911,6 +1932,21 @@ export class VideoProjectTaskListCommand extends Command<
   constructor(input: VideoProjectTaskListRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectTaskListCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoProjectVideoUpload
+ */
+export class VideoProjectVideoUploadCommand extends Command<
+  VideoProjectVideoUploadRequest,
+  VideoProjectVideoUploadCommandOutput,
+  'VideoProjectVideoUploadCommand'
+> {
+  static readonly metaPath = '/VideoProjectVideoUpload/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoProjectVideoUploadRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectVideoUploadCommand.metaPath);
   }
 }
 /**
@@ -2058,6 +2094,7 @@ export default {
   VideoEditorUpdateGlobalStyleCommand,
   VideoEditorUpdateSpeakerCommand,
   VideoProjectCreateCommand,
+  VideoProjectGetVideoUploadStatusCommand,
   VideoProjectListCommand,
   VideoProjectSerialDubTaskCreateCommand,
   VideoProjectSerialTaskCreateCommand,
@@ -2065,6 +2102,7 @@ export default {
   VideoProjectTaskBatchStartAIFlowCommand,
   VideoProjectTaskDetailCommand,
   VideoProjectTaskListCommand,
+  VideoProjectVideoUploadCommand,
   VideoResourceUploadCommand,
   VideoTermBasesCommand,
   WebhooksCreateCommand,
