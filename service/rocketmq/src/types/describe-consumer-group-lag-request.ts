@@ -12,18 +12,29 @@
  * Do not edit the class manually.
  */
 
-import { ResendResultForResendDLQMessageByIdOutput } from './resend-result-for-resend-dlqmessage-by-id-output';
  /**
  * 
  *
  * @export
- * @interface ResendDLQMessageByIdResponse
+ * @interface DescribeConsumerGroupLagRequest
  */
-export interface ResendDLQMessageByIdResponse {
+export interface DescribeConsumerGroupLagRequest {
 
     /**
-     * @type {Array<ResendResultForResendDLQMessageByIdOutput>}
-     * @memberof ResendDLQMessageByIdResponse
+     * @type {string}
+     * @memberof DescribeConsumerGroupLagRequest
      */
-    ResendResults?: Array<ResendResultForResendDLQMessageByIdOutput>;
+    GroupId: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeConsumerGroupLagRequest
+     */
+    InstanceId: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeConsumerGroupLagRequest
+     */
+    LiteTopic?: string;
 }
