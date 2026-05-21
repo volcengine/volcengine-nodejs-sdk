@@ -37,6 +37,12 @@ export interface TransitRouterAttachmentForDescribeTransitRouterAttachmentsOutpu
      * @type {string}
      * @memberof TransitRouterAttachmentForDescribeTransitRouterAttachmentsOutput
      */
+    BillingAccountId?: string;
+
+    /**
+     * @type {string}
+     * @memberof TransitRouterAttachmentForDescribeTransitRouterAttachmentsOutput
+     */
     BusinessStatus?: string;
 
     /**
