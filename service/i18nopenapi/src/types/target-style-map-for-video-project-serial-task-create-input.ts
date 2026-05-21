@@ -25,4 +25,472 @@ export interface TargetStyleMapForVideoProjectSerialTaskCreateInput {
      * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
      */
     af?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    af_ZA?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ar?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ar_AR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ar_DZ?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ar_SY?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ar_YE?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    be?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    bn?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    bn_BD?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    da?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    de?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    de_DE?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    en?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    en_DA?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    en_GB?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    en_IN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    en_PH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    en_SG?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    en_US?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    es?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    es_419?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    es_ES?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    es_US?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    fa_IR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    fil?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    fil_PH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    fr?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    fr_FR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    hi?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    hi_IN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    id?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    id_ID?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    it?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    it_IT?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ja?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ja_JP?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ka?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    kk_KZ?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    kl?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    km?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    km_KH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ko?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ko_KR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    mn?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ms?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ms_MY?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    my?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ne?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    pl?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    pl_PL?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    pt?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    pt_BR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    pt_PT?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ro?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ru?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ru_RU?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    sk?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    sl?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    sr?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    sv?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ta?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    te?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    th?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    th_TH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    tl_PH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    tr?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    tr_TR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    ur?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    uz?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    vi?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    vi_VN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    zh?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    zh_CN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    zh_HK?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    zh_Hans?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    zh_Hans_CN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    zh_Hant?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialTaskCreateInput
+     */
+    zh_TW?: string;
 }

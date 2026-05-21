@@ -39,6 +39,12 @@ export interface TaskInfoForVideoProjectSerialTaskCreateInput {
      * @type {number}
      * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
      */
+    auditFailPolicy?: number;
+
+    /**
+     * @type {number}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
     bgmPolicy?: number;
 
     /**
@@ -82,6 +88,12 @@ export interface TaskInfoForVideoProjectSerialTaskCreateInput {
      * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
      */
     dubOrTranslationTaskID?: string;
+
+    /**
+     * @type {number}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
+    dubVoiceMode?: number;
 
     /**
      * @type {boolean}
