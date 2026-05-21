@@ -12,18 +12,23 @@
  * Do not edit the class manually.
  */
 
-import { InstanceSpecsInfoForDescribeDBInstanceSpecsOutput } from './instance-specs-info-for-describe-dbinstance-specs-output';
  /**
  * 
  *
  * @export
- * @interface DescribeDBInstanceSpecsResponse
+ * @interface DisassociateAllowListRequest
  */
-export interface DescribeDBInstanceSpecsResponse {
+export interface DisassociateAllowListRequest {
 
     /**
-     * @type {Array<InstanceSpecsInfoForDescribeDBInstanceSpecsOutput>}
-     * @memberof DescribeDBInstanceSpecsResponse
+     * @type {Array<string>}
+     * @memberof DisassociateAllowListRequest
      */
-    InstanceSpecsInfo?: Array<InstanceSpecsInfoForDescribeDBInstanceSpecsOutput>;
+    AllowListIds?: Array<string>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof DisassociateAllowListRequest
+     */
+    InstanceIds?: Array<string>;
 }

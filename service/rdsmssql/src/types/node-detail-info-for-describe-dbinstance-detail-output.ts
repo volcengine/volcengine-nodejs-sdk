@@ -16,85 +16,85 @@
  * 
  *
  * @export
- * @interface NodeDetailInfoForDescribeDBInstancesOutput
+ * @interface NodeDetailInfoForDescribeDBInstanceDetailOutput
  */
-export interface NodeDetailInfoForDescribeDBInstancesOutput {
+export interface NodeDetailInfoForDescribeDBInstanceDetailOutput {
 
     /**
      * @type {string}
-     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     * @memberof NodeDetailInfoForDescribeDBInstanceDetailOutput
      */
     CreateTime?: string;
 
     /**
      * @type {string}
-     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     * @memberof NodeDetailInfoForDescribeDBInstanceDetailOutput
      */
     HostName?: string;
 
     /**
      * @type {string}
-     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     * @memberof NodeDetailInfoForDescribeDBInstanceDetailOutput
      */
     InstanceId?: string;
 
     /**
      * @type {number}
-     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     * @memberof NodeDetailInfoForDescribeDBInstanceDetailOutput
      */
     Memory?: number;
 
     /**
      * @type {string}
-     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     * @memberof NodeDetailInfoForDescribeDBInstanceDetailOutput
      */
     NodeIP?: string;
 
     /**
      * @type {string}
-     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     * @memberof NodeDetailInfoForDescribeDBInstanceDetailOutput
      */
     NodeId?: string;
 
     /**
      * @type {string}
-     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     * @memberof NodeDetailInfoForDescribeDBInstanceDetailOutput
      */
     NodeSpec?: string;
 
     /**
      * @type {string}
-     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     * @memberof NodeDetailInfoForDescribeDBInstanceDetailOutput
      */
     NodeStatus?: string;
 
     /**
      * @type {string}
-     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     * @memberof NodeDetailInfoForDescribeDBInstanceDetailOutput
      */
     NodeType?: string;
 
     /**
      * @type {string}
-     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     * @memberof NodeDetailInfoForDescribeDBInstanceDetailOutput
      */
     RegionId?: string;
 
     /**
      * @type {string}
-     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     * @memberof NodeDetailInfoForDescribeDBInstanceDetailOutput
      */
     UpdateTime?: string;
 
     /**
      * @type {number}
-     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     * @memberof NodeDetailInfoForDescribeDBInstanceDetailOutput
      */
     VCPU?: number;
 
     /**
      * @type {string}
-     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     * @memberof NodeDetailInfoForDescribeDBInstanceDetailOutput
      */
     ZoneId?: string;
 }

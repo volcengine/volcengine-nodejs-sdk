@@ -16,67 +16,67 @@
  * 
  *
  * @export
- * @interface InstanceSpecInfoForDescribeDBInstanceSpecsOutput
+ * @interface InstanceSpecsInfoForDescribeDBInstanceSpecsOutput
  */
-export interface InstanceSpecInfoForDescribeDBInstanceSpecsOutput {
+export interface InstanceSpecsInfoForDescribeDBInstanceSpecsOutput {
 
     /**
      * @type {string}
-     * @memberof InstanceSpecInfoForDescribeDBInstanceSpecsOutput
+     * @memberof InstanceSpecsInfoForDescribeDBInstanceSpecsOutput
      */
     DBEngineVersion?: string;
 
     /**
      * @type {string}
-     * @memberof InstanceSpecInfoForDescribeDBInstanceSpecsOutput
+     * @memberof InstanceSpecsInfoForDescribeDBInstanceSpecsOutput
      */
     Generation?: string;
 
     /**
      * @type {string}
-     * @memberof InstanceSpecInfoForDescribeDBInstanceSpecsOutput
+     * @memberof InstanceSpecsInfoForDescribeDBInstanceSpecsOutput
      */
     InstanceType?: string;
 
     /**
      * @type {number}
-     * @memberof InstanceSpecInfoForDescribeDBInstanceSpecsOutput
+     * @memberof InstanceSpecsInfoForDescribeDBInstanceSpecsOutput
      */
     Memory?: number;
 
     /**
      * @type {string}
-     * @memberof InstanceSpecInfoForDescribeDBInstanceSpecsOutput
+     * @memberof InstanceSpecsInfoForDescribeDBInstanceSpecsOutput
      */
     SpecCode?: string;
 
     /**
      * @type {string}
-     * @memberof InstanceSpecInfoForDescribeDBInstanceSpecsOutput
+     * @memberof InstanceSpecsInfoForDescribeDBInstanceSpecsOutput
      */
     SpecFamily?: string;
 
     /**
      * @type {string}
-     * @memberof InstanceSpecInfoForDescribeDBInstanceSpecsOutput
+     * @memberof InstanceSpecsInfoForDescribeDBInstanceSpecsOutput
      */
     SpecSaleType?: string;
 
     /**
      * @type {string}
-     * @memberof InstanceSpecInfoForDescribeDBInstanceSpecsOutput
+     * @memberof InstanceSpecsInfoForDescribeDBInstanceSpecsOutput
      */
     SpecStatus?: string;
 
     /**
      * @type {number}
-     * @memberof InstanceSpecInfoForDescribeDBInstanceSpecsOutput
+     * @memberof InstanceSpecsInfoForDescribeDBInstanceSpecsOutput
      */
     VCPU?: number;
 
     /**
      * @type {string}
-     * @memberof InstanceSpecInfoForDescribeDBInstanceSpecsOutput
+     * @memberof InstanceSpecsInfoForDescribeDBInstanceSpecsOutput
      */
     ZoneId?: string;
 }

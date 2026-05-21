@@ -12,18 +12,29 @@
  * Do not edit the class manually.
  */
 
-import { InstanceSpecsInfoForDescribeDBInstanceSpecsOutput } from './instance-specs-info-for-describe-dbinstance-specs-output';
  /**
  * 
  *
  * @export
- * @interface DescribeDBInstanceSpecsResponse
+ * @interface RevokeDBAccountPrivilegeRequest
  */
-export interface DescribeDBInstanceSpecsResponse {
+export interface RevokeDBAccountPrivilegeRequest {
 
     /**
-     * @type {Array<InstanceSpecsInfoForDescribeDBInstanceSpecsOutput>}
-     * @memberof DescribeDBInstanceSpecsResponse
+     * @type {string}
+     * @memberof RevokeDBAccountPrivilegeRequest
      */
-    InstanceSpecsInfo?: Array<InstanceSpecsInfoForDescribeDBInstanceSpecsOutput>;
+    AccountName: string;
+
+    /**
+     * @type {string}
+     * @memberof RevokeDBAccountPrivilegeRequest
+     */
+    DBNames: string;
+
+    /**
+     * @type {string}
+     * @memberof RevokeDBAccountPrivilegeRequest
+     */
+    InstanceId: string;
 }
