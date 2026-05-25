@@ -12,18 +12,17 @@
  * Do not edit the class manually.
  */
 
-import { DataForVideoProjectGetVideoUploadStatusOutput } from './data-for-video-project-get-video-upload-status-output';
  /**
  * 
  *
  * @export
- * @interface VideoProjectGetVideoUploadStatusResponse
+ * @interface DataForVideoProjectVideoUploadOutput
  */
-export interface VideoProjectGetVideoUploadStatusResponse {
+export interface DataForVideoProjectVideoUploadOutput {
 
     /**
-     * @type {DataForVideoProjectGetVideoUploadStatusOutput}
-     * @memberof VideoProjectGetVideoUploadStatusResponse
+     * @type {string}
+     * @memberof DataForVideoProjectVideoUploadOutput
      */
-    data?: DataForVideoProjectGetVideoUploadStatusOutput;
+    batchId?: string;
 }
