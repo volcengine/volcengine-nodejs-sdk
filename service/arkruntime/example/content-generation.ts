@@ -17,6 +17,7 @@ async function createTask() {
     content: [
       { type: "text", text: "一只猫在草地上奔跑" },
     ],
+    priority: 0,
   });
 
   console.log("Task ID:", task.id);
@@ -37,6 +38,9 @@ async function pollTask(taskId: string) {
     if (status === "succeeded") {
       console.log("  Video URL:", result.content.video_url);
       console.log("  Usage:", JSON.stringify(result.usage));
+      if (result.priority != null) {
+        console.log("  Priority:", result.priority);
+      }
       return;
     }
 
@@ -58,6 +62,9 @@ async function listTasks() {
   console.log(`Total: ${response.total}`);
   for (const item of response.items) {
     console.log(`  [${item.id}] status=${item.status}, model=${item.model}`);
+    if (item.priority != null) {
+      console.log(`  Priority: ${item.priority}`);
+    }
   }
 }
 
