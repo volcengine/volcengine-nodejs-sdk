@@ -21,20 +21,20 @@
 export interface VideoEditorDeleteSpeakerRequest {
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoEditorDeleteSpeakerRequest
      */
-    id: number;
+    id: string;
+
+    /**
+     * @type {string}
+     * @memberof VideoEditorDeleteSpeakerRequest
+     */
+    subtaskId: string;
 
     /**
      * @type {number}
      * @memberof VideoEditorDeleteSpeakerRequest
      */
-    subtaskId: number;
-
-    /**
-     * @type {number}
-     * @memberof VideoEditorDeleteSpeakerRequest
-     */
-    type?: number;
+    type: number;
 }

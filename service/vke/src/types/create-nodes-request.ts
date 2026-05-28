@@ -49,6 +49,12 @@ export interface CreateNodesRequest {
      * @type {string}
      * @memberof CreateNodesRequest
      */
+    GpuDriverVersion?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateNodesRequest
+     */
     ImageId?: string;
 
     /**

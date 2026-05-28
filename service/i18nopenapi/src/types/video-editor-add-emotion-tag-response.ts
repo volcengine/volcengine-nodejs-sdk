@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DataForVideoEditorAddEmotionTagOutput } from './data-for-video-editor-add-emotion-tag-output';
  /**
  * 
  *
@@ -21,8 +22,8 @@
 export interface VideoEditorAddEmotionTagResponse {
 
     /**
-     * @type {number}
+     * @type {DataForVideoEditorAddEmotionTagOutput}
      * @memberof VideoEditorAddEmotionTagResponse
      */
-    id?: number;
+    data?: DataForVideoEditorAddEmotionTagOutput;
 }

@@ -12,8 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { SubTaskSpeakerForVideoEditorGetSpeakersOutput } from './sub-task-speaker-for-video-editor-get-speakers-output';
-import { TaskSpeakerForVideoEditorGetSpeakersOutput } from './task-speaker-for-video-editor-get-speakers-output';
+import { DataForVideoEditorGetSpeakersOutput } from './data-for-video-editor-get-speakers-output';
  /**
  * 
  *
@@ -23,14 +22,8 @@ import { TaskSpeakerForVideoEditorGetSpeakersOutput } from './task-speaker-for-v
 export interface VideoEditorGetSpeakersResponse {
 
     /**
-     * @type {Array<SubTaskSpeakerForVideoEditorGetSpeakersOutput>}
+     * @type {DataForVideoEditorGetSpeakersOutput}
      * @memberof VideoEditorGetSpeakersResponse
      */
-    subTaskSpeakers?: Array<SubTaskSpeakerForVideoEditorGetSpeakersOutput>;
-
-    /**
-     * @type {Array<TaskSpeakerForVideoEditorGetSpeakersOutput>}
-     * @memberof VideoEditorGetSpeakersResponse
-     */
-    taskSpeakers?: Array<TaskSpeakerForVideoEditorGetSpeakersOutput>;
+    data?: DataForVideoEditorGetSpeakersOutput;
 }

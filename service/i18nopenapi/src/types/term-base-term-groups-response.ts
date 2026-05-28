@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { DataForTermBaseTermGroupsOutput } from './data-for-term-base-term-groups-output';
+import { PaginationForTermBaseTermGroupsOutput } from './pagination-for-term-base-term-groups-output';
  /**
  * 
  *
@@ -19,4 +21,22 @@
  * @interface TermBaseTermGroupsResponse
  */
 export interface TermBaseTermGroupsResponse {
+
+    /**
+     * @type {Array<DataForTermBaseTermGroupsOutput>}
+     * @memberof TermBaseTermGroupsResponse
+     */
+    data?: Array<DataForTermBaseTermGroupsOutput>;
+
+    /**
+     * @type {PaginationForTermBaseTermGroupsOutput}
+     * @memberof TermBaseTermGroupsResponse
+     */
+    pagination?: PaginationForTermBaseTermGroupsOutput;
+
+    /**
+     * @type {number}
+     * @memberof TermBaseTermGroupsResponse
+     */
+    total?: number;
 }

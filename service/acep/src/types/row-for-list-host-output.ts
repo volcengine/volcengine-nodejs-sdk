@@ -81,6 +81,12 @@ export interface RowForListHostOutput {
     HostId?: string;
 
     /**
+     * @type {string}
+     * @memberof RowForListHostOutput
+     */
+    LastRebootTime?: string;
+
+    /**
      * @type {Array<string>}
      * @memberof RowForListHostOutput
      */
@@ -109,6 +115,12 @@ export interface RowForListHostOutput {
      * @memberof RowForListHostOutput
      */
     Region?: string;
+
+    /**
+     * @type {number}
+     * @memberof RowForListHostOutput
+     */
+    RenewType?: number;
 
     /**
      * @type {string}

@@ -14,6 +14,8 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { AddMountServiceClientsRequest } from './types/index';
+import { AddMountServiceClientsResponse } from './types/index';
 import { AttachMountServiceToSelfFileSystemRequest } from './types/index';
 import { AttachMountServiceToSelfFileSystemResponse } from './types/index';
 import { CancelDataFlowTaskRequest } from './types/index';
@@ -72,8 +74,14 @@ import { DescribeLensServicesRequest } from './types/index';
 import { DescribeLensServicesResponse } from './types/index';
 import { DescribeLensTasksRequest } from './types/index';
 import { DescribeLensTasksResponse } from './types/index';
+import { DescribeMountServiceClientsRequest } from './types/index';
+import { DescribeMountServiceClientsResponse } from './types/index';
 import { DescribeMountServiceNodeTypesRequest } from './types/index';
 import { DescribeMountServiceNodeTypesResponse } from './types/index';
+import { DescribeMountServiceTaskResultsRequest } from './types/index';
+import { DescribeMountServiceTaskResultsResponse } from './types/index';
+import { DescribeMountServiceTasksRequest } from './types/index';
+import { DescribeMountServiceTasksResponse } from './types/index';
 import { DescribeMountServicesRequest } from './types/index';
 import { DescribeMountServicesResponse } from './types/index';
 import { DescribeRegionsRequest } from './types/index';
@@ -86,6 +94,8 @@ import { ExpandFileSystemRequest } from './types/index';
 import { ExpandFileSystemResponse } from './types/index';
 import { ListTagsForResourcesRequest } from './types/index';
 import { ListTagsForResourcesResponse } from './types/index';
+import { RemoveMountServiceClientsRequest } from './types/index';
+import { RemoveMountServiceClientsResponse } from './types/index';
 import { SetFilesetQosRequest } from './types/index';
 import { SetFilesetQosResponse } from './types/index';
 import { SetFilesetQuotaRequest } from './types/index';
@@ -114,10 +124,13 @@ import { UpdateLensTaskRequest } from './types/index';
 import { UpdateLensTaskResponse } from './types/index';
 import { UpdateMountServiceRequest } from './types/index';
 import { UpdateMountServiceResponse } from './types/index';
+import { VerifyMountServiceClientsRequest } from './types/index';
+import { VerifyMountServiceClientsResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type AddMountServiceClientsCommandOutput = CommandOutput<AddMountServiceClientsResponse>;
 export type AttachMountServiceToSelfFileSystemCommandOutput = CommandOutput<AttachMountServiceToSelfFileSystemResponse>;
 export type CancelDataFlowTaskCommandOutput = CommandOutput<CancelDataFlowTaskResponse>;
 export type CancelLensTaskCommandOutput = CommandOutput<CancelLensTaskResponse>;
@@ -147,13 +160,17 @@ export type DescribeFilesetsCommandOutput = CommandOutput<DescribeFilesetsRespon
 export type DescribeLensPoliciesCommandOutput = CommandOutput<DescribeLensPoliciesResponse>;
 export type DescribeLensServicesCommandOutput = CommandOutput<DescribeLensServicesResponse>;
 export type DescribeLensTasksCommandOutput = CommandOutput<DescribeLensTasksResponse>;
+export type DescribeMountServiceClientsCommandOutput = CommandOutput<DescribeMountServiceClientsResponse>;
 export type DescribeMountServiceNodeTypesCommandOutput = CommandOutput<DescribeMountServiceNodeTypesResponse>;
+export type DescribeMountServiceTaskResultsCommandOutput = CommandOutput<DescribeMountServiceTaskResultsResponse>;
+export type DescribeMountServiceTasksCommandOutput = CommandOutput<DescribeMountServiceTasksResponse>;
 export type DescribeMountServicesCommandOutput = CommandOutput<DescribeMountServicesResponse>;
 export type DescribeRegionsCommandOutput = CommandOutput<DescribeRegionsResponse>;
 export type DescribeZonesCommandOutput = CommandOutput<DescribeZonesResponse>;
 export type DetachMountServiceFromSelfFileSystemCommandOutput = CommandOutput<DetachMountServiceFromSelfFileSystemResponse>;
 export type ExpandFileSystemCommandOutput = CommandOutput<ExpandFileSystemResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
+export type RemoveMountServiceClientsCommandOutput = CommandOutput<RemoveMountServiceClientsResponse>;
 export type SetFilesetQosCommandOutput = CommandOutput<SetFilesetQosResponse>;
 export type SetFilesetQuotaCommandOutput = CommandOutput<SetFilesetQuotaResponse>;
 export type StartAuditCommandOutput = CommandOutput<StartAuditResponse>;
@@ -168,6 +185,7 @@ export type UpdateFilesetCommandOutput = CommandOutput<UpdateFilesetResponse>;
 export type UpdateLensPolicyCommandOutput = CommandOutput<UpdateLensPolicyResponse>;
 export type UpdateLensTaskCommandOutput = CommandOutput<UpdateLensTaskResponse>;
 export type UpdateMountServiceCommandOutput = CommandOutput<UpdateMountServiceResponse>;
+export type VerifyMountServiceClientsCommandOutput = CommandOutput<VerifyMountServiceClientsResponse>;
 
 /**
  * VEPFSClient Service Client
@@ -182,6 +200,21 @@ export class VEPFSClient extends Client {
   }
 }
 
+/**
+ * Command to AddMountServiceClients
+ */
+export class AddMountServiceClientsCommand extends Command<
+  AddMountServiceClientsRequest,
+  AddMountServiceClientsCommandOutput,
+  'AddMountServiceClientsCommand'
+> {
+  static readonly metaPath = '/AddMountServiceClients/2022-01-01/vepfs/post/application_json/';
+
+  constructor(input: AddMountServiceClientsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddMountServiceClientsCommand.metaPath);
+  }
+}
 /**
  * Command to AttachMountServiceToSelfFileSystem
  */
@@ -618,6 +651,21 @@ export class DescribeLensTasksCommand extends Command<
   }
 }
 /**
+ * Command to DescribeMountServiceClients
+ */
+export class DescribeMountServiceClientsCommand extends Command<
+  DescribeMountServiceClientsRequest,
+  DescribeMountServiceClientsCommandOutput,
+  'DescribeMountServiceClientsCommand'
+> {
+  static readonly metaPath = '/DescribeMountServiceClients/2022-01-01/vepfs/post/application_json/';
+
+  constructor(input: DescribeMountServiceClientsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeMountServiceClientsCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeMountServiceNodeTypes
  */
 export class DescribeMountServiceNodeTypesCommand extends Command<
@@ -630,6 +678,36 @@ export class DescribeMountServiceNodeTypesCommand extends Command<
   constructor(input: DescribeMountServiceNodeTypesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeMountServiceNodeTypesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeMountServiceTaskResults
+ */
+export class DescribeMountServiceTaskResultsCommand extends Command<
+  DescribeMountServiceTaskResultsRequest,
+  DescribeMountServiceTaskResultsCommandOutput,
+  'DescribeMountServiceTaskResultsCommand'
+> {
+  static readonly metaPath = '/DescribeMountServiceTaskResults/2022-01-01/vepfs/post/application_json/';
+
+  constructor(input: DescribeMountServiceTaskResultsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeMountServiceTaskResultsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeMountServiceTasks
+ */
+export class DescribeMountServiceTasksCommand extends Command<
+  DescribeMountServiceTasksRequest,
+  DescribeMountServiceTasksCommandOutput,
+  'DescribeMountServiceTasksCommand'
+> {
+  static readonly metaPath = '/DescribeMountServiceTasks/2022-01-01/vepfs/post/application_json/';
+
+  constructor(input: DescribeMountServiceTasksRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeMountServiceTasksCommand.metaPath);
   }
 }
 /**
@@ -720,6 +798,21 @@ export class ListTagsForResourcesCommand extends Command<
   constructor(input: ListTagsForResourcesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListTagsForResourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to RemoveMountServiceClients
+ */
+export class RemoveMountServiceClientsCommand extends Command<
+  RemoveMountServiceClientsRequest,
+  RemoveMountServiceClientsCommandOutput,
+  'RemoveMountServiceClientsCommand'
+> {
+  static readonly metaPath = '/RemoveMountServiceClients/2022-01-01/vepfs/post/application_json/';
+
+  constructor(input: RemoveMountServiceClientsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RemoveMountServiceClientsCommand.metaPath);
   }
 }
 /**
@@ -932,9 +1025,25 @@ export class UpdateMountServiceCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateMountServiceCommand.metaPath);
   }
 }
+/**
+ * Command to VerifyMountServiceClients
+ */
+export class VerifyMountServiceClientsCommand extends Command<
+  VerifyMountServiceClientsRequest,
+  VerifyMountServiceClientsCommandOutput,
+  'VerifyMountServiceClientsCommand'
+> {
+  static readonly metaPath = '/VerifyMountServiceClients/2022-01-01/vepfs/post/application_json/';
+
+  constructor(input: VerifyMountServiceClientsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VerifyMountServiceClientsCommand.metaPath);
+  }
+}
 
 export default {
   VEPFSClient,
+  AddMountServiceClientsCommand,
   AttachMountServiceToSelfFileSystemCommand,
   CancelDataFlowTaskCommand,
   CancelLensTaskCommand,
@@ -964,13 +1073,17 @@ export default {
   DescribeLensPoliciesCommand,
   DescribeLensServicesCommand,
   DescribeLensTasksCommand,
+  DescribeMountServiceClientsCommand,
   DescribeMountServiceNodeTypesCommand,
+  DescribeMountServiceTaskResultsCommand,
+  DescribeMountServiceTasksCommand,
   DescribeMountServicesCommand,
   DescribeRegionsCommand,
   DescribeZonesCommand,
   DetachMountServiceFromSelfFileSystemCommand,
   ExpandFileSystemCommand,
   ListTagsForResourcesCommand,
+  RemoveMountServiceClientsCommand,
   SetFilesetQosCommand,
   SetFilesetQuotaCommand,
   StartAuditCommand,
@@ -985,4 +1098,5 @@ export default {
   UpdateLensPolicyCommand,
   UpdateLensTaskCommand,
   UpdateMountServiceCommand,
+  VerifyMountServiceClientsCommand,
 };

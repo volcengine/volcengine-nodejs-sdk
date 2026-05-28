@@ -27,7 +27,7 @@ export interface CreateClawOmniInstanceRequest {
      * @type {number}
      * @memberof CreateClawOmniInstanceRequest
      */
-    CpuMilli: number;
+    CpuMilli?: number;
 
     /**
      * @type {string}
@@ -51,7 +51,7 @@ export interface CreateClawOmniInstanceRequest {
      * @type {string}
      * @memberof CreateClawOmniInstanceRequest
      */
-    Image: string;
+    Image?: string;
 
     /**
      * @type {number}
@@ -96,8 +96,32 @@ export interface CreateClawOmniInstanceRequest {
     Tags?: Array<TagForCreateClawOmniInstanceInput>;
 
     /**
+     * @type {string}
+     * @memberof CreateClawOmniInstanceRequest
+     */
+    TemplateId?: string;
+
+    /**
      * @type {number}
      * @memberof CreateClawOmniInstanceRequest
      */
     Timeout: number;
+
+    /**
+     * @type {number}
+     * @memberof CreateClawOmniInstanceRequest
+     */
+    TokenLimitPerDay?: number;
+
+    /**
+     * @type {number}
+     * @memberof CreateClawOmniInstanceRequest
+     */
+    TokenLimitPerMin?: number;
+
+    /**
+     * @type {number}
+     * @memberof CreateClawOmniInstanceRequest
+     */
+    TokenLimitPerWeek?: number;
 }

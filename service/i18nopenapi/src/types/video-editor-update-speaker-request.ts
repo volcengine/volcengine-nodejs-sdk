@@ -21,10 +21,10 @@
 export interface VideoEditorUpdateSpeakerRequest {
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoEditorUpdateSpeakerRequest
      */
-    id: number;
+    id: string;
 
     /**
      * @type {string}
@@ -33,8 +33,8 @@ export interface VideoEditorUpdateSpeakerRequest {
     speakerName: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoEditorUpdateSpeakerRequest
      */
-    subtaskId: number;
+    subtaskId: string;
 }

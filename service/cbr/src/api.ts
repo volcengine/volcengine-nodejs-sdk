@@ -14,6 +14,8 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { CheckExternalAccountRoleRequest } from './types/index';
+import { CheckExternalAccountRoleResponse } from './types/index';
 import { CreateBackupJobRequest } from './types/index';
 import { CreateBackupJobResponse } from './types/index';
 import { CreateBackupPlanRequest } from './types/index';
@@ -22,6 +24,8 @@ import { CreateBackupPolicyRequest } from './types/index';
 import { CreateBackupPolicyResponse } from './types/index';
 import { CreateBackupResourceRequest } from './types/index';
 import { CreateBackupResourceResponse } from './types/index';
+import { CreateExternalAccountRequest } from './types/index';
+import { CreateExternalAccountResponse } from './types/index';
 import { CreateRestoreJobRequest } from './types/index';
 import { CreateRestoreJobResponse } from './types/index';
 import { CreateVaultRequest } from './types/index';
@@ -32,6 +36,8 @@ import { DeleteBackupPolicyRequest } from './types/index';
 import { DeleteBackupPolicyResponse } from './types/index';
 import { DeleteBackupResourceRequest } from './types/index';
 import { DeleteBackupResourceResponse } from './types/index';
+import { DeleteExternalAccountRequest } from './types/index';
+import { DeleteExternalAccountResponse } from './types/index';
 import { DeleteRecoveryPointRequest } from './types/index';
 import { DeleteRecoveryPointResponse } from './types/index';
 import { DeleteVaultRequest } from './types/index';
@@ -56,6 +62,8 @@ import { DisableBackupPolicyRequest } from './types/index';
 import { DisableBackupPolicyResponse } from './types/index';
 import { EnableBackupPolicyRequest } from './types/index';
 import { EnableBackupPolicyResponse } from './types/index';
+import { ListExternalAccountsRequest } from './types/index';
+import { ListExternalAccountsResponse } from './types/index';
 import { ListTagsForResourcesRequest } from './types/index';
 import { ListTagsForResourcesResponse } from './types/index';
 import { TagResourcesRequest } from './types/index';
@@ -74,15 +82,18 @@ import { UpdateRestoreJobResponse } from './types/index';
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type CheckExternalAccountRoleCommandOutput = CommandOutput<CheckExternalAccountRoleResponse>;
 export type CreateBackupJobCommandOutput = CommandOutput<CreateBackupJobResponse>;
 export type CreateBackupPlanCommandOutput = CommandOutput<CreateBackupPlanResponse>;
 export type CreateBackupPolicyCommandOutput = CommandOutput<CreateBackupPolicyResponse>;
 export type CreateBackupResourceCommandOutput = CommandOutput<CreateBackupResourceResponse>;
+export type CreateExternalAccountCommandOutput = CommandOutput<CreateExternalAccountResponse>;
 export type CreateRestoreJobCommandOutput = CommandOutput<CreateRestoreJobResponse>;
 export type CreateVaultCommandOutput = CommandOutput<CreateVaultResponse>;
 export type DeleteBackupPlanCommandOutput = CommandOutput<DeleteBackupPlanResponse>;
 export type DeleteBackupPolicyCommandOutput = CommandOutput<DeleteBackupPolicyResponse>;
 export type DeleteBackupResourceCommandOutput = CommandOutput<DeleteBackupResourceResponse>;
+export type DeleteExternalAccountCommandOutput = CommandOutput<DeleteExternalAccountResponse>;
 export type DeleteRecoveryPointCommandOutput = CommandOutput<DeleteRecoveryPointResponse>;
 export type DeleteVaultCommandOutput = CommandOutput<DeleteVaultResponse>;
 export type DescribeBackupPlansCommandOutput = CommandOutput<DescribeBackupPlansResponse>;
@@ -95,6 +106,7 @@ export type DescribeVaultsCommandOutput = CommandOutput<DescribeVaultsResponse>;
 export type DescribeZonesCommandOutput = CommandOutput<DescribeZonesResponse>;
 export type DisableBackupPolicyCommandOutput = CommandOutput<DisableBackupPolicyResponse>;
 export type EnableBackupPolicyCommandOutput = CommandOutput<EnableBackupPolicyResponse>;
+export type ListExternalAccountsCommandOutput = CommandOutput<ListExternalAccountsResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
@@ -116,6 +128,21 @@ export class CBRClient extends Client {
   }
 }
 
+/**
+ * Command to CheckExternalAccountRole
+ */
+export class CheckExternalAccountRoleCommand extends Command<
+  CheckExternalAccountRoleRequest,
+  CheckExternalAccountRoleCommandOutput,
+  'CheckExternalAccountRoleCommand'
+> {
+  static readonly metaPath = '/CheckExternalAccountRole/2024-03-01/cbr/post/application_json/';
+
+  constructor(input: CheckExternalAccountRoleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CheckExternalAccountRoleCommand.metaPath);
+  }
+}
 /**
  * Command to CreateBackupJob
  */
@@ -174,6 +201,21 @@ export class CreateBackupResourceCommand extends Command<
   constructor(input: CreateBackupResourceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateBackupResourceCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateExternalAccount
+ */
+export class CreateExternalAccountCommand extends Command<
+  CreateExternalAccountRequest,
+  CreateExternalAccountCommandOutput,
+  'CreateExternalAccountCommand'
+> {
+  static readonly metaPath = '/CreateExternalAccount/2024-03-01/cbr/post/application_json/';
+
+  constructor(input: CreateExternalAccountRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateExternalAccountCommand.metaPath);
   }
 }
 /**
@@ -249,6 +291,21 @@ export class DeleteBackupResourceCommand extends Command<
   constructor(input: DeleteBackupResourceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteBackupResourceCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteExternalAccount
+ */
+export class DeleteExternalAccountCommand extends Command<
+  DeleteExternalAccountRequest,
+  DeleteExternalAccountCommandOutput,
+  'DeleteExternalAccountCommand'
+> {
+  static readonly metaPath = '/DeleteExternalAccount/2024-03-01/cbr/post/application_json/';
+
+  constructor(input: DeleteExternalAccountRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteExternalAccountCommand.metaPath);
   }
 }
 /**
@@ -432,6 +489,21 @@ export class EnableBackupPolicyCommand extends Command<
   }
 }
 /**
+ * Command to ListExternalAccounts
+ */
+export class ListExternalAccountsCommand extends Command<
+  ListExternalAccountsRequest,
+  ListExternalAccountsCommandOutput,
+  'ListExternalAccountsCommand'
+> {
+  static readonly metaPath = '/ListExternalAccounts/2024-03-01/cbr/post/application_json/';
+
+  constructor(input: ListExternalAccountsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListExternalAccountsCommand.metaPath);
+  }
+}
+/**
  * Command to ListTagsForResources
  */
 export class ListTagsForResourcesCommand extends Command<
@@ -539,15 +611,18 @@ export class UpdateRestoreJobCommand extends Command<
 
 export default {
   CBRClient,
+  CheckExternalAccountRoleCommand,
   CreateBackupJobCommand,
   CreateBackupPlanCommand,
   CreateBackupPolicyCommand,
   CreateBackupResourceCommand,
+  CreateExternalAccountCommand,
   CreateRestoreJobCommand,
   CreateVaultCommand,
   DeleteBackupPlanCommand,
   DeleteBackupPolicyCommand,
   DeleteBackupResourceCommand,
+  DeleteExternalAccountCommand,
   DeleteRecoveryPointCommand,
   DeleteVaultCommand,
   DescribeBackupPlansCommand,
@@ -560,6 +635,7 @@ export default {
   DescribeZonesCommand,
   DisableBackupPolicyCommand,
   EnableBackupPolicyCommand,
+  ListExternalAccountsCommand,
   ListTagsForResourcesCommand,
   TagResourcesCommand,
   UntagResourcesCommand,

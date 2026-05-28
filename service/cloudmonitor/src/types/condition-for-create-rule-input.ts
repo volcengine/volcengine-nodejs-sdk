@@ -60,5 +60,11 @@ export interface ConditionForCreateRuleInput {
      * @type {string}
      * @memberof ConditionForCreateRuleInput
      */
+    SubNamespace?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConditionForCreateRuleInput
+     */
     Threshold?: string;
 }

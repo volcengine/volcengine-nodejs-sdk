@@ -60,5 +60,11 @@ export interface ConvertConditionForUpdateRuleInput {
      * @type {string}
      * @memberof ConvertConditionForUpdateRuleInput
      */
+    SubNamespace?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertConditionForUpdateRuleInput
+     */
     Threshold?: string;
 }

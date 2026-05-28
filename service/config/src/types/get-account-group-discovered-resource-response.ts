@@ -35,6 +35,12 @@ export interface GetAccountGroupDiscoveredResourceResponse {
     Configuration?: { [key: string]: any; };
 
     /**
+     * @type {string}
+     * @memberof GetAccountGroupDiscoveredResourceResponse
+     */
+    ConfigurationCaptureTime?: string;
+
+    /**
      * @type {boolean}
      * @memberof GetAccountGroupDiscoveredResourceResponse
      */
@@ -57,6 +63,12 @@ export interface GetAccountGroupDiscoveredResourceResponse {
      * @memberof GetAccountGroupDiscoveredResourceResponse
      */
     Relationships?: Array<RelationshipForGetAccountGroupDiscoveredResourceOutput>;
+
+    /**
+     * @type {string}
+     * @memberof GetAccountGroupDiscoveredResourceResponse
+     */
+    ResourceCreationTime?: string;
 
     /**
      * @type {string}

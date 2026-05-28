@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { FiltersForGetInspectConfigInput } from './filters-for-get-inspect-config-input';
  /**
  * 
  *
@@ -22,10 +21,10 @@ import { FiltersForGetInspectConfigInput } from './filters-for-get-inspect-confi
 export interface GetInspectConfigRequest {
 
     /**
-     * @type {FiltersForGetInspectConfigInput}
+     * @type {{ [key: string]: string; }}
      * @memberof GetInspectConfigRequest
      */
-    Filters?: FiltersForGetInspectConfigInput;
+    Filters?: { [key: string]: string; };
 
     /**
      * @type {string}

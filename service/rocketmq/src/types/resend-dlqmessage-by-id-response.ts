@@ -25,5 +25,5 @@ export interface ResendDLQMessageByIdResponse {
      * @type {Array<ResendResultForResendDLQMessageByIdOutput>}
      * @memberof ResendDLQMessageByIdResponse
      */
-    ResendResult?: Array<ResendResultForResendDLQMessageByIdOutput>;
+    ResendResults?: Array<ResendResultForResendDLQMessageByIdOutput>;
 }

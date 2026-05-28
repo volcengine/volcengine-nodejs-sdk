@@ -58,22 +58,10 @@ export interface DataForVideoProjectListOutput {
     sourceLang?: string;
 
     /**
-     * @type {string}
-     * @memberof DataForVideoProjectListOutput
-     */
-    sourceLocale?: string;
-
-    /**
      * @type {Array<string>}
      * @memberof DataForVideoProjectListOutput
      */
     targetLangs?: Array<string>;
-
-    /**
-     * @type {Array<string>}
-     * @memberof DataForVideoProjectListOutput
-     */
-    targetLocales?: Array<string>;
 
     /**
      * @type {string}

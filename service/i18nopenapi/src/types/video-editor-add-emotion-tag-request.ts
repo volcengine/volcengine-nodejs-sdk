@@ -33,8 +33,8 @@ export interface VideoEditorAddEmotionTagRequest {
     name: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoEditorAddEmotionTagRequest
      */
-    subtaskId: number;
+    subtaskId: string;
 }

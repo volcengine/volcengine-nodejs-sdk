@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { DataForVideoTermBasesOutput } from './data-for-video-term-bases-output';
+import { PaginationForVideoTermBasesOutput } from './pagination-for-video-term-bases-output';
  /**
  * 
  *
@@ -19,4 +21,22 @@
  * @interface VideoTermBasesResponse
  */
 export interface VideoTermBasesResponse {
+
+    /**
+     * @type {Array<DataForVideoTermBasesOutput>}
+     * @memberof VideoTermBasesResponse
+     */
+    data?: Array<DataForVideoTermBasesOutput>;
+
+    /**
+     * @type {PaginationForVideoTermBasesOutput}
+     * @memberof VideoTermBasesResponse
+     */
+    pagination?: PaginationForVideoTermBasesOutput;
+
+    /**
+     * @type {number}
+     * @memberof VideoTermBasesResponse
+     */
+    total?: number;
 }

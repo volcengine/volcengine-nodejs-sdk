@@ -30,6 +30,8 @@ import { CreateNodesRequest } from './types/index';
 import { CreateNodesResponse } from './types/index';
 import { CreateScalingPolicyRequest } from './types/index';
 import { CreateScalingPolicyResponse } from './types/index';
+import { CreateSnapshotRequest } from './types/index';
+import { CreateSnapshotResponse } from './types/index';
 import { DeleteAddonRequest } from './types/index';
 import { DeleteAddonResponse } from './types/index';
 import { DeleteClusterRequest } from './types/index';
@@ -42,6 +44,12 @@ import { DeleteNodesRequest } from './types/index';
 import { DeleteNodesResponse } from './types/index';
 import { DeleteScalingPoliciesRequest } from './types/index';
 import { DeleteScalingPoliciesResponse } from './types/index';
+import { DeleteSnapshotRequest } from './types/index';
+import { DeleteSnapshotResponse } from './types/index';
+import { DescribeContainerImageCommitmentsRequest } from './types/index';
+import { DescribeContainerImageCommitmentsResponse } from './types/index';
+import { DescribeSnapshotsRequest } from './types/index';
+import { DescribeSnapshotsResponse } from './types/index';
 import { ExecContainerImageCommitmentRequest } from './types/index';
 import { ExecContainerImageCommitmentResponse } from './types/index';
 import { ForwardKubernetesApiRequest } from './types/index';
@@ -74,6 +82,8 @@ import { ListSupportedAddInstanceTypesRequest } from './types/index';
 import { ListSupportedAddInstanceTypesResponse } from './types/index';
 import { ListSupportedAddonsRequest } from './types/index';
 import { ListSupportedAddonsResponse } from './types/index';
+import { ListSupportedGpuDriverVersionsRequest } from './types/index';
+import { ListSupportedGpuDriverVersionsResponse } from './types/index';
 import { ListSupportedImagesRequest } from './types/index';
 import { ListSupportedImagesResponse } from './types/index';
 import { ListSupportedResourceTypesRequest } from './types/index';
@@ -112,12 +122,16 @@ export type CreateKubeconfigCommandOutput = CommandOutput<CreateKubeconfigRespon
 export type CreateNodePoolCommandOutput = CommandOutput<CreateNodePoolResponse>;
 export type CreateNodesCommandOutput = CommandOutput<CreateNodesResponse>;
 export type CreateScalingPolicyCommandOutput = CommandOutput<CreateScalingPolicyResponse>;
+export type CreateSnapshotCommandOutput = CommandOutput<CreateSnapshotResponse>;
 export type DeleteAddonCommandOutput = CommandOutput<DeleteAddonResponse>;
 export type DeleteClusterCommandOutput = CommandOutput<DeleteClusterResponse>;
 export type DeleteKubeconfigsCommandOutput = CommandOutput<DeleteKubeconfigsResponse>;
 export type DeleteNodePoolCommandOutput = CommandOutput<DeleteNodePoolResponse>;
 export type DeleteNodesCommandOutput = CommandOutput<DeleteNodesResponse>;
 export type DeleteScalingPoliciesCommandOutput = CommandOutput<DeleteScalingPoliciesResponse>;
+export type DeleteSnapshotCommandOutput = CommandOutput<DeleteSnapshotResponse>;
+export type DescribeContainerImageCommitmentsCommandOutput = CommandOutput<DescribeContainerImageCommitmentsResponse>;
+export type DescribeSnapshotsCommandOutput = CommandOutput<DescribeSnapshotsResponse>;
 export type ExecContainerImageCommitmentCommandOutput = CommandOutput<ExecContainerImageCommitmentResponse>;
 export type ForwardKubernetesApiCommandOutput = CommandOutput<ForwardKubernetesApiResponse>;
 export type GetGlobalDefaultDeleteOptionCommandOutput = CommandOutput<GetGlobalDefaultDeleteOptionResponse>;
@@ -134,6 +148,7 @@ export type ListScalingEventsCommandOutput = CommandOutput<ListScalingEventsResp
 export type ListScalingPoliciesCommandOutput = CommandOutput<ListScalingPoliciesResponse>;
 export type ListSupportedAddInstanceTypesCommandOutput = CommandOutput<ListSupportedAddInstanceTypesResponse>;
 export type ListSupportedAddonsCommandOutput = CommandOutput<ListSupportedAddonsResponse>;
+export type ListSupportedGpuDriverVersionsCommandOutput = CommandOutput<ListSupportedGpuDriverVersionsResponse>;
 export type ListSupportedImagesCommandOutput = CommandOutput<ListSupportedImagesResponse>;
 export type ListSupportedResourceTypesCommandOutput = CommandOutput<ListSupportedResourceTypesResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
@@ -147,7 +162,6 @@ export type UpdateAddonVersionCommandOutput = CommandOutput<UpdateAddonVersionRe
 export type UpdateClusterConfigCommandOutput = CommandOutput<UpdateClusterConfigResponse>;
 export type UpdateNodePoolConfigCommandOutput = CommandOutput<UpdateNodePoolConfigResponse>;
 export type UpdateScalingPolicyCommandOutput = CommandOutput<UpdateScalingPolicyResponse>;
-
 
 /**
  * VKEClient Service Client
@@ -283,6 +297,21 @@ export class CreateScalingPolicyCommand extends Command<
   }
 }
 /**
+ * Command to CreateSnapshot
+ */
+export class CreateSnapshotCommand extends Command<
+  CreateSnapshotRequest,
+  CreateSnapshotCommandOutput,
+  'CreateSnapshotCommand'
+> {
+  static readonly metaPath = '/CreateSnapshot/2022-05-12/vke/post/application_json/';
+
+  constructor(input: CreateSnapshotRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateSnapshotCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteAddon
  */
 export class DeleteAddonCommand extends Command<
@@ -370,6 +399,51 @@ export class DeleteScalingPoliciesCommand extends Command<
   constructor(input: DeleteScalingPoliciesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteScalingPoliciesCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteSnapshot
+ */
+export class DeleteSnapshotCommand extends Command<
+  DeleteSnapshotRequest,
+  DeleteSnapshotCommandOutput,
+  'DeleteSnapshotCommand'
+> {
+  static readonly metaPath = '/DeleteSnapshot/2022-05-12/vke/post/application_json/';
+
+  constructor(input: DeleteSnapshotRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteSnapshotCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeContainerImageCommitments
+ */
+export class DescribeContainerImageCommitmentsCommand extends Command<
+  DescribeContainerImageCommitmentsRequest,
+  DescribeContainerImageCommitmentsCommandOutput,
+  'DescribeContainerImageCommitmentsCommand'
+> {
+  static readonly metaPath = '/DescribeContainerImageCommitments/2022-05-12/vke/post/application_json/';
+
+  constructor(input: DescribeContainerImageCommitmentsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeContainerImageCommitmentsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeSnapshots
+ */
+export class DescribeSnapshotsCommand extends Command<
+  DescribeSnapshotsRequest,
+  DescribeSnapshotsCommandOutput,
+  'DescribeSnapshotsCommand'
+> {
+  static readonly metaPath = '/DescribeSnapshots/2022-05-12/vke/post/application_json/';
+
+  constructor(input: DescribeSnapshotsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeSnapshotsCommand.metaPath);
   }
 }
 /**
@@ -613,6 +687,21 @@ export class ListSupportedAddonsCommand extends Command<
   }
 }
 /**
+ * Command to ListSupportedGpuDriverVersions
+ */
+export class ListSupportedGpuDriverVersionsCommand extends Command<
+  ListSupportedGpuDriverVersionsRequest,
+  ListSupportedGpuDriverVersionsCommandOutput,
+  'ListSupportedGpuDriverVersionsCommand'
+> {
+  static readonly metaPath = '/ListSupportedGpuDriverVersions/2022-05-12/vke/post/application_json/';
+
+  constructor(input: ListSupportedGpuDriverVersionsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListSupportedGpuDriverVersionsCommand.metaPath);
+  }
+}
+/**
  * Command to ListSupportedImages
  */
 export class ListSupportedImagesCommand extends Command<
@@ -818,12 +907,16 @@ export default {
   CreateNodePoolCommand,
   CreateNodesCommand,
   CreateScalingPolicyCommand,
+  CreateSnapshotCommand,
   DeleteAddonCommand,
   DeleteClusterCommand,
   DeleteKubeconfigsCommand,
   DeleteNodePoolCommand,
   DeleteNodesCommand,
   DeleteScalingPoliciesCommand,
+  DeleteSnapshotCommand,
+  DescribeContainerImageCommitmentsCommand,
+  DescribeSnapshotsCommand,
   ExecContainerImageCommitmentCommand,
   ForwardKubernetesApiCommand,
   GetGlobalDefaultDeleteOptionCommand,
@@ -840,6 +933,7 @@ export default {
   ListScalingPoliciesCommand,
   ListSupportedAddInstanceTypesCommand,
   ListSupportedAddonsCommand,
+  ListSupportedGpuDriverVersionsCommand,
   ListSupportedImagesCommand,
   ListSupportedResourceTypesCommand,
   ListTagsForResourcesCommand,

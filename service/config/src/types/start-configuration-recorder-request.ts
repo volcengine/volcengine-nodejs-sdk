@@ -24,5 +24,15 @@ export interface StartConfigurationRecorderRequest {
      * @type {string}
      * @memberof StartConfigurationRecorderRequest
      */
-    RecorderType: string;
+    RecorderType: StartConfigurationRecorderRequestRecorderTypeEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum StartConfigurationRecorderRequestRecorderTypeEnum {
+    SingleAccount = 'SingleAccount',
+    Organization = 'Organization'
+}
+

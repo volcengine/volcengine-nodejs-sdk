@@ -91,6 +91,12 @@ export interface CreateEventRuleRequest {
     MessageQueue?: Array<MessageQueueForCreateEventRuleInput>;
 
     /**
+     * @type {string}
+     * @memberof CreateEventRuleRequest
+     */
+    NotificationId?: string;
+
+    /**
      * @type {Array<NotifyTemplateForCreateEventRuleInput>}
      * @memberof CreateEventRuleRequest
      */

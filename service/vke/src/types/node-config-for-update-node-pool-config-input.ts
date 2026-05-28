@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AffinityGroupConfigForUpdateNodePoolConfigInput } from './affinity-group-config-for-update-node-pool-config-input';
 import { DataVolumeForUpdateNodePoolConfigInput } from './data-volume-for-update-node-pool-config-input';
 import { InstancesDistributionForUpdateNodePoolConfigInput } from './instances-distribution-for-update-node-pool-config-input';
 import { PublicAccessConfigForUpdateNodePoolConfigInput } from './public-access-config-for-update-node-pool-config-input';
@@ -33,6 +34,12 @@ export interface NodeConfigForUpdateNodePoolConfigInput {
     AdditionalContainerStorageEnabled?: boolean;
 
     /**
+     * @type {AffinityGroupConfigForUpdateNodePoolConfigInput}
+     * @memberof NodeConfigForUpdateNodePoolConfigInput
+     */
+    AffinityGroupConfig?: AffinityGroupConfigForUpdateNodePoolConfigInput;
+
+    /**
      * @type {boolean}
      * @memberof NodeConfigForUpdateNodePoolConfigInput
      */
@@ -49,6 +56,12 @@ export interface NodeConfigForUpdateNodePoolConfigInput {
      * @memberof NodeConfigForUpdateNodePoolConfigInput
      */
     DataVolumes?: Array<DataVolumeForUpdateNodePoolConfigInput>;
+
+    /**
+     * @type {string}
+     * @memberof NodeConfigForUpdateNodePoolConfigInput
+     */
+    GpuDriverVersion?: string;
 
     /**
      * @type {string}

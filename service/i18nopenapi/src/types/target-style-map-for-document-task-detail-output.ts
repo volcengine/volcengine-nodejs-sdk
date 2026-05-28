@@ -25,4 +25,472 @@ export interface TargetStyleMapForDocumentTaskDetailOutput {
      * @memberof TargetStyleMapForDocumentTaskDetailOutput
      */
     af?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    af_ZA?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ar?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ar_AR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ar_DZ?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ar_SY?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ar_YE?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    be?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    bn?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    bn_BD?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    da?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    de?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    de_DE?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    en?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    en_DA?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    en_GB?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    en_IN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    en_PH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    en_SG?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    en_US?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    es?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    es_419?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    es_ES?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    es_US?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    fa_IR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    fil?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    fil_PH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    fr?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    fr_FR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    hi?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    hi_IN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    id?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    id_ID?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    it?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    it_IT?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ja?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ja_JP?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ka?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    kk_KZ?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    kl?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    km?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    km_KH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ko?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ko_KR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    mn?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ms?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ms_MY?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    my?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ne?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    pl?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    pl_PL?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    pt?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    pt_BR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    pt_PT?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ro?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ru?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ru_RU?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    sk?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    sl?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    sr?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    sv?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ta?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    te?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    th?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    th_TH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    tl_PH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    tr?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    tr_TR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    ur?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    uz?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    vi?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    vi_VN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    zh?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    zh_CN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    zh_HK?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    zh_Hans?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    zh_Hans_CN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    zh_Hant?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForDocumentTaskDetailOutput
+     */
+    zh_TW?: string;
 }

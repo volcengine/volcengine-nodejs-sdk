@@ -21,16 +21,22 @@
 export interface VideoTermBasesRequest {
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoTermBasesRequest
      */
-    limit: number;
+    keyword?: string;
 
     /**
      * @type {number}
      * @memberof VideoTermBasesRequest
      */
-    offset: number;
+    limit?: number;
+
+    /**
+     * @type {number}
+     * @memberof VideoTermBasesRequest
+     */
+    offset?: number;
 
     /**
      * @type {string}
@@ -43,4 +49,16 @@ export interface VideoTermBasesRequest {
      * @memberof VideoTermBasesRequest
      */
     targetProject: string;
+
+    /**
+     * @type {string}
+     * @memberof VideoTermBasesRequest
+     */
+    termBaseId?: string;
+
+    /**
+     * @type {number}
+     * @memberof VideoTermBasesRequest
+     */
+    termBaseType?: number;
 }

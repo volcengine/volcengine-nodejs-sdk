@@ -102,10 +102,16 @@ export interface DataForListEventRulesOutput {
     Level?: string;
 
     /**
-     * @type {MessageQueueForListEventRulesOutput}
+     * @type {Array<MessageQueueForListEventRulesOutput>}
      * @memberof DataForListEventRulesOutput
      */
-    MessageQueue?: MessageQueueForListEventRulesOutput;
+    MessageQueue?: Array<MessageQueueForListEventRulesOutput>;
+
+    /**
+     * @type {string}
+     * @memberof DataForListEventRulesOutput
+     */
+    NotificationId?: string;
 
     /**
      * @type {Array<NotifyTemplateForListEventRulesOutput>}

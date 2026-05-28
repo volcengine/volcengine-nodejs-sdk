@@ -14,6 +14,8 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { AgentChatRequest } from './types/index';
+import { AgentChatResponse } from './types/index';
 import { ExpertInvokeAPIRequest } from './types/index';
 import { ExpertInvokeAPIResponse } from './types/index';
 import { GetTaskListRequest } from './types/index';
@@ -32,6 +34,7 @@ import { QueryClueInfoResponse } from './types/index';
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type AgentChatCommandOutput = CommandOutput<AgentChatResponse>;
 export type ExpertInvokeAPICommandOutput = CommandOutput<ExpertInvokeAPIResponse>;
 export type GetTaskListCommandOutput = CommandOutput<GetTaskListResponse>;
 export type GetTaskResultCommandOutput = CommandOutput<GetTaskResultResponse>;
@@ -53,6 +56,21 @@ export class INSIGHTClient extends Client {
   }
 }
 
+/**
+ * Command to AgentChat
+ */
+export class AgentChatCommand extends Command<
+  AgentChatRequest,
+  AgentChatCommandOutput,
+  'AgentChatCommand'
+> {
+  static readonly metaPath = '/AgentChat/2025-09-05/insight/post/application_json/';
+
+  constructor(input: AgentChatRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AgentChatCommand.metaPath);
+  }
+}
 /**
  * Command to ExpertInvokeAPI
  */
@@ -161,6 +179,7 @@ export class QueryClueInfoCommand extends Command<
 
 export default {
   INSIGHTClient,
+  AgentChatCommand,
   ExpertInvokeAPICommand,
   GetTaskListCommand,
   GetTaskResultCommand,

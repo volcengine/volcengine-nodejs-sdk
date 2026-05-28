@@ -1,3 +1,5 @@
+export * from './agent-chat-request';
+export * from './agent-chat-response';
 export * from './clue-list-for-query-clue-info-output';
 export * from './download-urlfor-get-task-result-output';
 export * from './expert-invoke-apirequest';
@@ -14,6 +16,7 @@ export * from './list-custom-subs-task-response';
 export * from './list-subs-task-apirequest';
 export * from './list-subs-task-apiresponse';
 export * from './location-for-pull-post-output';
+export * from './message-for-agent-chat-output';
 export * from './preview-list-for-list-custom-subs-task-output';
 export * from './preview-list-for-list-subs-task-apioutput';
 export * from './pull-post-request';

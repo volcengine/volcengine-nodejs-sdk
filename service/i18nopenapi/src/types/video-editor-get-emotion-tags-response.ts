@@ -12,8 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { BuiltInEmotionTagForVideoEditorGetEmotionTagsOutput } from './built-in-emotion-tag-for-video-editor-get-emotion-tags-output';
-import { CustomEmotionTagForVideoEditorGetEmotionTagsOutput } from './custom-emotion-tag-for-video-editor-get-emotion-tags-output';
+import { DataForVideoEditorGetEmotionTagsOutput } from './data-for-video-editor-get-emotion-tags-output';
  /**
  * 
  *
@@ -23,14 +22,8 @@ import { CustomEmotionTagForVideoEditorGetEmotionTagsOutput } from './custom-emo
 export interface VideoEditorGetEmotionTagsResponse {
 
     /**
-     * @type {Array<BuiltInEmotionTagForVideoEditorGetEmotionTagsOutput>}
+     * @type {DataForVideoEditorGetEmotionTagsOutput}
      * @memberof VideoEditorGetEmotionTagsResponse
      */
-    builtInEmotionTags?: Array<BuiltInEmotionTagForVideoEditorGetEmotionTagsOutput>;
-
-    /**
-     * @type {Array<CustomEmotionTagForVideoEditorGetEmotionTagsOutput>}
-     * @memberof VideoEditorGetEmotionTagsResponse
-     */
-    customEmotionTags?: Array<CustomEmotionTagForVideoEditorGetEmotionTagsOutput>;
+    data?: DataForVideoEditorGetEmotionTagsOutput;
 }

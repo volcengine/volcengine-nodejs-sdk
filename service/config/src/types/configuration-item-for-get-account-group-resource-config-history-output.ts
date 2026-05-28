@@ -75,7 +75,7 @@ export interface ConfigurationItemForGetAccountGroupResourceConfigHistoryOutput 
      * @type {string}
      * @memberof ConfigurationItemForGetAccountGroupResourceConfigHistoryOutput
      */
-    ResourceEventType?: string;
+    ResourceEventType?: ConfigurationItemForGetAccountGroupResourceConfigHistoryOutputResourceEventTypeEnum;
 
     /**
      * @type {string}
@@ -101,3 +101,14 @@ export interface ConfigurationItemForGetAccountGroupResourceConfigHistoryOutput 
      */
     Tags?: Array<TagForGetAccountGroupResourceConfigHistoryOutput>;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ConfigurationItemForGetAccountGroupResourceConfigHistoryOutputResourceEventTypeEnum {
+    Discovered = 'Discovered',
+    Update = 'Update',
+    Delete = 'Delete'
+}
+

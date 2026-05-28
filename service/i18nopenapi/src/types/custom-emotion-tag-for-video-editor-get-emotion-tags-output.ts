@@ -21,10 +21,10 @@
 export interface CustomEmotionTagForVideoEditorGetEmotionTagsOutput {
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof CustomEmotionTagForVideoEditorGetEmotionTagsOutput
      */
-    createTime?: number;
+    createTime?: string;
 
     /**
      * @type {string}
@@ -33,10 +33,10 @@ export interface CustomEmotionTagForVideoEditorGetEmotionTagsOutput {
     emotionTag?: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof CustomEmotionTagForVideoEditorGetEmotionTagsOutput
      */
-    id?: number;
+    id?: string;
 
     /**
      * @type {string}
@@ -51,20 +51,14 @@ export interface CustomEmotionTagForVideoEditorGetEmotionTagsOutput {
     operator?: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof CustomEmotionTagForVideoEditorGetEmotionTagsOutput
      */
-    taskId?: number;
+    taskId?: string;
 
     /**
      * @type {number}
      * @memberof CustomEmotionTagForVideoEditorGetEmotionTagsOutput
      */
     type?: number;
-
-    /**
-     * @type {string}
-     * @memberof CustomEmotionTagForVideoEditorGetEmotionTagsOutput
-     */
-    voiceId?: string;
 }

@@ -21,14 +21,14 @@
 export interface VideoEditorDeleteEmotionTagRequest {
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoEditorDeleteEmotionTagRequest
      */
-    id: number;
+    id: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoEditorDeleteEmotionTagRequest
      */
-    subtaskId: number;
+    subtaskId: string;
 }

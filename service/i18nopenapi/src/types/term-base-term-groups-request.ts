@@ -27,16 +27,28 @@ export interface TermBaseTermGroupsRequest {
     caseSensitive?: number;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof TermBaseTermGroupsRequest
      */
-    limit: number;
+    keyword?: string;
 
     /**
      * @type {number}
      * @memberof TermBaseTermGroupsRequest
      */
-    offset: number;
+    limit?: number;
+
+    /**
+     * @type {number}
+     * @memberof TermBaseTermGroupsRequest
+     */
+    offset?: number;
+
+    /**
+     * @type {string}
+     * @memberof TermBaseTermGroupsRequest
+     */
+    sortLocale?: string;
 
     /**
      * @type {number}
@@ -49,6 +61,12 @@ export interface TermBaseTermGroupsRequest {
      * @memberof TermBaseTermGroupsRequest
      */
     sorting?: number;
+
+    /**
+     * @type {string}
+     * @memberof TermBaseTermGroupsRequest
+     */
+    tags?: string;
 
     /**
      * @type {string}

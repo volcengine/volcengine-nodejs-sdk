@@ -66,5 +66,11 @@ export interface ConditionForListRulesOutput {
      * @type {string}
      * @memberof ConditionForListRulesOutput
      */
+    SubNamespace?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConditionForListRulesOutput
+     */
     Threshold?: string;
 }

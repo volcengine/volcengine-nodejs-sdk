@@ -91,6 +91,12 @@ export interface UpdateEventRuleRequest {
     MessageQueue?: Array<MessageQueueForUpdateEventRuleInput>;
 
     /**
+     * @type {string}
+     * @memberof UpdateEventRuleRequest
+     */
+    NotificationId?: string;
+
+    /**
      * @type {Array<NotifyTemplateForUpdateEventRuleInput>}
      * @memberof UpdateEventRuleRequest
      */
