@@ -438,6 +438,12 @@ export interface ListForListSplitBillDetailOutput {
      * @type {string}
      * @memberof ListForListSplitBillDetailOutput
      */
+    SavingPlanDeductionDiscountTotalAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListSplitBillDetailOutput
+     */
     SavingPlanDeductionSpID?: string;
 
     /**
