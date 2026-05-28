@@ -16,72 +16,308 @@ import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandO
 
 import { AssociateAccountGroupPrincipalsRequest } from './types/index';
 import { AssociateAccountGroupPrincipalsResponse } from './types/index';
+import { CreateAccountGroupConformancePackRequest } from './types/index';
+import { CreateAccountGroupConformancePackResponse } from './types/index';
+import { CreateAccountGroupConformancePackTemplateRequest } from './types/index';
+import { CreateAccountGroupConformancePackTemplateResponse } from './types/index';
+import { CreateAccountGroupDeliveryChannelRequest } from './types/index';
+import { CreateAccountGroupDeliveryChannelResponse } from './types/index';
 import { CreateAccountGroupRequest } from './types/index';
 import { CreateAccountGroupResponse } from './types/index';
+import { CreateAccountGroupRuleRequest } from './types/index';
+import { CreateAccountGroupRuleResponse } from './types/index';
+import { CreateAccountGroupRuleTemplateRequest } from './types/index';
+import { CreateAccountGroupRuleTemplateResponse } from './types/index';
+import { CreateConformancePackRequest } from './types/index';
+import { CreateConformancePackResponse } from './types/index';
+import { CreateConformancePackTemplateRequest } from './types/index';
+import { CreateConformancePackTemplateResponse } from './types/index';
+import { CreateDeliveryChannelRequest } from './types/index';
+import { CreateDeliveryChannelResponse } from './types/index';
+import { CreateRuleRequest } from './types/index';
+import { CreateRuleResponse } from './types/index';
+import { CreateRuleTemplateRequest } from './types/index';
+import { CreateRuleTemplateResponse } from './types/index';
+import { DeleteAccountGroupConformancePackRequest } from './types/index';
+import { DeleteAccountGroupConformancePackResponse } from './types/index';
+import { DeleteAccountGroupConformancePackTemplatesRequest } from './types/index';
+import { DeleteAccountGroupConformancePackTemplatesResponse } from './types/index';
+import { DeleteAccountGroupDeliveryChannelRequest } from './types/index';
+import { DeleteAccountGroupDeliveryChannelResponse } from './types/index';
 import { DeleteAccountGroupRequest } from './types/index';
 import { DeleteAccountGroupResponse } from './types/index';
+import { DeleteAccountGroupRuleRequest } from './types/index';
+import { DeleteAccountGroupRuleResponse } from './types/index';
+import { DeleteAccountGroupRuleTemplatesRequest } from './types/index';
+import { DeleteAccountGroupRuleTemplatesResponse } from './types/index';
+import { DeleteConformancePackRequest } from './types/index';
+import { DeleteConformancePackResponse } from './types/index';
+import { DeleteConformancePackTemplatesRequest } from './types/index';
+import { DeleteConformancePackTemplatesResponse } from './types/index';
+import { DeleteDeliveryChannelRequest } from './types/index';
+import { DeleteDeliveryChannelResponse } from './types/index';
+import { DeleteRuleRequest } from './types/index';
+import { DeleteRuleResponse } from './types/index';
+import { DeleteRuleTemplatesRequest } from './types/index';
+import { DeleteRuleTemplatesResponse } from './types/index';
+import { DescribeAccountGroupComplianceByConformancePacksRequest } from './types/index';
+import { DescribeAccountGroupComplianceByConformancePacksResponse } from './types/index';
+import { DescribeAccountGroupComplianceByResourcesRequest } from './types/index';
+import { DescribeAccountGroupComplianceByResourcesResponse } from './types/index';
+import { DescribeAccountGroupComplianceByRulesRequest } from './types/index';
+import { DescribeAccountGroupComplianceByRulesResponse } from './types/index';
+import { DescribeAccountGroupConformancePackTemplatesRequest } from './types/index';
+import { DescribeAccountGroupConformancePackTemplatesResponse } from './types/index';
+import { DescribeAccountGroupConformancePacksRequest } from './types/index';
+import { DescribeAccountGroupConformancePacksResponse } from './types/index';
+import { DescribeAccountGroupDeliveryChannelRequest } from './types/index';
+import { DescribeAccountGroupDeliveryChannelResponse } from './types/index';
+import { DescribeAccountGroupResourceExemptionsRequest } from './types/index';
+import { DescribeAccountGroupResourceExemptionsResponse } from './types/index';
+import { DescribeAccountGroupRuleTemplatesRequest } from './types/index';
+import { DescribeAccountGroupRuleTemplatesResponse } from './types/index';
+import { DescribeAccountGroupRulesRequest } from './types/index';
+import { DescribeAccountGroupRulesResponse } from './types/index';
 import { DescribeAccountGroupsRequest } from './types/index';
 import { DescribeAccountGroupsResponse } from './types/index';
+import { DescribeComplianceByConformancePacksRequest } from './types/index';
+import { DescribeComplianceByConformancePacksResponse } from './types/index';
+import { DescribeComplianceByResourcesRequest } from './types/index';
+import { DescribeComplianceByResourcesResponse } from './types/index';
+import { DescribeComplianceByRulesRequest } from './types/index';
+import { DescribeComplianceByRulesResponse } from './types/index';
 import { DescribeConfigurationRecordersRequest } from './types/index';
 import { DescribeConfigurationRecordersResponse } from './types/index';
+import { DescribeConformancePackTemplatesRequest } from './types/index';
+import { DescribeConformancePackTemplatesResponse } from './types/index';
+import { DescribeConformancePacksRequest } from './types/index';
+import { DescribeConformancePacksResponse } from './types/index';
+import { DescribeDeliveryChannelRequest } from './types/index';
+import { DescribeDeliveryChannelResponse } from './types/index';
+import { DescribeResourceExemptionsRequest } from './types/index';
+import { DescribeResourceExemptionsResponse } from './types/index';
+import { DescribeRuleTemplatesRequest } from './types/index';
+import { DescribeRuleTemplatesResponse } from './types/index';
+import { DescribeRulesRequest } from './types/index';
+import { DescribeRulesResponse } from './types/index';
+import { DescribeSupportedResourceTypesRequest } from './types/index';
+import { DescribeSupportedResourceTypesResponse } from './types/index';
+import { DisableAccountGroupResourceExemptionRequest } from './types/index';
+import { DisableAccountGroupResourceExemptionResponse } from './types/index';
+import { DisableAccountGroupRuleRequest } from './types/index';
+import { DisableAccountGroupRuleResponse } from './types/index';
+import { DisableResourceExemptionRequest } from './types/index';
+import { DisableResourceExemptionResponse } from './types/index';
+import { DisableRuleRequest } from './types/index';
+import { DisableRuleResponse } from './types/index';
 import { DisassociateAccountGroupPrincipalsRequest } from './types/index';
 import { DisassociateAccountGroupPrincipalsResponse } from './types/index';
+import { EnableAccountGroupRuleRequest } from './types/index';
+import { EnableAccountGroupRuleResponse } from './types/index';
+import { EnableRuleRequest } from './types/index';
+import { EnableRuleResponse } from './types/index';
+import { GetAccountGroupComplianceHistoryRequest } from './types/index';
+import { GetAccountGroupComplianceHistoryResponse } from './types/index';
 import { GetAccountGroupDiscoveredResourceCountsRequest } from './types/index';
 import { GetAccountGroupDiscoveredResourceCountsResponse } from './types/index';
 import { GetAccountGroupDiscoveredResourceRequest } from './types/index';
 import { GetAccountGroupDiscoveredResourceResponse } from './types/index';
 import { GetAccountGroupResourceConfigHistoryRequest } from './types/index';
 import { GetAccountGroupResourceConfigHistoryResponse } from './types/index';
+import { GetComplianceHistoryRequest } from './types/index';
+import { GetComplianceHistoryResponse } from './types/index';
+import { GetComplianceSummaryByResourceRequest } from './types/index';
+import { GetComplianceSummaryByResourceResponse } from './types/index';
+import { GetComplianceSummaryRequest } from './types/index';
+import { GetComplianceSummaryResponse } from './types/index';
 import { GetDiscoveredResourceCountsRequest } from './types/index';
 import { GetDiscoveredResourceCountsResponse } from './types/index';
 import { GetDiscoveredResourceRequest } from './types/index';
 import { GetDiscoveredResourceResponse } from './types/index';
+import { GetOrganizationComplianceSummaryByResourceRequest } from './types/index';
+import { GetOrganizationComplianceSummaryByResourceResponse } from './types/index';
+import { GetOrganizationComplianceSummaryRequest } from './types/index';
+import { GetOrganizationComplianceSummaryResponse } from './types/index';
 import { GetOrganizationDiscoveredResourceCountsRequest } from './types/index';
 import { GetOrganizationDiscoveredResourceCountsResponse } from './types/index';
 import { GetResourceConfigHistoryRequest } from './types/index';
 import { GetResourceConfigHistoryResponse } from './types/index';
+import { ListAccountGroupConformancePackTemplatesRequest } from './types/index';
+import { ListAccountGroupConformancePackTemplatesResponse } from './types/index';
+import { ListAccountGroupConformancePacksRequest } from './types/index';
+import { ListAccountGroupConformancePacksResponse } from './types/index';
+import { ListAccountGroupDeliveryChannelsRequest } from './types/index';
+import { ListAccountGroupDeliveryChannelsResponse } from './types/index';
 import { ListAccountGroupDiscoveredResourcesRequest } from './types/index';
 import { ListAccountGroupDiscoveredResourcesResponse } from './types/index';
+import { ListAccountGroupEvaluationResultsRequest } from './types/index';
+import { ListAccountGroupEvaluationResultsResponse } from './types/index';
 import { ListAccountGroupMembersRequest } from './types/index';
 import { ListAccountGroupMembersResponse } from './types/index';
+import { ListAccountGroupRuleTemplatesRequest } from './types/index';
+import { ListAccountGroupRuleTemplatesResponse } from './types/index';
+import { ListAccountGroupRulesRequest } from './types/index';
+import { ListAccountGroupRulesResponse } from './types/index';
 import { ListAccountGroupsRequest } from './types/index';
 import { ListAccountGroupsResponse } from './types/index';
+import { ListConformancePackTemplatesRequest } from './types/index';
+import { ListConformancePackTemplatesResponse } from './types/index';
+import { ListConformancePacksRequest } from './types/index';
+import { ListConformancePacksResponse } from './types/index';
+import { ListDeliveryChannelsRequest } from './types/index';
+import { ListDeliveryChannelsResponse } from './types/index';
 import { ListDiscoveredResourcesRequest } from './types/index';
 import { ListDiscoveredResourcesResponse } from './types/index';
+import { ListEvaluationResultsRequest } from './types/index';
+import { ListEvaluationResultsResponse } from './types/index';
+import { ListRuleTemplatesRequest } from './types/index';
+import { ListRuleTemplatesResponse } from './types/index';
+import { ListRulesRequest } from './types/index';
+import { ListRulesResponse } from './types/index';
+import { ListSupportedResourceTypeRequest } from './types/index';
+import { ListSupportedResourceTypeResponse } from './types/index';
+import { ListSupportedResourceTypesRequest } from './types/index';
+import { ListSupportedResourceTypesResponse } from './types/index';
+import { PutAccountGroupResourceExemptionRequest } from './types/index';
+import { PutAccountGroupResourceExemptionResponse } from './types/index';
 import { PutConfigurationRecorderRequest } from './types/index';
 import { PutConfigurationRecorderResponse } from './types/index';
+import { PutResourceExemptionRequest } from './types/index';
+import { PutResourceExemptionResponse } from './types/index';
+import { StartAccountGroupRuleEvaluationRequest } from './types/index';
+import { StartAccountGroupRuleEvaluationResponse } from './types/index';
 import { StartConfigurationRecorderRequest } from './types/index';
 import { StartConfigurationRecorderResponse } from './types/index';
+import { StartRuleEvaluationRequest } from './types/index';
+import { StartRuleEvaluationResponse } from './types/index';
 import { StopConfigurationRecorderRequest } from './types/index';
 import { StopConfigurationRecorderResponse } from './types/index';
+import { UpdateAccountGroupConformancePackRequest } from './types/index';
+import { UpdateAccountGroupConformancePackResponse } from './types/index';
+import { UpdateAccountGroupConformancePackTemplateRequest } from './types/index';
+import { UpdateAccountGroupConformancePackTemplateResponse } from './types/index';
+import { UpdateAccountGroupDeliveryChannelRequest } from './types/index';
+import { UpdateAccountGroupDeliveryChannelResponse } from './types/index';
 import { UpdateAccountGroupRequest } from './types/index';
 import { UpdateAccountGroupResponse } from './types/index';
+import { UpdateAccountGroupRuleRequest } from './types/index';
+import { UpdateAccountGroupRuleResponse } from './types/index';
+import { UpdateAccountGroupRuleTemplateRequest } from './types/index';
+import { UpdateAccountGroupRuleTemplateResponse } from './types/index';
+import { UpdateConformancePackRequest } from './types/index';
+import { UpdateConformancePackResponse } from './types/index';
+import { UpdateConformancePackTemplateRequest } from './types/index';
+import { UpdateConformancePackTemplateResponse } from './types/index';
+import { UpdateDeliveryChannelRequest } from './types/index';
+import { UpdateDeliveryChannelResponse } from './types/index';
+import { UpdateRuleRequest } from './types/index';
+import { UpdateRuleResponse } from './types/index';
+import { UpdateRuleTemplateRequest } from './types/index';
+import { UpdateRuleTemplateResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
 export type AssociateAccountGroupPrincipalsCommandOutput = CommandOutput<AssociateAccountGroupPrincipalsResponse>;
 export type CreateAccountGroupCommandOutput = CommandOutput<CreateAccountGroupResponse>;
+export type CreateAccountGroupConformancePackCommandOutput = CommandOutput<CreateAccountGroupConformancePackResponse>;
+export type CreateAccountGroupConformancePackTemplateCommandOutput = CommandOutput<CreateAccountGroupConformancePackTemplateResponse>;
+export type CreateAccountGroupDeliveryChannelCommandOutput = CommandOutput<CreateAccountGroupDeliveryChannelResponse>;
+export type CreateAccountGroupRuleCommandOutput = CommandOutput<CreateAccountGroupRuleResponse>;
+export type CreateAccountGroupRuleTemplateCommandOutput = CommandOutput<CreateAccountGroupRuleTemplateResponse>;
+export type CreateConformancePackCommandOutput = CommandOutput<CreateConformancePackResponse>;
+export type CreateConformancePackTemplateCommandOutput = CommandOutput<CreateConformancePackTemplateResponse>;
+export type CreateDeliveryChannelCommandOutput = CommandOutput<CreateDeliveryChannelResponse>;
+export type CreateRuleCommandOutput = CommandOutput<CreateRuleResponse>;
+export type CreateRuleTemplateCommandOutput = CommandOutput<CreateRuleTemplateResponse>;
 export type DeleteAccountGroupCommandOutput = CommandOutput<DeleteAccountGroupResponse>;
+export type DeleteAccountGroupConformancePackCommandOutput = CommandOutput<DeleteAccountGroupConformancePackResponse>;
+export type DeleteAccountGroupConformancePackTemplatesCommandOutput = CommandOutput<DeleteAccountGroupConformancePackTemplatesResponse>;
+export type DeleteAccountGroupDeliveryChannelCommandOutput = CommandOutput<DeleteAccountGroupDeliveryChannelResponse>;
+export type DeleteAccountGroupRuleCommandOutput = CommandOutput<DeleteAccountGroupRuleResponse>;
+export type DeleteAccountGroupRuleTemplatesCommandOutput = CommandOutput<DeleteAccountGroupRuleTemplatesResponse>;
+export type DeleteConformancePackCommandOutput = CommandOutput<DeleteConformancePackResponse>;
+export type DeleteConformancePackTemplatesCommandOutput = CommandOutput<DeleteConformancePackTemplatesResponse>;
+export type DeleteDeliveryChannelCommandOutput = CommandOutput<DeleteDeliveryChannelResponse>;
+export type DeleteRuleCommandOutput = CommandOutput<DeleteRuleResponse>;
+export type DeleteRuleTemplatesCommandOutput = CommandOutput<DeleteRuleTemplatesResponse>;
+export type DescribeAccountGroupComplianceByConformancePacksCommandOutput = CommandOutput<DescribeAccountGroupComplianceByConformancePacksResponse>;
+export type DescribeAccountGroupComplianceByResourcesCommandOutput = CommandOutput<DescribeAccountGroupComplianceByResourcesResponse>;
+export type DescribeAccountGroupComplianceByRulesCommandOutput = CommandOutput<DescribeAccountGroupComplianceByRulesResponse>;
+export type DescribeAccountGroupConformancePackTemplatesCommandOutput = CommandOutput<DescribeAccountGroupConformancePackTemplatesResponse>;
+export type DescribeAccountGroupConformancePacksCommandOutput = CommandOutput<DescribeAccountGroupConformancePacksResponse>;
+export type DescribeAccountGroupDeliveryChannelCommandOutput = CommandOutput<DescribeAccountGroupDeliveryChannelResponse>;
+export type DescribeAccountGroupResourceExemptionsCommandOutput = CommandOutput<DescribeAccountGroupResourceExemptionsResponse>;
+export type DescribeAccountGroupRuleTemplatesCommandOutput = CommandOutput<DescribeAccountGroupRuleTemplatesResponse>;
+export type DescribeAccountGroupRulesCommandOutput = CommandOutput<DescribeAccountGroupRulesResponse>;
 export type DescribeAccountGroupsCommandOutput = CommandOutput<DescribeAccountGroupsResponse>;
+export type DescribeComplianceByConformancePacksCommandOutput = CommandOutput<DescribeComplianceByConformancePacksResponse>;
+export type DescribeComplianceByResourcesCommandOutput = CommandOutput<DescribeComplianceByResourcesResponse>;
+export type DescribeComplianceByRulesCommandOutput = CommandOutput<DescribeComplianceByRulesResponse>;
 export type DescribeConfigurationRecordersCommandOutput = CommandOutput<DescribeConfigurationRecordersResponse>;
+export type DescribeConformancePackTemplatesCommandOutput = CommandOutput<DescribeConformancePackTemplatesResponse>;
+export type DescribeConformancePacksCommandOutput = CommandOutput<DescribeConformancePacksResponse>;
+export type DescribeDeliveryChannelCommandOutput = CommandOutput<DescribeDeliveryChannelResponse>;
+export type DescribeResourceExemptionsCommandOutput = CommandOutput<DescribeResourceExemptionsResponse>;
+export type DescribeRuleTemplatesCommandOutput = CommandOutput<DescribeRuleTemplatesResponse>;
+export type DescribeRulesCommandOutput = CommandOutput<DescribeRulesResponse>;
+export type DescribeSupportedResourceTypesCommandOutput = CommandOutput<DescribeSupportedResourceTypesResponse>;
+export type DisableAccountGroupResourceExemptionCommandOutput = CommandOutput<DisableAccountGroupResourceExemptionResponse>;
+export type DisableAccountGroupRuleCommandOutput = CommandOutput<DisableAccountGroupRuleResponse>;
+export type DisableResourceExemptionCommandOutput = CommandOutput<DisableResourceExemptionResponse>;
+export type DisableRuleCommandOutput = CommandOutput<DisableRuleResponse>;
 export type DisassociateAccountGroupPrincipalsCommandOutput = CommandOutput<DisassociateAccountGroupPrincipalsResponse>;
+export type EnableAccountGroupRuleCommandOutput = CommandOutput<EnableAccountGroupRuleResponse>;
+export type EnableRuleCommandOutput = CommandOutput<EnableRuleResponse>;
+export type GetAccountGroupComplianceHistoryCommandOutput = CommandOutput<GetAccountGroupComplianceHistoryResponse>;
 export type GetAccountGroupDiscoveredResourceCommandOutput = CommandOutput<GetAccountGroupDiscoveredResourceResponse>;
 export type GetAccountGroupDiscoveredResourceCountsCommandOutput = CommandOutput<GetAccountGroupDiscoveredResourceCountsResponse>;
 export type GetAccountGroupResourceConfigHistoryCommandOutput = CommandOutput<GetAccountGroupResourceConfigHistoryResponse>;
+export type GetComplianceHistoryCommandOutput = CommandOutput<GetComplianceHistoryResponse>;
+export type GetComplianceSummaryCommandOutput = CommandOutput<GetComplianceSummaryResponse>;
+export type GetComplianceSummaryByResourceCommandOutput = CommandOutput<GetComplianceSummaryByResourceResponse>;
 export type GetDiscoveredResourceCommandOutput = CommandOutput<GetDiscoveredResourceResponse>;
 export type GetDiscoveredResourceCountsCommandOutput = CommandOutput<GetDiscoveredResourceCountsResponse>;
+export type GetOrganizationComplianceSummaryCommandOutput = CommandOutput<GetOrganizationComplianceSummaryResponse>;
+export type GetOrganizationComplianceSummaryByResourceCommandOutput = CommandOutput<GetOrganizationComplianceSummaryByResourceResponse>;
 export type GetOrganizationDiscoveredResourceCountsCommandOutput = CommandOutput<GetOrganizationDiscoveredResourceCountsResponse>;
 export type GetResourceConfigHistoryCommandOutput = CommandOutput<GetResourceConfigHistoryResponse>;
+export type ListAccountGroupConformancePackTemplatesCommandOutput = CommandOutput<ListAccountGroupConformancePackTemplatesResponse>;
+export type ListAccountGroupConformancePacksCommandOutput = CommandOutput<ListAccountGroupConformancePacksResponse>;
+export type ListAccountGroupDeliveryChannelsCommandOutput = CommandOutput<ListAccountGroupDeliveryChannelsResponse>;
 export type ListAccountGroupDiscoveredResourcesCommandOutput = CommandOutput<ListAccountGroupDiscoveredResourcesResponse>;
+export type ListAccountGroupEvaluationResultsCommandOutput = CommandOutput<ListAccountGroupEvaluationResultsResponse>;
 export type ListAccountGroupMembersCommandOutput = CommandOutput<ListAccountGroupMembersResponse>;
+export type ListAccountGroupRuleTemplatesCommandOutput = CommandOutput<ListAccountGroupRuleTemplatesResponse>;
+export type ListAccountGroupRulesCommandOutput = CommandOutput<ListAccountGroupRulesResponse>;
 export type ListAccountGroupsCommandOutput = CommandOutput<ListAccountGroupsResponse>;
+export type ListConformancePackTemplatesCommandOutput = CommandOutput<ListConformancePackTemplatesResponse>;
+export type ListConformancePacksCommandOutput = CommandOutput<ListConformancePacksResponse>;
+export type ListDeliveryChannelsCommandOutput = CommandOutput<ListDeliveryChannelsResponse>;
 export type ListDiscoveredResourcesCommandOutput = CommandOutput<ListDiscoveredResourcesResponse>;
+export type ListEvaluationResultsCommandOutput = CommandOutput<ListEvaluationResultsResponse>;
+export type ListRuleTemplatesCommandOutput = CommandOutput<ListRuleTemplatesResponse>;
+export type ListRulesCommandOutput = CommandOutput<ListRulesResponse>;
+export type ListSupportedResourceTypeCommandOutput = CommandOutput<ListSupportedResourceTypeResponse>;
+export type ListSupportedResourceTypesCommandOutput = CommandOutput<ListSupportedResourceTypesResponse>;
+export type PutAccountGroupResourceExemptionCommandOutput = CommandOutput<PutAccountGroupResourceExemptionResponse>;
 export type PutConfigurationRecorderCommandOutput = CommandOutput<PutConfigurationRecorderResponse>;
+export type PutResourceExemptionCommandOutput = CommandOutput<PutResourceExemptionResponse>;
+export type StartAccountGroupRuleEvaluationCommandOutput = CommandOutput<StartAccountGroupRuleEvaluationResponse>;
 export type StartConfigurationRecorderCommandOutput = CommandOutput<StartConfigurationRecorderResponse>;
+export type StartRuleEvaluationCommandOutput = CommandOutput<StartRuleEvaluationResponse>;
 export type StopConfigurationRecorderCommandOutput = CommandOutput<StopConfigurationRecorderResponse>;
 export type UpdateAccountGroupCommandOutput = CommandOutput<UpdateAccountGroupResponse>;
-
+export type UpdateAccountGroupConformancePackCommandOutput = CommandOutput<UpdateAccountGroupConformancePackResponse>;
+export type UpdateAccountGroupConformancePackTemplateCommandOutput = CommandOutput<UpdateAccountGroupConformancePackTemplateResponse>;
+export type UpdateAccountGroupDeliveryChannelCommandOutput = CommandOutput<UpdateAccountGroupDeliveryChannelResponse>;
+export type UpdateAccountGroupRuleCommandOutput = CommandOutput<UpdateAccountGroupRuleResponse>;
+export type UpdateAccountGroupRuleTemplateCommandOutput = CommandOutput<UpdateAccountGroupRuleTemplateResponse>;
+export type UpdateConformancePackCommandOutput = CommandOutput<UpdateConformancePackResponse>;
+export type UpdateConformancePackTemplateCommandOutput = CommandOutput<UpdateConformancePackTemplateResponse>;
+export type UpdateDeliveryChannelCommandOutput = CommandOutput<UpdateDeliveryChannelResponse>;
+export type UpdateRuleCommandOutput = CommandOutput<UpdateRuleResponse>;
+export type UpdateRuleTemplateCommandOutput = CommandOutput<UpdateRuleTemplateResponse>;
 
 /**
  * CONFIGClient Service Client
@@ -127,6 +363,156 @@ export class CreateAccountGroupCommand extends Command<
   }
 }
 /**
+ * Command to CreateAccountGroupConformancePack
+ */
+export class CreateAccountGroupConformancePackCommand extends Command<
+  CreateAccountGroupConformancePackRequest,
+  CreateAccountGroupConformancePackCommandOutput,
+  'CreateAccountGroupConformancePackCommand'
+> {
+  static readonly metaPath = '/CreateAccountGroupConformancePack/2025-01-01/config/post/application_json/';
+
+  constructor(input: CreateAccountGroupConformancePackRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateAccountGroupConformancePackCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateAccountGroupConformancePackTemplate
+ */
+export class CreateAccountGroupConformancePackTemplateCommand extends Command<
+  CreateAccountGroupConformancePackTemplateRequest,
+  CreateAccountGroupConformancePackTemplateCommandOutput,
+  'CreateAccountGroupConformancePackTemplateCommand'
+> {
+  static readonly metaPath = '/CreateAccountGroupConformancePackTemplate/2025-01-01/config/post/application_json/';
+
+  constructor(input: CreateAccountGroupConformancePackTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateAccountGroupConformancePackTemplateCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateAccountGroupDeliveryChannel
+ */
+export class CreateAccountGroupDeliveryChannelCommand extends Command<
+  CreateAccountGroupDeliveryChannelRequest,
+  CreateAccountGroupDeliveryChannelCommandOutput,
+  'CreateAccountGroupDeliveryChannelCommand'
+> {
+  static readonly metaPath = '/CreateAccountGroupDeliveryChannel/2025-01-01/config/post/application_json/';
+
+  constructor(input: CreateAccountGroupDeliveryChannelRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateAccountGroupDeliveryChannelCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateAccountGroupRule
+ */
+export class CreateAccountGroupRuleCommand extends Command<
+  CreateAccountGroupRuleRequest,
+  CreateAccountGroupRuleCommandOutput,
+  'CreateAccountGroupRuleCommand'
+> {
+  static readonly metaPath = '/CreateAccountGroupRule/2025-01-01/config/post/application_json/';
+
+  constructor(input: CreateAccountGroupRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateAccountGroupRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateAccountGroupRuleTemplate
+ */
+export class CreateAccountGroupRuleTemplateCommand extends Command<
+  CreateAccountGroupRuleTemplateRequest,
+  CreateAccountGroupRuleTemplateCommandOutput,
+  'CreateAccountGroupRuleTemplateCommand'
+> {
+  static readonly metaPath = '/CreateAccountGroupRuleTemplate/2025-01-01/config/post/application_json/';
+
+  constructor(input: CreateAccountGroupRuleTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateAccountGroupRuleTemplateCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateConformancePack
+ */
+export class CreateConformancePackCommand extends Command<
+  CreateConformancePackRequest,
+  CreateConformancePackCommandOutput,
+  'CreateConformancePackCommand'
+> {
+  static readonly metaPath = '/CreateConformancePack/2025-01-01/config/post/application_json/';
+
+  constructor(input: CreateConformancePackRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateConformancePackCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateConformancePackTemplate
+ */
+export class CreateConformancePackTemplateCommand extends Command<
+  CreateConformancePackTemplateRequest,
+  CreateConformancePackTemplateCommandOutput,
+  'CreateConformancePackTemplateCommand'
+> {
+  static readonly metaPath = '/CreateConformancePackTemplate/2025-01-01/config/post/application_json/';
+
+  constructor(input: CreateConformancePackTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateConformancePackTemplateCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateDeliveryChannel
+ */
+export class CreateDeliveryChannelCommand extends Command<
+  CreateDeliveryChannelRequest,
+  CreateDeliveryChannelCommandOutput,
+  'CreateDeliveryChannelCommand'
+> {
+  static readonly metaPath = '/CreateDeliveryChannel/2025-01-01/config/post/application_json/';
+
+  constructor(input: CreateDeliveryChannelRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateDeliveryChannelCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateRule
+ */
+export class CreateRuleCommand extends Command<
+  CreateRuleRequest,
+  CreateRuleCommandOutput,
+  'CreateRuleCommand'
+> {
+  static readonly metaPath = '/CreateRule/2025-01-01/config/post/application_json/';
+
+  constructor(input: CreateRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateRuleTemplate
+ */
+export class CreateRuleTemplateCommand extends Command<
+  CreateRuleTemplateRequest,
+  CreateRuleTemplateCommandOutput,
+  'CreateRuleTemplateCommand'
+> {
+  static readonly metaPath = '/CreateRuleTemplate/2025-01-01/config/post/application_json/';
+
+  constructor(input: CreateRuleTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateRuleTemplateCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteAccountGroup
  */
 export class DeleteAccountGroupCommand extends Command<
@@ -139,6 +525,291 @@ export class DeleteAccountGroupCommand extends Command<
   constructor(input: DeleteAccountGroupRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteAccountGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteAccountGroupConformancePack
+ */
+export class DeleteAccountGroupConformancePackCommand extends Command<
+  DeleteAccountGroupConformancePackRequest,
+  DeleteAccountGroupConformancePackCommandOutput,
+  'DeleteAccountGroupConformancePackCommand'
+> {
+  static readonly metaPath = '/DeleteAccountGroupConformancePack/2025-01-01/config/post/application_json/';
+
+  constructor(input: DeleteAccountGroupConformancePackRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAccountGroupConformancePackCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteAccountGroupConformancePackTemplates
+ */
+export class DeleteAccountGroupConformancePackTemplatesCommand extends Command<
+  DeleteAccountGroupConformancePackTemplatesRequest,
+  DeleteAccountGroupConformancePackTemplatesCommandOutput,
+  'DeleteAccountGroupConformancePackTemplatesCommand'
+> {
+  static readonly metaPath = '/DeleteAccountGroupConformancePackTemplates/2025-01-01/config/post/application_json/';
+
+  constructor(input: DeleteAccountGroupConformancePackTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAccountGroupConformancePackTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteAccountGroupDeliveryChannel
+ */
+export class DeleteAccountGroupDeliveryChannelCommand extends Command<
+  DeleteAccountGroupDeliveryChannelRequest,
+  DeleteAccountGroupDeliveryChannelCommandOutput,
+  'DeleteAccountGroupDeliveryChannelCommand'
+> {
+  static readonly metaPath = '/DeleteAccountGroupDeliveryChannel/2025-01-01/config/post/application_json/';
+
+  constructor(input: DeleteAccountGroupDeliveryChannelRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAccountGroupDeliveryChannelCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteAccountGroupRule
+ */
+export class DeleteAccountGroupRuleCommand extends Command<
+  DeleteAccountGroupRuleRequest,
+  DeleteAccountGroupRuleCommandOutput,
+  'DeleteAccountGroupRuleCommand'
+> {
+  static readonly metaPath = '/DeleteAccountGroupRule/2025-01-01/config/post/application_json/';
+
+  constructor(input: DeleteAccountGroupRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAccountGroupRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteAccountGroupRuleTemplates
+ */
+export class DeleteAccountGroupRuleTemplatesCommand extends Command<
+  DeleteAccountGroupRuleTemplatesRequest,
+  DeleteAccountGroupRuleTemplatesCommandOutput,
+  'DeleteAccountGroupRuleTemplatesCommand'
+> {
+  static readonly metaPath = '/DeleteAccountGroupRuleTemplates/2025-01-01/config/post/application_json/';
+
+  constructor(input: DeleteAccountGroupRuleTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAccountGroupRuleTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteConformancePack
+ */
+export class DeleteConformancePackCommand extends Command<
+  DeleteConformancePackRequest,
+  DeleteConformancePackCommandOutput,
+  'DeleteConformancePackCommand'
+> {
+  static readonly metaPath = '/DeleteConformancePack/2025-01-01/config/post/application_json/';
+
+  constructor(input: DeleteConformancePackRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteConformancePackCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteConformancePackTemplates
+ */
+export class DeleteConformancePackTemplatesCommand extends Command<
+  DeleteConformancePackTemplatesRequest,
+  DeleteConformancePackTemplatesCommandOutput,
+  'DeleteConformancePackTemplatesCommand'
+> {
+  static readonly metaPath = '/DeleteConformancePackTemplates/2025-01-01/config/post/application_json/';
+
+  constructor(input: DeleteConformancePackTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteConformancePackTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteDeliveryChannel
+ */
+export class DeleteDeliveryChannelCommand extends Command<
+  DeleteDeliveryChannelRequest,
+  DeleteDeliveryChannelCommandOutput,
+  'DeleteDeliveryChannelCommand'
+> {
+  static readonly metaPath = '/DeleteDeliveryChannel/2025-01-01/config/post/application_json/';
+
+  constructor(input: DeleteDeliveryChannelRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteDeliveryChannelCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteRule
+ */
+export class DeleteRuleCommand extends Command<
+  DeleteRuleRequest,
+  DeleteRuleCommandOutput,
+  'DeleteRuleCommand'
+> {
+  static readonly metaPath = '/DeleteRule/2025-01-01/config/post/application_json/';
+
+  constructor(input: DeleteRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteRuleTemplates
+ */
+export class DeleteRuleTemplatesCommand extends Command<
+  DeleteRuleTemplatesRequest,
+  DeleteRuleTemplatesCommandOutput,
+  'DeleteRuleTemplatesCommand'
+> {
+  static readonly metaPath = '/DeleteRuleTemplates/2025-01-01/config/post/application_json/';
+
+  constructor(input: DeleteRuleTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteRuleTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAccountGroupComplianceByConformancePacks
+ */
+export class DescribeAccountGroupComplianceByConformancePacksCommand extends Command<
+  DescribeAccountGroupComplianceByConformancePacksRequest,
+  DescribeAccountGroupComplianceByConformancePacksCommandOutput,
+  'DescribeAccountGroupComplianceByConformancePacksCommand'
+> {
+  static readonly metaPath = '/DescribeAccountGroupComplianceByConformancePacks/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeAccountGroupComplianceByConformancePacksRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAccountGroupComplianceByConformancePacksCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAccountGroupComplianceByResources
+ */
+export class DescribeAccountGroupComplianceByResourcesCommand extends Command<
+  DescribeAccountGroupComplianceByResourcesRequest,
+  DescribeAccountGroupComplianceByResourcesCommandOutput,
+  'DescribeAccountGroupComplianceByResourcesCommand'
+> {
+  static readonly metaPath = '/DescribeAccountGroupComplianceByResources/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeAccountGroupComplianceByResourcesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAccountGroupComplianceByResourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAccountGroupComplianceByRules
+ */
+export class DescribeAccountGroupComplianceByRulesCommand extends Command<
+  DescribeAccountGroupComplianceByRulesRequest,
+  DescribeAccountGroupComplianceByRulesCommandOutput,
+  'DescribeAccountGroupComplianceByRulesCommand'
+> {
+  static readonly metaPath = '/DescribeAccountGroupComplianceByRules/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeAccountGroupComplianceByRulesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAccountGroupComplianceByRulesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAccountGroupConformancePackTemplates
+ */
+export class DescribeAccountGroupConformancePackTemplatesCommand extends Command<
+  DescribeAccountGroupConformancePackTemplatesRequest,
+  DescribeAccountGroupConformancePackTemplatesCommandOutput,
+  'DescribeAccountGroupConformancePackTemplatesCommand'
+> {
+  static readonly metaPath = '/DescribeAccountGroupConformancePackTemplates/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeAccountGroupConformancePackTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAccountGroupConformancePackTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAccountGroupConformancePacks
+ */
+export class DescribeAccountGroupConformancePacksCommand extends Command<
+  DescribeAccountGroupConformancePacksRequest,
+  DescribeAccountGroupConformancePacksCommandOutput,
+  'DescribeAccountGroupConformancePacksCommand'
+> {
+  static readonly metaPath = '/DescribeAccountGroupConformancePacks/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeAccountGroupConformancePacksRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAccountGroupConformancePacksCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAccountGroupDeliveryChannel
+ */
+export class DescribeAccountGroupDeliveryChannelCommand extends Command<
+  DescribeAccountGroupDeliveryChannelRequest,
+  DescribeAccountGroupDeliveryChannelCommandOutput,
+  'DescribeAccountGroupDeliveryChannelCommand'
+> {
+  static readonly metaPath = '/DescribeAccountGroupDeliveryChannel/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeAccountGroupDeliveryChannelRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAccountGroupDeliveryChannelCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAccountGroupResourceExemptions
+ */
+export class DescribeAccountGroupResourceExemptionsCommand extends Command<
+  DescribeAccountGroupResourceExemptionsRequest,
+  DescribeAccountGroupResourceExemptionsCommandOutput,
+  'DescribeAccountGroupResourceExemptionsCommand'
+> {
+  static readonly metaPath = '/DescribeAccountGroupResourceExemptions/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeAccountGroupResourceExemptionsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAccountGroupResourceExemptionsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAccountGroupRuleTemplates
+ */
+export class DescribeAccountGroupRuleTemplatesCommand extends Command<
+  DescribeAccountGroupRuleTemplatesRequest,
+  DescribeAccountGroupRuleTemplatesCommandOutput,
+  'DescribeAccountGroupRuleTemplatesCommand'
+> {
+  static readonly metaPath = '/DescribeAccountGroupRuleTemplates/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeAccountGroupRuleTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAccountGroupRuleTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAccountGroupRules
+ */
+export class DescribeAccountGroupRulesCommand extends Command<
+  DescribeAccountGroupRulesRequest,
+  DescribeAccountGroupRulesCommandOutput,
+  'DescribeAccountGroupRulesCommand'
+> {
+  static readonly metaPath = '/DescribeAccountGroupRules/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeAccountGroupRulesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAccountGroupRulesCommand.metaPath);
   }
 }
 /**
@@ -157,6 +828,51 @@ export class DescribeAccountGroupsCommand extends Command<
   }
 }
 /**
+ * Command to DescribeComplianceByConformancePacks
+ */
+export class DescribeComplianceByConformancePacksCommand extends Command<
+  DescribeComplianceByConformancePacksRequest,
+  DescribeComplianceByConformancePacksCommandOutput,
+  'DescribeComplianceByConformancePacksCommand'
+> {
+  static readonly metaPath = '/DescribeComplianceByConformancePacks/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeComplianceByConformancePacksRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeComplianceByConformancePacksCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeComplianceByResources
+ */
+export class DescribeComplianceByResourcesCommand extends Command<
+  DescribeComplianceByResourcesRequest,
+  DescribeComplianceByResourcesCommandOutput,
+  'DescribeComplianceByResourcesCommand'
+> {
+  static readonly metaPath = '/DescribeComplianceByResources/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeComplianceByResourcesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeComplianceByResourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeComplianceByRules
+ */
+export class DescribeComplianceByRulesCommand extends Command<
+  DescribeComplianceByRulesRequest,
+  DescribeComplianceByRulesCommandOutput,
+  'DescribeComplianceByRulesCommand'
+> {
+  static readonly metaPath = '/DescribeComplianceByRules/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeComplianceByRulesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeComplianceByRulesCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeConfigurationRecorders
  */
 export class DescribeConfigurationRecordersCommand extends Command<
@@ -172,6 +888,171 @@ export class DescribeConfigurationRecordersCommand extends Command<
   }
 }
 /**
+ * Command to DescribeConformancePackTemplates
+ */
+export class DescribeConformancePackTemplatesCommand extends Command<
+  DescribeConformancePackTemplatesRequest,
+  DescribeConformancePackTemplatesCommandOutput,
+  'DescribeConformancePackTemplatesCommand'
+> {
+  static readonly metaPath = '/DescribeConformancePackTemplates/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeConformancePackTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeConformancePackTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeConformancePacks
+ */
+export class DescribeConformancePacksCommand extends Command<
+  DescribeConformancePacksRequest,
+  DescribeConformancePacksCommandOutput,
+  'DescribeConformancePacksCommand'
+> {
+  static readonly metaPath = '/DescribeConformancePacks/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeConformancePacksRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeConformancePacksCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeDeliveryChannel
+ */
+export class DescribeDeliveryChannelCommand extends Command<
+  DescribeDeliveryChannelRequest,
+  DescribeDeliveryChannelCommandOutput,
+  'DescribeDeliveryChannelCommand'
+> {
+  static readonly metaPath = '/DescribeDeliveryChannel/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeDeliveryChannelRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeDeliveryChannelCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeResourceExemptions
+ */
+export class DescribeResourceExemptionsCommand extends Command<
+  DescribeResourceExemptionsRequest,
+  DescribeResourceExemptionsCommandOutput,
+  'DescribeResourceExemptionsCommand'
+> {
+  static readonly metaPath = '/DescribeResourceExemptions/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeResourceExemptionsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeResourceExemptionsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeRuleTemplates
+ */
+export class DescribeRuleTemplatesCommand extends Command<
+  DescribeRuleTemplatesRequest,
+  DescribeRuleTemplatesCommandOutput,
+  'DescribeRuleTemplatesCommand'
+> {
+  static readonly metaPath = '/DescribeRuleTemplates/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeRuleTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeRuleTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeRules
+ */
+export class DescribeRulesCommand extends Command<
+  DescribeRulesRequest,
+  DescribeRulesCommandOutput,
+  'DescribeRulesCommand'
+> {
+  static readonly metaPath = '/DescribeRules/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeRulesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeRulesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeSupportedResourceTypes
+ */
+export class DescribeSupportedResourceTypesCommand extends Command<
+  DescribeSupportedResourceTypesRequest,
+  DescribeSupportedResourceTypesCommandOutput,
+  'DescribeSupportedResourceTypesCommand'
+> {
+  static readonly metaPath = '/DescribeSupportedResourceTypes/2025-01-01/config/post/application_json/';
+
+  constructor(input: DescribeSupportedResourceTypesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeSupportedResourceTypesCommand.metaPath);
+  }
+}
+/**
+ * Command to DisableAccountGroupResourceExemption
+ */
+export class DisableAccountGroupResourceExemptionCommand extends Command<
+  DisableAccountGroupResourceExemptionRequest,
+  DisableAccountGroupResourceExemptionCommandOutput,
+  'DisableAccountGroupResourceExemptionCommand'
+> {
+  static readonly metaPath = '/DisableAccountGroupResourceExemption/2025-01-01/config/post/application_json/';
+
+  constructor(input: DisableAccountGroupResourceExemptionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisableAccountGroupResourceExemptionCommand.metaPath);
+  }
+}
+/**
+ * Command to DisableAccountGroupRule
+ */
+export class DisableAccountGroupRuleCommand extends Command<
+  DisableAccountGroupRuleRequest,
+  DisableAccountGroupRuleCommandOutput,
+  'DisableAccountGroupRuleCommand'
+> {
+  static readonly metaPath = '/DisableAccountGroupRule/2025-01-01/config/post/application_json/';
+
+  constructor(input: DisableAccountGroupRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisableAccountGroupRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to DisableResourceExemption
+ */
+export class DisableResourceExemptionCommand extends Command<
+  DisableResourceExemptionRequest,
+  DisableResourceExemptionCommandOutput,
+  'DisableResourceExemptionCommand'
+> {
+  static readonly metaPath = '/DisableResourceExemption/2025-01-01/config/post/application_json/';
+
+  constructor(input: DisableResourceExemptionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisableResourceExemptionCommand.metaPath);
+  }
+}
+/**
+ * Command to DisableRule
+ */
+export class DisableRuleCommand extends Command<
+  DisableRuleRequest,
+  DisableRuleCommandOutput,
+  'DisableRuleCommand'
+> {
+  static readonly metaPath = '/DisableRule/2025-01-01/config/post/application_json/';
+
+  constructor(input: DisableRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisableRuleCommand.metaPath);
+  }
+}
+/**
  * Command to DisassociateAccountGroupPrincipals
  */
 export class DisassociateAccountGroupPrincipalsCommand extends Command<
@@ -184,6 +1065,51 @@ export class DisassociateAccountGroupPrincipalsCommand extends Command<
   constructor(input: DisassociateAccountGroupPrincipalsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DisassociateAccountGroupPrincipalsCommand.metaPath);
+  }
+}
+/**
+ * Command to EnableAccountGroupRule
+ */
+export class EnableAccountGroupRuleCommand extends Command<
+  EnableAccountGroupRuleRequest,
+  EnableAccountGroupRuleCommandOutput,
+  'EnableAccountGroupRuleCommand'
+> {
+  static readonly metaPath = '/EnableAccountGroupRule/2025-01-01/config/post/application_json/';
+
+  constructor(input: EnableAccountGroupRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnableAccountGroupRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to EnableRule
+ */
+export class EnableRuleCommand extends Command<
+  EnableRuleRequest,
+  EnableRuleCommandOutput,
+  'EnableRuleCommand'
+> {
+  static readonly metaPath = '/EnableRule/2025-01-01/config/post/application_json/';
+
+  constructor(input: EnableRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnableRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAccountGroupComplianceHistory
+ */
+export class GetAccountGroupComplianceHistoryCommand extends Command<
+  GetAccountGroupComplianceHistoryRequest,
+  GetAccountGroupComplianceHistoryCommandOutput,
+  'GetAccountGroupComplianceHistoryCommand'
+> {
+  static readonly metaPath = '/GetAccountGroupComplianceHistory/2025-01-01/config/post/application_json/';
+
+  constructor(input: GetAccountGroupComplianceHistoryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAccountGroupComplianceHistoryCommand.metaPath);
   }
 }
 /**
@@ -232,6 +1158,51 @@ export class GetAccountGroupResourceConfigHistoryCommand extends Command<
   }
 }
 /**
+ * Command to GetComplianceHistory
+ */
+export class GetComplianceHistoryCommand extends Command<
+  GetComplianceHistoryRequest,
+  GetComplianceHistoryCommandOutput,
+  'GetComplianceHistoryCommand'
+> {
+  static readonly metaPath = '/GetComplianceHistory/2025-01-01/config/post/application_json/';
+
+  constructor(input: GetComplianceHistoryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetComplianceHistoryCommand.metaPath);
+  }
+}
+/**
+ * Command to GetComplianceSummary
+ */
+export class GetComplianceSummaryCommand extends Command<
+  GetComplianceSummaryRequest,
+  GetComplianceSummaryCommandOutput,
+  'GetComplianceSummaryCommand'
+> {
+  static readonly metaPath = '/GetComplianceSummary/2025-01-01/config/post/application_json/';
+
+  constructor(input: GetComplianceSummaryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetComplianceSummaryCommand.metaPath);
+  }
+}
+/**
+ * Command to GetComplianceSummaryByResource
+ */
+export class GetComplianceSummaryByResourceCommand extends Command<
+  GetComplianceSummaryByResourceRequest,
+  GetComplianceSummaryByResourceCommandOutput,
+  'GetComplianceSummaryByResourceCommand'
+> {
+  static readonly metaPath = '/GetComplianceSummaryByResource/2025-01-01/config/post/application_json/';
+
+  constructor(input: GetComplianceSummaryByResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetComplianceSummaryByResourceCommand.metaPath);
+  }
+}
+/**
  * Command to GetDiscoveredResource
  */
 export class GetDiscoveredResourceCommand extends Command<
@@ -259,6 +1230,36 @@ export class GetDiscoveredResourceCountsCommand extends Command<
   constructor(input: GetDiscoveredResourceCountsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetDiscoveredResourceCountsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetOrganizationComplianceSummary
+ */
+export class GetOrganizationComplianceSummaryCommand extends Command<
+  GetOrganizationComplianceSummaryRequest,
+  GetOrganizationComplianceSummaryCommandOutput,
+  'GetOrganizationComplianceSummaryCommand'
+> {
+  static readonly metaPath = '/GetOrganizationComplianceSummary/2025-01-01/config/post/application_json/';
+
+  constructor(input: GetOrganizationComplianceSummaryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetOrganizationComplianceSummaryCommand.metaPath);
+  }
+}
+/**
+ * Command to GetOrganizationComplianceSummaryByResource
+ */
+export class GetOrganizationComplianceSummaryByResourceCommand extends Command<
+  GetOrganizationComplianceSummaryByResourceRequest,
+  GetOrganizationComplianceSummaryByResourceCommandOutput,
+  'GetOrganizationComplianceSummaryByResourceCommand'
+> {
+  static readonly metaPath = '/GetOrganizationComplianceSummaryByResource/2025-01-01/config/post/application_json/';
+
+  constructor(input: GetOrganizationComplianceSummaryByResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetOrganizationComplianceSummaryByResourceCommand.metaPath);
   }
 }
 /**
@@ -292,6 +1293,51 @@ export class GetResourceConfigHistoryCommand extends Command<
   }
 }
 /**
+ * Command to ListAccountGroupConformancePackTemplates
+ */
+export class ListAccountGroupConformancePackTemplatesCommand extends Command<
+  ListAccountGroupConformancePackTemplatesRequest,
+  ListAccountGroupConformancePackTemplatesCommandOutput,
+  'ListAccountGroupConformancePackTemplatesCommand'
+> {
+  static readonly metaPath = '/ListAccountGroupConformancePackTemplates/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListAccountGroupConformancePackTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAccountGroupConformancePackTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAccountGroupConformancePacks
+ */
+export class ListAccountGroupConformancePacksCommand extends Command<
+  ListAccountGroupConformancePacksRequest,
+  ListAccountGroupConformancePacksCommandOutput,
+  'ListAccountGroupConformancePacksCommand'
+> {
+  static readonly metaPath = '/ListAccountGroupConformancePacks/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListAccountGroupConformancePacksRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAccountGroupConformancePacksCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAccountGroupDeliveryChannels
+ */
+export class ListAccountGroupDeliveryChannelsCommand extends Command<
+  ListAccountGroupDeliveryChannelsRequest,
+  ListAccountGroupDeliveryChannelsCommandOutput,
+  'ListAccountGroupDeliveryChannelsCommand'
+> {
+  static readonly metaPath = '/ListAccountGroupDeliveryChannels/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListAccountGroupDeliveryChannelsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAccountGroupDeliveryChannelsCommand.metaPath);
+  }
+}
+/**
  * Command to ListAccountGroupDiscoveredResources
  */
 export class ListAccountGroupDiscoveredResourcesCommand extends Command<
@@ -304,6 +1350,21 @@ export class ListAccountGroupDiscoveredResourcesCommand extends Command<
   constructor(input: ListAccountGroupDiscoveredResourcesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListAccountGroupDiscoveredResourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAccountGroupEvaluationResults
+ */
+export class ListAccountGroupEvaluationResultsCommand extends Command<
+  ListAccountGroupEvaluationResultsRequest,
+  ListAccountGroupEvaluationResultsCommandOutput,
+  'ListAccountGroupEvaluationResultsCommand'
+> {
+  static readonly metaPath = '/ListAccountGroupEvaluationResults/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListAccountGroupEvaluationResultsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAccountGroupEvaluationResultsCommand.metaPath);
   }
 }
 /**
@@ -322,6 +1383,36 @@ export class ListAccountGroupMembersCommand extends Command<
   }
 }
 /**
+ * Command to ListAccountGroupRuleTemplates
+ */
+export class ListAccountGroupRuleTemplatesCommand extends Command<
+  ListAccountGroupRuleTemplatesRequest,
+  ListAccountGroupRuleTemplatesCommandOutput,
+  'ListAccountGroupRuleTemplatesCommand'
+> {
+  static readonly metaPath = '/ListAccountGroupRuleTemplates/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListAccountGroupRuleTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAccountGroupRuleTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAccountGroupRules
+ */
+export class ListAccountGroupRulesCommand extends Command<
+  ListAccountGroupRulesRequest,
+  ListAccountGroupRulesCommandOutput,
+  'ListAccountGroupRulesCommand'
+> {
+  static readonly metaPath = '/ListAccountGroupRules/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListAccountGroupRulesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAccountGroupRulesCommand.metaPath);
+  }
+}
+/**
  * Command to ListAccountGroups
  */
 export class ListAccountGroupsCommand extends Command<
@@ -334,6 +1425,51 @@ export class ListAccountGroupsCommand extends Command<
   constructor(input: ListAccountGroupsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListAccountGroupsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListConformancePackTemplates
+ */
+export class ListConformancePackTemplatesCommand extends Command<
+  ListConformancePackTemplatesRequest,
+  ListConformancePackTemplatesCommandOutput,
+  'ListConformancePackTemplatesCommand'
+> {
+  static readonly metaPath = '/ListConformancePackTemplates/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListConformancePackTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListConformancePackTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListConformancePacks
+ */
+export class ListConformancePacksCommand extends Command<
+  ListConformancePacksRequest,
+  ListConformancePacksCommandOutput,
+  'ListConformancePacksCommand'
+> {
+  static readonly metaPath = '/ListConformancePacks/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListConformancePacksRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListConformancePacksCommand.metaPath);
+  }
+}
+/**
+ * Command to ListDeliveryChannels
+ */
+export class ListDeliveryChannelsCommand extends Command<
+  ListDeliveryChannelsRequest,
+  ListDeliveryChannelsCommandOutput,
+  'ListDeliveryChannelsCommand'
+> {
+  static readonly metaPath = '/ListDeliveryChannels/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListDeliveryChannelsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDeliveryChannelsCommand.metaPath);
   }
 }
 /**
@@ -352,6 +1488,96 @@ export class ListDiscoveredResourcesCommand extends Command<
   }
 }
 /**
+ * Command to ListEvaluationResults
+ */
+export class ListEvaluationResultsCommand extends Command<
+  ListEvaluationResultsRequest,
+  ListEvaluationResultsCommandOutput,
+  'ListEvaluationResultsCommand'
+> {
+  static readonly metaPath = '/ListEvaluationResults/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListEvaluationResultsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListEvaluationResultsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRuleTemplates
+ */
+export class ListRuleTemplatesCommand extends Command<
+  ListRuleTemplatesRequest,
+  ListRuleTemplatesCommandOutput,
+  'ListRuleTemplatesCommand'
+> {
+  static readonly metaPath = '/ListRuleTemplates/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListRuleTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRuleTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRules
+ */
+export class ListRulesCommand extends Command<
+  ListRulesRequest,
+  ListRulesCommandOutput,
+  'ListRulesCommand'
+> {
+  static readonly metaPath = '/ListRules/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListRulesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRulesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListSupportedResourceType
+ */
+export class ListSupportedResourceTypeCommand extends Command<
+  ListSupportedResourceTypeRequest,
+  ListSupportedResourceTypeCommandOutput,
+  'ListSupportedResourceTypeCommand'
+> {
+  static readonly metaPath = '/ListSupportedResourceType/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListSupportedResourceTypeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListSupportedResourceTypeCommand.metaPath);
+  }
+}
+/**
+ * Command to ListSupportedResourceTypes
+ */
+export class ListSupportedResourceTypesCommand extends Command<
+  ListSupportedResourceTypesRequest,
+  ListSupportedResourceTypesCommandOutput,
+  'ListSupportedResourceTypesCommand'
+> {
+  static readonly metaPath = '/ListSupportedResourceTypes/2025-01-01/config/post/application_json/';
+
+  constructor(input: ListSupportedResourceTypesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListSupportedResourceTypesCommand.metaPath);
+  }
+}
+/**
+ * Command to PutAccountGroupResourceExemption
+ */
+export class PutAccountGroupResourceExemptionCommand extends Command<
+  PutAccountGroupResourceExemptionRequest,
+  PutAccountGroupResourceExemptionCommandOutput,
+  'PutAccountGroupResourceExemptionCommand'
+> {
+  static readonly metaPath = '/PutAccountGroupResourceExemption/2025-01-01/config/post/application_json/';
+
+  constructor(input: PutAccountGroupResourceExemptionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(PutAccountGroupResourceExemptionCommand.metaPath);
+  }
+}
+/**
  * Command to PutConfigurationRecorder
  */
 export class PutConfigurationRecorderCommand extends Command<
@@ -367,6 +1593,36 @@ export class PutConfigurationRecorderCommand extends Command<
   }
 }
 /**
+ * Command to PutResourceExemption
+ */
+export class PutResourceExemptionCommand extends Command<
+  PutResourceExemptionRequest,
+  PutResourceExemptionCommandOutput,
+  'PutResourceExemptionCommand'
+> {
+  static readonly metaPath = '/PutResourceExemption/2025-01-01/config/post/application_json/';
+
+  constructor(input: PutResourceExemptionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(PutResourceExemptionCommand.metaPath);
+  }
+}
+/**
+ * Command to StartAccountGroupRuleEvaluation
+ */
+export class StartAccountGroupRuleEvaluationCommand extends Command<
+  StartAccountGroupRuleEvaluationRequest,
+  StartAccountGroupRuleEvaluationCommandOutput,
+  'StartAccountGroupRuleEvaluationCommand'
+> {
+  static readonly metaPath = '/StartAccountGroupRuleEvaluation/2025-01-01/config/post/application_json/';
+
+  constructor(input: StartAccountGroupRuleEvaluationRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StartAccountGroupRuleEvaluationCommand.metaPath);
+  }
+}
+/**
  * Command to StartConfigurationRecorder
  */
 export class StartConfigurationRecorderCommand extends Command<
@@ -379,6 +1635,21 @@ export class StartConfigurationRecorderCommand extends Command<
   constructor(input: StartConfigurationRecorderRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(StartConfigurationRecorderCommand.metaPath);
+  }
+}
+/**
+ * Command to StartRuleEvaluation
+ */
+export class StartRuleEvaluationCommand extends Command<
+  StartRuleEvaluationRequest,
+  StartRuleEvaluationCommandOutput,
+  'StartRuleEvaluationCommand'
+> {
+  static readonly metaPath = '/StartRuleEvaluation/2025-01-01/config/post/application_json/';
+
+  constructor(input: StartRuleEvaluationRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StartRuleEvaluationCommand.metaPath);
   }
 }
 /**
@@ -411,28 +1682,257 @@ export class UpdateAccountGroupCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateAccountGroupCommand.metaPath);
   }
 }
+/**
+ * Command to UpdateAccountGroupConformancePack
+ */
+export class UpdateAccountGroupConformancePackCommand extends Command<
+  UpdateAccountGroupConformancePackRequest,
+  UpdateAccountGroupConformancePackCommandOutput,
+  'UpdateAccountGroupConformancePackCommand'
+> {
+  static readonly metaPath = '/UpdateAccountGroupConformancePack/2025-01-01/config/post/application_json/';
+
+  constructor(input: UpdateAccountGroupConformancePackRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAccountGroupConformancePackCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateAccountGroupConformancePackTemplate
+ */
+export class UpdateAccountGroupConformancePackTemplateCommand extends Command<
+  UpdateAccountGroupConformancePackTemplateRequest,
+  UpdateAccountGroupConformancePackTemplateCommandOutput,
+  'UpdateAccountGroupConformancePackTemplateCommand'
+> {
+  static readonly metaPath = '/UpdateAccountGroupConformancePackTemplate/2025-01-01/config/post/application_json/';
+
+  constructor(input: UpdateAccountGroupConformancePackTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAccountGroupConformancePackTemplateCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateAccountGroupDeliveryChannel
+ */
+export class UpdateAccountGroupDeliveryChannelCommand extends Command<
+  UpdateAccountGroupDeliveryChannelRequest,
+  UpdateAccountGroupDeliveryChannelCommandOutput,
+  'UpdateAccountGroupDeliveryChannelCommand'
+> {
+  static readonly metaPath = '/UpdateAccountGroupDeliveryChannel/2025-01-01/config/post/application_json/';
+
+  constructor(input: UpdateAccountGroupDeliveryChannelRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAccountGroupDeliveryChannelCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateAccountGroupRule
+ */
+export class UpdateAccountGroupRuleCommand extends Command<
+  UpdateAccountGroupRuleRequest,
+  UpdateAccountGroupRuleCommandOutput,
+  'UpdateAccountGroupRuleCommand'
+> {
+  static readonly metaPath = '/UpdateAccountGroupRule/2025-01-01/config/post/application_json/';
+
+  constructor(input: UpdateAccountGroupRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAccountGroupRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateAccountGroupRuleTemplate
+ */
+export class UpdateAccountGroupRuleTemplateCommand extends Command<
+  UpdateAccountGroupRuleTemplateRequest,
+  UpdateAccountGroupRuleTemplateCommandOutput,
+  'UpdateAccountGroupRuleTemplateCommand'
+> {
+  static readonly metaPath = '/UpdateAccountGroupRuleTemplate/2025-01-01/config/post/application_json/';
+
+  constructor(input: UpdateAccountGroupRuleTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAccountGroupRuleTemplateCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateConformancePack
+ */
+export class UpdateConformancePackCommand extends Command<
+  UpdateConformancePackRequest,
+  UpdateConformancePackCommandOutput,
+  'UpdateConformancePackCommand'
+> {
+  static readonly metaPath = '/UpdateConformancePack/2025-01-01/config/post/application_json/';
+
+  constructor(input: UpdateConformancePackRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateConformancePackCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateConformancePackTemplate
+ */
+export class UpdateConformancePackTemplateCommand extends Command<
+  UpdateConformancePackTemplateRequest,
+  UpdateConformancePackTemplateCommandOutput,
+  'UpdateConformancePackTemplateCommand'
+> {
+  static readonly metaPath = '/UpdateConformancePackTemplate/2025-01-01/config/post/application_json/';
+
+  constructor(input: UpdateConformancePackTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateConformancePackTemplateCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateDeliveryChannel
+ */
+export class UpdateDeliveryChannelCommand extends Command<
+  UpdateDeliveryChannelRequest,
+  UpdateDeliveryChannelCommandOutput,
+  'UpdateDeliveryChannelCommand'
+> {
+  static readonly metaPath = '/UpdateDeliveryChannel/2025-01-01/config/post/application_json/';
+
+  constructor(input: UpdateDeliveryChannelRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateDeliveryChannelCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateRule
+ */
+export class UpdateRuleCommand extends Command<
+  UpdateRuleRequest,
+  UpdateRuleCommandOutput,
+  'UpdateRuleCommand'
+> {
+  static readonly metaPath = '/UpdateRule/2025-01-01/config/post/application_json/';
+
+  constructor(input: UpdateRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateRuleTemplate
+ */
+export class UpdateRuleTemplateCommand extends Command<
+  UpdateRuleTemplateRequest,
+  UpdateRuleTemplateCommandOutput,
+  'UpdateRuleTemplateCommand'
+> {
+  static readonly metaPath = '/UpdateRuleTemplate/2025-01-01/config/post/application_json/';
+
+  constructor(input: UpdateRuleTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateRuleTemplateCommand.metaPath);
+  }
+}
 
 export default {
   CONFIGClient,
   AssociateAccountGroupPrincipalsCommand,
   CreateAccountGroupCommand,
+  CreateAccountGroupConformancePackCommand,
+  CreateAccountGroupConformancePackTemplateCommand,
+  CreateAccountGroupDeliveryChannelCommand,
+  CreateAccountGroupRuleCommand,
+  CreateAccountGroupRuleTemplateCommand,
+  CreateConformancePackCommand,
+  CreateConformancePackTemplateCommand,
+  CreateDeliveryChannelCommand,
+  CreateRuleCommand,
+  CreateRuleTemplateCommand,
   DeleteAccountGroupCommand,
+  DeleteAccountGroupConformancePackCommand,
+  DeleteAccountGroupConformancePackTemplatesCommand,
+  DeleteAccountGroupDeliveryChannelCommand,
+  DeleteAccountGroupRuleCommand,
+  DeleteAccountGroupRuleTemplatesCommand,
+  DeleteConformancePackCommand,
+  DeleteConformancePackTemplatesCommand,
+  DeleteDeliveryChannelCommand,
+  DeleteRuleCommand,
+  DeleteRuleTemplatesCommand,
+  DescribeAccountGroupComplianceByConformancePacksCommand,
+  DescribeAccountGroupComplianceByResourcesCommand,
+  DescribeAccountGroupComplianceByRulesCommand,
+  DescribeAccountGroupConformancePackTemplatesCommand,
+  DescribeAccountGroupConformancePacksCommand,
+  DescribeAccountGroupDeliveryChannelCommand,
+  DescribeAccountGroupResourceExemptionsCommand,
+  DescribeAccountGroupRuleTemplatesCommand,
+  DescribeAccountGroupRulesCommand,
   DescribeAccountGroupsCommand,
+  DescribeComplianceByConformancePacksCommand,
+  DescribeComplianceByResourcesCommand,
+  DescribeComplianceByRulesCommand,
   DescribeConfigurationRecordersCommand,
+  DescribeConformancePackTemplatesCommand,
+  DescribeConformancePacksCommand,
+  DescribeDeliveryChannelCommand,
+  DescribeResourceExemptionsCommand,
+  DescribeRuleTemplatesCommand,
+  DescribeRulesCommand,
+  DescribeSupportedResourceTypesCommand,
+  DisableAccountGroupResourceExemptionCommand,
+  DisableAccountGroupRuleCommand,
+  DisableResourceExemptionCommand,
+  DisableRuleCommand,
   DisassociateAccountGroupPrincipalsCommand,
+  EnableAccountGroupRuleCommand,
+  EnableRuleCommand,
+  GetAccountGroupComplianceHistoryCommand,
   GetAccountGroupDiscoveredResourceCommand,
   GetAccountGroupDiscoveredResourceCountsCommand,
   GetAccountGroupResourceConfigHistoryCommand,
+  GetComplianceHistoryCommand,
+  GetComplianceSummaryCommand,
+  GetComplianceSummaryByResourceCommand,
   GetDiscoveredResourceCommand,
   GetDiscoveredResourceCountsCommand,
+  GetOrganizationComplianceSummaryCommand,
+  GetOrganizationComplianceSummaryByResourceCommand,
   GetOrganizationDiscoveredResourceCountsCommand,
   GetResourceConfigHistoryCommand,
+  ListAccountGroupConformancePackTemplatesCommand,
+  ListAccountGroupConformancePacksCommand,
+  ListAccountGroupDeliveryChannelsCommand,
   ListAccountGroupDiscoveredResourcesCommand,
+  ListAccountGroupEvaluationResultsCommand,
   ListAccountGroupMembersCommand,
+  ListAccountGroupRuleTemplatesCommand,
+  ListAccountGroupRulesCommand,
   ListAccountGroupsCommand,
+  ListConformancePackTemplatesCommand,
+  ListConformancePacksCommand,
+  ListDeliveryChannelsCommand,
   ListDiscoveredResourcesCommand,
+  ListEvaluationResultsCommand,
+  ListRuleTemplatesCommand,
+  ListRulesCommand,
+  ListSupportedResourceTypeCommand,
+  ListSupportedResourceTypesCommand,
+  PutAccountGroupResourceExemptionCommand,
   PutConfigurationRecorderCommand,
+  PutResourceExemptionCommand,
+  StartAccountGroupRuleEvaluationCommand,
   StartConfigurationRecorderCommand,
+  StartRuleEvaluationCommand,
   StopConfigurationRecorderCommand,
   UpdateAccountGroupCommand,
+  UpdateAccountGroupConformancePackCommand,
+  UpdateAccountGroupConformancePackTemplateCommand,
+  UpdateAccountGroupDeliveryChannelCommand,
+  UpdateAccountGroupRuleCommand,
+  UpdateAccountGroupRuleTemplateCommand,
+  UpdateConformancePackCommand,
+  UpdateConformancePackTemplateCommand,
+  UpdateDeliveryChannelCommand,
+  UpdateRuleCommand,
+  UpdateRuleTemplateCommand,
 };

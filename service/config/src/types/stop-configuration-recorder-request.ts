@@ -24,5 +24,15 @@ export interface StopConfigurationRecorderRequest {
      * @type {string}
      * @memberof StopConfigurationRecorderRequest
      */
-    RecorderType: string;
+    RecorderType: StopConfigurationRecorderRequestRecorderTypeEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum StopConfigurationRecorderRequestRecorderTypeEnum {
+    SingleAccount = 'SingleAccount',
+    Organization = 'Organization'
+}
+

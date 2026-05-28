@@ -150,6 +150,7 @@ const defaultEndpoint: Record<string, ServiceEndpointInfo> = {
   arkclaw: { Service: "arkclaw", IsGlobal: false },
   insight: { Service: "insight", IsGlobal: true },
   cbr: { Service: "cbr", IsGlobal: false },
+  config: { Service: "config", IsGlobal: true },
 };
 
 const bootstrapRegion: Record<string, unknown> = {
