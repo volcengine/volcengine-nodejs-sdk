@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface DescribeFileMonitorOverviewResponse
+ * @interface BatchUnBanIPItemResponse
  */
-export interface DescribeFileMonitorOverviewResponse {
+export interface BatchUnBanIPItemResponse {
 
     /**
-     * @type {number}
-     * @memberof DescribeFileMonitorOverviewResponse
+     * @type {string}
+     * @memberof BatchUnBanIPItemResponse
      */
-    MonitorAgentCount?: number;
+    reason?: string;
 
     /**
-     * @type {number}
-     * @memberof DescribeFileMonitorOverviewResponse
+     * @type {boolean}
+     * @memberof BatchUnBanIPItemResponse
      */
-    MonitorDirectoryCount?: number;
+    success?: boolean;
 }

@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface DescribeFileMonitorOverviewResponse
+ * @interface DeleteUserAutoDefenseRuleResponse
  */
-export interface DescribeFileMonitorOverviewResponse {
+export interface DeleteUserAutoDefenseRuleResponse {
 
     /**
-     * @type {number}
-     * @memberof DescribeFileMonitorOverviewResponse
+     * @type {string}
+     * @memberof DeleteUserAutoDefenseRuleResponse
      */
-    MonitorAgentCount?: number;
+    ErrMsg?: string;
 
     /**
-     * @type {number}
-     * @memberof DescribeFileMonitorOverviewResponse
+     * @type {boolean}
+     * @memberof DeleteUserAutoDefenseRuleResponse
      */
-    MonitorDirectoryCount?: number;
+    Success?: boolean;
 }

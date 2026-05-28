@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface DescribeFileMonitorOverviewResponse
+ * @interface ModifyUserAutoDefenseRuleResponse
  */
-export interface DescribeFileMonitorOverviewResponse {
+export interface ModifyUserAutoDefenseRuleResponse {
 
     /**
-     * @type {number}
-     * @memberof DescribeFileMonitorOverviewResponse
+     * @type {string}
+     * @memberof ModifyUserAutoDefenseRuleResponse
      */
-    MonitorAgentCount?: number;
+    RuleID?: string;
 
     /**
-     * @type {number}
-     * @memberof DescribeFileMonitorOverviewResponse
+     * @type {boolean}
+     * @memberof ModifyUserAutoDefenseRuleResponse
      */
-    MonitorDirectoryCount?: number;
+    Success?: boolean;
 }

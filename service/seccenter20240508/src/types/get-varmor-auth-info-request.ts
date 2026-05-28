@@ -16,19 +16,7 @@
  * 
  *
  * @export
- * @interface DescribeFileMonitorOverviewResponse
+ * @interface GetVarmorAuthInfoRequest
  */
-export interface DescribeFileMonitorOverviewResponse {
-
-    /**
-     * @type {number}
-     * @memberof DescribeFileMonitorOverviewResponse
-     */
-    MonitorAgentCount?: number;
-
-    /**
-     * @type {number}
-     * @memberof DescribeFileMonitorOverviewResponse
-     */
-    MonitorDirectoryCount?: number;
+export interface GetVarmorAuthInfoRequest {
 }
