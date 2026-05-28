@@ -25,4 +25,472 @@ export interface TargetStyleMapForVideoProjectSerialDubTaskCreateInput {
      * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
      */
     af?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    af_ZA?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ar?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ar_AR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ar_DZ?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ar_SY?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ar_YE?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    be?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    bn?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    bn_BD?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    da?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    de?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    de_DE?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    en?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    en_DA?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    en_GB?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    en_IN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    en_PH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    en_SG?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    en_US?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    es?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    es_419?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    es_ES?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    es_US?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    fa_IR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    fil?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    fil_PH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    fr?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    fr_FR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    hi?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    hi_IN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    id?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    id_ID?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    it?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    it_IT?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ja?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ja_JP?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ka?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    kk_KZ?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    kl?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    km?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    km_KH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ko?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ko_KR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    mn?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ms?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ms_MY?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    my?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ne?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    pl?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    pl_PL?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    pt?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    pt_BR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    pt_PT?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ro?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ru?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ru_RU?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    sk?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    sl?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    sr?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    sv?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ta?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    te?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    th?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    th_TH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    tl_PH?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    tr?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    tr_TR?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    ur?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    uz?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    vi?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    vi_VN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    zh?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    zh_CN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    zh_HK?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    zh_Hans?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    zh_Hans_CN?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    zh_Hant?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetStyleMapForVideoProjectSerialDubTaskCreateInput
+     */
+    zh_TW?: string;
 }

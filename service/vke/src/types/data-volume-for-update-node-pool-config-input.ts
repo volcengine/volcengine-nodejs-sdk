@@ -21,6 +21,24 @@
 export interface DataVolumeForUpdateNodePoolConfigInput {
 
     /**
+     * @type {number}
+     * @memberof DataVolumeForUpdateNodePoolConfigInput
+     */
+    ExtraPerformanceIops?: number;
+
+    /**
+     * @type {number}
+     * @memberof DataVolumeForUpdateNodePoolConfigInput
+     */
+    ExtraPerformanceThroughputMb?: number;
+
+    /**
+     * @type {string}
+     * @memberof DataVolumeForUpdateNodePoolConfigInput
+     */
+    ExtraPerformanceTypeId?: DataVolumeForUpdateNodePoolConfigInputExtraPerformanceTypeIdEnum;
+
+    /**
      * @type {string}
      * @memberof DataVolumeForUpdateNodePoolConfigInput
      */
@@ -63,6 +81,15 @@ export interface DataVolumeForUpdateNodePoolConfigInput {
     Type?: DataVolumeForUpdateNodePoolConfigInputTypeEnum;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum DataVolumeForUpdateNodePoolConfigInputExtraPerformanceTypeIdEnum {
+    Balance = 'Balance',
+    IOPS = 'IOPS',
+    Throughput = 'Throughput'
+}
 /**
  * @export
  * @enum {string}

@@ -96,6 +96,8 @@ import { GetPodMetricRequest } from './types/index';
 import { GetPodMetricResponse } from './types/index';
 import { GetPodPropertyRequest } from './types/index';
 import { GetPodPropertyResponse } from './types/index';
+import { GetPreSignedEdgeURLRequest } from './types/index';
+import { GetPreSignedEdgeURLResponse } from './types/index';
 import { GetProductResourceRequest } from './types/index';
 import { GetProductResourceResponse } from './types/index';
 import { GetProxyRequest } from './types/index';
@@ -186,6 +188,8 @@ import { RunSyncCommandRequest } from './types/index';
 import { RunSyncCommandResponse } from './types/index';
 import { SetProxyRequest } from './types/index';
 import { SetProxyResponse } from './types/index';
+import { StartNetRedirectRequest } from './types/index';
+import { StartNetRedirectResponse } from './types/index';
 import { StartRecordingRequest } from './types/index';
 import { StartRecordingResponse } from './types/index';
 import { StartScreenShotRequest } from './types/index';
@@ -271,6 +275,7 @@ export type GetPhoneTemplateCommandOutput = CommandOutput<GetPhoneTemplateRespon
 export type GetPodAppListCommandOutput = CommandOutput<GetPodAppListResponse>;
 export type GetPodMetricCommandOutput = CommandOutput<GetPodMetricResponse>;
 export type GetPodPropertyCommandOutput = CommandOutput<GetPodPropertyResponse>;
+export type GetPreSignedEdgeURLCommandOutput = CommandOutput<GetPreSignedEdgeURLResponse>;
 export type GetProductResourceCommandOutput = CommandOutput<GetProductResourceResponse>;
 export type GetProxyCommandOutput = CommandOutput<GetProxyResponse>;
 export type GetTaskInfoCommandOutput = CommandOutput<GetTaskInfoResponse>;
@@ -316,6 +321,7 @@ export type RestorePodCommandOutput = CommandOutput<RestorePodResponse>;
 export type RunCommandCommandOutput = CommandOutput<RunCommandResponse>;
 export type RunSyncCommandCommandOutput = CommandOutput<RunSyncCommandResponse>;
 export type SetProxyCommandOutput = CommandOutput<SetProxyResponse>;
+export type StartNetRedirectCommandOutput = CommandOutput<StartNetRedirectResponse>;
 export type StartRecordingCommandOutput = CommandOutput<StartRecordingResponse>;
 export type StartScreenShotCommandOutput = CommandOutput<StartScreenShotResponse>;
 export type StopRecordingCommandOutput = CommandOutput<StopRecordingResponse>;
@@ -963,6 +969,21 @@ export class GetPodPropertyCommand extends Command<
   constructor(input: GetPodPropertyRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetPodPropertyCommand.metaPath);
+  }
+}
+/**
+ * Command to GetPreSignedEdgeURL
+ */
+export class GetPreSignedEdgeURLCommand extends Command<
+  GetPreSignedEdgeURLRequest,
+  GetPreSignedEdgeURLCommandOutput,
+  'GetPreSignedEdgeURLCommand'
+> {
+  static readonly metaPath = '/GetPreSignedEdgeURL/2025-05-01/acep/post/application_json/';
+
+  constructor(input: GetPreSignedEdgeURLRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetPreSignedEdgeURLCommand.metaPath);
   }
 }
 /**
@@ -1641,6 +1662,21 @@ export class SetProxyCommand extends Command<
   }
 }
 /**
+ * Command to StartNetRedirect
+ */
+export class StartNetRedirectCommand extends Command<
+  StartNetRedirectRequest,
+  StartNetRedirectCommandOutput,
+  'StartNetRedirectCommand'
+> {
+  static readonly metaPath = '/StartNetRedirect/2025-05-01/acep/post/application_json/';
+
+  constructor(input: StartNetRedirectRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StartNetRedirectCommand.metaPath);
+  }
+}
+/**
  * Command to StartRecording
  */
 export class StartRecordingCommand extends Command<
@@ -1984,6 +2020,7 @@ export default {
   GetPodAppListCommand,
   GetPodMetricCommand,
   GetPodPropertyCommand,
+  GetPreSignedEdgeURLCommand,
   GetProductResourceCommand,
   GetProxyCommand,
   GetTaskInfoCommand,
@@ -2029,6 +2066,7 @@ export default {
   RunCommandCommand,
   RunSyncCommandCommand,
   SetProxyCommand,
+  StartNetRedirectCommand,
   StartRecordingCommand,
   StartScreenShotCommand,
   StopRecordingCommand,

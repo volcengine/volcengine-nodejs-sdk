@@ -30,6 +30,12 @@ export interface NodeDetailInfoForDescribeDBInstancesOutput {
      * @type {string}
      * @memberof NodeDetailInfoForDescribeDBInstancesOutput
      */
+    HostName?: string;
+
+    /**
+     * @type {string}
+     * @memberof NodeDetailInfoForDescribeDBInstancesOutput
+     */
     InstanceId?: string;
 
     /**

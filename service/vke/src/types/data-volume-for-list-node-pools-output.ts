@@ -21,6 +21,24 @@
 export interface DataVolumeForListNodePoolsOutput {
 
     /**
+     * @type {number}
+     * @memberof DataVolumeForListNodePoolsOutput
+     */
+    ExtraPerformanceIops?: number;
+
+    /**
+     * @type {number}
+     * @memberof DataVolumeForListNodePoolsOutput
+     */
+    ExtraPerformanceThroughputMb?: number;
+
+    /**
+     * @type {string}
+     * @memberof DataVolumeForListNodePoolsOutput
+     */
+    ExtraPerformanceTypeId?: DataVolumeForListNodePoolsOutputExtraPerformanceTypeIdEnum;
+
+    /**
      * @type {string}
      * @memberof DataVolumeForListNodePoolsOutput
      */
@@ -63,6 +81,15 @@ export interface DataVolumeForListNodePoolsOutput {
     Type?: DataVolumeForListNodePoolsOutputTypeEnum;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum DataVolumeForListNodePoolsOutputExtraPerformanceTypeIdEnum {
+    Balance = 'Balance',
+    IOPS = 'IOPS',
+    Throughput = 'Throughput'
+}
 /**
  * @export
  * @enum {string}

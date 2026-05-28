@@ -43,6 +43,12 @@ export interface ConfigForListRemedyConfigsOutput {
     Drain?: DrainForListRemedyConfigsOutput;
 
     /**
+     * @type {Array<string>}
+     * @memberof ConfigForListRemedyConfigsOutput
+     */
+    IaasEvents?: Array<string>;
+
+    /**
      * @type {InterveneCordonForListRemedyConfigsOutput}
      * @memberof ConfigForListRemedyConfigsOutput
      */

@@ -81,6 +81,12 @@ export interface RowForListAOSPImageOutput {
     ImageStatusStr?: string;
 
     /**
+     * @type {string}
+     * @memberof RowForListAOSPImageOutput
+     */
+    PlatformType?: string;
+
+    /**
      * @type {number}
      * @memberof RowForListAOSPImageOutput
      */

@@ -19,4 +19,10 @@
  * @interface ExecContainerImageCommitmentResponse
  */
 export interface ExecContainerImageCommitmentResponse {
+
+    /**
+     * @type {string}
+     * @memberof ExecContainerImageCommitmentResponse
+     */
+    TaskId?: string;
 }

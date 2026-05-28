@@ -42,7 +42,7 @@ export interface DeleteNodesRequest {
      * @type {string}
      * @memberof DeleteNodesRequest
      */
-    NodePoolId: string;
+    NodePoolId?: string;
 
     /**
      * @type {Array<string>}

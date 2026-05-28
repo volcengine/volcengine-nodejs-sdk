@@ -45,6 +45,12 @@ export interface DescribeLensTasksRequest {
     LensTaskName?: string;
 
     /**
+     * @type {string}
+     * @memberof DescribeLensTasksRequest
+     */
+    MasterTaskId?: string;
+
+    /**
      * @type {number}
      * @memberof DescribeLensTasksRequest
      */
@@ -57,12 +63,26 @@ export interface DescribeLensTasksRequest {
     PageSize?: number;
 
     /**
+     * @type {string}
+     * @memberof DescribeLensTasksRequest
+     */
+    ScheduleType?: DescribeLensTasksRequestScheduleTypeEnum;
+
+    /**
      * @type {Array<string>}
      * @memberof DescribeLensTasksRequest
      */
     Status?: Array<DescribeLensTasksRequestStatusEnum>;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum DescribeLensTasksRequestScheduleTypeEnum {
+    Once = 'Once',
+    Timed = 'Timed'
+}
 /**
  * @export
  * @enum {string}

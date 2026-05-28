@@ -32,4 +32,10 @@ export interface ListAccountGroupMembersResponse {
      * @memberof ListAccountGroupMembersResponse
      */
     NextToken?: string;
+
+    /**
+     * @type {number}
+     * @memberof ListAccountGroupMembersResponse
+     */
+    TotalCount?: number;
 }

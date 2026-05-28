@@ -31,5 +31,18 @@ export interface StatusForListNodesOutput {
      * @type {string}
      * @memberof StatusForListNodesOutput
      */
-    Phase?: string;
+    Phase?: StatusForListNodesOutputPhaseEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum StatusForListNodesOutputPhaseEnum {
+    Creating = 'Creating',
+    Running = 'Running',
+    Deleting = 'Deleting',
+    Updating = 'Updating',
+    Failed = 'Failed'
+}
+

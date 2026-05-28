@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AffinityGroupConfigForCreateNodePoolInput } from './affinity-group-config-for-create-node-pool-input';
 import { DataVolumeForCreateNodePoolInput } from './data-volume-for-create-node-pool-input';
 import { InstancesDistributionForCreateNodePoolInput } from './instances-distribution-for-create-node-pool-input';
 import { PublicAccessConfigForCreateNodePoolInput } from './public-access-config-for-create-node-pool-input';
@@ -31,6 +32,12 @@ export interface NodeConfigForCreateNodePoolInput {
      * @memberof NodeConfigForCreateNodePoolInput
      */
     AdditionalContainerStorageEnabled?: boolean;
+
+    /**
+     * @type {AffinityGroupConfigForCreateNodePoolInput}
+     * @memberof NodeConfigForCreateNodePoolInput
+     */
+    AffinityGroupConfig?: AffinityGroupConfigForCreateNodePoolInput;
 
     /**
      * @type {boolean}
@@ -61,6 +68,12 @@ export interface NodeConfigForCreateNodePoolInput {
      * @memberof NodeConfigForCreateNodePoolInput
      */
     DeploymentSetId?: string;
+
+    /**
+     * @type {string}
+     * @memberof NodeConfigForCreateNodePoolInput
+     */
+    GpuDriverVersion?: string;
 
     /**
      * @type {string}

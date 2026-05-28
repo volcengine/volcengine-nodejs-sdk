@@ -15,6 +15,7 @@
 import { ContainerdConfigForCreateNodePoolInput } from './containerd-config-for-create-node-pool-input';
 import { KubeletConfigForCreateNodePoolInput } from './kubelet-config-for-create-node-pool-input';
 import { LabelForCreateNodePoolInput } from './label-for-create-node-pool-input';
+import { RuntimeForCreateNodePoolInput } from './runtime-for-create-node-pool-input';
 import { TaintForCreateNodePoolInput } from './taint-for-create-node-pool-input';
  /**
  * 
@@ -71,6 +72,12 @@ export interface KubernetesConfigForCreateNodePoolInput {
      * @memberof KubernetesConfigForCreateNodePoolInput
      */
     NameUseHostname?: boolean;
+
+    /**
+     * @type {RuntimeForCreateNodePoolInput}
+     * @memberof KubernetesConfigForCreateNodePoolInput
+     */
+    Runtime?: RuntimeForCreateNodePoolInput;
 
     /**
      * @type {Array<TaintForCreateNodePoolInput>}

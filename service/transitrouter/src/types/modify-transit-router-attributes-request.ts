@@ -24,6 +24,12 @@ export interface ModifyTransitRouterAttributesRequest {
      * @type {string}
      * @memberof ModifyTransitRouterAttributesRequest
      */
+    BillingOwnerType?: ModifyTransitRouterAttributesRequestBillingOwnerTypeEnum;
+
+    /**
+     * @type {string}
+     * @memberof ModifyTransitRouterAttributesRequest
+     */
     Description?: string;
 
     /**
@@ -38,3 +44,13 @@ export interface ModifyTransitRouterAttributesRequest {
      */
     TransitRouterName?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ModifyTransitRouterAttributesRequestBillingOwnerTypeEnum {
+    ResourceOwner = 'ResourceOwner',
+    TransitRouterOwner = 'TransitRouterOwner'
+}
+

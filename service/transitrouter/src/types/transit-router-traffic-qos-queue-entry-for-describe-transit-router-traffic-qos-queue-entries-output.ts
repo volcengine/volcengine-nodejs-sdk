@@ -54,6 +54,12 @@ export interface TransitRouterTrafficQosQueueEntryForDescribeTransitRouterTraffi
      * @type {string}
      * @memberof TransitRouterTrafficQosQueueEntryForDescribeTransitRouterTrafficQosQueueEntriesOutput
      */
+    Priority?: string;
+
+    /**
+     * @type {string}
+     * @memberof TransitRouterTrafficQosQueueEntryForDescribeTransitRouterTrafficQosQueueEntriesOutput
+     */
     Status?: string;
 
     /**

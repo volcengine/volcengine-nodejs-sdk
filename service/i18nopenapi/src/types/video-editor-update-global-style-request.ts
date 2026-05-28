@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { StyleConfigForVideoEditorUpdateGlobalStyleInput } from './style-config-for-video-editor-update-global-style-input';
  /**
  * 
  *
@@ -21,10 +22,10 @@
 export interface VideoEditorUpdateGlobalStyleRequest {
 
     /**
-     * @type {string}
+     * @type {StyleConfigForVideoEditorUpdateGlobalStyleInput}
      * @memberof VideoEditorUpdateGlobalStyleRequest
      */
-    style?: string;
+    styleConfig?: StyleConfigForVideoEditorUpdateGlobalStyleInput;
 
     /**
      * @type {string}
