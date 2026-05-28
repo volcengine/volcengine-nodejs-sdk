@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DataForVideoProjectVideoUploadOutput } from './data-for-video-project-video-upload-output';
  /**
  * 
  *
@@ -21,8 +22,8 @@
 export interface VideoProjectVideoUploadResponse {
 
     /**
-     * @type {string}
+     * @type {DataForVideoProjectVideoUploadOutput}
      * @memberof VideoProjectVideoUploadResponse
      */
-    batchId?: string;
+    data?: DataForVideoProjectVideoUploadOutput;
 }
