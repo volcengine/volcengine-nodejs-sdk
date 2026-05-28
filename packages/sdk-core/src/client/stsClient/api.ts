@@ -22,11 +22,19 @@ import {
 
 import { AssumeRoleRequest } from "./types/index";
 import { AssumeRoleResponse } from "./types/index";
+import { AssumeRoleWithOIDCRequest } from "./types/index";
+import { AssumeRoleWithOIDCResponse } from "./types/index";
+import { AssumeRoleWithSAMLRequest } from "./types/index";
+import { AssumeRoleWithSAMLResponse } from "./types/index";
 
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
 export type AssumeRoleCommandOutput = CommandOutput<AssumeRoleResponse>;
+
+export type AssumeRoleWithOIDCCommandOutput = CommandOutput<AssumeRoleWithOIDCResponse>;
+
+export type AssumeRoleWithSAMLCommandOutput = CommandOutput<AssumeRoleWithSAMLResponse>;
 
 /**
  * STSClient Service Client
@@ -54,7 +62,45 @@ export class AssumeRoleCommand extends Command<
   constructor(input: AssumeRoleRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(
-      AssumeRoleCommand.metaPath
+      AssumeRoleCommand.metaPath,
+    );
+  }
+}
+
+/**
+ * Command to AssumeRoleWithOIDC
+ */
+export class AssumeRoleWithOIDCCommand extends Command<
+  AssumeRoleWithOIDCRequest,
+  AssumeRoleWithOIDCCommandOutput,
+  "AssumeRoleWithOIDCCommand"
+> {
+  static readonly metaPath =
+    "/AssumeRoleWithOIDC/2018-01-01/sts/post/application_x-www-form-urlencoded/";
+
+  constructor(input: AssumeRoleWithOIDCRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(
+      AssumeRoleWithOIDCCommand.metaPath,
+    );
+  }
+}
+
+/**
+ * Command to AssumeRoleWithSAML
+ */
+export class AssumeRoleWithSAMLCommand extends Command<
+  AssumeRoleWithSAMLRequest,
+  AssumeRoleWithSAMLCommandOutput,
+  "AssumeRoleWithSAMLCommand"
+> {
+  static readonly metaPath =
+    "/AssumeRoleWithSAML/2018-01-01/sts/post/application_x-www-form-urlencoded/";
+
+  constructor(input: AssumeRoleWithSAMLRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(
+      AssumeRoleWithSAMLCommand.metaPath,
     );
   }
 }
@@ -62,4 +108,6 @@ export class AssumeRoleCommand extends Command<
 export default {
   STSClient,
   AssumeRoleCommand,
+  AssumeRoleWithOIDCCommand,
+  AssumeRoleWithSAMLCommand,
 };

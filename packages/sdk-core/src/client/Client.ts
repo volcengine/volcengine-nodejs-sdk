@@ -14,6 +14,8 @@ import {
   credentialsMiddleware,
   createRetryMiddleware,
   endpointMiddleware,
+  createPresignMiddleware,
+  debugMiddleware,
 } from "../middlewares";
 import {
   Request,
@@ -28,6 +30,7 @@ import type {
   SendOptions,
   CommandOutputMap,
 } from "../types/types";
+import type { Provider } from "../credentials/types";
 import { Command } from "../command/Command";
 import { dotNMiddleware } from "../middlewares/dotn";
 import { shouldRetry, calculateRetryDelay } from "../utils/retry";
@@ -61,22 +64,28 @@ export class Client {
   }
 
   setupDefaultMiddleware(): void {
+    // Debug middleware - log request/response when debug is enabled
+    this.middlewareStack.add(
+      debugMiddleware.middleware,
+      debugMiddleware.options,
+    );
+
     // Build middleware - set default headers
     this.middlewareStack.add(
       defaultHeadersMiddleware.middleware,
-      defaultHeadersMiddleware.options
+      defaultHeadersMiddleware.options,
     );
 
     // Build middleware - set credentials
     this.middlewareStack.add(
       credentialsMiddleware.middleware,
-      credentialsMiddleware.options
+      credentialsMiddleware.options,
     );
 
     // Build middleware - set endpoint
     this.middlewareStack.add(
       endpointMiddleware.middleware,
-      endpointMiddleware.options
+      endpointMiddleware.options,
     );
 
     this.middlewareStack.add(dotNMiddleware.middleware, dotNMiddleware.options);
@@ -84,7 +93,7 @@ export class Client {
     // Serialize middleware - handle request signing
     this.middlewareStack.add(
       signerMiddleware.middleware,
-      signerMiddleware.options
+      signerMiddleware.options,
     );
 
     // Finalize middleware - send actual HTTP request (highest priority within finalizeRequest)
@@ -95,18 +104,35 @@ export class Client {
     const retry = createRetryMiddleware(
       this.clock,
       (error) => shouldRetry(error),
-      (attempt, retryStrategy) => calculateRetryDelay(attempt, retryStrategy)
+      (attempt, retryStrategy) => calculateRetryDelay(attempt, retryStrategy),
     );
     this.middlewareStack.add(retry.middleware, retry.options);
+  }
+
+  /**
+   * Set the credential provider for this client.
+   *
+   * The provider will be called by the credentials middleware on every
+   * request to resolve AK/SK(/Token). Providers that return temporary
+   * credentials should handle caching & refresh internally.
+   *
+   * @example
+   * ```ts
+   * import { StaticCredentialProvider } from "@volcengine/sdk-core";
+   * client.setCredentials(new StaticCredentialProvider({ accessKeyId: "AK", secretAccessKey: "SK" }));
+   * ```
+   */
+  setCredentials(credentialProvider: Provider): void {
+    this.config = { ...this.config, credentialProvider };
   }
 
   async send<
     TInput extends CommandInput,
     TOutput extends any,
-    TCommandName extends keyof CommandOutputMap
+    TCommandName extends keyof CommandOutputMap,
   >(
     command: Command<TInput, TOutput, TCommandName>,
-    options?: SendOptions
+    options?: SendOptions,
   ): Promise<TOutput> {
     const stack = this.middlewareStack.merge(command.middlewareStack);
     const context: MiddlewareContext = {
@@ -174,6 +200,79 @@ export class Client {
     return result as any;
   }
 
+  async presign<
+    TInput extends CommandInput,
+    TOutput extends any,
+    TCommandName extends keyof CommandOutputMap,
+  >(command: Command<TInput, TOutput, TCommandName>): Promise<string> {
+    const stack = this.middlewareStack.merge(command.middlewareStack);
+    const presign = createPresignMiddleware();
+    stack.add(presign.middleware, presign.options);
+
+    const { handler, request } = this.createHandlerAndRequest(stack, command, {
+      host: this.config.host,
+      protocol: this.config.protocol || "https",
+      region: this.config.region || "cn-beijing",
+    });
+
+    const result = await handler({ input: command.input, request });
+
+    return result as string;
+  }
+
+  private createHandlerAndRequest<
+    TInput extends CommandInput,
+    TOutput extends any,
+    TCommandName extends keyof CommandOutputMap,
+  >(
+    stack: MiddlewareStack,
+    command: Command<TInput, TOutput, TCommandName>,
+    baseRequest: Request,
+  ): { handler: (args: Args) => Promise<any>; request: Request } {
+    const context: MiddlewareContext = {
+      clientName: this.constructor.name,
+      commandName: command.constructor.name,
+      clientConfig: this.config,
+      contentType: command.requestConfig?.contentType || "",
+    };
+    const handler = stack.resolve(async (args: Args) => args, context);
+
+    const request: Request = { ...baseRequest };
+
+    const config = command.requestConfig;
+    if (config) {
+      if (config.params) {
+        request.params = config.params;
+      }
+      if (config.method) {
+        request.method = config.method;
+      }
+      if (config.serviceName) {
+        request.serviceName = config.serviceName;
+      }
+      if (config.pathname) {
+        request.pathname = config.pathname;
+      }
+      const method = config.method?.toUpperCase();
+      if (method === "POST") {
+        request.body = command.input;
+      }
+
+      if (method === "GET") {
+        const inputParams =
+          command.input &&
+          typeof command.input === "object" &&
+          !Array.isArray(command.input)
+            ? (command.input as any)
+            : {};
+
+        request.params = { ...inputParams, ...(request.params || {}) };
+      }
+    }
+
+    return { handler, request };
+  }
+
   destroy(): void {
     // 清理 requestHandler 资源
     this.requestHandler.destroy?.();
@@ -186,7 +285,7 @@ export class Client {
   debugMiddlewareStack<
     TInput extends CommandInput,
     TOutput extends any,
-    TCommandName extends keyof CommandOutputMap
+    TCommandName extends keyof CommandOutputMap,
   >(command: Command<TInput, TOutput, TCommandName>): string {
     const mergedStack = this.middlewareStack.merge(command.middlewareStack);
     return mergedStack.toString();
@@ -194,7 +293,7 @@ export class Client {
 
   public addMiddleware(
     middleware: MiddlewareFunction,
-    options: MiddlewareStackOptions
+    options: MiddlewareStackOptions,
   ): void {
     this.middlewareStack.add(middleware, options);
   }

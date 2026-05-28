@@ -20,7 +20,7 @@ export const endpointMiddleware: {
       request.serviceName || "",
       request.region || "",
       customBootstrapRegion,
-      useDualStack
+      useDualStack,
     );
 
     if (defaultEndpoint) {

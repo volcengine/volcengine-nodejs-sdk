@@ -5,6 +5,10 @@ export const PRIORITY: Record<
     step: "initialize" | "serialize" | "build" | "finalizeRequest";
   }
 > = {
+  debugMiddleware: {
+    priority: 200,
+    step: "initialize",
+  },
   defaultHeadersMiddleware: {
     priority: 150,
     step: "initialize",
@@ -23,6 +27,10 @@ export const PRIORITY: Record<
   },
   signerMiddleware: {
     priority: 100,
+    step: "build",
+  },
+  presignMiddleware: {
+    priority: 200,
     step: "build",
   },
   retryMiddleware: {

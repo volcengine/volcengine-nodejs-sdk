@@ -23,7 +23,7 @@ export function createHttpRequestMiddleware(requestHandler: RequestHandler): {
         const response = await requestHandler.request({
           url,
           timeout:
-            request.timeout || clientConfig.httpOptions?.timeout || 30 * 1000,
+            request.timeout ?? clientConfig.httpOptions?.readTimeout ?? clientConfig.httpOptions?.timeout ?? 30 * 1000,
           method: request.method,
           headers: request.headers || {},
           data: request.body,

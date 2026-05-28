@@ -10,3 +10,5 @@ export * from "./default-headers";
 export * from "./retry";
 export * from "./endpoint";
 export * from "./credentials";
+export * from "./presign";
+export * from "./debug";

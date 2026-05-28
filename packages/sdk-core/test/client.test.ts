@@ -185,3 +185,86 @@ describe("Client debugMiddlewareStack", () => {
     expect(output).toContain("[finalizeRequest]");
   });
 });
+
+describe("Client setCredentials", () => {
+  test("should set credentialProvider on config", () => {
+    const client = new Client({
+      host: "example.com",
+      requestHandler: new MockRequestHandler(),
+    });
+
+    const mockProvider = {
+      providerName: "MockProvider",
+      resolveCredentials: jest.fn().mockResolvedValue({
+        accessKeyId: "mock-ak",
+        secretAccessKey: "mock-sk",
+        providerName: "MockProvider",
+      }),
+    };
+
+    client.setCredentials(mockProvider);
+
+    expect((client.config as any).credentialProvider).toBe(mockProvider);
+  });
+
+  test("should override previously set provider", () => {
+    const client = new Client({
+      host: "example.com",
+      requestHandler: new MockRequestHandler(),
+    });
+
+    const provider1 = {
+      providerName: "Provider1",
+      resolveCredentials: jest.fn(),
+    };
+    const provider2 = {
+      providerName: "Provider2",
+      resolveCredentials: jest.fn(),
+    };
+
+    client.setCredentials(provider1);
+    client.setCredentials(provider2);
+
+    expect((client.config as any).credentialProvider).toBe(provider2);
+  });
+
+  test("credentialProvider should be used by middleware during send", async () => {
+    const mockHandler = new MockRequestHandler();
+    mockHandler.mock(/.*/, {
+      status: 200,
+      data: { success: true },
+    });
+
+    const client = new Client({
+      host: "example.com",
+      requestHandler: mockHandler,
+    });
+
+    const mockProvider = {
+      providerName: "MockProvider",
+      resolveCredentials: jest.fn().mockResolvedValue({
+        accessKeyId: "provider-ak",
+        secretAccessKey: "provider-sk",
+        sessionToken: "provider-token",
+        providerName: "MockProvider",
+      }),
+    };
+
+    client.setCredentials(mockProvider);
+
+    const command: any = new (require("../src/index").Command)({ test: 1 });
+    command.requestConfig = {
+      method: "POST",
+      serviceName: "test",
+      pathname: "/",
+      params: { Action: "Test", Version: "2023-01-01" },
+    };
+
+    await client.send(command);
+
+    expect(mockProvider.resolveCredentials).toHaveBeenCalled();
+    // After send, the middleware should have injected the credentials
+    expect(client.config.accessKeyId).toBe("provider-ak");
+    expect(client.config.secretAccessKey).toBe("provider-sk");
+  });
+});
