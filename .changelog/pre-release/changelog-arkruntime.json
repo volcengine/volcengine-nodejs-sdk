@@ -1,0 +1,5 @@
+{
+  "description": "ARK-RUNTIME: 内容生成（content generation）任务新增 priority 字段，支持同一 EndPoint 内任务优先级调度",
+  "modules": "service/arkruntime",
+  "type": "feature"
+}
