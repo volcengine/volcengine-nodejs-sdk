@@ -16,7 +16,7 @@
  * 
  *
  * @export
- * @interface FiltersForGetInspectConfigInput
+ * @interface TopicLagMapForDescribeConsumerGroupLagOutput
  */
-export interface FiltersForGetInspectConfigInput {
+export interface TopicLagMapForDescribeConsumerGroupLagOutput {
 }

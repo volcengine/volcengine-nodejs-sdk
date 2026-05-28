@@ -16,31 +16,25 @@
  * 
  *
  * @export
- * @interface GetInspectConfigRequest
+ * @interface TotalLagForDescribeConsumerGroupLagOutput
  */
-export interface GetInspectConfigRequest {
+export interface TotalLagForDescribeConsumerGroupLagOutput {
 
     /**
-     * @type {{ [key: string]: string; }}
-     * @memberof GetInspectConfigRequest
+     * @type {number}
+     * @memberof TotalLagForDescribeConsumerGroupLagOutput
      */
-    Filters?: { [key: string]: string; };
+    DeliveryDuration?: number;
 
     /**
      * @type {string}
-     * @memberof GetInspectConfigRequest
+     * @memberof TotalLagForDescribeConsumerGroupLagOutput
      */
-    InstanceId: string;
+    LastConsumeTimestamp?: string;
 
     /**
      * @type {number}
-     * @memberof GetInspectConfigRequest
+     * @memberof TotalLagForDescribeConsumerGroupLagOutput
      */
-    PageNumber: number;
-
-    /**
-     * @type {number}
-     * @memberof GetInspectConfigRequest
-     */
-    PageSize: number;
+    ReadyCount?: number;
 }

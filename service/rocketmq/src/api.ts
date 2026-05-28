@@ -74,6 +74,8 @@ import { DescribeConsumedTopicDetailRequest } from './types/index';
 import { DescribeConsumedTopicDetailResponse } from './types/index';
 import { DescribeConsumedTopicsRequest } from './types/index';
 import { DescribeConsumedTopicsResponse } from './types/index';
+import { DescribeConsumerGroupLagRequest } from './types/index';
+import { DescribeConsumerGroupLagResponse } from './types/index';
 import { DescribeGroupsDetailRequest } from './types/index';
 import { DescribeGroupsDetailResponse } from './types/index';
 import { DescribeGroupsRequest } from './types/index';
@@ -192,6 +194,7 @@ export type DescribeAvailabilityZonesCommandOutput = CommandOutput<DescribeAvail
 export type DescribeConsumedClientsCommandOutput = CommandOutput<DescribeConsumedClientsResponse>;
 export type DescribeConsumedTopicDetailCommandOutput = CommandOutput<DescribeConsumedTopicDetailResponse>;
 export type DescribeConsumedTopicsCommandOutput = CommandOutput<DescribeConsumedTopicsResponse>;
+export type DescribeConsumerGroupLagCommandOutput = CommandOutput<DescribeConsumerGroupLagResponse>;
 export type DescribeGroupsCommandOutput = CommandOutput<DescribeGroupsResponse>;
 export type DescribeGroupsDetailCommandOutput = CommandOutput<DescribeGroupsDetailResponse>;
 export type DescribeInstanceDetailCommandOutput = CommandOutput<DescribeInstanceDetailResponse>;
@@ -234,7 +237,6 @@ export type RemovePLWhitelistCommandOutput = CommandOutput<RemovePLWhitelistResp
 export type RemoveTagsFromResourceCommandOutput = CommandOutput<RemoveTagsFromResourceResponse>;
 export type ResendDLQMessageByIdCommandOutput = CommandOutput<ResendDLQMessageByIdResponse>;
 export type ResetConsumedOffsetsCommandOutput = CommandOutput<ResetConsumedOffsetsResponse>;
-
 
 /**
  * ROCKETMQClient Service Client
@@ -697,6 +699,21 @@ export class DescribeConsumedTopicsCommand extends Command<
   constructor(input: DescribeConsumedTopicsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeConsumedTopicsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeConsumerGroupLag
+ */
+export class DescribeConsumerGroupLagCommand extends Command<
+  DescribeConsumerGroupLagRequest,
+  DescribeConsumerGroupLagCommandOutput,
+  'DescribeConsumerGroupLagCommand'
+> {
+  static readonly metaPath = '/DescribeConsumerGroupLag/2023-01-01/rocketmq/post/application_json/';
+
+  constructor(input: DescribeConsumerGroupLagRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeConsumerGroupLagCommand.metaPath);
   }
 }
 /**
@@ -1362,6 +1379,7 @@ export default {
   DescribeConsumedClientsCommand,
   DescribeConsumedTopicDetailCommand,
   DescribeConsumedTopicsCommand,
+  DescribeConsumerGroupLagCommand,
   DescribeGroupsCommand,
   DescribeGroupsDetailCommand,
   DescribeInstanceDetailCommand,
