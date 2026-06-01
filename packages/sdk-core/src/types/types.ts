@@ -234,6 +234,15 @@ export interface ClientConfig {
   maxRetries?: number;
   retryStrategy?: RetryStrategy;
   _jumpCredential?: boolean;
+  /**
+   * 内部标记：当前 clientConfig 上的凭证来自 Provider/默认凭证链注入，
+   * 后续请求不能把它当作内联静态 AK/SK，否则会绕过刷新。
+   */
+  _resolvedCredentialsFromProvider?: boolean;
+  /**
+   * 内部缓存：复用默认凭证链实例，避免每次请求重新创建 Provider 链。
+   */
+  _defaultCredentialProvider?: Provider;
 
   /**
    * Credential provider instance.

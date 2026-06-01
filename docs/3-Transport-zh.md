@@ -9,7 +9,7 @@
 > - `protocol` — `https`
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   protocol: "http",
   region: "cn-beijing",
 });
@@ -24,7 +24,7 @@ const client = new EcsClient({
 > ⚠️ **警告**：在生产环境中忽略 SSL 验证会带来严重的安全风险。请仅在确认安全的测试环境中使用。
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   httpOptions: {
     ignoreSSL: true,
@@ -41,7 +41,7 @@ const client = new EcsClient({
 ### 在代码中配置
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   httpOptions: {
     proxy: {
@@ -68,7 +68,7 @@ SDK 会自动读取以下环境变量来配置代理：
 SDK 支持自定义 HTTP 连接池配置：
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   httpOptions: {
     pool: {

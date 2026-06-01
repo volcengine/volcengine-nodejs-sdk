@@ -13,7 +13,7 @@
 Set via `httpOptions.timeout` when creating the client. This becomes the default timeout for all requests.
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   httpOptions: {
     timeout: 5000,
@@ -39,7 +39,7 @@ For more fine-grained control:
 When `readTimeout` is not set, it falls back to `timeout` for backward compatibility.
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   httpOptions: {
     connectTimeout: 3000,

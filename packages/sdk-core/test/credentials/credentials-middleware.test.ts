@@ -60,6 +60,39 @@ describe("credentialsMiddleware", () => {
     expect(nextFn).toHaveBeenCalledTimes(1);
   });
 
+  it("should resolve credentialProvider on every request after credentials are injected", async () => {
+    const mockProvider = {
+      providerName: "RefreshingProvider",
+      resolveCredentials: jest
+        .fn()
+        .mockResolvedValueOnce({
+          accessKeyId: "provider-ak-1",
+          secretAccessKey: "provider-sk-1",
+          sessionToken: "provider-token-1",
+          providerName: "RefreshingProvider",
+        })
+        .mockResolvedValueOnce({
+          accessKeyId: "provider-ak-2",
+          secretAccessKey: "provider-sk-2",
+          sessionToken: "provider-token-2",
+          providerName: "RefreshingProvider",
+        }),
+    };
+
+    const clientConfig = { credentialProvider: mockProvider } as any;
+    const ctx = makeContext(clientConfig);
+    const handler = credentialsMiddleware.middleware(nextFn, ctx);
+
+    await handler({ request: {}, input: {} });
+    await handler({ request: {}, input: {} });
+
+    expect(mockProvider.resolveCredentials).toHaveBeenCalledTimes(2);
+    expect(clientConfig.accessKeyId).toBe("provider-ak-2");
+    expect(clientConfig.secretAccessKey).toBe("provider-sk-2");
+    expect(clientConfig.sessionToken).toBe("provider-token-2");
+    expect(nextFn).toHaveBeenCalledTimes(2);
+  });
+
   it("should not set sessionToken if provider returns undefined", async () => {
     const mockProvider = {
       providerName: "NoTokenProvider",
@@ -76,6 +109,36 @@ describe("credentialsMiddleware", () => {
 
     await handler({ request: {}, input: {} });
 
+    expect(clientConfig.sessionToken).toBeUndefined();
+  });
+
+  it("should clear stale sessionToken when refreshed credentials omit it", async () => {
+    const mockProvider = {
+      providerName: "RefreshingProvider",
+      resolveCredentials: jest
+        .fn()
+        .mockResolvedValueOnce({
+          accessKeyId: "provider-ak-1",
+          secretAccessKey: "provider-sk-1",
+          sessionToken: "provider-token-1",
+          providerName: "RefreshingProvider",
+        })
+        .mockResolvedValueOnce({
+          accessKeyId: "provider-ak-2",
+          secretAccessKey: "provider-sk-2",
+          providerName: "RefreshingProvider",
+        }),
+    };
+
+    const clientConfig = { credentialProvider: mockProvider } as any;
+    const ctx = makeContext(clientConfig);
+    const handler = credentialsMiddleware.middleware(nextFn, ctx);
+
+    await handler({ request: {}, input: {} });
+    await handler({ request: {}, input: {} });
+
+    expect(clientConfig.accessKeyId).toBe("provider-ak-2");
+    expect(clientConfig.secretAccessKey).toBe("provider-sk-2");
     expect(clientConfig.sessionToken).toBeUndefined();
   });
 

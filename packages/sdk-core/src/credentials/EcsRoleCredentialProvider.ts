@@ -160,9 +160,7 @@ export class EcsRoleCredentialProvider implements Provider {
       return envRole;
     }
 
-    throw new Error(
-      `${this.providerName}: 未指定 roleName。请通过构造参数 roleName 或环境变量 VOLCENGINE_ECS_METADATA 显式传入角色名。`,
-    );
+    return this.autoDetectRoleName(imdsToken);
   }
 
   /**

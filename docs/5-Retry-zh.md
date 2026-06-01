@@ -14,7 +14,7 @@
 > - `maxRetries` — 3（总共尝试 4 次）
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   // autoRetry: false,  // 完全禁用重试
   maxRetries: 5,
@@ -47,7 +47,7 @@ SDK 只会对特定的错误进行重试：
 ```typescript
 import { StrategyName } from "@volcengine/sdk-core";
 
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   strategyName: StrategyName.ExponentialWithRandomJitterBackoffStrategy,
 });
@@ -58,7 +58,7 @@ const client = new EcsClient({
 通过 `retryStrategy` 字段，你可以更精细地控制重试行为：
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   retryStrategy: {
     minRetryDelay: 500,

@@ -13,7 +13,7 @@
 By directly specifying `host` in the client configuration, you can force the SDK to send all requests to that address. This is the highest priority configuration.
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   host: "open.volcengineapi.com",
   region: "cn-beijing",
 });
@@ -22,7 +22,7 @@ const client = new EcsClient({
 ### Custom RegionId
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
 });
 ```
@@ -67,36 +67,37 @@ The SDK automatically constructs a reasonable access address based on service na
 ##### Code Example
 
 ```typescript
-import { EcsClient } from "@volcengine/ecs";
+import { ECSClient } from "@volcengine/ecs";
 
-// SDK auto-resolves Endpoint to: ecs.cn-beijing.volcengineapi.com
-const client = new EcsClient({
-  region: "cn-beijing",
+// SDK auto-resolves Endpoint for bootstrap regions to: ecs.cn-beijing-autodriving.volcengineapi.com
+const client = new ECSClient({
+  region: "cn-beijing-autodriving",
 });
 ```
 
 #### DualStack Support
 
 ```typescript
-const client = new EcsClient({
-  region: "cn-beijing",
+const client = new ECSClient({
+  region: "cn-beijing-autodriving",
   useDualStack: true,
 });
-// Generated Endpoint: ecs.cn-beijing.volcengine-api.com
+// Generated Endpoint: ecs.cn-beijing-autodriving.volcengine-api.com
 ```
 
 #### Non-Bootstrap Regions
 
 If the `region` is not in the SDK's bootstrap region list, the SDK defaults to `open.volcengineapi.com`.
+For example, with the default configuration, `cn-beijing` is not in the built-in bootstrap region list, so ECS auto endpoint resolution falls back to `open.volcengineapi.com`. To generate `ecs.cn-beijing.volcengineapi.com`, add `cn-beijing` to the bootstrap region list via `customBootstrapRegion` or `VOLC_BOOTSTRAP_REGION_LIST_CONF`.
 
 ### Custom Bootstrap Region List
 
 Extend via `VOLC_BOOTSTRAP_REGION_LIST_CONF` env var pointing to a file (one region per line), or via `customBootstrapRegion` parameter:
 
 ```typescript
-import { EcsClient } from "@volcengine/ecs";
+import { ECSClient } from "@volcengine/ecs";
 
-const client = new EcsClient({
+const client = new ECSClient({
   region: "my-private-region",
   customBootstrapRegion: {
     "my-private-region": {},

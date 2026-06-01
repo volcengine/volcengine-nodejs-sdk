@@ -1,9 +1,10 @@
 export { Client } from "./client/Client";
-export {
+export { HttpRequestError, LogLevel, StrategyName } from "./types/types";
+export type {
   ClientConfig,
   CommandOutput,
-  HttpRequestError,
-  StrategyName,
+  DebugLogger,
+  DebugOptions,
 } from "./types/types";
 export { Command } from "./command/Command";
 export { buildRequestConfigFromMetaPath } from "./utils/meta";

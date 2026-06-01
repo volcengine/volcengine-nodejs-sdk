@@ -13,9 +13,10 @@ The SDK provides built-in debug logging via the `debugOptions` field for trouble
 > - `debug` — `false`
 
 ```typescript
-import { EcsClient, LogLevel } from "@volcengine/sdk-core";
+import { ECSClient } from "@volcengine/ecs";
+import { LogLevel } from "@volcengine/sdk-core";
 
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   debugOptions: {
     debug: true,
@@ -28,7 +29,7 @@ const client = new EcsClient({
 Use the `logLevel` field with bitmask for fine-grained control:
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   debugOptions: {
     debug: true,
@@ -63,7 +64,7 @@ const client = new EcsClient({
 > - `loggerFormat` — default format
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   debugOptions: {
     debug: true,
@@ -84,7 +85,7 @@ const customLogger: DebugLogger = {
   },
 };
 
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   debugOptions: {
     debug: true,
@@ -100,9 +101,9 @@ const client = new EcsClient({
 For advanced debugging beyond `debugOptions`:
 
 ```typescript
-import { EcsClient } from "@volcengine/ecs";
+import { ECSClient } from "@volcengine/ecs";
 
-const client = new EcsClient({ region: "cn-beijing" });
+const client = new ECSClient({ region: "cn-beijing" });
 
 client.middlewareStack.add(
   (next, context) => async (args) => {

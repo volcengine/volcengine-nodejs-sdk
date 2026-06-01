@@ -13,9 +13,10 @@
 > - `debug` — `false`
 
 ```typescript
-import { EcsClient, LogLevel } from "@volcengine/sdk-core";
+import { ECSClient } from "@volcengine/ecs";
+import { LogLevel } from "@volcengine/sdk-core";
 
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   debugOptions: {
     debug: true,
@@ -28,7 +29,7 @@ const client = new EcsClient({
 通过 `logLevel` 字段可以使用位掩码精确控制要输出的日志类型：
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   debugOptions: {
     debug: true,
@@ -63,7 +64,7 @@ const client = new EcsClient({
 > - `loggerFormat` — 默认格式
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   debugOptions: {
     debug: true,
@@ -84,7 +85,7 @@ const customLogger: DebugLogger = {
   },
 };
 
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   debugOptions: {
     debug: true,
@@ -100,9 +101,9 @@ const client = new EcsClient({
 如果内置的 `debugOptions` 无法满足需求，可以通过注入自定义中间件来实现更灵活的调试逻辑：
 
 ```typescript
-import { EcsClient } from "@volcengine/ecs";
+import { ECSClient } from "@volcengine/ecs";
 
-const client = new EcsClient({ region: "cn-beijing" });
+const client = new ECSClient({ region: "cn-beijing" });
 
 client.middlewareStack.add(
   (next, context) => async (args) => {

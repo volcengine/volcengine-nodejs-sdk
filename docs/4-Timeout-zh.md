@@ -13,7 +13,7 @@
 在创建客户端时通过 `httpOptions.timeout` 设置，这将成为所有请求的默认超时时间。
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   httpOptions: {
     timeout: 5000,
@@ -39,7 +39,7 @@ SDK 支持更细粒度的超时控制：
 当 `readTimeout` 未设置时，会回退到 `timeout` 的值，以保持向后兼容。
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   httpOptions: {
     connectTimeout: 3000,

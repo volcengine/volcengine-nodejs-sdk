@@ -32,9 +32,9 @@ AK/SK is a pair of permanent access keys created by Volcengine users in the cons
 #### 1. Configure in Code (⚠️ Not Recommended)
 
 ```typescript
-import { EcsClient } from "@volcengine/ecs";
+import { ECSClient } from "@volcengine/ecs";
 
-const client = new EcsClient({
+const client = new ECSClient({
   accessKeyId: "YOUR_AK",
   secretAccessKey: "YOUR_SK",
   region: "cn-beijing",
@@ -54,7 +54,7 @@ export VOLCENGINE_SECRET_KEY="YOUR_SK"
 ```
 
 ```typescript
-const client = new EcsClient({ region: "cn-beijing" });
+const client = new ECSClient({ region: "cn-beijing" });
 ```
 
 ### STS Token Configuration
@@ -67,7 +67,7 @@ STS (Security Token Service) is a temporary credential mechanism provided by Vol
 > 2. Set a reasonable expiry: the shorter the safer, recommended no more than 1 hour.
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   accessKeyId: "YOUR_TEMP_AK",
   secretAccessKey: "YOUR_TEMP_SK",
   sessionToken: "YOUR_SESSION_TOKEN",
@@ -91,7 +91,7 @@ Reference: https://www.volcengine.com/docs/6257/86374
 
 ```typescript
 import { StsAssumeRoleProvider } from "@volcengine/sdk-core";
-import { EcsClient } from "@volcengine/ecs";
+import { ECSClient } from "@volcengine/ecs";
 
 const credentialProvider = new StsAssumeRoleProvider({
   accessKeyId: "ASSUME_ROLE_CALLER_AK",
@@ -106,7 +106,7 @@ const credentialProvider = new StsAssumeRoleProvider({
   tags: [{ Key: "project", Value: "sdk-test" }],
 });
 
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   credentialProvider,
 });
@@ -135,7 +135,7 @@ Supported environment variables:
 
 ```typescript
 import { OidcCredentialProvider } from "@volcengine/sdk-core";
-import { EcsClient } from "@volcengine/ecs";
+import { ECSClient } from "@volcengine/ecs";
 
 // Explicit parameters (all options)
 const credentialProvider = new OidcCredentialProvider({
@@ -150,7 +150,7 @@ const credentialProvider = new OidcCredentialProvider({
 // Or auto-read from environment variables (no-arg constructor)
 const credentialProvider2 = new OidcCredentialProvider();
 
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   credentialProvider,
 });
@@ -180,7 +180,7 @@ Supported environment variables:
 
 ```typescript
 import { SamlCredentialProvider } from "@volcengine/sdk-core";
-import { EcsClient } from "@volcengine/ecs";
+import { ECSClient } from "@volcengine/ecs";
 
 // Explicit parameters (all options)
 const credentialProvider = new SamlCredentialProvider({
@@ -196,7 +196,7 @@ const credentialProvider = new SamlCredentialProvider({
 // Or auto-read from environment variables (no-arg constructor)
 const credentialProvider2 = new SamlCredentialProvider();
 
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   credentialProvider,
 });
@@ -211,13 +211,11 @@ const client = new EcsClient({
 - `VOLCSTACK_SESSION_TOKEN` (optional)
 
 ```typescript
-import {
-  EnvironmentVariableCredentialProvider,
-  EcsClient,
-} from "@volcengine/sdk-core";
+import { ECSClient } from "@volcengine/ecs";
+import { EnvironmentVariableCredentialProvider } from "@volcengine/sdk-core";
 
 const credentialProvider = new EnvironmentVariableCredentialProvider();
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   credentialProvider,
 });
@@ -230,10 +228,11 @@ const client = new EcsClient({
 - Config file priority: `VOLCENGINE_CLI_CONFIG_FILE` env var > default path `~/.volcengine/config.json`
 
 ```typescript
-import { CLIConfigCredentialProvider, EcsClient } from "@volcengine/sdk-core";
+import { ECSClient } from "@volcengine/ecs";
+import { CLIConfigCredentialProvider } from "@volcengine/sdk-core";
 
 const credentialProvider = new CLIConfigCredentialProvider();
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   credentialProvider,
 });
@@ -243,12 +242,19 @@ const client = new EcsClient({
 
 > 🚨 **Current Version Limitation**
 >
-> **The current version does not support auto-detecting role names from IMDS.** You must explicitly provide the role name via the constructor parameter or the `VOLCENGINE_ECS_METADATA` environment variable. Auto-detection will be supported in a future release.
+> **Auto-detection of the role name from IMDS is not yet supported in the current release.** You must pass the role name explicitly via the constructor parameter or the `VOLCENGINE_ECS_METADATA` environment variable. Auto-detection will be supported in a future version — please watch the release notes.
 
 `EcsRoleCredentialProvider` obtains temporary credentials from the ECS Instance Metadata Service (IMDSv2):
 
 - `roleName` priority: constructor parameter > `VOLCENGINE_ECS_METADATA`
 - Disable switch: `VOLCENGINE_ECS_METADATA_DISABLED=true`
+- IMDS endpoint: `http://100.96.0.96` (IMDSv2 token-based authentication)
+- Credentials are automatically refreshed before expiration (5-minute buffer by default)
+
+> ⚠️ **Notes**
+>
+> 1. Only works on ECS instances with an IAM role attached.
+> 2. Pass `roleName` explicitly or set `VOLCENGINE_ECS_METADATA` before using this provider.
 
 | Variable                           | Description                                                             |
 | ---------------------------------- | ----------------------------------------------------------------------- |
@@ -257,7 +263,7 @@ const client = new EcsClient({
 
 ```typescript
 import { EcsRoleCredentialProvider } from "@volcengine/sdk-core";
-import { EcsClient } from "@volcengine/ecs";
+import { ECSClient } from "@volcengine/ecs";
 
 // Explicit role name
 const credentialProvider = new EcsRoleCredentialProvider({
@@ -274,7 +280,7 @@ const credentialProvider2 = new EcsRoleCredentialProvider({
   expiredBufferSeconds: 600, // Early refresh window (seconds), default 300
 });
 
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   credentialProvider,
 });
@@ -290,12 +296,13 @@ const client = new EcsClient({
 4. **EcsRoleCredentialProvider** — obtain temporary credentials via ECS IMDS (skipped when `VOLCENGINE_ECS_METADATA_DISABLED=true`)
 
 ```typescript
-import { DefaultCredentialProvider, EcsClient } from "@volcengine/sdk-core";
+import { ECSClient } from "@volcengine/ecs";
+import { DefaultCredentialProvider } from "@volcengine/sdk-core";
 
 // Basic usage
 const credentialProvider = new DefaultCredentialProvider();
 
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   credentialProvider,
 });

@@ -9,7 +9,7 @@
 > - `protocol` — `https`
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   protocol: "http",
   region: "cn-beijing",
 });
@@ -24,7 +24,7 @@ const client = new EcsClient({
 > ⚠️ **Warning**: Ignoring SSL verification in production poses serious security risks. Use only in confirmed safe test environments.
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   httpOptions: {
     ignoreSSL: true,
@@ -41,7 +41,7 @@ const client = new EcsClient({
 ### Configure in Code
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   httpOptions: {
     proxy: {
@@ -66,7 +66,7 @@ Priority: Code configuration > environment variables.
 ## Connection Pool Configuration
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
   httpOptions: {
     pool: {

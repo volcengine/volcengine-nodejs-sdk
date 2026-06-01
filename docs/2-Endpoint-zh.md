@@ -13,7 +13,7 @@
 通过在客户端配置中直接指定 `host`，可以强制 SDK 将所有请求发送到该地址。这是最高优先级的配置。
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   host: "open.volcengineapi.com",
   region: "cn-beijing",
 });
@@ -24,7 +24,7 @@ const client = new EcsClient({
 Region 是大多数火山引擎服务的关键概念。你可以在客户端级别配置一个默认的 `region`。
 
 ```typescript
-const client = new EcsClient({
+const client = new ECSClient({
   region: "cn-beijing",
 });
 ```
@@ -70,27 +70,28 @@ const client = new EcsClient({
 ##### 代码示例
 
 ```typescript
-import { EcsClient } from "@volcengine/ecs";
+import { ECSClient } from "@volcengine/ecs";
 
-// SDK 会根据 region 自动推导 Endpoint 为: ecs.cn-beijing.volcengineapi.com
-const client = new EcsClient({
-  region: "cn-beijing",
+// SDK 会根据引导区域自动推导 Endpoint 为: ecs.cn-beijing-autodriving.volcengineapi.com
+const client = new ECSClient({
+  region: "cn-beijing-autodriving",
 });
 ```
 
 #### 双栈支持 (DualStack)
 
 ```typescript
-const client = new EcsClient({
-  region: "cn-beijing",
+const client = new ECSClient({
+  region: "cn-beijing-autodriving",
   useDualStack: true,
 });
-// 生成的 Endpoint: ecs.cn-beijing.volcengine-api.com
+// 生成的 Endpoint: ecs.cn-beijing-autodriving.volcengine-api.com
 ```
 
 #### 非引导区域
 
 如果请求的 `region` 不在 SDK 的引导区域列表中，SDK 将默认使用 `open.volcengineapi.com` 作为 Endpoint。
+例如，默认配置下 `cn-beijing` 不在内置引导区域列表中，ECS 自动 Endpoint 会回退为 `open.volcengineapi.com`；如需生成 `ecs.cn-beijing.volcengineapi.com`，请通过 `customBootstrapRegion` 或 `VOLC_BOOTSTRAP_REGION_LIST_CONF` 将 `cn-beijing` 加入引导区域列表。
 
 ### 自定义引导区域列表
 
@@ -109,9 +110,9 @@ export VOLC_BOOTSTRAP_REGION_LIST_CONF=/path/to/my_regions.conf
 或者在创建 Client 时通过 `customBootstrapRegion` 参数直接指定：
 
 ```typescript
-import { EcsClient } from "@volcengine/ecs";
+import { ECSClient } from "@volcengine/ecs";
 
-const client = new EcsClient({
+const client = new ECSClient({
   region: "my-private-region",
   customBootstrapRegion: {
     "my-private-region": {},

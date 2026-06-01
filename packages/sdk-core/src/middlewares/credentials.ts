@@ -6,15 +6,15 @@ import { loadNodeConfig } from "../utils/env";
 import { StsAssumeRoleProvider } from "../credentials/StsAssumeRoleProvider";
 
 /**
- * Credentials middleware.
+ * 凭证中间件。
  *
- * Resolution strategy:
- *   1. If `clientConfig.accessKeyId` and `clientConfig.secretAccessKey` are
- *      already set (e.g. passed directly in constructor) → use them as-is.
- *   2. If a `credentialProvider` (Provider) is set on clientConfig
- *      → call `provider.resolveCredentials()` and inject the result.
- *   3. Otherwise fall back to `DefaultCredentialProvider` which walks the
- *      standard credential chain (env → OIDC → CLI config → ECS IMDS).
+ * 解析策略：
+ *   1. 如果 `clientConfig.accessKeyId` 和 `clientConfig.secretAccessKey`
+ *      已经设置（例如构造函数直接传入），则按静态凭证使用。
+ *   2. 如果 clientConfig 设置了 `credentialProvider`，则调用
+ *      `provider.resolveCredentials()` 并注入解析结果。
+ *   3. 否则回退到 `DefaultCredentialProvider`，按标准凭证链
+ *      解析环境变量 → OIDC → CLI config → ECS IMDS。
  */
 export const credentialsMiddleware: {
   middleware: MiddlewareFunction;
@@ -24,18 +24,17 @@ export const credentialsMiddleware: {
     const { clientConfig } = _context;
     const { _jumpCredential } = clientConfig || {};
 
+    if (!clientConfig) {
+      return next(args);
+    }
+
     // 不需要AK/SK，直接跳过凭证链
     if (_jumpCredential) {
       return next(args);
     }
 
-    // Fast path: credentials already on config (static inline AK/SK)
-    if (clientConfig?.accessKeyId && clientConfig?.secretAccessKey) {
-      return next(args);
-    }
-
     // 兼容旧版 AssumeRoleParams 配置项
-    if (clientConfig?.assumeRoleParams) {
+    if (clientConfig?.assumeRoleParams && !clientConfig.credentialProvider) {
       const params = clientConfig.assumeRoleParams;
       clientConfig.credentialProvider = new StsAssumeRoleProvider({
         accessKeyId: params.accessKeyId,
@@ -50,17 +49,38 @@ export const credentialsMiddleware: {
       });
     }
 
-    // Determine which provider to use
+    const hasProvider = Boolean(clientConfig?.credentialProvider);
+    const hasProviderResolvedCredentials = Boolean(
+      clientConfig?._resolvedCredentialsFromProvider,
+    );
+
+    // 快速路径：只有真正内联的静态 AK/SK 才能绕过 Provider 链。
+    // Provider/默认凭证链解析出的凭证会回写到 clientConfig 以兼容下游签名器，
+    // 但每次请求仍必须回到 Provider，由 Provider 内部决定缓存或刷新。
+    if (
+      clientConfig?.accessKeyId &&
+      clientConfig?.secretAccessKey &&
+      !hasProvider &&
+      !hasProviderResolvedCredentials
+    ) {
+      return next(args);
+    }
+
+    // 确定要使用的凭证 Provider
     const provider: Provider =
-      clientConfig?.credentialProvider ?? new DefaultCredentialProvider();
+      clientConfig?.credentialProvider ??
+      (clientConfig._defaultCredentialProvider ??=
+        new DefaultCredentialProvider());
 
     const credentials = await provider.resolveCredentials();
-    // Inject resolved credentials into clientConfig so downstream
-    // middleware (signer, etc.) can use them transparently.
+    // 将解析出的凭证注入 clientConfig，供下游中间件（如签名器）透明使用。
     clientConfig.accessKeyId = credentials?.accessKeyId;
     clientConfig.secretAccessKey = credentials?.secretAccessKey;
+    clientConfig._resolvedCredentialsFromProvider = true;
     if (credentials?.sessionToken) {
       clientConfig.sessionToken = credentials.sessionToken;
+    } else {
+      delete clientConfig.sessionToken;
     }
 
     if (!credentials.accessKeyId || !credentials.secretAccessKey) {
