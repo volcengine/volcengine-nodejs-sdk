@@ -16,19 +16,25 @@
  * 
  *
  * @export
- * @interface CreateSandboxResponse
+ * @interface EBSVolumeForListSandboxesOutput
  */
-export interface CreateSandboxResponse {
+export interface EBSVolumeForListSandboxesOutput {
 
     /**
      * @type {string}
-     * @memberof CreateSandboxResponse
+     * @memberof EBSVolumeForListSandboxesOutput
      */
-    AssignStatus?: string;
+    MountPath?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof EBSVolumeForListSandboxesOutput
+     */
+    ReadOnly?: boolean;
 
     /**
      * @type {string}
-     * @memberof CreateSandboxResponse
+     * @memberof EBSVolumeForListSandboxesOutput
      */
-    SandboxId?: string;
+    VolumeID?: string;
 }

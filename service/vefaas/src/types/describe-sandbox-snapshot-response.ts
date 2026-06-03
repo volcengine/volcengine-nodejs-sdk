@@ -12,23 +12,18 @@
  * Do not edit the class manually.
  */
 
+import { SnapshotForDescribeSandboxSnapshotOutput } from './snapshot-for-describe-sandbox-snapshot-output';
  /**
  * 
  *
  * @export
- * @interface CreateSandboxResponse
+ * @interface DescribeSandboxSnapshotResponse
  */
-export interface CreateSandboxResponse {
+export interface DescribeSandboxSnapshotResponse {
 
     /**
-     * @type {string}
-     * @memberof CreateSandboxResponse
+     * @type {SnapshotForDescribeSandboxSnapshotOutput}
+     * @memberof DescribeSandboxSnapshotResponse
      */
-    AssignStatus?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateSandboxResponse
-     */
-    SandboxId?: string;
+    Snapshot?: SnapshotForDescribeSandboxSnapshotOutput;
 }

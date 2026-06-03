@@ -17,6 +17,7 @@ import { ImageInfoForDescribeSandboxOutput } from './image-info-for-describe-san
 import { InstanceNasMountConfigForDescribeSandboxOutput } from './instance-nas-mount-config-for-describe-sandbox-output';
 import { InstanceTosMountConfigForDescribeSandboxOutput } from './instance-tos-mount-config-for-describe-sandbox-output';
 import { MetadataListForDescribeSandboxOutput } from './metadata-list-for-describe-sandbox-output';
+import { SidecarForDescribeSandboxOutput } from './sidecar-for-describe-sandbox-output';
  /**
  * 
  *
@@ -24,6 +25,12 @@ import { MetadataListForDescribeSandboxOutput } from './metadata-list-for-descri
  * @interface DescribeSandboxResponse
  */
 export interface DescribeSandboxResponse {
+
+    /**
+     * @type {string}
+     * @memberof DescribeSandboxResponse
+     */
+    AssignStatus?: string;
 
     /**
      * @type {string}
@@ -144,6 +151,12 @@ export interface DescribeSandboxResponse {
      * @memberof DescribeSandboxResponse
      */
     SessionId?: string;
+
+    /**
+     * @type {Array<SidecarForDescribeSandboxOutput>}
+     * @memberof DescribeSandboxResponse
+     */
+    Sidecars?: Array<SidecarForDescribeSandboxOutput>;
 
     /**
      * @type {string}

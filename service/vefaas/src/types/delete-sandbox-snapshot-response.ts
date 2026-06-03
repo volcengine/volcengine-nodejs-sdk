@@ -16,19 +16,13 @@
  * 
  *
  * @export
- * @interface CreateSandboxResponse
+ * @interface DeleteSandboxSnapshotResponse
  */
-export interface CreateSandboxResponse {
+export interface DeleteSandboxSnapshotResponse {
 
     /**
      * @type {string}
-     * @memberof CreateSandboxResponse
+     * @memberof DeleteSandboxSnapshotResponse
      */
-    AssignStatus?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateSandboxResponse
-     */
-    SandboxId?: string;
+    SnapshotId?: string;
 }
