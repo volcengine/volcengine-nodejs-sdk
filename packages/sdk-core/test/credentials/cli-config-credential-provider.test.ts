@@ -1,9 +1,45 @@
 import fs from "fs";
 import path from "path";
-import { CLIConfigCredentialProvider } from "../../src/credentials/CLIConfigCredentialProvider";
+import {
+  afterAll,
+  beforeEach,
+  describe,
+  expect,
+  it,
+  jest,
+} from "@jest/globals";
+
+const mockStsResolveCredentials = jest.fn<() => Promise<any>>();
+const mockOidcResolveCredentials = jest.fn<() => Promise<any>>();
+const mockEcsResolveCredentials = jest.fn<() => Promise<any>>();
+const mockStsAssumeRoleProvider = jest.fn().mockImplementation(() => ({
+  providerName: "StsAssumeRoleProvider",
+  resolveCredentials: mockStsResolveCredentials,
+}));
+const mockOidcCredentialProvider = jest.fn().mockImplementation(() => ({
+  providerName: "OidcCredentialProvider",
+  resolveCredentials: mockOidcResolveCredentials,
+}));
+const mockEcsRoleCredentialProvider = jest.fn().mockImplementation(() => ({
+  providerName: "EcsRoleCredentialProvider",
+  resolveCredentials: mockEcsResolveCredentials,
+}));
 
 jest.mock("fs");
 jest.mock("path");
+jest.mock("../../src/credentials/StsAssumeRoleProvider", () => ({
+  StsAssumeRoleProvider: mockStsAssumeRoleProvider,
+}));
+jest.mock("../../src/credentials/OidcCredentialProvider", () => ({
+  OidcCredentialProvider: mockOidcCredentialProvider,
+}));
+jest.mock("../../src/credentials/EcsRoleCredentialProvider", () => ({
+  EcsRoleCredentialProvider: mockEcsRoleCredentialProvider,
+}));
+
+const {
+  CLIConfigCredentialProvider,
+} = require("../../src/credentials/CLIConfigCredentialProvider");
 
 describe("CLIConfigCredentialProvider", () => {
   const originalEnv = process.env;
@@ -11,7 +47,27 @@ describe("CLIConfigCredentialProvider", () => {
   beforeEach(() => {
     process.env = { ...originalEnv };
     delete process.env.VOLCENGINE_CLI_CONFIG_FILE;
+    delete process.env.VOLCENGINE_PROFILE;
+    delete process.env.VOLCSTACK_PROFILE;
     jest.clearAllMocks();
+    mockStsResolveCredentials.mockResolvedValue({
+      accessKeyId: "sts-ak",
+      secretAccessKey: "sts-sk",
+      sessionToken: "sts-token",
+      providerName: "StsAssumeRoleProvider",
+    });
+    mockOidcResolveCredentials.mockResolvedValue({
+      accessKeyId: "oidc-ak",
+      secretAccessKey: "oidc-sk",
+      sessionToken: "oidc-token",
+      providerName: "OidcCredentialProvider",
+    });
+    mockEcsResolveCredentials.mockResolvedValue({
+      accessKeyId: "ecs-ak",
+      secretAccessKey: "ecs-sk",
+      sessionToken: "ecs-token",
+      providerName: "EcsRoleCredentialProvider",
+    });
   });
 
   afterAll(() => {
@@ -173,5 +229,229 @@ describe("CLIConfigCredentialProvider", () => {
     await expect(provider.resolveCredentials()).rejects.toThrow(
       "缺少 access-key 或 secret-key",
     );
+  });
+
+  it("should select profile from VOLCENGINE_PROFILE", async () => {
+    process.env.HOME = "/mock/home";
+    process.env.VOLCENGINE_PROFILE = "prod";
+
+    (path.resolve as jest.Mock).mockReturnValue(
+      "/mock/home/.volcengine/config.json",
+    );
+    (fs.existsSync as jest.Mock).mockReturnValue(true);
+    (fs.readFileSync as jest.Mock).mockReturnValue(
+      JSON.stringify({
+        current: "default",
+        profiles: {
+          default: {
+            "access-key": "default-ak",
+            "secret-key": "default-sk",
+          },
+          prod: {
+            "access-key": "prod-ak",
+            "secret-key": "prod-sk",
+          },
+        },
+      }),
+    );
+
+    const provider = new CLIConfigCredentialProvider();
+    const creds = await provider.resolveCredentials();
+
+    expect(creds.accessKeyId).toBe("prod-ak");
+    expect(creds.secretAccessKey).toBe("prod-sk");
+  });
+
+  it("should delegate ramrolearn mode to StsAssumeRoleProvider", async () => {
+    process.env.HOME = "/mock/home";
+
+    (path.resolve as jest.Mock).mockReturnValue(
+      "/mock/home/.volcengine/config.json",
+    );
+    (fs.existsSync as jest.Mock).mockReturnValue(true);
+    (fs.readFileSync as jest.Mock).mockReturnValue(
+      JSON.stringify({
+        current: "ram",
+        profiles: {
+          ram: {
+            mode: "RamRoleArn",
+            "access-key": "base-ak",
+            "secret-key": "base-sk",
+            "session-token": "base-token",
+            "account-id": "2000012345",
+            "role-name": "demo-role",
+            region: "cn-shanghai",
+            "disable-ssl": true,
+          },
+        },
+      }),
+    );
+
+    const provider = new CLIConfigCredentialProvider();
+    const creds = await provider.resolveCredentials();
+
+    expect(mockStsAssumeRoleProvider).toHaveBeenCalledWith({
+      accessKeyId: "base-ak",
+      secretAccessKey: "base-sk",
+      roleTrn: "trn:iam::2000012345:role/demo-role",
+      region: "cn-shanghai",
+      protocol: "http",
+      durationSeconds: 3600,
+    });
+    expect(creds.providerName).toBe("StsAssumeRoleProvider");
+  });
+
+  it("should delegate oidc mode to OidcCredentialProvider", async () => {
+    process.env.HOME = "/mock/home";
+
+    (path.resolve as jest.Mock).mockReturnValue(
+      "/mock/home/.volcengine/config.json",
+    );
+    (fs.existsSync as jest.Mock).mockReturnValue(true);
+    (fs.readFileSync as jest.Mock).mockReturnValue(
+      JSON.stringify({
+        current: "oidc",
+        profiles: {
+          oidc: {
+            mode: "OIDC",
+            "role-trn": "trn:iam::2000012345:role/oidc-role",
+            "oidc-token-file": "/tmp/oidc-token",
+          },
+        },
+      }),
+    );
+
+    const provider = new CLIConfigCredentialProvider();
+    const creds = await provider.resolveCredentials();
+
+    expect(mockOidcCredentialProvider).toHaveBeenCalledWith({
+      roleTrn: "trn:iam::2000012345:role/oidc-role",
+      oidcTokenFile: "/tmp/oidc-token",
+      region: "cn-beijing",
+      protocol: "https",
+      durationSeconds: 3600,
+    });
+    expect(creds.providerName).toBe("OidcCredentialProvider");
+  });
+
+  it("should delegate ecsrole mode to EcsRoleCredentialProvider", async () => {
+    process.env.HOME = "/mock/home";
+
+    (path.resolve as jest.Mock).mockReturnValue(
+      "/mock/home/.volcengine/config.json",
+    );
+    (fs.existsSync as jest.Mock).mockReturnValue(true);
+    (fs.readFileSync as jest.Mock).mockReturnValue(
+      JSON.stringify({
+        current: "ecs",
+        profiles: {
+          ecs: {
+            mode: "ecsrole",
+            "role-name": "ecs-role",
+          },
+        },
+      }),
+    );
+
+    const provider = new CLIConfigCredentialProvider();
+    const creds = await provider.resolveCredentials();
+
+    expect(mockEcsRoleCredentialProvider).toHaveBeenCalledWith({
+      roleName: "ecs-role",
+    });
+    expect(creds.providerName).toBe("EcsRoleCredentialProvider");
+  });
+
+  it("should resolve valid StsToken mode from cached temporary credentials", async () => {
+    process.env.HOME = "/mock/home";
+
+    (path.resolve as jest.Mock).mockReturnValue(
+      "/mock/home/.volcengine/config.json",
+    );
+    (fs.existsSync as jest.Mock).mockReturnValue(true);
+    (fs.readFileSync as jest.Mock).mockReturnValue(
+      JSON.stringify({
+        current: "sts",
+        profiles: {
+          sts: {
+            mode: "StsToken",
+            "access-key": "tmp-ak",
+            "secret-key": "tmp-sk",
+            "session-token": "tmp-token",
+            "sts-expiration": Date.now() + 60 * 60 * 1000,
+          },
+        },
+      }),
+    );
+
+    const provider = new CLIConfigCredentialProvider();
+    const creds = await provider.resolveCredentials();
+
+    expect(creds).toEqual({
+      accessKeyId: "tmp-ak",
+      secretAccessKey: "tmp-sk",
+      sessionToken: "tmp-token",
+      providerName: "CLIConfigCredentialProvider",
+    });
+  });
+
+  it("should throw if cached console-login temporary credentials are expired", async () => {
+    process.env.HOME = "/mock/home";
+
+    (path.resolve as jest.Mock).mockReturnValue(
+      "/mock/home/.volcengine/config.json",
+    );
+    (fs.existsSync as jest.Mock).mockReturnValue(true);
+    (fs.readFileSync as jest.Mock).mockReturnValue(
+      JSON.stringify({
+        current: "console",
+        profiles: {
+          console: {
+            mode: "console-login",
+            "access-key": "tmp-ak",
+            "secret-key": "tmp-sk",
+            "session-token": "tmp-token",
+            "sts-expiration": Math.floor(Date.now() / 1000) - 60,
+          },
+        },
+      }),
+    );
+
+    const provider = new CLIConfigCredentialProvider();
+
+    await expect(provider.resolveCredentials()).rejects.toThrow(
+      "STS 临时凭证已过期",
+    );
+  });
+
+  it("should cache StsToken credentials and skip re-reading config file on subsequent calls", async () => {
+    process.env.HOME = "/mock/home";
+
+    (path.resolve as jest.Mock).mockReturnValue(
+      "/mock/home/.volcengine/config.json",
+    );
+    (fs.existsSync as jest.Mock).mockReturnValue(true);
+    (fs.readFileSync as jest.Mock).mockReturnValue(
+      JSON.stringify({
+        current: "sts",
+        profiles: {
+          sts: {
+            mode: "StsToken",
+            "access-key": "tmp-ak",
+            "secret-key": "tmp-sk",
+            "session-token": "tmp-token",
+            "sts-expiration": Math.floor((Date.now() + 60 * 60 * 1000) / 1000),
+          },
+        },
+      }),
+    );
+
+    const provider = new CLIConfigCredentialProvider();
+    const first = await provider.resolveCredentials();
+    const second = await provider.resolveCredentials();
+
+    expect(first).toEqual(second);
+    // 第一次读配置，第二次应命中 delegate 缓存，不再调用 readFileSync
+    expect((fs.readFileSync as jest.Mock).mock.calls.length).toBe(1);
   });
 });
