@@ -35,6 +35,12 @@ export interface EndpointForListResolverEndpointsOutput {
     Direction?: string;
 
     /**
+     * @type {string}
+     * @memberof EndpointForListResolverEndpointsOutput
+     */
+    EndpointType?: string;
+
+    /**
      * @type {number}
      * @memberof EndpointForListResolverEndpointsOutput
      */
