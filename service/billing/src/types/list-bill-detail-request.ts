@@ -103,4 +103,10 @@ export interface ListBillDetailRequest {
      * @memberof ListBillDetailRequest
      */
     Product?: Array<string>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof ListBillDetailRequest
+     */
+    Project?: Array<string>;
 }

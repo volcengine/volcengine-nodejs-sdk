@@ -57,4 +57,10 @@ export interface UpdateResolverRuleRequest {
      * @memberof UpdateResolverRuleRequest
      */
     Vpcs?: Array<VpcForUpdateResolverRuleInput>;
+
+    /**
+     * @type {string}
+     * @memberof UpdateResolverRuleRequest
+     */
+    ZoneName?: string;
 }

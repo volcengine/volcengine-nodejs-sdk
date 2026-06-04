@@ -39,6 +39,12 @@ export interface UpdatePrivateZoneResponse {
     LineMode?: number;
 
     /**
+     * @type {boolean}
+     * @memberof UpdatePrivateZoneResponse
+     */
+    NodataFallback?: boolean;
+
+    /**
      * @type {string}
      * @memberof UpdatePrivateZoneResponse
      */
