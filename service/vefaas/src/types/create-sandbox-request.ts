@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { EBSVolumeForCreateSandboxInput } from './ebsvolume-for-create-sandbox-input';
 import { EmptyDirVolumeForCreateSandboxInput } from './empty-dir-volume-for-create-sandbox-input';
 import { EnvForCreateSandboxInput } from './env-for-create-sandbox-input';
 import { InstanceImageInfoForCreateSandboxInput } from './instance-image-info-for-create-sandbox-input';
@@ -37,6 +38,12 @@ export interface CreateSandboxRequest {
      * @memberof CreateSandboxRequest
      */
     CpuMilli?: number;
+
+    /**
+     * @type {Array<EBSVolumeForCreateSandboxInput>}
+     * @memberof CreateSandboxRequest
+     */
+    EBSVolumes?: Array<EBSVolumeForCreateSandboxInput>;
 
     /**
      * @type {Array<EmptyDirVolumeForCreateSandboxInput>}
@@ -97,6 +104,12 @@ export interface CreateSandboxRequest {
      * @memberof CreateSandboxRequest
      */
     RequestTimeout?: number;
+
+    /**
+     * @type {Array<string>}
+     * @memberof CreateSandboxRequest
+     */
+    RoleChainTrn?: Array<string>;
 
     /**
      * @type {string}

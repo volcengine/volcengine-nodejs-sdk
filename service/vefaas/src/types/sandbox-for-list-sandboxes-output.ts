@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { EBSVolumeForListSandboxesOutput } from './ebsvolume-for-list-sandboxes-output';
+import { SidecarForListSandboxesOutput } from './sidecar-for-list-sandboxes-output';
  /**
  * 
  *
@@ -19,6 +21,12 @@
  * @interface SandboxForListSandboxesOutput
  */
 export interface SandboxForListSandboxesOutput {
+
+    /**
+     * @type {string}
+     * @memberof SandboxForListSandboxesOutput
+     */
+    AssignStatus?: string;
 
     /**
      * @type {string}
@@ -37,6 +45,12 @@ export interface SandboxForListSandboxesOutput {
      * @memberof SandboxForListSandboxesOutput
      */
     CreatedAt?: string;
+
+    /**
+     * @type {Array<EBSVolumeForListSandboxesOutput>}
+     * @memberof SandboxForListSandboxesOutput
+     */
+    EBSVolumes?: Array<EBSVolumeForListSandboxesOutput>;
 
     /**
      * @type {string}
@@ -93,6 +107,12 @@ export interface SandboxForListSandboxesOutput {
     Metadata?: { [key: string]: string; };
 
     /**
+     * @type {string}
+     * @memberof SandboxForListSandboxesOutput
+     */
+    PausedAt?: string;
+
+    /**
      * @type {boolean}
      * @memberof SandboxForListSandboxesOutput
      */
@@ -109,6 +129,12 @@ export interface SandboxForListSandboxesOutput {
      * @memberof SandboxForListSandboxesOutput
      */
     SessionId?: string;
+
+    /**
+     * @type {Array<SidecarForListSandboxesOutput>}
+     * @memberof SandboxForListSandboxesOutput
+     */
+    Sidecars?: Array<SidecarForListSandboxesOutput>;
 
     /**
      * @type {string}

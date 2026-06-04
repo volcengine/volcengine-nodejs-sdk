@@ -99,6 +99,12 @@ export interface ListSplitBillDetailRequest {
     Product?: Array<string>;
 
     /**
+     * @type {Array<string>}
+     * @memberof ListSplitBillDetailRequest
+     */
+    Project?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof ListSplitBillDetailRequest
      */

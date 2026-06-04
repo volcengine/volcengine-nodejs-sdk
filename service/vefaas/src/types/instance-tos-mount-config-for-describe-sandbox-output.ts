@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { CredentialsForDescribeSandboxOutput } from './credentials-for-describe-sandbox-output';
 import { TosMountPointForDescribeSandboxOutput } from './tos-mount-point-for-describe-sandbox-output';
  /**
  * 
@@ -22,10 +23,28 @@ import { TosMountPointForDescribeSandboxOutput } from './tos-mount-point-for-des
 export interface InstanceTosMountConfigForDescribeSandboxOutput {
 
     /**
+     * @type {string}
+     * @memberof InstanceTosMountConfigForDescribeSandboxOutput
+     */
+    AuthMode?: string;
+
+    /**
+     * @type {CredentialsForDescribeSandboxOutput}
+     * @memberof InstanceTosMountConfigForDescribeSandboxOutput
+     */
+    Credentials?: CredentialsForDescribeSandboxOutput;
+
+    /**
      * @type {boolean}
      * @memberof InstanceTosMountConfigForDescribeSandboxOutput
      */
     Enable?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof InstanceTosMountConfigForDescribeSandboxOutput
+     */
+    Mode?: string;
 
     /**
      * @type {Array<TosMountPointForDescribeSandboxOutput>}
