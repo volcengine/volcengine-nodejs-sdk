@@ -54,8 +54,12 @@ import { DescribeDBInstanceDetailRequest } from './types/index';
 import { DescribeDBInstanceDetailResponse } from './types/index';
 import { DescribeDBInstanceParametersRequest } from './types/index';
 import { DescribeDBInstanceParametersResponse } from './types/index';
+import { DescribeDBInstanceSSLRequest } from './types/index';
+import { DescribeDBInstanceSSLResponse } from './types/index';
 import { DescribeDBInstanceSpecsRequest } from './types/index';
 import { DescribeDBInstanceSpecsResponse } from './types/index';
+import { DescribeDBInstanceTDERequest } from './types/index';
+import { DescribeDBInstanceTDEResponse } from './types/index';
 import { DescribeDBInstancesRequest } from './types/index';
 import { DescribeDBInstancesResponse } from './types/index';
 import { DescribeInstanceAllowListsRequest } from './types/index';
@@ -70,6 +74,8 @@ import { DisassociateAllowListRequest } from './types/index';
 import { DisassociateAllowListResponse } from './types/index';
 import { DownloadBackupRequest } from './types/index';
 import { DownloadBackupResponse } from './types/index';
+import { DownloadSSLCertificateRequest } from './types/index';
+import { DownloadSSLCertificateResponse } from './types/index';
 import { GrantDBAccountPrivilegeRequest } from './types/index';
 import { GrantDBAccountPrivilegeResponse } from './types/index';
 import { ModifyAllowListRequest } from './types/index';
@@ -84,6 +90,10 @@ import { ModifyDBFailoverRequest } from './types/index';
 import { ModifyDBFailoverResponse } from './types/index';
 import { ModifyDBInstanceNameRequest } from './types/index';
 import { ModifyDBInstanceNameResponse } from './types/index';
+import { ModifyDBInstanceSSLRequest } from './types/index';
+import { ModifyDBInstanceSSLResponse } from './types/index';
+import { ModifyDBInstanceTDERequest } from './types/index';
+import { ModifyDBInstanceTDEResponse } from './types/index';
 import { ModifyInstanceAdvancedFeaturesRequest } from './types/index';
 import { ModifyInstanceAdvancedFeaturesResponse } from './types/index';
 import { ResetDBAccountRequest } from './types/index';
@@ -118,7 +128,9 @@ export type DescribeCrossBackupPolicyCommandOutput = CommandOutput<DescribeCross
 export type DescribeDBAccountsCommandOutput = CommandOutput<DescribeDBAccountsResponse>;
 export type DescribeDBInstanceDetailCommandOutput = CommandOutput<DescribeDBInstanceDetailResponse>;
 export type DescribeDBInstanceParametersCommandOutput = CommandOutput<DescribeDBInstanceParametersResponse>;
+export type DescribeDBInstanceSSLCommandOutput = CommandOutput<DescribeDBInstanceSSLResponse>;
 export type DescribeDBInstanceSpecsCommandOutput = CommandOutput<DescribeDBInstanceSpecsResponse>;
+export type DescribeDBInstanceTDECommandOutput = CommandOutput<DescribeDBInstanceTDEResponse>;
 export type DescribeDBInstancesCommandOutput = CommandOutput<DescribeDBInstancesResponse>;
 export type DescribeInstanceAllowListsCommandOutput = CommandOutput<DescribeInstanceAllowListsResponse>;
 export type DescribeRegionsCommandOutput = CommandOutput<DescribeRegionsResponse>;
@@ -126,6 +138,7 @@ export type DescribeTosRestoreTaskDetailCommandOutput = CommandOutput<DescribeTo
 export type DescribeTosRestoreTasksCommandOutput = CommandOutput<DescribeTosRestoreTasksResponse>;
 export type DisassociateAllowListCommandOutput = CommandOutput<DisassociateAllowListResponse>;
 export type DownloadBackupCommandOutput = CommandOutput<DownloadBackupResponse>;
+export type DownloadSSLCertificateCommandOutput = CommandOutput<DownloadSSLCertificateResponse>;
 export type GrantDBAccountPrivilegeCommandOutput = CommandOutput<GrantDBAccountPrivilegeResponse>;
 export type ModifyAllowListCommandOutput = CommandOutput<ModifyAllowListResponse>;
 export type ModifyBackupPolicyCommandOutput = CommandOutput<ModifyBackupPolicyResponse>;
@@ -133,6 +146,8 @@ export type ModifyCrossBackupPolicyCommandOutput = CommandOutput<ModifyCrossBack
 export type ModifyDBAccountStatusCommandOutput = CommandOutput<ModifyDBAccountStatusResponse>;
 export type ModifyDBFailoverCommandOutput = CommandOutput<ModifyDBFailoverResponse>;
 export type ModifyDBInstanceNameCommandOutput = CommandOutput<ModifyDBInstanceNameResponse>;
+export type ModifyDBInstanceSSLCommandOutput = CommandOutput<ModifyDBInstanceSSLResponse>;
+export type ModifyDBInstanceTDECommandOutput = CommandOutput<ModifyDBInstanceTDEResponse>;
 export type ModifyInstanceAdvancedFeaturesCommandOutput = CommandOutput<ModifyInstanceAdvancedFeaturesResponse>;
 export type ResetDBAccountCommandOutput = CommandOutput<ResetDBAccountResponse>;
 export type RestartDBInstanceCommandOutput = CommandOutput<RestartDBInstanceResponse>;
@@ -453,6 +468,21 @@ export class DescribeDBInstanceParametersCommand extends Command<
   }
 }
 /**
+ * Command to DescribeDBInstanceSSL
+ */
+export class DescribeDBInstanceSSLCommand extends Command<
+  DescribeDBInstanceSSLRequest,
+  DescribeDBInstanceSSLCommandOutput,
+  'DescribeDBInstanceSSLCommand'
+> {
+  static readonly metaPath = '/DescribeDBInstanceSSL/2022-01-01/rds_mssql/post/application_json/';
+
+  constructor(input: DescribeDBInstanceSSLRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeDBInstanceSSLCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeDBInstanceSpecs
  */
 export class DescribeDBInstanceSpecsCommand extends Command<
@@ -465,6 +495,21 @@ export class DescribeDBInstanceSpecsCommand extends Command<
   constructor(input: DescribeDBInstanceSpecsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeDBInstanceSpecsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeDBInstanceTDE
+ */
+export class DescribeDBInstanceTDECommand extends Command<
+  DescribeDBInstanceTDERequest,
+  DescribeDBInstanceTDECommandOutput,
+  'DescribeDBInstanceTDECommand'
+> {
+  static readonly metaPath = '/DescribeDBInstanceTDE/2022-01-01/rds_mssql/post/application_json/';
+
+  constructor(input: DescribeDBInstanceTDERequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeDBInstanceTDECommand.metaPath);
   }
 }
 /**
@@ -573,6 +618,21 @@ export class DownloadBackupCommand extends Command<
   }
 }
 /**
+ * Command to DownloadSSLCertificate
+ */
+export class DownloadSSLCertificateCommand extends Command<
+  DownloadSSLCertificateRequest,
+  DownloadSSLCertificateCommandOutput,
+  'DownloadSSLCertificateCommand'
+> {
+  static readonly metaPath = '/DownloadSSLCertificate/2022-01-01/rds_mssql/post/application_json/';
+
+  constructor(input: DownloadSSLCertificateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DownloadSSLCertificateCommand.metaPath);
+  }
+}
+/**
  * Command to GrantDBAccountPrivilege
  */
 export class GrantDBAccountPrivilegeCommand extends Command<
@@ -678,6 +738,36 @@ export class ModifyDBInstanceNameCommand extends Command<
   }
 }
 /**
+ * Command to ModifyDBInstanceSSL
+ */
+export class ModifyDBInstanceSSLCommand extends Command<
+  ModifyDBInstanceSSLRequest,
+  ModifyDBInstanceSSLCommandOutput,
+  'ModifyDBInstanceSSLCommand'
+> {
+  static readonly metaPath = '/ModifyDBInstanceSSL/2022-01-01/rds_mssql/post/application_json/';
+
+  constructor(input: ModifyDBInstanceSSLRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyDBInstanceSSLCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyDBInstanceTDE
+ */
+export class ModifyDBInstanceTDECommand extends Command<
+  ModifyDBInstanceTDERequest,
+  ModifyDBInstanceTDECommandOutput,
+  'ModifyDBInstanceTDECommand'
+> {
+  static readonly metaPath = '/ModifyDBInstanceTDE/2022-01-01/rds_mssql/post/application_json/';
+
+  constructor(input: ModifyDBInstanceTDERequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyDBInstanceTDECommand.metaPath);
+  }
+}
+/**
  * Command to ModifyInstanceAdvancedFeatures
  */
 export class ModifyInstanceAdvancedFeaturesCommand extends Command<
@@ -775,7 +865,9 @@ export default {
   DescribeDBAccountsCommand,
   DescribeDBInstanceDetailCommand,
   DescribeDBInstanceParametersCommand,
+  DescribeDBInstanceSSLCommand,
   DescribeDBInstanceSpecsCommand,
+  DescribeDBInstanceTDECommand,
   DescribeDBInstancesCommand,
   DescribeInstanceAllowListsCommand,
   DescribeRegionsCommand,
@@ -783,6 +875,7 @@ export default {
   DescribeTosRestoreTasksCommand,
   DisassociateAllowListCommand,
   DownloadBackupCommand,
+  DownloadSSLCertificateCommand,
   GrantDBAccountPrivilegeCommand,
   ModifyAllowListCommand,
   ModifyBackupPolicyCommand,
@@ -790,6 +883,8 @@ export default {
   ModifyDBAccountStatusCommand,
   ModifyDBFailoverCommand,
   ModifyDBInstanceNameCommand,
+  ModifyDBInstanceSSLCommand,
+  ModifyDBInstanceTDECommand,
   ModifyInstanceAdvancedFeaturesCommand,
   ResetDBAccountCommand,
   RestartDBInstanceCommand,

@@ -24,6 +24,12 @@ export interface ScanTypeForDetectVulnInput {
      * @type {boolean}
      * @memberof ScanTypeForDetectVulnInput
      */
+    AIApp?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof ScanTypeForDetectVulnInput
+     */
     App?: boolean;
 
     /**

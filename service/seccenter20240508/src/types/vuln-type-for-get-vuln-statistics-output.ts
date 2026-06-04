@@ -24,6 +24,12 @@ export interface VulnTypeForGetVulnStatisticsOutput {
      * @type {number}
      * @memberof VulnTypeForGetVulnStatisticsOutput
      */
+    AIApp?: number;
+
+    /**
+     * @type {number}
+     * @memberof VulnTypeForGetVulnStatisticsOutput
+     */
     App?: number;
 
     /**

@@ -235,6 +235,24 @@ describe("Content Generation", () => {
       ).rejects.toThrow();
     });
 
+    it("should serialize priority in request", async () => {
+      const mockResponse = { id: "cgt-prio-001" };
+
+      mock.onPost(tasksURL).reply((config) => {
+        const body = JSON.parse(config.data);
+        expect(body.priority).toBe(5);
+        return [200, mockResponse];
+      });
+
+      const result = await client.createContentGenerationTask({
+        model: "doubao-seedance-2-0-260128",
+        content: [{ type: "text", text: "test" }],
+        priority: 5,
+      });
+
+      expect(result.id).toBe("cgt-prio-001");
+    });
+
     it("should serialize draft_task content item", async () => {
       const mockResponse = { id: "cgt-draft-001" };
 
@@ -285,6 +303,7 @@ describe("Content Generation", () => {
         revised_prompt: "revised prompt text",
         service_tier: "default",
         execution_expires_after: 172800,
+        priority: 9,
         generate_audio: true,
         draft: false,
         draft_task_id: "",
@@ -312,6 +331,7 @@ describe("Content Generation", () => {
       expect(result.revised_prompt).toBe("revised prompt text");
       expect(result.service_tier).toBe("default");
       expect(result.execution_expires_after).toBe(172800);
+      expect(result.priority).toBe(9);
       expect(result.generate_audio).toBe(true);
       expect(result.draft).toBe(false);
       expect(result.tools).toHaveLength(1);
@@ -361,6 +381,7 @@ describe("Content Generation", () => {
             usage: { prompt_tokens: 0, completion_tokens: 100, total_tokens: 100, tool_usage: { web_search: 2 } },
             created_at: 1776073000,
             updated_at: 1776074000,
+            priority: 9,
             generate_audio: true,
             tools: [{ type: "web_search" }],
           },
@@ -398,6 +419,7 @@ describe("Content Generation", () => {
       expect(result.items[0].usage.tool_usage!.web_search).toBe(2);
       expect(result.items[0].tools).toHaveLength(1);
       expect(result.items[0].tools![0].type).toBe("web_search");
+      expect(result.items[0].priority).toBe(9);
       expect(result.items[1].id).toBe("cgt-list-002");
       expect(result.items[1].status).toBe("running");
     });

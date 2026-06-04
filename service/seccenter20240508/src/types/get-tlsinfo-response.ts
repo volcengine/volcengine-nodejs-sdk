@@ -76,12 +76,6 @@ export interface GetTLSInfoResponse {
     ProjectID?: string;
 
     /**
-     * @type {string}
-     * @memberof GetTLSInfoResponse
-     */
-    ProjectId?: string;
-
-    /**
      * @type {number}
      * @memberof GetTLSInfoResponse
      */

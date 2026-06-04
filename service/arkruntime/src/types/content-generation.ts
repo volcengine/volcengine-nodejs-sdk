@@ -48,6 +48,7 @@ export interface CreateContentGenerationTaskRequest {
   return_last_frame?: boolean;
   service_tier?: string;
   execution_expires_after?: number;
+  priority?: number;
   generate_audio?: boolean;
   draft?: boolean;
   camera_fixed?: boolean;
@@ -100,6 +101,7 @@ export interface GetContentGenerationTaskResponse {
   revised_prompt?: string;
   service_tier?: string;
   execution_expires_after?: number;
+  priority?: number;
   generate_audio?: boolean;
   draft?: boolean;
   draft_task_id?: string;
@@ -138,6 +140,7 @@ export interface ListContentGenerationTaskItem {
   revised_prompt?: string;
   service_tier?: string;
   execution_expires_after?: number;
+  priority?: number;
   generate_audio?: boolean;
   draft?: boolean;
   draft_task_id?: string;

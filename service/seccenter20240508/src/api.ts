@@ -28,6 +28,8 @@ import { AddMonitorPolicyRequest } from './types/index';
 import { AddMonitorPolicyResponse } from './types/index';
 import { AddRaspConfigRequest } from './types/index';
 import { AddRaspConfigResponse } from './types/index';
+import { AddUserAutoDefenseRuleRequest } from './types/index';
+import { AddUserAutoDefenseRuleResponse } from './types/index';
 import { AddWhiteListRequest } from './types/index';
 import { AddWhiteListResponse } from './types/index';
 import { AllAssetScanRequest } from './types/index';
@@ -48,6 +50,8 @@ import { BatchDetectWeakPasswordRequest } from './types/index';
 import { BatchDetectWeakPasswordResponse } from './types/index';
 import { BatchInstallVarmorAppsRequest } from './types/index';
 import { BatchInstallVarmorAppsResponse } from './types/index';
+import { BatchUnBanIPItemRequest } from './types/index';
+import { BatchUnBanIPItemResponse } from './types/index';
 import { BatchUninstallVarmorAppsRequest } from './types/index';
 import { BatchUninstallVarmorAppsResponse } from './types/index';
 import { BatchUpgradeVarmorAppsRequest } from './types/index';
@@ -106,6 +110,8 @@ import { DeleteMultiLevelInstitutionRequest } from './types/index';
 import { DeleteMultiLevelInstitutionResponse } from './types/index';
 import { DeleteRaspConfigRequest } from './types/index';
 import { DeleteRaspConfigResponse } from './types/index';
+import { DeleteUserAutoDefenseRuleRequest } from './types/index';
+import { DeleteUserAutoDefenseRuleResponse } from './types/index';
 import { DeleteWhiteListsRequest } from './types/index';
 import { DeleteWhiteListsResponse } from './types/index';
 import { DescribeFileChangeTrendTop5Request } from './types/index';
@@ -264,6 +270,8 @@ import { GetDevFingerprintStatisticsRequest } from './types/index';
 import { GetDevFingerprintStatisticsResponse } from './types/index';
 import { GetDownloadStatusRequest } from './types/index';
 import { GetDownloadStatusResponse } from './types/index';
+import { GetFingerprintAIAppRequest } from './types/index';
+import { GetFingerprintAIAppResponse } from './types/index';
 import { GetFingerprintAppGroupRequest } from './types/index';
 import { GetFingerprintAppGroupResponse } from './types/index';
 import { GetFingerprintAppRequest } from './types/index';
@@ -410,6 +418,8 @@ import { GetTenantQuotaRequest } from './types/index';
 import { GetTenantQuotaResponse } from './types/index';
 import { GetUserBatchScanStatusRequest } from './types/index';
 import { GetUserBatchScanStatusResponse } from './types/index';
+import { GetVarmorAuthInfoRequest } from './types/index';
+import { GetVarmorAuthInfoResponse } from './types/index';
 import { GetVarmorConfigYAMLRequest } from './types/index';
 import { GetVarmorConfigYAMLResponse } from './types/index';
 import { GetVarmorPolicyRequest } from './types/index';
@@ -666,6 +676,8 @@ import { ModifyMultiLevelInstitutionRequest } from './types/index';
 import { ModifyMultiLevelInstitutionResponse } from './types/index';
 import { ModifyTLSConfigRequest } from './types/index';
 import { ModifyTLSConfigResponse } from './types/index';
+import { ModifyUserAutoDefenseRuleRequest } from './types/index';
+import { ModifyUserAutoDefenseRuleResponse } from './types/index';
 import { ModifyWhiteListRequest } from './types/index';
 import { ModifyWhiteListResponse } from './types/index';
 import { MultiAssetScanRequest } from './types/index';
@@ -759,6 +771,7 @@ export type AddCloudEnvCommandOutput = CommandOutput<AddCloudEnvResponse>;
 export type AddLoginConfigCommandOutput = CommandOutput<AddLoginConfigResponse>;
 export type AddMonitorPolicyCommandOutput = CommandOutput<AddMonitorPolicyResponse>;
 export type AddRaspConfigCommandOutput = CommandOutput<AddRaspConfigResponse>;
+export type AddUserAutoDefenseRuleCommandOutput = CommandOutput<AddUserAutoDefenseRuleResponse>;
 export type AddWhiteListCommandOutput = CommandOutput<AddWhiteListResponse>;
 export type AllAssetScanCommandOutput = CommandOutput<AllAssetScanResponse>;
 export type AssetScanCommandOutput = CommandOutput<AssetScanResponse>;
@@ -769,6 +782,7 @@ export type BatchCreateRepoRegistryVpcAuthCommandOutput = CommandOutput<BatchCre
 export type BatchDeleteVarmorPoliciesCommandOutput = CommandOutput<BatchDeleteVarmorPoliciesResponse>;
 export type BatchDetectWeakPasswordCommandOutput = CommandOutput<BatchDetectWeakPasswordResponse>;
 export type BatchInstallVarmorAppsCommandOutput = CommandOutput<BatchInstallVarmorAppsResponse>;
+export type BatchUnBanIPItemCommandOutput = CommandOutput<BatchUnBanIPItemResponse>;
 export type BatchUninstallVarmorAppsCommandOutput = CommandOutput<BatchUninstallVarmorAppsResponse>;
 export type BatchUpgradeVarmorAppsCommandOutput = CommandOutput<BatchUpgradeVarmorAppsResponse>;
 export type BindMLPAuthCommandOutput = CommandOutput<BindMLPAuthResponse>;
@@ -798,6 +812,7 @@ export type DeleteLoginConfigCommandOutput = CommandOutput<DeleteLoginConfigResp
 export type DeleteMonitorPolicyCommandOutput = CommandOutput<DeleteMonitorPolicyResponse>;
 export type DeleteMultiLevelInstitutionCommandOutput = CommandOutput<DeleteMultiLevelInstitutionResponse>;
 export type DeleteRaspConfigCommandOutput = CommandOutput<DeleteRaspConfigResponse>;
+export type DeleteUserAutoDefenseRuleCommandOutput = CommandOutput<DeleteUserAutoDefenseRuleResponse>;
 export type DeleteWhiteListsCommandOutput = CommandOutput<DeleteWhiteListsResponse>;
 export type DescribeFileChangeTrendTop5CommandOutput = CommandOutput<DescribeFileChangeTrendTop5Response>;
 export type DescribeFileMonitorOverviewCommandOutput = CommandOutput<DescribeFileMonitorOverviewResponse>;
@@ -877,6 +892,7 @@ export type GetDevFingerprintProcessCommandOutput = CommandOutput<GetDevFingerpr
 export type GetDevFingerprintSoftwareCommandOutput = CommandOutput<GetDevFingerprintSoftwareResponse>;
 export type GetDevFingerprintStatisticsCommandOutput = CommandOutput<GetDevFingerprintStatisticsResponse>;
 export type GetDownloadStatusCommandOutput = CommandOutput<GetDownloadStatusResponse>;
+export type GetFingerprintAIAppCommandOutput = CommandOutput<GetFingerprintAIAppResponse>;
 export type GetFingerprintAppCommandOutput = CommandOutput<GetFingerprintAppResponse>;
 export type GetFingerprintAppGroupCommandOutput = CommandOutput<GetFingerprintAppGroupResponse>;
 export type GetFingerprintCronCommandOutput = CommandOutput<GetFingerprintCronResponse>;
@@ -950,6 +966,7 @@ export type GetStackTraceCommandOutput = CommandOutput<GetStackTraceResponse>;
 export type GetTLSInfoCommandOutput = CommandOutput<GetTLSInfoResponse>;
 export type GetTenantQuotaCommandOutput = CommandOutput<GetTenantQuotaResponse>;
 export type GetUserBatchScanStatusCommandOutput = CommandOutput<GetUserBatchScanStatusResponse>;
+export type GetVarmorAuthInfoCommandOutput = CommandOutput<GetVarmorAuthInfoResponse>;
 export type GetVarmorConfigYAMLCommandOutput = CommandOutput<GetVarmorConfigYAMLResponse>;
 export type GetVarmorPolicyCommandOutput = CommandOutput<GetVarmorPolicyResponse>;
 export type GetVarmorTLSInfoCommandOutput = CommandOutput<GetVarmorTLSInfoResponse>;
@@ -1078,6 +1095,7 @@ export type ModifyLayeredGroupCommandOutput = CommandOutput<ModifyLayeredGroupRe
 export type ModifyMultiLevelInstitutionCommandOutput = CommandOutput<ModifyMultiLevelInstitutionResponse>;
 export type ModifyMultiLevelInstitutionReportSwitchCommandOutput = CommandOutput<ModifyMultiLevelInstitutionReportSwitchResponse>;
 export type ModifyTLSConfigCommandOutput = CommandOutput<ModifyTLSConfigResponse>;
+export type ModifyUserAutoDefenseRuleCommandOutput = CommandOutput<ModifyUserAutoDefenseRuleResponse>;
 export type ModifyWhiteListCommandOutput = CommandOutput<ModifyWhiteListResponse>;
 export type MultiAssetScanCommandOutput = CommandOutput<MultiAssetScanResponse>;
 export type MultiCloudAccessStatisticsCommandOutput = CommandOutput<MultiCloudAccessStatisticsResponse>;
@@ -1239,6 +1257,21 @@ export class AddRaspConfigCommand extends Command<
   }
 }
 /**
+ * Command to AddUserAutoDefenseRule
+ */
+export class AddUserAutoDefenseRuleCommand extends Command<
+  AddUserAutoDefenseRuleRequest,
+  AddUserAutoDefenseRuleCommandOutput,
+  'AddUserAutoDefenseRuleCommand'
+> {
+  static readonly metaPath = '/AddUserAutoDefenseRule/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: AddUserAutoDefenseRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddUserAutoDefenseRuleCommand.metaPath);
+  }
+}
+/**
  * Command to AddWhiteList
  */
 export class AddWhiteListCommand extends Command<
@@ -1386,6 +1419,21 @@ export class BatchInstallVarmorAppsCommand extends Command<
   constructor(input: BatchInstallVarmorAppsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(BatchInstallVarmorAppsCommand.metaPath);
+  }
+}
+/**
+ * Command to BatchUnBanIPItem
+ */
+export class BatchUnBanIPItemCommand extends Command<
+  BatchUnBanIPItemRequest,
+  BatchUnBanIPItemCommandOutput,
+  'BatchUnBanIPItemCommand'
+> {
+  static readonly metaPath = '/BatchUnBanIPItem/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: BatchUnBanIPItemRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchUnBanIPItemCommand.metaPath);
   }
 }
 /**
@@ -1821,6 +1869,21 @@ export class DeleteRaspConfigCommand extends Command<
   constructor(input: DeleteRaspConfigRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteRaspConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteUserAutoDefenseRule
+ */
+export class DeleteUserAutoDefenseRuleCommand extends Command<
+  DeleteUserAutoDefenseRuleRequest,
+  DeleteUserAutoDefenseRuleCommandOutput,
+  'DeleteUserAutoDefenseRuleCommand'
+> {
+  static readonly metaPath = '/DeleteUserAutoDefenseRule/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteUserAutoDefenseRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteUserAutoDefenseRuleCommand.metaPath);
   }
 }
 /**
@@ -3009,6 +3072,21 @@ export class GetDownloadStatusCommand extends Command<
   }
 }
 /**
+ * Command to GetFingerprintAIApp
+ */
+export class GetFingerprintAIAppCommand extends Command<
+  GetFingerprintAIAppRequest,
+  GetFingerprintAIAppCommandOutput,
+  'GetFingerprintAIAppCommand'
+> {
+  static readonly metaPath = '/GetFingerprintAIApp/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetFingerprintAIAppRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetFingerprintAIAppCommand.metaPath);
+  }
+}
+/**
  * Command to GetFingerprintApp
  */
 export class GetFingerprintAppCommand extends Command<
@@ -4101,6 +4179,21 @@ export class GetUserBatchScanStatusCommand extends Command<
   constructor(input: GetUserBatchScanStatusRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetUserBatchScanStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to GetVarmorAuthInfo
+ */
+export class GetVarmorAuthInfoCommand extends Command<
+  GetVarmorAuthInfoRequest,
+  GetVarmorAuthInfoCommandOutput,
+  'GetVarmorAuthInfoCommand'
+> {
+  static readonly metaPath = '/GetVarmorAuthInfo/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetVarmorAuthInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetVarmorAuthInfoCommand.metaPath);
   }
 }
 /**
@@ -6024,6 +6117,21 @@ export class ModifyTLSConfigCommand extends Command<
   }
 }
 /**
+ * Command to ModifyUserAutoDefenseRule
+ */
+export class ModifyUserAutoDefenseRuleCommand extends Command<
+  ModifyUserAutoDefenseRuleRequest,
+  ModifyUserAutoDefenseRuleCommandOutput,
+  'ModifyUserAutoDefenseRuleCommand'
+> {
+  static readonly metaPath = '/ModifyUserAutoDefenseRule/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ModifyUserAutoDefenseRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyUserAutoDefenseRuleCommand.metaPath);
+  }
+}
+/**
  * Command to ModifyWhiteList
  */
 export class ModifyWhiteListCommand extends Command<
@@ -6648,6 +6756,7 @@ export default {
   AddLoginConfigCommand,
   AddMonitorPolicyCommand,
   AddRaspConfigCommand,
+  AddUserAutoDefenseRuleCommand,
   AddWhiteListCommand,
   AllAssetScanCommand,
   AssetScanCommand,
@@ -6658,6 +6767,7 @@ export default {
   BatchDeleteVarmorPoliciesCommand,
   BatchDetectWeakPasswordCommand,
   BatchInstallVarmorAppsCommand,
+  BatchUnBanIPItemCommand,
   BatchUninstallVarmorAppsCommand,
   BatchUpgradeVarmorAppsCommand,
   BindMLPAuthCommand,
@@ -6687,6 +6797,7 @@ export default {
   DeleteMonitorPolicyCommand,
   DeleteMultiLevelInstitutionCommand,
   DeleteRaspConfigCommand,
+  DeleteUserAutoDefenseRuleCommand,
   DeleteWhiteListsCommand,
   DescribeFileChangeTrendTop5Command,
   DescribeFileMonitorOverviewCommand,
@@ -6766,6 +6877,7 @@ export default {
   GetDevFingerprintSoftwareCommand,
   GetDevFingerprintStatisticsCommand,
   GetDownloadStatusCommand,
+  GetFingerprintAIAppCommand,
   GetFingerprintAppCommand,
   GetFingerprintAppGroupCommand,
   GetFingerprintCronCommand,
@@ -6839,6 +6951,7 @@ export default {
   GetTLSInfoCommand,
   GetTenantQuotaCommand,
   GetUserBatchScanStatusCommand,
+  GetVarmorAuthInfoCommand,
   GetVarmorConfigYAMLCommand,
   GetVarmorPolicyCommand,
   GetVarmorTLSInfoCommand,
@@ -6967,6 +7080,7 @@ export default {
   ModifyMultiLevelInstitutionCommand,
   ModifyMultiLevelInstitutionReportSwitchCommand,
   ModifyTLSConfigCommand,
+  ModifyUserAutoDefenseRuleCommand,
   ModifyWhiteListCommand,
   MultiAssetScanCommand,
   MultiCloudAccessStatisticsCommand,

@@ -372,6 +372,12 @@ export interface ListForListBillDetailOutput {
      * @type {string}
      * @memberof ListForListBillDetailOutput
      */
+    PriceFactor?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
     PriceInterval?: string;
 
     /**
@@ -445,6 +451,12 @@ export interface ListForListBillDetailOutput {
      * @memberof ListForListBillDetailOutput
      */
     SavingPlanDeductionDiscountAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
+    SavingPlanDeductionDiscountTotalAmount?: string;
 
     /**
      * @type {string}

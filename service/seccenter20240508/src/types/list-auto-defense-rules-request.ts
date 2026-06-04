@@ -36,6 +36,12 @@ export interface ListAutoDefenseRulesRequest {
      * @type {string}
      * @memberof ListAutoDefenseRulesRequest
      */
+    RuleScope?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListAutoDefenseRulesRequest
+     */
     SortBy?: string;
 
     /**

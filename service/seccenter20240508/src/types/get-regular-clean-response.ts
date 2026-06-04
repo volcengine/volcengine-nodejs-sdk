@@ -27,6 +27,12 @@ export interface GetRegularCleanResponse {
     CleanDays?: number;
 
     /**
+     * @type {number}
+     * @memberof GetRegularCleanResponse
+     */
+    CleanHours?: number;
+
+    /**
      * @type {boolean}
      * @memberof GetRegularCleanResponse
      */

@@ -24,6 +24,12 @@ export interface ScanTypeForGetVulnScanConfigOutput {
      * @type {boolean}
      * @memberof ScanTypeForGetVulnScanConfigOutput
      */
+    AIApp?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof ScanTypeForGetVulnScanConfigOutput
+     */
     App?: boolean;
 
     /**
