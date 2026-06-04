@@ -5,6 +5,9 @@
  *   2. 有 credentialProvider → 调用 provider
  *   3. 无 provider → DefaultCredentialProvider 兜底
  */
+import fs from "fs";
+import os from "os";
+import path from "path";
 import { credentialsMiddleware } from "../../src/middlewares/credentials";
 
 describe("credentialsMiddleware", () => {
@@ -142,6 +145,27 @@ describe("credentialsMiddleware", () => {
     expect(clientConfig.sessionToken).toBeUndefined();
   });
 
+  it("should throw when credentialProvider returns invalid credentials", async () => {
+    const mockProvider = {
+      providerName: "InvalidProvider",
+      resolveCredentials: jest.fn().mockResolvedValue({
+        accessKeyId: "",
+        secretAccessKey: "",
+        providerName: "InvalidProvider",
+      }),
+    };
+
+    const clientConfig = { credentialProvider: mockProvider } as any;
+    const ctx = makeContext(clientConfig);
+    const handler = credentialsMiddleware.middleware(nextFn, ctx);
+
+    await expect(handler({ request: {}, input: {} })).rejects.toThrow(
+      "InvalidProvider: 未返回有效凭证",
+    );
+
+    expect(nextFn).not.toHaveBeenCalled();
+  });
+
   it("should fall back to DefaultCredentialProvider when no provider and no AK/SK", async () => {
     // 设置环境变量让 DefaultCredentialProvider 的 EnvironmentVariableCredentialProvider 命中
     const originalEnv = process.env;
@@ -160,6 +184,52 @@ describe("credentialsMiddleware", () => {
       expect(clientConfig.secretAccessKey).toBe("default-sk");
       expect(nextFn).toHaveBeenCalledTimes(1);
     } finally {
+      process.env = originalEnv;
+    }
+  });
+
+  it("should fall back to legacy ~/.volc/config when default credential chain fails", async () => {
+    const originalEnv = process.env;
+    const tempHome = fs.mkdtempSync(path.join(os.tmpdir(), "volc-legacy-"));
+
+    process.env = { ...originalEnv };
+    delete process.env.VOLCENGINE_ACCESS_KEY;
+    delete process.env.VOLCENGINE_SECRET_KEY;
+    delete process.env.VOLCENGINE_SESSION_TOKEN;
+    delete process.env.VOLCSTACK_ACCESS_KEY_ID;
+    delete process.env.VOLCSTACK_SECRET_ACCESS_KEY;
+    delete process.env.VOLCSTACK_ACCESS_KEY;
+    delete process.env.VOLCSTACK_SECRET_KEY;
+    delete process.env.VOLCSTACK_SESSION_TOKEN;
+    delete process.env.VOLCENGINE_OIDC_ROLE_TRN;
+    delete process.env.VOLCENGINE_OIDC_TOKEN_FILE;
+    delete process.env.VOLCENGINE_CLI_CONFIG_FILE;
+    process.env.VOLCENGINE_ECS_METADATA_DISABLED = "true";
+    process.env.HOME = tempHome;
+
+    try {
+      const legacyConfigDir = path.join(tempHome, ".volc");
+      fs.mkdirSync(legacyConfigDir);
+      fs.writeFileSync(
+        path.join(legacyConfigDir, "config"),
+        JSON.stringify({
+          VOLC_ACCESSKEY: "legacy-ak",
+          VOLC_SECRETKEY: "legacy-sk",
+        }),
+      );
+
+      const clientConfig = {} as any;
+      const ctx = makeContext(clientConfig);
+      const handler = credentialsMiddleware.middleware(nextFn, ctx);
+
+      await handler({ request: {}, input: {} });
+
+      expect(clientConfig.accessKeyId).toBe("legacy-ak");
+      expect(clientConfig.secretAccessKey).toBe("legacy-sk");
+      expect(clientConfig.sessionToken).toBeUndefined();
+      expect(nextFn).toHaveBeenCalledTimes(1);
+    } finally {
+      fs.rmSync(tempHome, { recursive: true, force: true });
       process.env = originalEnv;
     }
   });

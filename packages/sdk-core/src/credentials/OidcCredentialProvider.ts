@@ -141,6 +141,12 @@ export class OidcCredentialProvider implements Provider {
         const res = await client.send(command);
         const Credentials = res.Result?.Credentials;
 
+        if (!Credentials?.AccessKeyId || !Credentials.SecretAccessKey) {
+          throw new Error(
+            `${this.providerName}: STS AssumeRoleWithOIDC 响应缺少临时凭证`,
+          );
+        }
+
         // 计算过期时间（预留1分钟缓冲时间）
         let expiresAt;
         if (Credentials?.ExpiredTime) {
@@ -154,9 +160,9 @@ export class OidcCredentialProvider implements Provider {
 
         // 创建返回的凭据对象
         const newCredentials: CredentialValue = {
-          accessKeyId: Credentials?.AccessKeyId || "",
-          secretAccessKey: Credentials?.SecretAccessKey || "",
-          sessionToken: Credentials?.SessionToken || "",
+          accessKeyId: Credentials.AccessKeyId,
+          secretAccessKey: Credentials.SecretAccessKey,
+          sessionToken: Credentials?.SessionToken,
           providerName: this.providerName,
         };
 

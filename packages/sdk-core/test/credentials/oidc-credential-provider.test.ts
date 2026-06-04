@@ -219,6 +219,62 @@ describe("OidcCredentialProvider", () => {
       expect(creds.accessKeyId).toBe("ak-oidc-1");
       expect(mockSend).toHaveBeenCalledTimes(2);
     });
+
+    it("should throw and not cache when STS response is missing credentials", async () => {
+      mockSend.mockResolvedValueOnce({
+        ...buildMockResponse(),
+        Result: {},
+      });
+
+      const provider = new OidcCredentialProvider(
+        makeParams("missing-credentials-test"),
+      );
+
+      await expect(provider.resolveCredentials()).rejects.toThrow(
+        "STS AssumeRoleWithOIDC 响应缺少临时凭证",
+      );
+
+      mockSend.mockResolvedValueOnce(buildMockResponse());
+      const creds = await provider.resolveCredentials();
+
+      expect(creds.accessKeyId).toBe("ak-oidc-1");
+      expect(mockSend).toHaveBeenCalledTimes(2);
+    });
+
+    it("should throw and not cache when STS credentials are missing access key", async () => {
+      const response = buildMockResponse();
+      response.Result.Credentials.AccessKeyId = "";
+      mockSend.mockResolvedValueOnce(response);
+
+      const provider = new OidcCredentialProvider(
+        makeParams("incomplete-credentials-test"),
+      );
+
+      await expect(provider.resolveCredentials()).rejects.toThrow(
+        "STS AssumeRoleWithOIDC 响应缺少临时凭证",
+      );
+
+      mockSend.mockResolvedValueOnce(buildMockResponse());
+      const creds = await provider.resolveCredentials();
+
+      expect(creds.secretAccessKey).toBe("sk-oidc-1");
+      expect(mockSend).toHaveBeenCalledTimes(2);
+    });
+
+    it("should allow STS credentials without session token", async () => {
+      const response = buildMockResponse() as any;
+      delete response.Result.Credentials.SessionToken;
+      mockSend.mockResolvedValueOnce(response);
+
+      const provider = new OidcCredentialProvider(
+        makeParams("missing-session-token-test"),
+      );
+      const creds = await provider.resolveCredentials();
+
+      expect(creds.accessKeyId).toBe("ak-oidc-1");
+      expect(creds.secretAccessKey).toBe("sk-oidc-1");
+      expect(creds.sessionToken).toBeUndefined();
+    });
   });
 
   describe("environment variable fallback", () => {
