@@ -13,6 +13,7 @@
  */
 
 import { ConvertsubtitleForVideoProjectSerialTaskCreateInput } from './convertsubtitle-for-video-project-serial-task-create-input';
+import { EffectSubtitleForVideoProjectSerialTaskCreateInput } from './effect-subtitle-for-video-project-serial-task-create-input';
 import { PureVideoForVideoProjectSerialTaskCreateInput } from './pure-video-for-video-project-serial-task-create-input';
 import { SubtitleForVideoProjectSerialTaskCreateInput } from './subtitle-for-video-project-serial-task-create-input';
 import { VideoForVideoProjectSerialTaskCreateInput } from './video-for-video-project-serial-task-create-input';
@@ -23,6 +24,12 @@ import { VideoForVideoProjectSerialTaskCreateInput } from './video-for-video-pro
  * @interface SerialInfoForVideoProjectSerialTaskCreateInput
  */
 export interface SerialInfoForVideoProjectSerialTaskCreateInput {
+
+    /**
+     * @type {EffectSubtitleForVideoProjectSerialTaskCreateInput}
+     * @memberof SerialInfoForVideoProjectSerialTaskCreateInput
+     */
+    effectSubtitle?: EffectSubtitleForVideoProjectSerialTaskCreateInput;
 
     /**
      * @type {number}

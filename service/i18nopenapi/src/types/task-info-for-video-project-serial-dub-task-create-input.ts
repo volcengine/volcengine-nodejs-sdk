@@ -90,6 +90,12 @@ export interface TaskInfoForVideoProjectSerialDubTaskCreateInput {
     dubOrTranslationTaskID?: string;
 
     /**
+     * @type {number}
+     * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
+     */
+    dubVoiceMode?: number;
+
+    /**
      * @type {boolean}
      * @memberof TaskInfoForVideoProjectSerialDubTaskCreateInput
      */
