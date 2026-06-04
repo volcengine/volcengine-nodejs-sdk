@@ -16,6 +16,8 @@ import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandO
 
 import { BatchCreateRecordRequest } from './types/index';
 import { BatchCreateRecordResponse } from './types/index';
+import { BatchDeleteCustomLineRequest } from './types/index';
+import { BatchDeleteCustomLineResponse } from './types/index';
 import { BatchDeleteRecordRequest } from './types/index';
 import { BatchDeleteRecordResponse } from './types/index';
 import { BatchUpdateRecordRequest } from './types/index';
@@ -26,6 +28,8 @@ import { BindVPCRequest } from './types/index';
 import { BindVPCResponse } from './types/index';
 import { CreateAuthorizedUserRequest } from './types/index';
 import { CreateAuthorizedUserResponse } from './types/index';
+import { CreateCustomLineRequest } from './types/index';
+import { CreateCustomLineResponse } from './types/index';
 import { CreatePrivateZoneRequest } from './types/index';
 import { CreatePrivateZoneResponse } from './types/index';
 import { CreateRecordRequest } from './types/index';
@@ -52,12 +56,18 @@ import { IncBindVPCRequest } from './types/index';
 import { IncBindVPCResponse } from './types/index';
 import { ListAuthorizedUsersRequest } from './types/index';
 import { ListAuthorizedUsersResponse } from './types/index';
+import { ListAvailabilityZonesRequest } from './types/index';
+import { ListAvailabilityZonesResponse } from './types/index';
 import { ListBindVPCRequest } from './types/index';
 import { ListBindVPCResponse } from './types/index';
+import { ListCustomLinesRequest } from './types/index';
+import { ListCustomLinesResponse } from './types/index';
 import { ListPrivateZonesRequest } from './types/index';
 import { ListPrivateZonesResponse } from './types/index';
 import { ListRecordAttributesRequest } from './types/index';
 import { ListRecordAttributesResponse } from './types/index';
+import { ListRecordDigestByLineRequest } from './types/index';
+import { ListRecordDigestByLineResponse } from './types/index';
 import { ListRecordSetsRequest } from './types/index';
 import { ListRecordSetsResponse } from './types/index';
 import { ListRecordsRequest } from './types/index';
@@ -96,6 +106,8 @@ import { UntagResourcesRequest } from './types/index';
 import { UntagResourcesResponse } from './types/index';
 import { UpdateBindVPCRequest } from './types/index';
 import { UpdateBindVPCResponse } from './types/index';
+import { UpdateCustomLineRequest } from './types/index';
+import { UpdateCustomLineResponse } from './types/index';
 import { UpdateEcsHostSyncTaskRequest } from './types/index';
 import { UpdateEcsHostSyncTaskResponse } from './types/index';
 import { UpdatePrivateZoneRequest } from './types/index';
@@ -113,11 +125,13 @@ import { UpdateResolverRuleResponse } from './types/index';
 // Output Type Definitions
 // ============================================================================
 export type BatchCreateRecordCommandOutput = CommandOutput<BatchCreateRecordResponse>;
+export type BatchDeleteCustomLineCommandOutput = CommandOutput<BatchDeleteCustomLineResponse>;
 export type BatchDeleteRecordCommandOutput = CommandOutput<BatchDeleteRecordResponse>;
 export type BatchUpdateRecordCommandOutput = CommandOutput<BatchUpdateRecordResponse>;
 export type BindRuleVPCCommandOutput = CommandOutput<BindRuleVPCResponse>;
 export type BindVPCCommandOutput = CommandOutput<BindVPCResponse>;
 export type CreateAuthorizedUserCommandOutput = CommandOutput<CreateAuthorizedUserResponse>;
+export type CreateCustomLineCommandOutput = CommandOutput<CreateCustomLineResponse>;
 export type CreatePrivateZoneCommandOutput = CommandOutput<CreatePrivateZoneResponse>;
 export type CreateRecordCommandOutput = CommandOutput<CreateRecordResponse>;
 export type CreateResolverEndpointCommandOutput = CommandOutput<CreateResolverEndpointResponse>;
@@ -131,9 +145,12 @@ export type DeleteResolverRuleCommandOutput = CommandOutput<DeleteResolverRuleRe
 export type DeleteResourceAssociationAuthorizationCommandOutput = CommandOutput<DeleteResourceAssociationAuthorizationResponse>;
 export type IncBindVPCCommandOutput = CommandOutput<IncBindVPCResponse>;
 export type ListAuthorizedUsersCommandOutput = CommandOutput<ListAuthorizedUsersResponse>;
+export type ListAvailabilityZonesCommandOutput = CommandOutput<ListAvailabilityZonesResponse>;
 export type ListBindVPCCommandOutput = CommandOutput<ListBindVPCResponse>;
+export type ListCustomLinesCommandOutput = CommandOutput<ListCustomLinesResponse>;
 export type ListPrivateZonesCommandOutput = CommandOutput<ListPrivateZonesResponse>;
 export type ListRecordAttributesCommandOutput = CommandOutput<ListRecordAttributesResponse>;
+export type ListRecordDigestByLineCommandOutput = CommandOutput<ListRecordDigestByLineResponse>;
 export type ListRecordSetsCommandOutput = CommandOutput<ListRecordSetsResponse>;
 export type ListRecordsCommandOutput = CommandOutput<ListRecordsResponse>;
 export type ListRegionsCommandOutput = CommandOutput<ListRegionsResponse>;
@@ -153,6 +170,7 @@ export type SyncEcsHostCommandOutput = CommandOutput<SyncEcsHostResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateBindVPCCommandOutput = CommandOutput<UpdateBindVPCResponse>;
+export type UpdateCustomLineCommandOutput = CommandOutput<UpdateCustomLineResponse>;
 export type UpdateEcsHostSyncTaskCommandOutput = CommandOutput<UpdateEcsHostSyncTaskResponse>;
 export type UpdatePrivateZoneCommandOutput = CommandOutput<UpdatePrivateZoneResponse>;
 export type UpdateRecordCommandOutput = CommandOutput<UpdateRecordResponse>;
@@ -186,6 +204,21 @@ export class BatchCreateRecordCommand extends Command<
   constructor(input: BatchCreateRecordRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(BatchCreateRecordCommand.metaPath);
+  }
+}
+/**
+ * Command to BatchDeleteCustomLine
+ */
+export class BatchDeleteCustomLineCommand extends Command<
+  BatchDeleteCustomLineRequest,
+  BatchDeleteCustomLineCommandOutput,
+  'BatchDeleteCustomLineCommand'
+> {
+  static readonly metaPath = '/BatchDeleteCustomLine/2022-06-01/private_zone/post/application_json/';
+
+  constructor(input: BatchDeleteCustomLineRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchDeleteCustomLineCommand.metaPath);
   }
 }
 /**
@@ -261,6 +294,21 @@ export class CreateAuthorizedUserCommand extends Command<
   constructor(input: CreateAuthorizedUserRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateAuthorizedUserCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateCustomLine
+ */
+export class CreateCustomLineCommand extends Command<
+  CreateCustomLineRequest,
+  CreateCustomLineCommandOutput,
+  'CreateCustomLineCommand'
+> {
+  static readonly metaPath = '/CreateCustomLine/2022-06-01/private_zone/post/application_json/';
+
+  constructor(input: CreateCustomLineRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateCustomLineCommand.metaPath);
   }
 }
 /**
@@ -459,6 +507,21 @@ export class ListAuthorizedUsersCommand extends Command<
   }
 }
 /**
+ * Command to ListAvailabilityZones
+ */
+export class ListAvailabilityZonesCommand extends Command<
+  ListAvailabilityZonesRequest,
+  ListAvailabilityZonesCommandOutput,
+  'ListAvailabilityZonesCommand'
+> {
+  static readonly metaPath = '/ListAvailabilityZones/2022-06-01/private_zone/get/text_plain/';
+
+  constructor(input: ListAvailabilityZonesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAvailabilityZonesCommand.metaPath);
+  }
+}
+/**
  * Command to ListBindVPC
  */
 export class ListBindVPCCommand extends Command<
@@ -471,6 +534,21 @@ export class ListBindVPCCommand extends Command<
   constructor(input: ListBindVPCRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListBindVPCCommand.metaPath);
+  }
+}
+/**
+ * Command to ListCustomLines
+ */
+export class ListCustomLinesCommand extends Command<
+  ListCustomLinesRequest,
+  ListCustomLinesCommandOutput,
+  'ListCustomLinesCommand'
+> {
+  static readonly metaPath = '/ListCustomLines/2022-06-01/private_zone/post/application_json/';
+
+  constructor(input: ListCustomLinesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListCustomLinesCommand.metaPath);
   }
 }
 /**
@@ -501,6 +579,21 @@ export class ListRecordAttributesCommand extends Command<
   constructor(input: ListRecordAttributesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListRecordAttributesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRecordDigestByLine
+ */
+export class ListRecordDigestByLineCommand extends Command<
+  ListRecordDigestByLineRequest,
+  ListRecordDigestByLineCommandOutput,
+  'ListRecordDigestByLineCommand'
+> {
+  static readonly metaPath = '/ListRecordDigestByLine/2022-06-01/private_zone/post/application_json/';
+
+  constructor(input: ListRecordDigestByLineRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRecordDigestByLineCommand.metaPath);
   }
 }
 /**
@@ -789,6 +882,21 @@ export class UpdateBindVPCCommand extends Command<
   }
 }
 /**
+ * Command to UpdateCustomLine
+ */
+export class UpdateCustomLineCommand extends Command<
+  UpdateCustomLineRequest,
+  UpdateCustomLineCommandOutput,
+  'UpdateCustomLineCommand'
+> {
+  static readonly metaPath = '/UpdateCustomLine/2022-06-01/private_zone/post/application_json/';
+
+  constructor(input: UpdateCustomLineRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateCustomLineCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateEcsHostSyncTask
  */
 export class UpdateEcsHostSyncTaskCommand extends Command<
@@ -882,11 +990,13 @@ export class UpdateResolverRuleCommand extends Command<
 export default {
   PRIVATEZONEClient,
   BatchCreateRecordCommand,
+  BatchDeleteCustomLineCommand,
   BatchDeleteRecordCommand,
   BatchUpdateRecordCommand,
   BindRuleVPCCommand,
   BindVPCCommand,
   CreateAuthorizedUserCommand,
+  CreateCustomLineCommand,
   CreatePrivateZoneCommand,
   CreateRecordCommand,
   CreateResolverEndpointCommand,
@@ -900,9 +1010,12 @@ export default {
   DeleteResourceAssociationAuthorizationCommand,
   IncBindVPCCommand,
   ListAuthorizedUsersCommand,
+  ListAvailabilityZonesCommand,
   ListBindVPCCommand,
+  ListCustomLinesCommand,
   ListPrivateZonesCommand,
   ListRecordAttributesCommand,
+  ListRecordDigestByLineCommand,
   ListRecordSetsCommand,
   ListRecordsCommand,
   ListRegionsCommand,
@@ -922,6 +1035,7 @@ export default {
   TagResourcesCommand,
   UntagResourcesCommand,
   UpdateBindVPCCommand,
+  UpdateCustomLineCommand,
   UpdateEcsHostSyncTaskCommand,
   UpdatePrivateZoneCommand,
   UpdateRecordCommand,

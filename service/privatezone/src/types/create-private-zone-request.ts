@@ -35,6 +35,12 @@ export interface CreatePrivateZoneRequest {
     LineMode?: number;
 
     /**
+     * @type {boolean}
+     * @memberof CreatePrivateZoneRequest
+     */
+    NodataFallback?: boolean;
+
+    /**
      * @type {string}
      * @memberof CreatePrivateZoneRequest
      */
