@@ -16,19 +16,25 @@
  * 
  *
  * @export
- * @interface CreateSandboxResponse
+ * @interface CredentialsForDescribeSandboxOutput
  */
-export interface CreateSandboxResponse {
+export interface CredentialsForDescribeSandboxOutput {
 
     /**
      * @type {string}
-     * @memberof CreateSandboxResponse
+     * @memberof CredentialsForDescribeSandboxOutput
      */
-    AssignStatus?: string;
+    AccessKeyId?: string;
 
     /**
      * @type {string}
-     * @memberof CreateSandboxResponse
+     * @memberof CredentialsForDescribeSandboxOutput
      */
-    SandboxId?: string;
+    SecretAccessKey?: string;
+
+    /**
+     * @type {string}
+     * @memberof CredentialsForDescribeSandboxOutput
+     */
+    SessionToken?: string;
 }

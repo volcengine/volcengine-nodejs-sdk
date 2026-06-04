@@ -12,67 +12,67 @@
  * Do not edit the class manually.
  */
 
-import { EmptyDirVolumeForCreateSandboxInput } from './empty-dir-volume-for-create-sandbox-input';
-import { EnvsForCreateSandboxInput } from './envs-for-create-sandbox-input';
+import { EmptyDirVolumeForListSandboxesOutput } from './empty-dir-volume-for-list-sandboxes-output';
+import { EnvsForListSandboxesOutput } from './envs-for-list-sandboxes-output';
  /**
  * 
  *
  * @export
- * @interface SidecarForCreateSandboxInput
+ * @interface SidecarForListSandboxesOutput
  */
-export interface SidecarForCreateSandboxInput {
+export interface SidecarForListSandboxesOutput {
 
     /**
      * @type {Array<string>}
-     * @memberof SidecarForCreateSandboxInput
+     * @memberof SidecarForListSandboxesOutput
      */
     Args?: Array<string>;
 
     /**
      * @type {Array<string>}
-     * @memberof SidecarForCreateSandboxInput
+     * @memberof SidecarForListSandboxesOutput
      */
     Command?: Array<string>;
 
     /**
      * @type {number}
-     * @memberof SidecarForCreateSandboxInput
+     * @memberof SidecarForListSandboxesOutput
      */
     CpuMilli?: number;
 
     /**
-     * @type {Array<EmptyDirVolumeForCreateSandboxInput>}
-     * @memberof SidecarForCreateSandboxInput
+     * @type {Array<EmptyDirVolumeForListSandboxesOutput>}
+     * @memberof SidecarForListSandboxesOutput
      */
-    EmptyDirVolume?: Array<EmptyDirVolumeForCreateSandboxInput>;
+    EmptyDirVolume?: Array<EmptyDirVolumeForListSandboxesOutput>;
 
     /**
-     * @type {EnvsForCreateSandboxInput}
-     * @memberof SidecarForCreateSandboxInput
+     * @type {EnvsForListSandboxesOutput}
+     * @memberof SidecarForListSandboxesOutput
      */
-    Envs?: EnvsForCreateSandboxInput;
+    Envs?: EnvsForListSandboxesOutput;
 
     /**
      * @type {string}
-     * @memberof SidecarForCreateSandboxInput
+     * @memberof SidecarForListSandboxesOutput
      */
     Image?: string;
 
     /**
      * @type {boolean}
-     * @memberof SidecarForCreateSandboxInput
+     * @memberof SidecarForListSandboxesOutput
      */
     IsInitContainer?: boolean;
 
     /**
      * @type {number}
-     * @memberof SidecarForCreateSandboxInput
+     * @memberof SidecarForListSandboxesOutput
      */
     MemoryMB?: number;
 
     /**
      * @type {string}
-     * @memberof SidecarForCreateSandboxInput
+     * @memberof SidecarForListSandboxesOutput
      */
     Name?: string;
 }

@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { CredentialsForDescribeSandboxOutput } from './credentials-for-describe-sandbox-output';
+import { EncryptionConfigForDescribeSandboxOutput } from './encryption-config-for-describe-sandbox-output';
  /**
  * 
  *
@@ -24,11 +26,53 @@ export interface TosMountPointForDescribeSandboxOutput {
      * @type {string}
      * @memberof TosMountPointForDescribeSandboxOutput
      */
+    AuthMode?: string;
+
+    /**
+     * @type {string}
+     * @memberof TosMountPointForDescribeSandboxOutput
+     */
+    BucketName?: string;
+
+    /**
+     * @type {string}
+     * @memberof TosMountPointForDescribeSandboxOutput
+     */
     BucketPath?: string;
+
+    /**
+     * @type {CredentialsForDescribeSandboxOutput}
+     * @memberof TosMountPointForDescribeSandboxOutput
+     */
+    Credentials?: CredentialsForDescribeSandboxOutput;
+
+    /**
+     * @type {EncryptionConfigForDescribeSandboxOutput}
+     * @memberof TosMountPointForDescribeSandboxOutput
+     */
+    EncryptionConfig?: EncryptionConfigForDescribeSandboxOutput;
+
+    /**
+     * @type {string}
+     * @memberof TosMountPointForDescribeSandboxOutput
+     */
+    Endpoint?: string;
 
     /**
      * @type {string}
      * @memberof TosMountPointForDescribeSandboxOutput
      */
     LocalMountPath?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof TosMountPointForDescribeSandboxOutput
+     */
+    PreMount?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof TosMountPointForDescribeSandboxOutput
+     */
+    ReadOnly?: boolean;
 }

@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { RevisionCountForListSandboxesOutput } from './revision-count-for-list-sandboxes-output';
 import { SandboxForListSandboxesOutput } from './sandbox-for-list-sandboxes-output';
  /**
  * 
@@ -20,6 +21,12 @@ import { SandboxForListSandboxesOutput } from './sandbox-for-list-sandboxes-outp
  * @interface ListSandboxesResponse
  */
 export interface ListSandboxesResponse {
+
+    /**
+     * @type {RevisionCountForListSandboxesOutput}
+     * @memberof ListSandboxesResponse
+     */
+    RevisionCount?: RevisionCountForListSandboxesOutput;
 
     /**
      * @type {Array<SandboxForListSandboxesOutput>}

@@ -16,19 +16,25 @@
  * 
  *
  * @export
- * @interface CreateSandboxResponse
+ * @interface EmptyDirVolumeForListSandboxesOutput
  */
-export interface CreateSandboxResponse {
+export interface EmptyDirVolumeForListSandboxesOutput {
 
     /**
      * @type {string}
-     * @memberof CreateSandboxResponse
+     * @memberof EmptyDirVolumeForListSandboxesOutput
      */
-    AssignStatus?: string;
+    MountPath?: string;
 
     /**
      * @type {string}
-     * @memberof CreateSandboxResponse
+     * @memberof EmptyDirVolumeForListSandboxesOutput
      */
-    SandboxId?: string;
+    Name?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof EmptyDirVolumeForListSandboxesOutput
+     */
+    ReadOnly?: boolean;
 }

@@ -16,19 +16,7 @@
  * 
  *
  * @export
- * @interface CreateSandboxResponse
+ * @interface EnvsForListSandboxesOutput
  */
-export interface CreateSandboxResponse {
-
-    /**
-     * @type {string}
-     * @memberof CreateSandboxResponse
-     */
-    AssignStatus?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateSandboxResponse
-     */
-    SandboxId?: string;
+export interface EnvsForListSandboxesOutput {
 }
