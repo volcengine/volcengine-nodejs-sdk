@@ -21,6 +21,8 @@ describe("Middleware - Core Edge Cases", () => {
 
       const client = new Client({
         host: "example.com",
+        accessKeyId: "test-key",
+        secretAccessKey: "test-secret",
         requestHandler: mockHandler,
         clock: mockClock,
       });

@@ -744,6 +744,8 @@ describe("Retry Logic", () => {
       mockHandler.mock(/\/api\/test/, { status: 500 });
 
       const client = new Client({
+        accessKeyId: "test-ak",
+        secretAccessKey: "test-sk",
         autoRetry: false,
         requestHandler: mockHandler,
         clock: mockClock,
@@ -763,6 +765,8 @@ describe("Retry Logic", () => {
       mockHandler.mock(/\/api\/test/, { status: 500 });
 
       const client = new Client({
+        accessKeyId: "test-ak",
+        secretAccessKey: "test-sk",
         maxRetries: 1,
         requestHandler: mockHandler,
         clock: mockClock,
@@ -781,6 +785,8 @@ describe("Retry Logic", () => {
       mockHandler.mock(/\/api\/test/, { status: 500 });
 
       const client = new Client({
+        accessKeyId: "test-ak",
+        secretAccessKey: "test-sk",
         requestHandler: mockHandler,
         clock: mockClock,
       });
@@ -799,6 +805,8 @@ describe("Retry Logic", () => {
 
       const retryIf = jest.fn().mockReturnValue(true);
       const client = new Client({
+        accessKeyId: "test-ak",
+        secretAccessKey: "test-sk",
         maxRetries: 1,
         retryStrategy: { retryIf },
         requestHandler: mockHandler,
@@ -820,6 +828,8 @@ describe("Retry Logic", () => {
 
       const delay = jest.fn().mockReturnValue(50);
       const client = new Client({
+        accessKeyId: "test-ak",
+        secretAccessKey: "test-sk",
         maxRetries: 1,
         retryStrategy: { delay },
         requestHandler: mockHandler,

@@ -1,6 +1,6 @@
 {
   "name": "@volcengine/rdsmssql",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "swagger client for @volcengine/rdsmssql",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",

@@ -9,6 +9,8 @@ import {
   createStringToSign,
   addRequiredHeaders,
   sortParams,
+  presignUrl,
+  UNSIGNED_PAYLOAD,
 } from "../src/utils/signer";
 
 describe("Signer (Functional API)", () => {
@@ -407,6 +409,152 @@ describe("Signer (Functional API)", () => {
           "key_with_underscore",
         ]);
       });
+    });
+  });
+
+  describe("Presign URL", () => {
+    test("presignUrl should generate valid presigned URL", () => {
+      const url = presignUrl({
+        method: "GET",
+        uri: "/test/object.txt",
+        query: { "response-content-type": "application/octet-stream" },
+        region: "cn-beijing",
+        serviceName: "tos",
+        accessKeyId: "test-key",
+        secretAccessKey: "test-secret",
+        host: "open.volcengineapi.com",
+        timestamp: "20240101T120000Z",
+      });
+
+      // 验证 URL 格式
+      expect(url).toContain("https://open.volcengineapi.com");
+      expect(url).toContain("/test/object.txt");
+
+      // 验证必要的签名参数
+      expect(url).toContain("X-Algorithm=HMAC-SHA256");
+      expect(url).toContain("X-Credential=test-key");
+      expect(url).toContain("X-Date=20240101T120000Z");
+      expect(url).toContain("X-NotSignBody=");
+      expect(url).toContain("X-SignedHeaders=");
+      expect(url).toContain("X-SignedQueries=");
+      expect(url).toContain("X-Signature=");
+
+      // 验证原始查询参数也被包含
+      expect(url).toContain("response-content-type=application%2Foctet-stream");
+    });
+
+    test("presignUrl should include session token when provided", () => {
+      const url = presignUrl({
+        method: "GET",
+        uri: "/",
+        region: "cn-beijing",
+        serviceName: "tos",
+        accessKeyId: "test-key",
+        secretAccessKey: "test-secret",
+        sessionToken: "session-token-123",
+        host: "open.volcengineapi.com",
+        timestamp: "20240101T120000Z",
+      });
+
+      expect(url).toContain("X-Security-Token=session-token-123");
+    });
+
+    test("presignUrl should use custom protocol", () => {
+      const url = presignUrl({
+        method: "GET",
+        uri: "/",
+        region: "cn-beijing",
+        serviceName: "tos",
+        accessKeyId: "test-key",
+        secretAccessKey: "test-secret",
+        host: "localhost:8080",
+        timestamp: "20240101T120000Z",
+        protocol: "http",
+      });
+
+      expect(url.startsWith("http://localhost:8080")).toBe(true);
+    });
+
+    test("presignUrl should produce consistent URLs for same input", () => {
+      const params = {
+        method: "GET" as const,
+        uri: "/bucket/key",
+        query: { foo: "bar" },
+        region: "cn-beijing",
+        serviceName: "tos",
+        accessKeyId: "test-key",
+        secretAccessKey: "test-secret",
+        host: "open.volcengineapi.com",
+        timestamp: "20240101T120000Z",
+      };
+
+      const url1 = presignUrl(params);
+      const url2 = presignUrl(params);
+
+      expect(url1).toBe(url2);
+    });
+
+    test("presignUrl should produce different URLs for different secrets", () => {
+      const baseParams = {
+        method: "GET" as const,
+        uri: "/bucket/key",
+        region: "cn-beijing",
+        serviceName: "tos",
+        accessKeyId: "test-key",
+        host: "open.volcengineapi.com",
+        timestamp: "20240101T120000Z",
+      };
+
+      const url1 = presignUrl({ ...baseParams, secretAccessKey: "secret1" });
+      const url2 = presignUrl({ ...baseParams, secretAccessKey: "secret2" });
+
+      // Signature 部分应该不同
+      const sig1 = url1.match(/X-Signature=([^&]+)/)?.[1];
+      const sig2 = url2.match(/X-Signature=([^&]+)/)?.[1];
+
+      expect(sig1).not.toBe(sig2);
+    });
+
+    test("presignUrl should properly encode special characters in URI", () => {
+      const url = presignUrl({
+        method: "GET",
+        uri: "/bucket/path with spaces/file[1].txt",
+        region: "cn-beijing",
+        serviceName: "tos",
+        accessKeyId: "test-key",
+        secretAccessKey: "test-secret",
+        host: "open.volcengineapi.com",
+        timestamp: "20240101T120000Z",
+      });
+
+      // URI 应该被正确编码
+      expect(url).toContain("path%20with%20spaces");
+      expect(url).toContain("file%5B1%5D.txt");
+    });
+
+    test("presignUrl should include X-SignedQueries with sorted keys", () => {
+      const url = presignUrl({
+        method: "GET",
+        uri: "/",
+        query: { zebra: "z", alpha: "a" },
+        region: "cn-beijing",
+        serviceName: "tos",
+        accessKeyId: "test-key",
+        secretAccessKey: "test-secret",
+        host: "open.volcengineapi.com",
+        timestamp: "20240101T120000Z",
+      });
+
+      // X-SignedQueries 应该包含排序后的所有查询参数
+      expect(url).toContain("X-SignedQueries=");
+      // 解码后验证包含 alpha 和 zebra
+      const decodedUrl = decodeURIComponent(url);
+      expect(decodedUrl).toContain("alpha");
+      expect(decodedUrl).toContain("zebra");
+    });
+
+    test("UNSIGNED_PAYLOAD constant should be defined", () => {
+      expect(UNSIGNED_PAYLOAD).toBe("UNSIGNED-PAYLOAD");
     });
   });
 });

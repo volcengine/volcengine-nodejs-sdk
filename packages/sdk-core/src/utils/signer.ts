@@ -429,3 +429,193 @@ export const sortParams = (
 export { canonicalQueryString as queryParamsToString };
 
 // ============================================================================
+// Presigned URL Generation
+// ============================================================================
+
+export const UNSIGNED_PAYLOAD = "UNSIGNED-PAYLOAD";
+
+// 派生签名密钥（无前缀版本，用于预签名 URL）
+export const deriveSigningKeyNoPrefix = (
+  secretAccessKey: string,
+  date: string,
+  region: string,
+  service: string
+): Buffer => {
+  const kDate = calculateHMAC(secretAccessKey, date);
+  const kRegion = calculateHMAC(kDate, region);
+  const kService = calculateHMAC(kRegion, service);
+  return calculateHMAC(kService, constant.v4Identifier);
+};
+
+// 构建预签名 URL 的规范化路径
+export const canonicalizedPath = (path?: string): string => {
+  if (!path || path === "/") {
+    return "/";
+  }
+  // 去掉开头的 /，然后编码，再加回 /
+  const trimmed = path.replace(/^\//, "");
+  const encoded = encodeURIComponent(trimmed);
+  // 把编码后的 %2F 还原为 /
+  return "/" + encoded.replace(/%2F/gi, "/");
+};
+
+// 构建预签名 URL 的查询字符串
+// keys: 需要输出的参数 key 列表（排序后）
+// signedQueriesKeys: X-SignedQueries 的值对应的 key 列表（可能不包含 X-Security-Token）
+export const buildPresignQueryString = (
+  query: Record<string, any>,
+  keys: string[],
+  excludeSignature: boolean = false,
+  signedQueriesKeys?: string[]
+): string => {
+  const parts: string[] = [];
+
+  // 按 keys 的顺序构建
+  for (const key of keys) {
+    if (query[key] === undefined) continue;
+    const value = query[key];
+    if (Array.isArray(value)) {
+      const sorted = [...value].sort();
+      for (const v of sorted) {
+        parts.push(`${encodeURIComponent(key)}=${encodeURIComponent(v)}`);
+      }
+    } else {
+      parts.push(`${encodeURIComponent(key)}=${encodeURIComponent(value)}`);
+    }
+  }
+
+  // 如果不排除签名，添加 X-SignedQueries 和 X-Signature
+  if (!excludeSignature) {
+    const sqKeys = signedQueriesKeys || keys;
+    parts.push(
+      `X-SignedQueries=${encodeURIComponent(sqKeys.join(";"))}`
+    );
+    if (query["X-Signature"]) {
+      parts.push(`X-Signature=${encodeURIComponent(query["X-Signature"])}`);
+    }
+  }
+
+  return parts.join("&");
+};
+
+// 生成预签名 URL
+// host 传了则参与签名并返回完整 URL；不传则不签名 host，返回 path?query
+export const presignUrl = (params: {
+  method?: string;
+  uri?: string;
+  query?: Record<string, any>;
+  region: string;
+  serviceName: string;
+  accessKeyId: string;
+  secretAccessKey: string;
+  sessionToken?: string;
+  host?: string; // 传了则参与签名，不传则不签名 host
+  timestamp?: string;
+  protocol?: string; // 协议，默认 https
+}): string => {
+  const {
+    method = "GET",
+    uri = "/",
+    query = {},
+    region,
+    serviceName,
+    accessKeyId,
+    secretAccessKey,
+    sessionToken,
+    host,
+    timestamp,
+    protocol = "https",
+  } = params;
+
+  const signHost = !!host;
+
+  const datetime = timestamp || getDateTime();
+  const date = datetime.slice(0, 8);
+  const credentialScope = createScope(date, region, serviceName);
+
+  // 构建预签名需要的查询参数
+  const presignQuery: Record<string, any> = {
+    ...query,
+    "X-Date": datetime,
+    "X-NotSignBody": "",
+    "X-Algorithm": constant.algorithm,
+    "X-Credential": `${accessKeyId}/${credentialScope}`,
+    "X-SignedHeaders": signHost ? "host" : "",
+  };
+
+  // 获取所有需要签名的查询参数 key，排序（X-Security-Token 不参与 X-SignedQueries）
+  const signedQueries = Object.keys(presignQuery).sort();
+
+  // X-Security-Token 在 X-SignedQueries 计算之后添加
+  if (sessionToken) {
+    presignQuery["X-Security-Token"] = sessionToken;
+  }
+
+  // 构建用于签名的规范化查询字符串（只包含 signedQueries 中的参数，X-Security-Token 不参与签名）
+  const canonicalQuery = buildPresignQueryString(presignQuery, signedQueries, true);
+
+  // 最终 URL 需要输出所有参数（包括 X-Security-Token）
+  const allKeys = Object.keys(presignQuery).sort();
+
+  // 构建规范化路径
+  const canonicalPath = canonicalizedPath(uri);
+
+  // body hash（预签名 URL 不签名 body）
+  const bodyHash = calculateSHA256("");
+
+  // 构建规范化请求
+  let canonicalRequest: string;
+  if (signHost) {
+    // host 参与签名
+    canonicalRequest = [
+      method.toUpperCase(),
+      canonicalPath,
+      canonicalQuery,
+      `host:${host}\n`, // canonical headers
+      "host", // signed headers
+      bodyHash,
+    ].join("\n");
+  } else {
+    // host 不参与签名
+    canonicalRequest = [
+      method.toUpperCase(),
+      canonicalPath,
+      canonicalQuery,
+      "", // 空的 headers 行
+      "", // 空行
+      "", // 空的 signed headers 行
+      bodyHash,
+    ].join("\n");
+  }
+
+  // 构建待签名字符串
+  const stringToSignValue = [
+    constant.algorithm,
+    datetime,
+    credentialScope,
+    calculateSHA256(canonicalRequest),
+  ].join("\n");
+
+  // 派生签名密钥（无前缀）
+  const signingKeyBuffer = deriveSigningKeyNoPrefix(
+    secretAccessKey,
+    date,
+    region,
+    serviceName
+  );
+
+  // 计算签名
+  const signature = calculateSignature(signingKeyBuffer, stringToSignValue);
+
+  // 将签名添加到查询参数
+  presignQuery["X-Signature"] = signature;
+
+  // 构建最终查询字符串（allKeys 包含 X-Security-Token，signedQueries 不包含）
+  const queryString = buildPresignQueryString(presignQuery, allKeys, false, signedQueries);
+
+  // 有 host 返回完整 URL，没有 host 返回 path?query
+  if (host) {
+    return `${protocol}://${host}${canonicalPath}?${queryString}`;
+  }
+  return `${canonicalPath}?${queryString}`;
+};

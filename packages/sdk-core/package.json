@@ -1,6 +1,6 @@
 {
   "name": "@volcengine/sdk-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "VolcEngine SDK core package",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",

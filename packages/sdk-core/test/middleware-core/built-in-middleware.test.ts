@@ -48,6 +48,12 @@ describe("Built-in Middleware - Core Features", () => {
       const mockClock = new MockClock();
       delete process.env.VOLCSTACK_ACCESS_KEY_ID;
       delete process.env.VOLCSTACK_SECRET_ACCESS_KEY;
+      delete process.env.VOLCSTACK_ACCESS_KEY;
+      delete process.env.VOLCSTACK_SECRET_KEY;
+      delete process.env.VOLCENGINE_ACCESS_KEY_ID;
+      delete process.env.VOLCENGINE_SECRET_ACCESS_KEY;
+      delete process.env.VOLCENGINE_ACCESS_KEY;
+      delete process.env.VOLCENGINE_SECRET_KEY;
       process.env.VOLCSTACK_ACCESS_KEY_ID = "AK_TEST";
       process.env.VOLCSTACK_SECRET_ACCESS_KEY = "SK_TEST";
 
@@ -142,6 +148,8 @@ describe("Built-in Middleware - Core Features", () => {
 
       const client = new Client({
         host: "example.com",
+        accessKeyId: "test-key",
+        secretAccessKey: "test-secret",
         requestHandler: mockHandler,
         clock: mockClock,
       });
@@ -179,6 +187,8 @@ describe("Built-in Middleware - Core Features", () => {
 
       const client = new Client({
         host: "example.com",
+        accessKeyId: "test-key",
+        secretAccessKey: "test-secret",
         requestHandler: mockHandler,
         clock: mockClock,
       });

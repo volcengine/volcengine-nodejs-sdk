@@ -19,15 +19,14 @@ const credentialsCache: CredentialsCache = {};
 // 正在进行的请求缓存（用于并发控制）
 const pendingRequests: { [key: string]: Promise<any> | undefined } = {};
 // 生成缓存键的函数
-function generateCacheKey(clientConfig: ClientConfig): string {
-  const { assumeRoleParams } = clientConfig || {};
+function generateCacheKey(assumeRoleParams: AssumeRoleParams) {
   const { accessKeyId, secretAccessKey, accountId, roleName } =
     assumeRoleParams || {};
   return `${accessKeyId}-${secretAccessKey}-${accountId}-${roleName}`;
 }
-export async function getAssumeRole(clientConfig: ClientConfig) {
+export async function getAssumeRole(assumeRoleParams: AssumeRoleParams) {
   // 生成缓存键
-  const cacheKey = generateCacheKey(clientConfig);
+  const cacheKey = generateCacheKey(assumeRoleParams);
   const now = Date.now();
 
   // 检查缓存是否存在且未过期
@@ -51,9 +50,6 @@ export async function getAssumeRole(clientConfig: ClientConfig) {
       const { STSClient, AssumeRoleCommand } = await import(
         "../client/stsClient"
       );
-
-      const assumeRoleParams =
-        clientConfig.assumeRoleParams as AssumeRoleParams;
 
       const client = new STSClient({
         region: assumeRoleParams?.region || "cn-beijing",
