@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ExclusiveResourceConfigForListWorkspacesOutput } from './exclusive-resource-config-for-list-workspaces-output';
 import { TagForListWorkspacesOutput } from './tag-for-list-workspaces-output';
  /**
  * 
@@ -37,6 +38,18 @@ export interface ItemForListWorkspacesOutput {
      * @type {string}
      * @memberof ItemForListWorkspacesOutput
      */
+    ChargeType?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof ItemForListWorkspacesOutput
+     */
+    ChargeTypeSwitched?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof ItemForListWorkspacesOutput
+     */
     CreateTime?: string;
 
     /**
@@ -50,6 +63,12 @@ export interface ItemForListWorkspacesOutput {
      * @memberof ItemForListWorkspacesOutput
      */
     Description?: string;
+
+    /**
+     * @type {ExclusiveResourceConfigForListWorkspacesOutput}
+     * @memberof ItemForListWorkspacesOutput
+     */
+    ExclusiveResourceConfig?: ExclusiveResourceConfigForListWorkspacesOutput;
 
     /**
      * @type {string}
@@ -80,6 +99,12 @@ export interface ItemForListWorkspacesOutput {
      * @memberof ItemForListWorkspacesOutput
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ItemForListWorkspacesOutput
+     */
+    PrometheusFederateEndpoint?: string;
 
     /**
      * @type {string}
