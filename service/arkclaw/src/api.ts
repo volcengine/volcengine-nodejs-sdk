@@ -18,20 +18,42 @@ import { ApproveClawOmniInstanceDevicePairingRequest } from './types/index';
 import { ApproveClawOmniInstanceDevicePairingResponse } from './types/index';
 import { ClearClawOmniInstanceDevicePairedRequest } from './types/index';
 import { ClearClawOmniInstanceDevicePairedResponse } from './types/index';
+import { CreateClawInstanceRequest } from './types/index';
+import { CreateClawInstanceResponse } from './types/index';
+import { CreateClawOmniAutoChannelJobRequest } from './types/index';
+import { CreateClawOmniAutoChannelJobResponse } from './types/index';
 import { CreateClawOmniInstanceCommandJobRequest } from './types/index';
 import { CreateClawOmniInstanceCommandJobResponse } from './types/index';
 import { CreateClawOmniInstanceRequest } from './types/index';
 import { CreateClawOmniInstanceResponse } from './types/index';
+import { CreatePrivateClawOmniSpaceTemplateRequest } from './types/index';
+import { CreatePrivateClawOmniSpaceTemplateResponse } from './types/index';
+import { DeleteClawInstanceRequest } from './types/index';
+import { DeleteClawInstanceResponse } from './types/index';
+import { DeleteClawOmniChannelRequest } from './types/index';
+import { DeleteClawOmniChannelResponse } from './types/index';
 import { DeleteClawOmniInstanceRequest } from './types/index';
 import { DeleteClawOmniInstanceResponse } from './types/index';
 import { ExecuteClawOmniInstanceCommandRequest } from './types/index';
 import { ExecuteClawOmniInstanceCommandResponse } from './types/index';
+import { GetClawInstanceRequest } from './types/index';
+import { GetClawInstanceResponse } from './types/index';
+import { GetClawOmniAutoChannelJobRequest } from './types/index';
+import { GetClawOmniAutoChannelJobResponse } from './types/index';
 import { GetClawOmniInstanceCommandJobLogRequest } from './types/index';
 import { GetClawOmniInstanceCommandJobLogResponse } from './types/index';
 import { GetClawOmniInstanceCommandJobRequest } from './types/index';
 import { GetClawOmniInstanceCommandJobResponse } from './types/index';
 import { GetClawOmniInstanceRequest } from './types/index';
 import { GetClawOmniInstanceResponse } from './types/index';
+import { GetClawOmniInstanceSkillsRequest } from './types/index';
+import { GetClawOmniInstanceSkillsResponse } from './types/index';
+import { GetClawOmniSpaceTemplateRequest } from './types/index';
+import { GetClawOmniSpaceTemplateResponse } from './types/index';
+import { InstallClawOmniInstanceSkillRequest } from './types/index';
+import { InstallClawOmniInstanceSkillResponse } from './types/index';
+import { ListClawInstancesRequest } from './types/index';
+import { ListClawInstancesResponse } from './types/index';
 import { ListClawOmniChannelsRequest } from './types/index';
 import { ListClawOmniChannelsResponse } from './types/index';
 import { ListClawOmniInstanceCommandJobsRequest } from './types/index';
@@ -44,6 +66,12 @@ import { ListClawOmniInstancesRequest } from './types/index';
 import { ListClawOmniInstancesResponse } from './types/index';
 import { ListClawOmniSpaceEnabledModelsRequest } from './types/index';
 import { ListClawOmniSpaceEnabledModelsResponse } from './types/index';
+import { ListClawOmniSpaceTemplatesRequest } from './types/index';
+import { ListClawOmniSpaceTemplatesResponse } from './types/index';
+import { ListClawSpaceSeatsRequest } from './types/index';
+import { ListClawSpaceSeatsResponse } from './types/index';
+import { ListUsersRequest } from './types/index';
+import { ListUsersResponse } from './types/index';
 import { PauseClawOmniInstanceRequest } from './types/index';
 import { PauseClawOmniInstanceResponse } from './types/index';
 import { RejectClawOmniInstanceDevicePairingRequest } from './types/index';
@@ -54,39 +82,65 @@ import { ResetClawOmniInstanceRequest } from './types/index';
 import { ResetClawOmniInstanceResponse } from './types/index';
 import { ResumeClawOmniInstanceRequest } from './types/index';
 import { ResumeClawOmniInstanceResponse } from './types/index';
+import { StopClawOmniAutoChannelJobRequest } from './types/index';
+import { StopClawOmniAutoChannelJobResponse } from './types/index';
 import { StopClawOmniInstanceCommandJobRequest } from './types/index';
 import { StopClawOmniInstanceCommandJobResponse } from './types/index';
 import { UpdateClawOmniInstanceModelRequest } from './types/index';
 import { UpdateClawOmniInstanceModelResponse } from './types/index';
 import { UpdateClawOmniInstanceRequest } from './types/index';
 import { UpdateClawOmniInstanceResponse } from './types/index';
+import { UpdatePrivateClawOmniSpaceTemplateRequest } from './types/index';
+import { UpdatePrivateClawOmniSpaceTemplateResponse } from './types/index';
+import { UpdateSpaceUserConfigsRequest } from './types/index';
+import { UpdateSpaceUserConfigsResponse } from './types/index';
+import { UpdateUsersQuotaRequest } from './types/index';
+import { UpdateUsersQuotaResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
 export type ApproveClawOmniInstanceDevicePairingCommandOutput = CommandOutput<ApproveClawOmniInstanceDevicePairingResponse>;
 export type ClearClawOmniInstanceDevicePairedCommandOutput = CommandOutput<ClearClawOmniInstanceDevicePairedResponse>;
+export type CreateClawInstanceCommandOutput = CommandOutput<CreateClawInstanceResponse>;
+export type CreateClawOmniAutoChannelJobCommandOutput = CommandOutput<CreateClawOmniAutoChannelJobResponse>;
 export type CreateClawOmniInstanceCommandOutput = CommandOutput<CreateClawOmniInstanceResponse>;
 export type CreateClawOmniInstanceCommandJobCommandOutput = CommandOutput<CreateClawOmniInstanceCommandJobResponse>;
+export type CreatePrivateClawOmniSpaceTemplateCommandOutput = CommandOutput<CreatePrivateClawOmniSpaceTemplateResponse>;
+export type DeleteClawInstanceCommandOutput = CommandOutput<DeleteClawInstanceResponse>;
+export type DeleteClawOmniChannelCommandOutput = CommandOutput<DeleteClawOmniChannelResponse>;
 export type DeleteClawOmniInstanceCommandOutput = CommandOutput<DeleteClawOmniInstanceResponse>;
 export type ExecuteClawOmniInstanceCommandCommandOutput = CommandOutput<ExecuteClawOmniInstanceCommandResponse>;
+export type GetClawInstanceCommandOutput = CommandOutput<GetClawInstanceResponse>;
+export type GetClawOmniAutoChannelJobCommandOutput = CommandOutput<GetClawOmniAutoChannelJobResponse>;
 export type GetClawOmniInstanceCommandOutput = CommandOutput<GetClawOmniInstanceResponse>;
 export type GetClawOmniInstanceCommandJobCommandOutput = CommandOutput<GetClawOmniInstanceCommandJobResponse>;
 export type GetClawOmniInstanceCommandJobLogCommandOutput = CommandOutput<GetClawOmniInstanceCommandJobLogResponse>;
+export type GetClawOmniInstanceSkillsCommandOutput = CommandOutput<GetClawOmniInstanceSkillsResponse>;
+export type GetClawOmniSpaceTemplateCommandOutput = CommandOutput<GetClawOmniSpaceTemplateResponse>;
+export type InstallClawOmniInstanceSkillCommandOutput = CommandOutput<InstallClawOmniInstanceSkillResponse>;
+export type ListClawInstancesCommandOutput = CommandOutput<ListClawInstancesResponse>;
 export type ListClawOmniChannelsCommandOutput = CommandOutput<ListClawOmniChannelsResponse>;
 export type ListClawOmniInstanceCommandJobsCommandOutput = CommandOutput<ListClawOmniInstanceCommandJobsResponse>;
 export type ListClawOmniInstanceDevicePairingsCommandOutput = CommandOutput<ListClawOmniInstanceDevicePairingsResponse>;
 export type ListClawOmniInstanceDeviceStatusCommandOutput = CommandOutput<ListClawOmniInstanceDeviceStatusResponse>;
 export type ListClawOmniInstancesCommandOutput = CommandOutput<ListClawOmniInstancesResponse>;
 export type ListClawOmniSpaceEnabledModelsCommandOutput = CommandOutput<ListClawOmniSpaceEnabledModelsResponse>;
+export type ListClawOmniSpaceTemplatesCommandOutput = CommandOutput<ListClawOmniSpaceTemplatesResponse>;
+export type ListClawSpaceSeatsCommandOutput = CommandOutput<ListClawSpaceSeatsResponse>;
+export type ListUsersCommandOutput = CommandOutput<ListUsersResponse>;
 export type PauseClawOmniInstanceCommandOutput = CommandOutput<PauseClawOmniInstanceResponse>;
 export type RejectClawOmniInstanceDevicePairingCommandOutput = CommandOutput<RejectClawOmniInstanceDevicePairingResponse>;
 export type RemoveClawOmniInstanceDevicePairedCommandOutput = CommandOutput<RemoveClawOmniInstanceDevicePairedResponse>;
 export type ResetClawOmniInstanceCommandOutput = CommandOutput<ResetClawOmniInstanceResponse>;
 export type ResumeClawOmniInstanceCommandOutput = CommandOutput<ResumeClawOmniInstanceResponse>;
+export type StopClawOmniAutoChannelJobCommandOutput = CommandOutput<StopClawOmniAutoChannelJobResponse>;
 export type StopClawOmniInstanceCommandJobCommandOutput = CommandOutput<StopClawOmniInstanceCommandJobResponse>;
 export type UpdateClawOmniInstanceCommandOutput = CommandOutput<UpdateClawOmniInstanceResponse>;
 export type UpdateClawOmniInstanceModelCommandOutput = CommandOutput<UpdateClawOmniInstanceModelResponse>;
+export type UpdatePrivateClawOmniSpaceTemplateCommandOutput = CommandOutput<UpdatePrivateClawOmniSpaceTemplateResponse>;
+export type UpdateSpaceUserConfigsCommandOutput = CommandOutput<UpdateSpaceUserConfigsResponse>;
+export type UpdateUsersQuotaCommandOutput = CommandOutput<UpdateUsersQuotaResponse>;
 
 /**
  * ARKCLAWClient Service Client
@@ -132,6 +186,36 @@ export class ClearClawOmniInstanceDevicePairedCommand extends Command<
   }
 }
 /**
+ * Command to CreateClawInstance
+ */
+export class CreateClawInstanceCommand extends Command<
+  CreateClawInstanceRequest,
+  CreateClawInstanceCommandOutput,
+  'CreateClawInstanceCommand'
+> {
+  static readonly metaPath = '/CreateClawInstance/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: CreateClawInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateClawInstanceCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateClawOmniAutoChannelJob
+ */
+export class CreateClawOmniAutoChannelJobCommand extends Command<
+  CreateClawOmniAutoChannelJobRequest,
+  CreateClawOmniAutoChannelJobCommandOutput,
+  'CreateClawOmniAutoChannelJobCommand'
+> {
+  static readonly metaPath = '/CreateClawOmniAutoChannelJob/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: CreateClawOmniAutoChannelJobRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateClawOmniAutoChannelJobCommand.metaPath);
+  }
+}
+/**
  * Command to CreateClawOmniInstance
  */
 export class CreateClawOmniInstanceCommand extends Command<
@@ -162,6 +246,51 @@ export class CreateClawOmniInstanceCommandJobCommand extends Command<
   }
 }
 /**
+ * Command to CreatePrivateClawOmniSpaceTemplate
+ */
+export class CreatePrivateClawOmniSpaceTemplateCommand extends Command<
+  CreatePrivateClawOmniSpaceTemplateRequest,
+  CreatePrivateClawOmniSpaceTemplateCommandOutput,
+  'CreatePrivateClawOmniSpaceTemplateCommand'
+> {
+  static readonly metaPath = '/CreatePrivateClawOmniSpaceTemplate/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: CreatePrivateClawOmniSpaceTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreatePrivateClawOmniSpaceTemplateCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteClawInstance
+ */
+export class DeleteClawInstanceCommand extends Command<
+  DeleteClawInstanceRequest,
+  DeleteClawInstanceCommandOutput,
+  'DeleteClawInstanceCommand'
+> {
+  static readonly metaPath = '/DeleteClawInstance/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: DeleteClawInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteClawInstanceCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteClawOmniChannel
+ */
+export class DeleteClawOmniChannelCommand extends Command<
+  DeleteClawOmniChannelRequest,
+  DeleteClawOmniChannelCommandOutput,
+  'DeleteClawOmniChannelCommand'
+> {
+  static readonly metaPath = '/DeleteClawOmniChannel/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: DeleteClawOmniChannelRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteClawOmniChannelCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteClawOmniInstance
  */
 export class DeleteClawOmniInstanceCommand extends Command<
@@ -189,6 +318,36 @@ export class ExecuteClawOmniInstanceCommandCommand extends Command<
   constructor(input: ExecuteClawOmniInstanceCommandRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ExecuteClawOmniInstanceCommandCommand.metaPath);
+  }
+}
+/**
+ * Command to GetClawInstance
+ */
+export class GetClawInstanceCommand extends Command<
+  GetClawInstanceRequest,
+  GetClawInstanceCommandOutput,
+  'GetClawInstanceCommand'
+> {
+  static readonly metaPath = '/GetClawInstance/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: GetClawInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetClawInstanceCommand.metaPath);
+  }
+}
+/**
+ * Command to GetClawOmniAutoChannelJob
+ */
+export class GetClawOmniAutoChannelJobCommand extends Command<
+  GetClawOmniAutoChannelJobRequest,
+  GetClawOmniAutoChannelJobCommandOutput,
+  'GetClawOmniAutoChannelJobCommand'
+> {
+  static readonly metaPath = '/GetClawOmniAutoChannelJob/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: GetClawOmniAutoChannelJobRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetClawOmniAutoChannelJobCommand.metaPath);
   }
 }
 /**
@@ -234,6 +393,66 @@ export class GetClawOmniInstanceCommandJobLogCommand extends Command<
   constructor(input: GetClawOmniInstanceCommandJobLogRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetClawOmniInstanceCommandJobLogCommand.metaPath);
+  }
+}
+/**
+ * Command to GetClawOmniInstanceSkills
+ */
+export class GetClawOmniInstanceSkillsCommand extends Command<
+  GetClawOmniInstanceSkillsRequest,
+  GetClawOmniInstanceSkillsCommandOutput,
+  'GetClawOmniInstanceSkillsCommand'
+> {
+  static readonly metaPath = '/GetClawOmniInstanceSkills/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: GetClawOmniInstanceSkillsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetClawOmniInstanceSkillsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetClawOmniSpaceTemplate
+ */
+export class GetClawOmniSpaceTemplateCommand extends Command<
+  GetClawOmniSpaceTemplateRequest,
+  GetClawOmniSpaceTemplateCommandOutput,
+  'GetClawOmniSpaceTemplateCommand'
+> {
+  static readonly metaPath = '/GetClawOmniSpaceTemplate/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: GetClawOmniSpaceTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetClawOmniSpaceTemplateCommand.metaPath);
+  }
+}
+/**
+ * Command to InstallClawOmniInstanceSkill
+ */
+export class InstallClawOmniInstanceSkillCommand extends Command<
+  InstallClawOmniInstanceSkillRequest,
+  InstallClawOmniInstanceSkillCommandOutput,
+  'InstallClawOmniInstanceSkillCommand'
+> {
+  static readonly metaPath = '/InstallClawOmniInstanceSkill/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: InstallClawOmniInstanceSkillRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(InstallClawOmniInstanceSkillCommand.metaPath);
+  }
+}
+/**
+ * Command to ListClawInstances
+ */
+export class ListClawInstancesCommand extends Command<
+  ListClawInstancesRequest,
+  ListClawInstancesCommandOutput,
+  'ListClawInstancesCommand'
+> {
+  static readonly metaPath = '/ListClawInstances/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: ListClawInstancesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListClawInstancesCommand.metaPath);
   }
 }
 /**
@@ -327,6 +546,51 @@ export class ListClawOmniSpaceEnabledModelsCommand extends Command<
   }
 }
 /**
+ * Command to ListClawOmniSpaceTemplates
+ */
+export class ListClawOmniSpaceTemplatesCommand extends Command<
+  ListClawOmniSpaceTemplatesRequest,
+  ListClawOmniSpaceTemplatesCommandOutput,
+  'ListClawOmniSpaceTemplatesCommand'
+> {
+  static readonly metaPath = '/ListClawOmniSpaceTemplates/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: ListClawOmniSpaceTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListClawOmniSpaceTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListClawSpaceSeats
+ */
+export class ListClawSpaceSeatsCommand extends Command<
+  ListClawSpaceSeatsRequest,
+  ListClawSpaceSeatsCommandOutput,
+  'ListClawSpaceSeatsCommand'
+> {
+  static readonly metaPath = '/ListClawSpaceSeats/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: ListClawSpaceSeatsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListClawSpaceSeatsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListUsers
+ */
+export class ListUsersCommand extends Command<
+  ListUsersRequest,
+  ListUsersCommandOutput,
+  'ListUsersCommand'
+> {
+  static readonly metaPath = '/ListUsers/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: ListUsersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListUsersCommand.metaPath);
+  }
+}
+/**
  * Command to PauseClawOmniInstance
  */
 export class PauseClawOmniInstanceCommand extends Command<
@@ -402,6 +666,21 @@ export class ResumeClawOmniInstanceCommand extends Command<
   }
 }
 /**
+ * Command to StopClawOmniAutoChannelJob
+ */
+export class StopClawOmniAutoChannelJobCommand extends Command<
+  StopClawOmniAutoChannelJobRequest,
+  StopClawOmniAutoChannelJobCommandOutput,
+  'StopClawOmniAutoChannelJobCommand'
+> {
+  static readonly metaPath = '/StopClawOmniAutoChannelJob/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: StopClawOmniAutoChannelJobRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StopClawOmniAutoChannelJobCommand.metaPath);
+  }
+}
+/**
  * Command to StopClawOmniInstanceCommandJob
  */
 export class StopClawOmniInstanceCommandJobCommand extends Command<
@@ -446,30 +725,93 @@ export class UpdateClawOmniInstanceModelCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateClawOmniInstanceModelCommand.metaPath);
   }
 }
+/**
+ * Command to UpdatePrivateClawOmniSpaceTemplate
+ */
+export class UpdatePrivateClawOmniSpaceTemplateCommand extends Command<
+  UpdatePrivateClawOmniSpaceTemplateRequest,
+  UpdatePrivateClawOmniSpaceTemplateCommandOutput,
+  'UpdatePrivateClawOmniSpaceTemplateCommand'
+> {
+  static readonly metaPath = '/UpdatePrivateClawOmniSpaceTemplate/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: UpdatePrivateClawOmniSpaceTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdatePrivateClawOmniSpaceTemplateCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateSpaceUserConfigs
+ */
+export class UpdateSpaceUserConfigsCommand extends Command<
+  UpdateSpaceUserConfigsRequest,
+  UpdateSpaceUserConfigsCommandOutput,
+  'UpdateSpaceUserConfigsCommand'
+> {
+  static readonly metaPath = '/UpdateSpaceUserConfigs/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: UpdateSpaceUserConfigsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateSpaceUserConfigsCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateUsersQuota
+ */
+export class UpdateUsersQuotaCommand extends Command<
+  UpdateUsersQuotaRequest,
+  UpdateUsersQuotaCommandOutput,
+  'UpdateUsersQuotaCommand'
+> {
+  static readonly metaPath = '/UpdateUsersQuota/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: UpdateUsersQuotaRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateUsersQuotaCommand.metaPath);
+  }
+}
 
 export default {
   ARKCLAWClient,
   ApproveClawOmniInstanceDevicePairingCommand,
   ClearClawOmniInstanceDevicePairedCommand,
+  CreateClawInstanceCommand,
+  CreateClawOmniAutoChannelJobCommand,
   CreateClawOmniInstanceCommand,
   CreateClawOmniInstanceCommandJobCommand,
+  CreatePrivateClawOmniSpaceTemplateCommand,
+  DeleteClawInstanceCommand,
+  DeleteClawOmniChannelCommand,
   DeleteClawOmniInstanceCommand,
   ExecuteClawOmniInstanceCommandCommand,
+  GetClawInstanceCommand,
+  GetClawOmniAutoChannelJobCommand,
   GetClawOmniInstanceCommand,
   GetClawOmniInstanceCommandJobCommand,
   GetClawOmniInstanceCommandJobLogCommand,
+  GetClawOmniInstanceSkillsCommand,
+  GetClawOmniSpaceTemplateCommand,
+  InstallClawOmniInstanceSkillCommand,
+  ListClawInstancesCommand,
   ListClawOmniChannelsCommand,
   ListClawOmniInstanceCommandJobsCommand,
   ListClawOmniInstanceDevicePairingsCommand,
   ListClawOmniInstanceDeviceStatusCommand,
   ListClawOmniInstancesCommand,
   ListClawOmniSpaceEnabledModelsCommand,
+  ListClawOmniSpaceTemplatesCommand,
+  ListClawSpaceSeatsCommand,
+  ListUsersCommand,
   PauseClawOmniInstanceCommand,
   RejectClawOmniInstanceDevicePairingCommand,
   RemoveClawOmniInstanceDevicePairedCommand,
   ResetClawOmniInstanceCommand,
   ResumeClawOmniInstanceCommand,
+  StopClawOmniAutoChannelJobCommand,
   StopClawOmniInstanceCommandJobCommand,
   UpdateClawOmniInstanceCommand,
   UpdateClawOmniInstanceModelCommand,
+  UpdatePrivateClawOmniSpaceTemplateCommand,
+  UpdateSpaceUserConfigsCommand,
+  UpdateUsersQuotaCommand,
 };
