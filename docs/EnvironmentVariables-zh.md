@@ -149,7 +149,7 @@ Fallback 优先级：`VOLCENGINE_*` > `VOLCSTACK_*_ID` > `VOLCSTACK_*`
 
 - [访问凭据](1-Credentials-zh.md) — 各 Provider 的代码级用法
 - [Endpoint 配置](2-Endpoint-zh.md) — 双栈、引导区域列表详细说明
-- [Transport](3-Transport-zh.md) — 代理配置的代码级用法
+- [代理配置](4-Proxy-zh.md) — 代理配置的代码级用法
 
 ---
 

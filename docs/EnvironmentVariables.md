@@ -149,7 +149,7 @@ Fallback priority: `VOLCENGINE_*` > `VOLCSTACK_*_ID` > `VOLCSTACK_*`
 
 - [Credentials](1-Credentials.md) — Code-level usage of each Provider
 - [Endpoint Configuration](2-Endpoint.md) — DualStack, bootstrap region list details
-- [Transport](3-Transport.md) — Proxy configuration code-level usage
+- [Proxy](4-Proxy.md) — Proxy configuration code-level usage
 
 ---
 

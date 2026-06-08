@@ -1,4 +1,4 @@
-[← Timeouts](4-Timeout.md) | Retries [(中文)](5-Retry-zh.md) | [Error Handling →](6-ErrorHandling.md)
+[← Timeouts](5-Timeout.md) | Retries [(中文)](6-Retry-zh.md) | [Error Handling →](7-ErrorHandling.md)
 
 ---
 
@@ -78,4 +78,4 @@ const client = new ECSClient({
 
 ---
 
-[← Timeouts](4-Timeout.md) | Retries [(中文)](5-Retry-zh.md) | [Error Handling →](6-ErrorHandling.md)
+[← Timeouts](5-Timeout.md) | Retries [(中文)](6-Retry-zh.md) | [Error Handling →](7-ErrorHandling.md)

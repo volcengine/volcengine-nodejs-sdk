@@ -1,4 +1,4 @@
-[← Error Handling](6-ErrorHandling.md) | Debugging [(中文)](7-Debugging-zh.md) | [Overview →](0-Overview.md)
+[← Error Handling](7-ErrorHandling.md) | Debugging [(中文)](8-Debugging-zh.md) | [Overview →](0-Overview.md)
 
 ---
 
@@ -133,4 +133,4 @@ client.middlewareStack.add(
 
 ---
 
-[← Error Handling](6-ErrorHandling.md) | Debugging [(中文)](7-Debugging-zh.md) | [Overview →](0-Overview.md)
+[← Error Handling](7-ErrorHandling.md) | Debugging [(中文)](8-Debugging-zh.md) | [Overview →](0-Overview.md)

@@ -1,4 +1,4 @@
-[← Transport](3-Transport-zh.md) | 超时配置 [(English)](4-Timeout.md) | [重试策略 →](5-Retry-zh.md)
+[← 代理配置](4-Proxy-zh.md) | 超时配置 [(English)](5-Timeout.md) | [重试策略 →](6-Retry-zh.md)
 
 ---
 
@@ -52,4 +52,4 @@ const client = new ECSClient({
 
 ---
 
-[← Transport](3-Transport-zh.md) | 超时配置 [(English)](4-Timeout.md) | [重试策略 →](5-Retry-zh.md)
+[← 代理配置](4-Proxy-zh.md) | 超时配置 [(English)](5-Timeout.md) | [重试策略 →](6-Retry-zh.md)
