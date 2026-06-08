@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { BlueGreenDeploymentForCreateBlueGreenDeploymentOutput } from './blue-green-deployment-for-create-blue-green-deployment-output';
  /**
  * 
  *
@@ -22,8 +21,68 @@ import { BlueGreenDeploymentForCreateBlueGreenDeploymentOutput } from './blue-gr
 export interface CreateBlueGreenDeploymentResponse {
 
     /**
-     * @type {BlueGreenDeploymentForCreateBlueGreenDeploymentOutput}
+     * @type {string}
      * @memberof CreateBlueGreenDeploymentResponse
      */
-    BlueGreenDeployment?: BlueGreenDeploymentForCreateBlueGreenDeploymentOutput;
+    CreateTime?: string;
+
+    /**
+     * @type {number}
+     * @memberof CreateBlueGreenDeploymentResponse
+     */
+    DataSyncProgress?: number;
+
+    /**
+     * @type {string}
+     * @memberof CreateBlueGreenDeploymentResponse
+     */
+    EndTime?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateBlueGreenDeploymentResponse
+     */
+    Name?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateBlueGreenDeploymentResponse
+     */
+    SourceEngineVersion?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateBlueGreenDeploymentResponse
+     */
+    SourceInstanceId?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateBlueGreenDeploymentResponse
+     */
+    SourceInstanceName?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateBlueGreenDeploymentResponse
+     */
+    Status?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateBlueGreenDeploymentResponse
+     */
+    TargetEngineVersion?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateBlueGreenDeploymentResponse
+     */
+    TargetInstanceId?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateBlueGreenDeploymentResponse
+     */
+    TargetInstanceName?: string;
 }
