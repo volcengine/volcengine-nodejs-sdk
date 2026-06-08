@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface ModifyIpamScopeRequest
  */
-export interface AttachNetworkInterfaceRequest {
-
-    /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    DeleteOnTermination?: boolean;
+export interface ModifyIpamScopeRequest {
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof ModifyIpamScopeRequest
      */
-    InstanceId: string;
+    Description?: string;
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof ModifyIpamScopeRequest
      */
-    NetworkInterfaceId: string;
+    IpamScopeId: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyIpamScopeRequest
+     */
+    IpamScopeName?: string;
 }

@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface DisableEipAddressHighResolutionMonitorRequest
  */
-export interface AttachNetworkInterfaceRequest {
+export interface DisableEipAddressHighResolutionMonitorRequest {
 
     /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
+     * @type {Array<string>}
+     * @memberof DisableEipAddressHighResolutionMonitorRequest
      */
-    DeleteOnTermination?: boolean;
-
-    /**
-     * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    InstanceId: string;
+    AllocationIds?: Array<string>;
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof DisableEipAddressHighResolutionMonitorRequest
      */
-    NetworkInterfaceId: string;
+    ProjectName?: string;
 }

@@ -12,29 +12,30 @@
  * Do not edit the class manually.
  */
 
+import { IpamForDescribeIpamsOutput } from './ipam-for-describe-ipams-output';
  /**
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface DescribeIpamsResponse
  */
-export interface AttachNetworkInterfaceRequest {
+export interface DescribeIpamsResponse {
 
     /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
+     * @type {Array<IpamForDescribeIpamsOutput>}
+     * @memberof DescribeIpamsResponse
      */
-    DeleteOnTermination?: boolean;
-
-    /**
-     * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    InstanceId: string;
+    Ipams?: Array<IpamForDescribeIpamsOutput>;
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof DescribeIpamsResponse
      */
-    NetworkInterfaceId: string;
+    NextToken?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeIpamsResponse
+     */
+    RequestId?: string;
 }

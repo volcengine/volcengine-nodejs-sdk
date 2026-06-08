@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface DisableEipAddressHighResolutionMonitorResponse
  */
-export interface AttachNetworkInterfaceRequest {
-
-    /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    DeleteOnTermination?: boolean;
+export interface DisableEipAddressHighResolutionMonitorResponse {
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof DisableEipAddressHighResolutionMonitorResponse
      */
-    InstanceId: string;
+    AsyncTaskId?: string;
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof DisableEipAddressHighResolutionMonitorResponse
      */
-    NetworkInterfaceId: string;
+    RequestId?: string;
 }

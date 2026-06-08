@@ -12,29 +12,30 @@
  * Do not edit the class manually.
  */
 
+import { IpamScopeForDescribeIpamScopesOutput } from './ipam-scope-for-describe-ipam-scopes-output';
  /**
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface DescribeIpamScopesResponse
  */
-export interface AttachNetworkInterfaceRequest {
+export interface DescribeIpamScopesResponse {
 
     /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
+     * @type {Array<IpamScopeForDescribeIpamScopesOutput>}
+     * @memberof DescribeIpamScopesResponse
      */
-    DeleteOnTermination?: boolean;
-
-    /**
-     * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    InstanceId: string;
+    IpamScopes?: Array<IpamScopeForDescribeIpamScopesOutput>;
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof DescribeIpamScopesResponse
      */
-    NetworkInterfaceId: string;
+    NextToken?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeIpamScopesResponse
+     */
+    RequestId?: string;
 }

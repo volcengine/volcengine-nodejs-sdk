@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface ProvisionIpamPoolCidrRequest
  */
-export interface AttachNetworkInterfaceRequest {
-
-    /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    DeleteOnTermination?: boolean;
+export interface ProvisionIpamPoolCidrRequest {
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof ProvisionIpamPoolCidrRequest
      */
-    InstanceId: string;
+    CidrBlock: string;
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof ProvisionIpamPoolCidrRequest
      */
-    NetworkInterfaceId: string;
+    IpamPoolId: string;
 }
