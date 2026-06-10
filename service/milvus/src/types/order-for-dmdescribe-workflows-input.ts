@@ -16,35 +16,30 @@
  * 
  *
  * @export
- * @interface ZoneForDescribeZonesOutput
+ * @interface OrderForDMDescribeWorkflowsInput
  */
-export interface ZoneForDescribeZonesOutput {
+export interface OrderForDMDescribeWorkflowsInput {
+
+    /**
+     * @type {boolean}
+     * @memberof OrderForDMDescribeWorkflowsInput
+     */
+    Asc?: boolean;
 
     /**
      * @type {string}
-     * @memberof ZoneForDescribeZonesOutput
+     * @memberof OrderForDMDescribeWorkflowsInput
      */
-    ZoneId?: string;
-
-    /**
-     * @type {string}
-     * @memberof ZoneForDescribeZonesOutput
-     */
-    ZoneName?: string;
-
-    /**
-     * @type {string}
-     * @memberof ZoneForDescribeZonesOutput
-     */
-    ZoneStatus?: ZoneForDescribeZonesOutputZoneStatusEnum;
+    Key?: OrderForDMDescribeWorkflowsInputKeyEnum;
 }
 
 /**
  * @export
  * @enum {string}
  */
-export enum ZoneForDescribeZonesOutputZoneStatusEnum {
-    AVAILABLE = 'AVAILABLE',
-    SOLDOUT = 'SOLD_OUT'
+export enum OrderForDMDescribeWorkflowsInputKeyEnum {
+    NAME = 'NAME',
+    CREATETIME = 'CREATE_TIME',
+    STATUS = 'STATUS'
 }
 
