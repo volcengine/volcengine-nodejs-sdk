@@ -19,7 +19,11 @@ const MODE_SSO = "sso";
 const MODE_CONSOLE_LOGIN = "console-login";
 const MODE_STS_TOKEN = "ststoken";
 const SSO_CACHE_DIR = "sso/cache";
+const LOGIN_CACHE_DIR = "login/cache";
+const LOGIN_CACHE_DIRECTORY_ENV = "VOLCENGINE_LOGIN_CACHE_DIRECTORY";
 const OAUTH_TOKEN_PATH = "/token";
+const DEFAULT_CONSOLE_LOGIN_ENDPOINT = "https://signin.volcengine.com";
+const CONSOLE_LOGIN_TOKEN_PATH = "/authorize/oauth/token";
 const PORTAL_ROLE_CREDENTIALS_PATH = "/federation/credentials";
 const PORTAL_TOKEN_HEADER = "x-bd-cloudidentity-bearer-token";
 const EXPIRE_BUFFER_MS = 60_000;
@@ -125,6 +129,7 @@ export class CLIConfigCredentialProvider implements Provider {
       case MODE_SSO:
         return this.resolveSSO(profile, configData, configPath);
       case MODE_CONSOLE_LOGIN:
+        return this.resolveConsoleLogin(profile, configPath);
       case MODE_STS_TOKEN:
         return this.resolveCachedStsToken(profile, mode);
       default:
@@ -323,6 +328,242 @@ export class CLIConfigCredentialProvider implements Provider {
     }
 
     return this.getSsoRoleCredentials(accessToken, profile, region);
+  }
+
+  private async resolveConsoleLogin(
+    profile: any,
+    configPath: string,
+  ): Promise<CredentialValue> {
+    const loginSession = this.trimToUndefined(profile["login-session"]);
+    if (!loginSession) {
+      throw new Error(
+        `${this.providerName}: console-login 模式缺少 login-session，请先执行 ve login`,
+      );
+    }
+
+    const cacheDir =
+      process.env[LOGIN_CACHE_DIRECTORY_ENV] ||
+      path.join(path.dirname(configPath), LOGIN_CACHE_DIR);
+    const cachePath = path.join(
+      cacheDir,
+      `${crypto.createHash("sha1").update(loginSession).digest("hex")}.json`,
+    );
+    let tokenCache = this.loadConsoleLoginCache(cachePath);
+
+    const cached = this.tryApplyConsoleLoginCache(tokenCache, cachePath);
+    if (cached) {
+      this.delegate = new ExpiringCredentialDelegate(
+        cached.credentials,
+        cached.expiresAtMs,
+        this.providerName,
+      );
+      return cached.credentials;
+    }
+
+    try {
+      return await this.refreshConsoleLoginWithOAuth(tokenCache, cachePath);
+    } catch (err: any) {
+      if (!this.isInvalidGrantError(err)) {
+        throw err;
+      }
+
+      const diskCache = this.loadConsoleLoginCache(cachePath);
+      if (diskCache.refresh_token === tokenCache.refresh_token) {
+        throw new Error(
+          `${this.providerName}: console-login refresh_token 已失效，请重新执行 ve login: ${err.message}`,
+        );
+      }
+
+      tokenCache = diskCache;
+      const diskCached = this.tryApplyConsoleLoginCache(tokenCache, cachePath);
+      if (diskCached) {
+        this.delegate = new ExpiringCredentialDelegate(
+          diskCached.credentials,
+          diskCached.expiresAtMs,
+          this.providerName,
+        );
+        return diskCached.credentials;
+      }
+      return this.refreshConsoleLoginWithOAuth(tokenCache, cachePath);
+    }
+  }
+
+  private loadConsoleLoginCache(cachePath: string): any {
+    if (!fs.existsSync(cachePath)) {
+      throw new Error(
+        `${this.providerName}: console-login token cache 文件不存在: ${cachePath}，请先执行 ve login`,
+      );
+    }
+
+    try {
+      return JSON.parse(fs.readFileSync(cachePath, { encoding: "utf-8" }));
+    } catch (err: any) {
+      throw new Error(
+        `${this.providerName}: 解析 console-login token cache 失败 (${cachePath}): ${err.message}，请重新执行 ve login`,
+      );
+    }
+  }
+
+  private tryApplyConsoleLoginCache(
+    tokenCache: any,
+    cachePath: string,
+  ): { credentials: CredentialValue; expiresAtMs: number } | undefined {
+    const expiresAtMs = this.getConsoleLoginCacheExpiresAt(
+      tokenCache,
+      cachePath,
+    );
+    if (Date.now() >= expiresAtMs - EXPIRE_BUFFER_MS) {
+      return undefined;
+    }
+
+    try {
+      return {
+        credentials: this.parseConsoleLoginAccessToken(
+          tokenCache.access_token,
+          cachePath,
+        ),
+        expiresAtMs,
+      };
+    } catch {
+      return undefined;
+    }
+  }
+
+  private async refreshConsoleLoginWithOAuth(
+    tokenCache: any,
+    cachePath: string,
+  ): Promise<CredentialValue> {
+    const refreshToken = this.trimToUndefined(tokenCache.refresh_token);
+    const clientId = this.trimToUndefined(tokenCache.client_id);
+    const endpoint =
+      this.trimToUndefined(tokenCache.endpoint_url) ||
+      DEFAULT_CONSOLE_LOGIN_ENDPOINT;
+    const scope = this.trimToUndefined(tokenCache.scope);
+
+    if (!refreshToken) {
+      throw new Error(
+        `${this.providerName}: console-login cache 缺少 refresh_token，请重新执行 ve login`,
+      );
+    }
+    if (!clientId) {
+      throw new Error(
+        `${this.providerName}: console-login cache 缺少 client_id，请重新执行 ve login`,
+      );
+    }
+
+    const requestBody: Record<string, string> = {
+      grant_type: "refresh_token",
+      client_id: clientId,
+      refresh_token: refreshToken,
+    };
+    if (scope) {
+      requestBody.scope = scope;
+    }
+
+    const tokenResp = await this.requestFormUrlEncoded(
+      `${endpoint.replace(/\/+$/, "")}${CONSOLE_LOGIN_TOKEN_PATH}`,
+      requestBody,
+    );
+    const accessToken = tokenResp.access_token;
+    const expiresIn = Number(tokenResp.expires_in);
+    if (!accessToken || !expiresIn || expiresIn <= 0) {
+      throw new Error(
+        `${this.providerName}: console-login refresh 响应缺少 access_token 或 expires_in`,
+      );
+    }
+
+    // 与 Python SDK 对齐：只更新内存 cache，不写回 CLI cache/config。
+    tokenCache.access_token = accessToken;
+    if (this.trimToUndefined(tokenResp.refresh_token)) {
+      tokenCache.refresh_token = tokenResp.refresh_token;
+    }
+    if (this.trimToUndefined(tokenResp.id_token)) {
+      tokenCache.id_token = tokenResp.id_token;
+    }
+    if (this.trimToUndefined(tokenResp.token_type)) {
+      tokenCache.token_type = tokenResp.token_type;
+    }
+    tokenCache.issued_at = new Date().toISOString();
+    tokenCache.expires_in = expiresIn;
+
+    const refreshed = this.tryApplyConsoleLoginCache(tokenCache, cachePath);
+    if (!refreshed) {
+      throw new Error(
+        `${this.providerName}: console-login refresh 成功，但 access_token 无法解析为 STS 凭证`,
+      );
+    }
+    this.delegate = new ExpiringCredentialDelegate(
+      refreshed.credentials,
+      refreshed.expiresAtMs,
+      this.providerName,
+    );
+    return refreshed.credentials;
+  }
+
+  private parseConsoleLoginAccessToken(
+    accessToken: unknown,
+    cachePath: string,
+  ): CredentialValue {
+    let stsCredentials: any;
+    if (typeof accessToken === "string") {
+      try {
+        stsCredentials = JSON.parse(accessToken);
+      } catch (err: any) {
+        throw new Error(
+          `${this.providerName}: 解析 console-login access_token 失败 (${cachePath}): ${err.message}`,
+        );
+      }
+    } else if (typeof accessToken === "object" && accessToken !== null) {
+      stsCredentials = accessToken;
+    } else {
+      throw new Error(
+        `${this.providerName}: console-login access_token 格式非法 (${cachePath})`,
+      );
+    }
+
+    const accessKeyId = this.trimToUndefined(stsCredentials.access_key_id);
+    const secretAccessKey = this.trimToUndefined(
+      stsCredentials.secret_access_key,
+    );
+    const sessionToken = this.trimToUndefined(stsCredentials.session_token);
+    if (!accessKeyId || !secretAccessKey || !sessionToken) {
+      throw new Error(
+        `${this.providerName}: console-login access_token 缺少 STS 凭证字段`,
+      );
+    }
+
+    return {
+      accessKeyId,
+      secretAccessKey,
+      sessionToken,
+      providerName: this.providerName,
+    };
+  }
+
+  private getConsoleLoginCacheExpiresAt(
+    tokenCache: any,
+    cachePath: string,
+  ): number {
+    const issuedAt = this.trimToUndefined(tokenCache.issued_at);
+    const expiresIn = Number(tokenCache.expires_in);
+    if (!issuedAt) {
+      throw new Error(
+        `${this.providerName}: console-login token cache 缺少 issued_at (${cachePath})`,
+      );
+    }
+    if (!expiresIn || expiresIn <= 0) {
+      throw new Error(
+        `${this.providerName}: console-login token cache 缺少有效 expires_in (${cachePath})`,
+      );
+    }
+
+    const issuedAtMs = Date.parse(issuedAt);
+    if (Number.isNaN(issuedAtMs)) {
+      throw new Error(
+        `${this.providerName}: console-login token cache issued_at 非法 (${cachePath})`,
+      );
+    }
+    return issuedAtMs + expiresIn * 1000;
   }
 
   private resolveSsoTokenCachePath(
@@ -565,6 +806,73 @@ export class CLIConfigCredentialProvider implements Provider {
       }
       req.end();
     });
+  }
+
+  private requestFormUrlEncoded(
+    url: string,
+    body: Record<string, string>,
+  ): Promise<any> {
+    return new Promise((resolve, reject) => {
+      const parsedUrl = new URL(url);
+      const data = new URLSearchParams(body).toString();
+      const client = parsedUrl.protocol === "http:" ? http : https;
+
+      const req = client.request(
+        {
+          method: "POST",
+          protocol: parsedUrl.protocol,
+          hostname: parsedUrl.hostname,
+          port: parsedUrl.port,
+          path: `${parsedUrl.pathname}${parsedUrl.search}`,
+          timeout: 30_000,
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        },
+        (res) => {
+          const chunks: Buffer[] = [];
+          res.on("data", (chunk: any) =>
+            chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk)),
+          );
+          res.on("end", () => {
+            const raw = Buffer.concat(chunks).toString("utf-8");
+            if (
+              !res.statusCode ||
+              res.statusCode < 200 ||
+              res.statusCode >= 300
+            ) {
+              const error = new Error(`HTTP ${res.statusCode}: ${raw}`) as any;
+              error.statusCode = res.statusCode;
+              error.rawBody = raw;
+              reject(error);
+              return;
+            }
+            try {
+              resolve(raw ? JSON.parse(raw) : {});
+            } catch (err: any) {
+              reject(new Error(`解析 HTTP 响应失败: ${err.message}`));
+            }
+          });
+        },
+      );
+
+      req.on("error", reject);
+      req.on("timeout", () => req.destroy(new Error("HTTP 请求超时")));
+      req.write(data);
+      req.end();
+    });
+  }
+
+  private isInvalidGrantError(err: any): boolean {
+    if (err?.statusCode !== 400 || !err?.rawBody) {
+      return false;
+    }
+    try {
+      const parsed = JSON.parse(err.rawBody);
+      return parsed?.error === "invalid_grant";
+    } catch {
+      return false;
+    }
   }
 
   /**

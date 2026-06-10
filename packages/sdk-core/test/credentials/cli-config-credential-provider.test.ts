@@ -1,4 +1,5 @@
 import fs from "fs";
+import crypto from "crypto";
 import path from "path";
 import {
   afterAll,
@@ -395,33 +396,59 @@ describe("CLIConfigCredentialProvider", () => {
     });
   });
 
-  it("should throw if cached console-login temporary credentials are expired", async () => {
+  it("should resolve console-login credentials from login cache", async () => {
     process.env.HOME = "/mock/home";
+    process.env.VOLCENGINE_LOGIN_CACHE_DIRECTORY = "/mock/login/cache";
+    const loginSession = "console-session";
+    const cachePath = `/mock/login/cache/${crypto
+      .createHash("sha1")
+      .update(loginSession)
+      .digest("hex")}.json`;
 
     (path.resolve as jest.Mock).mockReturnValue(
       "/mock/home/.volcengine/config.json",
     );
-    (fs.existsSync as jest.Mock).mockReturnValue(true);
-    (fs.readFileSync as jest.Mock).mockReturnValue(
-      JSON.stringify({
-        current: "console",
-        profiles: {
-          console: {
-            mode: "console-login",
-            "access-key": "tmp-ak",
-            "secret-key": "tmp-sk",
-            "session-token": "tmp-token",
-            "sts-expiration": Math.floor(Date.now() / 1000) - 60,
-          },
-        },
-      }),
+    (path.join as jest.Mock).mockImplementation((...parts: unknown[]) =>
+      parts.join("/"),
     );
+    (fs.existsSync as jest.Mock).mockReturnValue(true);
+    (fs.readFileSync as jest.Mock).mockImplementation((filePath: unknown) => {
+      if (filePath === "/mock/home/.volcengine/config.json") {
+        return JSON.stringify({
+          current: "console",
+          profiles: {
+            console: {
+              mode: "console-login",
+              "login-session": loginSession,
+            },
+          },
+        });
+      }
+      if (filePath === cachePath) {
+        return JSON.stringify({
+          access_token: JSON.stringify({
+            access_key_id: "login-ak",
+            secret_access_key: "login-sk",
+            session_token: "login-token",
+          }),
+          issued_at: new Date().toISOString(),
+          expires_in: 3600,
+          refresh_token: "login-refresh-token",
+          client_id: "login-client-id",
+        });
+      }
+      throw new Error(`unexpected read: ${filePath}`);
+    });
 
     const provider = new CLIConfigCredentialProvider();
+    const creds = await provider.resolveCredentials();
 
-    await expect(provider.resolveCredentials()).rejects.toThrow(
-      "STS 临时凭证已过期",
-    );
+    expect(creds).toEqual({
+      accessKeyId: "login-ak",
+      secretAccessKey: "login-sk",
+      sessionToken: "login-token",
+      providerName: "CLIConfigCredentialProvider",
+    });
   });
 
   it("should cache StsToken credentials and skip re-reading config file on subsequent calls", async () => {
