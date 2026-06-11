@@ -250,7 +250,6 @@ export type UpdateRuleFileCommandOutput = CommandOutput<UpdateRuleFileResponse>;
 export type UpdateSilencePolicyCommandOutput = CommandOutput<UpdateSilencePolicyResponse>;
 export type UpdateWorkspaceCommandOutput = CommandOutput<UpdateWorkspaceResponse>;
 
-
 /**
  * VMPClient Service Client
  */
