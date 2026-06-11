@@ -83,7 +83,19 @@ export interface GetAlertingRuleResponse {
      * @type {string}
      * @memberof GetAlertingRuleResponse
      */
+    NotifyGroupPolicySource?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetAlertingRuleResponse
+     */
     NotifyPolicyId?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetAlertingRuleResponse
+     */
+    NotifyPolicySource?: string;
 
     /**
      * @type {string}

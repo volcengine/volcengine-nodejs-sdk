@@ -112,6 +112,12 @@ export interface FlowLogForDescribeFlowLogsOutput {
     Tags?: Array<TagForDescribeFlowLogsOutput>;
 
     /**
+     * @type {Array<number>}
+     * @memberof FlowLogForDescribeFlowLogsOutput
+     */
+    TrafficPath?: Array<number>;
+
+    /**
      * @type {string}
      * @memberof FlowLogForDescribeFlowLogsOutput
      */
@@ -122,6 +128,12 @@ export interface FlowLogForDescribeFlowLogsOutput {
      * @memberof FlowLogForDescribeFlowLogsOutput
      */
     UpdatedAt?: string;
+
+    /**
+     * @type {number}
+     * @memberof FlowLogForDescribeFlowLogsOutput
+     */
+    Version?: number;
 
     /**
      * @type {string}
