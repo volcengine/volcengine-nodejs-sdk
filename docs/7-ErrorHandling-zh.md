@@ -1,4 +1,4 @@
-[← 重试策略](5-Retry-zh.md) | 错误处理 [(English)](6-ErrorHandling.md) | [调试模式 →](7-Debugging-zh.md)
+[← 重试策略](6-Retry-zh.md) | 错误处理 [(English)](7-ErrorHandling.md) | [调试模式 →](8-Debugging-zh.md)
 
 ---
 
@@ -57,4 +57,4 @@ client.destroy();
 
 ---
 
-[← 重试策略](5-Retry-zh.md) | 错误处理 [(English)](6-ErrorHandling.md) | [调试模式 →](7-Debugging-zh.md)
+[← 重试策略](6-Retry-zh.md) | 错误处理 [(English)](7-ErrorHandling.md) | [调试模式 →](8-Debugging-zh.md)

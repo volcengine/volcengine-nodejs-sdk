@@ -1,4 +1,4 @@
-[← 超时配置](4-Timeout-zh.md) | 重试策略 [(English)](5-Retry.md) | [错误处理 →](6-ErrorHandling-zh.md)
+[← 超时配置](5-Timeout-zh.md) | 重试策略 [(English)](6-Retry.md) | [错误处理 →](7-ErrorHandling-zh.md)
 
 ---
 
@@ -80,4 +80,4 @@ const client = new ECSClient({
 
 ---
 
-[← 超时配置](4-Timeout-zh.md) | 重试策略 [(English)](5-Retry.md) | [错误处理 →](6-ErrorHandling-zh.md)
+[← 超时配置](5-Timeout-zh.md) | 重试策略 [(English)](6-Retry.md) | [错误处理 →](7-ErrorHandling-zh.md)

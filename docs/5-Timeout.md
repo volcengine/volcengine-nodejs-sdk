@@ -1,4 +1,4 @@
-[← Transport](3-Transport.md) | Timeouts [(中文)](4-Timeout-zh.md) | [Retries →](5-Retry.md)
+[← Proxy](4-Proxy.md) | Timeouts [(中文)](5-Timeout-zh.md) | [Retries →](6-Retry.md)
 
 ---
 
@@ -52,4 +52,4 @@ const client = new ECSClient({
 
 ---
 
-[← Transport](3-Transport.md) | Timeouts [(中文)](4-Timeout-zh.md) | [Retries →](5-Retry.md)
+[← Proxy](4-Proxy.md) | Timeouts [(中文)](5-Timeout-zh.md) | [Retries →](6-Retry.md)

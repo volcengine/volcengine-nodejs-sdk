@@ -1,4 +1,4 @@
-[← Retries](5-Retry.md) | Error Handling [(中文)](6-ErrorHandling-zh.md) | [Debugging →](7-Debugging.md)
+[← Retries](6-Retry.md) | Error Handling [(中文)](7-ErrorHandling-zh.md) | [Debugging →](8-Debugging.md)
 
 ---
 
@@ -55,4 +55,4 @@ client.destroy();
 
 ---
 
-[← Retries](5-Retry.md) | Error Handling [(中文)](6-ErrorHandling-zh.md) | [Debugging →](7-Debugging.md)
+[← Retries](6-Retry.md) | Error Handling [(中文)](7-ErrorHandling-zh.md) | [Debugging →](8-Debugging.md)

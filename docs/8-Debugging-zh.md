@@ -1,4 +1,4 @@
-[← 错误处理](6-ErrorHandling-zh.md) | 调试模式 [(English)](7-Debugging.md) | [概览 →](0-Overview-zh.md)
+[← 错误处理](7-ErrorHandling-zh.md) | 调试模式 [(English)](8-Debugging.md) | [概览 →](0-Overview-zh.md)
 
 ---
 
@@ -133,4 +133,4 @@ client.middlewareStack.add(
 
 ---
 
-[← 错误处理](6-ErrorHandling-zh.md) | 调试模式 [(English)](7-Debugging.md) | [概览 →](0-Overview-zh.md)
+[← 错误处理](7-ErrorHandling-zh.md) | 调试模式 [(English)](8-Debugging.md) | [概览 →](0-Overview-zh.md)

@@ -1,4 +1,4 @@
-[← Endpoint 配置](2-Endpoint-zh.md) | Transport [(English)](3-Transport.md) | [超时配置 →](4-Timeout-zh.md)
+[← Endpoint 配置](2-Endpoint-zh.md) | Transport [(English)](3-Transport.md) | [代理配置 →](4-Proxy-zh.md)
 
 ---
 
@@ -32,37 +32,6 @@ const client = new ECSClient({
 });
 ```
 
-## HTTP(S) 代理配置
-
-> **默认**
->
-> - 无代理
-
-### 在代码中配置
-
-```typescript
-const client = new ECSClient({
-  region: "cn-beijing",
-  httpOptions: {
-    proxy: {
-      protocol: "http",
-      host: "127.0.0.1",
-      port: 8888,
-    },
-  },
-});
-```
-
-### 使用环境变量
-
-SDK 会自动读取以下环境变量来配置代理：
-
-- `VOLC_PROXY_PROTOCOL`：代理协议（`http` 或 `https`）
-- `VOLC_PROXY_HOST`：代理主机
-- `VOLC_PROXY_PORT`：代理端口
-
-优先级：代码配置 > 环境变量。
-
 ## 连接池配置
 
 SDK 支持自定义 HTTP 连接池配置：
@@ -83,4 +52,4 @@ const client = new ECSClient({
 
 ---
 
-[← Endpoint 配置](2-Endpoint-zh.md) | Transport [(English)](3-Transport.md) | [超时配置 →](4-Timeout-zh.md)
+[← Endpoint 配置](2-Endpoint-zh.md) | Transport [(English)](3-Transport.md) | [代理配置 →](4-Proxy-zh.md)
