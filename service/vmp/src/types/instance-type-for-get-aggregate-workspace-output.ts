@@ -13,6 +13,7 @@
  */
 
 import { CalculatePriceParamForGetAggregateWorkspaceOutput } from './calculate-price-param-for-get-aggregate-workspace-output';
+import { CalculateVolumePriceParamForGetAggregateWorkspaceOutput } from './calculate-volume-price-param-for-get-aggregate-workspace-output';
  /**
  * 
  *
@@ -40,10 +41,22 @@ export interface InstanceTypeForGetAggregateWorkspaceOutput {
     CalculatePriceParams?: Array<CalculatePriceParamForGetAggregateWorkspaceOutput>;
 
     /**
+     * @type {Array<CalculateVolumePriceParamForGetAggregateWorkspaceOutput>}
+     * @memberof InstanceTypeForGetAggregateWorkspaceOutput
+     */
+    CalculateVolumePriceParams?: Array<CalculateVolumePriceParamForGetAggregateWorkspaceOutput>;
+
+    /**
      * @type {Array<string>}
      * @memberof InstanceTypeForGetAggregateWorkspaceOutput
      */
     DownsamplingPeriods?: Array<string>;
+
+    /**
+     * @type {number}
+     * @memberof InstanceTypeForGetAggregateWorkspaceOutput
+     */
+    FederatePerSecond?: number;
 
     /**
      * @type {string}
@@ -56,6 +69,12 @@ export interface InstanceTypeForGetAggregateWorkspaceOutput {
      * @memberof InstanceTypeForGetAggregateWorkspaceOutput
      */
     IngestSamplesPerSecond?: number;
+
+    /**
+     * @type {number}
+     * @memberof InstanceTypeForGetAggregateWorkspaceOutput
+     */
+    MaxFederateSeries?: number;
 
     /**
      * @type {number}

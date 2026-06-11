@@ -21,6 +21,12 @@
 export interface AttachNetworkInterfaceRequest {
 
     /**
+     * @type {boolean}
+     * @memberof AttachNetworkInterfaceRequest
+     */
+    DeleteOnTermination?: boolean;
+
+    /**
      * @type {string}
      * @memberof AttachNetworkInterfaceRequest
      */
