@@ -58,7 +58,7 @@ export interface CreateInstanceOneStepRequest {
      * @type {string}
      * @memberof CreateInstanceOneStepRequest
      */
-    Region: string;
+    Region?: string;
 
     /**
      * @type {Array<TagForCreateInstanceOneStepInput>}

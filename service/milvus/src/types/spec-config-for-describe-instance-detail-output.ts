@@ -27,6 +27,12 @@ export interface SpecConfigForDescribeInstanceDetailOutput {
     CpuNum?: number;
 
     /**
+     * @type {string}
+     * @memberof SpecConfigForDescribeInstanceDetailOutput
+     */
+    DisplayName?: string;
+
+    /**
      * @type {number}
      * @memberof SpecConfigForDescribeInstanceDetailOutput
      */
@@ -49,4 +55,16 @@ export interface SpecConfigForDescribeInstanceDetailOutput {
      * @memberof SpecConfigForDescribeInstanceDetailOutput
      */
     NodeType?: string;
+
+    /**
+     * @type {string}
+     * @memberof SpecConfigForDescribeInstanceDetailOutput
+     */
+    ResourceSpecName?: string;
+
+    /**
+     * @type {string}
+     * @memberof SpecConfigForDescribeInstanceDetailOutput
+     */
+    SpecType?: string;
 }
