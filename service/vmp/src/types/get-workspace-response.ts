@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ExclusiveResourceConfigForGetWorkspaceOutput } from './exclusive-resource-config-for-get-workspace-output';
 import { InstanceTypeForGetWorkspaceOutput } from './instance-type-for-get-workspace-output';
 import { QuotaForGetWorkspaceOutput } from './quota-for-get-workspace-output';
 import { TagForGetWorkspaceOutput } from './tag-for-get-workspace-output';
@@ -33,6 +34,12 @@ export interface GetWorkspaceResponse {
      * @type {string}
      * @memberof GetWorkspaceResponse
      */
+    ChargeType?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetWorkspaceResponse
+     */
     CreateTime?: string;
 
     /**
@@ -46,6 +53,12 @@ export interface GetWorkspaceResponse {
      * @memberof GetWorkspaceResponse
      */
     Description?: string;
+
+    /**
+     * @type {ExclusiveResourceConfigForGetWorkspaceOutput}
+     * @memberof GetWorkspaceResponse
+     */
+    ExclusiveResourceConfig?: ExclusiveResourceConfigForGetWorkspaceOutput;
 
     /**
      * @type {string}
@@ -82,6 +95,12 @@ export interface GetWorkspaceResponse {
      * @memberof GetWorkspaceResponse
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetWorkspaceResponse
+     */
+    PrometheusFederateEndpoint?: string;
 
     /**
      * @type {string}
