@@ -51,6 +51,12 @@ export interface ListPodRequest {
     DcList?: Array<string>;
 
     /**
+     * @type {boolean}
+     * @memberof ListPodRequest
+     */
+    FilterAI?: boolean;
+
+    /**
      * @type {string}
      * @memberof ListPodRequest
      */
