@@ -23,6 +23,12 @@ import { TagForGetClawOmniInstanceOutput } from './tag-for-get-claw-omni-instanc
 export interface ClawOmniInstanceForGetClawOmniInstanceOutput {
 
     /**
+     * @type {string}
+     * @memberof ClawOmniInstanceForGetClawOmniInstanceOutput
+     */
+    AgentMd?: string;
+
+    /**
      * @type {number}
      * @memberof ClawOmniInstanceForGetClawOmniInstanceOutput
      */

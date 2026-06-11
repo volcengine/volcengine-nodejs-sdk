@@ -49,4 +49,10 @@ export interface UpdateClawOmniInstanceRequest {
      * @memberof UpdateClawOmniInstanceRequest
      */
     TokenLimitPerWeek?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateClawOmniInstanceRequest
+     */
+    TokenQuota?: string;
 }
