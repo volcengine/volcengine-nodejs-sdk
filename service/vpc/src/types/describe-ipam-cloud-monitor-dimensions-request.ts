@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface DescribeIpamCloudMonitorDimensionsRequest
  */
-export interface AttachNetworkInterfaceRequest {
-
-    /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    DeleteOnTermination?: boolean;
+export interface DescribeIpamCloudMonitorDimensionsRequest {
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof DescribeIpamCloudMonitorDimensionsRequest
      */
-    InstanceId: string;
+    IpamScopeId: string;
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof DescribeIpamCloudMonitorDimensionsRequest
      */
-    NetworkInterfaceId: string;
+    TargetName: string;
 }

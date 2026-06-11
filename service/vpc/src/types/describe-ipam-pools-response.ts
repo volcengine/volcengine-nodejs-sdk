@@ -12,29 +12,30 @@
  * Do not edit the class manually.
  */
 
+import { IpamPoolForDescribeIpamPoolsOutput } from './ipam-pool-for-describe-ipam-pools-output';
  /**
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface DescribeIpamPoolsResponse
  */
-export interface AttachNetworkInterfaceRequest {
+export interface DescribeIpamPoolsResponse {
 
     /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
+     * @type {Array<IpamPoolForDescribeIpamPoolsOutput>}
+     * @memberof DescribeIpamPoolsResponse
      */
-    DeleteOnTermination?: boolean;
-
-    /**
-     * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    InstanceId: string;
+    IpamPools?: Array<IpamPoolForDescribeIpamPoolsOutput>;
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof DescribeIpamPoolsResponse
      */
-    NetworkInterfaceId: string;
+    NextToken?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeIpamPoolsResponse
+     */
+    RequestId?: string;
 }

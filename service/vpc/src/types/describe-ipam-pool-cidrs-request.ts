@@ -16,25 +16,31 @@
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface DescribeIpamPoolCidrsRequest
  */
-export interface AttachNetworkInterfaceRequest {
-
-    /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    DeleteOnTermination?: boolean;
+export interface DescribeIpamPoolCidrsRequest {
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof DescribeIpamPoolCidrsRequest
      */
-    InstanceId: string;
+    CidrBlock?: string;
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof DescribeIpamPoolCidrsRequest
      */
-    NetworkInterfaceId: string;
+    IpamPoolId: string;
+
+    /**
+     * @type {number}
+     * @memberof DescribeIpamPoolCidrsRequest
+     */
+    MaxResults?: number;
+
+    /**
+     * @type {string}
+     * @memberof DescribeIpamPoolCidrsRequest
+     */
+    NextToken?: string;
 }

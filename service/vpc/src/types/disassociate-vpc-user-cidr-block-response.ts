@@ -16,25 +16,13 @@
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface DisassociateVpcUserCidrBlockResponse
  */
-export interface AttachNetworkInterfaceRequest {
-
-    /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    DeleteOnTermination?: boolean;
+export interface DisassociateVpcUserCidrBlockResponse {
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof DisassociateVpcUserCidrBlockResponse
      */
-    InstanceId: string;
-
-    /**
-     * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    NetworkInterfaceId: string;
+    RequestId?: string;
 }

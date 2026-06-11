@@ -16,25 +16,13 @@
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface DescribeEipAddressHighResolutionMonitorAttributeRequest
  */
-export interface AttachNetworkInterfaceRequest {
-
-    /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    DeleteOnTermination?: boolean;
+export interface DescribeEipAddressHighResolutionMonitorAttributeRequest {
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof DescribeEipAddressHighResolutionMonitorAttributeRequest
      */
-    InstanceId: string;
-
-    /**
-     * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    NetworkInterfaceId: string;
+    AllocationId: string;
 }

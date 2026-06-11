@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface TagForDescribeIpamsOutput
  */
-export interface AttachNetworkInterfaceRequest {
-
-    /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    DeleteOnTermination?: boolean;
+export interface TagForDescribeIpamsOutput {
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof TagForDescribeIpamsOutput
      */
-    InstanceId: string;
+    Key?: string;
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof TagForDescribeIpamsOutput
      */
-    NetworkInterfaceId: string;
+    Value?: string;
 }

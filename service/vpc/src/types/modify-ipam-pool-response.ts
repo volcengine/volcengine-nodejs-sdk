@@ -16,25 +16,13 @@
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface ModifyIpamPoolResponse
  */
-export interface AttachNetworkInterfaceRequest {
-
-    /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    DeleteOnTermination?: boolean;
+export interface ModifyIpamPoolResponse {
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof ModifyIpamPoolResponse
      */
-    InstanceId: string;
-
-    /**
-     * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    NetworkInterfaceId: string;
+    RequestId?: string;
 }

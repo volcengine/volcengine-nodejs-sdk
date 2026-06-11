@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface CreateIpamRequest
  */
-export interface AttachNetworkInterfaceRequest {
-
-    /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    DeleteOnTermination?: boolean;
+export interface CreateIpamRequest {
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof CreateIpamRequest
      */
-    InstanceId: string;
+    Description?: string;
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof CreateIpamRequest
      */
-    NetworkInterfaceId: string;
+    IpamName?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof CreateIpamRequest
+     */
+    OperatingRegions?: Array<string>;
 }

@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface ReleaseIpamPoolAllocationResponse
  */
-export interface AttachNetworkInterfaceRequest {
-
-    /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    DeleteOnTermination?: boolean;
+export interface ReleaseIpamPoolAllocationResponse {
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof ReleaseIpamPoolAllocationResponse
      */
-    InstanceId: string;
+    AsyncTaskId?: string;
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof ReleaseIpamPoolAllocationResponse
      */
-    NetworkInterfaceId: string;
+    RequestId?: string;
 }

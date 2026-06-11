@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface AttachNetworkInterfaceRequest
+ * @interface TagFilterForListTagsForIpamResourcesInput
  */
-export interface AttachNetworkInterfaceRequest {
-
-    /**
-     * @type {boolean}
-     * @memberof AttachNetworkInterfaceRequest
-     */
-    DeleteOnTermination?: boolean;
+export interface TagFilterForListTagsForIpamResourcesInput {
 
     /**
      * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @memberof TagFilterForListTagsForIpamResourcesInput
      */
-    InstanceId: string;
+    Key?: string;
 
     /**
-     * @type {string}
-     * @memberof AttachNetworkInterfaceRequest
+     * @type {Array<string>}
+     * @memberof TagFilterForListTagsForIpamResourcesInput
      */
-    NetworkInterfaceId: string;
+    Values?: Array<string>;
 }
