@@ -24,6 +24,12 @@ export interface PlannedEventForDescribePlannedEventsOutput {
      * @type {string}
      * @memberof PlannedEventForDescribePlannedEventsOutput
      */
+    Action?: string;
+
+    /**
+     * @type {string}
+     * @memberof PlannedEventForDescribePlannedEventsOutput
+     */
     ActionName?: string;
 
     /**

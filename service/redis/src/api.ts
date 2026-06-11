@@ -92,6 +92,8 @@ import { DescribeDBInstanceParamsRequest } from './types/index';
 import { DescribeDBInstanceParamsResponse } from './types/index';
 import { DescribeDBInstanceShardsRequest } from './types/index';
 import { DescribeDBInstanceShardsResponse } from './types/index';
+import { DescribeDBInstanceSlotsRequest } from './types/index';
+import { DescribeDBInstanceSlotsResponse } from './types/index';
 import { DescribeDBInstanceSpecsRequest } from './types/index';
 import { DescribeDBInstanceSpecsResponse } from './types/index';
 import { DescribeDBInstancesRequest } from './types/index';
@@ -104,6 +106,8 @@ import { DescribeEnterpriseDBInstanceSpecsRequest } from './types/index';
 import { DescribeEnterpriseDBInstanceSpecsResponse } from './types/index';
 import { DescribeEnterpriseZonesRequest } from './types/index';
 import { DescribeEnterpriseZonesResponse } from './types/index';
+import { DescribeFatLogsRequest } from './types/index';
+import { DescribeFatLogsResponse } from './types/index';
 import { DescribeHotKeysRequest } from './types/index';
 import { DescribeHotKeysResponse } from './types/index';
 import { DescribeKeyScanJobsRequest } from './types/index';
@@ -255,12 +259,14 @@ export type DescribeDBInstanceBandwidthPerShardCommandOutput = CommandOutput<Des
 export type DescribeDBInstanceDetailCommandOutput = CommandOutput<DescribeDBInstanceDetailResponse>;
 export type DescribeDBInstanceParamsCommandOutput = CommandOutput<DescribeDBInstanceParamsResponse>;
 export type DescribeDBInstanceShardsCommandOutput = CommandOutput<DescribeDBInstanceShardsResponse>;
+export type DescribeDBInstanceSlotsCommandOutput = CommandOutput<DescribeDBInstanceSlotsResponse>;
 export type DescribeDBInstanceSpecsCommandOutput = CommandOutput<DescribeDBInstanceSpecsResponse>;
 export type DescribeDBInstancesCommandOutput = CommandOutput<DescribeDBInstancesResponse>;
 export type DescribeEnterpriseDBInstanceDetailCommandOutput = CommandOutput<DescribeEnterpriseDBInstanceDetailResponse>;
 export type DescribeEnterpriseDBInstanceParamsCommandOutput = CommandOutput<DescribeEnterpriseDBInstanceParamsResponse>;
 export type DescribeEnterpriseDBInstanceSpecsCommandOutput = CommandOutput<DescribeEnterpriseDBInstanceSpecsResponse>;
 export type DescribeEnterpriseZonesCommandOutput = CommandOutput<DescribeEnterpriseZonesResponse>;
+export type DescribeFatLogsCommandOutput = CommandOutput<DescribeFatLogsResponse>;
 export type DescribeHotKeysCommandOutput = CommandOutput<DescribeHotKeysResponse>;
 export type DescribeKeyScanJobsCommandOutput = CommandOutput<DescribeKeyScanJobsResponse>;
 export type DescribeNodeIdsCommandOutput = CommandOutput<DescribeNodeIdsResponse>;
@@ -915,6 +921,21 @@ export class DescribeDBInstanceShardsCommand extends Command<
   }
 }
 /**
+ * Command to DescribeDBInstanceSlots
+ */
+export class DescribeDBInstanceSlotsCommand extends Command<
+  DescribeDBInstanceSlotsRequest,
+  DescribeDBInstanceSlotsCommandOutput,
+  'DescribeDBInstanceSlotsCommand'
+> {
+  static readonly metaPath = '/DescribeDBInstanceSlots/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribeDBInstanceSlotsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeDBInstanceSlotsCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeDBInstanceSpecs
  */
 export class DescribeDBInstanceSpecsCommand extends Command<
@@ -1002,6 +1023,21 @@ export class DescribeEnterpriseZonesCommand extends Command<
   constructor(input: DescribeEnterpriseZonesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeEnterpriseZonesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeFatLogs
+ */
+export class DescribeFatLogsCommand extends Command<
+  DescribeFatLogsRequest,
+  DescribeFatLogsCommandOutput,
+  'DescribeFatLogsCommand'
+> {
+  static readonly metaPath = '/DescribeFatLogs/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribeFatLogsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeFatLogsCommand.metaPath);
   }
 }
 /**
@@ -1856,12 +1892,14 @@ export default {
   DescribeDBInstanceDetailCommand,
   DescribeDBInstanceParamsCommand,
   DescribeDBInstanceShardsCommand,
+  DescribeDBInstanceSlotsCommand,
   DescribeDBInstanceSpecsCommand,
   DescribeDBInstancesCommand,
   DescribeEnterpriseDBInstanceDetailCommand,
   DescribeEnterpriseDBInstanceParamsCommand,
   DescribeEnterpriseDBInstanceSpecsCommand,
   DescribeEnterpriseZonesCommand,
+  DescribeFatLogsCommand,
   DescribeHotKeysCommand,
   DescribeKeyScanJobsCommand,
   DescribeNodeIdsCommand,

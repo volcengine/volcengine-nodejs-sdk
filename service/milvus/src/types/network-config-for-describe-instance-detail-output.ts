@@ -23,12 +23,6 @@ import { VpcInfoForDescribeInstanceDetailOutput } from './vpc-info-for-describe-
 export interface NetworkConfigForDescribeInstanceDetailOutput {
 
     /**
-     * @type {boolean}
-     * @memberof NetworkConfigForDescribeInstanceDetailOutput
-     */
-    InnerEndpointEnabled?: boolean;
-
-    /**
      * @type {SubnetInfoForDescribeInstanceDetailOutput}
      * @memberof NetworkConfigForDescribeInstanceDetailOutput
      */

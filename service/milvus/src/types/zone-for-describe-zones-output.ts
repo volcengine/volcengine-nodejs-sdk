@@ -36,5 +36,15 @@ export interface ZoneForDescribeZonesOutput {
      * @type {string}
      * @memberof ZoneForDescribeZonesOutput
      */
-    ZoneStatus?: string;
+    ZoneStatus?: ZoneForDescribeZonesOutputZoneStatusEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ZoneForDescribeZonesOutputZoneStatusEnum {
+    AVAILABLE = 'AVAILABLE',
+    SOLDOUT = 'SOLD_OUT'
+}
+
