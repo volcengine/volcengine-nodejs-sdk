@@ -1,0 +1,5 @@
+{
+  "description": "MILVUS: 新增 DMStopWorkflow, DMUpdateWorkflow, DescribeAvailableSpecV2, DMDescribeWorkflow, DMDeleteWorkflow, DMDescribeWorkflows, DMStartWorkflow, DescribePriceV2, DMCreateWorkflow；删除 CreateInstance, ModifyPrePaid, ModifyResourceTags, UntagResources, DescribeAvailableSpec, DescribePrice, ListTagsForResources, ModifyPostPaid, TagResources；修改 CreateInstanceOneStep, DescribeInstanceDetail, DescribeInstances, DescribeZones, ScaleInstance",
+  "modules": "service/milvus",
+  "type": "breaking-change"
+}

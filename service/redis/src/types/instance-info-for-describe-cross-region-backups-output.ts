@@ -36,6 +36,12 @@ export interface InstanceInfoForDescribeCrossRegionBackupsOutput {
      * @type {string}
      * @memberof InstanceInfoForDescribeCrossRegionBackupsOutput
      */
+    BlueGreenRole?: InstanceInfoForDescribeCrossRegionBackupsOutputBlueGreenRoleEnum;
+
+    /**
+     * @type {string}
+     * @memberof InstanceInfoForDescribeCrossRegionBackupsOutput
+     */
     ChargeType?: string;
 
     /**
@@ -122,3 +128,13 @@ export interface InstanceInfoForDescribeCrossRegionBackupsOutput {
      */
     ZoneIds?: Array<string>;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum InstanceInfoForDescribeCrossRegionBackupsOutputBlueGreenRoleEnum {
+    Blue = 'Blue',
+    Green = 'Green'
+}
+

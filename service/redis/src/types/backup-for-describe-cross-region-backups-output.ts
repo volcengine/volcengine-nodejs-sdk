@@ -34,6 +34,12 @@ export interface BackupForDescribeCrossRegionBackupsOutput {
     BackupPointName?: string;
 
     /**
+     * @type {number}
+     * @memberof BackupForDescribeCrossRegionBackupsOutput
+     */
+    BackupProgress?: number;
+
+    /**
      * @type {string}
      * @memberof BackupForDescribeCrossRegionBackupsOutput
      */

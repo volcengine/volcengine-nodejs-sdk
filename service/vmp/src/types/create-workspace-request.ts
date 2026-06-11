@@ -34,6 +34,12 @@ export interface CreateWorkspaceRequest {
     BearerToken?: string;
 
     /**
+     * @type {string}
+     * @memberof CreateWorkspaceRequest
+     */
+    ChargeType?: string;
+
+    /**
      * @type {boolean}
      * @memberof CreateWorkspaceRequest
      */

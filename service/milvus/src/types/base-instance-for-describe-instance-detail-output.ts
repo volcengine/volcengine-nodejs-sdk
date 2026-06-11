@@ -30,18 +30,6 @@ export interface BaseInstanceForDescribeInstanceDetailOutput {
      * @type {string}
      * @memberof BaseInstanceForDescribeInstanceDetailOutput
      */
-    DeployClusterId?: string;
-
-    /**
-     * @type {number}
-     * @memberof BaseInstanceForDescribeInstanceDetailOutput
-     */
-    Id?: number;
-
-    /**
-     * @type {string}
-     * @memberof BaseInstanceForDescribeInstanceDetailOutput
-     */
     InstanceId?: string;
 
     /**
@@ -55,12 +43,6 @@ export interface BaseInstanceForDescribeInstanceDetailOutput {
      * @memberof BaseInstanceForDescribeInstanceDetailOutput
      */
     InstanceVersion?: string;
-
-    /**
-     * @type {string}
-     * @memberof BaseInstanceForDescribeInstanceDetailOutput
-     */
-    Namespace?: string;
 
     /**
      * @type {string}
@@ -85,16 +67,4 @@ export interface BaseInstanceForDescribeInstanceDetailOutput {
      * @memberof BaseInstanceForDescribeInstanceDetailOutput
      */
     SubAccountId?: string;
-
-    /**
-     * @type {string}
-     * @memberof BaseInstanceForDescribeInstanceDetailOutput
-     */
-    TaskId?: string;
-
-    /**
-     * @type {number}
-     * @memberof BaseInstanceForDescribeInstanceDetailOutput
-     */
-    Version?: number;
 }

@@ -151,6 +151,7 @@ const defaultEndpoint: Record<string, ServiceEndpointInfo> = {
   insight: { Service: "insight", IsGlobal: true },
   cbr: { Service: "cbr", IsGlobal: false },
   config: { Service: "config", IsGlobal: true },
+  milvus: { Service: "milvus", IsGlobal: false },
 };
 
 const bootstrapRegion: Record<string, unknown> = {

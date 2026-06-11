@@ -38,6 +38,8 @@ import { AssociateRouteTableRequest } from './types/index';
 import { AssociateRouteTableResponse } from './types/index';
 import { AssociateVpcCidrBlockRequest } from './types/index';
 import { AssociateVpcCidrBlockResponse } from './types/index';
+import { AssociateVpcUserCidrBlockRequest } from './types/index';
+import { AssociateVpcUserCidrBlockResponse } from './types/index';
 import { AttachNetworkInterfaceRequest } from './types/index';
 import { AttachNetworkInterfaceResponse } from './types/index';
 import { AuthorizeSecurityGroupEgressRequest } from './types/index';
@@ -58,6 +60,12 @@ import { CreateInstanceGroupRequest } from './types/index';
 import { CreateInstanceGroupResponse } from './types/index';
 import { CreateIpAddressPoolRequest } from './types/index';
 import { CreateIpAddressPoolResponse } from './types/index';
+import { CreateIpamPoolRequest } from './types/index';
+import { CreateIpamPoolResponse } from './types/index';
+import { CreateIpamRequest } from './types/index';
+import { CreateIpamResponse } from './types/index';
+import { CreateIpamScopeRequest } from './types/index';
+import { CreateIpamScopeResponse } from './types/index';
 import { CreateIpv6EgressOnlyRuleRequest } from './types/index';
 import { CreateIpv6EgressOnlyRuleResponse } from './types/index';
 import { CreateIpv6GatewayRequest } from './types/index';
@@ -100,6 +108,12 @@ import { DeleteIpAddressPoolCidrBlockRequest } from './types/index';
 import { DeleteIpAddressPoolCidrBlockResponse } from './types/index';
 import { DeleteIpAddressPoolRequest } from './types/index';
 import { DeleteIpAddressPoolResponse } from './types/index';
+import { DeleteIpamPoolRequest } from './types/index';
+import { DeleteIpamPoolResponse } from './types/index';
+import { DeleteIpamRequest } from './types/index';
+import { DeleteIpamResponse } from './types/index';
+import { DeleteIpamScopeRequest } from './types/index';
+import { DeleteIpamScopeResponse } from './types/index';
 import { DeleteIpv6EgressOnlyRuleRequest } from './types/index';
 import { DeleteIpv6EgressOnlyRuleResponse } from './types/index';
 import { DeleteIpv6GatewayRequest } from './types/index';
@@ -128,10 +142,14 @@ import { DeleteTrafficMirrorTargetRequest } from './types/index';
 import { DeleteTrafficMirrorTargetResponse } from './types/index';
 import { DeleteVpcRequest } from './types/index';
 import { DeleteVpcResponse } from './types/index';
+import { DeprovisionIpamPoolCidrRequest } from './types/index';
+import { DeprovisionIpamPoolCidrResponse } from './types/index';
 import { DescribeBandwidthPackagesRequest } from './types/index';
 import { DescribeBandwidthPackagesResponse } from './types/index';
 import { DescribeEipAddressAttributesRequest } from './types/index';
 import { DescribeEipAddressAttributesResponse } from './types/index';
+import { DescribeEipAddressHighResolutionMonitorAttributeRequest } from './types/index';
+import { DescribeEipAddressHighResolutionMonitorAttributeResponse } from './types/index';
 import { DescribeEipAddressesRequest } from './types/index';
 import { DescribeEipAddressesResponse } from './types/index';
 import { DescribeFlowLogsRequest } from './types/index';
@@ -146,6 +164,28 @@ import { DescribeIpAddressPoolCidrBlocksRequest } from './types/index';
 import { DescribeIpAddressPoolCidrBlocksResponse } from './types/index';
 import { DescribeIpAddressPoolsRequest } from './types/index';
 import { DescribeIpAddressPoolsResponse } from './types/index';
+import { DescribeIpamCloudMonitorDimensionsRequest } from './types/index';
+import { DescribeIpamCloudMonitorDimensionsResponse } from './types/index';
+import { DescribeIpamDiscoveredResourceCidrsRequest } from './types/index';
+import { DescribeIpamDiscoveredResourceCidrsResponse } from './types/index';
+import { DescribeIpamPoolAllocationsRequest } from './types/index';
+import { DescribeIpamPoolAllocationsResponse } from './types/index';
+import { DescribeIpamPoolCidrsRequest } from './types/index';
+import { DescribeIpamPoolCidrsResponse } from './types/index';
+import { DescribeIpamPoolsRequest } from './types/index';
+import { DescribeIpamPoolsResponse } from './types/index';
+import { DescribeIpamResourceCidrsRequest } from './types/index';
+import { DescribeIpamResourceCidrsResponse } from './types/index';
+import { DescribeIpamResourceDiscoveriesRequest } from './types/index';
+import { DescribeIpamResourceDiscoveriesResponse } from './types/index';
+import { DescribeIpamResourceDiscoveryAssociationsRequest } from './types/index';
+import { DescribeIpamResourceDiscoveryAssociationsResponse } from './types/index';
+import { DescribeIpamScopeStatsRequest } from './types/index';
+import { DescribeIpamScopeStatsResponse } from './types/index';
+import { DescribeIpamScopesRequest } from './types/index';
+import { DescribeIpamScopesResponse } from './types/index';
+import { DescribeIpamsRequest } from './types/index';
+import { DescribeIpamsResponse } from './types/index';
 import { DescribeIpv6AddressBandwidthAttributesRequest } from './types/index';
 import { DescribeIpv6AddressBandwidthAttributesResponse } from './types/index';
 import { DescribeIpv6AddressBandwidthsRequest } from './types/index';
@@ -194,6 +234,8 @@ import { DescribeVpcsRequest } from './types/index';
 import { DescribeVpcsResponse } from './types/index';
 import { DetachNetworkInterfaceRequest } from './types/index';
 import { DetachNetworkInterfaceResponse } from './types/index';
+import { DisableEipAddressHighResolutionMonitorRequest } from './types/index';
+import { DisableEipAddressHighResolutionMonitorResponse } from './types/index';
 import { DisassociateEipAddressRequest } from './types/index';
 import { DisassociateEipAddressResponse } from './types/index';
 import { DisassociateHaVipRequest } from './types/index';
@@ -204,6 +246,14 @@ import { DisassociateRouteTableRequest } from './types/index';
 import { DisassociateRouteTableResponse } from './types/index';
 import { DisassociateVpcCidrBlockRequest } from './types/index';
 import { DisassociateVpcCidrBlockResponse } from './types/index';
+import { DisassociateVpcUserCidrBlockRequest } from './types/index';
+import { DisassociateVpcUserCidrBlockResponse } from './types/index';
+import { EnableEipAddressHighResolutionMonitorRequest } from './types/index';
+import { EnableEipAddressHighResolutionMonitorResponse } from './types/index';
+import { GetIpamPoolAvailableCidrRequest } from './types/index';
+import { GetIpamPoolAvailableCidrResponse } from './types/index';
+import { ListTagsForIpamResourcesRequest } from './types/index';
+import { ListTagsForIpamResourcesResponse } from './types/index';
 import { ListTagsForResourcesRequest } from './types/index';
 import { ListTagsForResourcesResponse } from './types/index';
 import { ModifyBandwidthPackageAttributesRequest } from './types/index';
@@ -224,6 +274,16 @@ import { ModifyInstanceGroupMembersRequest } from './types/index';
 import { ModifyInstanceGroupMembersResponse } from './types/index';
 import { ModifyIpAddressPoolAttributesRequest } from './types/index';
 import { ModifyIpAddressPoolAttributesResponse } from './types/index';
+import { ModifyIpamPoolRequest } from './types/index';
+import { ModifyIpamPoolResponse } from './types/index';
+import { ModifyIpamRequest } from './types/index';
+import { ModifyIpamResourceCidrRequest } from './types/index';
+import { ModifyIpamResourceCidrResponse } from './types/index';
+import { ModifyIpamResourceDiscoveryRequest } from './types/index';
+import { ModifyIpamResourceDiscoveryResponse } from './types/index';
+import { ModifyIpamResponse } from './types/index';
+import { ModifyIpamScopeRequest } from './types/index';
+import { ModifyIpamScopeResponse } from './types/index';
 import { ModifyIpv6AddressBandwidthRequest } from './types/index';
 import { ModifyIpv6AddressBandwidthResponse } from './types/index';
 import { ModifyIpv6EgressOnlyRuleAttributeRequest } from './types/index';
@@ -258,8 +318,12 @@ import { ModifyTrafficMirrorTargetAttributesRequest } from './types/index';
 import { ModifyTrafficMirrorTargetAttributesResponse } from './types/index';
 import { ModifyVpcAttributesRequest } from './types/index';
 import { ModifyVpcAttributesResponse } from './types/index';
+import { ProvisionIpamPoolCidrRequest } from './types/index';
+import { ProvisionIpamPoolCidrResponse } from './types/index';
 import { ReleaseEipAddressRequest } from './types/index';
 import { ReleaseEipAddressResponse } from './types/index';
+import { ReleaseIpamPoolAllocationRequest } from './types/index';
+import { ReleaseIpamPoolAllocationResponse } from './types/index';
 import { ReleaseIpv6AddressBandwidthRequest } from './types/index';
 import { ReleaseIpv6AddressBandwidthResponse } from './types/index';
 import { RemoveBandwidthPackageIpRequest } from './types/index';
@@ -268,6 +332,8 @@ import { RevokeSecurityGroupEgressRequest } from './types/index';
 import { RevokeSecurityGroupEgressResponse } from './types/index';
 import { RevokeSecurityGroupIngressRequest } from './types/index';
 import { RevokeSecurityGroupIngressResponse } from './types/index';
+import { TagIpamResourcesRequest } from './types/index';
+import { TagIpamResourcesResponse } from './types/index';
 import { TagResourcesRequest } from './types/index';
 import { TagResourcesResponse } from './types/index';
 import { TemporaryUpgradeEipAddressRequest } from './types/index';
@@ -276,6 +342,8 @@ import { UnassignIpv6AddressesRequest } from './types/index';
 import { UnassignIpv6AddressesResponse } from './types/index';
 import { UnassignPrivateIpAddressesRequest } from './types/index';
 import { UnassignPrivateIpAddressesResponse } from './types/index';
+import { UntagIpamResourcesRequest } from './types/index';
+import { UntagIpamResourcesResponse } from './types/index';
 import { UntagResourcesRequest } from './types/index';
 import { UntagResourcesResponse } from './types/index';
 import { UpdateNetworkAclEntriesRequest } from './types/index';
@@ -296,6 +364,7 @@ export type AssociateHaVipCommandOutput = CommandOutput<AssociateHaVipResponse>;
 export type AssociateNetworkAclCommandOutput = CommandOutput<AssociateNetworkAclResponse>;
 export type AssociateRouteTableCommandOutput = CommandOutput<AssociateRouteTableResponse>;
 export type AssociateVpcCidrBlockCommandOutput = CommandOutput<AssociateVpcCidrBlockResponse>;
+export type AssociateVpcUserCidrBlockCommandOutput = CommandOutput<AssociateVpcUserCidrBlockResponse>;
 export type AttachNetworkInterfaceCommandOutput = CommandOutput<AttachNetworkInterfaceResponse>;
 export type AuthorizeSecurityGroupEgressCommandOutput = CommandOutput<AuthorizeSecurityGroupEgressResponse>;
 export type AuthorizeSecurityGroupIngressCommandOutput = CommandOutput<AuthorizeSecurityGroupIngressResponse>;
@@ -306,6 +375,9 @@ export type CreateFlowLogCommandOutput = CommandOutput<CreateFlowLogResponse>;
 export type CreateHaVipCommandOutput = CommandOutput<CreateHaVipResponse>;
 export type CreateInstanceGroupCommandOutput = CommandOutput<CreateInstanceGroupResponse>;
 export type CreateIpAddressPoolCommandOutput = CommandOutput<CreateIpAddressPoolResponse>;
+export type CreateIpamCommandOutput = CommandOutput<CreateIpamResponse>;
+export type CreateIpamPoolCommandOutput = CommandOutput<CreateIpamPoolResponse>;
+export type CreateIpamScopeCommandOutput = CommandOutput<CreateIpamScopeResponse>;
 export type CreateIpv6EgressOnlyRuleCommandOutput = CommandOutput<CreateIpv6EgressOnlyRuleResponse>;
 export type CreateIpv6GatewayCommandOutput = CommandOutput<CreateIpv6GatewayResponse>;
 export type CreateNetworkAclCommandOutput = CommandOutput<CreateNetworkAclResponse>;
@@ -327,6 +399,9 @@ export type DeleteHaVipCommandOutput = CommandOutput<DeleteHaVipResponse>;
 export type DeleteInstanceGroupCommandOutput = CommandOutput<DeleteInstanceGroupResponse>;
 export type DeleteIpAddressPoolCommandOutput = CommandOutput<DeleteIpAddressPoolResponse>;
 export type DeleteIpAddressPoolCidrBlockCommandOutput = CommandOutput<DeleteIpAddressPoolCidrBlockResponse>;
+export type DeleteIpamCommandOutput = CommandOutput<DeleteIpamResponse>;
+export type DeleteIpamPoolCommandOutput = CommandOutput<DeleteIpamPoolResponse>;
+export type DeleteIpamScopeCommandOutput = CommandOutput<DeleteIpamScopeResponse>;
 export type DeleteIpv6EgressOnlyRuleCommandOutput = CommandOutput<DeleteIpv6EgressOnlyRuleResponse>;
 export type DeleteIpv6GatewayCommandOutput = CommandOutput<DeleteIpv6GatewayResponse>;
 export type DeleteNetworkAclCommandOutput = CommandOutput<DeleteNetworkAclResponse>;
@@ -341,8 +416,10 @@ export type DeleteTrafficMirrorFilterRuleCommandOutput = CommandOutput<DeleteTra
 export type DeleteTrafficMirrorSessionCommandOutput = CommandOutput<DeleteTrafficMirrorSessionResponse>;
 export type DeleteTrafficMirrorTargetCommandOutput = CommandOutput<DeleteTrafficMirrorTargetResponse>;
 export type DeleteVpcCommandOutput = CommandOutput<DeleteVpcResponse>;
+export type DeprovisionIpamPoolCidrCommandOutput = CommandOutput<DeprovisionIpamPoolCidrResponse>;
 export type DescribeBandwidthPackagesCommandOutput = CommandOutput<DescribeBandwidthPackagesResponse>;
 export type DescribeEipAddressAttributesCommandOutput = CommandOutput<DescribeEipAddressAttributesResponse>;
+export type DescribeEipAddressHighResolutionMonitorAttributeCommandOutput = CommandOutput<DescribeEipAddressHighResolutionMonitorAttributeResponse>;
 export type DescribeEipAddressesCommandOutput = CommandOutput<DescribeEipAddressesResponse>;
 export type DescribeFlowLogsCommandOutput = CommandOutput<DescribeFlowLogsResponse>;
 export type DescribeHaVipsCommandOutput = CommandOutput<DescribeHaVipsResponse>;
@@ -350,6 +427,17 @@ export type DescribeInstanceGroupsCommandOutput = CommandOutput<DescribeInstance
 export type DescribeIpAddressPoolAttributesCommandOutput = CommandOutput<DescribeIpAddressPoolAttributesResponse>;
 export type DescribeIpAddressPoolCidrBlocksCommandOutput = CommandOutput<DescribeIpAddressPoolCidrBlocksResponse>;
 export type DescribeIpAddressPoolsCommandOutput = CommandOutput<DescribeIpAddressPoolsResponse>;
+export type DescribeIpamCloudMonitorDimensionsCommandOutput = CommandOutput<DescribeIpamCloudMonitorDimensionsResponse>;
+export type DescribeIpamDiscoveredResourceCidrsCommandOutput = CommandOutput<DescribeIpamDiscoveredResourceCidrsResponse>;
+export type DescribeIpamPoolAllocationsCommandOutput = CommandOutput<DescribeIpamPoolAllocationsResponse>;
+export type DescribeIpamPoolCidrsCommandOutput = CommandOutput<DescribeIpamPoolCidrsResponse>;
+export type DescribeIpamPoolsCommandOutput = CommandOutput<DescribeIpamPoolsResponse>;
+export type DescribeIpamResourceCidrsCommandOutput = CommandOutput<DescribeIpamResourceCidrsResponse>;
+export type DescribeIpamResourceDiscoveriesCommandOutput = CommandOutput<DescribeIpamResourceDiscoveriesResponse>;
+export type DescribeIpamResourceDiscoveryAssociationsCommandOutput = CommandOutput<DescribeIpamResourceDiscoveryAssociationsResponse>;
+export type DescribeIpamScopeStatsCommandOutput = CommandOutput<DescribeIpamScopeStatsResponse>;
+export type DescribeIpamScopesCommandOutput = CommandOutput<DescribeIpamScopesResponse>;
+export type DescribeIpamsCommandOutput = CommandOutput<DescribeIpamsResponse>;
 export type DescribeIpv6AddressBandwidthAttributesCommandOutput = CommandOutput<DescribeIpv6AddressBandwidthAttributesResponse>;
 export type DescribeIpv6AddressBandwidthsCommandOutput = CommandOutput<DescribeIpv6AddressBandwidthsResponse>;
 export type DescribeIpv6EgressOnlyRulesCommandOutput = CommandOutput<DescribeIpv6EgressOnlyRulesResponse>;
@@ -374,11 +462,16 @@ export type DescribeTrafficMirrorTargetsCommandOutput = CommandOutput<DescribeTr
 export type DescribeVpcAttributesCommandOutput = CommandOutput<DescribeVpcAttributesResponse>;
 export type DescribeVpcsCommandOutput = CommandOutput<DescribeVpcsResponse>;
 export type DetachNetworkInterfaceCommandOutput = CommandOutput<DetachNetworkInterfaceResponse>;
+export type DisableEipAddressHighResolutionMonitorCommandOutput = CommandOutput<DisableEipAddressHighResolutionMonitorResponse>;
 export type DisassociateEipAddressCommandOutput = CommandOutput<DisassociateEipAddressResponse>;
 export type DisassociateHaVipCommandOutput = CommandOutput<DisassociateHaVipResponse>;
 export type DisassociateNetworkAclCommandOutput = CommandOutput<DisassociateNetworkAclResponse>;
 export type DisassociateRouteTableCommandOutput = CommandOutput<DisassociateRouteTableResponse>;
 export type DisassociateVpcCidrBlockCommandOutput = CommandOutput<DisassociateVpcCidrBlockResponse>;
+export type DisassociateVpcUserCidrBlockCommandOutput = CommandOutput<DisassociateVpcUserCidrBlockResponse>;
+export type EnableEipAddressHighResolutionMonitorCommandOutput = CommandOutput<EnableEipAddressHighResolutionMonitorResponse>;
+export type GetIpamPoolAvailableCidrCommandOutput = CommandOutput<GetIpamPoolAvailableCidrResponse>;
+export type ListTagsForIpamResourcesCommandOutput = CommandOutput<ListTagsForIpamResourcesResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
 export type ModifyBandwidthPackageAttributesCommandOutput = CommandOutput<ModifyBandwidthPackageAttributesResponse>;
 export type ModifyBandwidthPackageEipBandwidthCommandOutput = CommandOutput<ModifyBandwidthPackageEipBandwidthResponse>;
@@ -389,6 +482,11 @@ export type ModifyHaVipAttributesCommandOutput = CommandOutput<ModifyHaVipAttrib
 export type ModifyInstanceGroupAttributesCommandOutput = CommandOutput<ModifyInstanceGroupAttributesResponse>;
 export type ModifyInstanceGroupMembersCommandOutput = CommandOutput<ModifyInstanceGroupMembersResponse>;
 export type ModifyIpAddressPoolAttributesCommandOutput = CommandOutput<ModifyIpAddressPoolAttributesResponse>;
+export type ModifyIpamCommandOutput = CommandOutput<ModifyIpamResponse>;
+export type ModifyIpamPoolCommandOutput = CommandOutput<ModifyIpamPoolResponse>;
+export type ModifyIpamResourceCidrCommandOutput = CommandOutput<ModifyIpamResourceCidrResponse>;
+export type ModifyIpamResourceDiscoveryCommandOutput = CommandOutput<ModifyIpamResourceDiscoveryResponse>;
+export type ModifyIpamScopeCommandOutput = CommandOutput<ModifyIpamScopeResponse>;
 export type ModifyIpv6AddressBandwidthCommandOutput = CommandOutput<ModifyIpv6AddressBandwidthResponse>;
 export type ModifyIpv6EgressOnlyRuleAttributeCommandOutput = CommandOutput<ModifyIpv6EgressOnlyRuleAttributeResponse>;
 export type ModifyIpv6GatewayAttributeCommandOutput = CommandOutput<ModifyIpv6GatewayAttributeResponse>;
@@ -406,15 +504,19 @@ export type ModifyTrafficMirrorFilterRuleAttributesCommandOutput = CommandOutput
 export type ModifyTrafficMirrorSessionAttributesCommandOutput = CommandOutput<ModifyTrafficMirrorSessionAttributesResponse>;
 export type ModifyTrafficMirrorTargetAttributesCommandOutput = CommandOutput<ModifyTrafficMirrorTargetAttributesResponse>;
 export type ModifyVpcAttributesCommandOutput = CommandOutput<ModifyVpcAttributesResponse>;
+export type ProvisionIpamPoolCidrCommandOutput = CommandOutput<ProvisionIpamPoolCidrResponse>;
 export type ReleaseEipAddressCommandOutput = CommandOutput<ReleaseEipAddressResponse>;
+export type ReleaseIpamPoolAllocationCommandOutput = CommandOutput<ReleaseIpamPoolAllocationResponse>;
 export type ReleaseIpv6AddressBandwidthCommandOutput = CommandOutput<ReleaseIpv6AddressBandwidthResponse>;
 export type RemoveBandwidthPackageIpCommandOutput = CommandOutput<RemoveBandwidthPackageIpResponse>;
 export type RevokeSecurityGroupEgressCommandOutput = CommandOutput<RevokeSecurityGroupEgressResponse>;
 export type RevokeSecurityGroupIngressCommandOutput = CommandOutput<RevokeSecurityGroupIngressResponse>;
+export type TagIpamResourcesCommandOutput = CommandOutput<TagIpamResourcesResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type TemporaryUpgradeEipAddressCommandOutput = CommandOutput<TemporaryUpgradeEipAddressResponse>;
 export type UnassignIpv6AddressesCommandOutput = CommandOutput<UnassignIpv6AddressesResponse>;
 export type UnassignPrivateIpAddressesCommandOutput = CommandOutput<UnassignPrivateIpAddressesResponse>;
+export type UntagIpamResourcesCommandOutput = CommandOutput<UntagIpamResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateNetworkAclEntriesCommandOutput = CommandOutput<UpdateNetworkAclEntriesResponse>;
 
@@ -612,6 +714,21 @@ export class AssociateVpcCidrBlockCommand extends Command<
   }
 }
 /**
+ * Command to AssociateVpcUserCidrBlock
+ */
+export class AssociateVpcUserCidrBlockCommand extends Command<
+  AssociateVpcUserCidrBlockRequest,
+  AssociateVpcUserCidrBlockCommandOutput,
+  'AssociateVpcUserCidrBlockCommand'
+> {
+  static readonly metaPath = '/AssociateVpcUserCidrBlock/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: AssociateVpcUserCidrBlockRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AssociateVpcUserCidrBlockCommand.metaPath);
+  }
+}
+/**
  * Command to AttachNetworkInterface
  */
 export class AttachNetworkInterfaceCommand extends Command<
@@ -759,6 +876,51 @@ export class CreateIpAddressPoolCommand extends Command<
   constructor(input: CreateIpAddressPoolRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateIpAddressPoolCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateIpam
+ */
+export class CreateIpamCommand extends Command<
+  CreateIpamRequest,
+  CreateIpamCommandOutput,
+  'CreateIpamCommand'
+> {
+  static readonly metaPath = '/CreateIpam/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: CreateIpamRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateIpamCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateIpamPool
+ */
+export class CreateIpamPoolCommand extends Command<
+  CreateIpamPoolRequest,
+  CreateIpamPoolCommandOutput,
+  'CreateIpamPoolCommand'
+> {
+  static readonly metaPath = '/CreateIpamPool/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: CreateIpamPoolRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateIpamPoolCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateIpamScope
+ */
+export class CreateIpamScopeCommand extends Command<
+  CreateIpamScopeRequest,
+  CreateIpamScopeCommandOutput,
+  'CreateIpamScopeCommand'
+> {
+  static readonly metaPath = '/CreateIpamScope/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: CreateIpamScopeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateIpamScopeCommand.metaPath);
   }
 }
 /**
@@ -1077,6 +1239,51 @@ export class DeleteIpAddressPoolCidrBlockCommand extends Command<
   }
 }
 /**
+ * Command to DeleteIpam
+ */
+export class DeleteIpamCommand extends Command<
+  DeleteIpamRequest,
+  DeleteIpamCommandOutput,
+  'DeleteIpamCommand'
+> {
+  static readonly metaPath = '/DeleteIpam/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DeleteIpamRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteIpamCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteIpamPool
+ */
+export class DeleteIpamPoolCommand extends Command<
+  DeleteIpamPoolRequest,
+  DeleteIpamPoolCommandOutput,
+  'DeleteIpamPoolCommand'
+> {
+  static readonly metaPath = '/DeleteIpamPool/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DeleteIpamPoolRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteIpamPoolCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteIpamScope
+ */
+export class DeleteIpamScopeCommand extends Command<
+  DeleteIpamScopeRequest,
+  DeleteIpamScopeCommandOutput,
+  'DeleteIpamScopeCommand'
+> {
+  static readonly metaPath = '/DeleteIpamScope/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DeleteIpamScopeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteIpamScopeCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteIpv6EgressOnlyRule
  */
 export class DeleteIpv6EgressOnlyRuleCommand extends Command<
@@ -1287,6 +1494,21 @@ export class DeleteVpcCommand extends Command<
   }
 }
 /**
+ * Command to DeprovisionIpamPoolCidr
+ */
+export class DeprovisionIpamPoolCidrCommand extends Command<
+  DeprovisionIpamPoolCidrRequest,
+  DeprovisionIpamPoolCidrCommandOutput,
+  'DeprovisionIpamPoolCidrCommand'
+> {
+  static readonly metaPath = '/DeprovisionIpamPoolCidr/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DeprovisionIpamPoolCidrRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeprovisionIpamPoolCidrCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeBandwidthPackages
  */
 export class DescribeBandwidthPackagesCommand extends Command<
@@ -1314,6 +1536,21 @@ export class DescribeEipAddressAttributesCommand extends Command<
   constructor(input: DescribeEipAddressAttributesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeEipAddressAttributesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeEipAddressHighResolutionMonitorAttribute
+ */
+export class DescribeEipAddressHighResolutionMonitorAttributeCommand extends Command<
+  DescribeEipAddressHighResolutionMonitorAttributeRequest,
+  DescribeEipAddressHighResolutionMonitorAttributeCommandOutput,
+  'DescribeEipAddressHighResolutionMonitorAttributeCommand'
+> {
+  static readonly metaPath = '/DescribeEipAddressHighResolutionMonitorAttribute/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeEipAddressHighResolutionMonitorAttributeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeEipAddressHighResolutionMonitorAttributeCommand.metaPath);
   }
 }
 /**
@@ -1419,6 +1656,171 @@ export class DescribeIpAddressPoolsCommand extends Command<
   constructor(input: DescribeIpAddressPoolsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpAddressPoolsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeIpamCloudMonitorDimensions
+ */
+export class DescribeIpamCloudMonitorDimensionsCommand extends Command<
+  DescribeIpamCloudMonitorDimensionsRequest,
+  DescribeIpamCloudMonitorDimensionsCommandOutput,
+  'DescribeIpamCloudMonitorDimensionsCommand'
+> {
+  static readonly metaPath = '/DescribeIpamCloudMonitorDimensions/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeIpamCloudMonitorDimensionsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpamCloudMonitorDimensionsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeIpamDiscoveredResourceCidrs
+ */
+export class DescribeIpamDiscoveredResourceCidrsCommand extends Command<
+  DescribeIpamDiscoveredResourceCidrsRequest,
+  DescribeIpamDiscoveredResourceCidrsCommandOutput,
+  'DescribeIpamDiscoveredResourceCidrsCommand'
+> {
+  static readonly metaPath = '/DescribeIpamDiscoveredResourceCidrs/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeIpamDiscoveredResourceCidrsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpamDiscoveredResourceCidrsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeIpamPoolAllocations
+ */
+export class DescribeIpamPoolAllocationsCommand extends Command<
+  DescribeIpamPoolAllocationsRequest,
+  DescribeIpamPoolAllocationsCommandOutput,
+  'DescribeIpamPoolAllocationsCommand'
+> {
+  static readonly metaPath = '/DescribeIpamPoolAllocations/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeIpamPoolAllocationsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpamPoolAllocationsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeIpamPoolCidrs
+ */
+export class DescribeIpamPoolCidrsCommand extends Command<
+  DescribeIpamPoolCidrsRequest,
+  DescribeIpamPoolCidrsCommandOutput,
+  'DescribeIpamPoolCidrsCommand'
+> {
+  static readonly metaPath = '/DescribeIpamPoolCidrs/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeIpamPoolCidrsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpamPoolCidrsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeIpamPools
+ */
+export class DescribeIpamPoolsCommand extends Command<
+  DescribeIpamPoolsRequest,
+  DescribeIpamPoolsCommandOutput,
+  'DescribeIpamPoolsCommand'
+> {
+  static readonly metaPath = '/DescribeIpamPools/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeIpamPoolsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpamPoolsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeIpamResourceCidrs
+ */
+export class DescribeIpamResourceCidrsCommand extends Command<
+  DescribeIpamResourceCidrsRequest,
+  DescribeIpamResourceCidrsCommandOutput,
+  'DescribeIpamResourceCidrsCommand'
+> {
+  static readonly metaPath = '/DescribeIpamResourceCidrs/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeIpamResourceCidrsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpamResourceCidrsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeIpamResourceDiscoveries
+ */
+export class DescribeIpamResourceDiscoveriesCommand extends Command<
+  DescribeIpamResourceDiscoveriesRequest,
+  DescribeIpamResourceDiscoveriesCommandOutput,
+  'DescribeIpamResourceDiscoveriesCommand'
+> {
+  static readonly metaPath = '/DescribeIpamResourceDiscoveries/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeIpamResourceDiscoveriesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpamResourceDiscoveriesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeIpamResourceDiscoveryAssociations
+ */
+export class DescribeIpamResourceDiscoveryAssociationsCommand extends Command<
+  DescribeIpamResourceDiscoveryAssociationsRequest,
+  DescribeIpamResourceDiscoveryAssociationsCommandOutput,
+  'DescribeIpamResourceDiscoveryAssociationsCommand'
+> {
+  static readonly metaPath = '/DescribeIpamResourceDiscoveryAssociations/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeIpamResourceDiscoveryAssociationsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpamResourceDiscoveryAssociationsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeIpamScopeStats
+ */
+export class DescribeIpamScopeStatsCommand extends Command<
+  DescribeIpamScopeStatsRequest,
+  DescribeIpamScopeStatsCommandOutput,
+  'DescribeIpamScopeStatsCommand'
+> {
+  static readonly metaPath = '/DescribeIpamScopeStats/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeIpamScopeStatsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpamScopeStatsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeIpamScopes
+ */
+export class DescribeIpamScopesCommand extends Command<
+  DescribeIpamScopesRequest,
+  DescribeIpamScopesCommandOutput,
+  'DescribeIpamScopesCommand'
+> {
+  static readonly metaPath = '/DescribeIpamScopes/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeIpamScopesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpamScopesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeIpams
+ */
+export class DescribeIpamsCommand extends Command<
+  DescribeIpamsRequest,
+  DescribeIpamsCommandOutput,
+  'DescribeIpamsCommand'
+> {
+  static readonly metaPath = '/DescribeIpams/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeIpamsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpamsCommand.metaPath);
   }
 }
 /**
@@ -1782,6 +2184,21 @@ export class DetachNetworkInterfaceCommand extends Command<
   }
 }
 /**
+ * Command to DisableEipAddressHighResolutionMonitor
+ */
+export class DisableEipAddressHighResolutionMonitorCommand extends Command<
+  DisableEipAddressHighResolutionMonitorRequest,
+  DisableEipAddressHighResolutionMonitorCommandOutput,
+  'DisableEipAddressHighResolutionMonitorCommand'
+> {
+  static readonly metaPath = '/DisableEipAddressHighResolutionMonitor/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DisableEipAddressHighResolutionMonitorRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisableEipAddressHighResolutionMonitorCommand.metaPath);
+  }
+}
+/**
  * Command to DisassociateEipAddress
  */
 export class DisassociateEipAddressCommand extends Command<
@@ -1854,6 +2271,66 @@ export class DisassociateVpcCidrBlockCommand extends Command<
   constructor(input: DisassociateVpcCidrBlockRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DisassociateVpcCidrBlockCommand.metaPath);
+  }
+}
+/**
+ * Command to DisassociateVpcUserCidrBlock
+ */
+export class DisassociateVpcUserCidrBlockCommand extends Command<
+  DisassociateVpcUserCidrBlockRequest,
+  DisassociateVpcUserCidrBlockCommandOutput,
+  'DisassociateVpcUserCidrBlockCommand'
+> {
+  static readonly metaPath = '/DisassociateVpcUserCidrBlock/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DisassociateVpcUserCidrBlockRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisassociateVpcUserCidrBlockCommand.metaPath);
+  }
+}
+/**
+ * Command to EnableEipAddressHighResolutionMonitor
+ */
+export class EnableEipAddressHighResolutionMonitorCommand extends Command<
+  EnableEipAddressHighResolutionMonitorRequest,
+  EnableEipAddressHighResolutionMonitorCommandOutput,
+  'EnableEipAddressHighResolutionMonitorCommand'
+> {
+  static readonly metaPath = '/EnableEipAddressHighResolutionMonitor/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: EnableEipAddressHighResolutionMonitorRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnableEipAddressHighResolutionMonitorCommand.metaPath);
+  }
+}
+/**
+ * Command to GetIpamPoolAvailableCidr
+ */
+export class GetIpamPoolAvailableCidrCommand extends Command<
+  GetIpamPoolAvailableCidrRequest,
+  GetIpamPoolAvailableCidrCommandOutput,
+  'GetIpamPoolAvailableCidrCommand'
+> {
+  static readonly metaPath = '/GetIpamPoolAvailableCidr/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: GetIpamPoolAvailableCidrRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetIpamPoolAvailableCidrCommand.metaPath);
+  }
+}
+/**
+ * Command to ListTagsForIpamResources
+ */
+export class ListTagsForIpamResourcesCommand extends Command<
+  ListTagsForIpamResourcesRequest,
+  ListTagsForIpamResourcesCommandOutput,
+  'ListTagsForIpamResourcesCommand'
+> {
+  static readonly metaPath = '/ListTagsForIpamResources/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ListTagsForIpamResourcesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListTagsForIpamResourcesCommand.metaPath);
   }
 }
 /**
@@ -2004,6 +2481,81 @@ export class ModifyIpAddressPoolAttributesCommand extends Command<
   constructor(input: ModifyIpAddressPoolAttributesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ModifyIpAddressPoolAttributesCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyIpam
+ */
+export class ModifyIpamCommand extends Command<
+  ModifyIpamRequest,
+  ModifyIpamCommandOutput,
+  'ModifyIpamCommand'
+> {
+  static readonly metaPath = '/ModifyIpam/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifyIpamRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyIpamCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyIpamPool
+ */
+export class ModifyIpamPoolCommand extends Command<
+  ModifyIpamPoolRequest,
+  ModifyIpamPoolCommandOutput,
+  'ModifyIpamPoolCommand'
+> {
+  static readonly metaPath = '/ModifyIpamPool/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifyIpamPoolRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyIpamPoolCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyIpamResourceCidr
+ */
+export class ModifyIpamResourceCidrCommand extends Command<
+  ModifyIpamResourceCidrRequest,
+  ModifyIpamResourceCidrCommandOutput,
+  'ModifyIpamResourceCidrCommand'
+> {
+  static readonly metaPath = '/ModifyIpamResourceCidr/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifyIpamResourceCidrRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyIpamResourceCidrCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyIpamResourceDiscovery
+ */
+export class ModifyIpamResourceDiscoveryCommand extends Command<
+  ModifyIpamResourceDiscoveryRequest,
+  ModifyIpamResourceDiscoveryCommandOutput,
+  'ModifyIpamResourceDiscoveryCommand'
+> {
+  static readonly metaPath = '/ModifyIpamResourceDiscovery/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifyIpamResourceDiscoveryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyIpamResourceDiscoveryCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyIpamScope
+ */
+export class ModifyIpamScopeCommand extends Command<
+  ModifyIpamScopeRequest,
+  ModifyIpamScopeCommandOutput,
+  'ModifyIpamScopeCommand'
+> {
+  static readonly metaPath = '/ModifyIpamScope/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifyIpamScopeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyIpamScopeCommand.metaPath);
   }
 }
 /**
@@ -2262,6 +2814,21 @@ export class ModifyVpcAttributesCommand extends Command<
   }
 }
 /**
+ * Command to ProvisionIpamPoolCidr
+ */
+export class ProvisionIpamPoolCidrCommand extends Command<
+  ProvisionIpamPoolCidrRequest,
+  ProvisionIpamPoolCidrCommandOutput,
+  'ProvisionIpamPoolCidrCommand'
+> {
+  static readonly metaPath = '/ProvisionIpamPoolCidr/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ProvisionIpamPoolCidrRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProvisionIpamPoolCidrCommand.metaPath);
+  }
+}
+/**
  * Command to ReleaseEipAddress
  */
 export class ReleaseEipAddressCommand extends Command<
@@ -2274,6 +2841,21 @@ export class ReleaseEipAddressCommand extends Command<
   constructor(input: ReleaseEipAddressRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ReleaseEipAddressCommand.metaPath);
+  }
+}
+/**
+ * Command to ReleaseIpamPoolAllocation
+ */
+export class ReleaseIpamPoolAllocationCommand extends Command<
+  ReleaseIpamPoolAllocationRequest,
+  ReleaseIpamPoolAllocationCommandOutput,
+  'ReleaseIpamPoolAllocationCommand'
+> {
+  static readonly metaPath = '/ReleaseIpamPoolAllocation/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ReleaseIpamPoolAllocationRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ReleaseIpamPoolAllocationCommand.metaPath);
   }
 }
 /**
@@ -2337,6 +2919,21 @@ export class RevokeSecurityGroupIngressCommand extends Command<
   }
 }
 /**
+ * Command to TagIpamResources
+ */
+export class TagIpamResourcesCommand extends Command<
+  TagIpamResourcesRequest,
+  TagIpamResourcesCommandOutput,
+  'TagIpamResourcesCommand'
+> {
+  static readonly metaPath = '/TagIpamResources/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: TagIpamResourcesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(TagIpamResourcesCommand.metaPath);
+  }
+}
+/**
  * Command to TagResources
  */
 export class TagResourcesCommand extends Command<
@@ -2397,6 +2994,21 @@ export class UnassignPrivateIpAddressesCommand extends Command<
   }
 }
 /**
+ * Command to UntagIpamResources
+ */
+export class UntagIpamResourcesCommand extends Command<
+  UntagIpamResourcesRequest,
+  UntagIpamResourcesCommandOutput,
+  'UntagIpamResourcesCommand'
+> {
+  static readonly metaPath = '/UntagIpamResources/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: UntagIpamResourcesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UntagIpamResourcesCommand.metaPath);
+  }
+}
+/**
  * Command to UntagResources
  */
 export class UntagResourcesCommand extends Command<
@@ -2441,6 +3053,7 @@ export default {
   AssociateNetworkAclCommand,
   AssociateRouteTableCommand,
   AssociateVpcCidrBlockCommand,
+  AssociateVpcUserCidrBlockCommand,
   AttachNetworkInterfaceCommand,
   AuthorizeSecurityGroupEgressCommand,
   AuthorizeSecurityGroupIngressCommand,
@@ -2451,6 +3064,9 @@ export default {
   CreateHaVipCommand,
   CreateInstanceGroupCommand,
   CreateIpAddressPoolCommand,
+  CreateIpamCommand,
+  CreateIpamPoolCommand,
+  CreateIpamScopeCommand,
   CreateIpv6EgressOnlyRuleCommand,
   CreateIpv6GatewayCommand,
   CreateNetworkAclCommand,
@@ -2472,6 +3088,9 @@ export default {
   DeleteInstanceGroupCommand,
   DeleteIpAddressPoolCommand,
   DeleteIpAddressPoolCidrBlockCommand,
+  DeleteIpamCommand,
+  DeleteIpamPoolCommand,
+  DeleteIpamScopeCommand,
   DeleteIpv6EgressOnlyRuleCommand,
   DeleteIpv6GatewayCommand,
   DeleteNetworkAclCommand,
@@ -2486,8 +3105,10 @@ export default {
   DeleteTrafficMirrorSessionCommand,
   DeleteTrafficMirrorTargetCommand,
   DeleteVpcCommand,
+  DeprovisionIpamPoolCidrCommand,
   DescribeBandwidthPackagesCommand,
   DescribeEipAddressAttributesCommand,
+  DescribeEipAddressHighResolutionMonitorAttributeCommand,
   DescribeEipAddressesCommand,
   DescribeFlowLogsCommand,
   DescribeHaVipsCommand,
@@ -2495,6 +3116,17 @@ export default {
   DescribeIpAddressPoolAttributesCommand,
   DescribeIpAddressPoolCidrBlocksCommand,
   DescribeIpAddressPoolsCommand,
+  DescribeIpamCloudMonitorDimensionsCommand,
+  DescribeIpamDiscoveredResourceCidrsCommand,
+  DescribeIpamPoolAllocationsCommand,
+  DescribeIpamPoolCidrsCommand,
+  DescribeIpamPoolsCommand,
+  DescribeIpamResourceCidrsCommand,
+  DescribeIpamResourceDiscoveriesCommand,
+  DescribeIpamResourceDiscoveryAssociationsCommand,
+  DescribeIpamScopeStatsCommand,
+  DescribeIpamScopesCommand,
+  DescribeIpamsCommand,
   DescribeIpv6AddressBandwidthAttributesCommand,
   DescribeIpv6AddressBandwidthsCommand,
   DescribeIpv6EgressOnlyRulesCommand,
@@ -2519,11 +3151,16 @@ export default {
   DescribeVpcAttributesCommand,
   DescribeVpcsCommand,
   DetachNetworkInterfaceCommand,
+  DisableEipAddressHighResolutionMonitorCommand,
   DisassociateEipAddressCommand,
   DisassociateHaVipCommand,
   DisassociateNetworkAclCommand,
   DisassociateRouteTableCommand,
   DisassociateVpcCidrBlockCommand,
+  DisassociateVpcUserCidrBlockCommand,
+  EnableEipAddressHighResolutionMonitorCommand,
+  GetIpamPoolAvailableCidrCommand,
+  ListTagsForIpamResourcesCommand,
   ListTagsForResourcesCommand,
   ModifyBandwidthPackageAttributesCommand,
   ModifyBandwidthPackageEipBandwidthCommand,
@@ -2534,6 +3171,11 @@ export default {
   ModifyInstanceGroupAttributesCommand,
   ModifyInstanceGroupMembersCommand,
   ModifyIpAddressPoolAttributesCommand,
+  ModifyIpamCommand,
+  ModifyIpamPoolCommand,
+  ModifyIpamResourceCidrCommand,
+  ModifyIpamResourceDiscoveryCommand,
+  ModifyIpamScopeCommand,
   ModifyIpv6AddressBandwidthCommand,
   ModifyIpv6EgressOnlyRuleAttributeCommand,
   ModifyIpv6GatewayAttributeCommand,
@@ -2551,15 +3193,19 @@ export default {
   ModifyTrafficMirrorSessionAttributesCommand,
   ModifyTrafficMirrorTargetAttributesCommand,
   ModifyVpcAttributesCommand,
+  ProvisionIpamPoolCidrCommand,
   ReleaseEipAddressCommand,
+  ReleaseIpamPoolAllocationCommand,
   ReleaseIpv6AddressBandwidthCommand,
   RemoveBandwidthPackageIpCommand,
   RevokeSecurityGroupEgressCommand,
   RevokeSecurityGroupIngressCommand,
+  TagIpamResourcesCommand,
   TagResourcesCommand,
   TemporaryUpgradeEipAddressCommand,
   UnassignIpv6AddressesCommand,
   UnassignPrivateIpAddressesCommand,
+  UntagIpamResourcesCommand,
   UntagResourcesCommand,
   UpdateNetworkAclEntriesCommand,
 };

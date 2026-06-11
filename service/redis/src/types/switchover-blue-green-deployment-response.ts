@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { BlueGreenDeploymentForSwitchoverBlueGreenDeploymentOutput } from './blue-green-deployment-for-switchover-blue-green-deployment-output';
  /**
  * 
  *
@@ -22,8 +21,68 @@ import { BlueGreenDeploymentForSwitchoverBlueGreenDeploymentOutput } from './blu
 export interface SwitchoverBlueGreenDeploymentResponse {
 
     /**
-     * @type {BlueGreenDeploymentForSwitchoverBlueGreenDeploymentOutput}
+     * @type {string}
      * @memberof SwitchoverBlueGreenDeploymentResponse
      */
-    BlueGreenDeployment?: BlueGreenDeploymentForSwitchoverBlueGreenDeploymentOutput;
+    CreateTime?: string;
+
+    /**
+     * @type {number}
+     * @memberof SwitchoverBlueGreenDeploymentResponse
+     */
+    DataSyncProgress?: number;
+
+    /**
+     * @type {string}
+     * @memberof SwitchoverBlueGreenDeploymentResponse
+     */
+    EndTime?: string;
+
+    /**
+     * @type {string}
+     * @memberof SwitchoverBlueGreenDeploymentResponse
+     */
+    Name?: string;
+
+    /**
+     * @type {string}
+     * @memberof SwitchoverBlueGreenDeploymentResponse
+     */
+    SourceEngineVersion?: string;
+
+    /**
+     * @type {string}
+     * @memberof SwitchoverBlueGreenDeploymentResponse
+     */
+    SourceInstanceId?: string;
+
+    /**
+     * @type {string}
+     * @memberof SwitchoverBlueGreenDeploymentResponse
+     */
+    SourceInstanceName?: string;
+
+    /**
+     * @type {string}
+     * @memberof SwitchoverBlueGreenDeploymentResponse
+     */
+    Status?: string;
+
+    /**
+     * @type {string}
+     * @memberof SwitchoverBlueGreenDeploymentResponse
+     */
+    TargetEngineVersion?: string;
+
+    /**
+     * @type {string}
+     * @memberof SwitchoverBlueGreenDeploymentResponse
+     */
+    TargetInstanceId?: string;
+
+    /**
+     * @type {string}
+     * @memberof SwitchoverBlueGreenDeploymentResponse
+     */
+    TargetInstanceName?: string;
 }

@@ -16,10 +16,22 @@ import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandO
 
 import { CreateInstanceOneStepRequest } from './types/index';
 import { CreateInstanceOneStepResponse } from './types/index';
-import { CreateInstanceRequest } from './types/index';
-import { CreateInstanceResponse } from './types/index';
-import { DescribeAvailableSpecRequest } from './types/index';
-import { DescribeAvailableSpecResponse } from './types/index';
+import { DMCreateWorkflowRequest } from './types/index';
+import { DMCreateWorkflowResponse } from './types/index';
+import { DMDeleteWorkflowRequest } from './types/index';
+import { DMDeleteWorkflowResponse } from './types/index';
+import { DMDescribeWorkflowRequest } from './types/index';
+import { DMDescribeWorkflowResponse } from './types/index';
+import { DMDescribeWorkflowsRequest } from './types/index';
+import { DMDescribeWorkflowsResponse } from './types/index';
+import { DMStartWorkflowRequest } from './types/index';
+import { DMStartWorkflowResponse } from './types/index';
+import { DMStopWorkflowRequest } from './types/index';
+import { DMStopWorkflowResponse } from './types/index';
+import { DMUpdateWorkflowRequest } from './types/index';
+import { DMUpdateWorkflowResponse } from './types/index';
+import { DescribeAvailableSpecV2Request } from './types/index';
+import { DescribeAvailableSpecV2Response } from './types/index';
 import { DescribeAvailableVersionRequest } from './types/index';
 import { DescribeAvailableVersionResponse } from './types/index';
 import { DescribeConfigModulesRequest } from './types/index';
@@ -32,12 +44,10 @@ import { DescribeInstancesRequest } from './types/index';
 import { DescribeInstancesResponse } from './types/index';
 import { DescribeNodeInfoRequest } from './types/index';
 import { DescribeNodeInfoResponse } from './types/index';
-import { DescribePriceRequest } from './types/index';
-import { DescribePriceResponse } from './types/index';
+import { DescribePriceV2Request } from './types/index';
+import { DescribePriceV2Response } from './types/index';
 import { DescribeZonesRequest } from './types/index';
 import { DescribeZonesResponse } from './types/index';
-import { ListTagsForResourcesRequest } from './types/index';
-import { ListTagsForResourcesResponse } from './types/index';
 import { MSCreateInstanceOneStepRequest } from './types/index';
 import { MSCreateInstanceOneStepResponse } from './types/index';
 import { MSCreateInstanceRequest } from './types/index';
@@ -58,36 +68,31 @@ import { ModifyInstanceConfigRequest } from './types/index';
 import { ModifyInstanceConfigResponse } from './types/index';
 import { ModifyInstanceNameRequest } from './types/index';
 import { ModifyInstanceNameResponse } from './types/index';
-import { ModifyPostPaidRequest } from './types/index';
-import { ModifyPostPaidResponse } from './types/index';
-import { ModifyPrePaidRequest } from './types/index';
-import { ModifyPrePaidResponse } from './types/index';
-import { ModifyResourceTagsRequest } from './types/index';
-import { ModifyResourceTagsResponse } from './types/index';
 import { ReleaseInstanceRequest } from './types/index';
 import { ReleaseInstanceResponse } from './types/index';
 import { ScaleInstanceRequest } from './types/index';
 import { ScaleInstanceResponse } from './types/index';
-import { TagResourcesRequest } from './types/index';
-import { TagResourcesResponse } from './types/index';
-import { UntagResourcesRequest } from './types/index';
-import { UntagResourcesResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
-export type CreateInstanceCommandOutput = CommandOutput<CreateInstanceResponse>;
 export type CreateInstanceOneStepCommandOutput = CommandOutput<CreateInstanceOneStepResponse>;
-export type DescribeAvailableSpecCommandOutput = CommandOutput<DescribeAvailableSpecResponse>;
+export type DMCreateWorkflowCommandOutput = CommandOutput<DMCreateWorkflowResponse>;
+export type DMDeleteWorkflowCommandOutput = CommandOutput<DMDeleteWorkflowResponse>;
+export type DMDescribeWorkflowCommandOutput = CommandOutput<DMDescribeWorkflowResponse>;
+export type DMDescribeWorkflowsCommandOutput = CommandOutput<DMDescribeWorkflowsResponse>;
+export type DMStartWorkflowCommandOutput = CommandOutput<DMStartWorkflowResponse>;
+export type DMStopWorkflowCommandOutput = CommandOutput<DMStopWorkflowResponse>;
+export type DMUpdateWorkflowCommandOutput = CommandOutput<DMUpdateWorkflowResponse>;
+export type DescribeAvailableSpecV2CommandOutput = CommandOutput<DescribeAvailableSpecV2Response>;
 export type DescribeAvailableVersionCommandOutput = CommandOutput<DescribeAvailableVersionResponse>;
 export type DescribeConfigModulesCommandOutput = CommandOutput<DescribeConfigModulesResponse>;
 export type DescribeInstanceConfigCommandOutput = CommandOutput<DescribeInstanceConfigResponse>;
 export type DescribeInstanceDetailCommandOutput = CommandOutput<DescribeInstanceDetailResponse>;
 export type DescribeInstancesCommandOutput = CommandOutput<DescribeInstancesResponse>;
 export type DescribeNodeInfoCommandOutput = CommandOutput<DescribeNodeInfoResponse>;
-export type DescribePriceCommandOutput = CommandOutput<DescribePriceResponse>;
+export type DescribePriceV2CommandOutput = CommandOutput<DescribePriceV2Response>;
 export type DescribeZonesCommandOutput = CommandOutput<DescribeZonesResponse>;
-export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
 export type MSCreateInstanceCommandOutput = CommandOutput<MSCreateInstanceResponse>;
 export type MSCreateInstanceOneStepCommandOutput = CommandOutput<MSCreateInstanceOneStepResponse>;
 export type MSDescribeInstanceCommandOutput = CommandOutput<MSDescribeInstanceResponse>;
@@ -98,13 +103,8 @@ export type MSReleaseInstanceCommandOutput = CommandOutput<MSReleaseInstanceResp
 export type ModifyDeleteProtectCommandOutput = CommandOutput<ModifyDeleteProtectResponse>;
 export type ModifyInstanceConfigCommandOutput = CommandOutput<ModifyInstanceConfigResponse>;
 export type ModifyInstanceNameCommandOutput = CommandOutput<ModifyInstanceNameResponse>;
-export type ModifyPostPaidCommandOutput = CommandOutput<ModifyPostPaidResponse>;
-export type ModifyPrePaidCommandOutput = CommandOutput<ModifyPrePaidResponse>;
-export type ModifyResourceTagsCommandOutput = CommandOutput<ModifyResourceTagsResponse>;
 export type ReleaseInstanceCommandOutput = CommandOutput<ReleaseInstanceResponse>;
 export type ScaleInstanceCommandOutput = CommandOutput<ScaleInstanceResponse>;
-export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
-export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 
 /**
  * MILVUSClient Service Client
@@ -119,21 +119,6 @@ export class MILVUSClient extends Client {
   }
 }
 
-/**
- * Command to CreateInstance
- */
-export class CreateInstanceCommand extends Command<
-  CreateInstanceRequest,
-  CreateInstanceCommandOutput,
-  'CreateInstanceCommand'
-> {
-  static readonly metaPath = '/CreateInstance/2023-01-01/milvus/post/application_json/';
-
-  constructor(input: CreateInstanceRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(CreateInstanceCommand.metaPath);
-  }
-}
 /**
  * Command to CreateInstanceOneStep
  */
@@ -150,18 +135,123 @@ export class CreateInstanceOneStepCommand extends Command<
   }
 }
 /**
- * Command to DescribeAvailableSpec
+ * Command to DMCreateWorkflow
  */
-export class DescribeAvailableSpecCommand extends Command<
-  DescribeAvailableSpecRequest,
-  DescribeAvailableSpecCommandOutput,
-  'DescribeAvailableSpecCommand'
+export class DMCreateWorkflowCommand extends Command<
+  DMCreateWorkflowRequest,
+  DMCreateWorkflowCommandOutput,
+  'DMCreateWorkflowCommand'
 > {
-  static readonly metaPath = '/DescribeAvailableSpec/2023-01-01/milvus/post/application_json/';
+  static readonly metaPath = '/DMCreateWorkflow/2023-01-01/milvus/post/application_json/';
 
-  constructor(input: DescribeAvailableSpecRequest) {
+  constructor(input: DMCreateWorkflowRequest) {
     super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAvailableSpecCommand.metaPath);
+    this.requestConfig = buildRequestConfigFromMetaPath(DMCreateWorkflowCommand.metaPath);
+  }
+}
+/**
+ * Command to DMDeleteWorkflow
+ */
+export class DMDeleteWorkflowCommand extends Command<
+  DMDeleteWorkflowRequest,
+  DMDeleteWorkflowCommandOutput,
+  'DMDeleteWorkflowCommand'
+> {
+  static readonly metaPath = '/DMDeleteWorkflow/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: DMDeleteWorkflowRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DMDeleteWorkflowCommand.metaPath);
+  }
+}
+/**
+ * Command to DMDescribeWorkflow
+ */
+export class DMDescribeWorkflowCommand extends Command<
+  DMDescribeWorkflowRequest,
+  DMDescribeWorkflowCommandOutput,
+  'DMDescribeWorkflowCommand'
+> {
+  static readonly metaPath = '/DMDescribeWorkflow/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: DMDescribeWorkflowRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DMDescribeWorkflowCommand.metaPath);
+  }
+}
+/**
+ * Command to DMDescribeWorkflows
+ */
+export class DMDescribeWorkflowsCommand extends Command<
+  DMDescribeWorkflowsRequest,
+  DMDescribeWorkflowsCommandOutput,
+  'DMDescribeWorkflowsCommand'
+> {
+  static readonly metaPath = '/DMDescribeWorkflows/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: DMDescribeWorkflowsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DMDescribeWorkflowsCommand.metaPath);
+  }
+}
+/**
+ * Command to DMStartWorkflow
+ */
+export class DMStartWorkflowCommand extends Command<
+  DMStartWorkflowRequest,
+  DMStartWorkflowCommandOutput,
+  'DMStartWorkflowCommand'
+> {
+  static readonly metaPath = '/DMStartWorkflow/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: DMStartWorkflowRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DMStartWorkflowCommand.metaPath);
+  }
+}
+/**
+ * Command to DMStopWorkflow
+ */
+export class DMStopWorkflowCommand extends Command<
+  DMStopWorkflowRequest,
+  DMStopWorkflowCommandOutput,
+  'DMStopWorkflowCommand'
+> {
+  static readonly metaPath = '/DMStopWorkflow/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: DMStopWorkflowRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DMStopWorkflowCommand.metaPath);
+  }
+}
+/**
+ * Command to DMUpdateWorkflow
+ */
+export class DMUpdateWorkflowCommand extends Command<
+  DMUpdateWorkflowRequest,
+  DMUpdateWorkflowCommandOutput,
+  'DMUpdateWorkflowCommand'
+> {
+  static readonly metaPath = '/DMUpdateWorkflow/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: DMUpdateWorkflowRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DMUpdateWorkflowCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAvailableSpecV2
+ */
+export class DescribeAvailableSpecV2Command extends Command<
+  DescribeAvailableSpecV2Request,
+  DescribeAvailableSpecV2CommandOutput,
+  'DescribeAvailableSpecV2Command'
+> {
+  static readonly metaPath = '/DescribeAvailableSpecV2/2023-01-01/milvus/post/application_json/';
+
+  constructor(input: DescribeAvailableSpecV2Request) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAvailableSpecV2Command.metaPath);
   }
 }
 /**
@@ -255,18 +345,18 @@ export class DescribeNodeInfoCommand extends Command<
   }
 }
 /**
- * Command to DescribePrice
+ * Command to DescribePriceV2
  */
-export class DescribePriceCommand extends Command<
-  DescribePriceRequest,
-  DescribePriceCommandOutput,
-  'DescribePriceCommand'
+export class DescribePriceV2Command extends Command<
+  DescribePriceV2Request,
+  DescribePriceV2CommandOutput,
+  'DescribePriceV2Command'
 > {
-  static readonly metaPath = '/DescribePrice/2023-01-01/milvus/post/application_json/';
+  static readonly metaPath = '/DescribePriceV2/2023-01-01/milvus/post/application_json/';
 
-  constructor(input: DescribePriceRequest) {
+  constructor(input: DescribePriceV2Request) {
     super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(DescribePriceCommand.metaPath);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePriceV2Command.metaPath);
   }
 }
 /**
@@ -282,21 +372,6 @@ export class DescribeZonesCommand extends Command<
   constructor(input: DescribeZonesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeZonesCommand.metaPath);
-  }
-}
-/**
- * Command to ListTagsForResources
- */
-export class ListTagsForResourcesCommand extends Command<
-  ListTagsForResourcesRequest,
-  ListTagsForResourcesCommandOutput,
-  'ListTagsForResourcesCommand'
-> {
-  static readonly metaPath = '/ListTagsForResources/2023-01-01/milvus/post/application_json/';
-
-  constructor(input: ListTagsForResourcesRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(ListTagsForResourcesCommand.metaPath);
   }
 }
 /**
@@ -450,51 +525,6 @@ export class ModifyInstanceNameCommand extends Command<
   }
 }
 /**
- * Command to ModifyPostPaid
- */
-export class ModifyPostPaidCommand extends Command<
-  ModifyPostPaidRequest,
-  ModifyPostPaidCommandOutput,
-  'ModifyPostPaidCommand'
-> {
-  static readonly metaPath = '/ModifyPostPaid/2023-01-01/milvus/post/application_json/';
-
-  constructor(input: ModifyPostPaidRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(ModifyPostPaidCommand.metaPath);
-  }
-}
-/**
- * Command to ModifyPrePaid
- */
-export class ModifyPrePaidCommand extends Command<
-  ModifyPrePaidRequest,
-  ModifyPrePaidCommandOutput,
-  'ModifyPrePaidCommand'
-> {
-  static readonly metaPath = '/ModifyPrePaid/2023-01-01/milvus/post/application_json/';
-
-  constructor(input: ModifyPrePaidRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(ModifyPrePaidCommand.metaPath);
-  }
-}
-/**
- * Command to ModifyResourceTags
- */
-export class ModifyResourceTagsCommand extends Command<
-  ModifyResourceTagsRequest,
-  ModifyResourceTagsCommandOutput,
-  'ModifyResourceTagsCommand'
-> {
-  static readonly metaPath = '/ModifyResourceTags/2023-01-01/milvus/post/application_json/';
-
-  constructor(input: ModifyResourceTagsRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(ModifyResourceTagsCommand.metaPath);
-  }
-}
-/**
  * Command to ReleaseInstance
  */
 export class ReleaseInstanceCommand extends Command<
@@ -524,51 +554,26 @@ export class ScaleInstanceCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(ScaleInstanceCommand.metaPath);
   }
 }
-/**
- * Command to TagResources
- */
-export class TagResourcesCommand extends Command<
-  TagResourcesRequest,
-  TagResourcesCommandOutput,
-  'TagResourcesCommand'
-> {
-  static readonly metaPath = '/TagResources/2023-01-01/milvus/post/application_json/';
-
-  constructor(input: TagResourcesRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(TagResourcesCommand.metaPath);
-  }
-}
-/**
- * Command to UntagResources
- */
-export class UntagResourcesCommand extends Command<
-  UntagResourcesRequest,
-  UntagResourcesCommandOutput,
-  'UntagResourcesCommand'
-> {
-  static readonly metaPath = '/UntagResources/2023-01-01/milvus/post/application_json/';
-
-  constructor(input: UntagResourcesRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(UntagResourcesCommand.metaPath);
-  }
-}
 
 export default {
   MILVUSClient,
-  CreateInstanceCommand,
   CreateInstanceOneStepCommand,
-  DescribeAvailableSpecCommand,
+  DMCreateWorkflowCommand,
+  DMDeleteWorkflowCommand,
+  DMDescribeWorkflowCommand,
+  DMDescribeWorkflowsCommand,
+  DMStartWorkflowCommand,
+  DMStopWorkflowCommand,
+  DMUpdateWorkflowCommand,
+  DescribeAvailableSpecV2Command,
   DescribeAvailableVersionCommand,
   DescribeConfigModulesCommand,
   DescribeInstanceConfigCommand,
   DescribeInstanceDetailCommand,
   DescribeInstancesCommand,
   DescribeNodeInfoCommand,
-  DescribePriceCommand,
+  DescribePriceV2Command,
   DescribeZonesCommand,
-  ListTagsForResourcesCommand,
   MSCreateInstanceCommand,
   MSCreateInstanceOneStepCommand,
   MSDescribeInstanceCommand,
@@ -579,11 +584,6 @@ export default {
   ModifyDeleteProtectCommand,
   ModifyInstanceConfigCommand,
   ModifyInstanceNameCommand,
-  ModifyPostPaidCommand,
-  ModifyPrePaidCommand,
-  ModifyResourceTagsCommand,
   ReleaseInstanceCommand,
   ScaleInstanceCommand,
-  TagResourcesCommand,
-  UntagResourcesCommand,
 };
