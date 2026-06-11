@@ -23,12 +23,6 @@ import { VpcInfoForCreateInstanceOneStepInput } from './vpc-info-for-create-inst
 export interface NetworkConfigForCreateInstanceOneStepInput {
 
     /**
-     * @type {boolean}
-     * @memberof NetworkConfigForCreateInstanceOneStepInput
-     */
-    InnerEndpointEnabled?: boolean;
-
-    /**
      * @type {SubnetInfoForCreateInstanceOneStepInput}
      * @memberof NetworkConfigForCreateInstanceOneStepInput
      */

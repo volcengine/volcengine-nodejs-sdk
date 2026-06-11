@@ -49,4 +49,10 @@ export interface ComponentSpecListForScaleInstanceInput {
      * @memberof ComponentSpecListForScaleInstanceInput
      */
     NodeType?: string;
+
+    /**
+     * @type {string}
+     * @memberof ComponentSpecListForScaleInstanceInput
+     */
+    ResourceSpecName?: string;
 }

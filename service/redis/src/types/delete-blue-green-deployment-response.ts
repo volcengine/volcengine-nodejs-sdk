@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { BlueGreenDeploymentForDeleteBlueGreenDeploymentOutput } from './blue-green-deployment-for-delete-blue-green-deployment-output';
  /**
  * 
  *
@@ -22,8 +21,68 @@ import { BlueGreenDeploymentForDeleteBlueGreenDeploymentOutput } from './blue-gr
 export interface DeleteBlueGreenDeploymentResponse {
 
     /**
-     * @type {BlueGreenDeploymentForDeleteBlueGreenDeploymentOutput}
+     * @type {string}
      * @memberof DeleteBlueGreenDeploymentResponse
      */
-    BlueGreenDeployment?: BlueGreenDeploymentForDeleteBlueGreenDeploymentOutput;
+    CreateTime?: string;
+
+    /**
+     * @type {number}
+     * @memberof DeleteBlueGreenDeploymentResponse
+     */
+    DataSyncProgress?: number;
+
+    /**
+     * @type {string}
+     * @memberof DeleteBlueGreenDeploymentResponse
+     */
+    EndTime?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteBlueGreenDeploymentResponse
+     */
+    Name?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteBlueGreenDeploymentResponse
+     */
+    SourceEngineVersion?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteBlueGreenDeploymentResponse
+     */
+    SourceInstanceId?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteBlueGreenDeploymentResponse
+     */
+    SourceInstanceName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteBlueGreenDeploymentResponse
+     */
+    Status?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteBlueGreenDeploymentResponse
+     */
+    TargetEngineVersion?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteBlueGreenDeploymentResponse
+     */
+    TargetInstanceId?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteBlueGreenDeploymentResponse
+     */
+    TargetInstanceName?: string;
 }

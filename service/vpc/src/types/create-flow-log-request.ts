@@ -88,6 +88,12 @@ export interface CreateFlowLogRequest {
     Tags?: Array<TagForCreateFlowLogInput>;
 
     /**
+     * @type {Array<number>}
+     * @memberof CreateFlowLogRequest
+     */
+    TrafficPath?: Array<number>;
+
+    /**
      * @type {string}
      * @memberof CreateFlowLogRequest
      */

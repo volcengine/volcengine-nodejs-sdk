@@ -24,6 +24,12 @@ export interface HotKeyForDescribeHotKeysOutput {
      * @type {string}
      * @memberof HotKeyForDescribeHotKeysOutput
      */
+    ActionType?: string;
+
+    /**
+     * @type {string}
+     * @memberof HotKeyForDescribeHotKeysOutput
+     */
     CreateTime?: string;
 
     /**
