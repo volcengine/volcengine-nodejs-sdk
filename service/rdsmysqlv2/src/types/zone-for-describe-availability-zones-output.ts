@@ -37,4 +37,10 @@ export interface ZoneForDescribeAvailabilityZonesOutput {
      * @memberof ZoneForDescribeAvailabilityZonesOutput
      */
     ZoneName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ZoneForDescribeAvailabilityZonesOutput
+     */
+    status?: string;
 }
