@@ -16,25 +16,31 @@
  * 
  *
  * @export
- * @interface DeviceListForCreateDeviceWithoutApprovalInput
+ * @interface VoicePrintListForQueryVoicePrintOutput
  */
-export interface DeviceListForCreateDeviceWithoutApprovalInput {
+export interface VoicePrintListForQueryVoicePrintOutput {
 
     /**
      * @type {string}
-     * @memberof DeviceListForCreateDeviceWithoutApprovalInput
-     */
-    DeviceName?: string;
-
-    /**
-     * @type {string}
-     * @memberof DeviceListForCreateDeviceWithoutApprovalInput
-     */
-    DeviceSecret?: string;
-
-    /**
-     * @type {string}
-     * @memberof DeviceListForCreateDeviceWithoutApprovalInput
+     * @memberof VoicePrintListForQueryVoicePrintOutput
      */
     NickName?: string;
+
+    /**
+     * @type {string}
+     * @memberof VoicePrintListForQueryVoicePrintOutput
+     */
+    Type?: string;
+
+    /**
+     * @type {string}
+     * @memberof VoicePrintListForQueryVoicePrintOutput
+     */
+    VoicePrintId?: string;
+
+    /**
+     * @type {string}
+     * @memberof VoicePrintListForQueryVoicePrintOutput
+     */
+    VoicePrintSign?: string;
 }
