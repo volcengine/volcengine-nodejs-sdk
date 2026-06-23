@@ -16,31 +16,31 @@
  * 
  *
  * @export
- * @interface VideoProjectCreateToolTaskRequest
+ * @interface VideoProjectListToolProjectResourcesRequest
  */
-export interface VideoProjectCreateToolTaskRequest {
+export interface VideoProjectListToolProjectResourcesRequest {
+
+    /**
+     * @type {number}
+     * @memberof VideoProjectListToolProjectResourcesRequest
+     */
+    limit?: number;
+
+    /**
+     * @type {number}
+     * @memberof VideoProjectListToolProjectResourcesRequest
+     */
+    offset?: number;
 
     /**
      * @type {string}
-     * @memberof VideoProjectCreateToolTaskRequest
+     * @memberof VideoProjectListToolProjectResourcesRequest
      */
     projectId: string;
 
     /**
      * @type {number}
-     * @memberof VideoProjectCreateToolTaskRequest
+     * @memberof VideoProjectListToolProjectResourcesRequest
      */
-    taskType?: number;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectCreateToolTaskRequest
-     */
-    toolParamsJson?: string;
-
-    /**
-     * @type {Array<string>}
-     * @memberof VideoProjectCreateToolTaskRequest
-     */
-    videoIDs?: Array<string>;
+    resourceType?: number;
 }

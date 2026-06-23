@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface VideoProjectGetToolTaskRequest
+ * @interface DataForVideoProjectAddTargetLangsToExistingDramaOutput
  */
-export interface VideoProjectGetToolTaskRequest {
+export interface DataForVideoProjectAddTargetLangsToExistingDramaOutput {
 
     /**
-     * @type {string}
-     * @memberof VideoProjectGetToolTaskRequest
+     * @type {Array<string>}
+     * @memberof DataForVideoProjectAddTargetLangsToExistingDramaOutput
      */
-    projectId: string;
+    dubTaskIDs?: Array<string>;
 
     /**
-     * @type {string}
-     * @memberof VideoProjectGetToolTaskRequest
+     * @type {Array<string>}
+     * @memberof DataForVideoProjectAddTargetLangsToExistingDramaOutput
      */
-    taskId: string;
+    taskIDs?: Array<string>;
 }
