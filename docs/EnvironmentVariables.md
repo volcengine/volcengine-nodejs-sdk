@@ -72,7 +72,7 @@ setx VOLCENGINE_SESSION_TOKEN your-session-token /M
 
 | Variable                           | Description                                                              | Default |
 | ---------------------------------- | ------------------------------------------------------------------------ | ------- |
-| `VOLCENGINE_ECS_METADATA`          | Specify ECS instance role name (required unless passed via constructor)   | -       |
+| `VOLCENGINE_ECS_METADATA`          | Specify ECS instance role name; if unset, auto-detected from IMDS         | -       |
 | `VOLCENGINE_ECS_METADATA_DISABLED` | Set to `true` to disable IMDS credential retrieval                       | -       |
 
 #### CLI Config File
