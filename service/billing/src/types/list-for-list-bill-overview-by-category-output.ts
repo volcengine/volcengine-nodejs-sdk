@@ -138,6 +138,12 @@ export interface ListForListBillOverviewByCategoryOutput {
      * @type {string}
      * @memberof ListForListBillOverviewByCategoryOutput
      */
+    PointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillOverviewByCategoryOutput
+     */
     PosttaxAmount?: string;
 
     /**

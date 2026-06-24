@@ -180,6 +180,12 @@ export interface ListForListAmortizedCostBillDailyOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillDailyOutput
      */
+    DailyAmortizedPointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillDailyOutput
+     */
     DailyAmortizedPosttaxAmount?: string;
 
     /**
@@ -384,6 +390,12 @@ export interface ListForListAmortizedCostBillDailyOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillDailyOutput
      */
+    NowAmortizedPointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillDailyOutput
+     */
     NowAmortizedPosttaxAmount?: string;
 
     /**
@@ -535,6 +547,12 @@ export interface ListForListAmortizedCostBillDailyOutput {
      * @memberof ListForListAmortizedCostBillDailyOutput
      */
     PayerUserName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillDailyOutput
+     */
+    PointDeductAmount?: string;
 
     /**
      * @type {string}
