@@ -451,6 +451,109 @@ describe("CLIConfigCredentialProvider", () => {
     });
   });
 
+  it("should keep rotated console-login refresh token in memory", async () => {
+    process.env.HOME = "/mock/home";
+    process.env.VOLCENGINE_LOGIN_CACHE_DIRECTORY = "/mock/login/cache";
+    const loginSession = "console-session";
+    const cachePath = `/mock/login/cache/${crypto
+      .createHash("sha1")
+      .update(loginSession)
+      .digest("hex")}.json`;
+
+    (path.resolve as jest.Mock).mockReturnValue(
+      "/mock/home/.volcengine/config.json",
+    );
+    (path.join as jest.Mock).mockImplementation((...parts: unknown[]) =>
+      parts.join("/"),
+    );
+    (fs.existsSync as jest.Mock).mockReturnValue(true);
+    (fs.readFileSync as jest.Mock).mockImplementation((filePath: unknown) => {
+      if (filePath === "/mock/home/.volcengine/config.json") {
+        return JSON.stringify({
+          current: "console",
+          profiles: {
+            console: {
+              mode: "console-login",
+              "login-session": loginSession,
+            },
+          },
+        });
+      }
+      if (filePath === cachePath) {
+        return JSON.stringify({
+          access_token: JSON.stringify({
+            access_key_id: "old-ak",
+            secret_access_key: "old-sk",
+            session_token: "old-token",
+          }),
+          issued_at: new Date(Date.now() - 60 * 60 * 1000).toISOString(),
+          expires_in: 1,
+          refresh_token: "rt1",
+          client_id: "login-client-id",
+        });
+      }
+      throw new Error(`unexpected read: ${filePath}`);
+    });
+
+    const requestFormUrlEncoded = jest
+      .fn<(...args: any[]) => Promise<any>>()
+      .mockResolvedValueOnce({
+        access_token: JSON.stringify({
+          access_key_id: "ak1",
+          secret_access_key: "sk1",
+          session_token: "token1",
+        }),
+        expires_in: 3600,
+        refresh_token: "rt2",
+      })
+      .mockResolvedValueOnce({
+        access_token: JSON.stringify({
+          access_key_id: "ak2",
+          secret_access_key: "sk2",
+          session_token: "token2",
+        }),
+        expires_in: 3600,
+        refresh_token: "rt3",
+      });
+    const provider = new CLIConfigCredentialProvider();
+    (provider as any).requestFormUrlEncoded = requestFormUrlEncoded;
+
+    const first = await provider.resolveCredentials();
+    const memoryCache = (provider as any).consoleLoginTokenCaches.get(
+      cachePath,
+    );
+    memoryCache.issued_at = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+    memoryCache.expires_in = 1;
+    (provider as any).delegate = undefined;
+    const second = await provider.resolveCredentials();
+
+    expect(first.accessKeyId).toBe("ak1");
+    expect(second.accessKeyId).toBe("ak2");
+    expect(requestFormUrlEncoded).toHaveBeenNthCalledWith(
+      1,
+      "https://signin.volcengine.com/authorize/oauth/token",
+      {
+        grant_type: "refresh_token",
+        client_id: "login-client-id",
+        refresh_token: "rt1",
+      },
+    );
+    expect(requestFormUrlEncoded).toHaveBeenNthCalledWith(
+      2,
+      "https://signin.volcengine.com/authorize/oauth/token",
+      {
+        grant_type: "refresh_token",
+        client_id: "login-client-id",
+        refresh_token: "rt2",
+      },
+    );
+    expect((fs.readFileSync as jest.Mock).mock.calls).toEqual([
+      ["/mock/home/.volcengine/config.json", { encoding: "utf-8" }],
+      [cachePath, { encoding: "utf-8" }],
+      ["/mock/home/.volcengine/config.json", { encoding: "utf-8" }],
+    ]);
+  });
+
   it("should cache StsToken credentials and skip re-reading config file on subsequent calls", async () => {
     process.env.HOME = "/mock/home";
 

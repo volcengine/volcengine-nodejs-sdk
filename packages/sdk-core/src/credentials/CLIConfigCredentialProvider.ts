@@ -74,6 +74,7 @@ export class CLIConfigCredentialProvider implements Provider {
   readonly providerName = "CLIConfigCredentialProvider";
 
   private delegate?: Provider;
+  private readonly consoleLoginTokenCaches = new Map<string, any>();
 
   async resolveCredentials(): Promise<CredentialValue> {
     if (this.delegate) {
@@ -91,7 +92,9 @@ export class CLIConfigCredentialProvider implements Provider {
     const configPath = this.resolveConfigPath();
 
     if (!fs.existsSync(configPath)) {
-      throw new Error(`${this.providerName}: 配置文件不存在: ${configPath}`);
+      throw new Error(
+        `${this.providerName}: config file not found: ${configPath}`,
+      );
     }
 
     let configData: any;
@@ -101,7 +104,7 @@ export class CLIConfigCredentialProvider implements Provider {
       );
     } catch (err: any) {
       throw new Error(
-        `${this.providerName}: 解析配置文件失败 (${configPath}): ${err.message}`,
+        `${this.providerName}: failed to parse config file (${configPath}): ${err.message}`,
       );
     }
 
@@ -109,7 +112,9 @@ export class CLIConfigCredentialProvider implements Provider {
     const profile = configData?.profiles?.[profileName];
 
     if (!profile) {
-      throw new Error(`${this.providerName}: 配置文件中未找到有效的 profile`);
+      throw new Error(
+        `${this.providerName}: no valid profile found in config file`,
+      );
     }
 
     const mode = String(profile.mode || "")
@@ -134,7 +139,7 @@ export class CLIConfigCredentialProvider implements Provider {
         return this.resolveCachedStsToken(profile, mode);
       default:
         throw new Error(
-          `${this.providerName}: 不支持的 CLI profile mode: ${profile.mode}`,
+          `${this.providerName}: unsupported CLI profile mode: ${profile.mode}`,
         );
     }
   }
@@ -145,7 +150,7 @@ export class CLIConfigCredentialProvider implements Provider {
 
     if (!accessKeyId || !secretAccessKey) {
       throw new Error(
-        `${this.providerName}: 配置文件中缺少 access-key 或 secret-key`,
+        `${this.providerName}: config file is missing access-key or secret-key`,
       );
     }
 
@@ -174,12 +179,12 @@ export class CLIConfigCredentialProvider implements Provider {
 
     if (!accessKeyId || !secretAccessKey) {
       throw new Error(
-        `${this.providerName}: ramrolearn 模式缺少 access-key 或 secret-key`,
+        `${this.providerName}: ramrolearn mode is missing access-key or secret-key`,
       );
     }
     if (!roleTrn) {
       throw new Error(
-        `${this.providerName}: ramrolearn 模式缺少 role-trn，或 account-id/role-name`,
+        `${this.providerName}: ramrolearn mode is missing role-trn, or account-id/role-name`,
       );
     }
 
@@ -199,10 +204,12 @@ export class CLIConfigCredentialProvider implements Provider {
     const oidcTokenFile = this.trimToUndefined(profile["oidc-token-file"]);
 
     if (!roleTrn) {
-      throw new Error(`${this.providerName}: oidc 模式缺少 role-trn`);
+      throw new Error(`${this.providerName}: oidc mode is missing role-trn`);
     }
     if (!oidcTokenFile) {
-      throw new Error(`${this.providerName}: oidc 模式缺少 oidc-token-file`);
+      throw new Error(
+        `${this.providerName}: oidc mode is missing oidc-token-file`,
+      );
     }
 
     this.delegate = new OidcCredentialProvider({
@@ -218,7 +225,9 @@ export class CLIConfigCredentialProvider implements Provider {
   private resolveEcsRole(profile: any): Promise<CredentialValue> {
     const roleName = this.trimToUndefined(profile["role-name"]);
     if (!roleName) {
-      throw new Error(`${this.providerName}: ecsrole 模式缺少 role-name`);
+      throw new Error(
+        `${this.providerName}: ecsrole mode is missing role-name`,
+      );
     }
 
     this.delegate = new EcsRoleCredentialProvider({ roleName });
@@ -230,14 +239,18 @@ export class CLIConfigCredentialProvider implements Provider {
     if (expiration === undefined || expiration === null || expiration === "") {
       const credentials = this.resolveAK(profile);
       if (!credentials.sessionToken) {
-        throw new Error(`${this.providerName}: ${mode} 模式缺少 session-token`);
+        throw new Error(
+          `${this.providerName}: ${mode} mode is missing session-token`,
+        );
       }
       return credentials;
     }
 
     const cached = this.tryResolveCachedStsToken(profile);
     if (!cached) {
-      throw new Error(`${this.providerName}: ${mode} 模式 STS 临时凭证已过期`);
+      throw new Error(
+        `${this.providerName}: ${mode} mode STS temporary credentials have expired`,
+      );
     }
     this.delegate = new ExpiringCredentialDelegate(
       cached.credentials,
@@ -256,7 +269,7 @@ export class CLIConfigCredentialProvider implements Provider {
     }
     const expiredTime = this.parseUnixTimestamp(Number(expiration));
     if (Number.isNaN(expiredTime.getTime())) {
-      throw new Error(`${this.providerName}: sts-expiration 非法`);
+      throw new Error(`${this.providerName}: invalid sts-expiration`);
     }
     if (Date.now() > expiredTime.getTime()) {
       return undefined;
@@ -264,7 +277,9 @@ export class CLIConfigCredentialProvider implements Provider {
 
     const credentials = this.resolveAK(profile);
     if (!credentials.sessionToken) {
-      throw new Error(`${this.providerName}: STS 临时凭证缺少 session-token`);
+      throw new Error(
+        `${this.providerName}: STS temporary credentials are missing session-token`,
+      );
     }
     return { credentials, expiresAtMs: expiredTime.getTime() };
   }
@@ -286,19 +301,21 @@ export class CLIConfigCredentialProvider implements Provider {
 
     const sessionName = this.trimToUndefined(profile["sso-session-name"]);
     if (!sessionName) {
-      throw new Error(`${this.providerName}: sso 模式缺少 sso-session-name`);
+      throw new Error(
+        `${this.providerName}: sso mode is missing sso-session-name`,
+      );
     }
 
     const session = configData?.["sso-session"]?.[sessionName];
     if (!session) {
       throw new Error(
-        `${this.providerName}: 未找到 sso session: ${sessionName}`,
+        `${this.providerName}: sso session not found: ${sessionName}`,
       );
     }
 
     const startUrl = this.trimToUndefined(session["start-url"]);
     if (!startUrl) {
-      throw new Error(`${this.providerName}: sso session 缺少 start-url`);
+      throw new Error(`${this.providerName}: sso session is missing start-url`);
     }
 
     const region =
@@ -315,7 +332,7 @@ export class CLIConfigCredentialProvider implements Provider {
 
     if (!accessToken) {
       throw new Error(
-        `${this.providerName}: SSO token cache 缺少 access_token`,
+        `${this.providerName}: SSO token cache is missing access_token`,
       );
     }
 
@@ -337,7 +354,7 @@ export class CLIConfigCredentialProvider implements Provider {
     const loginSession = this.trimToUndefined(profile["login-session"]);
     if (!loginSession) {
       throw new Error(
-        `${this.providerName}: console-login 模式缺少 login-session，请先执行 ve login`,
+        `${this.providerName}: console-login mode is missing login-session; run ve login first`,
       );
     }
 
@@ -348,7 +365,11 @@ export class CLIConfigCredentialProvider implements Provider {
       cacheDir,
       `${crypto.createHash("sha1").update(loginSession).digest("hex")}.json`,
     );
-    let tokenCache = this.loadConsoleLoginCache(cachePath);
+    let tokenCache = this.consoleLoginTokenCaches.get(cachePath);
+    if (!tokenCache) {
+      tokenCache = this.loadConsoleLoginCache(cachePath);
+      this.consoleLoginTokenCaches.set(cachePath, tokenCache);
+    }
 
     const cached = this.tryApplyConsoleLoginCache(tokenCache, cachePath);
     if (cached) {
@@ -370,11 +391,12 @@ export class CLIConfigCredentialProvider implements Provider {
       const diskCache = this.loadConsoleLoginCache(cachePath);
       if (diskCache.refresh_token === tokenCache.refresh_token) {
         throw new Error(
-          `${this.providerName}: console-login refresh_token 已失效，请重新执行 ve login: ${err.message}`,
+          `${this.providerName}: console-login refresh_token is invalid; run ve login again: ${err.message}`,
         );
       }
 
       tokenCache = diskCache;
+      this.consoleLoginTokenCaches.set(cachePath, tokenCache);
       const diskCached = this.tryApplyConsoleLoginCache(tokenCache, cachePath);
       if (diskCached) {
         this.delegate = new ExpiringCredentialDelegate(
@@ -391,7 +413,7 @@ export class CLIConfigCredentialProvider implements Provider {
   private loadConsoleLoginCache(cachePath: string): any {
     if (!fs.existsSync(cachePath)) {
       throw new Error(
-        `${this.providerName}: console-login token cache 文件不存在: ${cachePath}，请先执行 ve login`,
+        `${this.providerName}: console-login token cache file does not exist: ${cachePath}; run ve login first`,
       );
     }
 
@@ -399,7 +421,7 @@ export class CLIConfigCredentialProvider implements Provider {
       return JSON.parse(fs.readFileSync(cachePath, { encoding: "utf-8" }));
     } catch (err: any) {
       throw new Error(
-        `${this.providerName}: 解析 console-login token cache 失败 (${cachePath}): ${err.message}，请重新执行 ve login`,
+        `${this.providerName}: failed to parse console-login token cache (${cachePath}): ${err.message}; run ve login again`,
       );
     }
   }
@@ -442,12 +464,12 @@ export class CLIConfigCredentialProvider implements Provider {
 
     if (!refreshToken) {
       throw new Error(
-        `${this.providerName}: console-login cache 缺少 refresh_token，请重新执行 ve login`,
+        `${this.providerName}: console-login cache is missing refresh_token; run ve login again`,
       );
     }
     if (!clientId) {
       throw new Error(
-        `${this.providerName}: console-login cache 缺少 client_id，请重新执行 ve login`,
+        `${this.providerName}: console-login cache is missing client_id; run ve login again`,
       );
     }
 
@@ -468,7 +490,7 @@ export class CLIConfigCredentialProvider implements Provider {
     const expiresIn = Number(tokenResp.expires_in);
     if (!accessToken || !expiresIn || expiresIn <= 0) {
       throw new Error(
-        `${this.providerName}: console-login refresh 响应缺少 access_token 或 expires_in`,
+        `${this.providerName}: console-login refresh response is missing access_token or expires_in`,
       );
     }
 
@@ -489,7 +511,7 @@ export class CLIConfigCredentialProvider implements Provider {
     const refreshed = this.tryApplyConsoleLoginCache(tokenCache, cachePath);
     if (!refreshed) {
       throw new Error(
-        `${this.providerName}: console-login refresh 成功，但 access_token 无法解析为 STS 凭证`,
+        `${this.providerName}: console-login refresh succeeded, but access_token could not be parsed as STS credentials`,
       );
     }
     this.delegate = new ExpiringCredentialDelegate(
@@ -510,14 +532,14 @@ export class CLIConfigCredentialProvider implements Provider {
         stsCredentials = JSON.parse(accessToken);
       } catch (err: any) {
         throw new Error(
-          `${this.providerName}: 解析 console-login access_token 失败 (${cachePath}): ${err.message}`,
+          `${this.providerName}: failed to parse console-login access_token (${cachePath}): ${err.message}`,
         );
       }
     } else if (typeof accessToken === "object" && accessToken !== null) {
       stsCredentials = accessToken;
     } else {
       throw new Error(
-        `${this.providerName}: console-login access_token 格式非法 (${cachePath})`,
+        `${this.providerName}: invalid console-login access_token format (${cachePath})`,
       );
     }
 
@@ -528,7 +550,7 @@ export class CLIConfigCredentialProvider implements Provider {
     const sessionToken = this.trimToUndefined(stsCredentials.session_token);
     if (!accessKeyId || !secretAccessKey || !sessionToken) {
       throw new Error(
-        `${this.providerName}: console-login access_token 缺少 STS 凭证字段`,
+        `${this.providerName}: console-login access_token is missing STS credential fields`,
       );
     }
 
@@ -548,19 +570,19 @@ export class CLIConfigCredentialProvider implements Provider {
     const expiresIn = Number(tokenCache.expires_in);
     if (!issuedAt) {
       throw new Error(
-        `${this.providerName}: console-login token cache 缺少 issued_at (${cachePath})`,
+        `${this.providerName}: console-login token cache is missing issued_at (${cachePath})`,
       );
     }
     if (!expiresIn || expiresIn <= 0) {
       throw new Error(
-        `${this.providerName}: console-login token cache 缺少有效 expires_in (${cachePath})`,
+        `${this.providerName}: console-login token cache is missing a valid expires_in (${cachePath})`,
       );
     }
 
     const issuedAtMs = Date.parse(issuedAt);
     if (Number.isNaN(issuedAtMs)) {
       throw new Error(
-        `${this.providerName}: console-login token cache issued_at 非法 (${cachePath})`,
+        `${this.providerName}: invalid console-login token cache issued_at (${cachePath})`,
       );
     }
     return issuedAtMs + expiresIn * 1000;
@@ -585,7 +607,7 @@ export class CLIConfigCredentialProvider implements Provider {
   private loadSsoTokenCache(tokenCachePath: string): any {
     if (!fs.existsSync(tokenCachePath)) {
       throw new Error(
-        `${this.providerName}: SSO token cache 文件不存在: ${tokenCachePath}`,
+        `${this.providerName}: SSO token cache file does not exist: ${tokenCachePath}`,
       );
     }
 
@@ -593,7 +615,7 @@ export class CLIConfigCredentialProvider implements Provider {
       return JSON.parse(fs.readFileSync(tokenCachePath, { encoding: "utf-8" }));
     } catch (err: any) {
       throw new Error(
-        `${this.providerName}: 解析 SSO token cache 失败 (${tokenCachePath}): ${err.message}`,
+        `${this.providerName}: failed to parse SSO token cache (${tokenCachePath}): ${err.message}`,
       );
     }
   }
@@ -601,11 +623,15 @@ export class CLIConfigCredentialProvider implements Provider {
   private isSsoAccessTokenExpired(expiresAt: unknown): boolean {
     const value = this.trimToUndefined(expiresAt);
     if (!value) {
-      throw new Error(`${this.providerName}: SSO token cache 缺少 expires_at`);
+      throw new Error(
+        `${this.providerName}: SSO token cache is missing expires_at`,
+      );
     }
     const expiresAtMs = Date.parse(value);
     if (Number.isNaN(expiresAtMs)) {
-      throw new Error(`${this.providerName}: SSO token cache expires_at 非法`);
+      throw new Error(
+        `${this.providerName}: invalid SSO token cache expires_at`,
+      );
     }
     return Date.now() > expiresAtMs;
   }
@@ -621,12 +647,12 @@ export class CLIConfigCredentialProvider implements Provider {
 
     if (!refreshToken) {
       throw new Error(
-        `${this.providerName}: SSO token cache 缺少 refresh_token`,
+        `${this.providerName}: SSO token cache is missing refresh_token`,
       );
     }
     if (!clientId || !clientSecret) {
       throw new Error(
-        `${this.providerName}: SSO token cache 缺少 client_id/client_secret`,
+        `${this.providerName}: SSO token cache is missing client_id/client_secret`,
       );
     }
 
@@ -637,7 +663,7 @@ export class CLIConfigCredentialProvider implements Provider {
       Number.isNaN(secretExpiresAt.getTime()) ||
       Date.now() > secretExpiresAt.getTime()
     ) {
-      throw new Error(`${this.providerName}: SSO refresh token 已过期`);
+      throw new Error(`${this.providerName}: SSO refresh token has expired`);
     }
 
     const tokenUrl = `https://cloudidentity-oauth.${region}.volces.com${OAUTH_TOKEN_PATH}`;
@@ -650,7 +676,9 @@ export class CLIConfigCredentialProvider implements Provider {
 
     const accessToken = this.trimToUndefined(tokenResp.access_token);
     if (!accessToken || !tokenResp.expires_in) {
-      throw new Error(`${this.providerName}: SSO refresh token 响应缺少凭证`);
+      throw new Error(
+        `${this.providerName}: SSO refresh token response is missing credentials`,
+      );
     }
 
     tokenCache.access_token = accessToken;
@@ -682,7 +710,7 @@ export class CLIConfigCredentialProvider implements Provider {
         // 忽略清理失败，保留原始写入错误。
       }
       throw new Error(
-        `${this.providerName}: 写入 SSO token cache 失败 (${tokenCachePath}): ${err.message}`,
+        `${this.providerName}: failed to write SSO token cache (${tokenCachePath}): ${err.message}`,
       );
     }
   }
@@ -695,10 +723,10 @@ export class CLIConfigCredentialProvider implements Provider {
     const accountId = this.trimToUndefined(profile["account-id"]);
     const roleName = this.trimToUndefined(profile["role-name"]);
     if (!accountId) {
-      throw new Error(`${this.providerName}: sso 模式缺少 account-id`);
+      throw new Error(`${this.providerName}: sso mode is missing account-id`);
     }
     if (!roleName) {
-      throw new Error(`${this.providerName}: sso 模式缺少 role-name`);
+      throw new Error(`${this.providerName}: sso mode is missing role-name`);
     }
 
     const endpoint = new URL(
@@ -714,7 +742,9 @@ export class CLIConfigCredentialProvider implements Provider {
     const credentials = resp?.Result?.RoleCredentials;
 
     if (!credentials?.AccessKeyId || !credentials?.SecretAccessKey) {
-      throw new Error(`${this.providerName}: SSO Portal 响应缺少临时凭证`);
+      throw new Error(
+        `${this.providerName}: SSO Portal response is missing temporary credentials`,
+      );
     }
 
     const value: CredentialValue = {
@@ -735,7 +765,7 @@ export class CLIConfigCredentialProvider implements Provider {
       const expiredTime = this.parseUnixTimestamp(Number(rawExpiration));
       if (Number.isNaN(expiredTime.getTime())) {
         throw new Error(
-          `${this.providerName}: SSO Portal 响应中的 Expiration 非法`,
+          `${this.providerName}: invalid Expiration in SSO Portal response`,
         );
       }
       expiresAtMs = expiredTime.getTime();
@@ -793,14 +823,16 @@ export class CLIConfigCredentialProvider implements Provider {
             try {
               resolve(raw ? JSON.parse(raw) : {});
             } catch (err: any) {
-              reject(new Error(`解析 HTTP 响应失败: ${err.message}`));
+              reject(
+                new Error(`failed to parse HTTP response: ${err.message}`),
+              );
             }
           });
         },
       );
 
       req.on("error", reject);
-      req.on("timeout", () => req.destroy(new Error("HTTP 请求超时")));
+      req.on("timeout", () => req.destroy(new Error("HTTP request timed out")));
       if (data) {
         req.write(data);
       }
@@ -850,14 +882,16 @@ export class CLIConfigCredentialProvider implements Provider {
             try {
               resolve(raw ? JSON.parse(raw) : {});
             } catch (err: any) {
-              reject(new Error(`解析 HTTP 响应失败: ${err.message}`));
+              reject(
+                new Error(`failed to parse HTTP response: ${err.message}`),
+              );
             }
           });
         },
       );
 
       req.on("error", reject);
-      req.on("timeout", () => req.destroy(new Error("HTTP 请求超时")));
+      req.on("timeout", () => req.destroy(new Error("HTTP request timed out")));
       req.write(data);
       req.end();
     });
@@ -884,7 +918,7 @@ export class CLIConfigCredentialProvider implements Provider {
     const homeDir = process.env.HOME || process.env.USERPROFILE;
     if (!homeDir) {
       throw new Error(
-        `${this.providerName}: HOME / USERPROFILE 环境变量未设置，无法定位配置文件`,
+        `${this.providerName}: HOME / USERPROFILE environment variable is not set; unable to locate config file`,
       );
     }
     // 优先使用环境变量指定的配置文件路径
