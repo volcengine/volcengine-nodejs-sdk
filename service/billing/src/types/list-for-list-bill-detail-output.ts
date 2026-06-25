@@ -354,6 +354,12 @@ export interface ListForListBillDetailOutput {
      * @type {string}
      * @memberof ListForListBillDetailOutput
      */
+    PointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
     PosttaxAmount?: string;
 
     /**
@@ -427,6 +433,12 @@ export interface ListForListBillDetailOutput {
      * @memberof ListForListBillDetailOutput
      */
     ProjectDisplayName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
+    ProjectRemark?: string;
 
     /**
      * @type {string}
@@ -577,6 +589,12 @@ export interface ListForListBillDetailOutput {
      * @memberof ListForListBillDetailOutput
      */
     Tag?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
+    TagRemark?: string;
 
     /**
      * @type {string}

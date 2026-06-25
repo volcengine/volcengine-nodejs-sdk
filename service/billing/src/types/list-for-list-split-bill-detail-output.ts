@@ -324,6 +324,12 @@ export interface ListForListSplitBillDetailOutput {
      * @type {string}
      * @memberof ListForListSplitBillDetailOutput
      */
+    PointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListSplitBillDetailOutput
+     */
     PosttaxAmount?: string;
 
     /**
@@ -391,6 +397,12 @@ export interface ListForListSplitBillDetailOutput {
      * @memberof ListForListSplitBillDetailOutput
      */
     ProjectDisplayName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListSplitBillDetailOutput
+     */
+    ProjectRemark?: string;
 
     /**
      * @type {string}
@@ -571,6 +583,12 @@ export interface ListForListSplitBillDetailOutput {
      * @memberof ListForListSplitBillDetailOutput
      */
     Tag?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListSplitBillDetailOutput
+     */
+    TagRemark?: string;
 
     /**
      * @type {string}
