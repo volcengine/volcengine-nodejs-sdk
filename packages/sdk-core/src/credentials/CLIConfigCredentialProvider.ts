@@ -75,6 +75,7 @@ export class CLIConfigCredentialProvider implements Provider {
 
   private delegate?: Provider;
   private readonly consoleLoginTokenCaches = new Map<string, any>();
+  private readonly ssoTokenCaches = new Map<string, any>();
 
   async resolveCredentials(): Promise<CredentialValue> {
     if (this.delegate) {
@@ -289,7 +290,7 @@ export class CLIConfigCredentialProvider implements Provider {
     configData: any,
     configPath: string,
   ): Promise<CredentialValue> {
-    const cached = this.tryResolveCachedStsToken(profile);
+    const cached = this.tryResolveSsoCachedStsToken(profile);
     if (cached) {
       this.delegate = new ExpiringCredentialDelegate(
         cached.credentials,
@@ -327,7 +328,15 @@ export class CLIConfigCredentialProvider implements Provider {
       startUrl,
       sessionName,
     );
-    const tokenCache = this.loadSsoTokenCache(tokenCachePath);
+
+    // 与 Python SDK 对齐：仅在内存缓存为空时从磁盘 bootstrap 一次，
+    // 之后复用内存缓存（含轮换后的 refresh_token），SDK 永不写盘。
+    let tokenCache = this.ssoTokenCaches.get(tokenCachePath);
+    if (!tokenCache) {
+      tokenCache = this.loadSsoTokenCache(tokenCachePath);
+      this.ssoTokenCaches.set(tokenCachePath, tokenCache);
+    }
+
     let accessToken = this.trimToUndefined(tokenCache.access_token);
 
     if (!accessToken) {
@@ -337,14 +346,53 @@ export class CLIConfigCredentialProvider implements Provider {
     }
 
     if (this.isSsoAccessTokenExpired(tokenCache.expires_at)) {
-      accessToken = await this.refreshSsoAccessToken(
-        tokenCache,
-        tokenCachePath,
-        region,
-      );
+      accessToken = await this.refreshSsoAccessToken(tokenCache, region);
     }
 
     return this.getSsoRoleCredentials(accessToken, profile, region);
+  }
+
+  /**
+   * SSO 模式下读取 profile 内联的 STS 临时凭证快路径。
+   *
+   * 与 Python `_try_cached_sts_credentials` 对齐：sts-expiration 缺失/无效/已过期，
+   * 或 access-key/secret-key 缺失时，返回 undefined 以回退到完整 SSO 流程，而不是抛错。
+   * session-token 在 SSO 模式下可选。
+   */
+  private tryResolveSsoCachedStsToken(
+    profile: any,
+  ): { credentials: CredentialValue; expiresAtMs: number } | undefined {
+    const expiration = profile["sts-expiration"];
+    if (expiration === undefined || expiration === null || expiration === "") {
+      return undefined;
+    }
+    const expValue = Number(expiration);
+    if (!expValue || expValue <= 0) {
+      return undefined;
+    }
+    const expiredTime = this.parseUnixTimestamp(expValue);
+    if (
+      Number.isNaN(expiredTime.getTime()) ||
+      Date.now() >= expiredTime.getTime()
+    ) {
+      return undefined;
+    }
+
+    const accessKeyId = this.trimToUndefined(profile["access-key"]);
+    const secretAccessKey = this.trimToUndefined(profile["secret-key"]);
+    if (!accessKeyId || !secretAccessKey) {
+      return undefined;
+    }
+
+    return {
+      credentials: {
+        accessKeyId,
+        secretAccessKey,
+        sessionToken: this.trimToUndefined(profile["session-token"]),
+        providerName: this.providerName,
+      },
+      expiresAtMs: expiredTime.getTime(),
+    };
   }
 
   private async resolveConsoleLogin(
@@ -638,7 +686,6 @@ export class CLIConfigCredentialProvider implements Provider {
 
   private async refreshSsoAccessToken(
     tokenCache: any,
-    tokenCachePath: string,
     region: string,
   ): Promise<string> {
     const refreshToken = this.trimToUndefined(tokenCache.refresh_token);
@@ -681,6 +728,8 @@ export class CLIConfigCredentialProvider implements Provider {
       );
     }
 
+    // 与 Python SDK 对齐：只更新内存 cache（保留轮换后的 refresh_token 供后续刷新周期使用），
+    // 永不写回磁盘，避免与 ve cli 的并发写冲突——ve cli 是唯一写入方。
     tokenCache.access_token = accessToken;
     if (this.trimToUndefined(tokenResp.refresh_token)) {
       tokenCache.refresh_token = tokenResp.refresh_token;
@@ -688,31 +737,8 @@ export class CLIConfigCredentialProvider implements Provider {
     tokenCache.expires_at = new Date(
       Date.now() + Number(tokenResp.expires_in) * 1000,
     ).toISOString();
-    this.saveSsoTokenCache(tokenCachePath, tokenCache);
 
     return accessToken;
-  }
-
-  private saveSsoTokenCache(tokenCachePath: string, tokenCache: any): void {
-    const tmpPath = `${tokenCachePath}.tmp-${process.pid}-${Date.now()}`;
-    try {
-      fs.writeFileSync(tmpPath, JSON.stringify(tokenCache, null, 2), {
-        encoding: "utf-8",
-        mode: 0o600,
-      });
-      fs.renameSync(tmpPath, tokenCachePath);
-    } catch (err: any) {
-      try {
-        if (fs.existsSync(tmpPath)) {
-          fs.unlinkSync(tmpPath);
-        }
-      } catch {
-        // 忽略清理失败，保留原始写入错误。
-      }
-      throw new Error(
-        `${this.providerName}: failed to write SSO token cache (${tokenCachePath}): ${err.message}`,
-      );
-    }
   }
 
   private async getSsoRoleCredentials(
