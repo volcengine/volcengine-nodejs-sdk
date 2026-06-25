@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface VideoProjectGetToolTaskRequest
+ * @interface CreatorForVideoProjectListVideoDramaOutput
  */
-export interface VideoProjectGetToolTaskRequest {
+export interface CreatorForVideoProjectListVideoDramaOutput {
 
     /**
      * @type {string}
-     * @memberof VideoProjectGetToolTaskRequest
+     * @memberof CreatorForVideoProjectListVideoDramaOutput
      */
-    projectId: string;
+    avatar?: string;
 
     /**
      * @type {string}
-     * @memberof VideoProjectGetToolTaskRequest
+     * @memberof CreatorForVideoProjectListVideoDramaOutput
      */
-    taskId: string;
+    username?: string;
 }

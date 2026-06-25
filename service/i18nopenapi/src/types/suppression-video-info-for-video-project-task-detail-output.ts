@@ -54,6 +54,18 @@ export interface SuppressionVideoInfoForVideoProjectTaskDetailOutput {
      * @type {string}
      * @memberof SuppressionVideoInfoForVideoProjectTaskDetailOutput
      */
+    targetAudioDownloadUrl?: string;
+
+    /**
+     * @type {string}
+     * @memberof SuppressionVideoInfoForVideoProjectTaskDetailOutput
+     */
+    targetAudioUrl?: string;
+
+    /**
+     * @type {string}
+     * @memberof SuppressionVideoInfoForVideoProjectTaskDetailOutput
+     */
     targetDownloadUrl?: string;
 
     /**

@@ -16,19 +16,13 @@
  * 
  *
  * @export
- * @interface VideoProjectGetToolTaskRequest
+ * @interface VideoProjectDeleteVideoDramaResponse
  */
-export interface VideoProjectGetToolTaskRequest {
+export interface VideoProjectDeleteVideoDramaResponse {
 
     /**
      * @type {string}
-     * @memberof VideoProjectGetToolTaskRequest
+     * @memberof VideoProjectDeleteVideoDramaResponse
      */
-    projectId: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectGetToolTaskRequest
-     */
-    taskId: string;
+    message?: string;
 }

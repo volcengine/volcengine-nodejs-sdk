@@ -13,6 +13,7 @@
  */
 
 import { ToolResourceForVideoProjectGetToolTaskOutput } from './tool-resource-for-video-project-get-tool-task-output';
+import { ToolTaskResultForVideoProjectGetToolTaskOutput } from './tool-task-result-for-video-project-get-tool-task-output';
  /**
  * 
  *
@@ -43,19 +44,19 @@ export interface ToolTaskForVideoProjectGetToolTaskOutput {
      * @type {string}
      * @memberof ToolTaskForVideoProjectGetToolTaskOutput
      */
-    projectID?: string;
+    projectId?: string;
 
     /**
      * @type {string}
      * @memberof ToolTaskForVideoProjectGetToolTaskOutput
      */
-    resourceID?: string;
+    resourceId?: string;
 
     /**
      * @type {string}
      * @memberof ToolTaskForVideoProjectGetToolTaskOutput
      */
-    taskID?: string;
+    taskId?: string;
 
     /**
      * @type {string}
@@ -88,6 +89,12 @@ export interface ToolTaskForVideoProjectGetToolTaskOutput {
     toolResource?: ToolResourceForVideoProjectGetToolTaskOutput;
 
     /**
+     * @type {Array<ToolTaskResultForVideoProjectGetToolTaskOutput>}
+     * @memberof ToolTaskForVideoProjectGetToolTaskOutput
+     */
+    toolTaskResults?: Array<ToolTaskResultForVideoProjectGetToolTaskOutput>;
+
+    /**
      * @type {string}
      * @memberof ToolTaskForVideoProjectGetToolTaskOutput
      */
@@ -97,5 +104,5 @@ export interface ToolTaskForVideoProjectGetToolTaskOutput {
      * @type {string}
      * @memberof ToolTaskForVideoProjectGetToolTaskOutput
      */
-    userID?: string;
+    userId?: string;
 }

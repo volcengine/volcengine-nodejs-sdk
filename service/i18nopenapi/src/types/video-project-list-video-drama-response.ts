@@ -12,23 +12,18 @@
  * Do not edit the class manually.
  */
 
+import { DataForVideoProjectListVideoDramaOutput } from './data-for-video-project-list-video-drama-output';
  /**
  * 
  *
  * @export
- * @interface VideoProjectGetToolTaskRequest
+ * @interface VideoProjectListVideoDramaResponse
  */
-export interface VideoProjectGetToolTaskRequest {
+export interface VideoProjectListVideoDramaResponse {
 
     /**
-     * @type {string}
-     * @memberof VideoProjectGetToolTaskRequest
+     * @type {DataForVideoProjectListVideoDramaOutput}
+     * @memberof VideoProjectListVideoDramaResponse
      */
-    projectId: string;
-
-    /**
-     * @type {string}
-     * @memberof VideoProjectGetToolTaskRequest
-     */
-    taskId: string;
+    data?: DataForVideoProjectListVideoDramaOutput;
 }
