@@ -206,18 +206,26 @@ import { VideoEditorUpdateGlobalStyleRequest } from './types/index';
 import { VideoEditorUpdateGlobalStyleResponse } from './types/index';
 import { VideoEditorUpdateSpeakerRequest } from './types/index';
 import { VideoEditorUpdateSpeakerResponse } from './types/index';
+import { VideoProjectAddTargetLangsToExistingDramaRequest } from './types/index';
+import { VideoProjectAddTargetLangsToExistingDramaResponse } from './types/index';
 import { VideoProjectCreateRequest } from './types/index';
 import { VideoProjectCreateResponse } from './types/index';
 import { VideoProjectCreateToolTaskRequest } from './types/index';
 import { VideoProjectCreateToolTaskResponse } from './types/index';
+import { VideoProjectDeleteVideoDramaRequest } from './types/index';
+import { VideoProjectDeleteVideoDramaResponse } from './types/index';
 import { VideoProjectGetToolTaskRequest } from './types/index';
 import { VideoProjectGetToolTaskResponse } from './types/index';
 import { VideoProjectGetVideoUploadStatusRequest } from './types/index';
 import { VideoProjectGetVideoUploadStatusResponse } from './types/index';
 import { VideoProjectListRequest } from './types/index';
 import { VideoProjectListResponse } from './types/index';
+import { VideoProjectListToolProjectResourcesRequest } from './types/index';
+import { VideoProjectListToolProjectResourcesResponse } from './types/index';
 import { VideoProjectListToolTaskByResourceIDsRequest } from './types/index';
 import { VideoProjectListToolTaskByResourceIDsResponse } from './types/index';
+import { VideoProjectListVideoDramaRequest } from './types/index';
+import { VideoProjectListVideoDramaResponse } from './types/index';
 import { VideoProjectSerialDubTaskCreateRequest } from './types/index';
 import { VideoProjectSerialDubTaskCreateResponse } from './types/index';
 import { VideoProjectSerialTaskCreateRequest } from './types/index';
@@ -338,12 +346,16 @@ export type VideoEditorSubmitSubtaskCommandOutput = CommandOutput<VideoEditorSub
 export type VideoEditorSyncSpeakerToSubTaskCommandOutput = CommandOutput<VideoEditorSyncSpeakerToSubTaskResponse>;
 export type VideoEditorUpdateGlobalStyleCommandOutput = CommandOutput<VideoEditorUpdateGlobalStyleResponse>;
 export type VideoEditorUpdateSpeakerCommandOutput = CommandOutput<VideoEditorUpdateSpeakerResponse>;
+export type VideoProjectAddTargetLangsToExistingDramaCommandOutput = CommandOutput<VideoProjectAddTargetLangsToExistingDramaResponse>;
 export type VideoProjectCreateCommandOutput = CommandOutput<VideoProjectCreateResponse>;
 export type VideoProjectCreateToolTaskCommandOutput = CommandOutput<VideoProjectCreateToolTaskResponse>;
+export type VideoProjectDeleteVideoDramaCommandOutput = CommandOutput<VideoProjectDeleteVideoDramaResponse>;
 export type VideoProjectGetToolTaskCommandOutput = CommandOutput<VideoProjectGetToolTaskResponse>;
 export type VideoProjectGetVideoUploadStatusCommandOutput = CommandOutput<VideoProjectGetVideoUploadStatusResponse>;
 export type VideoProjectListCommandOutput = CommandOutput<VideoProjectListResponse>;
+export type VideoProjectListToolProjectResourcesCommandOutput = CommandOutput<VideoProjectListToolProjectResourcesResponse>;
 export type VideoProjectListToolTaskByResourceIDsCommandOutput = CommandOutput<VideoProjectListToolTaskByResourceIDsResponse>;
+export type VideoProjectListVideoDramaCommandOutput = CommandOutput<VideoProjectListVideoDramaResponse>;
 export type VideoProjectSerialDubTaskCreateCommandOutput = CommandOutput<VideoProjectSerialDubTaskCreateResponse>;
 export type VideoProjectSerialTaskCreateCommandOutput = CommandOutput<VideoProjectSerialTaskCreateResponse>;
 export type VideoProjectSuppressionStartCommandOutput = CommandOutput<VideoProjectSuppressionStartResponse>;
@@ -1809,6 +1821,21 @@ export class VideoEditorUpdateSpeakerCommand extends Command<
   }
 }
 /**
+ * Command to VideoProjectAddTargetLangsToExistingDrama
+ */
+export class VideoProjectAddTargetLangsToExistingDramaCommand extends Command<
+  VideoProjectAddTargetLangsToExistingDramaRequest,
+  VideoProjectAddTargetLangsToExistingDramaCommandOutput,
+  'VideoProjectAddTargetLangsToExistingDramaCommand'
+> {
+  static readonly metaPath = '/VideoProjectAddTargetLangsToExistingDrama/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoProjectAddTargetLangsToExistingDramaRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectAddTargetLangsToExistingDramaCommand.metaPath);
+  }
+}
+/**
  * Command to VideoProjectCreate
  */
 export class VideoProjectCreateCommand extends Command<
@@ -1836,6 +1863,21 @@ export class VideoProjectCreateToolTaskCommand extends Command<
   constructor(input: VideoProjectCreateToolTaskRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectCreateToolTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoProjectDeleteVideoDrama
+ */
+export class VideoProjectDeleteVideoDramaCommand extends Command<
+  VideoProjectDeleteVideoDramaRequest,
+  VideoProjectDeleteVideoDramaCommandOutput,
+  'VideoProjectDeleteVideoDramaCommand'
+> {
+  static readonly metaPath = '/VideoProjectDeleteVideoDrama/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoProjectDeleteVideoDramaRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectDeleteVideoDramaCommand.metaPath);
   }
 }
 /**
@@ -1884,6 +1926,21 @@ export class VideoProjectListCommand extends Command<
   }
 }
 /**
+ * Command to VideoProjectListToolProjectResources
+ */
+export class VideoProjectListToolProjectResourcesCommand extends Command<
+  VideoProjectListToolProjectResourcesRequest,
+  VideoProjectListToolProjectResourcesCommandOutput,
+  'VideoProjectListToolProjectResourcesCommand'
+> {
+  static readonly metaPath = '/VideoProjectListToolProjectResources/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoProjectListToolProjectResourcesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectListToolProjectResourcesCommand.metaPath);
+  }
+}
+/**
  * Command to VideoProjectListToolTaskByResourceIDs
  */
 export class VideoProjectListToolTaskByResourceIDsCommand extends Command<
@@ -1896,6 +1953,21 @@ export class VideoProjectListToolTaskByResourceIDsCommand extends Command<
   constructor(input: VideoProjectListToolTaskByResourceIDsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectListToolTaskByResourceIDsCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoProjectListVideoDrama
+ */
+export class VideoProjectListVideoDramaCommand extends Command<
+  VideoProjectListVideoDramaRequest,
+  VideoProjectListVideoDramaCommandOutput,
+  'VideoProjectListVideoDramaCommand'
+> {
+  static readonly metaPath = '/VideoProjectListVideoDrama/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoProjectListVideoDramaRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectListVideoDramaCommand.metaPath);
   }
 }
 /**
@@ -2147,12 +2219,16 @@ export default {
   VideoEditorSyncSpeakerToSubTaskCommand,
   VideoEditorUpdateGlobalStyleCommand,
   VideoEditorUpdateSpeakerCommand,
+  VideoProjectAddTargetLangsToExistingDramaCommand,
   VideoProjectCreateCommand,
   VideoProjectCreateToolTaskCommand,
+  VideoProjectDeleteVideoDramaCommand,
   VideoProjectGetToolTaskCommand,
   VideoProjectGetVideoUploadStatusCommand,
   VideoProjectListCommand,
+  VideoProjectListToolProjectResourcesCommand,
   VideoProjectListToolTaskByResourceIDsCommand,
+  VideoProjectListVideoDramaCommand,
   VideoProjectSerialDubTaskCreateCommand,
   VideoProjectSerialTaskCreateCommand,
   VideoProjectSuppressionStartCommand,

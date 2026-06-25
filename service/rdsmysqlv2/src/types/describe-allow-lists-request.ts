@@ -45,6 +45,12 @@ export interface DescribeAllowListsRequest {
     QueryDefault?: boolean;
 
     /**
+     * @type {boolean}
+     * @memberof DescribeAllowListsRequest
+     */
+    QueryInstance?: boolean;
+
+    /**
      * @type {string}
      * @memberof DescribeAllowListsRequest
      */

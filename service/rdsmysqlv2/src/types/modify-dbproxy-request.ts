@@ -31,7 +31,7 @@ export interface ModifyDBProxyRequest {
      * @type {boolean}
      * @memberof ModifyDBProxyRequest
      */
-    EnableDBProxy?: boolean;
+    EnableDBProxy: boolean;
 
     /**
      * @type {string}

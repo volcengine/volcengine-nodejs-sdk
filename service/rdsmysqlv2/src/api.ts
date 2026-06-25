@@ -1936,7 +1936,7 @@ export class ModifyBackupNameCommand extends Command<
   ModifyBackupNameCommandOutput,
   'ModifyBackupNameCommand'
 > {
-  static readonly metaPath = '/ModifyBackupName/2022-01-01/rds_mysql/get/text_plain/';
+  static readonly metaPath = '/ModifyBackupName/2022-01-01/rds_mysql/post/application_json/';
 
   constructor(input: ModifyBackupNameRequest) {
     super(input);
