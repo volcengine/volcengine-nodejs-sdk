@@ -31,6 +31,12 @@ export interface CreateTransitRouterPeerAttachmentRequest {
      * @type {string}
      * @memberof CreateTransitRouterPeerAttachmentRequest
      */
+    BandwidthType?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateTransitRouterPeerAttachmentRequest
+     */
     ClientToken?: string;
 
     /**
@@ -38,6 +44,12 @@ export interface CreateTransitRouterPeerAttachmentRequest {
      * @memberof CreateTransitRouterPeerAttachmentRequest
      */
     Description?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateTransitRouterPeerAttachmentRequest
+     */
+    LineOperator?: string;
 
     /**
      * @type {string}

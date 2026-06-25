@@ -37,6 +37,12 @@ export interface TransitRouterAttachmentForDescribeTransitRouterPeerAttachmentsO
      * @type {string}
      * @memberof TransitRouterAttachmentForDescribeTransitRouterPeerAttachmentsOutput
      */
+    BandwidthType?: string;
+
+    /**
+     * @type {string}
+     * @memberof TransitRouterAttachmentForDescribeTransitRouterPeerAttachmentsOutput
+     */
     CreationTime?: string;
 
     /**
@@ -50,6 +56,12 @@ export interface TransitRouterAttachmentForDescribeTransitRouterPeerAttachmentsO
      * @memberof TransitRouterAttachmentForDescribeTransitRouterPeerAttachmentsOutput
      */
     Ipv6Enabled?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof TransitRouterAttachmentForDescribeTransitRouterPeerAttachmentsOutput
+     */
+    LineOperator?: string;
 
     /**
      * @type {string}

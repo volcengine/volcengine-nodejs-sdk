@@ -14,6 +14,8 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { AcceptSharedTransitRouterRequest } from './types/index';
+import { AcceptSharedTransitRouterResponse } from './types/index';
 import { AcceptTransitRouterPeerAttachmentRequest } from './types/index';
 import { AcceptTransitRouterPeerAttachmentResponse } from './types/index';
 import { AssociateTransitRouterAttachmentToRouteTableRequest } from './types/index';
@@ -38,6 +40,8 @@ import { CreateTransitRouterForwardPolicyEntryRequest } from './types/index';
 import { CreateTransitRouterForwardPolicyEntryResponse } from './types/index';
 import { CreateTransitRouterForwardPolicyTableRequest } from './types/index';
 import { CreateTransitRouterForwardPolicyTableResponse } from './types/index';
+import { CreateTransitRouterGrantRuleRequest } from './types/index';
+import { CreateTransitRouterGrantRuleResponse } from './types/index';
 import { CreateTransitRouterMulticastDomainRequest } from './types/index';
 import { CreateTransitRouterMulticastDomainResponse } from './types/index';
 import { CreateTransitRouterMulticastGroupMemberRequest } from './types/index';
@@ -78,6 +82,8 @@ import { DeleteTransitRouterForwardPolicyEntryRequest } from './types/index';
 import { DeleteTransitRouterForwardPolicyEntryResponse } from './types/index';
 import { DeleteTransitRouterForwardPolicyTableRequest } from './types/index';
 import { DeleteTransitRouterForwardPolicyTableResponse } from './types/index';
+import { DeleteTransitRouterGrantRuleRequest } from './types/index';
+import { DeleteTransitRouterGrantRuleResponse } from './types/index';
 import { DeleteTransitRouterMulticastDomainRequest } from './types/index';
 import { DeleteTransitRouterMulticastDomainResponse } from './types/index';
 import { DeleteTransitRouterMulticastGroupMemberRequest } from './types/index';
@@ -122,6 +128,8 @@ import { DescribeTransitRouterForwardPolicyEntriesRequest } from './types/index'
 import { DescribeTransitRouterForwardPolicyEntriesResponse } from './types/index';
 import { DescribeTransitRouterForwardPolicyTablesRequest } from './types/index';
 import { DescribeTransitRouterForwardPolicyTablesResponse } from './types/index';
+import { DescribeTransitRouterGrantRulesRequest } from './types/index';
+import { DescribeTransitRouterGrantRulesResponse } from './types/index';
 import { DescribeTransitRouterMulticastDomainAssociationsRequest } from './types/index';
 import { DescribeTransitRouterMulticastDomainAssociationsResponse } from './types/index';
 import { DescribeTransitRouterMulticastDomainsRequest } from './types/index';
@@ -190,6 +198,8 @@ import { ModifyTransitRouterForwardPolicyTableAssociationRequest } from './types
 import { ModifyTransitRouterForwardPolicyTableAssociationResponse } from './types/index';
 import { ModifyTransitRouterForwardPolicyTableAttributesRequest } from './types/index';
 import { ModifyTransitRouterForwardPolicyTableAttributesResponse } from './types/index';
+import { ModifyTransitRouterGrantRuleAttributesRequest } from './types/index';
+import { ModifyTransitRouterGrantRuleAttributesResponse } from './types/index';
 import { ModifyTransitRouterMulticastDomainAttributesRequest } from './types/index';
 import { ModifyTransitRouterMulticastDomainAttributesResponse } from './types/index';
 import { ModifyTransitRouterPeerAttachmentAttributesRequest } from './types/index';
@@ -220,6 +230,8 @@ import { ModifyTransitRouterVpcAttachmentAttributesRequest } from './types/index
 import { ModifyTransitRouterVpcAttachmentAttributesResponse } from './types/index';
 import { ModifyTransitRouterVpnAttachmentAttributesRequest } from './types/index';
 import { ModifyTransitRouterVpnAttachmentAttributesResponse } from './types/index';
+import { RejectSharedTransitRouterRequest } from './types/index';
+import { RejectSharedTransitRouterResponse } from './types/index';
 import { RejectTransitRouterPeerAttachmentRequest } from './types/index';
 import { RejectTransitRouterPeerAttachmentResponse } from './types/index';
 import { RenewTransitRouterBandwidthPackageRequest } from './types/index';
@@ -238,6 +250,7 @@ import { UntagResourcesResponse } from './types/index';
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type AcceptSharedTransitRouterCommandOutput = CommandOutput<AcceptSharedTransitRouterResponse>;
 export type AcceptTransitRouterPeerAttachmentCommandOutput = CommandOutput<AcceptTransitRouterPeerAttachmentResponse>;
 export type AssociateTransitRouterAttachmentToRouteTableCommandOutput = CommandOutput<AssociateTransitRouterAttachmentToRouteTableResponse>;
 export type AssociateTransitRouterForwardPolicyTableToAttachmentCommandOutput = CommandOutput<AssociateTransitRouterForwardPolicyTableToAttachmentResponse>;
@@ -251,6 +264,7 @@ export type CreateTransitRouterDirectConnectGatewayAttachmentCommandOutput = Com
 export type CreateTransitRouterFlowLogCommandOutput = CommandOutput<CreateTransitRouterFlowLogResponse>;
 export type CreateTransitRouterForwardPolicyEntryCommandOutput = CommandOutput<CreateTransitRouterForwardPolicyEntryResponse>;
 export type CreateTransitRouterForwardPolicyTableCommandOutput = CommandOutput<CreateTransitRouterForwardPolicyTableResponse>;
+export type CreateTransitRouterGrantRuleCommandOutput = CommandOutput<CreateTransitRouterGrantRuleResponse>;
 export type CreateTransitRouterMulticastDomainCommandOutput = CommandOutput<CreateTransitRouterMulticastDomainResponse>;
 export type CreateTransitRouterMulticastGroupMemberCommandOutput = CommandOutput<CreateTransitRouterMulticastGroupMemberResponse>;
 export type CreateTransitRouterMulticastGroupSourceCommandOutput = CommandOutput<CreateTransitRouterMulticastGroupSourceResponse>;
@@ -271,6 +285,7 @@ export type DeleteTransitRouterDirectConnectGatewayAttachmentCommandOutput = Com
 export type DeleteTransitRouterFlowLogCommandOutput = CommandOutput<DeleteTransitRouterFlowLogResponse>;
 export type DeleteTransitRouterForwardPolicyEntryCommandOutput = CommandOutput<DeleteTransitRouterForwardPolicyEntryResponse>;
 export type DeleteTransitRouterForwardPolicyTableCommandOutput = CommandOutput<DeleteTransitRouterForwardPolicyTableResponse>;
+export type DeleteTransitRouterGrantRuleCommandOutput = CommandOutput<DeleteTransitRouterGrantRuleResponse>;
 export type DeleteTransitRouterMulticastDomainCommandOutput = CommandOutput<DeleteTransitRouterMulticastDomainResponse>;
 export type DeleteTransitRouterMulticastGroupMemberCommandOutput = CommandOutput<DeleteTransitRouterMulticastGroupMemberResponse>;
 export type DeleteTransitRouterMulticastGroupSourceCommandOutput = CommandOutput<DeleteTransitRouterMulticastGroupSourceResponse>;
@@ -292,6 +307,7 @@ export type DescribeTransitRouterDirectConnectGatewayAttachmentsCommandOutput = 
 export type DescribeTransitRouterFlowLogsCommandOutput = CommandOutput<DescribeTransitRouterFlowLogsResponse>;
 export type DescribeTransitRouterForwardPolicyEntriesCommandOutput = CommandOutput<DescribeTransitRouterForwardPolicyEntriesResponse>;
 export type DescribeTransitRouterForwardPolicyTablesCommandOutput = CommandOutput<DescribeTransitRouterForwardPolicyTablesResponse>;
+export type DescribeTransitRouterGrantRulesCommandOutput = CommandOutput<DescribeTransitRouterGrantRulesResponse>;
 export type DescribeTransitRouterMulticastDomainAssociationsCommandOutput = CommandOutput<DescribeTransitRouterMulticastDomainAssociationsResponse>;
 export type DescribeTransitRouterMulticastDomainsCommandOutput = CommandOutput<DescribeTransitRouterMulticastDomainsResponse>;
 export type DescribeTransitRouterMulticastGroupsCommandOutput = CommandOutput<DescribeTransitRouterMulticastGroupsResponse>;
@@ -326,6 +342,7 @@ export type ModifyTransitRouterFlowLogAttributesCommandOutput = CommandOutput<Mo
 export type ModifyTransitRouterForwardPolicyEntryAttributesCommandOutput = CommandOutput<ModifyTransitRouterForwardPolicyEntryAttributesResponse>;
 export type ModifyTransitRouterForwardPolicyTableAssociationCommandOutput = CommandOutput<ModifyTransitRouterForwardPolicyTableAssociationResponse>;
 export type ModifyTransitRouterForwardPolicyTableAttributesCommandOutput = CommandOutput<ModifyTransitRouterForwardPolicyTableAttributesResponse>;
+export type ModifyTransitRouterGrantRuleAttributesCommandOutput = CommandOutput<ModifyTransitRouterGrantRuleAttributesResponse>;
 export type ModifyTransitRouterMulticastDomainAttributesCommandOutput = CommandOutput<ModifyTransitRouterMulticastDomainAttributesResponse>;
 export type ModifyTransitRouterPeerAttachmentAttributesCommandOutput = CommandOutput<ModifyTransitRouterPeerAttachmentAttributesResponse>;
 export type ModifyTransitRouterRouteEntryAttributesCommandOutput = CommandOutput<ModifyTransitRouterRouteEntryAttributesResponse>;
@@ -341,6 +358,7 @@ export type ModifyTransitRouterTrafficQosQueuePolicyAssociationCommandOutput = C
 export type ModifyTransitRouterTrafficQosQueuePolicyAttributesCommandOutput = CommandOutput<ModifyTransitRouterTrafficQosQueuePolicyAttributesResponse>;
 export type ModifyTransitRouterVpcAttachmentAttributesCommandOutput = CommandOutput<ModifyTransitRouterVpcAttachmentAttributesResponse>;
 export type ModifyTransitRouterVpnAttachmentAttributesCommandOutput = CommandOutput<ModifyTransitRouterVpnAttachmentAttributesResponse>;
+export type RejectSharedTransitRouterCommandOutput = CommandOutput<RejectSharedTransitRouterResponse>;
 export type RejectTransitRouterPeerAttachmentCommandOutput = CommandOutput<RejectTransitRouterPeerAttachmentResponse>;
 export type RenewTransitRouterBandwidthPackageCommandOutput = CommandOutput<RenewTransitRouterBandwidthPackageResponse>;
 export type SetTransitRouterBandwidthPackageRenewalCommandOutput = CommandOutput<SetTransitRouterBandwidthPackageRenewalResponse>;
@@ -362,6 +380,21 @@ export class TRANSITROUTERClient extends Client {
   }
 }
 
+/**
+ * Command to AcceptSharedTransitRouter
+ */
+export class AcceptSharedTransitRouterCommand extends Command<
+  AcceptSharedTransitRouterRequest,
+  AcceptSharedTransitRouterCommandOutput,
+  'AcceptSharedTransitRouterCommand'
+> {
+  static readonly metaPath = '/AcceptSharedTransitRouter/2020-04-01/transitrouter/get/text_plain/';
+
+  constructor(input: AcceptSharedTransitRouterRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AcceptSharedTransitRouterCommand.metaPath);
+  }
+}
 /**
  * Command to AcceptTransitRouterPeerAttachment
  */
@@ -555,6 +588,21 @@ export class CreateTransitRouterForwardPolicyTableCommand extends Command<
   constructor(input: CreateTransitRouterForwardPolicyTableRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateTransitRouterForwardPolicyTableCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateTransitRouterGrantRule
+ */
+export class CreateTransitRouterGrantRuleCommand extends Command<
+  CreateTransitRouterGrantRuleRequest,
+  CreateTransitRouterGrantRuleCommandOutput,
+  'CreateTransitRouterGrantRuleCommand'
+> {
+  static readonly metaPath = '/CreateTransitRouterGrantRule/2020-04-01/transitrouter/get/text_plain/';
+
+  constructor(input: CreateTransitRouterGrantRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateTransitRouterGrantRuleCommand.metaPath);
   }
 }
 /**
@@ -855,6 +903,21 @@ export class DeleteTransitRouterForwardPolicyTableCommand extends Command<
   constructor(input: DeleteTransitRouterForwardPolicyTableRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteTransitRouterForwardPolicyTableCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteTransitRouterGrantRule
+ */
+export class DeleteTransitRouterGrantRuleCommand extends Command<
+  DeleteTransitRouterGrantRuleRequest,
+  DeleteTransitRouterGrantRuleCommandOutput,
+  'DeleteTransitRouterGrantRuleCommand'
+> {
+  static readonly metaPath = '/DeleteTransitRouterGrantRule/2020-04-01/transitrouter/get/text_plain/';
+
+  constructor(input: DeleteTransitRouterGrantRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteTransitRouterGrantRuleCommand.metaPath);
   }
 }
 /**
@@ -1170,6 +1233,21 @@ export class DescribeTransitRouterForwardPolicyTablesCommand extends Command<
   constructor(input: DescribeTransitRouterForwardPolicyTablesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeTransitRouterForwardPolicyTablesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeTransitRouterGrantRules
+ */
+export class DescribeTransitRouterGrantRulesCommand extends Command<
+  DescribeTransitRouterGrantRulesRequest,
+  DescribeTransitRouterGrantRulesCommandOutput,
+  'DescribeTransitRouterGrantRulesCommand'
+> {
+  static readonly metaPath = '/DescribeTransitRouterGrantRules/2020-04-01/transitrouter/get/text_plain/';
+
+  constructor(input: DescribeTransitRouterGrantRulesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeTransitRouterGrantRulesCommand.metaPath);
   }
 }
 /**
@@ -1683,6 +1761,21 @@ export class ModifyTransitRouterForwardPolicyTableAttributesCommand extends Comm
   }
 }
 /**
+ * Command to ModifyTransitRouterGrantRuleAttributes
+ */
+export class ModifyTransitRouterGrantRuleAttributesCommand extends Command<
+  ModifyTransitRouterGrantRuleAttributesRequest,
+  ModifyTransitRouterGrantRuleAttributesCommandOutput,
+  'ModifyTransitRouterGrantRuleAttributesCommand'
+> {
+  static readonly metaPath = '/ModifyTransitRouterGrantRuleAttributes/2020-04-01/transitrouter/get/text_plain/';
+
+  constructor(input: ModifyTransitRouterGrantRuleAttributesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyTransitRouterGrantRuleAttributesCommand.metaPath);
+  }
+}
+/**
  * Command to ModifyTransitRouterMulticastDomainAttributes
  */
 export class ModifyTransitRouterMulticastDomainAttributesCommand extends Command<
@@ -1908,6 +2001,21 @@ export class ModifyTransitRouterVpnAttachmentAttributesCommand extends Command<
   }
 }
 /**
+ * Command to RejectSharedTransitRouter
+ */
+export class RejectSharedTransitRouterCommand extends Command<
+  RejectSharedTransitRouterRequest,
+  RejectSharedTransitRouterCommandOutput,
+  'RejectSharedTransitRouterCommand'
+> {
+  static readonly metaPath = '/RejectSharedTransitRouter/2020-04-01/transitrouter/get/text_plain/';
+
+  constructor(input: RejectSharedTransitRouterRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RejectSharedTransitRouterCommand.metaPath);
+  }
+}
+/**
  * Command to RejectTransitRouterPeerAttachment
  */
 export class RejectTransitRouterPeerAttachmentCommand extends Command<
@@ -2015,6 +2123,7 @@ export class UntagResourcesCommand extends Command<
 
 export default {
   TRANSITROUTERClient,
+  AcceptSharedTransitRouterCommand,
   AcceptTransitRouterPeerAttachmentCommand,
   AssociateTransitRouterAttachmentToRouteTableCommand,
   AssociateTransitRouterForwardPolicyTableToAttachmentCommand,
@@ -2028,6 +2137,7 @@ export default {
   CreateTransitRouterFlowLogCommand,
   CreateTransitRouterForwardPolicyEntryCommand,
   CreateTransitRouterForwardPolicyTableCommand,
+  CreateTransitRouterGrantRuleCommand,
   CreateTransitRouterMulticastDomainCommand,
   CreateTransitRouterMulticastGroupMemberCommand,
   CreateTransitRouterMulticastGroupSourceCommand,
@@ -2048,6 +2158,7 @@ export default {
   DeleteTransitRouterFlowLogCommand,
   DeleteTransitRouterForwardPolicyEntryCommand,
   DeleteTransitRouterForwardPolicyTableCommand,
+  DeleteTransitRouterGrantRuleCommand,
   DeleteTransitRouterMulticastDomainCommand,
   DeleteTransitRouterMulticastGroupMemberCommand,
   DeleteTransitRouterMulticastGroupSourceCommand,
@@ -2069,6 +2180,7 @@ export default {
   DescribeTransitRouterFlowLogsCommand,
   DescribeTransitRouterForwardPolicyEntriesCommand,
   DescribeTransitRouterForwardPolicyTablesCommand,
+  DescribeTransitRouterGrantRulesCommand,
   DescribeTransitRouterMulticastDomainAssociationsCommand,
   DescribeTransitRouterMulticastDomainsCommand,
   DescribeTransitRouterMulticastGroupsCommand,
@@ -2103,6 +2215,7 @@ export default {
   ModifyTransitRouterForwardPolicyEntryAttributesCommand,
   ModifyTransitRouterForwardPolicyTableAssociationCommand,
   ModifyTransitRouterForwardPolicyTableAttributesCommand,
+  ModifyTransitRouterGrantRuleAttributesCommand,
   ModifyTransitRouterMulticastDomainAttributesCommand,
   ModifyTransitRouterPeerAttachmentAttributesCommand,
   ModifyTransitRouterRouteEntryAttributesCommand,
@@ -2118,6 +2231,7 @@ export default {
   ModifyTransitRouterTrafficQosQueuePolicyAttributesCommand,
   ModifyTransitRouterVpcAttachmentAttributesCommand,
   ModifyTransitRouterVpnAttachmentAttributesCommand,
+  RejectSharedTransitRouterCommand,
   RejectTransitRouterPeerAttachmentCommand,
   RenewTransitRouterBandwidthPackageCommand,
   SetTransitRouterBandwidthPackageRenewalCommand,
