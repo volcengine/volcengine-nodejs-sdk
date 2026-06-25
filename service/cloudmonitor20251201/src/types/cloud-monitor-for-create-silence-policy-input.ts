@@ -28,12 +28,6 @@ export interface CloudMonitorForCreateSilencePolicyInput {
     MetaCondition?: MetaConditionForCreateSilencePolicyInput;
 
     /**
-     * @type {Array<string>}
-     * @memberof CloudMonitorForCreateSilencePolicyInput
-     */
-    MetricNames?: Array<string>;
-
-    /**
      * @type {string}
      * @memberof CloudMonitorForCreateSilencePolicyInput
      */

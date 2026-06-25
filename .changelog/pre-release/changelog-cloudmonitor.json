@@ -1,5 +1,5 @@
 {
-  "description": "CLOUDMONITOR: 新增 ListAlert；修改 GetMetricData, ListObjectGroups, ListRules, ListRulesByIds",
+  "description": "CLOUDMONITOR: 修改 CreateSilencePolicy, ListSilencePolicies, UpdateSilencePolicy",
   "modules": "service/cloudmonitor",
   "type": "breaking-change"
 }
