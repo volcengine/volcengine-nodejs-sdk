@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface DescribeAvailabilityZonesRequest
+ * @interface KeywordRouteStrategyForModifyDBEndpointConnectionModeInput
  */
-export interface DescribeAvailabilityZonesRequest {
+export interface KeywordRouteStrategyForModifyDBEndpointConnectionModeInput {
 
     /**
      * @type {string}
-     * @memberof DescribeAvailabilityZonesRequest
+     * @memberof KeywordRouteStrategyForModifyDBEndpointConnectionModeInput
      */
-    SpecFamily?: string;
+    NodeType?: string;
 
     /**
      * @type {string}
-     * @memberof DescribeAvailabilityZonesRequest
+     * @memberof KeywordRouteStrategyForModifyDBEndpointConnectionModeInput
      */
-    StorageType?: string;
+    SQLKeyword?: string;
 }

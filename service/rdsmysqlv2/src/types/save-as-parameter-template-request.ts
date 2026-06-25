@@ -30,6 +30,12 @@ export interface SaveAsParameterTemplateRequest {
      * @type {string}
      * @memberof SaveAsParameterTemplateRequest
      */
+    ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof SaveAsParameterTemplateRequest
+     */
     TemplateDesc?: string;
 
     /**

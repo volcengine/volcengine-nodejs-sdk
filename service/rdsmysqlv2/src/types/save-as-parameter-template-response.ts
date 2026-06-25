@@ -19,4 +19,10 @@
  * @interface SaveAsParameterTemplateResponse
  */
 export interface SaveAsParameterTemplateResponse {
+
+    /**
+     * @type {string}
+     * @memberof SaveAsParameterTemplateResponse
+     */
+    TemplateId?: string;
 }
