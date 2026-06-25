@@ -33,34 +33,22 @@ export interface CreateDBInstanceRequest {
     AllowListIds?: Array<string>;
 
     /**
-     * @type {string}
-     * @memberof CreateDBInstanceRequest
-     */
-    AutoRenew?: string;
-
-    /**
      * @type {AutoStorageScalingConfigForCreateDBInstanceInput}
      * @memberof CreateDBInstanceRequest
      */
     AutoStorageScalingConfig?: AutoStorageScalingConfigForCreateDBInstanceInput;
 
     /**
+     * @type {string}
+     * @memberof CreateDBInstanceRequest
+     */
+    AutoUpgradeMinorVersion?: string;
+
+    /**
      * @type {ChargeInfoForCreateDBInstanceInput}
      * @memberof CreateDBInstanceRequest
      */
     ChargeInfo?: ChargeInfoForCreateDBInstanceInput;
-
-    /**
-     * @type {string}
-     * @memberof CreateDBInstanceRequest
-     */
-    ChargeType?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateDBInstanceRequest
-     */
-    DBEngine?: string;
 
     /**
      * @type {string}
@@ -105,12 +93,6 @@ export interface CreateDBInstanceRequest {
     InstanceName?: string;
 
     /**
-     * @type {string}
-     * @memberof CreateDBInstanceRequest
-     */
-    InstanceSpecName?: string;
-
-    /**
      * @type {Array<InstanceTagForCreateDBInstanceInput>}
      * @memberof CreateDBInstanceRequest
      */
@@ -141,22 +123,10 @@ export interface CreateDBInstanceRequest {
     NodeInfo?: Array<NodeInfoForCreateDBInstanceInput>;
 
     /**
-     * @type {string}
-     * @memberof CreateDBInstanceRequest
-     */
-    ParameterTemplateId?: string;
-
-    /**
      * @type {number}
      * @memberof CreateDBInstanceRequest
      */
     Port?: number;
-
-    /**
-     * @type {string}
-     * @memberof CreateDBInstanceRequest
-     */
-    PrepaidPeriod?: string;
 
     /**
      * @type {string}
@@ -210,23 +180,5 @@ export interface CreateDBInstanceRequest {
      * @type {string}
      * @memberof CreateDBInstanceRequest
      */
-    UsedTime?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateDBInstanceRequest
-     */
-    VpcID?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateDBInstanceRequest
-     */
     VpcId: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateDBInstanceRequest
-     */
-    Zone?: string;
 }

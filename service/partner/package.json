@@ -1,7 +1,7 @@
 {
-  "name": "@volcengine/rdsmysqlv2",
-  "version": "1.0.6",
-  "description": "swagger client for @volcengine/rdsmysqlv2",
+  "name": "@volcengine/partner",
+  "version": "1.0.1",
+  "description": "swagger client for @volcengine/partner",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

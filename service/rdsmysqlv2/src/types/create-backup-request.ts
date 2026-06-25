@@ -37,6 +37,12 @@ export interface CreateBackupRequest {
      * @type {string}
      * @memberof CreateBackupRequest
      */
+    BackupName?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateBackupRequest
+     */
     BackupType?: string;
 
     /**

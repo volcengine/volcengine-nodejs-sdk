@@ -240,13 +240,9 @@ const client = new ECSClient({
 
 ### ECS Role Credential Provider
 
-> 🚨 **Current Version Limitation**
->
-> **Auto-detection of the role name from IMDS is not yet supported in the current release.** You must pass the role name explicitly via the constructor parameter or the `VOLCENGINE_ECS_METADATA` environment variable. Auto-detection will be supported in a future version — please watch the release notes.
-
 `EcsRoleCredentialProvider` obtains temporary credentials from the ECS Instance Metadata Service (IMDSv2):
 
-- `roleName` priority: constructor parameter > `VOLCENGINE_ECS_METADATA`
+- `roleName` priority: constructor parameter > `VOLCENGINE_ECS_METADATA` > auto-detect from IMDS
 - Disable switch: `VOLCENGINE_ECS_METADATA_DISABLED=true`
 - IMDS endpoint: `http://100.96.0.96` (IMDSv2 token-based authentication)
 - Credentials are automatically refreshed before expiration (5-minute buffer by default)
@@ -254,18 +250,18 @@ const client = new ECSClient({
 > ⚠️ **Notes**
 >
 > 1. Only works on ECS instances with an IAM role attached.
-> 2. Pass `roleName` explicitly or set `VOLCENGINE_ECS_METADATA` before using this provider.
+> 2. Pass `roleName` explicitly or set `VOLCENGINE_ECS_METADATA` to avoid ambiguity; otherwise the SDK auto-detects the role name from IMDS.
 
 | Variable                           | Description                                                             |
 | ---------------------------------- | ----------------------------------------------------------------------- |
-| `VOLCENGINE_ECS_METADATA`          | Specify ECS instance role name (required unless passed via constructor) |
+| `VOLCENGINE_ECS_METADATA`          | Specify ECS instance role name; if unset, auto-detected from IMDS       |
 | `VOLCENGINE_ECS_METADATA_DISABLED` | Set to `true` to disable IMDS credential retrieval                      |
 
 ```typescript
 import { EcsRoleCredentialProvider } from "@volcengine/sdk-core";
 import { ECSClient } from "@volcengine/ecs";
 
-// Explicit role name
+// Explicit role name; omit roleName to read VOLCENGINE_ECS_METADATA or auto-detect from IMDS.
 const credentialProvider = new EcsRoleCredentialProvider({
   roleName: "your-ecs-role-name",
 });

@@ -44,4 +44,10 @@ export interface ModifyDBInstanceParametersRequest {
      * @memberof ModifyDBInstanceParametersRequest
      */
     Parameters?: Array<ParameterForModifyDBInstanceParametersInput>;
+
+    /**
+     * @type {string}
+     * @memberof ModifyDBInstanceParametersRequest
+     */
+    TemplateId?: string;
 }

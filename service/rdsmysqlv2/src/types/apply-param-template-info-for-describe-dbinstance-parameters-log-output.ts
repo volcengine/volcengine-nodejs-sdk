@@ -16,31 +16,25 @@
  * 
  *
  * @export
- * @interface DeleteDBInstanceRequest
+ * @interface ApplyParamTemplateInfoForDescribeDBInstanceParametersLogOutput
  */
-export interface DeleteDBInstanceRequest {
-
-    /**
-     * @type {number}
-     * @memberof DeleteDBInstanceRequest
-     */
-    DataKeepDays?: number;
+export interface ApplyParamTemplateInfoForDescribeDBInstanceParametersLogOutput {
 
     /**
      * @type {string}
-     * @memberof DeleteDBInstanceRequest
+     * @memberof ApplyParamTemplateInfoForDescribeDBInstanceParametersLogOutput
      */
-    DataKeepPolicy?: string;
+    TemplateId?: string;
 
     /**
      * @type {string}
-     * @memberof DeleteDBInstanceRequest
+     * @memberof ApplyParamTemplateInfoForDescribeDBInstanceParametersLogOutput
      */
-    InstanceId: string;
+    TemplateName?: string;
 
     /**
-     * @type {boolean}
-     * @memberof DeleteDBInstanceRequest
+     * @type {string}
+     * @memberof ApplyParamTemplateInfoForDescribeDBInstanceParametersLogOutput
      */
-    KeepCrossBackupEnableAfterReleased?: boolean;
+    TemplateSource?: string;
 }

@@ -37,6 +37,18 @@ export interface ModifyDBInstanceTypeRequest {
      * @type {string}
      * @memberof ModifyDBInstanceTypeRequest
      */
+    SpecifiedSwitchEndTime?: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyDBInstanceTypeRequest
+     */
+    SpecifiedSwitchStartTime?: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyDBInstanceTypeRequest
+     */
     SwitchType?: string;
 
     /**

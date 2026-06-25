@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ApplyParamTemplateInfoForDescribeDBInstanceParametersLogOutput } from './apply-param-template-info-for-describe-dbinstance-parameters-log-output';
  /**
  * 
  *
@@ -19,6 +20,12 @@
  * @interface ParameterChangeLogForDescribeDBInstanceParametersLogOutput
  */
 export interface ParameterChangeLogForDescribeDBInstanceParametersLogOutput {
+
+    /**
+     * @type {ApplyParamTemplateInfoForDescribeDBInstanceParametersLogOutput}
+     * @memberof ParameterChangeLogForDescribeDBInstanceParametersLogOutput
+     */
+    ApplyParamTemplateInfo?: ApplyParamTemplateInfoForDescribeDBInstanceParametersLogOutput;
 
     /**
      * @type {Array<string>}

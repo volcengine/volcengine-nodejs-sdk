@@ -70,6 +70,12 @@ export interface AllowListForDescribeAllowListsOutput {
     IpList?: Array<string>;
 
     /**
+     * @type {string}
+     * @memberof AllowListForDescribeAllowListsOutput
+     */
+    ProjectName?: string;
+
+    /**
      * @type {Array<SecurityGroupBindInfoForDescribeAllowListsOutput>}
      * @memberof AllowListForDescribeAllowListsOutput
      */

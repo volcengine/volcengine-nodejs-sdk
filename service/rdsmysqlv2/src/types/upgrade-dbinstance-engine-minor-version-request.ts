@@ -33,6 +33,12 @@ export interface UpgradeDBInstanceEngineMinorVersionRequest {
     InstanceId: string;
 
     /**
+     * @type {number}
+     * @memberof UpgradeDBInstanceEngineMinorVersionRequest
+     */
+    ObservationHours?: number;
+
+    /**
      * @type {string}
      * @memberof UpgradeDBInstanceEngineMinorVersionRequest
      */
