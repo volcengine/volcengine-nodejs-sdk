@@ -19,4 +19,16 @@
  * @interface DescribeAvailabilityZonesRequest
  */
 export interface DescribeAvailabilityZonesRequest {
+
+    /**
+     * @type {string}
+     * @memberof DescribeAvailabilityZonesRequest
+     */
+    SpecFamily?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeAvailabilityZonesRequest
+     */
+    StorageType?: string;
 }

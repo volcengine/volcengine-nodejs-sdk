@@ -27,6 +27,12 @@ export interface ModifyCrossBackupPolicyResponse {
     BackupEnabled?: boolean;
 
     /**
+     * @type {boolean}
+     * @memberof ModifyCrossBackupPolicyResponse
+     */
+    CrossBackupAllRetention?: boolean;
+
+    /**
      * @type {string}
      * @memberof ModifyCrossBackupPolicyResponse
      */

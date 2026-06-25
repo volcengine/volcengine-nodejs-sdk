@@ -26,6 +26,12 @@ export interface CreateDrDBInstanceRequest {
      * @type {string}
      * @memberof CreateDrDBInstanceRequest
      */
+    AutoUpgradeMinorVersion?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateDrDBInstanceRequest
+     */
     DeletionProtection?: string;
 
     /**

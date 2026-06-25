@@ -22,6 +22,10 @@ import { ClearDeviceLongMemoryRequest } from './types/index';
 import { ClearDeviceLongMemoryResponse } from './types/index';
 import { CreateDeviceWithoutApprovalRequest } from './types/index';
 import { CreateDeviceWithoutApprovalResponse } from './types/index';
+import { CreateVoicePrintRequest } from './types/index';
+import { CreateVoicePrintResponse } from './types/index';
+import { DeleteVoicePrintRequest } from './types/index';
+import { DeleteVoicePrintResponse } from './types/index';
 import { GetAgentListRequest } from './types/index';
 import { GetAgentListResponse } from './types/index';
 import { GetDeviceBindTcOrderIDRequest } from './types/index';
@@ -36,8 +40,12 @@ import { GetSpeakerListRequest } from './types/index';
 import { GetSpeakerListResponse } from './types/index';
 import { PushMsgToDeviceRequest } from './types/index';
 import { PushMsgToDeviceResponse } from './types/index';
+import { QueryVoicePrintRequest } from './types/index';
+import { QueryVoicePrintResponse } from './types/index';
 import { TopActionDispatchRequest } from './types/index';
 import { TopActionDispatchResponse } from './types/index';
+import { UpdateVoicePrintRequest } from './types/index';
+import { UpdateVoicePrintResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
@@ -46,6 +54,8 @@ export type BuyPoolPackageCommandOutput = CommandOutput<BuyPoolPackageResponse>;
 export type BuyResourcePackageCommandOutput = CommandOutput<BuyResourcePackageResponse>;
 export type ClearDeviceLongMemoryCommandOutput = CommandOutput<ClearDeviceLongMemoryResponse>;
 export type CreateDeviceWithoutApprovalCommandOutput = CommandOutput<CreateDeviceWithoutApprovalResponse>;
+export type CreateVoicePrintCommandOutput = CommandOutput<CreateVoicePrintResponse>;
+export type DeleteVoicePrintCommandOutput = CommandOutput<DeleteVoicePrintResponse>;
 export type GetAgentListCommandOutput = CommandOutput<GetAgentListResponse>;
 export type GetDeviceBindTcOrderIDCommandOutput = CommandOutput<GetDeviceBindTcOrderIDResponse>;
 export type GetPoolDetailListCommandOutput = CommandOutput<GetPoolDetailListResponse>;
@@ -53,7 +63,9 @@ export type GetPoolQuotaInfoCommandOutput = CommandOutput<GetPoolQuotaInfoRespon
 export type GetQuotaInfoCommandOutput = CommandOutput<GetQuotaInfoResponse>;
 export type GetSpeakerListCommandOutput = CommandOutput<GetSpeakerListResponse>;
 export type PushMsgToDeviceCommandOutput = CommandOutput<PushMsgToDeviceResponse>;
+export type QueryVoicePrintCommandOutput = CommandOutput<QueryVoicePrintResponse>;
 export type TopActionDispatchCommandOutput = CommandOutput<TopActionDispatchResponse>;
+export type UpdateVoicePrintCommandOutput = CommandOutput<UpdateVoicePrintResponse>;
 
 /**
  * TISClient Service Client
@@ -126,6 +138,36 @@ export class CreateDeviceWithoutApprovalCommand extends Command<
   constructor(input: CreateDeviceWithoutApprovalRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateDeviceWithoutApprovalCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateVoicePrint
+ */
+export class CreateVoicePrintCommand extends Command<
+  CreateVoicePrintRequest,
+  CreateVoicePrintCommandOutput,
+  'CreateVoicePrintCommand'
+> {
+  static readonly metaPath = '/CreateVoicePrint/2024-07-31/tis/post/application_json/';
+
+  constructor(input: CreateVoicePrintRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateVoicePrintCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteVoicePrint
+ */
+export class DeleteVoicePrintCommand extends Command<
+  DeleteVoicePrintRequest,
+  DeleteVoicePrintCommandOutput,
+  'DeleteVoicePrintCommand'
+> {
+  static readonly metaPath = '/DeleteVoicePrint/2024-07-31/tis/post/application_json/';
+
+  constructor(input: DeleteVoicePrintRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteVoicePrintCommand.metaPath);
   }
 }
 /**
@@ -234,6 +276,21 @@ export class PushMsgToDeviceCommand extends Command<
   }
 }
 /**
+ * Command to QueryVoicePrint
+ */
+export class QueryVoicePrintCommand extends Command<
+  QueryVoicePrintRequest,
+  QueryVoicePrintCommandOutput,
+  'QueryVoicePrintCommand'
+> {
+  static readonly metaPath = '/QueryVoicePrint/2024-07-31/tis/post/application_json/';
+
+  constructor(input: QueryVoicePrintRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(QueryVoicePrintCommand.metaPath);
+  }
+}
+/**
  * Command to TopActionDispatch
  */
 export class TopActionDispatchCommand extends Command<
@@ -248,6 +305,21 @@ export class TopActionDispatchCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(TopActionDispatchCommand.metaPath);
   }
 }
+/**
+ * Command to UpdateVoicePrint
+ */
+export class UpdateVoicePrintCommand extends Command<
+  UpdateVoicePrintRequest,
+  UpdateVoicePrintCommandOutput,
+  'UpdateVoicePrintCommand'
+> {
+  static readonly metaPath = '/UpdateVoicePrint/2024-07-31/tis/post/application_json/';
+
+  constructor(input: UpdateVoicePrintRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateVoicePrintCommand.metaPath);
+  }
+}
 
 export default {
   TISClient,
@@ -255,6 +327,8 @@ export default {
   BuyResourcePackageCommand,
   ClearDeviceLongMemoryCommand,
   CreateDeviceWithoutApprovalCommand,
+  CreateVoicePrintCommand,
+  DeleteVoicePrintCommand,
   GetAgentListCommand,
   GetDeviceBindTcOrderIDCommand,
   GetPoolDetailListCommand,
@@ -262,5 +336,7 @@ export default {
   GetQuotaInfoCommand,
   GetSpeakerListCommand,
   PushMsgToDeviceCommand,
+  QueryVoicePrintCommand,
   TopActionDispatchCommand,
+  UpdateVoicePrintCommand,
 };
