@@ -13,6 +13,8 @@ import { loadEnv } from "../utils/env";
 const DEFAULT_REGION = "cn-beijing";
 const MODE_AK = "ak";
 const MODE_RAM_ROLE_ARN = "ramrolearn";
+const MODE_IAM_ROLE = "iamrole";
+
 const MODE_OIDC = "oidc";
 const MODE_ECS_ROLE = "ecsrole";
 const MODE_SSO = "sso";
@@ -127,6 +129,7 @@ export class CLIConfigCredentialProvider implements Provider {
       case MODE_AK:
         return this.resolveAK(profile);
       case MODE_RAM_ROLE_ARN:
+      case MODE_IAM_ROLE:
         return this.resolveRamRoleArn(profile);
       case MODE_OIDC:
         return this.resolveOIDC(profile);
