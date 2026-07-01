@@ -28,6 +28,12 @@ export interface DescribeInstancesRequest {
     ChargeType?: string;
 
     /**
+     * @type {boolean}
+     * @memberof DescribeInstancesRequest
+     */
+    IgnoreBrokerInfo?: boolean;
+
+    /**
      * @type {string}
      * @memberof DescribeInstancesRequest
      */

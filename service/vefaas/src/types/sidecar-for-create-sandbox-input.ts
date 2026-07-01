@@ -59,6 +59,12 @@ export interface SidecarForCreateSandboxInput {
     Image?: string;
 
     /**
+     * @type {boolean}
+     * @memberof SidecarForCreateSandboxInput
+     */
+    IsInitContainer?: boolean;
+
+    /**
      * @type {number}
      * @memberof SidecarForCreateSandboxInput
      */

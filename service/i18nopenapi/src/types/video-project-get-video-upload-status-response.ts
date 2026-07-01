@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { VideoUploadTaskForVideoProjectGetVideoUploadStatusOutput } from './video-upload-task-for-video-project-get-video-upload-status-output';
+import { DataForVideoProjectGetVideoUploadStatusOutput } from './data-for-video-project-get-video-upload-status-output';
  /**
  * 
  *
@@ -22,8 +22,8 @@ import { VideoUploadTaskForVideoProjectGetVideoUploadStatusOutput } from './vide
 export interface VideoProjectGetVideoUploadStatusResponse {
 
     /**
-     * @type {Array<VideoUploadTaskForVideoProjectGetVideoUploadStatusOutput>}
+     * @type {DataForVideoProjectGetVideoUploadStatusOutput}
      * @memberof VideoProjectGetVideoUploadStatusResponse
      */
-    videoUploadTasks?: Array<VideoUploadTaskForVideoProjectGetVideoUploadStatusOutput>;
+    data?: DataForVideoProjectGetVideoUploadStatusOutput;
 }

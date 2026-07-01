@@ -25,6 +25,12 @@ export interface GetPreSignedEdgeURLRequest {
      * @type {string}
      * @memberof GetPreSignedEdgeURLRequest
      */
+    APIBodyHash?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetPreSignedEdgeURLRequest
+     */
     APIPath?: string;
 
     /**
@@ -50,12 +56,6 @@ export interface GetPreSignedEdgeURLRequest {
      * @memberof GetPreSignedEdgeURLRequest
      */
     ProductId: string;
-
-    /**
-     * @type {boolean}
-     * @memberof GetPreSignedEdgeURLRequest
-     */
-    SingleUse?: boolean;
 
     /**
      * @type {number}

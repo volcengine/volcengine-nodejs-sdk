@@ -38,7 +38,19 @@ export interface BasicInfoForDescribeInstanceDetailOutput {
      * @type {number}
      * @memberof BasicInfoForDescribeInstanceDetailOutput
      */
+    AvailableGroupNumber?: number;
+
+    /**
+     * @type {number}
+     * @memberof BasicInfoForDescribeInstanceDetailOutput
+     */
     AvailableQueueNumber?: number;
+
+    /**
+     * @type {number}
+     * @memberof BasicInfoForDescribeInstanceDetailOutput
+     */
+    AvailableTopicNumber?: number;
 
     /**
      * @type {ChargeDetailForDescribeInstanceDetailOutput}
@@ -63,6 +75,12 @@ export interface BasicInfoForDescribeInstanceDetailOutput {
      * @memberof BasicInfoForDescribeInstanceDetailOutput
      */
     EipId?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof BasicInfoForDescribeInstanceDetailOutput
+     */
+    EnableInspect?: boolean;
 
     /**
      * @type {boolean}
@@ -110,6 +128,12 @@ export interface BasicInfoForDescribeInstanceDetailOutput {
      * @type {string}
      * @memberof BasicInfoForDescribeInstanceDetailOutput
      */
+    ProductVersion?: string;
+
+    /**
+     * @type {string}
+     * @memberof BasicInfoForDescribeInstanceDetailOutput
+     */
     ProjectName?: string;
 
     /**
@@ -128,6 +152,12 @@ export interface BasicInfoForDescribeInstanceDetailOutput {
      * @type {number}
      * @memberof BasicInfoForDescribeInstanceDetailOutput
      */
+    SendReceiveRatio?: number;
+
+    /**
+     * @type {number}
+     * @memberof BasicInfoForDescribeInstanceDetailOutput
+     */
     StorageSpace?: number;
 
     /**
@@ -135,6 +165,12 @@ export interface BasicInfoForDescribeInstanceDetailOutput {
      * @memberof BasicInfoForDescribeInstanceDetailOutput
      */
     SubnetId?: string;
+
+    /**
+     * @type {number}
+     * @memberof BasicInfoForDescribeInstanceDetailOutput
+     */
+    TotalTps?: number;
 
     /**
      * @type {number}

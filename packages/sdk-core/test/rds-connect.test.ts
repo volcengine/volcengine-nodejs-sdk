@@ -53,9 +53,9 @@ describe("RDS Connect Utils", () => {
       instanceId: "mysql-instance-123",
     };
 
-    test("should return query string", async () => {
+    test("should return presigned auth token", async () => {
       const token = await buildAuthToken(createClient(), validOptions);
-      expect(token).not.toContain("://");
+      expect(token).toContain("https://open.volcengineapi.com");
 
       // Should contain required parameters
       expect(token).toContain("Action=ConnectDatabase");
@@ -71,10 +71,9 @@ describe("RDS Connect Utils", () => {
       expect(token).toContain("X-Signature=");
     });
 
-    test("should not have host in X-SignedHeaders", async () => {
+    test("should sign resolved host", async () => {
       const token = await buildAuthToken(createClient(), validOptions);
-      expect(token).toContain("X-SignedHeaders=");
-      expect(token).not.toContain("X-SignedHeaders=host");
+      expect(token).toContain("X-SignedHeaders=host");
     });
 
     test("should use different credential scope for different regions", async () => {

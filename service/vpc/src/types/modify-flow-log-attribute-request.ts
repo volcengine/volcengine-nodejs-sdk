@@ -49,4 +49,10 @@ export interface ModifyFlowLogAttributeRequest {
      * @memberof ModifyFlowLogAttributeRequest
      */
     FlowLogName?: string;
+
+    /**
+     * @type {Array<number>}
+     * @memberof ModifyFlowLogAttributeRequest
+     */
+    TrafficPath?: Array<number>;
 }

@@ -12,7 +12,9 @@
  * Do not edit the class manually.
  */
 
+import { ConverteffectSubtitleForVideoProjectSerialDubTaskCreateInput } from './converteffect-subtitle-for-video-project-serial-dub-task-create-input';
 import { ConvertsubtitleForVideoProjectSerialDubTaskCreateInput } from './convertsubtitle-for-video-project-serial-dub-task-create-input';
+import { EffectSubtitleForVideoProjectSerialDubTaskCreateInput } from './effect-subtitle-for-video-project-serial-dub-task-create-input';
 import { PureVideoForVideoProjectSerialDubTaskCreateInput } from './pure-video-for-video-project-serial-dub-task-create-input';
 import { SubtitleForVideoProjectSerialDubTaskCreateInput } from './subtitle-for-video-project-serial-dub-task-create-input';
 import { VideoForVideoProjectSerialDubTaskCreateInput } from './video-for-video-project-serial-dub-task-create-input';
@@ -23,6 +25,18 @@ import { VideoForVideoProjectSerialDubTaskCreateInput } from './video-for-video-
  * @interface SerialInfoForVideoProjectSerialDubTaskCreateInput
  */
 export interface SerialInfoForVideoProjectSerialDubTaskCreateInput {
+
+    /**
+     * @type {EffectSubtitleForVideoProjectSerialDubTaskCreateInput}
+     * @memberof SerialInfoForVideoProjectSerialDubTaskCreateInput
+     */
+    effectSubtitle?: EffectSubtitleForVideoProjectSerialDubTaskCreateInput;
+
+    /**
+     * @type {Array<ConverteffectSubtitleForVideoProjectSerialDubTaskCreateInput>}
+     * @memberof SerialInfoForVideoProjectSerialDubTaskCreateInput
+     */
+    effectSubtitles?: Array<ConverteffectSubtitleForVideoProjectSerialDubTaskCreateInput>;
 
     /**
      * @type {number}

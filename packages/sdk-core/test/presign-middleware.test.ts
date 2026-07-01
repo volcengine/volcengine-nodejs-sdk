@@ -42,10 +42,11 @@ describe("presign middleware", () => {
       serviceName: "iam",
       accessKeyId: "AKTEST123",
       secretAccessKey: "SKTEST456",
-      host: client.config.host,
+      host: "open.volcengineapi.com",
     });
 
     expect(url).toBe(expected);
+    expect(url.startsWith("https://open.volcengineapi.com/")).toBe(true);
 
     jest.useRealTimers();
   });

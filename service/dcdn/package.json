@@ -1,6 +1,6 @@
 {
   "name": "@volcengine/dcdn",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "swagger client for @volcengine/dcdn",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",

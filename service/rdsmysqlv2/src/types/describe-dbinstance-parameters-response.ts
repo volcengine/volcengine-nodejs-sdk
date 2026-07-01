@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ApplyParamTemplateInfoForDescribeDBInstanceParametersOutput } from './apply-param-template-info-for-describe-dbinstance-parameters-output';
 import { ParameterForDescribeDBInstanceParametersOutput } from './parameter-for-describe-dbinstance-parameters-output';
  /**
  * 
@@ -20,6 +21,12 @@ import { ParameterForDescribeDBInstanceParametersOutput } from './parameter-for-
  * @interface DescribeDBInstanceParametersResponse
  */
 export interface DescribeDBInstanceParametersResponse {
+
+    /**
+     * @type {ApplyParamTemplateInfoForDescribeDBInstanceParametersOutput}
+     * @memberof DescribeDBInstanceParametersResponse
+     */
+    ApplyParamTemplateInfo?: ApplyParamTemplateInfoForDescribeDBInstanceParametersOutput;
 
     /**
      * @type {string}

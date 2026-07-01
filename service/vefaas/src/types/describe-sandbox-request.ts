@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { MetadataForDescribeSandboxInput } from './metadata-for-describe-sandbox-input';
  /**
  * 
  *
@@ -25,6 +26,12 @@ export interface DescribeSandboxRequest {
      * @memberof DescribeSandboxRequest
      */
     FunctionId: string;
+
+    /**
+     * @type {MetadataForDescribeSandboxInput}
+     * @memberof DescribeSandboxRequest
+     */
+    Metadata?: MetadataForDescribeSandboxInput;
 
     /**
      * @type {string}

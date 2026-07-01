@@ -74,6 +74,8 @@ import { GetTopDataRequest } from './types/index';
 import { GetTopDataResponse } from './types/index';
 import { ListAlertGroupRequest } from './types/index';
 import { ListAlertGroupResponse } from './types/index';
+import { ListAlertRequest } from './types/index';
+import { ListAlertResponse } from './types/index';
 import { ListAlertTemplatesRequest } from './types/index';
 import { ListAlertTemplatesResponse } from './types/index';
 import { ListContactGroupByIdsRequest } from './types/index';
@@ -189,6 +191,7 @@ export type EnablePresetAlertTemplateCommandOutput = CommandOutput<EnablePresetA
 export type GetMetricDataCommandOutput = CommandOutput<GetMetricDataResponse>;
 export type GetO11yAgentECSAutoInstallCommandOutput = CommandOutput<GetO11yAgentECSAutoInstallResponse>;
 export type GetTopDataCommandOutput = CommandOutput<GetTopDataResponse>;
+export type ListAlertCommandOutput = CommandOutput<ListAlertResponse>;
 export type ListAlertGroupCommandOutput = CommandOutput<ListAlertGroupResponse>;
 export type ListAlertTemplatesCommandOutput = CommandOutput<ListAlertTemplatesResponse>;
 export type ListContactGroupByIdsCommandOutput = CommandOutput<ListContactGroupByIdsResponse>;
@@ -678,6 +681,21 @@ export class GetTopDataCommand extends Command<
   constructor(input: GetTopDataRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetTopDataCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAlert
+ */
+export class ListAlertCommand extends Command<
+  ListAlertRequest,
+  ListAlertCommandOutput,
+  'ListAlertCommand'
+> {
+  static readonly metaPath = '/ListAlert/2018-01-01/cloudmonitor/post/application_json/';
+
+  constructor(input: ListAlertRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAlertCommand.metaPath);
   }
 }
 /**
@@ -1342,6 +1360,7 @@ export default {
   GetMetricDataCommand,
   GetO11yAgentECSAutoInstallCommand,
   GetTopDataCommand,
+  ListAlertCommand,
   ListAlertGroupCommand,
   ListAlertTemplatesCommand,
   ListContactGroupByIdsCommand,

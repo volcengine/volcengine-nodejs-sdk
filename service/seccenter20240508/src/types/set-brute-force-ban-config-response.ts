@@ -19,4 +19,10 @@
  * @interface SetBruteForceBanConfigResponse
  */
 export interface SetBruteForceBanConfigResponse {
+
+    /**
+     * @type {string}
+     * @memberof SetBruteForceBanConfigResponse
+     */
+    Data?: string;
 }

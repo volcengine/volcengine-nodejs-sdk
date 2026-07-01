@@ -31,7 +31,7 @@ export interface ScaleInstanceRequest {
      * @type {boolean}
      * @memberof ScaleInstanceRequest
      */
-    HaEnabled: boolean;
+    HaEnabled?: boolean;
 
     /**
      * @type {string}
@@ -43,5 +43,5 @@ export interface ScaleInstanceRequest {
      * @type {boolean}
      * @memberof ScaleInstanceRequest
      */
-    OneStep: boolean;
+    OneStep?: boolean;
 }

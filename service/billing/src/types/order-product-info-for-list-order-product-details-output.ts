@@ -43,6 +43,18 @@ export interface OrderProductInfoForListOrderProductDetailsOutput {
      * @type {string}
      * @memberof OrderProductInfoForListOrderProductDetailsOutput
      */
+    DeductionCount?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderProductInfoForListOrderProductDetailsOutput
+     */
+    DeductionCountUnit?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderProductInfoForListOrderProductDetailsOutput
+     */
     DiscountAmount?: string;
 
     /**
@@ -104,6 +116,12 @@ export interface OrderProductInfoForListOrderProductDetailsOutput {
      * @memberof OrderProductInfoForListOrderProductDetailsOutput
      */
     Period?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderProductInfoForListOrderProductDetailsOutput
+     */
+    PickupVoucherID?: string;
 
     /**
      * @type {string}

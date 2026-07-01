@@ -1,6 +1,6 @@
 import type { Args, MiddlewareFunction, MiddlewareStackOptions } from "./types";
 import { PRIORITY } from "./priority";
-import type { Provider } from "../credentials/types";
+import type { CredentialValue, Provider } from "../credentials/types";
 import { DefaultCredentialProvider } from "../credentials/DefaultCredentialProvider";
 import { loadNodeConfig } from "../utils/env";
 import { StsAssumeRoleProvider } from "../credentials/StsAssumeRoleProvider";
@@ -72,21 +72,39 @@ export const credentialsMiddleware: {
       (clientConfig._defaultCredentialProvider ??=
         new DefaultCredentialProvider());
 
-    const credentials = await provider.resolveCredentials();
+    let credentials: CredentialValue;
+    try {
+      credentials = await provider.resolveCredentials();
+    } catch (error) {
+      if (hasProvider) {
+        throw error;
+      }
+
+      const nodeConfig = await loadNodeConfig();
+      if (nodeConfig?.accessKeyId && nodeConfig?.secretAccessKey) {
+        clientConfig.accessKeyId = nodeConfig.accessKeyId;
+        clientConfig.secretAccessKey = nodeConfig.secretAccessKey;
+        delete clientConfig.sessionToken;
+        return next(args);
+      }
+
+      throw error;
+    }
+
+    if (!credentials.accessKeyId || !credentials.secretAccessKey) {
+      throw new Error(
+        `${credentials.providerName || provider.providerName}: 未返回有效凭证`,
+      );
+    }
+
     // 将解析出的凭证注入 clientConfig，供下游中间件（如签名器）透明使用。
-    clientConfig.accessKeyId = credentials?.accessKeyId;
-    clientConfig.secretAccessKey = credentials?.secretAccessKey;
+    clientConfig.accessKeyId = credentials.accessKeyId;
+    clientConfig.secretAccessKey = credentials.secretAccessKey;
     clientConfig._resolvedCredentialsFromProvider = true;
     if (credentials?.sessionToken) {
       clientConfig.sessionToken = credentials.sessionToken;
     } else {
       delete clientConfig.sessionToken;
-    }
-
-    if (!credentials.accessKeyId || !credentials.secretAccessKey) {
-      const nodeConfig = await loadNodeConfig();
-      clientConfig.accessKeyId = nodeConfig?.accessKeyId;
-      clientConfig.secretAccessKey = nodeConfig?.secretAccessKey;
     }
 
     return next(args);

@@ -34,6 +34,12 @@ export interface BackupForDescribeBackupsOutput {
     BackupPointName?: string;
 
     /**
+     * @type {number}
+     * @memberof BackupForDescribeBackupsOutput
+     */
+    BackupProgress?: number;
+
+    /**
      * @type {string}
      * @memberof BackupForDescribeBackupsOutput
      */

@@ -30,5 +30,11 @@ export interface DeviceListForCreateDeviceWithoutApprovalInput {
      * @type {string}
      * @memberof DeviceListForCreateDeviceWithoutApprovalInput
      */
+    DeviceSecret?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeviceListForCreateDeviceWithoutApprovalInput
+     */
     NickName?: string;
 }

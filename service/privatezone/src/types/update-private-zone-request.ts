@@ -21,10 +21,22 @@
 export interface UpdatePrivateZoneRequest {
 
     /**
+     * @type {number}
+     * @memberof UpdatePrivateZoneRequest
+     */
+    LineMode?: number;
+
+    /**
      * @type {boolean}
      * @memberof UpdatePrivateZoneRequest
      */
     LoadBalance?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof UpdatePrivateZoneRequest
+     */
+    NodataFallback?: boolean;
 
     /**
      * @type {boolean}

@@ -336,6 +336,30 @@ export interface ListForListBillDetailOutput {
      * @type {string}
      * @memberof ListForListBillDetailOutput
      */
+    PickupVoucherCountUnit?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
+    PickupVoucherDeductCount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
+    PickupVoucherID?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
+    PointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
     PosttaxAmount?: string;
 
     /**
@@ -372,6 +396,12 @@ export interface ListForListBillDetailOutput {
      * @type {string}
      * @memberof ListForListBillDetailOutput
      */
+    PriceFactor?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
     PriceInterval?: string;
 
     /**
@@ -403,6 +433,12 @@ export interface ListForListBillDetailOutput {
      * @memberof ListForListBillDetailOutput
      */
     ProjectDisplayName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
+    ProjectRemark?: string;
 
     /**
      * @type {string}
@@ -445,6 +481,12 @@ export interface ListForListBillDetailOutput {
      * @memberof ListForListBillDetailOutput
      */
     SavingPlanDeductionDiscountAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
+    SavingPlanDeductionDiscountTotalAmount?: string;
 
     /**
      * @type {string}
@@ -547,6 +589,12 @@ export interface ListForListBillDetailOutput {
      * @memberof ListForListBillDetailOutput
      */
     Tag?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
+    TagRemark?: string;
 
     /**
      * @type {string}

@@ -72,7 +72,7 @@ setx VOLCENGINE_SESSION_TOKEN your-session-token /M
 
 | 变量                               | 说明                                          | 默认值 |
 | ---------------------------------- | --------------------------------------------- | ------ |
-| `VOLCENGINE_ECS_METADATA`          | 指定 ECS 实例角色名（必须设置，除非通过构造参数传入） | -      |
+| `VOLCENGINE_ECS_METADATA`          | 指定 ECS 实例角色名；未设置时从 IMDS 自动探测         | -      |
 | `VOLCENGINE_ECS_METADATA_DISABLED` | 设为 `true` 禁用 IMDS 凭证获取                | -      |
 
 #### CLI 配置文件
@@ -149,7 +149,7 @@ Fallback 优先级：`VOLCENGINE_*` > `VOLCSTACK_*_ID` > `VOLCSTACK_*`
 
 - [访问凭据](1-Credentials-zh.md) — 各 Provider 的代码级用法
 - [Endpoint 配置](2-Endpoint-zh.md) — 双栈、引导区域列表详细说明
-- [Transport](3-Transport-zh.md) — 代理配置的代码级用法
+- [代理配置](4-Proxy-zh.md) — 代理配置的代码级用法
 
 ---
 

@@ -28,6 +28,8 @@ import { CreateKafkaTriggerRequest } from './types/index';
 import { CreateKafkaTriggerResponse } from './types/index';
 import { CreateSandboxRequest } from './types/index';
 import { CreateSandboxResponse } from './types/index';
+import { CreateSandboxSnapshotRequest } from './types/index';
+import { CreateSandboxSnapshotResponse } from './types/index';
 import { CreateTimerRequest } from './types/index';
 import { CreateTimerResponse } from './types/index';
 import { DeleteFunctionRequest } from './types/index';
@@ -36,10 +38,14 @@ import { DeleteKafkaTriggerRequest } from './types/index';
 import { DeleteKafkaTriggerResponse } from './types/index';
 import { DeleteSandboxImageRequest } from './types/index';
 import { DeleteSandboxImageResponse } from './types/index';
+import { DeleteSandboxSnapshotRequest } from './types/index';
+import { DeleteSandboxSnapshotResponse } from './types/index';
 import { DeleteTimerRequest } from './types/index';
 import { DeleteTimerResponse } from './types/index';
 import { DescribeSandboxRequest } from './types/index';
 import { DescribeSandboxResponse } from './types/index';
+import { DescribeSandboxSnapshotRequest } from './types/index';
+import { DescribeSandboxSnapshotResponse } from './types/index';
 import { EnableUserCrVpcTunnelRequest } from './types/index';
 import { EnableUserCrVpcTunnelResponse } from './types/index';
 import { GenWebshellEndpointRequest } from './types/index';
@@ -94,6 +100,8 @@ import { ListSandboxImagePrecacheTicketsRequest } from './types/index';
 import { ListSandboxImagePrecacheTicketsResponse } from './types/index';
 import { ListSandboxImagesRequest } from './types/index';
 import { ListSandboxImagesResponse } from './types/index';
+import { ListSandboxSnapshotsRequest } from './types/index';
+import { ListSandboxSnapshotsResponse } from './types/index';
 import { ListSandboxesRequest } from './types/index';
 import { ListSandboxesResponse } from './types/index';
 import { ListTriggersRequest } from './types/index';
@@ -139,12 +147,15 @@ export type CreateE2BAPIKeyCommandOutput = CommandOutput<CreateE2BAPIKeyResponse
 export type CreateFunctionCommandOutput = CommandOutput<CreateFunctionResponse>;
 export type CreateKafkaTriggerCommandOutput = CommandOutput<CreateKafkaTriggerResponse>;
 export type CreateSandboxCommandOutput = CommandOutput<CreateSandboxResponse>;
+export type CreateSandboxSnapshotCommandOutput = CommandOutput<CreateSandboxSnapshotResponse>;
 export type CreateTimerCommandOutput = CommandOutput<CreateTimerResponse>;
 export type DeleteFunctionCommandOutput = CommandOutput<DeleteFunctionResponse>;
 export type DeleteKafkaTriggerCommandOutput = CommandOutput<DeleteKafkaTriggerResponse>;
 export type DeleteSandboxImageCommandOutput = CommandOutput<DeleteSandboxImageResponse>;
+export type DeleteSandboxSnapshotCommandOutput = CommandOutput<DeleteSandboxSnapshotResponse>;
 export type DeleteTimerCommandOutput = CommandOutput<DeleteTimerResponse>;
 export type DescribeSandboxCommandOutput = CommandOutput<DescribeSandboxResponse>;
+export type DescribeSandboxSnapshotCommandOutput = CommandOutput<DescribeSandboxSnapshotResponse>;
 export type EnableUserCrVpcTunnelCommandOutput = CommandOutput<EnableUserCrVpcTunnelResponse>;
 export type GenWebshellEndpointCommandOutput = CommandOutput<GenWebshellEndpointResponse>;
 export type GetAvailabilityZonesCommandOutput = CommandOutput<GetAvailabilityZonesResponse>;
@@ -172,6 +183,7 @@ export type ListReleaseRecordsCommandOutput = CommandOutput<ListReleaseRecordsRe
 export type ListRevisionsCommandOutput = CommandOutput<ListRevisionsResponse>;
 export type ListSandboxImagePrecacheTicketsCommandOutput = CommandOutput<ListSandboxImagePrecacheTicketsResponse>;
 export type ListSandboxImagesCommandOutput = CommandOutput<ListSandboxImagesResponse>;
+export type ListSandboxSnapshotsCommandOutput = CommandOutput<ListSandboxSnapshotsResponse>;
 export type ListSandboxesCommandOutput = CommandOutput<ListSandboxesResponse>;
 export type ListTriggersCommandOutput = CommandOutput<ListTriggersResponse>;
 export type PauseSandboxCommandOutput = CommandOutput<PauseSandboxResponse>;
@@ -309,6 +321,21 @@ export class CreateSandboxCommand extends Command<
   }
 }
 /**
+ * Command to CreateSandboxSnapshot
+ */
+export class CreateSandboxSnapshotCommand extends Command<
+  CreateSandboxSnapshotRequest,
+  CreateSandboxSnapshotCommandOutput,
+  'CreateSandboxSnapshotCommand'
+> {
+  static readonly metaPath = '/CreateSandboxSnapshot/2024-06-06/vefaas/post/application_json/';
+
+  constructor(input: CreateSandboxSnapshotRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateSandboxSnapshotCommand.metaPath);
+  }
+}
+/**
  * Command to CreateTimer
  */
 export class CreateTimerCommand extends Command<
@@ -369,6 +396,21 @@ export class DeleteSandboxImageCommand extends Command<
   }
 }
 /**
+ * Command to DeleteSandboxSnapshot
+ */
+export class DeleteSandboxSnapshotCommand extends Command<
+  DeleteSandboxSnapshotRequest,
+  DeleteSandboxSnapshotCommandOutput,
+  'DeleteSandboxSnapshotCommand'
+> {
+  static readonly metaPath = '/DeleteSandboxSnapshot/2024-06-06/vefaas/post/application_json/';
+
+  constructor(input: DeleteSandboxSnapshotRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteSandboxSnapshotCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteTimer
  */
 export class DeleteTimerCommand extends Command<
@@ -396,6 +438,21 @@ export class DescribeSandboxCommand extends Command<
   constructor(input: DescribeSandboxRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeSandboxCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeSandboxSnapshot
+ */
+export class DescribeSandboxSnapshotCommand extends Command<
+  DescribeSandboxSnapshotRequest,
+  DescribeSandboxSnapshotCommandOutput,
+  'DescribeSandboxSnapshotCommand'
+> {
+  static readonly metaPath = '/DescribeSandboxSnapshot/2024-06-06/vefaas/post/application_json/';
+
+  constructor(input: DescribeSandboxSnapshotRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeSandboxSnapshotCommand.metaPath);
   }
 }
 /**
@@ -804,6 +861,21 @@ export class ListSandboxImagesCommand extends Command<
   }
 }
 /**
+ * Command to ListSandboxSnapshots
+ */
+export class ListSandboxSnapshotsCommand extends Command<
+  ListSandboxSnapshotsRequest,
+  ListSandboxSnapshotsCommandOutput,
+  'ListSandboxSnapshotsCommand'
+> {
+  static readonly metaPath = '/ListSandboxSnapshots/2024-06-06/vefaas/post/application_json/';
+
+  constructor(input: ListSandboxSnapshotsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListSandboxSnapshotsCommand.metaPath);
+  }
+}
+/**
  * Command to ListSandboxes
  */
 export class ListSandboxesCommand extends Command<
@@ -1068,12 +1140,15 @@ export default {
   CreateFunctionCommand,
   CreateKafkaTriggerCommand,
   CreateSandboxCommand,
+  CreateSandboxSnapshotCommand,
   CreateTimerCommand,
   DeleteFunctionCommand,
   DeleteKafkaTriggerCommand,
   DeleteSandboxImageCommand,
+  DeleteSandboxSnapshotCommand,
   DeleteTimerCommand,
   DescribeSandboxCommand,
+  DescribeSandboxSnapshotCommand,
   EnableUserCrVpcTunnelCommand,
   GenWebshellEndpointCommand,
   GetAvailabilityZonesCommand,
@@ -1101,6 +1176,7 @@ export default {
   ListRevisionsCommand,
   ListSandboxImagePrecacheTicketsCommand,
   ListSandboxImagesCommand,
+  ListSandboxSnapshotsCommand,
   ListSandboxesCommand,
   ListTriggersCommand,
   PauseSandboxCommand,

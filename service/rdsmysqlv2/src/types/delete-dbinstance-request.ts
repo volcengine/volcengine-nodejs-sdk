@@ -37,4 +37,10 @@ export interface DeleteDBInstanceRequest {
      * @memberof DeleteDBInstanceRequest
      */
     InstanceId: string;
+
+    /**
+     * @type {boolean}
+     * @memberof DeleteDBInstanceRequest
+     */
+    KeepCrossBackupEnableAfterReleased?: boolean;
 }

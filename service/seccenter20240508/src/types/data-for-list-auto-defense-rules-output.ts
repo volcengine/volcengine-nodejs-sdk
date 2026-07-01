@@ -13,6 +13,7 @@
  */
 
 import { RangeForListAutoDefenseRulesOutput } from './range-for-list-auto-defense-rules-output';
+import { UserAutoDefenseRuleForListAutoDefenseRulesOutput } from './user-auto-defense-rule-for-list-auto-defense-rules-output';
  /**
  * 
  *
@@ -50,6 +51,12 @@ export interface DataForListAutoDefenseRulesOutput {
      * @memberof DataForListAutoDefenseRulesOutput
      */
     Enable?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof DataForListAutoDefenseRulesOutput
+     */
+    HarmLevel?: string;
 
     /**
      * @type {RangeForListAutoDefenseRulesOutput}
@@ -92,4 +99,10 @@ export interface DataForListAutoDefenseRulesOutput {
      * @memberof DataForListAutoDefenseRulesOutput
      */
     UpdateUser?: string;
+
+    /**
+     * @type {UserAutoDefenseRuleForListAutoDefenseRulesOutput}
+     * @memberof DataForListAutoDefenseRulesOutput
+     */
+    UserAutoDefenseRule?: UserAutoDefenseRuleForListAutoDefenseRulesOutput;
 }

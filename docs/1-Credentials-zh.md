@@ -240,13 +240,9 @@ const client = new ECSClient({
 
 ### ECS Role 凭证 Provider
 
-> 🚨 **当前版本限制**
->
-> **当前版本暂不支持从 IMDS 自动探测角色名**，必须通过构造参数或 `VOLCENGINE_ECS_METADATA` 环境变量显式传入角色名。后续版本将支持自动探测，敬请关注版本发布通知。
-
 `EcsRoleCredentialProvider` 从 ECS 实例元数据服务（IMDSv2）获取临时凭证：
 
-- `roleName` 优先级：构造参数 > `VOLCENGINE_ECS_METADATA`
+- `roleName` 优先级：构造参数 > `VOLCENGINE_ECS_METADATA` > 从 IMDS 自动探测
 - 禁用开关：`VOLCENGINE_ECS_METADATA_DISABLED=true`
 - IMDS 端点：`http://100.96.0.96`（IMDSv2 基于 token 的认证）
 - 凭证在过期前自动刷新（默认 5 分钟缓冲窗口）
@@ -254,18 +250,18 @@ const client = new ECSClient({
 > ⚠️ **注意事项**
 >
 > 1. 仅在绑定了 IAM 角色的 ECS 实例上可用。
-> 2. 使用前请显式传入 `roleName`，或设置 `VOLCENGINE_ECS_METADATA`。
+> 2. 显式传入 `roleName` 或设置 `VOLCENGINE_ECS_METADATA` 可避免歧义；否则 SDK 会从 IMDS 自动探测角色名。
 
 | 环境变量                           | 说明                                                  |
 | ---------------------------------- | ----------------------------------------------------- |
-| `VOLCENGINE_ECS_METADATA`          | 指定 ECS 实例角色名（必须设置，除非通过构造参数传入） |
+| `VOLCENGINE_ECS_METADATA`          | 指定 ECS 实例角色名；未设置时从 IMDS 自动探测         |
 | `VOLCENGINE_ECS_METADATA_DISABLED` | 设为 `true` 禁用 IMDS 凭证获取                        |
 
 ```typescript
 import { EcsRoleCredentialProvider } from "@volcengine/sdk-core";
 import { ECSClient } from "@volcengine/ecs";
 
-// 显式指定角色名
+// 显式指定角色名；省略 roleName 时读取 VOLCENGINE_ECS_METADATA 或从 IMDS 自动探测。
 const credentialProvider = new EcsRoleCredentialProvider({
   roleName: "your-ecs-role-name",
 });

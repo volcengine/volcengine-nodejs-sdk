@@ -324,6 +324,12 @@ export interface ListForListSplitBillDetailOutput {
      * @type {string}
      * @memberof ListForListSplitBillDetailOutput
      */
+    PointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListSplitBillDetailOutput
+     */
     PosttaxAmount?: string;
 
     /**
@@ -396,6 +402,12 @@ export interface ListForListSplitBillDetailOutput {
      * @type {string}
      * @memberof ListForListSplitBillDetailOutput
      */
+    ProjectRemark?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListSplitBillDetailOutput
+     */
     RealValue?: string;
 
     /**
@@ -433,6 +445,12 @@ export interface ListForListSplitBillDetailOutput {
      * @memberof ListForListSplitBillDetailOutput
      */
     SavingPlanDeductionDiscountAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListSplitBillDetailOutput
+     */
+    SavingPlanDeductionDiscountTotalAmount?: string;
 
     /**
      * @type {string}
@@ -565,6 +583,12 @@ export interface ListForListSplitBillDetailOutput {
      * @memberof ListForListSplitBillDetailOutput
      */
     Tag?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListSplitBillDetailOutput
+     */
+    TagRemark?: string;
 
     /**
      * @type {string}

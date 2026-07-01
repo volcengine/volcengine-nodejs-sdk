@@ -76,10 +76,4 @@ export interface GetTenantQuotaResponse {
      * @memberof GetTenantQuotaResponse
      */
     ValueAdded?: ValueAddedForGetTenantQuotaOutput;
-
-    /**
-     * @type {string}
-     * @memberof GetTenantQuotaResponse
-     */
-    id?: string;
 }

@@ -204,6 +204,7 @@ export * from './overlay-setting-for-get-phone-template-output';
 export * from './overlay-setting-for-list-phone-template-output';
 export * from './persist-property-list-for-get-pod-property-output';
 export * from './phone-template-for-get-phone-template-output';
+export * from './pod-aiagent-list-for-list-pod-output';
 export * from './pod-adb-request';
 export * from './pod-adb-response';
 export * from './pod-app-list-for-get-pod-app-list-output';

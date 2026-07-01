@@ -145,4 +145,10 @@ export interface RowForListHostOutput {
      * @memberof RowForListHostOutput
      */
     VolcRegion?: string;
+
+    /**
+     * @type {string}
+     * @memberof RowForListHostOutput
+     */
+    ZoneId?: string;
 }

@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { CustomRouteStrategyForModifyDBEndpointConnectionModeInput } from './custom-route-strategy-for-modify-dbendpoint-connection-mode-input';
 import { ReadOnlyNodeWeightForModifyDBEndpointConnectionModeInput } from './read-only-node-weight-for-modify-dbendpoint-connection-mode-input';
  /**
  * 
@@ -32,6 +33,12 @@ export interface CreateDBEndpointReqForModifyDBEndpointConnectionModeInput {
      * @memberof CreateDBEndpointReqForModifyDBEndpointConnectionModeInput
      */
     ConnectionPoolType?: string;
+
+    /**
+     * @type {CustomRouteStrategyForModifyDBEndpointConnectionModeInput}
+     * @memberof CreateDBEndpointReqForModifyDBEndpointConnectionModeInput
+     */
+    CustomRouteStrategy?: CustomRouteStrategyForModifyDBEndpointConnectionModeInput;
 
     /**
      * @type {string}

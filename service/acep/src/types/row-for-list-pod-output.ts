@@ -15,6 +15,7 @@
 import { ConfigurationForListPodOutput } from './configuration-for-list-pod-output';
 import { DcInfoForListPodOutput } from './dc-info-for-list-pod-output';
 import { EipForListPodOutput } from './eip-for-list-pod-output';
+import { PodAIAgentListForListPodOutput } from './pod-aiagent-list-for-list-pod-output';
 import { PortMappingRuleListForListPodOutput } from './port-mapping-rule-list-for-list-pod-output';
 import { TagForListPodOutput } from './tag-for-list-pod-output';
  /**
@@ -152,6 +153,12 @@ export interface RowForListPodOutput {
     IntranetIP?: string;
 
     /**
+     * @type {boolean}
+     * @memberof RowForListPodOutput
+     */
+    IsAI?: boolean;
+
+    /**
      * @type {number}
      * @memberof RowForListPodOutput
      */
@@ -162,6 +169,12 @@ export interface RowForListPodOutput {
      * @memberof RowForListPodOutput
      */
     PhoneTemplateId?: string;
+
+    /**
+     * @type {Array<PodAIAgentListForListPodOutput>}
+     * @memberof RowForListPodOutput
+     */
+    PodAIAgentList?: Array<PodAIAgentListForListPodOutput>;
 
     /**
      * @type {string}

@@ -44,11 +44,12 @@ yarn add @volcengine/ecs
 
 1. [Credentials](1-Credentials.md) — AK/SK, STS, AssumeRole, OIDC, SAML, ECS role, default credential chain
 2. [Endpoint Configuration](2-Endpoint.md) — Custom endpoint, region ID, automatic resolution
-3. [Transport](3-Transport.md) — Protocol scheme, SSL verification, HTTP(S) proxy, connection pool
-4. [Timeouts](4-Timeout.md) — Client timeout, per-request timeout, connect/read timeout split
-5. [Retries](5-Retry.md) — Retry conditions, backoff strategies, custom retry
-6. [Error Handling](6-ErrorHandling.md) — Exception types, error codes, resource cleanup
-7. [Debugging](7-Debugging.md) — Debug options, log levels, custom middleware
+3. [Transport](3-Transport.md) — Protocol scheme, SSL verification, connection pool
+4. [Proxy](4-Proxy.md) — HTTP(S) proxy configuration in code and environment variables
+5. [Timeouts](5-Timeout.md) — Client timeout, per-request timeout, connect/read timeout split
+6. [Retries](6-Retry.md) — Retry conditions, backoff strategies, custom retry
+7. [Error Handling](7-ErrorHandling.md) — Exception types, error codes, resource cleanup
+8. [Debugging](8-Debugging.md) — Debug options, log levels, custom middleware
 - [Environment Variables](EnvironmentVariables.md) — All environment variables supported by the SDK
 
 ---

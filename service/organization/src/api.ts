@@ -40,6 +40,8 @@ import { DeleteOrganizationalUnitRequest } from './types/index';
 import { DeleteOrganizationalUnitResponse } from './types/index';
 import { DeleteServiceControlPolicyRequest } from './types/index';
 import { DeleteServiceControlPolicyResponse } from './types/index';
+import { DeregisterDelegatedAdministratorRequest } from './types/index';
+import { DeregisterDelegatedAdministratorResponse } from './types/index';
 import { DescribeAccountInvitationRequest } from './types/index';
 import { DescribeAccountInvitationResponse } from './types/index';
 import { DescribeAccountRequest } from './types/index';
@@ -82,14 +84,22 @@ import { ListServiceControlPoliciesRequest } from './types/index';
 import { ListServiceControlPoliciesResponse } from './types/index';
 import { ListTagResourcesRequest } from './types/index';
 import { ListTagResourcesResponse } from './types/index';
+import { ListTagsKeysRequest } from './types/index';
+import { ListTagsKeysResponse } from './types/index';
+import { ListTagsValuesRequest } from './types/index';
+import { ListTagsValuesResponse } from './types/index';
 import { ListTargetsForPolicyRequest } from './types/index';
 import { ListTargetsForPolicyResponse } from './types/index';
+import { ListTrustedServiceStatusRequest } from './types/index';
+import { ListTrustedServiceStatusResponse } from './types/index';
 import { MoveAccountRequest } from './types/index';
 import { MoveAccountResponse } from './types/index';
 import { QuitOrganizationRequest } from './types/index';
 import { QuitOrganizationResponse } from './types/index';
 import { ReInviteAccountRequest } from './types/index';
 import { ReInviteAccountResponse } from './types/index';
+import { RegisterDelegatedAdministratorRequest } from './types/index';
+import { RegisterDelegatedAdministratorResponse } from './types/index';
 import { RejectInvitationRequest } from './types/index';
 import { RejectInvitationResponse } from './types/index';
 import { RejectQuitApplicationRequest } from './types/index';
@@ -125,6 +135,7 @@ export type CreateServiceControlPolicyCommandOutput = CommandOutput<CreateServic
 export type DeleteOrganizationCommandOutput = CommandOutput<DeleteOrganizationResponse>;
 export type DeleteOrganizationalUnitCommandOutput = CommandOutput<DeleteOrganizationalUnitResponse>;
 export type DeleteServiceControlPolicyCommandOutput = CommandOutput<DeleteServiceControlPolicyResponse>;
+export type DeregisterDelegatedAdministratorCommandOutput = CommandOutput<DeregisterDelegatedAdministratorResponse>;
 export type DescribeAccountCommandOutput = CommandOutput<DescribeAccountResponse>;
 export type DescribeAccountInvitationCommandOutput = CommandOutput<DescribeAccountInvitationResponse>;
 export type DescribeOrganizationCommandOutput = CommandOutput<DescribeOrganizationResponse>;
@@ -146,10 +157,14 @@ export type ListOrganizationalUnitsForParentCommandOutput = CommandOutput<ListOr
 export type ListPoliciesForTargetCommandOutput = CommandOutput<ListPoliciesForTargetResponse>;
 export type ListServiceControlPoliciesCommandOutput = CommandOutput<ListServiceControlPoliciesResponse>;
 export type ListTagResourcesCommandOutput = CommandOutput<ListTagResourcesResponse>;
+export type ListTagsKeysCommandOutput = CommandOutput<ListTagsKeysResponse>;
+export type ListTagsValuesCommandOutput = CommandOutput<ListTagsValuesResponse>;
 export type ListTargetsForPolicyCommandOutput = CommandOutput<ListTargetsForPolicyResponse>;
+export type ListTrustedServiceStatusCommandOutput = CommandOutput<ListTrustedServiceStatusResponse>;
 export type MoveAccountCommandOutput = CommandOutput<MoveAccountResponse>;
 export type QuitOrganizationCommandOutput = CommandOutput<QuitOrganizationResponse>;
 export type ReInviteAccountCommandOutput = CommandOutput<ReInviteAccountResponse>;
+export type RegisterDelegatedAdministratorCommandOutput = CommandOutput<RegisterDelegatedAdministratorResponse>;
 export type RejectInvitationCommandOutput = CommandOutput<RejectInvitationResponse>;
 export type RejectQuitApplicationCommandOutput = CommandOutput<RejectQuitApplicationResponse>;
 export type RemoveAccountCommandOutput = CommandOutput<RemoveAccountResponse>;
@@ -159,7 +174,6 @@ export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateAccountCommandOutput = CommandOutput<UpdateAccountResponse>;
 export type UpdateOrganizationalUnitCommandOutput = CommandOutput<UpdateOrganizationalUnitResponse>;
 export type UpdateServiceControlPolicyCommandOutput = CommandOutput<UpdateServiceControlPolicyResponse>;
-
 
 /**
  * ORGANIZATIONClient Service Client
@@ -367,6 +381,21 @@ export class DeleteServiceControlPolicyCommand extends Command<
   constructor(input: DeleteServiceControlPolicyRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteServiceControlPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to DeregisterDelegatedAdministrator
+ */
+export class DeregisterDelegatedAdministratorCommand extends Command<
+  DeregisterDelegatedAdministratorRequest,
+  DeregisterDelegatedAdministratorCommandOutput,
+  'DeregisterDelegatedAdministratorCommand'
+> {
+  static readonly metaPath = '/DeregisterDelegatedAdministrator/2022-01-01/organization/post/application_json/';
+
+  constructor(input: DeregisterDelegatedAdministratorRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeregisterDelegatedAdministratorCommand.metaPath);
   }
 }
 /**
@@ -685,6 +714,36 @@ export class ListTagResourcesCommand extends Command<
   }
 }
 /**
+ * Command to ListTagsKeys
+ */
+export class ListTagsKeysCommand extends Command<
+  ListTagsKeysRequest,
+  ListTagsKeysCommandOutput,
+  'ListTagsKeysCommand'
+> {
+  static readonly metaPath = '/ListTagsKeys/2022-01-01/organization/post/application_json/';
+
+  constructor(input: ListTagsKeysRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListTagsKeysCommand.metaPath);
+  }
+}
+/**
+ * Command to ListTagsValues
+ */
+export class ListTagsValuesCommand extends Command<
+  ListTagsValuesRequest,
+  ListTagsValuesCommandOutput,
+  'ListTagsValuesCommand'
+> {
+  static readonly metaPath = '/ListTagsValues/2022-01-01/organization/post/application_json/';
+
+  constructor(input: ListTagsValuesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListTagsValuesCommand.metaPath);
+  }
+}
+/**
  * Command to ListTargetsForPolicy
  */
 export class ListTargetsForPolicyCommand extends Command<
@@ -697,6 +756,21 @@ export class ListTargetsForPolicyCommand extends Command<
   constructor(input: ListTargetsForPolicyRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListTargetsForPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to ListTrustedServiceStatus
+ */
+export class ListTrustedServiceStatusCommand extends Command<
+  ListTrustedServiceStatusRequest,
+  ListTrustedServiceStatusCommandOutput,
+  'ListTrustedServiceStatusCommand'
+> {
+  static readonly metaPath = '/ListTrustedServiceStatus/2022-01-01/organization/post/application_json/';
+
+  constructor(input: ListTrustedServiceStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListTrustedServiceStatusCommand.metaPath);
   }
 }
 /**
@@ -742,6 +816,21 @@ export class ReInviteAccountCommand extends Command<
   constructor(input: ReInviteAccountRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ReInviteAccountCommand.metaPath);
+  }
+}
+/**
+ * Command to RegisterDelegatedAdministrator
+ */
+export class RegisterDelegatedAdministratorCommand extends Command<
+  RegisterDelegatedAdministratorRequest,
+  RegisterDelegatedAdministratorCommandOutput,
+  'RegisterDelegatedAdministratorCommand'
+> {
+  static readonly metaPath = '/RegisterDelegatedAdministrator/2022-01-01/organization/post/application_json/';
+
+  constructor(input: RegisterDelegatedAdministratorRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RegisterDelegatedAdministratorCommand.metaPath);
   }
 }
 /**
@@ -895,6 +984,7 @@ export default {
   DeleteOrganizationCommand,
   DeleteOrganizationalUnitCommand,
   DeleteServiceControlPolicyCommand,
+  DeregisterDelegatedAdministratorCommand,
   DescribeAccountCommand,
   DescribeAccountInvitationCommand,
   DescribeOrganizationCommand,
@@ -916,10 +1006,14 @@ export default {
   ListPoliciesForTargetCommand,
   ListServiceControlPoliciesCommand,
   ListTagResourcesCommand,
+  ListTagsKeysCommand,
+  ListTagsValuesCommand,
   ListTargetsForPolicyCommand,
+  ListTrustedServiceStatusCommand,
   MoveAccountCommand,
   QuitOrganizationCommand,
   ReInviteAccountCommand,
+  RegisterDelegatedAdministratorCommand,
   RejectInvitationCommand,
   RejectQuitApplicationCommand,
   RemoveAccountCommand,

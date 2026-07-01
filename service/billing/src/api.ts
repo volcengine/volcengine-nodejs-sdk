@@ -24,12 +24,16 @@ import { CommonBuyRequest } from './types/index';
 import { CommonBuyResponse } from './types/index';
 import { CreateBudgetRequest } from './types/index';
 import { CreateBudgetResponse } from './types/index';
+import { CreateDropShippingOrderRequest } from './types/index';
+import { CreateDropShippingOrderResponse } from './types/index';
 import { CreateFinancialRelationRequest } from './types/index';
 import { CreateFinancialRelationResponse } from './types/index';
 import { DeleteBudgetRequest } from './types/index';
 import { DeleteBudgetResponse } from './types/index';
 import { DeleteFinancialRelationRequest } from './types/index';
 import { DeleteFinancialRelationResponse } from './types/index';
+import { GetDropShippingOrderRequest } from './types/index';
+import { GetDropShippingOrderResponse } from './types/index';
 import { GetFilterInfoForCostAnalysisRequest } from './types/index';
 import { GetFilterInfoForCostAnalysisResponse } from './types/index';
 import { GetOrderRequest } from './types/index';
@@ -100,6 +104,8 @@ import { ListSplitBillDetailRequest } from './types/index';
 import { ListSplitBillDetailResponse } from './types/index';
 import { PayOrderRequest } from './types/index';
 import { PayOrderResponse } from './types/index';
+import { PreCheckDropShippingOrderRequest } from './types/index';
+import { PreCheckDropShippingOrderResponse } from './types/index';
 import { QueryBalanceAcctRequest } from './types/index';
 import { QueryBalanceAcctResponse } from './types/index';
 import { QueryBudgetDetailRequest } from './types/index';
@@ -131,9 +137,11 @@ export type CancelOrderCommandOutput = CommandOutput<CancelOrderResponse>;
 export type CleanUpFinancialRelationCommandOutput = CommandOutput<CleanUpFinancialRelationResponse>;
 export type CommonBuyCommandOutput = CommandOutput<CommonBuyResponse>;
 export type CreateBudgetCommandOutput = CommandOutput<CreateBudgetResponse>;
+export type CreateDropShippingOrderCommandOutput = CommandOutput<CreateDropShippingOrderResponse>;
 export type CreateFinancialRelationCommandOutput = CommandOutput<CreateFinancialRelationResponse>;
 export type DeleteBudgetCommandOutput = CommandOutput<DeleteBudgetResponse>;
 export type DeleteFinancialRelationCommandOutput = CommandOutput<DeleteFinancialRelationResponse>;
+export type GetDropShippingOrderCommandOutput = CommandOutput<GetDropShippingOrderResponse>;
 export type GetFilterInfoForCostAnalysisCommandOutput = CommandOutput<GetFilterInfoForCostAnalysisResponse>;
 export type GetOrderCommandOutput = CommandOutput<GetOrderResponse>;
 export type HandleInvitationCommandOutput = CommandOutput<HandleInvitationResponse>;
@@ -169,6 +177,7 @@ export type ListRecipientInformationCommandOutput = CommandOutput<ListRecipientI
 export type ListResourcePackagesCommandOutput = CommandOutput<ListResourcePackagesResponse>;
 export type ListSplitBillDetailCommandOutput = CommandOutput<ListSplitBillDetailResponse>;
 export type PayOrderCommandOutput = CommandOutput<PayOrderResponse>;
+export type PreCheckDropShippingOrderCommandOutput = CommandOutput<PreCheckDropShippingOrderResponse>;
 export type QueryBalanceAcctCommandOutput = CommandOutput<QueryBalanceAcctResponse>;
 export type QueryBudgetDetailCommandOutput = CommandOutput<QueryBudgetDetailResponse>;
 export type QueryPriceForPayAsYouGoCommandOutput = CommandOutput<QueryPriceForPayAsYouGoResponse>;
@@ -270,6 +279,21 @@ export class CreateBudgetCommand extends Command<
   }
 }
 /**
+ * Command to CreateDropShippingOrder
+ */
+export class CreateDropShippingOrderCommand extends Command<
+  CreateDropShippingOrderRequest,
+  CreateDropShippingOrderCommandOutput,
+  'CreateDropShippingOrderCommand'
+> {
+  static readonly metaPath = '/CreateDropShippingOrder/2022-01-01/billing/post/application_json/';
+
+  constructor(input: CreateDropShippingOrderRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateDropShippingOrderCommand.metaPath);
+  }
+}
+/**
  * Command to CreateFinancialRelation
  */
 export class CreateFinancialRelationCommand extends Command<
@@ -312,6 +336,21 @@ export class DeleteFinancialRelationCommand extends Command<
   constructor(input: DeleteFinancialRelationRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteFinancialRelationCommand.metaPath);
+  }
+}
+/**
+ * Command to GetDropShippingOrder
+ */
+export class GetDropShippingOrderCommand extends Command<
+  GetDropShippingOrderRequest,
+  GetDropShippingOrderCommandOutput,
+  'GetDropShippingOrderCommand'
+> {
+  static readonly metaPath = '/GetDropShippingOrder/2022-01-01/billing/post/application_json/';
+
+  constructor(input: GetDropShippingOrderRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDropShippingOrderCommand.metaPath);
   }
 }
 /**
@@ -840,6 +879,21 @@ export class PayOrderCommand extends Command<
   }
 }
 /**
+ * Command to PreCheckDropShippingOrder
+ */
+export class PreCheckDropShippingOrderCommand extends Command<
+  PreCheckDropShippingOrderRequest,
+  PreCheckDropShippingOrderCommandOutput,
+  'PreCheckDropShippingOrderCommand'
+> {
+  static readonly metaPath = '/PreCheckDropShippingOrder/2022-01-01/billing/post/application_json/';
+
+  constructor(input: PreCheckDropShippingOrderRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(PreCheckDropShippingOrderCommand.metaPath);
+  }
+}
+/**
  * Command to QueryBalanceAcct
  */
 export class QueryBalanceAcctCommand extends Command<
@@ -1012,9 +1066,11 @@ export default {
   CleanUpFinancialRelationCommand,
   CommonBuyCommand,
   CreateBudgetCommand,
+  CreateDropShippingOrderCommand,
   CreateFinancialRelationCommand,
   DeleteBudgetCommand,
   DeleteFinancialRelationCommand,
+  GetDropShippingOrderCommand,
   GetFilterInfoForCostAnalysisCommand,
   GetOrderCommand,
   HandleInvitationCommand,
@@ -1050,6 +1106,7 @@ export default {
   ListResourcePackagesCommand,
   ListSplitBillDetailCommand,
   PayOrderCommand,
+  PreCheckDropShippingOrderCommand,
   QueryBalanceAcctCommand,
   QueryBudgetDetailCommand,
   QueryPriceForPayAsYouGoCommand,

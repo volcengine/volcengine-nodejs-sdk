@@ -133,4 +133,10 @@ export interface DetailHostResponse {
      * @memberof DetailHostResponse
      */
     VolcRegion?: string;
+
+    /**
+     * @type {string}
+     * @memberof DetailHostResponse
+     */
+    ZoneId?: string;
 }

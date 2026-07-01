@@ -32,7 +32,7 @@ export const createPresignMiddleware = (): {
         accessKeyId,
         secretAccessKey,
         sessionToken,
-        host: clientConfig?.host || undefined,
+        host: request.host || clientConfig?.host || undefined,
         protocol: request.protocol,
       });
       return url;

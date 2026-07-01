@@ -68,5 +68,11 @@ export interface TosMountPointForCreateSandboxInput {
      * @type {boolean}
      * @memberof TosMountPointForCreateSandboxInput
      */
+    PreMount?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof TosMountPointForCreateSandboxInput
+     */
     ReadOnly?: boolean;
 }
