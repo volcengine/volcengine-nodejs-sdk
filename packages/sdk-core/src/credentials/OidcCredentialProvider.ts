@@ -113,9 +113,8 @@ export class OidcCredentialProvider implements Provider {
       try {
         // 懒加载 STSClient 避免循环依赖
         // Client -> credentialsMiddleware -> OidcCredentialProvider -> STSClient -> Client
-        const { STSClient, AssumeRoleWithOIDCCommand } = await import(
-          "../client/stsClient"
-        );
+        const { STSClient, AssumeRoleWithOIDCCommand } =
+          await import("../client/stsClient");
 
         const client = new STSClient({
           region: this.params.region || "cn-beijing",
@@ -125,9 +124,22 @@ export class OidcCredentialProvider implements Provider {
         });
 
         // 读取 OIDC Token 文件内容（异步读取，避免阻塞事件循环）
-        const OIDCToken = (
-          await fsPromises.readFile(this.params.oidcTokenFile, "utf-8")
-        ).trim();
+        let OIDCToken: string;
+        try {
+          OIDCToken = (
+            await fsPromises.readFile(this.params.oidcTokenFile, "utf-8")
+          ).trim();
+        } catch (err: any) {
+          throw new Error(
+            `${this.providerName}: 读取 OIDC token 文件 '${this.params.oidcTokenFile}' 失败：${err?.message || String(err)}`,
+          );
+        }
+
+        if (!OIDCToken) {
+          throw new Error(
+            `${this.providerName}: OIDC token 文件 '${this.params.oidcTokenFile}' 内容为空`,
+          );
+        }
 
         // 调用 AssumeRoleWithOIDC 接口
         const command = new AssumeRoleWithOIDCCommand({
@@ -138,6 +150,7 @@ export class OidcCredentialProvider implements Provider {
           OIDCToken,
           Policy: this.params.policy,
         });
+        // STS 侧错误（含 OIDC token 过期/无效）直接透传原始错误，保留错误码与信息
         const res = await client.send(command);
         const Credentials = res.Result?.Credentials;
 

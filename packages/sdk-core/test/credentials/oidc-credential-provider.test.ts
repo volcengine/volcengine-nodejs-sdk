@@ -275,6 +275,34 @@ describe("OidcCredentialProvider", () => {
       expect(creds.secretAccessKey).toBe("sk-oidc-1");
       expect(creds.sessionToken).toBeUndefined();
     });
+
+    it("should throw a clear error when the OIDC token file cannot be read", async () => {
+      mockReadFile.mockRejectedValueOnce(
+        new Error("ENOENT: no such file or directory"),
+      );
+
+      const provider = new OidcCredentialProvider(
+        makeParams("unreadable-token-file-test"),
+      );
+
+      await expect(provider.resolveCredentials()).rejects.toThrow(
+        "读取 OIDC token 文件",
+      );
+      expect(mockSend).not.toHaveBeenCalled();
+    });
+
+    it("should throw a clear error when the OIDC token file is empty", async () => {
+      mockReadFile.mockResolvedValueOnce("   ");
+
+      const provider = new OidcCredentialProvider(
+        makeParams("empty-token-file-test"),
+      );
+
+      await expect(provider.resolveCredentials()).rejects.toThrow(
+        "内容为空",
+      );
+      expect(mockSend).not.toHaveBeenCalled();
+    });
   });
 
   describe("environment variable fallback", () => {

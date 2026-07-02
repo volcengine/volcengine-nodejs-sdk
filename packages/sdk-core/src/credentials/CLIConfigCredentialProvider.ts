@@ -76,6 +76,7 @@ export class CLIConfigCredentialProvider implements Provider {
   readonly providerName = "CLIConfigCredentialProvider";
 
   private delegate?: Provider;
+  private profileName = "default";
   private readonly consoleLoginTokenCaches = new Map<string, any>();
   private readonly ssoTokenCaches = new Map<string, any>();
 
@@ -96,7 +97,7 @@ export class CLIConfigCredentialProvider implements Provider {
 
     if (!fs.existsSync(configPath)) {
       throw new Error(
-        `${this.providerName}: config file not found: ${configPath}`,
+        `${this.providerName}: config file not found at '${configPath}'.`,
       );
     }
 
@@ -107,16 +108,17 @@ export class CLIConfigCredentialProvider implements Provider {
       );
     } catch (err: any) {
       throw new Error(
-        `${this.providerName}: failed to parse config file (${configPath}): ${err.message}`,
+        `${this.providerName}: failed to parse config file '${configPath}': ${err.message}`,
       );
     }
 
     const profileName = this.resolveProfileName(configData);
+    this.profileName = profileName;
     const profile = configData?.profiles?.[profileName];
 
     if (!profile) {
       throw new Error(
-        `${this.providerName}: no valid profile found in config file`,
+        `${this.providerName}: profile '${profileName}' not found in config file.`,
       );
     }
 
@@ -142,9 +144,7 @@ export class CLIConfigCredentialProvider implements Provider {
       case MODE_STS_TOKEN:
         return this.resolveCachedStsToken(profile, mode);
       default:
-        throw new Error(
-          `${this.providerName}: unsupported CLI profile mode: ${profile.mode}`,
-        );
+        throw new Error(`${this.providerName}: unsupported mode: ${mode}`);
     }
   }
 
@@ -154,7 +154,7 @@ export class CLIConfigCredentialProvider implements Provider {
 
     if (!accessKeyId || !secretAccessKey) {
       throw new Error(
-        `${this.providerName}: config file is missing access-key or secret-key`,
+        `${this.providerName}: profile '${this.profileName}' does not contain valid access-key and secret-key.`,
       );
     }
 
@@ -183,12 +183,12 @@ export class CLIConfigCredentialProvider implements Provider {
 
     if (!accessKeyId || !secretAccessKey) {
       throw new Error(
-        `${this.providerName}: ramrolearn mode is missing access-key or secret-key`,
+        `${this.providerName}: profile '${this.profileName}' mode is RamRoleArn but access-key/secret-key is not set.`,
       );
     }
     if (!roleTrn) {
       throw new Error(
-        `${this.providerName}: ramrolearn mode is missing role-trn, or account-id/role-name`,
+        `${this.providerName}: profile '${this.profileName}' mode is RamRoleArn but role-trn (or account-id/role-name) is not set.`,
       );
     }
 
@@ -208,11 +208,13 @@ export class CLIConfigCredentialProvider implements Provider {
     const oidcTokenFile = this.trimToUndefined(profile["oidc-token-file"]);
 
     if (!roleTrn) {
-      throw new Error(`${this.providerName}: oidc mode is missing role-trn`);
+      throw new Error(
+        `${this.providerName}: profile '${this.profileName}' mode is OIDC but role-trn is not set.`,
+      );
     }
     if (!oidcTokenFile) {
       throw new Error(
-        `${this.providerName}: oidc mode is missing oidc-token-file`,
+        `${this.providerName}: profile '${this.profileName}' mode is OIDC but oidc-token-file is not set.`,
       );
     }
 
@@ -230,7 +232,7 @@ export class CLIConfigCredentialProvider implements Provider {
     const roleName = this.trimToUndefined(profile["role-name"]);
     if (!roleName) {
       throw new Error(
-        `${this.providerName}: ecsrole mode is missing role-name`,
+        `${this.providerName}: profile '${this.profileName}' mode is EcsRole but role-name is not set.`,
       );
     }
 
@@ -244,7 +246,7 @@ export class CLIConfigCredentialProvider implements Provider {
       const credentials = this.resolveAK(profile);
       if (!credentials.sessionToken) {
         throw new Error(
-          `${this.providerName}: ${mode} mode is missing session-token`,
+          `${this.providerName}: profile '${this.profileName}' mode is ${mode} but session-token is not set.`,
         );
       }
       return credentials;
@@ -253,7 +255,7 @@ export class CLIConfigCredentialProvider implements Provider {
     const cached = this.tryResolveCachedStsToken(profile);
     if (!cached) {
       throw new Error(
-        `${this.providerName}: ${mode} mode STS temporary credentials have expired`,
+        `${this.providerName}: profile '${this.profileName}' ${mode} STS temporary credentials have expired.`,
       );
     }
     this.delegate = new ExpiringCredentialDelegate(
@@ -273,7 +275,9 @@ export class CLIConfigCredentialProvider implements Provider {
     }
     const expiredTime = this.parseUnixTimestamp(Number(expiration));
     if (Number.isNaN(expiredTime.getTime())) {
-      throw new Error(`${this.providerName}: invalid sts-expiration`);
+      throw new Error(
+        `${this.providerName}: profile '${this.profileName}' has an invalid sts-expiration.`,
+      );
     }
     if (Date.now() > expiredTime.getTime()) {
       return undefined;
@@ -282,7 +286,7 @@ export class CLIConfigCredentialProvider implements Provider {
     const credentials = this.resolveAK(profile);
     if (!credentials.sessionToken) {
       throw new Error(
-        `${this.providerName}: STS temporary credentials are missing session-token`,
+        `${this.providerName}: profile '${this.profileName}' STS temporary credentials do not contain session-token.`,
       );
     }
     return { credentials, expiresAtMs: expiredTime.getTime() };
@@ -306,20 +310,22 @@ export class CLIConfigCredentialProvider implements Provider {
     const sessionName = this.trimToUndefined(profile["sso-session-name"]);
     if (!sessionName) {
       throw new Error(
-        `${this.providerName}: sso mode is missing sso-session-name`,
+        `${this.providerName}: profile '${this.profileName}' mode is sso but sso-session-name is not set.`,
       );
     }
 
     const session = configData?.["sso-session"]?.[sessionName];
     if (!session) {
       throw new Error(
-        `${this.providerName}: sso session not found: ${sessionName}`,
+        `${this.providerName}: sso-session '${sessionName}' not found in config file.`,
       );
     }
 
     const startUrl = this.trimToUndefined(session["start-url"]);
     if (!startUrl) {
-      throw new Error(`${this.providerName}: sso session is missing start-url`);
+      throw new Error(
+        `${this.providerName}: sso-session '${sessionName}' does not contain start-url.`,
+      );
     }
 
     const region =
@@ -344,12 +350,16 @@ export class CLIConfigCredentialProvider implements Provider {
 
     if (!accessToken) {
       throw new Error(
-        `${this.providerName}: SSO token cache is missing access_token`,
+        `${this.providerName}: SSO token cache '${tokenCachePath}' does not contain access_token; please run 've sso login' to re-authenticate.`,
       );
     }
 
-    if (this.isSsoAccessTokenExpired(tokenCache.expires_at)) {
-      accessToken = await this.refreshSsoAccessToken(tokenCache, region);
+    if (this.isSsoAccessTokenExpired(tokenCache.expires_at, tokenCachePath)) {
+      accessToken = await this.refreshSsoAccessToken(
+        tokenCache,
+        region,
+        tokenCachePath,
+      );
     }
 
     return this.getSsoRoleCredentials(accessToken, profile, region);
@@ -405,7 +415,7 @@ export class CLIConfigCredentialProvider implements Provider {
     const loginSession = this.trimToUndefined(profile["login-session"]);
     if (!loginSession) {
       throw new Error(
-        `${this.providerName}: console-login mode is missing login-session; run ve login first`,
+        `${this.providerName}: profile '${this.profileName}' mode is console-login but login-session is not set; run 've login' first.`,
       );
     }
 
@@ -442,7 +452,7 @@ export class CLIConfigCredentialProvider implements Provider {
       const diskCache = this.loadConsoleLoginCache(cachePath);
       if (diskCache.refresh_token === tokenCache.refresh_token) {
         throw new Error(
-          `${this.providerName}: console-login refresh_token is invalid; run ve login again: ${err.message}`,
+          `${this.providerName}: console-login refresh token rejected by signin service (disk cache has the same RT); please run 've login' to re-authenticate. underlying error: ${err.message}`,
         );
       }
 
@@ -464,7 +474,7 @@ export class CLIConfigCredentialProvider implements Provider {
   private loadConsoleLoginCache(cachePath: string): any {
     if (!fs.existsSync(cachePath)) {
       throw new Error(
-        `${this.providerName}: console-login token cache file does not exist: ${cachePath}; run ve login first`,
+        `${this.providerName}: console-login token cache file '${cachePath}' does not exist; please run 've login' to re-authenticate.`,
       );
     }
 
@@ -472,7 +482,7 @@ export class CLIConfigCredentialProvider implements Provider {
       return JSON.parse(fs.readFileSync(cachePath, { encoding: "utf-8" }));
     } catch (err: any) {
       throw new Error(
-        `${this.providerName}: failed to parse console-login token cache (${cachePath}): ${err.message}; run ve login again`,
+        `${this.providerName}: failed to parse console-login token cache '${cachePath}': ${err.message}; please run 've login' to re-authenticate.`,
       );
     }
   }
@@ -515,12 +525,12 @@ export class CLIConfigCredentialProvider implements Provider {
 
     if (!refreshToken) {
       throw new Error(
-        `${this.providerName}: console-login cache is missing refresh_token; run ve login again`,
+        `${this.providerName}: console-login cache lacks refresh_token; please run 've login' first.`,
       );
     }
     if (!clientId) {
       throw new Error(
-        `${this.providerName}: console-login cache is missing client_id; run ve login again`,
+        `${this.providerName}: console-login cache lacks client_id; please run 've login' to regenerate.`,
       );
     }
 
@@ -541,7 +551,7 @@ export class CLIConfigCredentialProvider implements Provider {
     const expiresIn = Number(tokenResp.expires_in);
     if (!accessToken || !expiresIn || expiresIn <= 0) {
       throw new Error(
-        `${this.providerName}: console-login refresh response is missing access_token or expires_in`,
+        `${this.providerName}: console-login refresh response missing access_token or expires_in`,
       );
     }
 
@@ -562,7 +572,7 @@ export class CLIConfigCredentialProvider implements Provider {
     const refreshed = this.tryApplyConsoleLoginCache(tokenCache, cachePath);
     if (!refreshed) {
       throw new Error(
-        `${this.providerName}: console-login refresh succeeded, but access_token could not be parsed as STS credentials`,
+        `${this.providerName}: console-login refresh succeeded but the new access_token could not be parsed into STS credentials`,
       );
     }
     this.delegate = new ExpiringCredentialDelegate(
@@ -583,14 +593,14 @@ export class CLIConfigCredentialProvider implements Provider {
         stsCredentials = JSON.parse(accessToken);
       } catch (err: any) {
         throw new Error(
-          `${this.providerName}: failed to parse console-login access_token (${cachePath}): ${err.message}`,
+          `${this.providerName}: failed to parse console-login access_token in '${cachePath}': ${err.message}`,
         );
       }
     } else if (typeof accessToken === "object" && accessToken !== null) {
       stsCredentials = accessToken;
     } else {
       throw new Error(
-        `${this.providerName}: invalid console-login access_token format (${cachePath})`,
+        `${this.providerName}: console-login token cache '${cachePath}' does not contain valid access_token.`,
       );
     }
 
@@ -601,7 +611,7 @@ export class CLIConfigCredentialProvider implements Provider {
     const sessionToken = this.trimToUndefined(stsCredentials.session_token);
     if (!accessKeyId || !secretAccessKey || !sessionToken) {
       throw new Error(
-        `${this.providerName}: console-login access_token is missing STS credential fields`,
+        `${this.providerName}: console-login access_token in '${cachePath}' is missing STS credential fields.`,
       );
     }
 
@@ -621,19 +631,19 @@ export class CLIConfigCredentialProvider implements Provider {
     const expiresIn = Number(tokenCache.expires_in);
     if (!issuedAt) {
       throw new Error(
-        `${this.providerName}: console-login token cache is missing issued_at (${cachePath})`,
+        `${this.providerName}: console-login token cache '${cachePath}' does not contain issued_at.`,
       );
     }
     if (!expiresIn || expiresIn <= 0) {
       throw new Error(
-        `${this.providerName}: console-login token cache is missing a valid expires_in (${cachePath})`,
+        `${this.providerName}: console-login token cache '${cachePath}' does not contain valid expires_in.`,
       );
     }
 
     const issuedAtMs = Date.parse(issuedAt);
     if (Number.isNaN(issuedAtMs)) {
       throw new Error(
-        `${this.providerName}: invalid console-login token cache issued_at (${cachePath})`,
+        `${this.providerName}: failed to parse console-login issued_at in '${cachePath}'.`,
       );
     }
     return issuedAtMs + expiresIn * 1000;
@@ -658,7 +668,7 @@ export class CLIConfigCredentialProvider implements Provider {
   private loadSsoTokenCache(tokenCachePath: string): any {
     if (!fs.existsSync(tokenCachePath)) {
       throw new Error(
-        `${this.providerName}: SSO token cache file does not exist: ${tokenCachePath}`,
+        `${this.providerName}: SSO token cache file not found at '${tokenCachePath}'; please run 've sso login' to re-authenticate.`,
       );
     }
 
@@ -666,22 +676,24 @@ export class CLIConfigCredentialProvider implements Provider {
       return JSON.parse(fs.readFileSync(tokenCachePath, { encoding: "utf-8" }));
     } catch (err: any) {
       throw new Error(
-        `${this.providerName}: failed to parse SSO token cache (${tokenCachePath}): ${err.message}`,
+        `${this.providerName}: failed to parse SSO token cache '${tokenCachePath}': ${err.message}; please run 've sso login' to re-authenticate.`,
       );
     }
   }
 
-  private isSsoAccessTokenExpired(expiresAt: unknown): boolean {
+  private isSsoAccessTokenExpired(
+    expiresAt: unknown,
+    tokenCachePath: string,
+  ): boolean {
     const value = this.trimToUndefined(expiresAt);
     if (!value) {
-      throw new Error(
-        `${this.providerName}: SSO token cache is missing expires_at`,
-      );
+      // 与 Python SDK 对齐：expires_at 缺失时不视为过期，继续用现有 access_token。
+      return false;
     }
     const expiresAtMs = Date.parse(value);
     if (Number.isNaN(expiresAtMs)) {
       throw new Error(
-        `${this.providerName}: invalid SSO token cache expires_at`,
+        `${this.providerName}: failed to parse expires_at in '${tokenCachePath}'; please run 've sso login' to re-authenticate.`,
       );
     }
     return Date.now() > expiresAtMs;
@@ -690,6 +702,7 @@ export class CLIConfigCredentialProvider implements Provider {
   private async refreshSsoAccessToken(
     tokenCache: any,
     region: string,
+    tokenCachePath: string,
   ): Promise<string> {
     const refreshToken = this.trimToUndefined(tokenCache.refresh_token);
     const clientId = this.trimToUndefined(tokenCache.client_id);
@@ -697,23 +710,27 @@ export class CLIConfigCredentialProvider implements Provider {
 
     if (!refreshToken) {
       throw new Error(
-        `${this.providerName}: SSO token cache is missing refresh_token`,
-      );
-    }
-    if (!clientId || !clientSecret) {
-      throw new Error(
-        `${this.providerName}: SSO token cache is missing client_id/client_secret`,
+        `${this.providerName}: SSO token cache '${tokenCachePath}' does not contain refresh_token; please run 've sso login' to re-authenticate.`,
       );
     }
 
     const clientSecretExpiresAt = Number(tokenCache.client_secret_expires_at);
-    const secretExpiresAt = this.parseUnixTimestamp(clientSecretExpiresAt);
-    if (
-      !clientSecretExpiresAt ||
-      Number.isNaN(secretExpiresAt.getTime()) ||
-      Date.now() > secretExpiresAt.getTime()
-    ) {
-      throw new Error(`${this.providerName}: SSO refresh token has expired`);
+    if (clientSecretExpiresAt && clientSecretExpiresAt > 0) {
+      const secretExpiresAt = this.parseUnixTimestamp(clientSecretExpiresAt);
+      if (
+        Number.isNaN(secretExpiresAt.getTime()) ||
+        Date.now() >= secretExpiresAt.getTime()
+      ) {
+        throw new Error(
+          `${this.providerName}: refresh token in '${tokenCachePath}' has expired; please run 've sso login' to re-authenticate.`,
+        );
+      }
+    }
+
+    if (!clientId || !clientSecret) {
+      throw new Error(
+        `${this.providerName}: SSO token cache '${tokenCachePath}' does not contain client_id/client_secret; please run 've sso login' to re-authenticate.`,
+      );
     }
 
     const tokenUrl = `https://cloudidentity-oauth.${region}.volces.com${OAUTH_TOKEN_PATH}`;
@@ -725,9 +742,14 @@ export class CLIConfigCredentialProvider implements Provider {
     });
 
     const accessToken = this.trimToUndefined(tokenResp.access_token);
-    if (!accessToken || !tokenResp.expires_in) {
+    if (!accessToken) {
       throw new Error(
-        `${this.providerName}: SSO refresh token response is missing credentials`,
+        `${this.providerName}: OAuth token response did not contain access_token; please run 've sso login' to re-authenticate.`,
+      );
+    }
+    if (!tokenResp.expires_in || Number(tokenResp.expires_in) <= 0) {
+      throw new Error(
+        `${this.providerName}: OAuth token response did not contain valid expires_in; please run 've sso login' to re-authenticate.`,
       );
     }
 
@@ -752,10 +774,14 @@ export class CLIConfigCredentialProvider implements Provider {
     const accountId = this.trimToUndefined(profile["account-id"]);
     const roleName = this.trimToUndefined(profile["role-name"]);
     if (!accountId) {
-      throw new Error(`${this.providerName}: sso mode is missing account-id`);
+      throw new Error(
+        `${this.providerName}: profile '${this.profileName}' mode is sso but account-id is not set.`,
+      );
     }
     if (!roleName) {
-      throw new Error(`${this.providerName}: sso mode is missing role-name`);
+      throw new Error(
+        `${this.providerName}: profile '${this.profileName}' mode is sso but role-name is not set.`,
+      );
     }
 
     const endpoint = new URL(
@@ -772,7 +798,7 @@ export class CLIConfigCredentialProvider implements Provider {
 
     if (!credentials?.AccessKeyId || !credentials?.SecretAccessKey) {
       throw new Error(
-        `${this.providerName}: SSO Portal response is missing temporary credentials`,
+        `${this.providerName}: Portal response missing AccessKeyId/SecretAccessKey.`,
       );
     }
 

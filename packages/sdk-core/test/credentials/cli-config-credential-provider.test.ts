@@ -162,7 +162,7 @@ describe("CLIConfigCredentialProvider", () => {
 
     const provider = new CLIConfigCredentialProvider();
     await expect(provider.resolveCredentials()).rejects.toThrow(
-      "HOME / USERPROFILE 环境变量未设置",
+      "HOME / USERPROFILE environment variable is not set",
     );
   });
 
@@ -176,7 +176,7 @@ describe("CLIConfigCredentialProvider", () => {
 
     const provider = new CLIConfigCredentialProvider();
     await expect(provider.resolveCredentials()).rejects.toThrow(
-      "配置文件不存在",
+      "config file not found at",
     );
   });
 
@@ -191,7 +191,7 @@ describe("CLIConfigCredentialProvider", () => {
 
     const provider = new CLIConfigCredentialProvider();
     await expect(provider.resolveCredentials()).rejects.toThrow(
-      "解析配置文件失败",
+      "failed to parse config file",
     );
   });
 
@@ -208,7 +208,7 @@ describe("CLIConfigCredentialProvider", () => {
 
     const provider = new CLIConfigCredentialProvider();
     await expect(provider.resolveCredentials()).rejects.toThrow(
-      "未找到有效的 profile",
+      "not found in config file",
     );
   });
 
@@ -228,7 +228,7 @@ describe("CLIConfigCredentialProvider", () => {
 
     const provider = new CLIConfigCredentialProvider();
     await expect(provider.resolveCredentials()).rejects.toThrow(
-      "缺少 access-key 或 secret-key",
+      "does not contain valid access-key and secret-key",
     );
   });
 
