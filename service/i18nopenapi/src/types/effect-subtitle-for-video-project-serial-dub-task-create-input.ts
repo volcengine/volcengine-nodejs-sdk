@@ -39,6 +39,12 @@ export interface EffectSubtitleForVideoProjectSerialDubTaskCreateInput {
     name?: string;
 
     /**
+     * @type {string}
+     * @memberof EffectSubtitleForVideoProjectSerialDubTaskCreateInput
+     */
+    subtitleId?: string;
+
+    /**
      * @type {number}
      * @memberof EffectSubtitleForVideoProjectSerialDubTaskCreateInput
      */

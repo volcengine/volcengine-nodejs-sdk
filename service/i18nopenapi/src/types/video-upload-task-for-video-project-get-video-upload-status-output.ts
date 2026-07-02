@@ -42,6 +42,12 @@ export interface VideoUploadTaskForVideoProjectGetVideoUploadStatusOutput {
      * @type {string}
      * @memberof VideoUploadTaskForVideoProjectGetVideoUploadStatusOutput
      */
+    subtitleId?: string;
+
+    /**
+     * @type {string}
+     * @memberof VideoUploadTaskForVideoProjectGetVideoUploadStatusOutput
+     */
     videoId?: string;
 
     /**
