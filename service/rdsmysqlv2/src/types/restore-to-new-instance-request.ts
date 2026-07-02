@@ -41,6 +41,12 @@ export interface RestoreToNewInstanceRequest {
      * @type {string}
      * @memberof RestoreToNewInstanceRequest
      */
+    AutoUpgradeMinorVersion?: string;
+
+    /**
+     * @type {string}
+     * @memberof RestoreToNewInstanceRequest
+     */
     BackupId?: string;
 
     /**

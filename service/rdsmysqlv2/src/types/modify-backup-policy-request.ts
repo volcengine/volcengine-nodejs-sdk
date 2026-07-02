@@ -168,6 +168,12 @@ export interface ModifyBackupPolicyRequest {
      * @type {number}
      * @memberof ModifyBackupPolicyRequest
      */
+    LockDDLTimeSecond?: number;
+
+    /**
+     * @type {number}
+     * @memberof ModifyBackupPolicyRequest
+     */
     LogBackupRetentionDay?: number;
 
     /**

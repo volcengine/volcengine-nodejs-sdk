@@ -192,6 +192,12 @@ export interface ListForListAmortizedCostBillDetailOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillDetailOutput
      */
+    DailyAmortizedPointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillDetailOutput
+     */
     DailyAmortizedPosttaxAmount?: string;
 
     /**
@@ -462,6 +468,12 @@ export interface ListForListAmortizedCostBillDetailOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillDetailOutput
      */
+    PointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillDetailOutput
+     */
     PosttaxAmount?: string;
 
     /**
@@ -529,6 +541,12 @@ export interface ListForListAmortizedCostBillDetailOutput {
      * @memberof ListForListAmortizedCostBillDetailOutput
      */
     ProjectDisplayName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillDetailOutput
+     */
+    ProjectRemark?: string;
 
     /**
      * @type {string}
@@ -655,6 +673,12 @@ export interface ListForListAmortizedCostBillDetailOutput {
      * @memberof ListForListAmortizedCostBillDetailOutput
      */
     Tag?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillDetailOutput
+     */
+    TagRemark?: string;
 
     /**
      * @type {string}

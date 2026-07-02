@@ -39,12 +39,6 @@ export interface VideoProjectCreateToolTaskRequest {
     toolParamsJson?: string;
 
     /**
-     * @type {string}
-     * @memberof VideoProjectCreateToolTaskRequest
-     */
-    userId?: string;
-
-    /**
      * @type {Array<string>}
      * @memberof VideoProjectCreateToolTaskRequest
      */

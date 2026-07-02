@@ -30,6 +30,12 @@ export interface OrderFailRefundInfoForListOrdersOutput {
      * @type {string}
      * @memberof OrderFailRefundInfoForListOrdersOutput
      */
+    DeductionCount?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderFailRefundInfoForListOrdersOutput
+     */
     DiscountAmount?: string;
 
     /**

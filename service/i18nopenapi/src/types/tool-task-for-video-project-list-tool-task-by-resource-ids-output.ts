@@ -13,6 +13,7 @@
  */
 
 import { ToolResourceForVideoProjectListToolTaskByResourceIDsOutput } from './tool-resource-for-video-project-list-tool-task-by-resource-ids-output';
+import { ToolTaskResultForVideoProjectListToolTaskByResourceIDsOutput } from './tool-task-result-for-video-project-list-tool-task-by-resource-ids-output';
  /**
  * 
  *
@@ -43,19 +44,19 @@ export interface ToolTaskForVideoProjectListToolTaskByResourceIDsOutput {
      * @type {string}
      * @memberof ToolTaskForVideoProjectListToolTaskByResourceIDsOutput
      */
-    projectID?: string;
+    projectId?: string;
 
     /**
      * @type {string}
      * @memberof ToolTaskForVideoProjectListToolTaskByResourceIDsOutput
      */
-    resourceID?: string;
+    resourceId?: string;
 
     /**
      * @type {string}
      * @memberof ToolTaskForVideoProjectListToolTaskByResourceIDsOutput
      */
-    taskID?: string;
+    taskId?: string;
 
     /**
      * @type {string}
@@ -88,6 +89,12 @@ export interface ToolTaskForVideoProjectListToolTaskByResourceIDsOutput {
     toolResource?: ToolResourceForVideoProjectListToolTaskByResourceIDsOutput;
 
     /**
+     * @type {Array<ToolTaskResultForVideoProjectListToolTaskByResourceIDsOutput>}
+     * @memberof ToolTaskForVideoProjectListToolTaskByResourceIDsOutput
+     */
+    toolTaskResults?: Array<ToolTaskResultForVideoProjectListToolTaskByResourceIDsOutput>;
+
+    /**
      * @type {string}
      * @memberof ToolTaskForVideoProjectListToolTaskByResourceIDsOutput
      */
@@ -97,5 +104,5 @@ export interface ToolTaskForVideoProjectListToolTaskByResourceIDsOutput {
      * @type {string}
      * @memberof ToolTaskForVideoProjectListToolTaskByResourceIDsOutput
      */
-    userID?: string;
+    userId?: string;
 }

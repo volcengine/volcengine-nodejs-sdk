@@ -41,6 +41,12 @@ export interface RestoreToCrossRegionInstanceRequest {
      * @type {string}
      * @memberof RestoreToCrossRegionInstanceRequest
      */
+    AutoUpgradeMinorVersion?: string;
+
+    /**
+     * @type {string}
+     * @memberof RestoreToCrossRegionInstanceRequest
+     */
     BackupId?: string;
 
     /**

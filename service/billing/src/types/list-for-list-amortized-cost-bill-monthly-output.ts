@@ -84,6 +84,12 @@ export interface ListForListAmortizedCostBillMonthlyOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillMonthlyOutput
      */
+    BeforeAmortizedPointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillMonthlyOutput
+     */
     BeforeAmortizedPosttaxAmount?: string;
 
     /**
@@ -301,6 +307,12 @@ export interface ListForListAmortizedCostBillMonthlyOutput {
      * @memberof ListForListAmortizedCostBillMonthlyOutput
      */
     DailyAmortizedPayableAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillMonthlyOutput
+     */
+    DailyAmortizedPointDeductAmount?: string;
 
     /**
      * @type {string}
@@ -528,6 +540,12 @@ export interface ListForListAmortizedCostBillMonthlyOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillMonthlyOutput
      */
+    NowAmortizedPointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillMonthlyOutput
+     */
     NowAmortizedPosttaxAmount?: string;
 
     /**
@@ -679,6 +697,12 @@ export interface ListForListAmortizedCostBillMonthlyOutput {
      * @memberof ListForListAmortizedCostBillMonthlyOutput
      */
     PayerUserName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillMonthlyOutput
+     */
+    PointDeductAmount?: string;
 
     /**
      * @type {string}
@@ -913,6 +937,12 @@ export interface ListForListAmortizedCostBillMonthlyOutput {
      * @memberof ListForListAmortizedCostBillMonthlyOutput
      */
     UnamortizedPayableAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListAmortizedCostBillMonthlyOutput
+     */
+    UnamortizedPointDeductAmount?: string;
 
     /**
      * @type {string}

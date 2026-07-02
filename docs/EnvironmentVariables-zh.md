@@ -72,7 +72,7 @@ setx VOLCENGINE_SESSION_TOKEN your-session-token /M
 
 | 变量                               | 说明                                          | 默认值 |
 | ---------------------------------- | --------------------------------------------- | ------ |
-| `VOLCENGINE_ECS_METADATA`          | 指定 ECS 实例角色名（必须设置，除非通过构造参数传入） | -      |
+| `VOLCENGINE_ECS_METADATA`          | 指定 ECS 实例角色名；未设置时从 IMDS 自动探测         | -      |
 | `VOLCENGINE_ECS_METADATA_DISABLED` | 设为 `true` 禁用 IMDS 凭证获取                | -      |
 
 #### CLI 配置文件

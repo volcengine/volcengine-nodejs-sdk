@@ -180,6 +180,12 @@ export interface ListForListBillOutput {
      * @type {string}
      * @memberof ListForListBillOutput
      */
+    PointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillOutput
+     */
     PosttaxAmount?: string;
 
     /**

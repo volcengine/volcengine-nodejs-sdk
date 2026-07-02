@@ -34,6 +34,12 @@ export interface CreateTransitRouterVpnAttachmentRequest {
     Description?: string;
 
     /**
+     * @type {string}
+     * @memberof CreateTransitRouterVpnAttachmentRequest
+     */
+    SecondaryZoneId?: string;
+
+    /**
      * @type {Array<TagForCreateTransitRouterVpnAttachmentInput>}
      * @memberof CreateTransitRouterVpnAttachmentRequest
      */

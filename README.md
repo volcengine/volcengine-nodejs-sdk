@@ -86,3 +86,8 @@ main();
 ```
 
 更多代码示例请参考：[SDK 接入文档](./SDK_Integration_zh.md)
+
+## Security and privacy
+
+This project takes security seriously.
+For vulnerability reporting and supported versions, see [SECURITY.md](SECURITY.md)

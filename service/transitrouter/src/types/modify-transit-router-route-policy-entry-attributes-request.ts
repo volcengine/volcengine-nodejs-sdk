@@ -69,6 +69,12 @@ export interface ModifyTransitRouterRoutePolicyEntryAttributesRequest {
     IpPrefixes?: Array<string>;
 
     /**
+     * @type {string}
+     * @memberof ModifyTransitRouterRoutePolicyEntryAttributesRequest
+     */
+    PrefixListId?: string;
+
+    /**
      * @type {number}
      * @memberof ModifyTransitRouterRoutePolicyEntryAttributesRequest
      */

@@ -24,5 +24,11 @@ export interface VideoProjectGetToolTaskRequest {
      * @type {string}
      * @memberof VideoProjectGetToolTaskRequest
      */
+    projectId: string;
+
+    /**
+     * @type {string}
+     * @memberof VideoProjectGetToolTaskRequest
+     */
     taskId: string;
 }

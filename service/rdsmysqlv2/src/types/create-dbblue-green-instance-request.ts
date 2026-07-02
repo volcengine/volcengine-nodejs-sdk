@@ -24,6 +24,12 @@ import { ProxyNodeCustomForCreateDBBlueGreenInstanceInput } from './proxy-node-c
 export interface CreateDBBlueGreenInstanceRequest {
 
     /**
+     * @type {string}
+     * @memberof CreateDBBlueGreenInstanceRequest
+     */
+    AutoUpgradeMinorVersion?: string;
+
+    /**
      * @type {ChargeInfoForCreateDBBlueGreenInstanceInput}
      * @memberof CreateDBBlueGreenInstanceRequest
      */

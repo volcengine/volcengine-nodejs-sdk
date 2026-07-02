@@ -92,3 +92,8 @@ main();
 ```
 
 For more code examples, please refer to: [SDK Integration Documentation](./SDK_Integration.md)
+
+## Security and privacy
+
+This project takes security seriously.
+For vulnerability reporting and supported versions, see [SECURITY.md](SECURITY.md)

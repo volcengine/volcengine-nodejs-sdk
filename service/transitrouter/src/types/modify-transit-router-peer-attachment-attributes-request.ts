@@ -30,7 +30,19 @@ export interface ModifyTransitRouterPeerAttachmentAttributesRequest {
      * @type {string}
      * @memberof ModifyTransitRouterPeerAttachmentAttributesRequest
      */
+    BandwidthType?: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyTransitRouterPeerAttachmentAttributesRequest
+     */
     Description?: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyTransitRouterPeerAttachmentAttributesRequest
+     */
+    LineOperator?: string;
 
     /**
      * @type {string}
