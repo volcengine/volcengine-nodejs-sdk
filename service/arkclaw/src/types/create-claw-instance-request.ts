@@ -114,5 +114,11 @@ export interface CreateClawInstanceRequest {
      * @type {string}
      * @memberof CreateClawInstanceRequest
      */
+    TemplateId?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateClawInstanceRequest
+     */
     UserPoolUserUid?: string;
 }
