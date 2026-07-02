@@ -1,5 +1,13 @@
 # @volcengine/ark-runtime
 
+## 1.0.10
+
+### Patch Changes
+
+- 支持 cli 相关能力
+- Updated dependencies
+  - @volcengine/ark@1.0.3
+
 ## 1.0.9
 
 ### Patch Changes
