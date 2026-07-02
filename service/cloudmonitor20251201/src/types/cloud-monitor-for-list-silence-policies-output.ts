@@ -28,12 +28,6 @@ export interface CloudMonitorForListSilencePoliciesOutput {
     MetaCondition?: MetaConditionForListSilencePoliciesOutput;
 
     /**
-     * @type {Array<string>}
-     * @memberof CloudMonitorForListSilencePoliciesOutput
-     */
-    MetricNames?: Array<string>;
-
-    /**
      * @type {string}
      * @memberof CloudMonitorForListSilencePoliciesOutput
      */
