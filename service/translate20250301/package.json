@@ -1,6 +1,6 @@
 {
   "name": "@volcengine/translate20250301",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "swagger client for @volcengine/translate20250301",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
