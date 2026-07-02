@@ -30,7 +30,13 @@ export interface CreateTransitRouterRouteEntryRequest {
      * @type {string}
      * @memberof CreateTransitRouterRouteEntryRequest
      */
-    DestinationCidrBlock: string;
+    DestinationCidrBlock?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateTransitRouterRouteEntryRequest
+     */
+    DestinationPrefixListId?: string;
 
     /**
      * @type {string}

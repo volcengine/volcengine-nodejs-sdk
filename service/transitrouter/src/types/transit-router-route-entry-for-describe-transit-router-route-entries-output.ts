@@ -48,6 +48,12 @@ export interface TransitRouterRouteEntryForDescribeTransitRouterRouteEntriesOutp
      * @type {string}
      * @memberof TransitRouterRouteEntryForDescribeTransitRouterRouteEntriesOutput
      */
+    DestinationPrefixListId?: string;
+
+    /**
+     * @type {string}
+     * @memberof TransitRouterRouteEntryForDescribeTransitRouterRouteEntriesOutput
+     */
     Status?: string;
 
     /**
@@ -85,6 +91,12 @@ export interface TransitRouterRouteEntryForDescribeTransitRouterRouteEntriesOutp
      * @memberof TransitRouterRouteEntryForDescribeTransitRouterRouteEntriesOutput
      */
     TransitRouterRouteEntryNextHopType?: string;
+
+    /**
+     * @type {string}
+     * @memberof TransitRouterRouteEntryForDescribeTransitRouterRouteEntriesOutput
+     */
+    TransitRouterRouteEntryNextHopVpnTunnelId?: string;
 
     /**
      * @type {string}
