@@ -39,6 +39,12 @@ export interface SubtitleForVideoProjectSerialTaskCreateInput {
     name?: string;
 
     /**
+     * @type {string}
+     * @memberof SubtitleForVideoProjectSerialTaskCreateInput
+     */
+    subtitleId?: string;
+
+    /**
      * @type {number}
      * @memberof SubtitleForVideoProjectSerialTaskCreateInput
      */
