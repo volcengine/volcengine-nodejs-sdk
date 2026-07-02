@@ -1,0 +1,14 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "1234c6cd8873cf03126c79c4643f8f36a26fa456",
+  "prompts": {},
+  "humans": {
+    "h_6a88062d9a7e18": {
+      "author": "jennyZang <zangleiguang@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
