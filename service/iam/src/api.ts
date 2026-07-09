@@ -30,6 +30,8 @@ import { AttachUserPolicyRequest } from './types/index';
 import { AttachUserPolicyResponse } from './types/index';
 import { CreateAccessKeyRequest } from './types/index';
 import { CreateAccessKeyResponse } from './types/index';
+import { CreateApiKeyRequest } from './types/index';
+import { CreateApiKeyResponse } from './types/index';
 import { CreateGroupRequest } from './types/index';
 import { CreateGroupResponse } from './types/index';
 import { CreateLoginProfileRequest } from './types/index';
@@ -50,6 +52,8 @@ import { CreateUserRequest } from './types/index';
 import { CreateUserResponse } from './types/index';
 import { DeleteAccessKeyRequest } from './types/index';
 import { DeleteAccessKeyResponse } from './types/index';
+import { DeleteApiKeyRequest } from './types/index';
+import { DeleteApiKeyResponse } from './types/index';
 import { DeleteGroupRequest } from './types/index';
 import { DeleteGroupResponse } from './types/index';
 import { DeleteLoginProfileRequest } from './types/index';
@@ -102,6 +106,8 @@ import { GetUserRequest } from './types/index';
 import { GetUserResponse } from './types/index';
 import { ListAccessKeysRequest } from './types/index';
 import { ListAccessKeysResponse } from './types/index';
+import { ListApiKeysRequest } from './types/index';
+import { ListApiKeysResponse } from './types/index';
 import { ListAttachedRolePoliciesRequest } from './types/index';
 import { ListAttachedRolePoliciesResponse } from './types/index';
 import { ListAttachedUserGroupPoliciesRequest } from './types/index';
@@ -150,6 +156,8 @@ import { UpdateAccessKeyRequest } from './types/index';
 import { UpdateAccessKeyResponse } from './types/index';
 import { UpdateAllowedIPAddressesRequest } from './types/index';
 import { UpdateAllowedIPAddressesResponse } from './types/index';
+import { UpdateApiKeyRequest } from './types/index';
+import { UpdateApiKeyResponse } from './types/index';
 import { UpdateGroupRequest } from './types/index';
 import { UpdateGroupResponse } from './types/index';
 import { UpdateLoginProfileRequest } from './types/index';
@@ -178,6 +186,7 @@ export type AttachRolePolicyCommandOutput = CommandOutput<AttachRolePolicyRespon
 export type AttachUserGroupPolicyCommandOutput = CommandOutput<AttachUserGroupPolicyResponse>;
 export type AttachUserPolicyCommandOutput = CommandOutput<AttachUserPolicyResponse>;
 export type CreateAccessKeyCommandOutput = CommandOutput<CreateAccessKeyResponse>;
+export type CreateApiKeyCommandOutput = CommandOutput<CreateApiKeyResponse>;
 export type CreateGroupCommandOutput = CommandOutput<CreateGroupResponse>;
 export type CreateLoginProfileCommandOutput = CommandOutput<CreateLoginProfileResponse>;
 export type CreateOAuthProviderCommandOutput = CommandOutput<CreateOAuthProviderResponse>;
@@ -188,6 +197,7 @@ export type CreateSAMLProviderCommandOutput = CommandOutput<CreateSAMLProviderRe
 export type CreateServiceLinkedRoleCommandOutput = CommandOutput<CreateServiceLinkedRoleResponse>;
 export type CreateUserCommandOutput = CommandOutput<CreateUserResponse>;
 export type DeleteAccessKeyCommandOutput = CommandOutput<DeleteAccessKeyResponse>;
+export type DeleteApiKeyCommandOutput = CommandOutput<DeleteApiKeyResponse>;
 export type DeleteGroupCommandOutput = CommandOutput<DeleteGroupResponse>;
 export type DeleteLoginProfileCommandOutput = CommandOutput<DeleteLoginProfileResponse>;
 export type DeleteOAuthProviderCommandOutput = CommandOutput<DeleteOAuthProviderResponse>;
@@ -214,6 +224,7 @@ export type GetSecurityConfigCommandOutput = CommandOutput<GetSecurityConfigResp
 export type GetServiceLinkedRoleTemplateCommandOutput = CommandOutput<GetServiceLinkedRoleTemplateResponse>;
 export type GetUserCommandOutput = CommandOutput<GetUserResponse>;
 export type ListAccessKeysCommandOutput = CommandOutput<ListAccessKeysResponse>;
+export type ListApiKeysCommandOutput = CommandOutput<ListApiKeysResponse>;
 export type ListAttachedRolePoliciesCommandOutput = CommandOutput<ListAttachedRolePoliciesResponse>;
 export type ListAttachedUserGroupPoliciesCommandOutput = CommandOutput<ListAttachedUserGroupPoliciesResponse>;
 export type ListAttachedUserPoliciesCommandOutput = CommandOutput<ListAttachedUserPoliciesResponse>;
@@ -238,6 +249,7 @@ export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateAccessKeyCommandOutput = CommandOutput<UpdateAccessKeyResponse>;
 export type UpdateAllowedIPAddressesCommandOutput = CommandOutput<UpdateAllowedIPAddressesResponse>;
+export type UpdateApiKeyCommandOutput = CommandOutput<UpdateApiKeyResponse>;
 export type UpdateGroupCommandOutput = CommandOutput<UpdateGroupResponse>;
 export type UpdateLoginProfileCommandOutput = CommandOutput<UpdateLoginProfileResponse>;
 export type UpdateOAuthProviderCommandOutput = CommandOutput<UpdateOAuthProviderResponse>;
@@ -378,6 +390,21 @@ export class CreateAccessKeyCommand extends Command<
   constructor(input: CreateAccessKeyRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateAccessKeyCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateApiKey
+ */
+export class CreateApiKeyCommand extends Command<
+  CreateApiKeyRequest,
+  CreateApiKeyCommandOutput,
+  'CreateApiKeyCommand'
+> {
+  static readonly metaPath = '/CreateApiKey/2018-01-01/iam/get/text_plain/';
+
+  constructor(input: CreateApiKeyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateApiKeyCommand.metaPath);
   }
 }
 /**
@@ -528,6 +555,21 @@ export class DeleteAccessKeyCommand extends Command<
   constructor(input: DeleteAccessKeyRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteAccessKeyCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteApiKey
+ */
+export class DeleteApiKeyCommand extends Command<
+  DeleteApiKeyRequest,
+  DeleteApiKeyCommandOutput,
+  'DeleteApiKeyCommand'
+> {
+  static readonly metaPath = '/DeleteApiKey/2018-01-01/iam/get/text_plain/';
+
+  constructor(input: DeleteApiKeyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteApiKeyCommand.metaPath);
   }
 }
 /**
@@ -921,6 +963,21 @@ export class ListAccessKeysCommand extends Command<
   }
 }
 /**
+ * Command to ListApiKeys
+ */
+export class ListApiKeysCommand extends Command<
+  ListApiKeysRequest,
+  ListApiKeysCommandOutput,
+  'ListApiKeysCommand'
+> {
+  static readonly metaPath = '/ListApiKeys/2018-01-01/iam/get/text_plain/';
+
+  constructor(input: ListApiKeysRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListApiKeysCommand.metaPath);
+  }
+}
+/**
  * Command to ListAttachedRolePolicies
  */
 export class ListAttachedRolePoliciesCommand extends Command<
@@ -1281,6 +1338,21 @@ export class UpdateAllowedIPAddressesCommand extends Command<
   }
 }
 /**
+ * Command to UpdateApiKey
+ */
+export class UpdateApiKeyCommand extends Command<
+  UpdateApiKeyRequest,
+  UpdateApiKeyCommandOutput,
+  'UpdateApiKeyCommand'
+> {
+  static readonly metaPath = '/UpdateApiKey/2018-01-01/iam/get/text_plain/';
+
+  constructor(input: UpdateApiKeyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateApiKeyCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateGroup
  */
 export class UpdateGroupCommand extends Command<
@@ -1411,6 +1483,7 @@ export default {
   AttachUserGroupPolicyCommand,
   AttachUserPolicyCommand,
   CreateAccessKeyCommand,
+  CreateApiKeyCommand,
   CreateGroupCommand,
   CreateLoginProfileCommand,
   CreateOAuthProviderCommand,
@@ -1421,6 +1494,7 @@ export default {
   CreateServiceLinkedRoleCommand,
   CreateUserCommand,
   DeleteAccessKeyCommand,
+  DeleteApiKeyCommand,
   DeleteGroupCommand,
   DeleteLoginProfileCommand,
   DeleteOAuthProviderCommand,
@@ -1447,6 +1521,7 @@ export default {
   GetServiceLinkedRoleTemplateCommand,
   GetUserCommand,
   ListAccessKeysCommand,
+  ListApiKeysCommand,
   ListAttachedRolePoliciesCommand,
   ListAttachedUserGroupPoliciesCommand,
   ListAttachedUserPoliciesCommand,
@@ -1471,6 +1546,7 @@ export default {
   UntagResourcesCommand,
   UpdateAccessKeyCommand,
   UpdateAllowedIPAddressesCommand,
+  UpdateApiKeyCommand,
   UpdateGroupCommand,
   UpdateLoginProfileCommand,
   UpdateOAuthProviderCommand,

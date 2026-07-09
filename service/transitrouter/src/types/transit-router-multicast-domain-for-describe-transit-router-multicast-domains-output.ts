@@ -17,49 +17,49 @@ import { TagForDescribeTransitRouterMulticastDomainsOutput } from './tag-for-des
  * 
  *
  * @export
- * @interface TransitRouterMulticastDomainsForDescribeTransitRouterMulticastDomainsOutput
+ * @interface TransitRouterMulticastDomainForDescribeTransitRouterMulticastDomainsOutput
  */
-export interface TransitRouterMulticastDomainsForDescribeTransitRouterMulticastDomainsOutput {
+export interface TransitRouterMulticastDomainForDescribeTransitRouterMulticastDomainsOutput {
 
     /**
      * @type {string}
-     * @memberof TransitRouterMulticastDomainsForDescribeTransitRouterMulticastDomainsOutput
+     * @memberof TransitRouterMulticastDomainForDescribeTransitRouterMulticastDomainsOutput
      */
     CreationTime?: string;
 
     /**
      * @type {string}
-     * @memberof TransitRouterMulticastDomainsForDescribeTransitRouterMulticastDomainsOutput
+     * @memberof TransitRouterMulticastDomainForDescribeTransitRouterMulticastDomainsOutput
      */
     Description?: string;
 
     /**
      * @type {string}
-     * @memberof TransitRouterMulticastDomainsForDescribeTransitRouterMulticastDomainsOutput
+     * @memberof TransitRouterMulticastDomainForDescribeTransitRouterMulticastDomainsOutput
      */
     Status?: string;
 
     /**
      * @type {Array<TagForDescribeTransitRouterMulticastDomainsOutput>}
-     * @memberof TransitRouterMulticastDomainsForDescribeTransitRouterMulticastDomainsOutput
+     * @memberof TransitRouterMulticastDomainForDescribeTransitRouterMulticastDomainsOutput
      */
     Tags?: Array<TagForDescribeTransitRouterMulticastDomainsOutput>;
 
     /**
      * @type {string}
-     * @memberof TransitRouterMulticastDomainsForDescribeTransitRouterMulticastDomainsOutput
+     * @memberof TransitRouterMulticastDomainForDescribeTransitRouterMulticastDomainsOutput
      */
     TransitRouterMulticastDomainId?: string;
 
     /**
      * @type {string}
-     * @memberof TransitRouterMulticastDomainsForDescribeTransitRouterMulticastDomainsOutput
+     * @memberof TransitRouterMulticastDomainForDescribeTransitRouterMulticastDomainsOutput
      */
     TransitRouterMulticastDomainName?: string;
 
     /**
      * @type {string}
-     * @memberof TransitRouterMulticastDomainsForDescribeTransitRouterMulticastDomainsOutput
+     * @memberof TransitRouterMulticastDomainForDescribeTransitRouterMulticastDomainsOutput
      */
     UpdateTime?: string;
 }

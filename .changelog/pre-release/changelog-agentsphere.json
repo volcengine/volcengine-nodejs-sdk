@@ -1,0 +1,5 @@
+{
+  "description": "AGENTSPHERE: 新增 DeleteSession, GetSession, ListDigitalEmployees, ListMessages, ListSessions, ChatASSession, CreateSession",
+  "modules": "service/agentsphere",
+  "type": "feature"
+}
