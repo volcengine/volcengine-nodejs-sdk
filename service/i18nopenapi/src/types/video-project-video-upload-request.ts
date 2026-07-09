@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { UploadVideoInfoForVideoProjectVideoUploadInput } from './upload-video-info-for-video-project-video-upload-input';
  /**
  * 
  *
@@ -25,6 +26,12 @@ export interface VideoProjectVideoUploadRequest {
      * @memberof VideoProjectVideoUploadRequest
      */
     projectId: string;
+
+    /**
+     * @type {Array<UploadVideoInfoForVideoProjectVideoUploadInput>}
+     * @memberof VideoProjectVideoUploadRequest
+     */
+    uploadVideoInfos?: Array<UploadVideoInfoForVideoProjectVideoUploadInput>;
 
     /**
      * @type {Array<string>}

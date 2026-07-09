@@ -1,6 +1,6 @@
 {
   "name": "@volcengine/certificateservice",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "swagger client for @volcengine/certificateservice",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",

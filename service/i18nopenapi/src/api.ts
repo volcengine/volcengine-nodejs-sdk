@@ -216,6 +216,8 @@ import { VideoProjectDeleteVideoDramaRequest } from './types/index';
 import { VideoProjectDeleteVideoDramaResponse } from './types/index';
 import { VideoProjectGetToolTaskRequest } from './types/index';
 import { VideoProjectGetToolTaskResponse } from './types/index';
+import { VideoProjectGetUploadSubtitleStatusRequest } from './types/index';
+import { VideoProjectGetUploadSubtitleStatusResponse } from './types/index';
 import { VideoProjectGetVideoUploadStatusRequest } from './types/index';
 import { VideoProjectGetVideoUploadStatusResponse } from './types/index';
 import { VideoProjectListRequest } from './types/index';
@@ -230,6 +232,8 @@ import { VideoProjectSerialDubTaskCreateRequest } from './types/index';
 import { VideoProjectSerialDubTaskCreateResponse } from './types/index';
 import { VideoProjectSerialTaskCreateRequest } from './types/index';
 import { VideoProjectSerialTaskCreateResponse } from './types/index';
+import { VideoProjectSubtitleUploadRequest } from './types/index';
+import { VideoProjectSubtitleUploadResponse } from './types/index';
 import { VideoProjectSuppressionStartRequest } from './types/index';
 import { VideoProjectSuppressionStartResponse } from './types/index';
 import { VideoProjectTaskBatchStartAIFlowRequest } from './types/index';
@@ -351,6 +355,7 @@ export type VideoProjectCreateCommandOutput = CommandOutput<VideoProjectCreateRe
 export type VideoProjectCreateToolTaskCommandOutput = CommandOutput<VideoProjectCreateToolTaskResponse>;
 export type VideoProjectDeleteVideoDramaCommandOutput = CommandOutput<VideoProjectDeleteVideoDramaResponse>;
 export type VideoProjectGetToolTaskCommandOutput = CommandOutput<VideoProjectGetToolTaskResponse>;
+export type VideoProjectGetUploadSubtitleStatusCommandOutput = CommandOutput<VideoProjectGetUploadSubtitleStatusResponse>;
 export type VideoProjectGetVideoUploadStatusCommandOutput = CommandOutput<VideoProjectGetVideoUploadStatusResponse>;
 export type VideoProjectListCommandOutput = CommandOutput<VideoProjectListResponse>;
 export type VideoProjectListToolProjectResourcesCommandOutput = CommandOutput<VideoProjectListToolProjectResourcesResponse>;
@@ -358,6 +363,7 @@ export type VideoProjectListToolTaskByResourceIDsCommandOutput = CommandOutput<V
 export type VideoProjectListVideoDramaCommandOutput = CommandOutput<VideoProjectListVideoDramaResponse>;
 export type VideoProjectSerialDubTaskCreateCommandOutput = CommandOutput<VideoProjectSerialDubTaskCreateResponse>;
 export type VideoProjectSerialTaskCreateCommandOutput = CommandOutput<VideoProjectSerialTaskCreateResponse>;
+export type VideoProjectSubtitleUploadCommandOutput = CommandOutput<VideoProjectSubtitleUploadResponse>;
 export type VideoProjectSuppressionStartCommandOutput = CommandOutput<VideoProjectSuppressionStartResponse>;
 export type VideoProjectTaskBatchStartAIFlowCommandOutput = CommandOutput<VideoProjectTaskBatchStartAIFlowResponse>;
 export type VideoProjectTaskDetailCommandOutput = CommandOutput<VideoProjectTaskDetailResponse>;
@@ -1896,6 +1902,21 @@ export class VideoProjectGetToolTaskCommand extends Command<
   }
 }
 /**
+ * Command to VideoProjectGetUploadSubtitleStatus
+ */
+export class VideoProjectGetUploadSubtitleStatusCommand extends Command<
+  VideoProjectGetUploadSubtitleStatusRequest,
+  VideoProjectGetUploadSubtitleStatusCommandOutput,
+  'VideoProjectGetUploadSubtitleStatusCommand'
+> {
+  static readonly metaPath = '/VideoProjectGetUploadSubtitleStatus/2021-05-21/i18n_openapi/get/text_plain/';
+
+  constructor(input: VideoProjectGetUploadSubtitleStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectGetUploadSubtitleStatusCommand.metaPath);
+  }
+}
+/**
  * Command to VideoProjectGetVideoUploadStatus
  */
 export class VideoProjectGetVideoUploadStatusCommand extends Command<
@@ -1998,6 +2019,21 @@ export class VideoProjectSerialTaskCreateCommand extends Command<
   constructor(input: VideoProjectSerialTaskCreateRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectSerialTaskCreateCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoProjectSubtitleUpload
+ */
+export class VideoProjectSubtitleUploadCommand extends Command<
+  VideoProjectSubtitleUploadRequest,
+  VideoProjectSubtitleUploadCommandOutput,
+  'VideoProjectSubtitleUploadCommand'
+> {
+  static readonly metaPath = '/VideoProjectSubtitleUpload/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoProjectSubtitleUploadRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectSubtitleUploadCommand.metaPath);
   }
 }
 /**
@@ -2224,6 +2260,7 @@ export default {
   VideoProjectCreateToolTaskCommand,
   VideoProjectDeleteVideoDramaCommand,
   VideoProjectGetToolTaskCommand,
+  VideoProjectGetUploadSubtitleStatusCommand,
   VideoProjectGetVideoUploadStatusCommand,
   VideoProjectListCommand,
   VideoProjectListToolProjectResourcesCommand,
@@ -2231,6 +2268,7 @@ export default {
   VideoProjectListVideoDramaCommand,
   VideoProjectSerialDubTaskCreateCommand,
   VideoProjectSerialTaskCreateCommand,
+  VideoProjectSubtitleUploadCommand,
   VideoProjectSuppressionStartCommand,
   VideoProjectTaskBatchStartAIFlowCommand,
   VideoProjectTaskDetailCommand,
