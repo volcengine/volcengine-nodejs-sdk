@@ -14,6 +14,8 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { AddAdbKeyRequest } from './types/index';
+import { AddAdbKeyResponse } from './types/index';
 import { AddCustomRouteRequest } from './types/index';
 import { AddCustomRouteResponse } from './types/index';
 import { AddPhoneTemplateRequest } from './types/index';
@@ -30,6 +32,8 @@ import { BanUserRequest } from './types/index';
 import { BanUserResponse } from './types/index';
 import { BatchScreenShotRequest } from './types/index';
 import { BatchScreenShotResponse } from './types/index';
+import { BindAdbKeyPodsRequest } from './types/index';
+import { BindAdbKeyPodsResponse } from './types/index';
 import { BindPortMappingRuleRequest } from './types/index';
 import { BindPortMappingRuleResponse } from './types/index';
 import { BuildAOSPImageRequest } from './types/index';
@@ -56,6 +60,8 @@ import { CreateTagRequest } from './types/index';
 import { CreateTagResponse } from './types/index';
 import { DeleteAOSPImageRequest } from './types/index';
 import { DeleteAOSPImageResponse } from './types/index';
+import { DeleteAdbKeyRequest } from './types/index';
+import { DeleteAdbKeyResponse } from './types/index';
 import { DeleteAppRequest } from './types/index';
 import { DeleteAppResponse } from './types/index';
 import { DeleteBackupDataRequest } from './types/index';
@@ -114,6 +120,10 @@ import { LaunchAppsRequest } from './types/index';
 import { LaunchAppsResponse } from './types/index';
 import { ListAOSPImageRequest } from './types/index';
 import { ListAOSPImageResponse } from './types/index';
+import { ListAdbKeyPodBindingsRequest } from './types/index';
+import { ListAdbKeyPodBindingsResponse } from './types/index';
+import { ListAdbKeyRequest } from './types/index';
+import { ListAdbKeyResponse } from './types/index';
 import { ListAppRequest } from './types/index';
 import { ListAppResponse } from './types/index';
 import { ListAppVersionDeployRequest } from './types/index';
@@ -200,6 +210,8 @@ import { StopScreenShotRequest } from './types/index';
 import { StopScreenShotResponse } from './types/index';
 import { SubscribeResourceAutoRequest } from './types/index';
 import { SubscribeResourceAutoResponse } from './types/index';
+import { UnbindAdbKeyPodsRequest } from './types/index';
+import { UnbindAdbKeyPodsResponse } from './types/index';
 import { UnbindPortMappingRuleRequest } from './types/index';
 import { UnbindPortMappingRuleResponse } from './types/index';
 import { UninstallAppRequest } from './types/index';
@@ -208,6 +220,8 @@ import { UnsubscribeHostResourceRequest } from './types/index';
 import { UnsubscribeHostResourceResponse } from './types/index';
 import { UpdateAOSPImageRequest } from './types/index';
 import { UpdateAOSPImageResponse } from './types/index';
+import { UpdateAdbKeyRequest } from './types/index';
+import { UpdateAdbKeyResponse } from './types/index';
 import { UpdateAppRequest } from './types/index';
 import { UpdateAppResponse } from './types/index';
 import { UpdateCustomRouteRequest } from './types/index';
@@ -234,6 +248,7 @@ import { UploadAppResponse } from './types/index';
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type AddAdbKeyCommandOutput = CommandOutput<AddAdbKeyResponse>;
 export type AddCustomRouteCommandOutput = CommandOutput<AddCustomRouteResponse>;
 export type AddPhoneTemplateCommandOutput = CommandOutput<AddPhoneTemplateResponse>;
 export type AttachTagCommandOutput = CommandOutput<AttachTagResponse>;
@@ -242,6 +257,7 @@ export type BackupDataCommandOutput = CommandOutput<BackupDataResponse>;
 export type BackupPodCommandOutput = CommandOutput<BackupPodResponse>;
 export type BanUserCommandOutput = CommandOutput<BanUserResponse>;
 export type BatchScreenShotCommandOutput = CommandOutput<BatchScreenShotResponse>;
+export type BindAdbKeyPodsCommandOutput = CommandOutput<BindAdbKeyPodsResponse>;
 export type BindPortMappingRuleCommandOutput = CommandOutput<BindPortMappingRuleResponse>;
 export type BuildAOSPImageCommandOutput = CommandOutput<BuildAOSPImageResponse>;
 export type CancelBackupPodCommandOutput = CommandOutput<CancelBackupPodResponse>;
@@ -255,6 +271,7 @@ export type CreatePodOneStepCommandOutput = CommandOutput<CreatePodOneStepRespon
 export type CreatePortMappingRuleCommandOutput = CommandOutput<CreatePortMappingRuleResponse>;
 export type CreateTagCommandOutput = CommandOutput<CreateTagResponse>;
 export type DeleteAOSPImageCommandOutput = CommandOutput<DeleteAOSPImageResponse>;
+export type DeleteAdbKeyCommandOutput = CommandOutput<DeleteAdbKeyResponse>;
 export type DeleteAppCommandOutput = CommandOutput<DeleteAppResponse>;
 export type DeleteBackupDataCommandOutput = CommandOutput<DeleteBackupDataResponse>;
 export type DeleteCustomRouteCommandOutput = CommandOutput<DeleteCustomRouteResponse>;
@@ -284,6 +301,8 @@ export type InstallAppsCommandOutput = CommandOutput<InstallAppsResponse>;
 export type LaunchAppCommandOutput = CommandOutput<LaunchAppResponse>;
 export type LaunchAppsCommandOutput = CommandOutput<LaunchAppsResponse>;
 export type ListAOSPImageCommandOutput = CommandOutput<ListAOSPImageResponse>;
+export type ListAdbKeyCommandOutput = CommandOutput<ListAdbKeyResponse>;
+export type ListAdbKeyPodBindingsCommandOutput = CommandOutput<ListAdbKeyPodBindingsResponse>;
 export type ListAppCommandOutput = CommandOutput<ListAppResponse>;
 export type ListAppVersionDeployCommandOutput = CommandOutput<ListAppVersionDeployResponse>;
 export type ListBackupDataCommandOutput = CommandOutput<ListBackupDataResponse>;
@@ -327,10 +346,12 @@ export type StartScreenShotCommandOutput = CommandOutput<StartScreenShotResponse
 export type StopRecordingCommandOutput = CommandOutput<StopRecordingResponse>;
 export type StopScreenShotCommandOutput = CommandOutput<StopScreenShotResponse>;
 export type SubscribeResourceAutoCommandOutput = CommandOutput<SubscribeResourceAutoResponse>;
+export type UnbindAdbKeyPodsCommandOutput = CommandOutput<UnbindAdbKeyPodsResponse>;
 export type UnbindPortMappingRuleCommandOutput = CommandOutput<UnbindPortMappingRuleResponse>;
 export type UninstallAppCommandOutput = CommandOutput<UninstallAppResponse>;
 export type UnsubscribeHostResourceCommandOutput = CommandOutput<UnsubscribeHostResourceResponse>;
 export type UpdateAOSPImageCommandOutput = CommandOutput<UpdateAOSPImageResponse>;
+export type UpdateAdbKeyCommandOutput = CommandOutput<UpdateAdbKeyResponse>;
 export type UpdateAppCommandOutput = CommandOutput<UpdateAppResponse>;
 export type UpdateCustomRouteCommandOutput = CommandOutput<UpdateCustomRouteResponse>;
 export type UpdateDNSRuleCommandOutput = CommandOutput<UpdateDNSRuleResponse>;
@@ -356,6 +377,21 @@ export class ACEPClient extends Client {
   }
 }
 
+/**
+ * Command to AddAdbKey
+ */
+export class AddAdbKeyCommand extends Command<
+  AddAdbKeyRequest,
+  AddAdbKeyCommandOutput,
+  'AddAdbKeyCommand'
+> {
+  static readonly metaPath = '/AddAdbKey/2025-05-01/acep/post/application_json/';
+
+  constructor(input: AddAdbKeyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddAdbKeyCommand.metaPath);
+  }
+}
 /**
  * Command to AddCustomRoute
  */
@@ -474,6 +510,21 @@ export class BatchScreenShotCommand extends Command<
   constructor(input: BatchScreenShotRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(BatchScreenShotCommand.metaPath);
+  }
+}
+/**
+ * Command to BindAdbKeyPods
+ */
+export class BindAdbKeyPodsCommand extends Command<
+  BindAdbKeyPodsRequest,
+  BindAdbKeyPodsCommandOutput,
+  'BindAdbKeyPodsCommand'
+> {
+  static readonly metaPath = '/BindAdbKeyPods/2025-05-01/acep/post/application_json/';
+
+  constructor(input: BindAdbKeyPodsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BindAdbKeyPodsCommand.metaPath);
   }
 }
 /**
@@ -669,6 +720,21 @@ export class DeleteAOSPImageCommand extends Command<
   constructor(input: DeleteAOSPImageRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteAOSPImageCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteAdbKey
+ */
+export class DeleteAdbKeyCommand extends Command<
+  DeleteAdbKeyRequest,
+  DeleteAdbKeyCommandOutput,
+  'DeleteAdbKeyCommand'
+> {
+  static readonly metaPath = '/DeleteAdbKey/2025-05-01/acep/post/application_json/';
+
+  constructor(input: DeleteAdbKeyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAdbKeyCommand.metaPath);
   }
 }
 /**
@@ -1104,6 +1170,36 @@ export class ListAOSPImageCommand extends Command<
   constructor(input: ListAOSPImageRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListAOSPImageCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAdbKey
+ */
+export class ListAdbKeyCommand extends Command<
+  ListAdbKeyRequest,
+  ListAdbKeyCommandOutput,
+  'ListAdbKeyCommand'
+> {
+  static readonly metaPath = '/ListAdbKey/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListAdbKeyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAdbKeyCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAdbKeyPodBindings
+ */
+export class ListAdbKeyPodBindingsCommand extends Command<
+  ListAdbKeyPodBindingsRequest,
+  ListAdbKeyPodBindingsCommandOutput,
+  'ListAdbKeyPodBindingsCommand'
+> {
+  static readonly metaPath = '/ListAdbKeyPodBindings/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListAdbKeyPodBindingsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAdbKeyPodBindingsCommand.metaPath);
   }
 }
 /**
@@ -1752,6 +1848,21 @@ export class SubscribeResourceAutoCommand extends Command<
   }
 }
 /**
+ * Command to UnbindAdbKeyPods
+ */
+export class UnbindAdbKeyPodsCommand extends Command<
+  UnbindAdbKeyPodsRequest,
+  UnbindAdbKeyPodsCommandOutput,
+  'UnbindAdbKeyPodsCommand'
+> {
+  static readonly metaPath = '/UnbindAdbKeyPods/2025-05-01/acep/post/application_json/';
+
+  constructor(input: UnbindAdbKeyPodsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UnbindAdbKeyPodsCommand.metaPath);
+  }
+}
+/**
  * Command to UnbindPortMappingRule
  */
 export class UnbindPortMappingRuleCommand extends Command<
@@ -1809,6 +1920,21 @@ export class UpdateAOSPImageCommand extends Command<
   constructor(input: UpdateAOSPImageRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateAOSPImageCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateAdbKey
+ */
+export class UpdateAdbKeyCommand extends Command<
+  UpdateAdbKeyRequest,
+  UpdateAdbKeyCommandOutput,
+  'UpdateAdbKeyCommand'
+> {
+  static readonly metaPath = '/UpdateAdbKey/2025-05-01/acep/post/application_json/';
+
+  constructor(input: UpdateAdbKeyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAdbKeyCommand.metaPath);
   }
 }
 /**
@@ -1979,6 +2105,7 @@ export class UploadAppCommand extends Command<
 
 export default {
   ACEPClient,
+  AddAdbKeyCommand,
   AddCustomRouteCommand,
   AddPhoneTemplateCommand,
   AttachTagCommand,
@@ -1987,6 +2114,7 @@ export default {
   BackupPodCommand,
   BanUserCommand,
   BatchScreenShotCommand,
+  BindAdbKeyPodsCommand,
   BindPortMappingRuleCommand,
   BuildAOSPImageCommand,
   CancelBackupPodCommand,
@@ -2000,6 +2128,7 @@ export default {
   CreatePortMappingRuleCommand,
   CreateTagCommand,
   DeleteAOSPImageCommand,
+  DeleteAdbKeyCommand,
   DeleteAppCommand,
   DeleteBackupDataCommand,
   DeleteCustomRouteCommand,
@@ -2029,6 +2158,8 @@ export default {
   LaunchAppCommand,
   LaunchAppsCommand,
   ListAOSPImageCommand,
+  ListAdbKeyCommand,
+  ListAdbKeyPodBindingsCommand,
   ListAppCommand,
   ListAppVersionDeployCommand,
   ListBackupDataCommand,
@@ -2072,10 +2203,12 @@ export default {
   StopRecordingCommand,
   StopScreenShotCommand,
   SubscribeResourceAutoCommand,
+  UnbindAdbKeyPodsCommand,
   UnbindPortMappingRuleCommand,
   UninstallAppCommand,
   UnsubscribeHostResourceCommand,
   UpdateAOSPImageCommand,
+  UpdateAdbKeyCommand,
   UpdateAppCommand,
   UpdateCustomRouteCommand,
   UpdateDNSRuleCommand,
