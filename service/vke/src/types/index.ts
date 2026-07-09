@@ -228,6 +228,8 @@ export * from './runtime-for-create-default-node-pool-input';
 export * from './runtime-for-create-node-pool-input';
 export * from './runtime-for-list-node-pools-output';
 export * from './runtime-for-update-node-pool-config-input';
+export * from './scale-node-pool-request';
+export * from './scale-node-pool-response';
 export * from './scheduled-instance-policy-for-create-scaling-policy-input';
 export * from './scheduled-instance-policy-for-list-scaling-policies-output';
 export * from './scheduled-instance-policy-for-update-scaling-policy-input';
