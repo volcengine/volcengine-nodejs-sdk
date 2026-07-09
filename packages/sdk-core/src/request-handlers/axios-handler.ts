@@ -17,6 +17,11 @@ import { HttpOptions } from "../types/types";
 export type AxiosRequestHandlerOptions = HttpOptions;
 
 /**
+ * 默认 User-Agent
+ */
+const DEFAULT_USER_AGENT = "volcengine-nodejs-sdk";
+
+/**
  * 创建带有连接超时的 Agent
  *
  * Node.js 的 Agent.timeout 是 socket idle timeout，不是 TCP 连接超时。
@@ -39,7 +44,11 @@ function createAgentWithConnectTimeout<T extends http.Agent>(
     options: any,
     callback: (err: Error | null, socket?: Socket) => void,
   ) {
-    const socket: Socket = originalCreateConnection.call(this, options, callback);
+    const socket: Socket = originalCreateConnection.call(
+      this,
+      options,
+      callback,
+    );
 
     let connectTimer: ReturnType<typeof setTimeout> | null = null;
 
@@ -160,10 +169,18 @@ export class AxiosRequestHandler implements RequestHandler {
    * 发送 HTTP 请求
    */
   async request<T>(config: HttpRequestConfig): Promise<HttpResponse<T>> {
+    const headers = { ...config.headers };
+    const hasUserAgent = Object.keys(headers).some(
+      (key) => key.toLowerCase() === "user-agent",
+    );
+    if (!hasUserAgent) {
+      headers["User-Agent"] = DEFAULT_USER_AGENT;
+    }
+
     const axiosConfig: AxiosRequestConfig = {
       url: config.url,
       method: config.method as any,
-      headers: config.headers,
+      headers,
       data: config.data,
       timeout: config.timeout,
       proxy: config.proxy,
