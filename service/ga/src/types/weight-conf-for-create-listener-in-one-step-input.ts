@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface DescribeBasicIPSetRequest
+ * @interface WeightConfForCreateListenerInOneStepInput
  */
-export interface DescribeBasicIPSetRequest {
+export interface WeightConfForCreateListenerInOneStepInput {
 
     /**
-     * @type {string}
-     * @memberof DescribeBasicIPSetRequest
+     * @type {number}
+     * @memberof WeightConfForCreateListenerInOneStepInput
      */
-    AcceleratorId: string;
+    EndPointGroupIdx?: number;
 
     /**
-     * @type {string}
-     * @memberof DescribeBasicIPSetRequest
+     * @type {number}
+     * @memberof WeightConfForCreateListenerInOneStepInput
      */
-    IPSetId: string;
+    Weight?: number;
 }

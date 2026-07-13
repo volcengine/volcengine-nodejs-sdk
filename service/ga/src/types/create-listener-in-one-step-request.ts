@@ -13,10 +13,12 @@
  */
 
 import { BackupEndpointGroupForCreateListenerInOneStepInput } from './backup-endpoint-group-for-create-listener-in-one-step-input';
+import { EndPointGroupStrategyForCreateListenerInOneStepInput } from './end-point-group-strategy-for-create-listener-in-one-step-input';
 import { EndpointGroupForCreateListenerInOneStepInput } from './endpoint-group-for-create-listener-in-one-step-input';
 import { FixedSourceReturnForCreateListenerInOneStepInput } from './fixed-source-return-for-create-listener-in-one-step-input';
 import { IPAccessForCreateListenerInOneStepInput } from './ipaccess-for-create-listener-in-one-step-input';
 import { PortRangeForCreateListenerInOneStepInput } from './port-range-for-create-listener-in-one-step-input';
+import { ProtocolPortRangesForCreateListenerInOneStepInput } from './protocol-port-ranges-for-create-listener-in-one-step-input';
  /**
  * 
  *
@@ -50,10 +52,22 @@ export interface CreateListenerInOneStepRequest {
     DisablePreConnect?: boolean;
 
     /**
+     * @type {string}
+     * @memberof CreateListenerInOneStepRequest
+     */
+    DomainName?: string;
+
+    /**
      * @type {boolean}
      * @memberof CreateListenerInOneStepRequest
      */
     EnableAffinity: boolean;
+
+    /**
+     * @type {EndPointGroupStrategyForCreateListenerInOneStepInput}
+     * @memberof CreateListenerInOneStepRequest
+     */
+    EndPointGroupStrategy?: EndPointGroupStrategyForCreateListenerInOneStepInput;
 
     /**
      * @type {Array<EndpointGroupForCreateListenerInOneStepInput>}
@@ -77,6 +91,12 @@ export interface CreateListenerInOneStepRequest {
      * @type {string}
      * @memberof CreateListenerInOneStepRequest
      */
+    ListenerDomainName?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateListenerInOneStepRequest
+     */
     Name?: string;
 
     /**
@@ -90,4 +110,22 @@ export interface CreateListenerInOneStepRequest {
      * @memberof CreateListenerInOneStepRequest
      */
     Protocol: string;
+
+    /**
+     * @type {ProtocolPortRangesForCreateListenerInOneStepInput}
+     * @memberof CreateListenerInOneStepRequest
+     */
+    ProtocolPortRanges?: ProtocolPortRangesForCreateListenerInOneStepInput;
+
+    /**
+     * @type {boolean}
+     * @memberof CreateListenerInOneStepRequest
+     */
+    RouteRetry?: boolean;
+
+    /**
+     * @type {number}
+     * @memberof CreateListenerInOneStepRequest
+     */
+    RouteRetryMax?: number;
 }

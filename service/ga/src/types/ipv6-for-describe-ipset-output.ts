@@ -16,19 +16,25 @@
  * 
  *
  * @export
- * @interface TagForListPublicBandwidthPackagesInput
+ * @interface IPV6ForDescribeIPSetOutput
  */
-export interface TagForListPublicBandwidthPackagesInput {
+export interface IPV6ForDescribeIPSetOutput {
 
     /**
      * @type {string}
-     * @memberof TagForListPublicBandwidthPackagesInput
+     * @memberof IPV6ForDescribeIPSetOutput
      */
-    Key?: string;
+    Addr?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagForListPublicBandwidthPackagesInput
+     * @type {string}
+     * @memberof IPV6ForDescribeIPSetOutput
      */
-    Values?: Array<string>;
+    ISP?: string;
+
+    /**
+     * @type {string}
+     * @memberof IPV6ForDescribeIPSetOutput
+     */
+    ISPName?: string;
 }

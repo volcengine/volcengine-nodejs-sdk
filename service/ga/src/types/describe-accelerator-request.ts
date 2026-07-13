@@ -16,25 +16,13 @@
  * 
  *
  * @export
- * @interface DeleteBasicAccelerateIPEndpointRelationRequest
+ * @interface DescribeAcceleratorRequest
  */
-export interface DeleteBasicAccelerateIPEndpointRelationRequest {
+export interface DescribeAcceleratorRequest {
 
     /**
      * @type {string}
-     * @memberof DeleteBasicAccelerateIPEndpointRelationRequest
-     */
-    AccelerateIPId: string;
-
-    /**
-     * @type {string}
-     * @memberof DeleteBasicAccelerateIPEndpointRelationRequest
+     * @memberof DescribeAcceleratorRequest
      */
     AcceleratorId: string;
-
-    /**
-     * @type {string}
-     * @memberof DeleteBasicAccelerateIPEndpointRelationRequest
-     */
-    IPSetId: string;
 }
