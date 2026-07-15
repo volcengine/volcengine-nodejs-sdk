@@ -16,25 +16,13 @@
  * 
  *
  * @export
- * @interface CpuOptionsForDescribeInstancesOutput
+ * @interface CpuOptionsForModifyInstanceAttributeInput
  */
-export interface CpuOptionsForDescribeInstancesOutput {
-
-    /**
-     * @type {number}
-     * @memberof CpuOptionsForDescribeInstancesOutput
-     */
-    CoreCount?: number;
-
-    /**
-     * @type {number}
-     * @memberof CpuOptionsForDescribeInstancesOutput
-     */
-    ThreadsPerCore?: number;
+export interface CpuOptionsForModifyInstanceAttributeInput {
 
     /**
      * @type {string}
-     * @memberof CpuOptionsForDescribeInstancesOutput
+     * @memberof CpuOptionsForModifyInstanceAttributeInput
      */
     TopologyType?: string;
 }
