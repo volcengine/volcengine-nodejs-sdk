@@ -12,18 +12,23 @@
  * Do not edit the class manually.
  */
 
-import { DataForVideoProjectSubtitleUploadOutput } from './data-for-video-project-subtitle-upload-output';
  /**
  * 
  *
  * @export
- * @interface VideoProjectSubtitleUploadResponse
+ * @interface FinishedAudioForVideoProjectGetTaskProductOutput
  */
-export interface VideoProjectSubtitleUploadResponse {
+export interface FinishedAudioForVideoProjectGetTaskProductOutput {
 
     /**
-     * @type {DataForVideoProjectSubtitleUploadOutput}
-     * @memberof VideoProjectSubtitleUploadResponse
+     * @type {string}
+     * @memberof FinishedAudioForVideoProjectGetTaskProductOutput
      */
-    data?: DataForVideoProjectSubtitleUploadOutput;
+    name?: string;
+
+    /**
+     * @type {string}
+     * @memberof FinishedAudioForVideoProjectGetTaskProductOutput
+     */
+    url?: string;
 }
