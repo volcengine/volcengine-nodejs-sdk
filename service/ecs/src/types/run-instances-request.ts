@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { CpuOptionsForRunInstancesInput } from './cpu-options-for-run-instances-input';
 import { EipAddressForRunInstancesInput } from './eip-address-for-run-instances-input';
 import { NetworkInterfaceForRunInstancesInput } from './network-interface-for-run-instances-input';
 import { NetworkOptionsForRunInstancesInput } from './network-options-for-run-instances-input';
@@ -63,6 +64,12 @@ export interface RunInstancesRequest {
     CpuMaxFrequency?: number;
 
     /**
+     * @type {CpuOptionsForRunInstancesInput}
+     * @memberof RunInstancesRequest
+     */
+    CpuOptions?: CpuOptionsForRunInstancesInput;
+
+    /**
      * @type {string}
      * @memberof RunInstancesRequest
      */
@@ -103,6 +110,12 @@ export interface RunInstancesRequest {
      * @memberof RunInstancesRequest
      */
     EipAddress?: EipAddressForRunInstancesInput;
+
+    /**
+     * @type {boolean}
+     * @memberof RunInstancesRequest
+     */
+    EnablePrimaryInterfaceHighBandwidthType?: boolean;
 
     /**
      * @type {string}
