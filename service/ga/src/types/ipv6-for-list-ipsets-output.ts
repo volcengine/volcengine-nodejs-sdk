@@ -16,19 +16,25 @@
  * 
  *
  * @export
- * @interface TagForListBasicAcceleratorsInput
+ * @interface IPV6ForListIPSetsOutput
  */
-export interface TagForListBasicAcceleratorsInput {
+export interface IPV6ForListIPSetsOutput {
 
     /**
      * @type {string}
-     * @memberof TagForListBasicAcceleratorsInput
+     * @memberof IPV6ForListIPSetsOutput
      */
-    Key?: string;
+    Addr?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagForListBasicAcceleratorsInput
+     * @type {string}
+     * @memberof IPV6ForListIPSetsOutput
      */
-    Values?: Array<string>;
+    ISP?: string;
+
+    /**
+     * @type {string}
+     * @memberof IPV6ForListIPSetsOutput
+     */
+    ISPName?: string;
 }

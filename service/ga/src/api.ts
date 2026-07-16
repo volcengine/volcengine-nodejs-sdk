@@ -58,6 +58,8 @@ import { DeleteIPSetRequest } from './types/index';
 import { DeleteIPSetResponse } from './types/index';
 import { DeleteListenerRequest } from './types/index';
 import { DeleteListenerResponse } from './types/index';
+import { DescribeAcceleratorRequest } from './types/index';
+import { DescribeAcceleratorResponse } from './types/index';
 import { DescribeBasicAcceleratorRequest } from './types/index';
 import { DescribeBasicAcceleratorResponse } from './types/index';
 import { DescribeBasicEndpointGroupRequest } from './types/index';
@@ -168,6 +170,7 @@ export type DeleteBasicIPSetCommandOutput = CommandOutput<DeleteBasicIPSetRespon
 export type DeleteEndpointGroupCommandOutput = CommandOutput<DeleteEndpointGroupResponse>;
 export type DeleteIPSetCommandOutput = CommandOutput<DeleteIPSetResponse>;
 export type DeleteListenerCommandOutput = CommandOutput<DeleteListenerResponse>;
+export type DescribeAcceleratorCommandOutput = CommandOutput<DescribeAcceleratorResponse>;
 export type DescribeBasicAcceleratorCommandOutput = CommandOutput<DescribeBasicAcceleratorResponse>;
 export type DescribeBasicEndpointGroupCommandOutput = CommandOutput<DescribeBasicEndpointGroupResponse>;
 export type DescribeBasicIPSetCommandOutput = CommandOutput<DescribeBasicIPSetResponse>;
@@ -210,7 +213,6 @@ export type UpdateEndpointGroupCommandOutput = CommandOutput<UpdateEndpointGroup
 export type UpdateListenerCommandOutput = CommandOutput<UpdateListenerResponse>;
 export type UpdatePublicBandwidthPackageCommandOutput = CommandOutput<UpdatePublicBandwidthPackageResponse>;
 export type UpdatePublicBandwidthPackageRenewTypeCommandOutput = CommandOutput<UpdatePublicBandwidthPackageRenewTypeResponse>;
-
 
 /**
  * GAClient Service Client
@@ -553,6 +555,21 @@ export class DeleteListenerCommand extends Command<
   constructor(input: DeleteListenerRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteListenerCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeAccelerator
+ */
+export class DescribeAcceleratorCommand extends Command<
+  DescribeAcceleratorRequest,
+  DescribeAcceleratorCommandOutput,
+  'DescribeAcceleratorCommand'
+> {
+  static readonly metaPath = '/DescribeAccelerator/2022-03-01/ga/post/application_json/';
+
+  constructor(input: DescribeAcceleratorRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAcceleratorCommand.metaPath);
   }
 }
 /**
@@ -1210,6 +1227,7 @@ export default {
   DeleteEndpointGroupCommand,
   DeleteIPSetCommand,
   DeleteListenerCommand,
+  DescribeAcceleratorCommand,
   DescribeBasicAcceleratorCommand,
   DescribeBasicEndpointGroupCommand,
   DescribeBasicIPSetCommand,
