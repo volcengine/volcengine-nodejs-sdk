@@ -21,16 +21,16 @@
 export interface CreateBasicIPSetRequest {
 
     /**
-     * @type {string}
+     * @type {Array<string>}
      * @memberof CreateBasicIPSetRequest
      */
-    AccelerateRegion?: string;
+    AccelerateNode?: Array<string>;
 
     /**
      * @type {string}
      * @memberof CreateBasicIPSetRequest
      */
-    AcceleratorId?: string;
+    AcceleratorId: string;
 
     /**
      * @type {string}
@@ -39,8 +39,8 @@ export interface CreateBasicIPSetRequest {
     IPVersion?: string;
 
     /**
-     * @type {Array<string>}
+     * @type {string}
      * @memberof CreateBasicIPSetRequest
      */
-    accelerateNode?: Array<string>;
+    Region: string;
 }

@@ -44,4 +44,10 @@ export interface ListAmortizedCostBillDetailResponse {
      * @memberof ListAmortizedCostBillDetailResponse
      */
     Total?: number;
+
+    /**
+     * @type {string}
+     * @memberof ListAmortizedCostBillDetailResponse
+     */
+    Warning?: string;
 }

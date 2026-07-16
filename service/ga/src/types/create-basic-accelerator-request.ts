@@ -58,10 +58,10 @@ export interface CreateBasicAcceleratorRequest {
     ChargeType?: string;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof CreateBasicAcceleratorRequest
      */
-    Duration?: string;
+    Duration?: number;
 
     /**
      * @type {string}

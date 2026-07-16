@@ -18,6 +18,8 @@ export * from './configuration-for-modify-reserved-instances-input';
 export * from './copy-image-request';
 export * from './copy-image-response';
 export * from './cpu-options-for-describe-instances-output';
+export * from './cpu-options-for-modify-instance-attribute-input';
+export * from './cpu-options-for-run-instances-input';
 export * from './create-command-request';
 export * from './create-command-response';
 export * from './create-dedicated-host-cluster-request';

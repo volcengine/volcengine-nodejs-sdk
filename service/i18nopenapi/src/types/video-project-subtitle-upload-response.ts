@@ -22,12 +22,6 @@ import { DataForVideoProjectSubtitleUploadOutput } from './data-for-video-projec
 export interface VideoProjectSubtitleUploadResponse {
 
     /**
-     * @type {string}
-     * @memberof VideoProjectSubtitleUploadResponse
-     */
-    batchId?: string;
-
-    /**
      * @type {DataForVideoProjectSubtitleUploadOutput}
      * @memberof VideoProjectSubtitleUploadResponse
      */
