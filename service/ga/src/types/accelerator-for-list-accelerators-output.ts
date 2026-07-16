@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { IPSetForListAcceleratorsOutput } from './ipset-for-list-accelerators-output';
 import { ResourceTagForListAcceleratorsOutput } from './resource-tag-for-list-accelerators-output';
  /**
  * 
@@ -20,6 +21,12 @@ import { ResourceTagForListAcceleratorsOutput } from './resource-tag-for-list-ac
  * @interface AcceleratorForListAcceleratorsOutput
  */
 export interface AcceleratorForListAcceleratorsOutput {
+
+    /**
+     * @type {string}
+     * @memberof AcceleratorForListAcceleratorsOutput
+     */
+    AccelerateType?: string;
 
     /**
      * @type {string}
@@ -34,10 +41,22 @@ export interface AcceleratorForListAcceleratorsOutput {
     AccountID?: string;
 
     /**
+     * @type {number}
+     * @memberof AcceleratorForListAcceleratorsOutput
+     */
+    Bandwidth?: number;
+
+    /**
      * @type {Array<string>}
      * @memberof AcceleratorForListAcceleratorsOutput
      */
     BandwidthPackageIds?: Array<string>;
+
+    /**
+     * @type {number}
+     * @memberof AcceleratorForListAcceleratorsOutput
+     */
+    BeginTime?: number;
 
     /**
      * @type {string}
@@ -73,6 +92,12 @@ export interface AcceleratorForListAcceleratorsOutput {
      * @type {number}
      * @memberof AcceleratorForListAcceleratorsOutput
      */
+    ConnectionNum?: number;
+
+    /**
+     * @type {number}
+     * @memberof AcceleratorForListAcceleratorsOutput
+     */
     CreateTime?: number;
 
     /**
@@ -100,10 +125,22 @@ export interface AcceleratorForListAcceleratorsOutput {
     FullPortSwitch?: boolean;
 
     /**
+     * @type {Array<IPSetForListAcceleratorsOutput>}
+     * @memberof AcceleratorForListAcceleratorsOutput
+     */
+    IPSets?: Array<IPSetForListAcceleratorsOutput>;
+
+    /**
      * @type {number}
      * @memberof AcceleratorForListAcceleratorsOutput
      */
     ListenerCount?: number;
+
+    /**
+     * @type {Array<string>}
+     * @memberof AcceleratorForListAcceleratorsOutput
+     */
+    ListenerIds?: Array<string>;
 
     /**
      * @type {string}

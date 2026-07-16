@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { IPAddressListForListIPSetsOutput } from './ipaddress-list-for-list-ipsets-output';
  /**
  * 
  *
@@ -33,6 +34,12 @@ export interface IPSetForListIPSetsOutput {
     AcceleratorId?: string;
 
     /**
+     * @type {IPAddressListForListIPSetsOutput}
+     * @memberof IPSetForListIPSetsOutput
+     */
+    IPAddressList?: IPAddressListForListIPSetsOutput;
+
+    /**
      * @type {string}
      * @memberof IPSetForListIPSetsOutput
      */
@@ -48,5 +55,20 @@ export interface IPSetForListIPSetsOutput {
      * @type {string}
      * @memberof IPSetForListIPSetsOutput
      */
+    IspType?: IPSetForListIPSetsOutputIspTypeEnum;
+
+    /**
+     * @type {string}
+     * @memberof IPSetForListIPSetsOutput
+     */
     State?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum IPSetForListIPSetsOutputIspTypeEnum {
+    Advanced = 'Advanced'
+}
+

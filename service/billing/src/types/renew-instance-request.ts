@@ -21,6 +21,12 @@
 export interface RenewInstanceRequest {
 
     /**
+     * @type {boolean}
+     * @memberof RenewInstanceRequest
+     */
+    AutoUseCoupon?: boolean;
+
+    /**
      * @type {string}
      * @memberof RenewInstanceRequest
      */

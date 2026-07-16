@@ -16,19 +16,25 @@
  * 
  *
  * @export
- * @interface TagForListAcceleratorsInput
+ * @interface IPV4ForDeleteIPSetInput
  */
-export interface TagForListAcceleratorsInput {
+export interface IPV4ForDeleteIPSetInput {
 
     /**
      * @type {string}
-     * @memberof TagForListAcceleratorsInput
+     * @memberof IPV4ForDeleteIPSetInput
      */
-    Key?: string;
+    Addr?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagForListAcceleratorsInput
+     * @type {string}
+     * @memberof IPV4ForDeleteIPSetInput
      */
-    Values?: Array<string>;
+    ISP?: string;
+
+    /**
+     * @type {string}
+     * @memberof IPV4ForDeleteIPSetInput
+     */
+    ISPName?: string;
 }
