@@ -186,6 +186,8 @@ import { RenewResourceAutoRequest } from './types/index';
 import { RenewResourceAutoResponse } from './types/index';
 import { ResetHostRequest } from './types/index';
 import { ResetHostResponse } from './types/index';
+import { ResetPodPhoneTemplateRequest } from './types/index';
+import { ResetPodPhoneTemplateResponse } from './types/index';
 import { ResetPodRequest } from './types/index';
 import { ResetPodResponse } from './types/index';
 import { RestoreDataRequest } from './types/index';
@@ -335,6 +337,7 @@ export type RemovePhoneTemplateCommandOutput = CommandOutput<RemovePhoneTemplate
 export type RenewResourceAutoCommandOutput = CommandOutput<RenewResourceAutoResponse>;
 export type ResetHostCommandOutput = CommandOutput<ResetHostResponse>;
 export type ResetPodCommandOutput = CommandOutput<ResetPodResponse>;
+export type ResetPodPhoneTemplateCommandOutput = CommandOutput<ResetPodPhoneTemplateResponse>;
 export type RestoreDataCommandOutput = CommandOutput<RestoreDataResponse>;
 export type RestorePodCommandOutput = CommandOutput<RestorePodResponse>;
 export type RunCommandCommandOutput = CommandOutput<RunCommandResponse>;
@@ -1683,6 +1686,21 @@ export class ResetPodCommand extends Command<
   }
 }
 /**
+ * Command to ResetPodPhoneTemplate
+ */
+export class ResetPodPhoneTemplateCommand extends Command<
+  ResetPodPhoneTemplateRequest,
+  ResetPodPhoneTemplateCommandOutput,
+  'ResetPodPhoneTemplateCommand'
+> {
+  static readonly metaPath = '/ResetPodPhoneTemplate/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ResetPodPhoneTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ResetPodPhoneTemplateCommand.metaPath);
+  }
+}
+/**
  * Command to RestoreData
  */
 export class RestoreDataCommand extends Command<
@@ -2192,6 +2210,7 @@ export default {
   RenewResourceAutoCommand,
   ResetHostCommand,
   ResetPodCommand,
+  ResetPodPhoneTemplateCommand,
   RestoreDataCommand,
   RestorePodCommand,
   RunCommandCommand,
