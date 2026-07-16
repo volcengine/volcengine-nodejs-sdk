@@ -256,6 +256,8 @@ export * from './renew-resource-auto-request';
 export * from './renew-resource-auto-response';
 export * from './reset-host-request';
 export * from './reset-host-response';
+export * from './reset-pod-phone-template-request';
+export * from './reset-pod-phone-template-response';
 export * from './reset-pod-request';
 export * from './reset-pod-response';
 export * from './restore-data-request';
