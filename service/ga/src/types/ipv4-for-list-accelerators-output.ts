@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface DeleteBasicAccelerateIPEndpointRelationRequest
+ * @interface IPV4ForListAcceleratorsOutput
  */
-export interface DeleteBasicAccelerateIPEndpointRelationRequest {
+export interface IPV4ForListAcceleratorsOutput {
 
     /**
      * @type {string}
-     * @memberof DeleteBasicAccelerateIPEndpointRelationRequest
+     * @memberof IPV4ForListAcceleratorsOutput
      */
-    AccelerateIPId: string;
+    Addr?: string;
 
     /**
      * @type {string}
-     * @memberof DeleteBasicAccelerateIPEndpointRelationRequest
+     * @memberof IPV4ForListAcceleratorsOutput
      */
-    AcceleratorId: string;
+    ISP?: string;
 
     /**
      * @type {string}
-     * @memberof DeleteBasicAccelerateIPEndpointRelationRequest
+     * @memberof IPV4ForListAcceleratorsOutput
      */
-    IPSetId: string;
+    ISPName?: string;
 }

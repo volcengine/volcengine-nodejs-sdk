@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface DeleteBasicAccelerateIPEndpointRelationRequest
+ * @interface ResourceTagForDescribeAcceleratorOutput
  */
-export interface DeleteBasicAccelerateIPEndpointRelationRequest {
+export interface ResourceTagForDescribeAcceleratorOutput {
 
     /**
      * @type {string}
-     * @memberof DeleteBasicAccelerateIPEndpointRelationRequest
+     * @memberof ResourceTagForDescribeAcceleratorOutput
      */
-    AccelerateIPId: string;
+    Key?: string;
 
     /**
      * @type {string}
-     * @memberof DeleteBasicAccelerateIPEndpointRelationRequest
+     * @memberof ResourceTagForDescribeAcceleratorOutput
      */
-    AcceleratorId: string;
-
-    /**
-     * @type {string}
-     * @memberof DeleteBasicAccelerateIPEndpointRelationRequest
-     */
-    IPSetId: string;
+    Value?: string;
 }

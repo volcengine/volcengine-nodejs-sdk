@@ -12,54 +12,54 @@
  * Do not edit the class manually.
  */
 
-import { IPAddressListForListIPSetsOutput } from './ipaddress-list-for-list-ipsets-output';
+import { IPAddressListForDescribeAcceleratorOutput } from './ipaddress-list-for-describe-accelerator-output';
  /**
  * 
  *
  * @export
- * @interface IPSetForListIPSetsOutput
+ * @interface IPSetForDescribeAcceleratorOutput
  */
-export interface IPSetForListIPSetsOutput {
+export interface IPSetForDescribeAcceleratorOutput {
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof IPSetForDescribeAcceleratorOutput
      */
     AccelerateRegion?: string;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof IPSetForDescribeAcceleratorOutput
      */
     AcceleratorId?: string;
 
     /**
-     * @type {IPAddressListForListIPSetsOutput}
-     * @memberof IPSetForListIPSetsOutput
+     * @type {IPAddressListForDescribeAcceleratorOutput}
+     * @memberof IPSetForDescribeAcceleratorOutput
      */
-    IPAddressList?: IPAddressListForListIPSetsOutput;
+    IPAddressList?: IPAddressListForDescribeAcceleratorOutput;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof IPSetForDescribeAcceleratorOutput
      */
     IPSetId?: string;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof IPSetForDescribeAcceleratorOutput
      */
     IPVersion?: string;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof IPSetForDescribeAcceleratorOutput
      */
-    IspType?: IPSetForListIPSetsOutputIspTypeEnum;
+    IspType?: IPSetForDescribeAcceleratorOutputIspTypeEnum;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof IPSetForDescribeAcceleratorOutput
      */
     State?: string;
 }
@@ -68,7 +68,7 @@ export interface IPSetForListIPSetsOutput {
  * @export
  * @enum {string}
  */
-export enum IPSetForListIPSetsOutputIspTypeEnum {
+export enum IPSetForDescribeAcceleratorOutputIspTypeEnum {
     Advanced = 'Advanced'
 }
 

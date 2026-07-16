@@ -13,7 +13,6 @@
  */
 
 import { ResourceTagFilterForListPublicBandwidthPackagesInput } from './resource-tag-filter-for-list-public-bandwidth-packages-input';
-import { TagForListPublicBandwidthPackagesInput } from './tag-for-list-public-bandwidth-packages-input';
  /**
  * 
  *
@@ -69,10 +68,4 @@ export interface ListPublicBandwidthPackagesRequest {
      * @memberof ListPublicBandwidthPackagesRequest
      */
     State?: string;
-
-    /**
-     * @type {Array<TagForListPublicBandwidthPackagesInput>}
-     * @memberof ListPublicBandwidthPackagesRequest
-     */
-    Tags?: Array<TagForListPublicBandwidthPackagesInput>;
 }

@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface DescribeBasicIPSetRequest
+ * @interface HTTPSPortRangeForCreateListenerInOneStepInput
  */
-export interface DescribeBasicIPSetRequest {
+export interface HTTPSPortRangeForCreateListenerInOneStepInput {
 
     /**
-     * @type {string}
-     * @memberof DescribeBasicIPSetRequest
+     * @type {number}
+     * @memberof HTTPSPortRangeForCreateListenerInOneStepInput
      */
-    AcceleratorId: string;
+    FromPort?: number;
 
     /**
-     * @type {string}
-     * @memberof DescribeBasicIPSetRequest
+     * @type {number}
+     * @memberof HTTPSPortRangeForCreateListenerInOneStepInput
      */
-    IPSetId: string;
+    ToPort?: number;
 }

@@ -12,54 +12,54 @@
  * Do not edit the class manually.
  */
 
-import { IPAddressListForListIPSetsOutput } from './ipaddress-list-for-list-ipsets-output';
+import { IPAddressListForListAcceleratorsOutput } from './ipaddress-list-for-list-accelerators-output';
  /**
  * 
  *
  * @export
- * @interface IPSetForListIPSetsOutput
+ * @interface IPSetForListAcceleratorsOutput
  */
-export interface IPSetForListIPSetsOutput {
+export interface IPSetForListAcceleratorsOutput {
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof IPSetForListAcceleratorsOutput
      */
     AccelerateRegion?: string;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof IPSetForListAcceleratorsOutput
      */
     AcceleratorId?: string;
 
     /**
-     * @type {IPAddressListForListIPSetsOutput}
-     * @memberof IPSetForListIPSetsOutput
+     * @type {IPAddressListForListAcceleratorsOutput}
+     * @memberof IPSetForListAcceleratorsOutput
      */
-    IPAddressList?: IPAddressListForListIPSetsOutput;
+    IPAddressList?: IPAddressListForListAcceleratorsOutput;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof IPSetForListAcceleratorsOutput
      */
     IPSetId?: string;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof IPSetForListAcceleratorsOutput
      */
     IPVersion?: string;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof IPSetForListAcceleratorsOutput
      */
-    IspType?: IPSetForListIPSetsOutputIspTypeEnum;
+    IspType?: IPSetForListAcceleratorsOutputIspTypeEnum;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof IPSetForListAcceleratorsOutput
      */
     State?: string;
 }
@@ -68,7 +68,7 @@ export interface IPSetForListIPSetsOutput {
  * @export
  * @enum {string}
  */
-export enum IPSetForListIPSetsOutputIspTypeEnum {
+export enum IPSetForListAcceleratorsOutputIspTypeEnum {
     Advanced = 'Advanced'
 }
 

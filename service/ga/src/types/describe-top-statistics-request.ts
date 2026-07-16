@@ -27,6 +27,12 @@ export interface DescribeTopStatisticsRequest {
     EndTime: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof DescribeTopStatisticsRequest
+     */
+    InputId?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof DescribeTopStatisticsRequest
      */
@@ -43,10 +49,4 @@ export interface DescribeTopStatisticsRequest {
      * @memberof DescribeTopStatisticsRequest
      */
     StartTime: string;
-
-    /**
-     * @type {Array<string>}
-     * @memberof DescribeTopStatisticsRequest
-     */
-    inputId?: Array<string>;
 }

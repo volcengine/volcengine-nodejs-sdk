@@ -12,169 +12,181 @@
  * Do not edit the class manually.
  */
 
-import { IPSetForListAcceleratorsOutput } from './ipset-for-list-accelerators-output';
-import { ResourceTagForListAcceleratorsOutput } from './resource-tag-for-list-accelerators-output';
+import { IPSetForDescribeAcceleratorOutput } from './ipset-for-describe-accelerator-output';
+import { ResourceTagForDescribeAcceleratorOutput } from './resource-tag-for-describe-accelerator-output';
  /**
  * 
  *
  * @export
- * @interface AcceleratorForListAcceleratorsOutput
+ * @interface DescribeAcceleratorResponse
  */
-export interface AcceleratorForListAcceleratorsOutput {
+export interface DescribeAcceleratorResponse {
 
     /**
      * @type {string}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     AccelerateType?: string;
 
     /**
      * @type {string}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     AcceleratorId?: string;
 
     /**
      * @type {string}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     AccountID?: string;
 
     /**
      * @type {number}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     Bandwidth?: number;
 
     /**
      * @type {Array<string>}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     BandwidthPackageIds?: Array<string>;
 
     /**
      * @type {number}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     BeginTime?: number;
 
     /**
      * @type {string}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     BillingSpec?: string;
 
     /**
      * @type {number}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     BillingSpecEffectiveTime?: number;
 
     /**
      * @type {string}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     BillingType?: string;
 
     /**
      * @type {string}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     CNAME?: string;
 
     /**
      * @type {string}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     ChargeType?: string;
 
     /**
      * @type {number}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     ConnectionNum?: number;
 
     /**
      * @type {number}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     CreateTime?: number;
 
     /**
      * @type {string}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     CreateTimeStr?: string;
 
     /**
      * @type {Array<string>}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     CrossDomainBandwidthIds?: Array<string>;
 
     /**
      * @type {number}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     ExpiredTime?: number;
 
     /**
      * @type {boolean}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     FullPortSwitch?: boolean;
 
     /**
-     * @type {Array<IPSetForListAcceleratorsOutput>}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @type {Array<IPSetForDescribeAcceleratorOutput>}
+     * @memberof DescribeAcceleratorResponse
      */
-    IPSets?: Array<IPSetForListAcceleratorsOutput>;
+    IPSets?: Array<IPSetForDescribeAcceleratorOutput>;
 
     /**
      * @type {number}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     ListenerCount?: number;
 
     /**
      * @type {Array<string>}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     ListenerIds?: Array<string>;
 
     /**
      * @type {string}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     Name?: string;
 
     /**
      * @type {string}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     ProjectName?: string;
 
     /**
      * @type {number}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     RegionCount?: number;
 
     /**
      * @type {number}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
+     */
+    RegionNum?: number;
+
+    /**
+     * @type {number}
+     * @memberof DescribeAcceleratorResponse
      */
     RenewType?: number;
 
     /**
-     * @type {Array<ResourceTagForListAcceleratorsOutput>}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @type {Array<ResourceTagForDescribeAcceleratorOutput>}
+     * @memberof DescribeAcceleratorResponse
      */
-    ResourceTags?: Array<ResourceTagForListAcceleratorsOutput>;
+    ResourceTags?: Array<ResourceTagForDescribeAcceleratorOutput>;
 
     /**
      * @type {string}
-     * @memberof AcceleratorForListAcceleratorsOutput
+     * @memberof DescribeAcceleratorResponse
      */
     State?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeAcceleratorResponse
+     */
+    Type?: string;
 }

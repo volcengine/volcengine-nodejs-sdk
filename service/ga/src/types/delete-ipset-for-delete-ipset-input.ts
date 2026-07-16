@@ -12,54 +12,54 @@
  * Do not edit the class manually.
  */
 
-import { IPAddressListForListIPSetsOutput } from './ipaddress-list-for-list-ipsets-output';
+import { IPAddressListForDeleteIPSetInput } from './ipaddress-list-for-delete-ipset-input';
  /**
  * 
  *
  * @export
- * @interface IPSetForListIPSetsOutput
+ * @interface DeleteIPSetForDeleteIPSetInput
  */
-export interface IPSetForListIPSetsOutput {
+export interface DeleteIPSetForDeleteIPSetInput {
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof DeleteIPSetForDeleteIPSetInput
      */
     AccelerateRegion?: string;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof DeleteIPSetForDeleteIPSetInput
      */
     AcceleratorId?: string;
 
     /**
-     * @type {IPAddressListForListIPSetsOutput}
-     * @memberof IPSetForListIPSetsOutput
+     * @type {IPAddressListForDeleteIPSetInput}
+     * @memberof DeleteIPSetForDeleteIPSetInput
      */
-    IPAddressList?: IPAddressListForListIPSetsOutput;
+    IPAddressList?: IPAddressListForDeleteIPSetInput;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof DeleteIPSetForDeleteIPSetInput
      */
     IPSetId?: string;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof DeleteIPSetForDeleteIPSetInput
      */
     IPVersion?: string;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof DeleteIPSetForDeleteIPSetInput
      */
-    IspType?: IPSetForListIPSetsOutputIspTypeEnum;
+    IspType?: DeleteIPSetForDeleteIPSetInputIspTypeEnum;
 
     /**
      * @type {string}
-     * @memberof IPSetForListIPSetsOutput
+     * @memberof DeleteIPSetForDeleteIPSetInput
      */
     State?: string;
 }
@@ -68,7 +68,7 @@ export interface IPSetForListIPSetsOutput {
  * @export
  * @enum {string}
  */
-export enum IPSetForListIPSetsOutputIspTypeEnum {
+export enum DeleteIPSetForDeleteIPSetInputIspTypeEnum {
     Advanced = 'Advanced'
 }
 
