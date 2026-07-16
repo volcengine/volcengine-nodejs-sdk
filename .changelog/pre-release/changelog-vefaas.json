@@ -1,5 +1,5 @@
 {
-  "description": "VEFAAS: 新增 ListSandboxSnapshots, CreateSandboxSnapshot, DeleteSandboxSnapshot, DescribeSandboxSnapshot；修改 ListSandboxes, CreateSandbox, DescribeSandbox",
+  "description": "VEFAAS: 修改 CreateSandbox",
   "modules": "service/vefaas",
   "type": "feature"
 }
