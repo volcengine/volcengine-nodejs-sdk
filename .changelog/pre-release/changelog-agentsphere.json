@@ -1,0 +1,5 @@
+{
+  "description": "AGENTSPHERE: chore changes",
+  "modules": "service/agentsphere",
+  "type": "bugfix"
+}

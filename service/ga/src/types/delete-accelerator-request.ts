@@ -25,4 +25,10 @@ export interface DeleteAcceleratorRequest {
      * @memberof DeleteAcceleratorRequest
      */
     AcceleratorId: string;
+
+    /**
+     * @type {boolean}
+     * @memberof DeleteAcceleratorRequest
+     */
+    DeleteIPSets?: boolean;
 }

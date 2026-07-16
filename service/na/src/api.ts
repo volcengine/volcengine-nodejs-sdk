@@ -28,6 +28,8 @@ import { DescribeDiagnosisInstancesRequest } from './types/index';
 import { DescribeDiagnosisInstancesResponse } from './types/index';
 import { DescribeHistoryDiagnosisRequest } from './types/index';
 import { DescribeHistoryDiagnosisResponse } from './types/index';
+import { DescribeInstanceTopologyRequest } from './types/index';
+import { DescribeInstanceTopologyResponse } from './types/index';
 import { GetAnalysisPathReportRequest } from './types/index';
 import { GetAnalysisPathReportResponse } from './types/index';
 import { GetNetworkTrafficMetricsRequest } from './types/index';
@@ -47,11 +49,11 @@ export type DeleteAnalysisPathReportCommandOutput = CommandOutput<DeleteAnalysis
 export type DescribeDiagnosisInstanceDetailCommandOutput = CommandOutput<DescribeDiagnosisInstanceDetailResponse>;
 export type DescribeDiagnosisInstancesCommandOutput = CommandOutput<DescribeDiagnosisInstancesResponse>;
 export type DescribeHistoryDiagnosisCommandOutput = CommandOutput<DescribeHistoryDiagnosisResponse>;
+export type DescribeInstanceTopologyCommandOutput = CommandOutput<DescribeInstanceTopologyResponse>;
 export type GetAnalysisPathReportCommandOutput = CommandOutput<GetAnalysisPathReportResponse>;
 export type GetNetworkTrafficMetricsCommandOutput = CommandOutput<GetNetworkTrafficMetricsResponse>;
 export type GetNetworkTrafficTopNCommandOutput = CommandOutput<GetNetworkTrafficTopNResponse>;
 export type ReanalysisPathCommandOutput = CommandOutput<ReanalysisPathResponse>;
-
 
 /**
  * NAClient Service Client
@@ -172,6 +174,21 @@ export class DescribeHistoryDiagnosisCommand extends Command<
   }
 }
 /**
+ * Command to DescribeInstanceTopology
+ */
+export class DescribeInstanceTopologyCommand extends Command<
+  DescribeInstanceTopologyRequest,
+  DescribeInstanceTopologyCommandOutput,
+  'DescribeInstanceTopologyCommand'
+> {
+  static readonly metaPath = '/DescribeInstanceTopology/2020-04-01/na/get/text_plain/';
+
+  constructor(input: DescribeInstanceTopologyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeInstanceTopologyCommand.metaPath);
+  }
+}
+/**
  * Command to GetAnalysisPathReport
  */
 export class GetAnalysisPathReportCommand extends Command<
@@ -241,6 +258,7 @@ export default {
   DescribeDiagnosisInstanceDetailCommand,
   DescribeDiagnosisInstancesCommand,
   DescribeHistoryDiagnosisCommand,
+  DescribeInstanceTopologyCommand,
   GetAnalysisPathReportCommand,
   GetNetworkTrafficMetricsCommand,
   GetNetworkTrafficTopNCommand,

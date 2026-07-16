@@ -13,7 +13,6 @@
  */
 
 import { ResourceTagFilterForListAcceleratorsInput } from './resource-tag-filter-for-list-accelerators-input';
-import { TagForListAcceleratorsInput } from './tag-for-list-accelerators-input';
  /**
  * 
  *
@@ -39,6 +38,12 @@ export interface ListAcceleratorsRequest {
      * @memberof ListAcceleratorsRequest
      */
     ChargeType?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListAcceleratorsRequest
+     */
+    Name?: string;
 
     /**
      * @type {number}
@@ -69,10 +74,4 @@ export interface ListAcceleratorsRequest {
      * @memberof ListAcceleratorsRequest
      */
     State?: string;
-
-    /**
-     * @type {Array<TagForListAcceleratorsInput>}
-     * @memberof ListAcceleratorsRequest
-     */
-    Tags?: Array<TagForListAcceleratorsInput>;
 }
