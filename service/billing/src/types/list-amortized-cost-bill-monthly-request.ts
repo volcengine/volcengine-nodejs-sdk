@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { TagKVForListAmortizedCostBillMonthlyInput } from './tag-kvfor-list-amortized-cost-bill-monthly-input';
  /**
  * 
  *
@@ -97,4 +98,16 @@ export interface ListAmortizedCostBillMonthlyRequest {
      * @memberof ListAmortizedCostBillMonthlyRequest
      */
     Product?: Array<string>;
+
+    /**
+     * @type {Array<TagKVForListAmortizedCostBillMonthlyInput>}
+     * @memberof ListAmortizedCostBillMonthlyRequest
+     */
+    TagKV?: Array<TagKVForListAmortizedCostBillMonthlyInput>;
+
+    /**
+     * @type {number}
+     * @memberof ListAmortizedCostBillMonthlyRequest
+     */
+    TagKVFilterMode?: number;
 }
