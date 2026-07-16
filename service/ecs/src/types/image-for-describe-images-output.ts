@@ -102,6 +102,12 @@ export interface ImageForDescribeImagesOutput {
     LicenseType?: string;
 
     /**
+     * @type {number}
+     * @memberof ImageForDescribeImagesOutput
+     */
+    MarketplaceImageBillType?: number;
+
+    /**
      * @type {string}
      * @memberof ImageForDescribeImagesOutput
      */

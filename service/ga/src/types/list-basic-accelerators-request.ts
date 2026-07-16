@@ -13,7 +13,6 @@
  */
 
 import { ResourceTagFilterForListBasicAcceleratorsInput } from './resource-tag-filter-for-list-basic-accelerators-input';
-import { TagForListBasicAcceleratorsInput } from './tag-for-list-basic-accelerators-input';
  /**
  * 
  *
@@ -81,12 +80,6 @@ export interface ListBasicAcceleratorsRequest {
      * @memberof ListBasicAcceleratorsRequest
      */
     State?: string;
-
-    /**
-     * @type {Array<TagForListBasicAcceleratorsInput>}
-     * @memberof ListBasicAcceleratorsRequest
-     */
-    Tags?: Array<TagForListBasicAcceleratorsInput>;
 
     /**
      * @type {boolean}

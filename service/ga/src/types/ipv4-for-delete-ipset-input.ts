@@ -16,19 +16,25 @@
  * 
  *
  * @export
- * @interface TagForListPublicBandwidthPackagesInput
+ * @interface IPV4ForDeleteIPSetInput
  */
-export interface TagForListPublicBandwidthPackagesInput {
+export interface IPV4ForDeleteIPSetInput {
 
     /**
      * @type {string}
-     * @memberof TagForListPublicBandwidthPackagesInput
+     * @memberof IPV4ForDeleteIPSetInput
      */
-    Key?: string;
+    Addr?: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof TagForListPublicBandwidthPackagesInput
+     * @type {string}
+     * @memberof IPV4ForDeleteIPSetInput
      */
-    Values?: Array<string>;
+    ISP?: string;
+
+    /**
+     * @type {string}
+     * @memberof IPV4ForDeleteIPSetInput
+     */
+    ISPName?: string;
 }

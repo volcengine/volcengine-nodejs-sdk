@@ -27,6 +27,12 @@ export interface VideoUploadTaskForVideoProjectGetVideoUploadStatusOutput {
     batchId?: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof VideoUploadTaskForVideoProjectGetVideoUploadStatusOutput
+     */
+    bindSubtitleIDs?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof VideoUploadTaskForVideoProjectGetVideoUploadStatusOutput
      */
@@ -49,6 +55,12 @@ export interface VideoUploadTaskForVideoProjectGetVideoUploadStatusOutput {
      * @memberof VideoUploadTaskForVideoProjectGetVideoUploadStatusOutput
      */
     videoId?: string;
+
+    /**
+     * @type {string}
+     * @memberof VideoUploadTaskForVideoProjectGetVideoUploadStatusOutput
+     */
+    videoName?: string;
 
     /**
      * @type {string}

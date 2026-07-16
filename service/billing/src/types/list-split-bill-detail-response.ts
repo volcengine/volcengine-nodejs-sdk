@@ -44,4 +44,10 @@ export interface ListSplitBillDetailResponse {
      * @memberof ListSplitBillDetailResponse
      */
     Total?: number;
+
+    /**
+     * @type {string}
+     * @memberof ListSplitBillDetailResponse
+     */
+    Warning?: string;
 }
