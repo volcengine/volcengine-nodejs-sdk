@@ -16,13 +16,7 @@
  * 
  *
  * @export
- * @interface VideoEditorGetEmotionTagsRequest
+ * @interface DataForVideoProjectSubtitleDeleteOutput
  */
-export interface VideoEditorGetEmotionTagsRequest {
-
-    /**
-     * @type {string}
-     * @memberof VideoEditorGetEmotionTagsRequest
-     */
-    subtaskId: string;
+export interface DataForVideoProjectSubtitleDeleteOutput {
 }

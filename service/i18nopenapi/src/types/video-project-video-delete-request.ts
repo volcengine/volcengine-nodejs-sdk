@@ -16,13 +16,25 @@
  * 
  *
  * @export
- * @interface VideoEditorGetEmotionTagsRequest
+ * @interface VideoProjectVideoDeleteRequest
  */
-export interface VideoEditorGetEmotionTagsRequest {
+export interface VideoProjectVideoDeleteRequest {
+
+    /**
+     * @type {boolean}
+     * @memberof VideoProjectVideoDeleteRequest
+     */
+    deleteRelated?: boolean;
 
     /**
      * @type {string}
-     * @memberof VideoEditorGetEmotionTagsRequest
+     * @memberof VideoProjectVideoDeleteRequest
      */
-    subtaskId: string;
+    projectId: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof VideoProjectVideoDeleteRequest
+     */
+    videoIds?: Array<string>;
 }

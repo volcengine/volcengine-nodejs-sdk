@@ -12,17 +12,18 @@
  * Do not edit the class manually.
  */
 
+import { DataForVideoProjectSubtitleDeleteOutput } from './data-for-video-project-subtitle-delete-output';
  /**
  * 
  *
  * @export
- * @interface VideoEditorGetEmotionTagsRequest
+ * @interface VideoProjectSubtitleDeleteResponse
  */
-export interface VideoEditorGetEmotionTagsRequest {
+export interface VideoProjectSubtitleDeleteResponse {
 
     /**
-     * @type {string}
-     * @memberof VideoEditorGetEmotionTagsRequest
+     * @type {DataForVideoProjectSubtitleDeleteOutput}
+     * @memberof VideoProjectSubtitleDeleteResponse
      */
-    subtaskId: string;
+    data?: DataForVideoProjectSubtitleDeleteOutput;
 }
