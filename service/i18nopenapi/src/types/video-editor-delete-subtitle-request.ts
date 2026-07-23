@@ -21,8 +21,14 @@
 export interface VideoEditorDeleteSubtitleRequest {
 
     /**
+     * @type {Array<string>}
+     * @memberof VideoEditorDeleteSubtitleRequest
+     */
+    segmentIds?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof VideoEditorDeleteSubtitleRequest
      */
-    segmentIds: string;
+    subtaskId: string;
 }
