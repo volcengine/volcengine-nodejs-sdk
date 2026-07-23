@@ -64,6 +64,12 @@ export interface GetMetricDataRequest {
     StartTime?: number;
 
     /**
+     * @type {Array<string>}
+     * @memberof GetMetricDataRequest
+     */
+    StatisticsMethods?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof GetMetricDataRequest
      */

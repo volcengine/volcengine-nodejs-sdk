@@ -39,4 +39,10 @@ export interface MetricDataResultForGetMetricDataOutput {
      * @memberof MetricDataResultForGetMetricDataOutput
      */
     Legend?: string;
+
+    /**
+     * @type {string}
+     * @memberof MetricDataResultForGetMetricDataOutput
+     */
+    StatisticsMethods?: string;
 }

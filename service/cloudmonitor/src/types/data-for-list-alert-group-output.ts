@@ -108,6 +108,12 @@ export interface DataForListAlertGroupOutput {
      * @type {string}
      * @memberof DataForListAlertGroupOutput
      */
+    RuleTriggerCondition?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListAlertGroupOutput
+     */
     StartAt?: string;
 
     /**
