@@ -1,7 +1,7 @@
 {
-  "name": "@volcengine/cloudmonitor",
-  "version": "1.0.7",
-  "description": "swagger client for @volcengine/cloudmonitor",
+  "name": "@volcengine/cloudcontrol",
+  "version": "1.0.1",
+  "description": "swagger client for @volcengine/cloudcontrol",
   "license": "Apache-2.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
