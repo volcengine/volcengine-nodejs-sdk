@@ -156,6 +156,7 @@ const defaultEndpoint: Record<string, ServiceEndpointInfo> = {
   agentsphere: { Service: "agentsphere", IsGlobal: true },
   cpaas: { Service: "cpaas", IsGlobal: true },
   clawsentry: { Service: "clawsentry", IsGlobal: false },
+  cloudcontrol: { Service: "cloudcontrol", IsGlobal: false },
 };
 
 const bootstrapRegion: Record<string, unknown> = {
