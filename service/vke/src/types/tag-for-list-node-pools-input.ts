@@ -31,4 +31,10 @@ export interface TagForListNodePoolsInput {
      * @memberof TagForListNodePoolsInput
      */
     Value?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof TagForListNodePoolsInput
+     */
+    Values?: Array<string>;
 }

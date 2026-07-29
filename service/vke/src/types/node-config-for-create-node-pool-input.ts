@@ -14,6 +14,7 @@
 
 import { AffinityGroupConfigForCreateNodePoolInput } from './affinity-group-config-for-create-node-pool-input';
 import { DataVolumeForCreateNodePoolInput } from './data-volume-for-create-node-pool-input';
+import { GpuDriverConfigForCreateNodePoolInput } from './gpu-driver-config-for-create-node-pool-input';
 import { InstancesDistributionForCreateNodePoolInput } from './instances-distribution-for-create-node-pool-input';
 import { PublicAccessConfigForCreateNodePoolInput } from './public-access-config-for-create-node-pool-input';
 import { SecurityForCreateNodePoolInput } from './security-for-create-node-pool-input';
@@ -68,6 +69,12 @@ export interface NodeConfigForCreateNodePoolInput {
      * @memberof NodeConfigForCreateNodePoolInput
      */
     DeploymentSetId?: string;
+
+    /**
+     * @type {GpuDriverConfigForCreateNodePoolInput}
+     * @memberof NodeConfigForCreateNodePoolInput
+     */
+    GpuDriverConfig?: GpuDriverConfigForCreateNodePoolInput;
 
     /**
      * @type {string}

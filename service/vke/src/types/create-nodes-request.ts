@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { GpuDriverConfigForCreateNodesInput } from './gpu-driver-config-for-create-nodes-input';
 import { KubernetesConfigForCreateNodesInput } from './kubernetes-config-for-create-nodes-input';
  /**
  * 
@@ -44,6 +45,12 @@ export interface CreateNodesRequest {
      * @memberof CreateNodesRequest
      */
     ContainerStoragePath?: string;
+
+    /**
+     * @type {GpuDriverConfigForCreateNodesInput}
+     * @memberof CreateNodesRequest
+     */
+    GpuDriverConfig?: GpuDriverConfigForCreateNodesInput;
 
     /**
      * @type {string}

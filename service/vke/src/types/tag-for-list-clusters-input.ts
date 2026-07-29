@@ -31,4 +31,10 @@ export interface TagForListClustersInput {
      * @memberof TagForListClustersInput
      */
     Value?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof TagForListClustersInput
+     */
+    Values?: Array<string>;
 }

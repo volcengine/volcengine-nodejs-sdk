@@ -25,6 +25,12 @@ import { SystemReservedForUpdateNodePoolConfigInput } from './system-reserved-fo
 export interface KubeletConfigForUpdateNodePoolConfigInput {
 
     /**
+     * @type {boolean}
+     * @memberof KubeletConfigForUpdateNodePoolConfigInput
+     */
+    CpuCfsQuota?: boolean;
+
+    /**
      * @type {string}
      * @memberof KubeletConfigForUpdateNodePoolConfigInput
      */

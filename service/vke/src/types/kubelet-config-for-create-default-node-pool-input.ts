@@ -25,6 +25,12 @@ import { SystemReservedForCreateDefaultNodePoolInput } from './system-reserved-f
 export interface KubeletConfigForCreateDefaultNodePoolInput {
 
     /**
+     * @type {boolean}
+     * @memberof KubeletConfigForCreateDefaultNodePoolInput
+     */
+    CpuCfsQuota?: boolean;
+
+    /**
      * @type {string}
      * @memberof KubeletConfigForCreateDefaultNodePoolInput
      */
