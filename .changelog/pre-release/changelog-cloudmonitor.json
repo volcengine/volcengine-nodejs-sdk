@@ -1,9 +1,5 @@
 {
-  "actions": [
-    "GetMetricData",
-    "ListAlertGroup"
-  ],
-  "description": "CLOUDMONITOR: 修改 GetMetricData, ListAlertGroup",
+  "description": "CLOUDMONITOR: chore changes",
   "modules": "service/cloudmonitor",
-  "type": "feature"
+  "type": "bugfix"
 }
