@@ -25,4 +25,10 @@ export interface PrecacheSandboxImagesRequest {
      * @memberof PrecacheSandboxImagesRequest
      */
     ImageUrls?: Array<string>;
+
+    /**
+     * @type {string}
+     * @memberof PrecacheSandboxImagesRequest
+     */
+    RegistryId?: string;
 }

@@ -42,6 +42,12 @@ export interface ReleaseRequest {
      * @type {number}
      * @memberof ReleaseRequest
      */
+    MinInstance?: number;
+
+    /**
+     * @type {number}
+     * @memberof ReleaseRequest
+     */
     RevisionNumber: number;
 
     /**

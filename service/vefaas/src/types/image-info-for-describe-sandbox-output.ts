@@ -43,4 +43,10 @@ export interface ImageInfoForDescribeSandboxOutput {
      * @memberof ImageInfoForDescribeSandboxOutput
      */
     Port?: number;
+
+    /**
+     * @type {string}
+     * @memberof ImageInfoForDescribeSandboxOutput
+     */
+    SourceImageUrl?: string;
 }
