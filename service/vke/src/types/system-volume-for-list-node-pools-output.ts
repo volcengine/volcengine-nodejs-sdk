@@ -21,6 +21,12 @@
 export interface SystemVolumeForListNodePoolsOutput {
 
     /**
+     * @type {boolean}
+     * @memberof SystemVolumeForListNodePoolsOutput
+     */
+    BurstEnabled?: boolean;
+
+    /**
      * @type {string}
      * @memberof SystemVolumeForListNodePoolsOutput
      */

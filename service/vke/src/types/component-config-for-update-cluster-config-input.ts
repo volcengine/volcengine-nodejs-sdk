@@ -44,6 +44,7 @@ export enum ComponentConfigForUpdateClusterConfigInputNameEnum {
     KubeScheduler = 'KubeScheduler',
     Etcd = 'Etcd',
     ClusterAutoscaler = 'ClusterAutoscaler',
+    KubeInsights = 'KubeInsights',
     KubeBrain = 'KubeBrain',
     GodelScheduler = 'GodelScheduler',
     GodelDispatcher = 'GodelDispatcher',

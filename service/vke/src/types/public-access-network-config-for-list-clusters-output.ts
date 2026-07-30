@@ -27,6 +27,12 @@ export interface PublicAccessNetworkConfigForListClustersOutput {
     Bandwidth?: number;
 
     /**
+     * @type {string}
+     * @memberof PublicAccessNetworkConfigForListClustersOutput
+     */
+    BandwidthPackageId?: string;
+
+    /**
      * @type {number}
      * @memberof PublicAccessNetworkConfigForListClustersOutput
      */

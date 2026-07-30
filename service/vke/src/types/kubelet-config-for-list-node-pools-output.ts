@@ -25,6 +25,12 @@ import { SystemReservedForListNodePoolsOutput } from './system-reserved-for-list
 export interface KubeletConfigForListNodePoolsOutput {
 
     /**
+     * @type {boolean}
+     * @memberof KubeletConfigForListNodePoolsOutput
+     */
+    CpuCfsQuota?: boolean;
+
+    /**
      * @type {string}
      * @memberof KubeletConfigForListNodePoolsOutput
      */

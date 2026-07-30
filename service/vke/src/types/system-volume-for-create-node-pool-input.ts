@@ -21,6 +21,12 @@
 export interface SystemVolumeForCreateNodePoolInput {
 
     /**
+     * @type {boolean}
+     * @memberof SystemVolumeForCreateNodePoolInput
+     */
+    BurstEnabled?: boolean;
+
+    /**
      * @type {string}
      * @memberof SystemVolumeForCreateNodePoolInput
      */

@@ -27,6 +27,12 @@ export interface PublicAccessConfigForListNodePoolsOutput {
     Bandwidth?: number;
 
     /**
+     * @type {string}
+     * @memberof PublicAccessConfigForListNodePoolsOutput
+     */
+    BandwidthPackageId?: string;
+
+    /**
      * @type {number}
      * @memberof PublicAccessConfigForListNodePoolsOutput
      */
