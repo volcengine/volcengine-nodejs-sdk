@@ -1,5 +1,10 @@
 {
-  "description": "VEFAAS: 修改 CreateSandbox",
+  "actions": [
+    "DescribeSandbox",
+    "PrecacheSandboxImages",
+    "Release"
+  ],
+  "description": "VEFAAS: 修改 DescribeSandbox, PrecacheSandboxImages, Release",
   "modules": "service/vefaas",
   "type": "feature"
 }
