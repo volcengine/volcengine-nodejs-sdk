@@ -24,5 +24,11 @@ export interface DeleteIpamPoolResponse {
      * @type {string}
      * @memberof DeleteIpamPoolResponse
      */
+    AsyncTaskId?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteIpamPoolResponse
+     */
     RequestId?: string;
 }

@@ -112,10 +112,10 @@ export interface FlowLogForDescribeFlowLogsOutput {
     Tags?: Array<TagForDescribeFlowLogsOutput>;
 
     /**
-     * @type {Array<number>}
+     * @type {Array<string>}
      * @memberof FlowLogForDescribeFlowLogsOutput
      */
-    TrafficPath?: Array<number>;
+    TrafficPath?: Array<FlowLogForDescribeFlowLogsOutputTrafficPathEnum>;
 
     /**
      * @type {string}
@@ -142,6 +142,23 @@ export interface FlowLogForDescribeFlowLogsOutput {
     VpcId?: string;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum FlowLogForDescribeFlowLogsOutputTrafficPathEnum {
+    All = 'All',
+    NatGW = 'NatGW',
+    Ipv4GW = 'Ipv4GW',
+    Ipv6GW = 'Ipv6GW',
+    VpnGW = 'VpnGW',
+    GWLBEndpoint = 'GWLBEndpoint',
+    TransitRouter = 'TransitRouter',
+    CEN = 'CEN',
+    IntraRegionVpcPeeringConnection = 'IntraRegionVpcPeeringConnection',
+    InterRegionVpcPeeringConnection = 'InterRegionVpcPeeringConnection',
+    DirectExchangeGateway = 'DirectExchangeGateway'
+}
 /**
  * @export
  * @enum {string}

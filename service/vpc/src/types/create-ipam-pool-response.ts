@@ -24,6 +24,12 @@ export interface CreateIpamPoolResponse {
      * @type {string}
      * @memberof CreateIpamPoolResponse
      */
+    AsyncTaskId?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateIpamPoolResponse
+     */
     IpamPoolId?: string;
 
     /**

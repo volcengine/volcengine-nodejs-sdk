@@ -55,4 +55,10 @@ export interface DescribeEipAddressHighResolutionMonitorAttributeResponse {
      * @memberof DescribeEipAddressHighResolutionMonitorAttributeResponse
      */
     LogTopicName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeEipAddressHighResolutionMonitorAttributeResponse
+     */
+    RequestId?: string;
 }

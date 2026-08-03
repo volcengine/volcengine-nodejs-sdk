@@ -49,4 +49,16 @@ export interface DescribeIpamPoolAllocationsRequest {
      * @memberof DescribeIpamPoolAllocationsRequest
      */
     NextToken?: string;
+
+    /**
+     * @type {number}
+     * @memberof DescribeIpamPoolAllocationsRequest
+     */
+    PageNumber?: number;
+
+    /**
+     * @type {number}
+     * @memberof DescribeIpamPoolAllocationsRequest
+     */
+    PageSize?: number;
 }
