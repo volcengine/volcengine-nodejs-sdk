@@ -70,7 +70,7 @@ export class GetTemplateV2Command extends Command<
   GetTemplateV2CommandOutput,
   'GetTemplateV2Command'
 > {
-  static readonly metaPath = '/GetTemplateV2/2026-04-30/cpaas/post/application_x-www-form-urlencoded/';
+  static readonly metaPath = '/GetTemplateV2/2026-04-30/cpaas/get/text_plain/';
 
   constructor(input: GetTemplateV2Request) {
     super(input);

@@ -24,7 +24,7 @@ export interface PriorityForSendMessageInput {
      * @type {string}
      * @memberof PriorityForSendMessageInput
      */
-    ChannelType?: string;
+    ChannelType?: PriorityForSendMessageInputChannelTypeEnum;
 
     /**
      * @type {string}
@@ -62,3 +62,17 @@ export interface PriorityForSendMessageInput {
      */
     Timeout?: number;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum PriorityForSendMessageInputChannelTypeEnum {
+    WhatsApp = 'WhatsApp',
+    SMS = 'SMS',
+    VMS = 'VMS',
+    AIM = 'AIM',
+    VOLCSMS = 'VOLC_SMS',
+    VOLCRCS = 'VOLC_RCS'
+}
+
