@@ -25,4 +25,10 @@ export interface TerminateAcceleratorRequest {
      * @memberof TerminateAcceleratorRequest
      */
     AcceleratorId: string;
+
+    /**
+     * @type {boolean}
+     * @memberof TerminateAcceleratorRequest
+     */
+    DeleteIPSets?: boolean;
 }

@@ -92,6 +92,8 @@ import { ListTagsForResourcesRequest } from './types/index';
 import { ListTagsForResourcesResponse } from './types/index';
 import { RevokePermissionRequest } from './types/index';
 import { RevokePermissionResponse } from './types/index';
+import { ScaleNodePoolRequest } from './types/index';
+import { ScaleNodePoolResponse } from './types/index';
 import { SetGlobalDefaultDeleteOptionRequest } from './types/index';
 import { SetGlobalDefaultDeleteOptionResponse } from './types/index';
 import { TagResourcesRequest } from './types/index';
@@ -153,6 +155,7 @@ export type ListSupportedImagesCommandOutput = CommandOutput<ListSupportedImages
 export type ListSupportedResourceTypesCommandOutput = CommandOutput<ListSupportedResourceTypesResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
 export type RevokePermissionCommandOutput = CommandOutput<RevokePermissionResponse>;
+export type ScaleNodePoolCommandOutput = CommandOutput<ScaleNodePoolResponse>;
 export type SetGlobalDefaultDeleteOptionCommandOutput = CommandOutput<SetGlobalDefaultDeleteOptionResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UnbindingRemedyConfigCommandOutput = CommandOutput<UnbindingRemedyConfigResponse>;
@@ -762,6 +765,21 @@ export class RevokePermissionCommand extends Command<
   }
 }
 /**
+ * Command to ScaleNodePool
+ */
+export class ScaleNodePoolCommand extends Command<
+  ScaleNodePoolRequest,
+  ScaleNodePoolCommandOutput,
+  'ScaleNodePoolCommand'
+> {
+  static readonly metaPath = '/ScaleNodePool/2022-05-12/vke/post/application_json/';
+
+  constructor(input: ScaleNodePoolRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ScaleNodePoolCommand.metaPath);
+  }
+}
+/**
  * Command to SetGlobalDefaultDeleteOption
  */
 export class SetGlobalDefaultDeleteOptionCommand extends Command<
@@ -938,6 +956,7 @@ export default {
   ListSupportedResourceTypesCommand,
   ListTagsForResourcesCommand,
   RevokePermissionCommand,
+  ScaleNodePoolCommand,
   SetGlobalDefaultDeleteOptionCommand,
   TagResourcesCommand,
   UnbindingRemedyConfigCommand,

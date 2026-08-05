@@ -32,7 +32,7 @@ export interface PodsConfigForCreateClusterInput {
      * @type {string}
      * @memberof PodsConfigForCreateClusterInput
      */
-    PodNetworkMode?: PodsConfigForCreateClusterInputPodNetworkModeEnum;
+    PodNetworkMode?: string;
 
     /**
      * @type {VpcCniConfigForCreateClusterInput}
@@ -40,14 +40,3 @@ export interface PodsConfigForCreateClusterInput {
      */
     VpcCniConfig?: VpcCniConfigForCreateClusterInput;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum PodsConfigForCreateClusterInputPodNetworkModeEnum {
-    Flannel = 'Flannel',
-    VpcCniShared = 'VpcCniShared',
-    VpcCniDedicated = 'VpcCniDedicated'
-}
-

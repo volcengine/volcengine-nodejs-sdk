@@ -21,8 +21,8 @@
 export interface VideoEditorGetEmotionTagsRequest {
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof VideoEditorGetEmotionTagsRequest
      */
-    subtaskId: number;
+    subtaskId: string;
 }

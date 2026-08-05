@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { TagKVForListSplitBillDetailInput } from './tag-kvfor-list-split-bill-detail-input';
  /**
  * 
  *
@@ -115,4 +116,16 @@ export interface ListSplitBillDetailRequest {
      * @memberof ListSplitBillDetailRequest
      */
     SplitItemID?: string;
+
+    /**
+     * @type {Array<TagKVForListSplitBillDetailInput>}
+     * @memberof ListSplitBillDetailRequest
+     */
+    TagKV?: Array<TagKVForListSplitBillDetailInput>;
+
+    /**
+     * @type {number}
+     * @memberof ListSplitBillDetailRequest
+     */
+    TagKVFilterMode?: number;
 }

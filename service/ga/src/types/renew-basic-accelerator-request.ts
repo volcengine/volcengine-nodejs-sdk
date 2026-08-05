@@ -31,4 +31,10 @@ export interface RenewBasicAcceleratorRequest {
      * @memberof RenewBasicAcceleratorRequest
      */
     Duration: number;
+
+    /**
+     * @type {number}
+     * @memberof RenewBasicAcceleratorRequest
+     */
+    RenewType?: number;
 }

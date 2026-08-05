@@ -36,6 +36,12 @@ export interface CreatePathAnalysisRequest {
      * @type {string}
      * @memberof CreatePathAnalysisRequest
      */
+    PrivateIP?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreatePathAnalysisRequest
+     */
     Protocol: string;
 
     /**

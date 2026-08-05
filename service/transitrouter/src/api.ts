@@ -114,6 +114,8 @@ import { DeleteTransitRouterVpcAttachmentRequest } from './types/index';
 import { DeleteTransitRouterVpcAttachmentResponse } from './types/index';
 import { DeleteTransitRouterVpnAttachmentRequest } from './types/index';
 import { DeleteTransitRouterVpnAttachmentResponse } from './types/index';
+import { Describe95TrafficRequest } from './types/index';
+import { Describe95TrafficResponse } from './types/index';
 import { DescribeTransitRouterAttachmentsRequest } from './types/index';
 import { DescribeTransitRouterAttachmentsResponse } from './types/index';
 import { DescribeTransitRouterBandwidthPackagesBillingRequest } from './types/index';
@@ -300,6 +302,7 @@ export type DeleteTransitRouterTrafficQosQueueEntryCommandOutput = CommandOutput
 export type DeleteTransitRouterTrafficQosQueuePolicyCommandOutput = CommandOutput<DeleteTransitRouterTrafficQosQueuePolicyResponse>;
 export type DeleteTransitRouterVpcAttachmentCommandOutput = CommandOutput<DeleteTransitRouterVpcAttachmentResponse>;
 export type DeleteTransitRouterVpnAttachmentCommandOutput = CommandOutput<DeleteTransitRouterVpnAttachmentResponse>;
+export type Describe95TrafficCommandOutput = CommandOutput<Describe95TrafficResponse>;
 export type DescribeTransitRouterAttachmentsCommandOutput = CommandOutput<DescribeTransitRouterAttachmentsResponse>;
 export type DescribeTransitRouterBandwidthPackagesCommandOutput = CommandOutput<DescribeTransitRouterBandwidthPackagesResponse>;
 export type DescribeTransitRouterBandwidthPackagesBillingCommandOutput = CommandOutput<DescribeTransitRouterBandwidthPackagesBillingResponse>;
@@ -1128,6 +1131,21 @@ export class DeleteTransitRouterVpnAttachmentCommand extends Command<
   constructor(input: DeleteTransitRouterVpnAttachmentRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteTransitRouterVpnAttachmentCommand.metaPath);
+  }
+}
+/**
+ * Command to Describe95Traffic
+ */
+export class Describe95TrafficCommand extends Command<
+  Describe95TrafficRequest,
+  Describe95TrafficCommandOutput,
+  'Describe95TrafficCommand'
+> {
+  static readonly metaPath = '/Describe95Traffic/2020-04-01/transitrouter/get/text_plain/';
+
+  constructor(input: Describe95TrafficRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(Describe95TrafficCommand.metaPath);
   }
 }
 /**
@@ -2173,6 +2191,7 @@ export default {
   DeleteTransitRouterTrafficQosQueuePolicyCommand,
   DeleteTransitRouterVpcAttachmentCommand,
   DeleteTransitRouterVpnAttachmentCommand,
+  Describe95TrafficCommand,
   DescribeTransitRouterAttachmentsCommand,
   DescribeTransitRouterBandwidthPackagesCommand,
   DescribeTransitRouterBandwidthPackagesBillingCommand,

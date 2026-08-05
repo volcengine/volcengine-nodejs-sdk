@@ -56,6 +56,12 @@ export interface ItemForListScalingPoliciesOutput {
      * @type {string}
      * @memberof ItemForListScalingPoliciesOutput
      */
+    Name?: string;
+
+    /**
+     * @type {string}
+     * @memberof ItemForListScalingPoliciesOutput
+     */
     NodePoolId?: string;
 
     /**

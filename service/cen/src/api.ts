@@ -38,6 +38,8 @@ import { DeleteCenServiceRouteEntryRequest } from './types/index';
 import { DeleteCenServiceRouteEntryResponse } from './types/index';
 import { DeleteCenSummaryRouteEntryRequest } from './types/index';
 import { DeleteCenSummaryRouteEntryResponse } from './types/index';
+import { Describe95TrafficRequest } from './types/index';
+import { Describe95TrafficResponse } from './types/index';
 import { DescribeCenAttachedInstanceAttributesRequest } from './types/index';
 import { DescribeCenAttachedInstanceAttributesResponse } from './types/index';
 import { DescribeCenAttachedInstancesRequest } from './types/index';
@@ -114,6 +116,7 @@ export type DeleteCenBandwidthPackageCommandOutput = CommandOutput<DeleteCenBand
 export type DeleteCenInterRegionBandwidthCommandOutput = CommandOutput<DeleteCenInterRegionBandwidthResponse>;
 export type DeleteCenServiceRouteEntryCommandOutput = CommandOutput<DeleteCenServiceRouteEntryResponse>;
 export type DeleteCenSummaryRouteEntryCommandOutput = CommandOutput<DeleteCenSummaryRouteEntryResponse>;
+export type Describe95TrafficCommandOutput = CommandOutput<Describe95TrafficResponse>;
 export type DescribeCenAttachedInstanceAttributesCommandOutput = CommandOutput<DescribeCenAttachedInstanceAttributesResponse>;
 export type DescribeCenAttachedInstancesCommandOutput = CommandOutput<DescribeCenAttachedInstancesResponse>;
 export type DescribeCenAttributesCommandOutput = CommandOutput<DescribeCenAttributesResponse>;
@@ -144,7 +147,6 @@ export type SetCenBandwidthPackageRenewalCommandOutput = CommandOutput<SetCenBan
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type WithdrawCenRouteEntryCommandOutput = CommandOutput<WithdrawCenRouteEntryResponse>;
-
 
 /**
  * CENClient Service Client
@@ -337,6 +339,21 @@ export class DeleteCenSummaryRouteEntryCommand extends Command<
   constructor(input: DeleteCenSummaryRouteEntryRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteCenSummaryRouteEntryCommand.metaPath);
+  }
+}
+/**
+ * Command to Describe95Traffic
+ */
+export class Describe95TrafficCommand extends Command<
+  Describe95TrafficRequest,
+  Describe95TrafficCommandOutput,
+  'Describe95TrafficCommand'
+> {
+  static readonly metaPath = '/Describe95Traffic/2020-04-01/cen/get/text_plain/';
+
+  constructor(input: Describe95TrafficRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(Describe95TrafficCommand.metaPath);
   }
 }
 /**
@@ -804,6 +821,7 @@ export default {
   DeleteCenInterRegionBandwidthCommand,
   DeleteCenServiceRouteEntryCommand,
   DeleteCenSummaryRouteEntryCommand,
+  Describe95TrafficCommand,
   DescribeCenAttachedInstanceAttributesCommand,
   DescribeCenAttachedInstancesCommand,
   DescribeCenAttributesCommand,

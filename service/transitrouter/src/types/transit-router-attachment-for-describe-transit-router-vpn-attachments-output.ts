@@ -55,6 +55,12 @@ export interface TransitRouterAttachmentForDescribeTransitRouterVpnAttachmentsOu
      * @type {string}
      * @memberof TransitRouterAttachmentForDescribeTransitRouterVpnAttachmentsOutput
      */
+    SecondaryZoneId?: string;
+
+    /**
+     * @type {string}
+     * @memberof TransitRouterAttachmentForDescribeTransitRouterVpnAttachmentsOutput
+     */
     Status?: string;
 
     /**

@@ -34,6 +34,12 @@ export interface ClusterConfigForCreateClusterInput {
     ApiServerPublicAccessEnabled?: boolean;
 
     /**
+     * @type {string}
+     * @memberof ClusterConfigForCreateClusterInput
+     */
+    IpFamily?: ClusterConfigForCreateClusterInputIpFamilyEnum;
+
+    /**
      * @type {boolean}
      * @memberof ClusterConfigForCreateClusterInput
      */
@@ -45,3 +51,14 @@ export interface ClusterConfigForCreateClusterInput {
      */
     SubnetIds?: Array<string>;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ClusterConfigForCreateClusterInputIpFamilyEnum {
+    Ipv4 = 'Ipv4',
+    Ipv6 = 'Ipv6',
+    DualStack = 'DualStack'
+}
+

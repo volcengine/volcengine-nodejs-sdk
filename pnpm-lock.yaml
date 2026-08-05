@@ -91,6 +91,19 @@ importers:
         specifier: ^5.2.2
         version: 5.9.3
 
+  service/agentsphere:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.29
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
   service/aiotvideo:
     dependencies:
       '@volcengine/sdk-core':
@@ -356,7 +369,33 @@ importers:
         specifier: ^5.2.2
         version: 5.9.3
 
+  service/clawsentry:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.29
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
   service/clb:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.29
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/cloudcontrol:
     dependencies:
       '@volcengine/sdk-core':
         specifier: workspace:*
@@ -474,6 +513,19 @@ importers:
         version: 5.9.3
 
   service/cp:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.29
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/cpaas:
     dependencies:
       '@volcengine/sdk-core':
         specifier: workspace:*
@@ -1357,6 +1409,19 @@ importers:
         specifier: ^5.2.2
         version: 5.9.3
 
+  service/veenedge:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.29
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
   service/vefaas:
     dependencies:
       '@volcengine/sdk-core':
@@ -1449,6 +1514,19 @@ importers:
         version: 5.9.3
 
   service/volcobserve:
+    dependencies:
+      '@volcengine/sdk-core':
+        specifier: workspace:*
+        version: link:../../packages/sdk-core
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.29
+      typescript:
+        specifier: ^5.2.2
+        version: 5.9.3
+
+  service/volcsms:
     dependencies:
       '@volcengine/sdk-core':
         specifier: workspace:*

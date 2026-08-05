@@ -15,7 +15,9 @@
 import { ClusterConfigForListClustersOutput } from './cluster-config-for-list-clusters-output';
 import { ConnectorConfigForListClustersOutput } from './connector-config-for-list-clusters-output';
 import { IrsaConfigForListClustersOutput } from './irsa-config-for-list-clusters-output';
+import { KubernetesConfigForListClustersOutput } from './kubernetes-config-for-list-clusters-output';
 import { LoggingConfigForListClustersOutput } from './logging-config-for-list-clusters-output';
+import { MaintenanceWindowConfigForListClustersOutput } from './maintenance-window-config-for-list-clusters-output';
 import { MonitoringConfigForListClustersOutput } from './monitoring-config-for-list-clusters-output';
 import { NodeStatisticsForListClustersOutput } from './node-statistics-for-list-clusters-output';
 import { PodsConfigForListClustersOutput } from './pods-config-for-list-clusters-output';
@@ -80,6 +82,12 @@ export interface ItemForListClustersOutput {
     IrsaConfig?: IrsaConfigForListClustersOutput;
 
     /**
+     * @type {KubernetesConfigForListClustersOutput}
+     * @memberof ItemForListClustersOutput
+     */
+    KubernetesConfig?: KubernetesConfigForListClustersOutput;
+
+    /**
      * @type {string}
      * @memberof ItemForListClustersOutput
      */
@@ -90,6 +98,12 @@ export interface ItemForListClustersOutput {
      * @memberof ItemForListClustersOutput
      */
     LoggingConfig?: LoggingConfigForListClustersOutput;
+
+    /**
+     * @type {MaintenanceWindowConfigForListClustersOutput}
+     * @memberof ItemForListClustersOutput
+     */
+    MaintenanceWindowConfig?: MaintenanceWindowConfigForListClustersOutput;
 
     /**
      * @type {string}

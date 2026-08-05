@@ -153,6 +153,12 @@ const defaultEndpoint: Record<string, ServiceEndpointInfo> = {
   config: { Service: "config", IsGlobal: true },
   milvus: { Service: "milvus", IsGlobal: false },
   partner: { Service: "partner", IsGlobal: true },
+  agentsphere: { Service: "agentsphere", IsGlobal: true },
+  cpaas: { Service: "cpaas", IsGlobal: true },
+  clawsentry: { Service: "clawsentry", IsGlobal: false },
+  veenedge: { Service: "veenedge", IsGlobal: true },
+  cloudcontrol: { Service: "cloudcontrol", IsGlobal: false },
+  volcsms: { Service: "volcsms", IsGlobal: true },
 };
 
 const bootstrapRegion: Record<string, unknown> = {

@@ -31,4 +31,10 @@ export interface CpuOptionsForDescribeInstancesOutput {
      * @memberof CpuOptionsForDescribeInstancesOutput
      */
     ThreadsPerCore?: number;
+
+    /**
+     * @type {string}
+     * @memberof CpuOptionsForDescribeInstancesOutput
+     */
+    TopologyType?: string;
 }

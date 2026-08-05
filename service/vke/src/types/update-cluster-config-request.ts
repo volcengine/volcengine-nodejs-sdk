@@ -13,6 +13,7 @@
  */
 
 import { ClusterConfigForUpdateClusterConfigInput } from './cluster-config-for-update-cluster-config-input';
+import { KubernetesConfigForUpdateClusterConfigInput } from './kubernetes-config-for-update-cluster-config-input';
 import { LoggingConfigForUpdateClusterConfigInput } from './logging-config-for-update-cluster-config-input';
 import { MonitoringConfigForUpdateClusterConfigInput } from './monitoring-config-for-update-cluster-config-input';
 import { PodsConfigForUpdateClusterConfigInput } from './pods-config-for-update-cluster-config-input';
@@ -60,6 +61,12 @@ export interface UpdateClusterConfigRequest {
      * @memberof UpdateClusterConfigRequest
      */
     IrsaEnabled?: boolean;
+
+    /**
+     * @type {KubernetesConfigForUpdateClusterConfigInput}
+     * @memberof UpdateClusterConfigRequest
+     */
+    KubernetesConfig?: KubernetesConfigForUpdateClusterConfigInput;
 
     /**
      * @type {LoggingConfigForUpdateClusterConfigInput}

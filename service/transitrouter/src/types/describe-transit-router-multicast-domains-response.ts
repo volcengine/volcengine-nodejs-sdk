@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { TransitRouterMulticastDomainsForDescribeTransitRouterMulticastDomainsOutput } from './transit-router-multicast-domains-for-describe-transit-router-multicast-domains-output';
+import { TransitRouterMulticastDomainForDescribeTransitRouterMulticastDomainsOutput } from './transit-router-multicast-domain-for-describe-transit-router-multicast-domains-output';
  /**
  * 
  *
@@ -40,8 +40,8 @@ export interface DescribeTransitRouterMulticastDomainsResponse {
     TotalCount?: number;
 
     /**
-     * @type {TransitRouterMulticastDomainsForDescribeTransitRouterMulticastDomainsOutput}
+     * @type {Array<TransitRouterMulticastDomainForDescribeTransitRouterMulticastDomainsOutput>}
      * @memberof DescribeTransitRouterMulticastDomainsResponse
      */
-    TransitRouterMulticastDomains?: TransitRouterMulticastDomainsForDescribeTransitRouterMulticastDomainsOutput;
+    TransitRouterMulticastDomains?: Array<TransitRouterMulticastDomainForDescribeTransitRouterMulticastDomainsOutput>;
 }

@@ -124,6 +124,12 @@ export interface CreateSandboxRequest {
     Sidecars?: Array<SidecarForCreateSandboxInput>;
 
     /**
+     * @type {string}
+     * @memberof CreateSandboxRequest
+     */
+    SnapshotId?: string;
+
+    /**
      * @type {number}
      * @memberof CreateSandboxRequest
      */

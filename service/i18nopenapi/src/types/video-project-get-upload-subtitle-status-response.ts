@@ -13,7 +13,6 @@
  */
 
 import { DataForVideoProjectGetUploadSubtitleStatusOutput } from './data-for-video-project-get-upload-subtitle-status-output';
-import { UploadSubtitleInfoForVideoProjectGetUploadSubtitleStatusOutput } from './upload-subtitle-info-for-video-project-get-upload-subtitle-status-output';
  /**
  * 
  *
@@ -23,20 +22,8 @@ import { UploadSubtitleInfoForVideoProjectGetUploadSubtitleStatusOutput } from '
 export interface VideoProjectGetUploadSubtitleStatusResponse {
 
     /**
-     * @type {string}
-     * @memberof VideoProjectGetUploadSubtitleStatusResponse
-     */
-    batchId?: string;
-
-    /**
      * @type {DataForVideoProjectGetUploadSubtitleStatusOutput}
      * @memberof VideoProjectGetUploadSubtitleStatusResponse
      */
     data?: DataForVideoProjectGetUploadSubtitleStatusOutput;
-
-    /**
-     * @type {Array<UploadSubtitleInfoForVideoProjectGetUploadSubtitleStatusOutput>}
-     * @memberof VideoProjectGetUploadSubtitleStatusResponse
-     */
-    uploadSubtitleInfos?: Array<UploadSubtitleInfoForVideoProjectGetUploadSubtitleStatusOutput>;
 }

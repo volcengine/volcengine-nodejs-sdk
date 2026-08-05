@@ -24,17 +24,5 @@ export interface EndpointForUpdateBasicAccelerateIPEndpointRelationInput {
      * @type {string}
      * @memberof EndpointForUpdateBasicAccelerateIPEndpointRelationInput
      */
-    endpointAddress?: string;
-
-    /**
-     * @type {string}
-     * @memberof EndpointForUpdateBasicAccelerateIPEndpointRelationInput
-     */
-    endpointID?: string;
-
-    /**
-     * @type {string}
-     * @memberof EndpointForUpdateBasicAccelerateIPEndpointRelationInput
-     */
-    type?: string;
+    EndpointId?: string;
 }

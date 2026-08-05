@@ -14,6 +14,7 @@
 
 import { AffinityGroupConfigForUpdateNodePoolConfigInput } from './affinity-group-config-for-update-node-pool-config-input';
 import { DataVolumeForUpdateNodePoolConfigInput } from './data-volume-for-update-node-pool-config-input';
+import { GpuDriverConfigForUpdateNodePoolConfigInput } from './gpu-driver-config-for-update-node-pool-config-input';
 import { InstancesDistributionForUpdateNodePoolConfigInput } from './instances-distribution-for-update-node-pool-config-input';
 import { PublicAccessConfigForUpdateNodePoolConfigInput } from './public-access-config-for-update-node-pool-config-input';
 import { SecurityForUpdateNodePoolConfigInput } from './security-for-update-node-pool-config-input';
@@ -52,10 +53,22 @@ export interface NodeConfigForUpdateNodePoolConfigInput {
     AutoRenewPeriod?: number;
 
     /**
+     * @type {number}
+     * @memberof NodeConfigForUpdateNodePoolConfigInput
+     */
+    CpuMaxFrequency?: number;
+
+    /**
      * @type {Array<DataVolumeForUpdateNodePoolConfigInput>}
      * @memberof NodeConfigForUpdateNodePoolConfigInput
      */
     DataVolumes?: Array<DataVolumeForUpdateNodePoolConfigInput>;
+
+    /**
+     * @type {GpuDriverConfigForUpdateNodePoolConfigInput}
+     * @memberof NodeConfigForUpdateNodePoolConfigInput
+     */
+    GpuDriverConfig?: GpuDriverConfigForUpdateNodePoolConfigInput;
 
     /**
      * @type {string}

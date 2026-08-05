@@ -22,6 +22,12 @@ import { ResourceTagForCreateAcceleratorInput } from './resource-tag-for-create-
 export interface CreateAcceleratorRequest {
 
     /**
+     * @type {string}
+     * @memberof CreateAcceleratorRequest
+     */
+    AccelerateType?: string;
+
+    /**
      * @type {number}
      * @memberof CreateAcceleratorRequest
      */
@@ -50,6 +56,12 @@ export interface CreateAcceleratorRequest {
      * @memberof CreateAcceleratorRequest
      */
     Duration?: number;
+
+    /**
+     * @type {boolean}
+     * @memberof CreateAcceleratorRequest
+     */
+    FullPortSwitch?: boolean;
 
     /**
      * @type {string}

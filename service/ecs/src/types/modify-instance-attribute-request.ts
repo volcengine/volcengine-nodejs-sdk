@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { CpuOptionsForModifyInstanceAttributeInput } from './cpu-options-for-modify-instance-attribute-input';
  /**
  * 
  *
@@ -25,6 +26,12 @@ export interface ModifyInstanceAttributeRequest {
      * @memberof ModifyInstanceAttributeRequest
      */
     ClientToken?: string;
+
+    /**
+     * @type {CpuOptionsForModifyInstanceAttributeInput}
+     * @memberof ModifyInstanceAttributeRequest
+     */
+    CpuOptions?: CpuOptionsForModifyInstanceAttributeInput;
 
     /**
      * @type {boolean}

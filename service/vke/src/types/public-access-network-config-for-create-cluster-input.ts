@@ -27,6 +27,12 @@ export interface PublicAccessNetworkConfigForCreateClusterInput {
     Bandwidth?: number;
 
     /**
+     * @type {string}
+     * @memberof PublicAccessNetworkConfigForCreateClusterInput
+     */
+    BandwidthPackageId?: string;
+
+    /**
      * @type {number}
      * @memberof PublicAccessNetworkConfigForCreateClusterInput
      */

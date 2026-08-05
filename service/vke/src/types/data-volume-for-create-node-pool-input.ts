@@ -21,6 +21,12 @@
 export interface DataVolumeForCreateNodePoolInput {
 
     /**
+     * @type {boolean}
+     * @memberof DataVolumeForCreateNodePoolInput
+     */
+    BurstEnabled?: boolean;
+
+    /**
      * @type {number}
      * @memberof DataVolumeForCreateNodePoolInput
      */

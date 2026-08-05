@@ -24,11 +24,11 @@ export interface DescribeBasicIPSetRequest {
      * @type {string}
      * @memberof DescribeBasicIPSetRequest
      */
-    acceleratorId: string;
+    AcceleratorId: string;
 
     /**
      * @type {string}
      * @memberof DescribeBasicIPSetRequest
      */
-    ipsetId: string;
+    IPSetId: string;
 }

@@ -24,11 +24,11 @@ export interface DescribeBasicEndpointGroupRequest {
      * @type {string}
      * @memberof DescribeBasicEndpointGroupRequest
      */
-    acceleratorId: string;
+    AcceleratorId: string;
 
     /**
      * @type {string}
      * @memberof DescribeBasicEndpointGroupRequest
      */
-    endpointGroupId: string;
+    EndpointGroupId: string;
 }

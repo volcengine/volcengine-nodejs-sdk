@@ -1,5 +1,13 @@
 {
-  "description": "I18N_OPENAPI: 新增 VideoProjectGetUploadSubtitleStatus, VideoProjectSubtitleUpload；修改 VideoProjectGetVideoUploadStatus, VideoProjectSerialDubTaskCreate, VideoProjectSerialTaskCreate, VideoProjectVideoUpload",
+  "actions": [
+    "VideoProjectVideoDelete",
+    "VideoEditorDeleteSubtitle",
+    "VideoEditorGetEmotionTags",
+    "VideoProjectSerialDubTaskCreate",
+    "VideoProjectSerialTaskCreate",
+    "VideoProjectSubtitleDelete"
+  ],
+  "description": "I18N_OPENAPI: 新增 VideoProjectSubtitleDelete, VideoProjectVideoDelete, VideoEditorDeleteSubtitle；修改 VideoEditorDeleteSubtitle, VideoEditorGetEmotionTags, VideoProjectSerialDubTaskCreate, VideoProjectSerialTaskCreate",
   "modules": "service/i18n_openapi",
-  "type": "feature"
+  "type": "breaking-change"
 }

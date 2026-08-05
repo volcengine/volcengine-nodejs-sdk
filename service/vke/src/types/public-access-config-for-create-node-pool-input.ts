@@ -27,6 +27,12 @@ export interface PublicAccessConfigForCreateNodePoolInput {
     Bandwidth?: number;
 
     /**
+     * @type {string}
+     * @memberof PublicAccessConfigForCreateNodePoolInput
+     */
+    BandwidthPackageId?: string;
+
+    /**
      * @type {number}
      * @memberof PublicAccessConfigForCreateNodePoolInput
      */
