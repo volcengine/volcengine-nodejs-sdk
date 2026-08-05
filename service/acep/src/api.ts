@@ -44,6 +44,8 @@ import { CancelRestorePodRequest } from './types/index';
 import { CancelRestorePodResponse } from './types/index';
 import { CloseAppRequest } from './types/index';
 import { CloseAppResponse } from './types/index';
+import { CreateAppImageRequest } from './types/index';
+import { CreateAppImageResponse } from './types/index';
 import { CreateDNSRuleRequest } from './types/index';
 import { CreateDNSRuleResponse } from './types/index';
 import { CreateDisplayLayoutMiniRequest } from './types/index';
@@ -62,6 +64,8 @@ import { DeleteAOSPImageRequest } from './types/index';
 import { DeleteAOSPImageResponse } from './types/index';
 import { DeleteAdbKeyRequest } from './types/index';
 import { DeleteAdbKeyResponse } from './types/index';
+import { DeleteAppImageRequest } from './types/index';
+import { DeleteAppImageResponse } from './types/index';
 import { DeleteAppRequest } from './types/index';
 import { DeleteAppResponse } from './types/index';
 import { DeleteBackupDataRequest } from './types/index';
@@ -76,6 +80,8 @@ import { DeletePodRequest } from './types/index';
 import { DeletePodResponse } from './types/index';
 import { DeleteTagRequest } from './types/index';
 import { DeleteTagResponse } from './types/index';
+import { DetailAppImageRequest } from './types/index';
+import { DetailAppImageResponse } from './types/index';
 import { DetailAppRequest } from './types/index';
 import { DetailAppResponse } from './types/index';
 import { DetailDNSRuleRequest } from './types/index';
@@ -92,6 +98,8 @@ import { GetAppCrashLogRequest } from './types/index';
 import { GetAppCrashLogResponse } from './types/index';
 import { GetDcBandwidthDailyPeakRequest } from './types/index';
 import { GetDcBandwidthDailyPeakResponse } from './types/index';
+import { GetEdgeTunnelConnectionInfoRequest } from './types/index';
+import { GetEdgeTunnelConnectionInfoResponse } from './types/index';
 import { GetImagePreheatingRequest } from './types/index';
 import { GetImagePreheatingResponse } from './types/index';
 import { GetPhoneTemplateRequest } from './types/index';
@@ -124,6 +132,8 @@ import { ListAdbKeyPodBindingsRequest } from './types/index';
 import { ListAdbKeyPodBindingsResponse } from './types/index';
 import { ListAdbKeyRequest } from './types/index';
 import { ListAdbKeyResponse } from './types/index';
+import { ListAppImageRequest } from './types/index';
+import { ListAppImageResponse } from './types/index';
 import { ListAppRequest } from './types/index';
 import { ListAppResponse } from './types/index';
 import { ListAppVersionDeployRequest } from './types/index';
@@ -265,6 +275,7 @@ export type BuildAOSPImageCommandOutput = CommandOutput<BuildAOSPImageResponse>;
 export type CancelBackupPodCommandOutput = CommandOutput<CancelBackupPodResponse>;
 export type CancelRestorePodCommandOutput = CommandOutput<CancelRestorePodResponse>;
 export type CloseAppCommandOutput = CommandOutput<CloseAppResponse>;
+export type CreateAppImageCommandOutput = CommandOutput<CreateAppImageResponse>;
 export type CreateDNSRuleCommandOutput = CommandOutput<CreateDNSRuleResponse>;
 export type CreateDisplayLayoutMiniCommandOutput = CommandOutput<CreateDisplayLayoutMiniResponse>;
 export type CreateImageOneStepCommandOutput = CommandOutput<CreateImageOneStepResponse>;
@@ -275,6 +286,7 @@ export type CreateTagCommandOutput = CommandOutput<CreateTagResponse>;
 export type DeleteAOSPImageCommandOutput = CommandOutput<DeleteAOSPImageResponse>;
 export type DeleteAdbKeyCommandOutput = CommandOutput<DeleteAdbKeyResponse>;
 export type DeleteAppCommandOutput = CommandOutput<DeleteAppResponse>;
+export type DeleteAppImageCommandOutput = CommandOutput<DeleteAppImageResponse>;
 export type DeleteBackupDataCommandOutput = CommandOutput<DeleteBackupDataResponse>;
 export type DeleteCustomRouteCommandOutput = CommandOutput<DeleteCustomRouteResponse>;
 export type DeleteDNSRuleCommandOutput = CommandOutput<DeleteDNSRuleResponse>;
@@ -282,6 +294,7 @@ export type DeleteDisplayLayoutCommandOutput = CommandOutput<DeleteDisplayLayout
 export type DeletePodCommandOutput = CommandOutput<DeletePodResponse>;
 export type DeleteTagCommandOutput = CommandOutput<DeleteTagResponse>;
 export type DetailAppCommandOutput = CommandOutput<DetailAppResponse>;
+export type DetailAppImageCommandOutput = CommandOutput<DetailAppImageResponse>;
 export type DetailDNSRuleCommandOutput = CommandOutput<DetailDNSRuleResponse>;
 export type DetailDisplayLayoutMiniCommandOutput = CommandOutput<DetailDisplayLayoutMiniResponse>;
 export type DetailHostCommandOutput = CommandOutput<DetailHostResponse>;
@@ -289,6 +302,7 @@ export type DetailPodCommandOutput = CommandOutput<DetailPodResponse>;
 export type DetailPortMappingRuleCommandOutput = CommandOutput<DetailPortMappingRuleResponse>;
 export type GetAppCrashLogCommandOutput = CommandOutput<GetAppCrashLogResponse>;
 export type GetDcBandwidthDailyPeakCommandOutput = CommandOutput<GetDcBandwidthDailyPeakResponse>;
+export type GetEdgeTunnelConnectionInfoCommandOutput = CommandOutput<GetEdgeTunnelConnectionInfoResponse>;
 export type GetImagePreheatingCommandOutput = CommandOutput<GetImagePreheatingResponse>;
 export type GetPhoneTemplateCommandOutput = CommandOutput<GetPhoneTemplateResponse>;
 export type GetPodAppListCommandOutput = CommandOutput<GetPodAppListResponse>;
@@ -306,6 +320,7 @@ export type ListAOSPImageCommandOutput = CommandOutput<ListAOSPImageResponse>;
 export type ListAdbKeyCommandOutput = CommandOutput<ListAdbKeyResponse>;
 export type ListAdbKeyPodBindingsCommandOutput = CommandOutput<ListAdbKeyPodBindingsResponse>;
 export type ListAppCommandOutput = CommandOutput<ListAppResponse>;
+export type ListAppImageCommandOutput = CommandOutput<ListAppImageResponse>;
 export type ListAppVersionDeployCommandOutput = CommandOutput<ListAppVersionDeployResponse>;
 export type ListBackupDataCommandOutput = CommandOutput<ListBackupDataResponse>;
 export type ListConfigurationCommandOutput = CommandOutput<ListConfigurationResponse>;
@@ -606,6 +621,21 @@ export class CloseAppCommand extends Command<
   }
 }
 /**
+ * Command to CreateAppImage
+ */
+export class CreateAppImageCommand extends Command<
+  CreateAppImageRequest,
+  CreateAppImageCommandOutput,
+  'CreateAppImageCommand'
+> {
+  static readonly metaPath = '/CreateAppImage/2025-05-01/acep/post/application_json/';
+
+  constructor(input: CreateAppImageRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateAppImageCommand.metaPath);
+  }
+}
+/**
  * Command to CreateDNSRule
  */
 export class CreateDNSRuleCommand extends Command<
@@ -756,6 +786,21 @@ export class DeleteAppCommand extends Command<
   }
 }
 /**
+ * Command to DeleteAppImage
+ */
+export class DeleteAppImageCommand extends Command<
+  DeleteAppImageRequest,
+  DeleteAppImageCommandOutput,
+  'DeleteAppImageCommand'
+> {
+  static readonly metaPath = '/DeleteAppImage/2025-05-01/acep/post/application_json/';
+
+  constructor(input: DeleteAppImageRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAppImageCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteBackupData
  */
 export class DeleteBackupDataCommand extends Command<
@@ -861,6 +906,21 @@ export class DetailAppCommand extends Command<
   }
 }
 /**
+ * Command to DetailAppImage
+ */
+export class DetailAppImageCommand extends Command<
+  DetailAppImageRequest,
+  DetailAppImageCommandOutput,
+  'DetailAppImageCommand'
+> {
+  static readonly metaPath = '/DetailAppImage/2025-05-01/acep/post/application_json/';
+
+  constructor(input: DetailAppImageRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DetailAppImageCommand.metaPath);
+  }
+}
+/**
  * Command to DetailDNSRule
  */
 export class DetailDNSRuleCommand extends Command<
@@ -963,6 +1023,21 @@ export class GetDcBandwidthDailyPeakCommand extends Command<
   constructor(input: GetDcBandwidthDailyPeakRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetDcBandwidthDailyPeakCommand.metaPath);
+  }
+}
+/**
+ * Command to GetEdgeTunnelConnectionInfo
+ */
+export class GetEdgeTunnelConnectionInfoCommand extends Command<
+  GetEdgeTunnelConnectionInfoRequest,
+  GetEdgeTunnelConnectionInfoCommandOutput,
+  'GetEdgeTunnelConnectionInfoCommand'
+> {
+  static readonly metaPath = '/GetEdgeTunnelConnectionInfo/2025-05-01/acep/post/application_json/';
+
+  constructor(input: GetEdgeTunnelConnectionInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetEdgeTunnelConnectionInfoCommand.metaPath);
   }
 }
 /**
@@ -1218,6 +1293,21 @@ export class ListAppCommand extends Command<
   constructor(input: ListAppRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListAppCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAppImage
+ */
+export class ListAppImageCommand extends Command<
+  ListAppImageRequest,
+  ListAppImageCommandOutput,
+  'ListAppImageCommand'
+> {
+  static readonly metaPath = '/ListAppImage/2025-05-01/acep/post/application_json/';
+
+  constructor(input: ListAppImageRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAppImageCommand.metaPath);
   }
 }
 /**
@@ -2138,6 +2228,7 @@ export default {
   CancelBackupPodCommand,
   CancelRestorePodCommand,
   CloseAppCommand,
+  CreateAppImageCommand,
   CreateDNSRuleCommand,
   CreateDisplayLayoutMiniCommand,
   CreateImageOneStepCommand,
@@ -2148,6 +2239,7 @@ export default {
   DeleteAOSPImageCommand,
   DeleteAdbKeyCommand,
   DeleteAppCommand,
+  DeleteAppImageCommand,
   DeleteBackupDataCommand,
   DeleteCustomRouteCommand,
   DeleteDNSRuleCommand,
@@ -2155,6 +2247,7 @@ export default {
   DeletePodCommand,
   DeleteTagCommand,
   DetailAppCommand,
+  DetailAppImageCommand,
   DetailDNSRuleCommand,
   DetailDisplayLayoutMiniCommand,
   DetailHostCommand,
@@ -2162,6 +2255,7 @@ export default {
   DetailPortMappingRuleCommand,
   GetAppCrashLogCommand,
   GetDcBandwidthDailyPeakCommand,
+  GetEdgeTunnelConnectionInfoCommand,
   GetImagePreheatingCommand,
   GetPhoneTemplateCommand,
   GetPodAppListCommand,
@@ -2179,6 +2273,7 @@ export default {
   ListAdbKeyCommand,
   ListAdbKeyPodBindingsCommand,
   ListAppCommand,
+  ListAppImageCommand,
   ListAppVersionDeployCommand,
   ListBackupDataCommand,
   ListConfigurationCommand,
