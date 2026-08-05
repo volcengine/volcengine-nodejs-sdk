@@ -34,8 +34,8 @@ export const PRIORITY: Record<
     step: "build",
   },
   retryMiddleware: {
-    priority: 100,
-    step: "finalizeRequest",
+    priority: 150,
+    step: "build",
   },
   httpRequestMiddleware: {
     priority: 50,

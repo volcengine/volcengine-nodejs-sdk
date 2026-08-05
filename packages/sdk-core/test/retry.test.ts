@@ -58,6 +58,83 @@ describe("Retry Logic", () => {
       await client.destroy();
     });
 
+    test("should add signed retry headers to every attempt", async () => {
+      const mockClock = new MockClock();
+      const capturedHeaders: Record<string, any>[] = [];
+      let requestCount = 0;
+      const requestHandler = {
+        request: jest.fn(async (config: { headers?: Record<string, any> }) => {
+          requestCount++;
+          capturedHeaders.push({ ...config.headers });
+
+          if (requestCount < 3) {
+            const error: any = new Error("Internal Server Error");
+            error.status = 500;
+            error.response = {
+              status: 500,
+              statusText: "Internal Server Error",
+              headers: {},
+              data: {},
+            };
+            throw error;
+          }
+
+          return {
+            status: 200,
+            statusText: "OK",
+            headers: {},
+            data: { result: "success" },
+          };
+        }),
+      };
+
+      const client = new Client({
+        host: "example.com",
+        accessKeyId: "test-key",
+        secretAccessKey: "test-secret",
+        maxRetries: 2,
+        retryStrategy: {
+          strategyName: StrategyName.NoBackoffStrategy,
+        },
+        requestHandler: requestHandler as any,
+        clock: mockClock,
+      });
+
+      const command = new Command({ test: "data" });
+      (command as any).requestConfig = {
+        method: "POST",
+        serviceName: "test-service",
+        pathname: "/api/test",
+      };
+
+      await expect(client.send(command)).resolves.toEqual({
+        result: "success",
+      });
+
+      expect(capturedHeaders).toHaveLength(3);
+      expect(
+        capturedHeaders.map((headers) => headers["x-sdk-request"])
+      ).toEqual([
+        "attempt=1; max=3",
+        "attempt=2; max=3",
+        "attempt=3; max=3",
+      ]);
+
+      const invocationIds = capturedHeaders.map(
+        (headers) => headers["x-sdk-invocation-id"]
+      );
+      expect(invocationIds[0]).toBeTruthy();
+      expect(new Set(invocationIds).size).toBe(1);
+
+      for (const headers of capturedHeaders) {
+        expect(headers.Authorization).toContain(
+          "x-sdk-invocation-id;x-sdk-request"
+        );
+      }
+
+      await client.destroy();
+    });
+
     test("should retry on various 5xx errors", async () => {
       // Arrange
       const mockHandler = new MockRequestHandler();

@@ -2,6 +2,33 @@ import type { Clock } from "../types/clock";
 import type { Args, MiddlewareFunction, MiddlewareStackOptions } from "./types";
 import { PRIORITY } from "./priority";
 import type { RetryStrategy } from "../types/types";
+import { v4 as uuidv4 } from "uuid";
+
+const RETRY_INVOCATION_ID_HEADER = "X-Sdk-Invocation-Id";
+const RETRY_ATTEMPT_HEADER = "X-Sdk-Request";
+
+function addRetryHeaders(
+  headers: Record<string, any> | undefined,
+  invocationId: string,
+  attempt: number,
+  maxAttempts: number
+): Record<string, any> {
+  const nextHeaders = Object.fromEntries(
+    Object.entries(headers || {}).filter(([key]) => {
+      const lowerCaseKey = key.toLowerCase();
+      return (
+        lowerCaseKey !== "authorization" &&
+        lowerCaseKey !== RETRY_INVOCATION_ID_HEADER.toLowerCase() &&
+        lowerCaseKey !== RETRY_ATTEMPT_HEADER.toLowerCase()
+      );
+    })
+  );
+
+  nextHeaders[RETRY_INVOCATION_ID_HEADER] = invocationId;
+  nextHeaders[RETRY_ATTEMPT_HEADER] =
+    `attempt=${attempt}; max=${maxAttempts}`;
+  return nextHeaders;
+}
 
 export function createRetryMiddleware(
   clock: Clock,
@@ -30,11 +57,18 @@ export function createRetryMiddleware(
       }
 
       const customRetryStrategy = clientConfig.retryStrategy;
+      const invocationId = uuidv4();
 
       let lastError: any;
 
       for (let attempt = 1; attempt <= maxAttempts; attempt++) {
         try {
+          args.request.headers = addRetryHeaders(
+            args.request.headers,
+            invocationId,
+            attempt,
+            maxAttempts
+          );
           const result = await next(args);
           return result;
         } catch (error: any) {
