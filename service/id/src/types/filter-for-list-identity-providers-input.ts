@@ -30,5 +30,17 @@ export interface FilterForListIdentityProvidersInput {
      * @type {string}
      * @memberof FilterForListIdentityProvidersInput
      */
+    EipId?: string;
+
+    /**
+     * @type {string}
+     * @memberof FilterForListIdentityProvidersInput
+     */
+    ExcludeConnectionType?: string;
+
+    /**
+     * @type {string}
+     * @memberof FilterForListIdentityProvidersInput
+     */
     Name?: string;
 }

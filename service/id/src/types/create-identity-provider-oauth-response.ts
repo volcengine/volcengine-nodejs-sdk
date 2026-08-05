@@ -12,7 +12,10 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForCreateIdentityProviderOAuthOutput } from './attribute-mapping-for-create-identity-provider-oauth-output';
 import { ClaimsPropagationConfigForCreateIdentityProviderOAuthOutput } from './claims-propagation-config-for-create-identity-provider-oauth-output';
+import { EipRecordForCreateIdentityProviderOAuthOutput } from './eip-record-for-create-identity-provider-oauth-output';
+import { ExtraProviderConfigurationForCreateIdentityProviderOAuthOutput } from './extra-provider-configuration-for-create-identity-provider-oauth-output';
 import { ProviderOptionsForCreateIdentityProviderOAuthOutput } from './provider-options-for-create-identity-provider-oauth-output';
  /**
  * 
@@ -21,6 +24,12 @@ import { ProviderOptionsForCreateIdentityProviderOAuthOutput } from './provider-
  * @interface CreateIdentityProviderOAuthResponse
  */
 export interface CreateIdentityProviderOAuthResponse {
+
+    /**
+     * @type {Array<AttributeMappingForCreateIdentityProviderOAuthOutput>}
+     * @memberof CreateIdentityProviderOAuthResponse
+     */
+    AttributeMappings?: Array<AttributeMappingForCreateIdentityProviderOAuthOutput>;
 
     /**
      * @type {string}
@@ -47,10 +56,22 @@ export interface CreateIdentityProviderOAuthResponse {
     ClientSecret?: string;
 
     /**
+     * @type {EipRecordForCreateIdentityProviderOAuthOutput}
+     * @memberof CreateIdentityProviderOAuthResponse
+     */
+    EipRecord?: EipRecordForCreateIdentityProviderOAuthOutput;
+
+    /**
      * @type {boolean}
      * @memberof CreateIdentityProviderOAuthResponse
      */
     Enabled?: boolean;
+
+    /**
+     * @type {ExtraProviderConfigurationForCreateIdentityProviderOAuthOutput}
+     * @memberof CreateIdentityProviderOAuthResponse
+     */
+    ExtraProviderConfiguration?: ExtraProviderConfigurationForCreateIdentityProviderOAuthOutput;
 
     /**
      * @type {string}
@@ -81,6 +102,12 @@ export interface CreateIdentityProviderOAuthResponse {
      * @memberof CreateIdentityProviderOAuthResponse
      */
     ScopesList?: Array<string>;
+
+    /**
+     * @type {boolean}
+     * @memberof CreateIdentityProviderOAuthResponse
+     */
+    SoleProviderConnection?: boolean;
 
     /**
      * @type {string}

@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DefinitionForGrantPermissionInput } from './definition-for-grant-permission-input';
 import { OperationForGrantPermissionInput } from './operation-for-grant-permission-input';
 import { OriginalCallerForGrantPermissionInput } from './original-caller-for-grant-permission-input';
 import { PrincipalForGrantPermissionInput } from './principal-for-grant-permission-input';
@@ -23,6 +24,12 @@ import { ResourceForGrantPermissionInput } from './resource-for-grant-permission
  * @interface GrantPermissionRequest
  */
 export interface GrantPermissionRequest {
+
+    /**
+     * @type {DefinitionForGrantPermissionInput}
+     * @memberof GrantPermissionRequest
+     */
+    Definition?: DefinitionForGrantPermissionInput;
 
     /**
      * @type {string}

@@ -12,7 +12,9 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForUpdateIdentityProviderOAuthInput } from './attribute-mapping-for-update-identity-provider-oauth-input';
 import { ClaimsPropagationConfigForUpdateIdentityProviderOAuthInput } from './claims-propagation-config-for-update-identity-provider-oauth-input';
+import { ExtraProviderConfigurationForUpdateIdentityProviderOAuthInput } from './extra-provider-configuration-for-update-identity-provider-oauth-input';
 import { ProviderOptionsForUpdateIdentityProviderOAuthInput } from './provider-options-for-update-identity-provider-oauth-input';
  /**
  * 
@@ -21,6 +23,12 @@ import { ProviderOptionsForUpdateIdentityProviderOAuthInput } from './provider-o
  * @interface UpdateIdentityProviderOAuthRequest
  */
 export interface UpdateIdentityProviderOAuthRequest {
+
+    /**
+     * @type {Array<AttributeMappingForUpdateIdentityProviderOAuthInput>}
+     * @memberof UpdateIdentityProviderOAuthRequest
+     */
+    AttributeMappings?: Array<AttributeMappingForUpdateIdentityProviderOAuthInput>;
 
     /**
      * @type {string}
@@ -38,7 +46,7 @@ export interface UpdateIdentityProviderOAuthRequest {
      * @type {string}
      * @memberof UpdateIdentityProviderOAuthRequest
      */
-    ClientId: string;
+    ClientId?: string;
 
     /**
      * @type {string}
@@ -53,16 +61,28 @@ export interface UpdateIdentityProviderOAuthRequest {
     ConnectionUid: string;
 
     /**
+     * @type {string}
+     * @memberof UpdateIdentityProviderOAuthRequest
+     */
+    EipId?: string;
+
+    /**
      * @type {boolean}
      * @memberof UpdateIdentityProviderOAuthRequest
      */
     Enabled?: boolean;
 
     /**
+     * @type {ExtraProviderConfigurationForUpdateIdentityProviderOAuthInput}
+     * @memberof UpdateIdentityProviderOAuthRequest
+     */
+    ExtraProviderConfiguration?: ExtraProviderConfigurationForUpdateIdentityProviderOAuthInput;
+
+    /**
      * @type {string}
      * @memberof UpdateIdentityProviderOAuthRequest
      */
-    IdAttribute: string;
+    IdAttribute?: string;
 
     /**
      * @type {string}
@@ -92,7 +112,7 @@ export interface UpdateIdentityProviderOAuthRequest {
      * @type {boolean}
      * @memberof UpdateIdentityProviderOAuthRequest
      */
-    UsePkce: boolean;
+    UsePkce?: boolean;
 
     /**
      * @type {string}

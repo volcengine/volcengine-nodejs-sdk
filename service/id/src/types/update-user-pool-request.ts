@@ -22,6 +22,12 @@ import { BrandForUpdateUserPoolInput } from './brand-for-update-user-pool-input'
 export interface UpdateUserPoolRequest {
 
     /**
+     * @type {Array<string>}
+     * @memberof UpdateUserPoolRequest
+     */
+    AuthenticationMethodOrder?: Array<string>;
+
+    /**
      * @type {BrandForUpdateUserPoolInput}
      * @memberof UpdateUserPoolRequest
      */
@@ -32,6 +38,12 @@ export interface UpdateUserPoolRequest {
      * @memberof UpdateUserPoolRequest
      */
     Description?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof UpdateUserPoolRequest
+     */
+    EmailAnonymousSignUpEnabled?: boolean;
 
     /**
      * @type {boolean}
@@ -58,6 +70,12 @@ export interface UpdateUserPoolRequest {
     SelfAccountRecoveryEnabled?: boolean;
 
     /**
+     * @type {Array<string>}
+     * @memberof UpdateUserPoolRequest
+     */
+    SelfAccountRecoveryVerificationAttributes?: Array<string>;
+
+    /**
      * @type {boolean}
      * @memberof UpdateUserPoolRequest
      */
@@ -70,10 +88,10 @@ export interface UpdateUserPoolRequest {
     SignUpAutoVerificationEnabled?: boolean;
 
     /**
-     * @type {string}
+     * @type {boolean}
      * @memberof UpdateUserPoolRequest
      */
-    SmsAnonymousSignUpEnabled?: string;
+    SmsAnonymousSignUpEnabled?: boolean;
 
     /**
      * @type {boolean}

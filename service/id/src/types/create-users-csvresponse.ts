@@ -13,6 +13,7 @@
  */
 
 import { ErrorsStructuredForCreateUsersCSVOutput } from './errors-structured-for-create-users-csvoutput';
+import { SuccessfulUidsStructuredForCreateUsersCSVOutput } from './successful-uids-structured-for-create-users-csvoutput';
  /**
  * 
  *
@@ -50,4 +51,10 @@ export interface CreateUsersCSVResponse {
      * @memberof CreateUsersCSVResponse
      */
     SuccessfulUids?: Array<string>;
+
+    /**
+     * @type {Array<SuccessfulUidsStructuredForCreateUsersCSVOutput>}
+     * @memberof CreateUsersCSVResponse
+     */
+    SuccessfulUidsStructured?: Array<SuccessfulUidsStructuredForCreateUsersCSVOutput>;
 }

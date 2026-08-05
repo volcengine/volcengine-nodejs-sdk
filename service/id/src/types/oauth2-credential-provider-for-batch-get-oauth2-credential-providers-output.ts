@@ -42,6 +42,12 @@ export interface Oauth2CredentialProviderForBatchGetOauth2CredentialProvidersOut
      * @type {string}
      * @memberof Oauth2CredentialProviderForBatchGetOauth2CredentialProvidersOutput
      */
+    ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof Oauth2CredentialProviderForBatchGetOauth2CredentialProvidersOutput
+     */
     UpdatedAt?: string;
 
     /**

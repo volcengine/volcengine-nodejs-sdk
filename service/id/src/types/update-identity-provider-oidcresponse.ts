@@ -13,7 +13,9 @@
  */
 
 import { ClaimsPropagationConfigForUpdateIdentityProviderOIDCOutput } from './claims-propagation-config-for-update-identity-provider-oidcoutput';
+import { EipRecordForUpdateIdentityProviderOIDCOutput } from './eip-record-for-update-identity-provider-oidcoutput';
 import { ProviderOptionsForUpdateIdentityProviderOIDCOutput } from './provider-options-for-update-identity-provider-oidcoutput';
+import { ScimProvisioningForUpdateIdentityProviderOIDCOutput } from './scim-provisioning-for-update-identity-provider-oidcoutput';
  /**
  * 
  *
@@ -39,6 +41,12 @@ export interface UpdateIdentityProviderOIDCResponse {
      * @memberof UpdateIdentityProviderOIDCResponse
      */
     ClientSecret?: string;
+
+    /**
+     * @type {EipRecordForUpdateIdentityProviderOIDCOutput}
+     * @memberof UpdateIdentityProviderOIDCResponse
+     */
+    EipRecord?: EipRecordForUpdateIdentityProviderOIDCOutput;
 
     /**
      * @type {boolean}
@@ -75,6 +83,12 @@ export interface UpdateIdentityProviderOIDCResponse {
      * @memberof UpdateIdentityProviderOIDCResponse
      */
     ProviderOptions?: ProviderOptionsForUpdateIdentityProviderOIDCOutput;
+
+    /**
+     * @type {ScimProvisioningForUpdateIdentityProviderOIDCOutput}
+     * @memberof UpdateIdentityProviderOIDCResponse
+     */
+    ScimProvisioning?: ScimProvisioningForUpdateIdentityProviderOIDCOutput;
 
     /**
      * @type {Array<string>}

@@ -24,7 +24,55 @@ export interface UpdateSmsServiceResponse {
      * @type {boolean}
      * @memberof UpdateSmsServiceResponse
      */
+    CnUsageEnabled?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof UpdateSmsServiceResponse
+     */
     Enabled?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof UpdateSmsServiceResponse
+     */
+    LoginRowTemplateId?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateSmsServiceResponse
+     */
+    PasswordResetCnTemplateId?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateSmsServiceResponse
+     */
+    PasswordResetRowTemplateId?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof UpdateSmsServiceResponse
+     */
+    RowUsageEnabled?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof UpdateSmsServiceResponse
+     */
+    SenderId?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateSmsServiceResponse
+     */
+    SignUpCnTemplateId?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateSmsServiceResponse
+     */
+    SignUpRowTemplateId?: string;
 
     /**
      * @type {string}

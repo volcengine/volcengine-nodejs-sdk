@@ -14,6 +14,7 @@
 
 import { CustomParametersForCreateOauth2CredentialProviderDcrInput } from './custom-parameters-for-create-oauth2-credential-provider-dcr-input';
 import { Oauth2DiscoveryForCreateOauth2CredentialProviderDcrInput } from './oauth2-discovery-for-create-oauth2-credential-provider-dcr-input';
+import { SecretStorageForCreateOauth2CredentialProviderDcrInput } from './secret-storage-for-create-oauth2-credential-provider-dcr-input';
  /**
  * 
  *
@@ -81,6 +82,12 @@ export interface ConfigForCreateOauth2CredentialProviderDcrInput {
      * @memberof ConfigForCreateOauth2CredentialProviderDcrInput
      */
     Scopes?: Array<string>;
+
+    /**
+     * @type {SecretStorageForCreateOauth2CredentialProviderDcrInput}
+     * @memberof ConfigForCreateOauth2CredentialProviderDcrInput
+     */
+    SecretStorage?: SecretStorageForCreateOauth2CredentialProviderDcrInput;
 }
 
 /**

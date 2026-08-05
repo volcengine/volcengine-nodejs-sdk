@@ -14,6 +14,7 @@
 
 import { CustomParametersForUpdateOauth2CredentialProviderInput } from './custom-parameters-for-update-oauth2-credential-provider-input';
 import { Oauth2DiscoveryForUpdateOauth2CredentialProviderInput } from './oauth2-discovery-for-update-oauth2-credential-provider-input';
+import { SecretStorageForUpdateOauth2CredentialProviderInput } from './secret-storage-for-update-oauth2-credential-provider-input';
  /**
  * 
  *
@@ -81,6 +82,12 @@ export interface ConfigForUpdateOauth2CredentialProviderInput {
      * @memberof ConfigForUpdateOauth2CredentialProviderInput
      */
     Scopes?: Array<string>;
+
+    /**
+     * @type {SecretStorageForUpdateOauth2CredentialProviderInput}
+     * @memberof ConfigForUpdateOauth2CredentialProviderInput
+     */
+    SecretStorage?: SecretStorageForUpdateOauth2CredentialProviderInput;
 }
 
 /**

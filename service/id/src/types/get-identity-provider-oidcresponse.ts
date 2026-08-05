@@ -12,8 +12,11 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForGetIdentityProviderOIDCOutput } from './attribute-mapping-for-get-identity-provider-oidcoutput';
 import { ClaimsPropagationConfigForGetIdentityProviderOIDCOutput } from './claims-propagation-config-for-get-identity-provider-oidcoutput';
+import { EipRecordForGetIdentityProviderOIDCOutput } from './eip-record-for-get-identity-provider-oidcoutput';
 import { ProviderOptionsForGetIdentityProviderOIDCOutput } from './provider-options-for-get-identity-provider-oidcoutput';
+import { ScimProvisioningForGetIdentityProviderOIDCOutput } from './scim-provisioning-for-get-identity-provider-oidcoutput';
  /**
  * 
  *
@@ -21,6 +24,12 @@ import { ProviderOptionsForGetIdentityProviderOIDCOutput } from './provider-opti
  * @interface GetIdentityProviderOIDCResponse
  */
 export interface GetIdentityProviderOIDCResponse {
+
+    /**
+     * @type {Array<AttributeMappingForGetIdentityProviderOIDCOutput>}
+     * @memberof GetIdentityProviderOIDCResponse
+     */
+    AttributeMappings?: Array<AttributeMappingForGetIdentityProviderOIDCOutput>;
 
     /**
      * @type {ClaimsPropagationConfigForGetIdentityProviderOIDCOutput}
@@ -39,6 +48,12 @@ export interface GetIdentityProviderOIDCResponse {
      * @memberof GetIdentityProviderOIDCResponse
      */
     ClientSecret?: string;
+
+    /**
+     * @type {EipRecordForGetIdentityProviderOIDCOutput}
+     * @memberof GetIdentityProviderOIDCResponse
+     */
+    EipRecord?: EipRecordForGetIdentityProviderOIDCOutput;
 
     /**
      * @type {boolean}
@@ -75,6 +90,12 @@ export interface GetIdentityProviderOIDCResponse {
      * @memberof GetIdentityProviderOIDCResponse
      */
     ProviderOptions?: ProviderOptionsForGetIdentityProviderOIDCOutput;
+
+    /**
+     * @type {ScimProvisioningForGetIdentityProviderOIDCOutput}
+     * @memberof GetIdentityProviderOIDCResponse
+     */
+    ScimProvisioning?: ScimProvisioningForGetIdentityProviderOIDCOutput;
 
     /**
      * @type {Array<string>}

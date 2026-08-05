@@ -12,8 +12,11 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForCreateIdentityProviderSAMLOutput } from './attribute-mapping-for-create-identity-provider-samloutput';
 import { ClaimsPropagationConfigForCreateIdentityProviderSAMLOutput } from './claims-propagation-config-for-create-identity-provider-samloutput';
+import { EipRecordForCreateIdentityProviderSAMLOutput } from './eip-record-for-create-identity-provider-samloutput';
 import { ProviderOptionsForCreateIdentityProviderSAMLOutput } from './provider-options-for-create-identity-provider-samloutput';
+import { ScimProvisioningForCreateIdentityProviderSAMLOutput } from './scim-provisioning-for-create-identity-provider-samloutput';
  /**
  * 
  *
@@ -29,6 +32,12 @@ export interface CreateIdentityProviderSAMLResponse {
     AttributeMapping?: string;
 
     /**
+     * @type {Array<AttributeMappingForCreateIdentityProviderSAMLOutput>}
+     * @memberof CreateIdentityProviderSAMLResponse
+     */
+    AttributeMappings?: Array<AttributeMappingForCreateIdentityProviderSAMLOutput>;
+
+    /**
      * @type {string}
      * @memberof CreateIdentityProviderSAMLResponse
      */
@@ -39,6 +48,12 @@ export interface CreateIdentityProviderSAMLResponse {
      * @memberof CreateIdentityProviderSAMLResponse
      */
     ClaimsPropagationConfig?: ClaimsPropagationConfigForCreateIdentityProviderSAMLOutput;
+
+    /**
+     * @type {EipRecordForCreateIdentityProviderSAMLOutput}
+     * @memberof CreateIdentityProviderSAMLResponse
+     */
+    EipRecord?: EipRecordForCreateIdentityProviderSAMLOutput;
 
     /**
      * @type {boolean}
@@ -87,6 +102,18 @@ export interface CreateIdentityProviderSAMLResponse {
      * @memberof CreateIdentityProviderSAMLResponse
      */
     ProviderOptions?: ProviderOptionsForCreateIdentityProviderSAMLOutput;
+
+    /**
+     * @type {ScimProvisioningForCreateIdentityProviderSAMLOutput}
+     * @memberof CreateIdentityProviderSAMLResponse
+     */
+    ScimProvisioning?: ScimProvisioningForCreateIdentityProviderSAMLOutput;
+
+    /**
+     * @type {string}
+     * @memberof CreateIdentityProviderSAMLResponse
+     */
+    SpMetadata?: string;
 
     /**
      * @type {string}

@@ -13,6 +13,8 @@
  */
 
 import { FilterForListUsersInput } from './filter-for-list-users-input';
+import { ResponseValueMaskForListUsersInput } from './response-value-mask-for-list-users-input';
+import { ResponseValueNullForListUsersInput } from './response-value-null-for-list-users-input';
  /**
  * 
  *
@@ -31,13 +33,37 @@ export interface ListUsersRequest {
      * @type {number}
      * @memberof ListUsersRequest
      */
-    PageNumber: number;
+    MaxResults?: number;
+
+    /**
+     * @type {string}
+     * @memberof ListUsersRequest
+     */
+    NextToken?: string;
 
     /**
      * @type {number}
      * @memberof ListUsersRequest
      */
-    PageSize: number;
+    PageNumber?: number;
+
+    /**
+     * @type {number}
+     * @memberof ListUsersRequest
+     */
+    PageSize?: number;
+
+    /**
+     * @type {ResponseValueMaskForListUsersInput}
+     * @memberof ListUsersRequest
+     */
+    ResponseValueMask?: ResponseValueMaskForListUsersInput;
+
+    /**
+     * @type {ResponseValueNullForListUsersInput}
+     * @memberof ListUsersRequest
+     */
+    ResponseValueNull?: ResponseValueNullForListUsersInput;
 
     /**
      * @type {string}

@@ -77,6 +77,12 @@ export interface GetUserPoolClientResponse {
     DevelopmentModeEnabled?: boolean;
 
     /**
+     * @type {boolean}
+     * @memberof GetUserPoolClientResponse
+     */
+    DismissLoginPageEnabled?: boolean;
+
+    /**
      * @type {IdTokenForGetUserPoolClientOutput}
      * @memberof GetUserPoolClientResponse
      */
@@ -105,6 +111,12 @@ export interface GetUserPoolClientResponse {
      * @memberof GetUserPoolClientResponse
      */
     RefreshToken?: RefreshTokenForGetUserPoolClientOutput;
+
+    /**
+     * @type {boolean}
+     * @memberof GetUserPoolClientResponse
+     */
+    SkipConsentEnabled?: boolean;
 
     /**
      * @type {string}

@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { CustomAttributeForUpdateUserOutput } from './custom-attribute-for-update-user-output';
+import { ExternalIdentityForUpdateUserOutput } from './external-identity-for-update-user-output';
  /**
  * 
  *
@@ -39,6 +41,18 @@ export interface UpdateUserResponse {
     CreateTime?: string;
 
     /**
+     * @type {Array<CustomAttributeForUpdateUserOutput>}
+     * @memberof UpdateUserResponse
+     */
+    CustomAttributes?: Array<CustomAttributeForUpdateUserOutput>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof UpdateUserResponse
+     */
+    DepartmentUids?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof UpdateUserResponse
      */
@@ -49,6 +63,12 @@ export interface UpdateUserResponse {
      * @memberof UpdateUserResponse
      */
     EmailVerified?: boolean;
+
+    /**
+     * @type {Array<ExternalIdentityForUpdateUserOutput>}
+     * @memberof UpdateUserResponse
+     */
+    ExternalIdentities?: Array<ExternalIdentityForUpdateUserOutput>;
 
     /**
      * @type {string}
@@ -69,6 +89,12 @@ export interface UpdateUserResponse {
     GivenName?: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof UpdateUserResponse
+     */
+    GroupUids?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof UpdateUserResponse
      */
@@ -79,6 +105,24 @@ export interface UpdateUserResponse {
      * @memberof UpdateUserResponse
      */
     LatestLogin?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateUserResponse
+     */
+    LatestLoginConnectionName?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateUserResponse
+     */
+    LatestLoginConnectionProvider?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateUserResponse
+     */
+    LatestLoginConnectionType?: string;
 
     /**
      * @type {string}

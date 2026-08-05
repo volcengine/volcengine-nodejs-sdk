@@ -25,6 +25,12 @@ export interface CreateUsersRequest {
      * @type {string}
      * @memberof CreateUsersRequest
      */
+    ExternalProviderConnectionUid?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateUsersRequest
+     */
     UserPoolUid: string;
 
     /**
