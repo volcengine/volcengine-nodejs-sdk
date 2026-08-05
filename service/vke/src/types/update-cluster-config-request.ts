@@ -15,6 +15,7 @@
 import { ClusterConfigForUpdateClusterConfigInput } from './cluster-config-for-update-cluster-config-input';
 import { KubernetesConfigForUpdateClusterConfigInput } from './kubernetes-config-for-update-cluster-config-input';
 import { LoggingConfigForUpdateClusterConfigInput } from './logging-config-for-update-cluster-config-input';
+import { MaintenanceWindowConfigForUpdateClusterConfigInput } from './maintenance-window-config-for-update-cluster-config-input';
 import { MonitoringConfigForUpdateClusterConfigInput } from './monitoring-config-for-update-cluster-config-input';
 import { PodsConfigForUpdateClusterConfigInput } from './pods-config-for-update-cluster-config-input';
 import { RegisterMonitoringConfigForUpdateClusterConfigInput } from './register-monitoring-config-for-update-cluster-config-input';
@@ -73,6 +74,12 @@ export interface UpdateClusterConfigRequest {
      * @memberof UpdateClusterConfigRequest
      */
     LoggingConfig?: LoggingConfigForUpdateClusterConfigInput;
+
+    /**
+     * @type {MaintenanceWindowConfigForUpdateClusterConfigInput}
+     * @memberof UpdateClusterConfigRequest
+     */
+    MaintenanceWindowConfig?: MaintenanceWindowConfigForUpdateClusterConfigInput;
 
     /**
      * @type {MonitoringConfigForUpdateClusterConfigInput}
