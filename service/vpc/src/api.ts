@@ -32,6 +32,8 @@ import { AssociateEipAddressRequest } from './types/index';
 import { AssociateEipAddressResponse } from './types/index';
 import { AssociateHaVipRequest } from './types/index';
 import { AssociateHaVipResponse } from './types/index';
+import { AssociateIpamResourceDiscoveryRequest } from './types/index';
+import { AssociateIpamResourceDiscoveryResponse } from './types/index';
 import { AssociateNetworkAclRequest } from './types/index';
 import { AssociateNetworkAclResponse } from './types/index';
 import { AssociateRouteTableRequest } from './types/index';
@@ -40,6 +42,8 @@ import { AssociateVpcCidrBlockRequest } from './types/index';
 import { AssociateVpcCidrBlockResponse } from './types/index';
 import { AssociateVpcUserCidrBlockRequest } from './types/index';
 import { AssociateVpcUserCidrBlockResponse } from './types/index';
+import { AttachIpv4GatewayRequest } from './types/index';
+import { AttachIpv4GatewayResponse } from './types/index';
 import { AttachNetworkInterfaceRequest } from './types/index';
 import { AttachNetworkInterfaceResponse } from './types/index';
 import { AuthorizeSecurityGroupEgressRequest } from './types/index';
@@ -60,12 +64,18 @@ import { CreateInstanceGroupRequest } from './types/index';
 import { CreateInstanceGroupResponse } from './types/index';
 import { CreateIpAddressPoolRequest } from './types/index';
 import { CreateIpAddressPoolResponse } from './types/index';
+import { CreateIpamPoolAllocationRequest } from './types/index';
+import { CreateIpamPoolAllocationResponse } from './types/index';
 import { CreateIpamPoolRequest } from './types/index';
 import { CreateIpamPoolResponse } from './types/index';
 import { CreateIpamRequest } from './types/index';
+import { CreateIpamResourceDiscoveryRequest } from './types/index';
+import { CreateIpamResourceDiscoveryResponse } from './types/index';
 import { CreateIpamResponse } from './types/index';
 import { CreateIpamScopeRequest } from './types/index';
 import { CreateIpamScopeResponse } from './types/index';
+import { CreateIpv4GatewayRequest } from './types/index';
+import { CreateIpv4GatewayResponse } from './types/index';
 import { CreateIpv6EgressOnlyRuleRequest } from './types/index';
 import { CreateIpv6EgressOnlyRuleResponse } from './types/index';
 import { CreateIpv6GatewayRequest } from './types/index';
@@ -111,9 +121,13 @@ import { DeleteIpAddressPoolResponse } from './types/index';
 import { DeleteIpamPoolRequest } from './types/index';
 import { DeleteIpamPoolResponse } from './types/index';
 import { DeleteIpamRequest } from './types/index';
+import { DeleteIpamResourceDiscoveryRequest } from './types/index';
+import { DeleteIpamResourceDiscoveryResponse } from './types/index';
 import { DeleteIpamResponse } from './types/index';
 import { DeleteIpamScopeRequest } from './types/index';
 import { DeleteIpamScopeResponse } from './types/index';
+import { DeleteIpv4GatewayRequest } from './types/index';
+import { DeleteIpv4GatewayResponse } from './types/index';
 import { DeleteIpv6EgressOnlyRuleRequest } from './types/index';
 import { DeleteIpv6EgressOnlyRuleResponse } from './types/index';
 import { DeleteIpv6GatewayRequest } from './types/index';
@@ -144,6 +158,8 @@ import { DeleteVpcRequest } from './types/index';
 import { DeleteVpcResponse } from './types/index';
 import { DeprovisionIpamPoolCidrRequest } from './types/index';
 import { DeprovisionIpamPoolCidrResponse } from './types/index';
+import { Describe95TrafficRequest } from './types/index';
+import { Describe95TrafficResponse } from './types/index';
 import { DescribeBandwidthPackagesRequest } from './types/index';
 import { DescribeBandwidthPackagesResponse } from './types/index';
 import { DescribeEipAddressAttributesRequest } from './types/index';
@@ -168,6 +184,8 @@ import { DescribeIpamCloudMonitorDimensionsRequest } from './types/index';
 import { DescribeIpamCloudMonitorDimensionsResponse } from './types/index';
 import { DescribeIpamDiscoveredResourceCidrsRequest } from './types/index';
 import { DescribeIpamDiscoveredResourceCidrsResponse } from './types/index';
+import { DescribeIpamOrganizationAccountRequest } from './types/index';
+import { DescribeIpamOrganizationAccountResponse } from './types/index';
 import { DescribeIpamPoolAllocationsRequest } from './types/index';
 import { DescribeIpamPoolAllocationsResponse } from './types/index';
 import { DescribeIpamPoolCidrsRequest } from './types/index';
@@ -186,6 +204,8 @@ import { DescribeIpamScopesRequest } from './types/index';
 import { DescribeIpamScopesResponse } from './types/index';
 import { DescribeIpamsRequest } from './types/index';
 import { DescribeIpamsResponse } from './types/index';
+import { DescribeIpv4GatewaysRequest } from './types/index';
+import { DescribeIpv4GatewaysResponse } from './types/index';
 import { DescribeIpv6AddressBandwidthAttributesRequest } from './types/index';
 import { DescribeIpv6AddressBandwidthAttributesResponse } from './types/index';
 import { DescribeIpv6AddressBandwidthsRequest } from './types/index';
@@ -232,14 +252,22 @@ import { DescribeVpcAttributesRequest } from './types/index';
 import { DescribeVpcAttributesResponse } from './types/index';
 import { DescribeVpcsRequest } from './types/index';
 import { DescribeVpcsResponse } from './types/index';
+import { DetachIpv4GatewayRequest } from './types/index';
+import { DetachIpv4GatewayResponse } from './types/index';
 import { DetachNetworkInterfaceRequest } from './types/index';
 import { DetachNetworkInterfaceResponse } from './types/index';
 import { DisableEipAddressHighResolutionMonitorRequest } from './types/index';
 import { DisableEipAddressHighResolutionMonitorResponse } from './types/index';
+import { DisableIpamOrganizationTrustedServiceRequest } from './types/index';
+import { DisableIpamOrganizationTrustedServiceResponse } from './types/index';
+import { DisableIpv4GatewayRequest } from './types/index';
+import { DisableIpv4GatewayResponse } from './types/index';
 import { DisassociateEipAddressRequest } from './types/index';
 import { DisassociateEipAddressResponse } from './types/index';
 import { DisassociateHaVipRequest } from './types/index';
 import { DisassociateHaVipResponse } from './types/index';
+import { DisassociateIpamResourceDiscoveryRequest } from './types/index';
+import { DisassociateIpamResourceDiscoveryResponse } from './types/index';
 import { DisassociateNetworkAclRequest } from './types/index';
 import { DisassociateNetworkAclResponse } from './types/index';
 import { DisassociateRouteTableRequest } from './types/index';
@@ -250,6 +278,12 @@ import { DisassociateVpcUserCidrBlockRequest } from './types/index';
 import { DisassociateVpcUserCidrBlockResponse } from './types/index';
 import { EnableEipAddressHighResolutionMonitorRequest } from './types/index';
 import { EnableEipAddressHighResolutionMonitorResponse } from './types/index';
+import { EnableIpamOrganizationTrustedServiceRequest } from './types/index';
+import { EnableIpamOrganizationTrustedServiceResponse } from './types/index';
+import { EnableIpv4GatewayRequest } from './types/index';
+import { EnableIpv4GatewayResponse } from './types/index';
+import { GetAsyncTaskStatusRequest } from './types/index';
+import { GetAsyncTaskStatusResponse } from './types/index';
 import { GetIpamPoolAvailableCidrRequest } from './types/index';
 import { GetIpamPoolAvailableCidrResponse } from './types/index';
 import { ListTagsForIpamResourcesRequest } from './types/index';
@@ -284,6 +318,8 @@ import { ModifyIpamResourceDiscoveryResponse } from './types/index';
 import { ModifyIpamResponse } from './types/index';
 import { ModifyIpamScopeRequest } from './types/index';
 import { ModifyIpamScopeResponse } from './types/index';
+import { ModifyIpv4GatewayRequest } from './types/index';
+import { ModifyIpv4GatewayResponse } from './types/index';
 import { ModifyIpv6AddressBandwidthRequest } from './types/index';
 import { ModifyIpv6AddressBandwidthResponse } from './types/index';
 import { ModifyIpv6EgressOnlyRuleAttributeRequest } from './types/index';
@@ -361,10 +397,12 @@ export type AssignIpv6AddressesCommandOutput = CommandOutput<AssignIpv6Addresses
 export type AssignPrivateIpAddressesCommandOutput = CommandOutput<AssignPrivateIpAddressesResponse>;
 export type AssociateEipAddressCommandOutput = CommandOutput<AssociateEipAddressResponse>;
 export type AssociateHaVipCommandOutput = CommandOutput<AssociateHaVipResponse>;
+export type AssociateIpamResourceDiscoveryCommandOutput = CommandOutput<AssociateIpamResourceDiscoveryResponse>;
 export type AssociateNetworkAclCommandOutput = CommandOutput<AssociateNetworkAclResponse>;
 export type AssociateRouteTableCommandOutput = CommandOutput<AssociateRouteTableResponse>;
 export type AssociateVpcCidrBlockCommandOutput = CommandOutput<AssociateVpcCidrBlockResponse>;
 export type AssociateVpcUserCidrBlockCommandOutput = CommandOutput<AssociateVpcUserCidrBlockResponse>;
+export type AttachIpv4GatewayCommandOutput = CommandOutput<AttachIpv4GatewayResponse>;
 export type AttachNetworkInterfaceCommandOutput = CommandOutput<AttachNetworkInterfaceResponse>;
 export type AuthorizeSecurityGroupEgressCommandOutput = CommandOutput<AuthorizeSecurityGroupEgressResponse>;
 export type AuthorizeSecurityGroupIngressCommandOutput = CommandOutput<AuthorizeSecurityGroupIngressResponse>;
@@ -377,7 +415,10 @@ export type CreateInstanceGroupCommandOutput = CommandOutput<CreateInstanceGroup
 export type CreateIpAddressPoolCommandOutput = CommandOutput<CreateIpAddressPoolResponse>;
 export type CreateIpamCommandOutput = CommandOutput<CreateIpamResponse>;
 export type CreateIpamPoolCommandOutput = CommandOutput<CreateIpamPoolResponse>;
+export type CreateIpamPoolAllocationCommandOutput = CommandOutput<CreateIpamPoolAllocationResponse>;
+export type CreateIpamResourceDiscoveryCommandOutput = CommandOutput<CreateIpamResourceDiscoveryResponse>;
 export type CreateIpamScopeCommandOutput = CommandOutput<CreateIpamScopeResponse>;
+export type CreateIpv4GatewayCommandOutput = CommandOutput<CreateIpv4GatewayResponse>;
 export type CreateIpv6EgressOnlyRuleCommandOutput = CommandOutput<CreateIpv6EgressOnlyRuleResponse>;
 export type CreateIpv6GatewayCommandOutput = CommandOutput<CreateIpv6GatewayResponse>;
 export type CreateNetworkAclCommandOutput = CommandOutput<CreateNetworkAclResponse>;
@@ -401,7 +442,9 @@ export type DeleteIpAddressPoolCommandOutput = CommandOutput<DeleteIpAddressPool
 export type DeleteIpAddressPoolCidrBlockCommandOutput = CommandOutput<DeleteIpAddressPoolCidrBlockResponse>;
 export type DeleteIpamCommandOutput = CommandOutput<DeleteIpamResponse>;
 export type DeleteIpamPoolCommandOutput = CommandOutput<DeleteIpamPoolResponse>;
+export type DeleteIpamResourceDiscoveryCommandOutput = CommandOutput<DeleteIpamResourceDiscoveryResponse>;
 export type DeleteIpamScopeCommandOutput = CommandOutput<DeleteIpamScopeResponse>;
+export type DeleteIpv4GatewayCommandOutput = CommandOutput<DeleteIpv4GatewayResponse>;
 export type DeleteIpv6EgressOnlyRuleCommandOutput = CommandOutput<DeleteIpv6EgressOnlyRuleResponse>;
 export type DeleteIpv6GatewayCommandOutput = CommandOutput<DeleteIpv6GatewayResponse>;
 export type DeleteNetworkAclCommandOutput = CommandOutput<DeleteNetworkAclResponse>;
@@ -417,6 +460,7 @@ export type DeleteTrafficMirrorSessionCommandOutput = CommandOutput<DeleteTraffi
 export type DeleteTrafficMirrorTargetCommandOutput = CommandOutput<DeleteTrafficMirrorTargetResponse>;
 export type DeleteVpcCommandOutput = CommandOutput<DeleteVpcResponse>;
 export type DeprovisionIpamPoolCidrCommandOutput = CommandOutput<DeprovisionIpamPoolCidrResponse>;
+export type Describe95TrafficCommandOutput = CommandOutput<Describe95TrafficResponse>;
 export type DescribeBandwidthPackagesCommandOutput = CommandOutput<DescribeBandwidthPackagesResponse>;
 export type DescribeEipAddressAttributesCommandOutput = CommandOutput<DescribeEipAddressAttributesResponse>;
 export type DescribeEipAddressHighResolutionMonitorAttributeCommandOutput = CommandOutput<DescribeEipAddressHighResolutionMonitorAttributeResponse>;
@@ -429,6 +473,7 @@ export type DescribeIpAddressPoolCidrBlocksCommandOutput = CommandOutput<Describ
 export type DescribeIpAddressPoolsCommandOutput = CommandOutput<DescribeIpAddressPoolsResponse>;
 export type DescribeIpamCloudMonitorDimensionsCommandOutput = CommandOutput<DescribeIpamCloudMonitorDimensionsResponse>;
 export type DescribeIpamDiscoveredResourceCidrsCommandOutput = CommandOutput<DescribeIpamDiscoveredResourceCidrsResponse>;
+export type DescribeIpamOrganizationAccountCommandOutput = CommandOutput<DescribeIpamOrganizationAccountResponse>;
 export type DescribeIpamPoolAllocationsCommandOutput = CommandOutput<DescribeIpamPoolAllocationsResponse>;
 export type DescribeIpamPoolCidrsCommandOutput = CommandOutput<DescribeIpamPoolCidrsResponse>;
 export type DescribeIpamPoolsCommandOutput = CommandOutput<DescribeIpamPoolsResponse>;
@@ -438,6 +483,7 @@ export type DescribeIpamResourceDiscoveryAssociationsCommandOutput = CommandOutp
 export type DescribeIpamScopeStatsCommandOutput = CommandOutput<DescribeIpamScopeStatsResponse>;
 export type DescribeIpamScopesCommandOutput = CommandOutput<DescribeIpamScopesResponse>;
 export type DescribeIpamsCommandOutput = CommandOutput<DescribeIpamsResponse>;
+export type DescribeIpv4GatewaysCommandOutput = CommandOutput<DescribeIpv4GatewaysResponse>;
 export type DescribeIpv6AddressBandwidthAttributesCommandOutput = CommandOutput<DescribeIpv6AddressBandwidthAttributesResponse>;
 export type DescribeIpv6AddressBandwidthsCommandOutput = CommandOutput<DescribeIpv6AddressBandwidthsResponse>;
 export type DescribeIpv6EgressOnlyRulesCommandOutput = CommandOutput<DescribeIpv6EgressOnlyRulesResponse>;
@@ -461,15 +507,22 @@ export type DescribeTrafficMirrorSessionsCommandOutput = CommandOutput<DescribeT
 export type DescribeTrafficMirrorTargetsCommandOutput = CommandOutput<DescribeTrafficMirrorTargetsResponse>;
 export type DescribeVpcAttributesCommandOutput = CommandOutput<DescribeVpcAttributesResponse>;
 export type DescribeVpcsCommandOutput = CommandOutput<DescribeVpcsResponse>;
+export type DetachIpv4GatewayCommandOutput = CommandOutput<DetachIpv4GatewayResponse>;
 export type DetachNetworkInterfaceCommandOutput = CommandOutput<DetachNetworkInterfaceResponse>;
 export type DisableEipAddressHighResolutionMonitorCommandOutput = CommandOutput<DisableEipAddressHighResolutionMonitorResponse>;
+export type DisableIpamOrganizationTrustedServiceCommandOutput = CommandOutput<DisableIpamOrganizationTrustedServiceResponse>;
+export type DisableIpv4GatewayCommandOutput = CommandOutput<DisableIpv4GatewayResponse>;
 export type DisassociateEipAddressCommandOutput = CommandOutput<DisassociateEipAddressResponse>;
 export type DisassociateHaVipCommandOutput = CommandOutput<DisassociateHaVipResponse>;
+export type DisassociateIpamResourceDiscoveryCommandOutput = CommandOutput<DisassociateIpamResourceDiscoveryResponse>;
 export type DisassociateNetworkAclCommandOutput = CommandOutput<DisassociateNetworkAclResponse>;
 export type DisassociateRouteTableCommandOutput = CommandOutput<DisassociateRouteTableResponse>;
 export type DisassociateVpcCidrBlockCommandOutput = CommandOutput<DisassociateVpcCidrBlockResponse>;
 export type DisassociateVpcUserCidrBlockCommandOutput = CommandOutput<DisassociateVpcUserCidrBlockResponse>;
 export type EnableEipAddressHighResolutionMonitorCommandOutput = CommandOutput<EnableEipAddressHighResolutionMonitorResponse>;
+export type EnableIpamOrganizationTrustedServiceCommandOutput = CommandOutput<EnableIpamOrganizationTrustedServiceResponse>;
+export type EnableIpv4GatewayCommandOutput = CommandOutput<EnableIpv4GatewayResponse>;
+export type GetAsyncTaskStatusCommandOutput = CommandOutput<GetAsyncTaskStatusResponse>;
 export type GetIpamPoolAvailableCidrCommandOutput = CommandOutput<GetIpamPoolAvailableCidrResponse>;
 export type ListTagsForIpamResourcesCommandOutput = CommandOutput<ListTagsForIpamResourcesResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
@@ -487,6 +540,7 @@ export type ModifyIpamPoolCommandOutput = CommandOutput<ModifyIpamPoolResponse>;
 export type ModifyIpamResourceCidrCommandOutput = CommandOutput<ModifyIpamResourceCidrResponse>;
 export type ModifyIpamResourceDiscoveryCommandOutput = CommandOutput<ModifyIpamResourceDiscoveryResponse>;
 export type ModifyIpamScopeCommandOutput = CommandOutput<ModifyIpamScopeResponse>;
+export type ModifyIpv4GatewayCommandOutput = CommandOutput<ModifyIpv4GatewayResponse>;
 export type ModifyIpv6AddressBandwidthCommandOutput = CommandOutput<ModifyIpv6AddressBandwidthResponse>;
 export type ModifyIpv6EgressOnlyRuleAttributeCommandOutput = CommandOutput<ModifyIpv6EgressOnlyRuleAttributeResponse>;
 export type ModifyIpv6GatewayAttributeCommandOutput = CommandOutput<ModifyIpv6GatewayAttributeResponse>;
@@ -669,6 +723,21 @@ export class AssociateHaVipCommand extends Command<
   }
 }
 /**
+ * Command to AssociateIpamResourceDiscovery
+ */
+export class AssociateIpamResourceDiscoveryCommand extends Command<
+  AssociateIpamResourceDiscoveryRequest,
+  AssociateIpamResourceDiscoveryCommandOutput,
+  'AssociateIpamResourceDiscoveryCommand'
+> {
+  static readonly metaPath = '/AssociateIpamResourceDiscovery/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: AssociateIpamResourceDiscoveryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AssociateIpamResourceDiscoveryCommand.metaPath);
+  }
+}
+/**
  * Command to AssociateNetworkAcl
  */
 export class AssociateNetworkAclCommand extends Command<
@@ -726,6 +795,21 @@ export class AssociateVpcUserCidrBlockCommand extends Command<
   constructor(input: AssociateVpcUserCidrBlockRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(AssociateVpcUserCidrBlockCommand.metaPath);
+  }
+}
+/**
+ * Command to AttachIpv4Gateway
+ */
+export class AttachIpv4GatewayCommand extends Command<
+  AttachIpv4GatewayRequest,
+  AttachIpv4GatewayCommandOutput,
+  'AttachIpv4GatewayCommand'
+> {
+  static readonly metaPath = '/AttachIpv4Gateway/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: AttachIpv4GatewayRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AttachIpv4GatewayCommand.metaPath);
   }
 }
 /**
@@ -909,6 +993,36 @@ export class CreateIpamPoolCommand extends Command<
   }
 }
 /**
+ * Command to CreateIpamPoolAllocation
+ */
+export class CreateIpamPoolAllocationCommand extends Command<
+  CreateIpamPoolAllocationRequest,
+  CreateIpamPoolAllocationCommandOutput,
+  'CreateIpamPoolAllocationCommand'
+> {
+  static readonly metaPath = '/CreateIpamPoolAllocation/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: CreateIpamPoolAllocationRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateIpamPoolAllocationCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateIpamResourceDiscovery
+ */
+export class CreateIpamResourceDiscoveryCommand extends Command<
+  CreateIpamResourceDiscoveryRequest,
+  CreateIpamResourceDiscoveryCommandOutput,
+  'CreateIpamResourceDiscoveryCommand'
+> {
+  static readonly metaPath = '/CreateIpamResourceDiscovery/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: CreateIpamResourceDiscoveryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateIpamResourceDiscoveryCommand.metaPath);
+  }
+}
+/**
  * Command to CreateIpamScope
  */
 export class CreateIpamScopeCommand extends Command<
@@ -921,6 +1035,21 @@ export class CreateIpamScopeCommand extends Command<
   constructor(input: CreateIpamScopeRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateIpamScopeCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateIpv4Gateway
+ */
+export class CreateIpv4GatewayCommand extends Command<
+  CreateIpv4GatewayRequest,
+  CreateIpv4GatewayCommandOutput,
+  'CreateIpv4GatewayCommand'
+> {
+  static readonly metaPath = '/CreateIpv4Gateway/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: CreateIpv4GatewayRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateIpv4GatewayCommand.metaPath);
   }
 }
 /**
@@ -1269,6 +1398,21 @@ export class DeleteIpamPoolCommand extends Command<
   }
 }
 /**
+ * Command to DeleteIpamResourceDiscovery
+ */
+export class DeleteIpamResourceDiscoveryCommand extends Command<
+  DeleteIpamResourceDiscoveryRequest,
+  DeleteIpamResourceDiscoveryCommandOutput,
+  'DeleteIpamResourceDiscoveryCommand'
+> {
+  static readonly metaPath = '/DeleteIpamResourceDiscovery/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DeleteIpamResourceDiscoveryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteIpamResourceDiscoveryCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteIpamScope
  */
 export class DeleteIpamScopeCommand extends Command<
@@ -1281,6 +1425,21 @@ export class DeleteIpamScopeCommand extends Command<
   constructor(input: DeleteIpamScopeRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteIpamScopeCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteIpv4Gateway
+ */
+export class DeleteIpv4GatewayCommand extends Command<
+  DeleteIpv4GatewayRequest,
+  DeleteIpv4GatewayCommandOutput,
+  'DeleteIpv4GatewayCommand'
+> {
+  static readonly metaPath = '/DeleteIpv4Gateway/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DeleteIpv4GatewayRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteIpv4GatewayCommand.metaPath);
   }
 }
 /**
@@ -1509,6 +1668,21 @@ export class DeprovisionIpamPoolCidrCommand extends Command<
   }
 }
 /**
+ * Command to Describe95Traffic
+ */
+export class Describe95TrafficCommand extends Command<
+  Describe95TrafficRequest,
+  Describe95TrafficCommandOutput,
+  'Describe95TrafficCommand'
+> {
+  static readonly metaPath = '/Describe95Traffic/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: Describe95TrafficRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(Describe95TrafficCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeBandwidthPackages
  */
 export class DescribeBandwidthPackagesCommand extends Command<
@@ -1689,6 +1863,21 @@ export class DescribeIpamDiscoveredResourceCidrsCommand extends Command<
   }
 }
 /**
+ * Command to DescribeIpamOrganizationAccount
+ */
+export class DescribeIpamOrganizationAccountCommand extends Command<
+  DescribeIpamOrganizationAccountRequest,
+  DescribeIpamOrganizationAccountCommandOutput,
+  'DescribeIpamOrganizationAccountCommand'
+> {
+  static readonly metaPath = '/DescribeIpamOrganizationAccount/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeIpamOrganizationAccountRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpamOrganizationAccountCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeIpamPoolAllocations
  */
 export class DescribeIpamPoolAllocationsCommand extends Command<
@@ -1821,6 +2010,21 @@ export class DescribeIpamsCommand extends Command<
   constructor(input: DescribeIpamsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpamsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeIpv4Gateways
+ */
+export class DescribeIpv4GatewaysCommand extends Command<
+  DescribeIpv4GatewaysRequest,
+  DescribeIpv4GatewaysCommandOutput,
+  'DescribeIpv4GatewaysCommand'
+> {
+  static readonly metaPath = '/DescribeIpv4Gateways/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DescribeIpv4GatewaysRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeIpv4GatewaysCommand.metaPath);
   }
 }
 /**
@@ -2169,6 +2373,21 @@ export class DescribeVpcsCommand extends Command<
   }
 }
 /**
+ * Command to DetachIpv4Gateway
+ */
+export class DetachIpv4GatewayCommand extends Command<
+  DetachIpv4GatewayRequest,
+  DetachIpv4GatewayCommandOutput,
+  'DetachIpv4GatewayCommand'
+> {
+  static readonly metaPath = '/DetachIpv4Gateway/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DetachIpv4GatewayRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DetachIpv4GatewayCommand.metaPath);
+  }
+}
+/**
  * Command to DetachNetworkInterface
  */
 export class DetachNetworkInterfaceCommand extends Command<
@@ -2199,6 +2418,36 @@ export class DisableEipAddressHighResolutionMonitorCommand extends Command<
   }
 }
 /**
+ * Command to DisableIpamOrganizationTrustedService
+ */
+export class DisableIpamOrganizationTrustedServiceCommand extends Command<
+  DisableIpamOrganizationTrustedServiceRequest,
+  DisableIpamOrganizationTrustedServiceCommandOutput,
+  'DisableIpamOrganizationTrustedServiceCommand'
+> {
+  static readonly metaPath = '/DisableIpamOrganizationTrustedService/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DisableIpamOrganizationTrustedServiceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisableIpamOrganizationTrustedServiceCommand.metaPath);
+  }
+}
+/**
+ * Command to DisableIpv4Gateway
+ */
+export class DisableIpv4GatewayCommand extends Command<
+  DisableIpv4GatewayRequest,
+  DisableIpv4GatewayCommandOutput,
+  'DisableIpv4GatewayCommand'
+> {
+  static readonly metaPath = '/DisableIpv4Gateway/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DisableIpv4GatewayRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisableIpv4GatewayCommand.metaPath);
+  }
+}
+/**
  * Command to DisassociateEipAddress
  */
 export class DisassociateEipAddressCommand extends Command<
@@ -2226,6 +2475,21 @@ export class DisassociateHaVipCommand extends Command<
   constructor(input: DisassociateHaVipRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DisassociateHaVipCommand.metaPath);
+  }
+}
+/**
+ * Command to DisassociateIpamResourceDiscovery
+ */
+export class DisassociateIpamResourceDiscoveryCommand extends Command<
+  DisassociateIpamResourceDiscoveryRequest,
+  DisassociateIpamResourceDiscoveryCommandOutput,
+  'DisassociateIpamResourceDiscoveryCommand'
+> {
+  static readonly metaPath = '/DisassociateIpamResourceDiscovery/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: DisassociateIpamResourceDiscoveryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisassociateIpamResourceDiscoveryCommand.metaPath);
   }
 }
 /**
@@ -2301,6 +2565,51 @@ export class EnableEipAddressHighResolutionMonitorCommand extends Command<
   constructor(input: EnableEipAddressHighResolutionMonitorRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(EnableEipAddressHighResolutionMonitorCommand.metaPath);
+  }
+}
+/**
+ * Command to EnableIpamOrganizationTrustedService
+ */
+export class EnableIpamOrganizationTrustedServiceCommand extends Command<
+  EnableIpamOrganizationTrustedServiceRequest,
+  EnableIpamOrganizationTrustedServiceCommandOutput,
+  'EnableIpamOrganizationTrustedServiceCommand'
+> {
+  static readonly metaPath = '/EnableIpamOrganizationTrustedService/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: EnableIpamOrganizationTrustedServiceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnableIpamOrganizationTrustedServiceCommand.metaPath);
+  }
+}
+/**
+ * Command to EnableIpv4Gateway
+ */
+export class EnableIpv4GatewayCommand extends Command<
+  EnableIpv4GatewayRequest,
+  EnableIpv4GatewayCommandOutput,
+  'EnableIpv4GatewayCommand'
+> {
+  static readonly metaPath = '/EnableIpv4Gateway/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: EnableIpv4GatewayRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnableIpv4GatewayCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAsyncTaskStatus
+ */
+export class GetAsyncTaskStatusCommand extends Command<
+  GetAsyncTaskStatusRequest,
+  GetAsyncTaskStatusCommandOutput,
+  'GetAsyncTaskStatusCommand'
+> {
+  static readonly metaPath = '/GetAsyncTaskStatus/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: GetAsyncTaskStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAsyncTaskStatusCommand.metaPath);
   }
 }
 /**
@@ -2556,6 +2865,21 @@ export class ModifyIpamScopeCommand extends Command<
   constructor(input: ModifyIpamScopeRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ModifyIpamScopeCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyIpv4Gateway
+ */
+export class ModifyIpv4GatewayCommand extends Command<
+  ModifyIpv4GatewayRequest,
+  ModifyIpv4GatewayCommandOutput,
+  'ModifyIpv4GatewayCommand'
+> {
+  static readonly metaPath = '/ModifyIpv4Gateway/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifyIpv4GatewayRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyIpv4GatewayCommand.metaPath);
   }
 }
 /**
@@ -3050,10 +3374,12 @@ export default {
   AssignPrivateIpAddressesCommand,
   AssociateEipAddressCommand,
   AssociateHaVipCommand,
+  AssociateIpamResourceDiscoveryCommand,
   AssociateNetworkAclCommand,
   AssociateRouteTableCommand,
   AssociateVpcCidrBlockCommand,
   AssociateVpcUserCidrBlockCommand,
+  AttachIpv4GatewayCommand,
   AttachNetworkInterfaceCommand,
   AuthorizeSecurityGroupEgressCommand,
   AuthorizeSecurityGroupIngressCommand,
@@ -3066,7 +3392,10 @@ export default {
   CreateIpAddressPoolCommand,
   CreateIpamCommand,
   CreateIpamPoolCommand,
+  CreateIpamPoolAllocationCommand,
+  CreateIpamResourceDiscoveryCommand,
   CreateIpamScopeCommand,
+  CreateIpv4GatewayCommand,
   CreateIpv6EgressOnlyRuleCommand,
   CreateIpv6GatewayCommand,
   CreateNetworkAclCommand,
@@ -3090,7 +3419,9 @@ export default {
   DeleteIpAddressPoolCidrBlockCommand,
   DeleteIpamCommand,
   DeleteIpamPoolCommand,
+  DeleteIpamResourceDiscoveryCommand,
   DeleteIpamScopeCommand,
+  DeleteIpv4GatewayCommand,
   DeleteIpv6EgressOnlyRuleCommand,
   DeleteIpv6GatewayCommand,
   DeleteNetworkAclCommand,
@@ -3106,6 +3437,7 @@ export default {
   DeleteTrafficMirrorTargetCommand,
   DeleteVpcCommand,
   DeprovisionIpamPoolCidrCommand,
+  Describe95TrafficCommand,
   DescribeBandwidthPackagesCommand,
   DescribeEipAddressAttributesCommand,
   DescribeEipAddressHighResolutionMonitorAttributeCommand,
@@ -3118,6 +3450,7 @@ export default {
   DescribeIpAddressPoolsCommand,
   DescribeIpamCloudMonitorDimensionsCommand,
   DescribeIpamDiscoveredResourceCidrsCommand,
+  DescribeIpamOrganizationAccountCommand,
   DescribeIpamPoolAllocationsCommand,
   DescribeIpamPoolCidrsCommand,
   DescribeIpamPoolsCommand,
@@ -3127,6 +3460,7 @@ export default {
   DescribeIpamScopeStatsCommand,
   DescribeIpamScopesCommand,
   DescribeIpamsCommand,
+  DescribeIpv4GatewaysCommand,
   DescribeIpv6AddressBandwidthAttributesCommand,
   DescribeIpv6AddressBandwidthsCommand,
   DescribeIpv6EgressOnlyRulesCommand,
@@ -3150,15 +3484,22 @@ export default {
   DescribeTrafficMirrorTargetsCommand,
   DescribeVpcAttributesCommand,
   DescribeVpcsCommand,
+  DetachIpv4GatewayCommand,
   DetachNetworkInterfaceCommand,
   DisableEipAddressHighResolutionMonitorCommand,
+  DisableIpamOrganizationTrustedServiceCommand,
+  DisableIpv4GatewayCommand,
   DisassociateEipAddressCommand,
   DisassociateHaVipCommand,
+  DisassociateIpamResourceDiscoveryCommand,
   DisassociateNetworkAclCommand,
   DisassociateRouteTableCommand,
   DisassociateVpcCidrBlockCommand,
   DisassociateVpcUserCidrBlockCommand,
   EnableEipAddressHighResolutionMonitorCommand,
+  EnableIpamOrganizationTrustedServiceCommand,
+  EnableIpv4GatewayCommand,
+  GetAsyncTaskStatusCommand,
   GetIpamPoolAvailableCidrCommand,
   ListTagsForIpamResourcesCommand,
   ListTagsForResourcesCommand,
@@ -3176,6 +3517,7 @@ export default {
   ModifyIpamResourceCidrCommand,
   ModifyIpamResourceDiscoveryCommand,
   ModifyIpamScopeCommand,
+  ModifyIpv4GatewayCommand,
   ModifyIpv6AddressBandwidthCommand,
   ModifyIpv6EgressOnlyRuleAttributeCommand,
   ModifyIpv6GatewayAttributeCommand,

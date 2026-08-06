@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { IPAddressListForDescribeIPSetOutput } from './ipaddress-list-for-describe-ipset-output';
  /**
  * 
  *
@@ -33,6 +34,12 @@ export interface DescribeIPSetResponse {
     AcceleratorId?: string;
 
     /**
+     * @type {IPAddressListForDescribeIPSetOutput}
+     * @memberof DescribeIPSetResponse
+     */
+    IPAddressList?: IPAddressListForDescribeIPSetOutput;
+
+    /**
      * @type {string}
      * @memberof DescribeIPSetResponse
      */
@@ -43,6 +50,12 @@ export interface DescribeIPSetResponse {
      * @memberof DescribeIPSetResponse
      */
     IPVersion?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeIPSetResponse
+     */
+    IspType?: string;
 
     /**
      * @type {string}

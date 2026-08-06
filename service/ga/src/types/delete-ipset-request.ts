@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DeleteIPSetForDeleteIPSetInput } from './delete-ipset-for-delete-ipset-input';
  /**
  * 
  *
@@ -27,20 +28,20 @@ export interface DeleteIPSetRequest {
     AcceleratorId: string;
 
     /**
-     * @type {Array<string>}
+     * @type {Array<DeleteIPSetForDeleteIPSetInput>}
      * @memberof DeleteIPSetRequest
      */
-    DeleteIPSets?: Array<string>;
+    DeleteIPSets?: Array<DeleteIPSetForDeleteIPSetInput>;
 
     /**
      * @type {string}
      * @memberof DeleteIPSetRequest
      */
-    IPSetId: string;
+    IPSetId?: string;
 
     /**
      * @type {string}
      * @memberof DeleteIPSetRequest
      */
-    IPVersion: string;
+    IPVersion?: string;
 }

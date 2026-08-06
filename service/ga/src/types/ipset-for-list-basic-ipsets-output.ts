@@ -22,6 +22,12 @@ import { EdgeNodeForListBasicIPSetsOutput } from './edge-node-for-list-basic-ips
 export interface IPSetForListBasicIPSetsOutput {
 
     /**
+     * @type {Array<string>}
+     * @memberof IPSetForListBasicIPSetsOutput
+     */
+    AccelerateIPs?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof IPSetForListBasicIPSetsOutput
      */
@@ -62,10 +68,4 @@ export interface IPSetForListBasicIPSetsOutput {
      * @memberof IPSetForListBasicIPSetsOutput
      */
     State?: string;
-
-    /**
-     * @type {Array<string>}
-     * @memberof IPSetForListBasicIPSetsOutput
-     */
-    accelerateIPs?: Array<string>;
 }

@@ -13,6 +13,7 @@
  */
 
 import { ApiKeyMetadataForGetApiKeyCredentialProviderOutput } from './api-key-metadata-for-get-api-key-credential-provider-output';
+import { SecretStorageForGetApiKeyCredentialProviderOutput } from './secret-storage-for-get-api-key-credential-provider-output';
  /**
  * 
  *
@@ -50,6 +51,18 @@ export interface GetApiKeyCredentialProviderResponse {
      * @memberof GetApiKeyCredentialProviderResponse
      */
     PoolName?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetApiKeyCredentialProviderResponse
+     */
+    ProjectName?: string;
+
+    /**
+     * @type {SecretStorageForGetApiKeyCredentialProviderOutput}
+     * @memberof GetApiKeyCredentialProviderResponse
+     */
+    SecretStorage?: SecretStorageForGetApiKeyCredentialProviderOutput;
 
     /**
      * @type {string}

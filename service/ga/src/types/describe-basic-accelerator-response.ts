@@ -29,6 +29,18 @@ export interface DescribeBasicAcceleratorResponse {
     AcceleratorId?: string;
 
     /**
+     * @type {string}
+     * @memberof DescribeBasicAcceleratorResponse
+     */
+    AccountID?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeBasicAcceleratorResponse
+     */
+    AccountName?: string;
+
+    /**
      * @type {Array<string>}
      * @memberof DescribeBasicAcceleratorResponse
      */

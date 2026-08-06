@@ -13,7 +13,10 @@
  */
 
 import { ClusterConfigForCreateClusterInput } from './cluster-config-for-create-cluster-input';
+import { KubernetesConfigForCreateClusterInput } from './kubernetes-config-for-create-cluster-input';
 import { LoggingConfigForCreateClusterInput } from './logging-config-for-create-cluster-input';
+import { MaintenanceWindowConfigForCreateClusterInput } from './maintenance-window-config-for-create-cluster-input';
+import { MonitoringConfigForCreateClusterInput } from './monitoring-config-for-create-cluster-input';
 import { PodsConfigForCreateClusterInput } from './pods-config-for-create-cluster-input';
 import { ServicesConfigForCreateClusterInput } from './services-config-for-create-cluster-input';
 import { TagForCreateClusterInput } from './tag-for-create-cluster-input';
@@ -50,6 +53,12 @@ export interface CreateClusterRequest {
     Description?: string;
 
     /**
+     * @type {KubernetesConfigForCreateClusterInput}
+     * @memberof CreateClusterRequest
+     */
+    KubernetesConfig?: KubernetesConfigForCreateClusterInput;
+
+    /**
      * @type {string}
      * @memberof CreateClusterRequest
      */
@@ -60,6 +69,18 @@ export interface CreateClusterRequest {
      * @memberof CreateClusterRequest
      */
     LoggingConfig?: LoggingConfigForCreateClusterInput;
+
+    /**
+     * @type {MaintenanceWindowConfigForCreateClusterInput}
+     * @memberof CreateClusterRequest
+     */
+    MaintenanceWindowConfig?: MaintenanceWindowConfigForCreateClusterInput;
+
+    /**
+     * @type {MonitoringConfigForCreateClusterInput}
+     * @memberof CreateClusterRequest
+     */
+    MonitoringConfig?: MonitoringConfigForCreateClusterInput;
 
     /**
      * @type {string}

@@ -21,6 +21,12 @@
 export interface DataVolumeForUpdateNodePoolConfigInput {
 
     /**
+     * @type {boolean}
+     * @memberof DataVolumeForUpdateNodePoolConfigInput
+     */
+    BurstEnabled?: boolean;
+
+    /**
      * @type {number}
      * @memberof DataVolumeForUpdateNodePoolConfigInput
      */

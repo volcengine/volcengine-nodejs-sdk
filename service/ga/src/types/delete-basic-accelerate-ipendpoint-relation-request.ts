@@ -33,12 +33,6 @@ export interface DeleteBasicAccelerateIPEndpointRelationRequest {
     AcceleratorId: string;
 
     /**
-     * @type {Array<string>}
-     * @memberof DeleteBasicAccelerateIPEndpointRelationRequest
-     */
-    EndpointIds?: Array<string>;
-
-    /**
      * @type {string}
      * @memberof DeleteBasicAccelerateIPEndpointRelationRequest
      */

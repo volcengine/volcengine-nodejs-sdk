@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ExtraForCheckPermissionInput } from './extra-for-check-permission-input';
 import { OperationForCheckPermissionInput } from './operation-for-check-permission-input';
 import { OriginalCallerForCheckPermissionInput } from './original-caller-for-check-permission-input';
 import { PrincipalForCheckPermissionInput } from './principal-for-check-permission-input';
@@ -24,6 +25,12 @@ import { ResourceForCheckPermissionInput } from './resource-for-check-permission
  * @interface CheckPermissionRequest
  */
 export interface CheckPermissionRequest {
+
+    /**
+     * @type {ExtraForCheckPermissionInput}
+     * @memberof CheckPermissionRequest
+     */
+    Extra?: ExtraForCheckPermissionInput;
 
     /**
      * @type {string}
@@ -42,6 +49,12 @@ export interface CheckPermissionRequest {
      * @memberof CheckPermissionRequest
      */
     OriginalCallers?: Array<OriginalCallerForCheckPermissionInput>;
+
+    /**
+     * @type {string}
+     * @memberof CheckPermissionRequest
+     */
+    PermissionPointId?: string;
 
     /**
      * @type {PrincipalForCheckPermissionInput}

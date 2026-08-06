@@ -42,5 +42,11 @@ export interface ApiKeyCredentialProviderForBatchGetApiKeyCredentialProvidersOut
      * @type {string}
      * @memberof ApiKeyCredentialProviderForBatchGetApiKeyCredentialProvidersOutput
      */
+    ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ApiKeyCredentialProviderForBatchGetApiKeyCredentialProvidersOutput
+     */
     UpdatedAt?: string;
 }

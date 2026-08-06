@@ -24,5 +24,17 @@ export interface CreateUsersCSVRequest {
      * @type {string}
      * @memberof CreateUsersCSVRequest
      */
+    ExternalProviderConnectionUid?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateUsersCSVRequest
+     */
     UserPoolUid: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateUsersCSVRequest
+     */
+    UsersCsvB64?: string;
 }

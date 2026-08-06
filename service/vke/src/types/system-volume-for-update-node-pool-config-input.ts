@@ -21,6 +21,12 @@
 export interface SystemVolumeForUpdateNodePoolConfigInput {
 
     /**
+     * @type {boolean}
+     * @memberof SystemVolumeForUpdateNodePoolConfigInput
+     */
+    BurstEnabled?: boolean;
+
+    /**
      * @type {string}
      * @memberof SystemVolumeForUpdateNodePoolConfigInput
      */

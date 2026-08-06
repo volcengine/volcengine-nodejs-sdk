@@ -31,4 +31,10 @@ export interface FlannelConfigForCreateClusterInput {
      * @memberof FlannelConfigForCreateClusterInput
      */
     PodCidrs?: Array<string>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof FlannelConfigForCreateClusterInput
+     */
+    SubnetIds?: Array<string>;
 }

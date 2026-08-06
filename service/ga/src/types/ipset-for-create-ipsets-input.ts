@@ -30,23 +30,11 @@ export interface IPSetForCreateIPSetsInput {
      * @type {string}
      * @memberof IPSetForCreateIPSetsInput
      */
-    AcceleratorId?: string;
-
-    /**
-     * @type {string}
-     * @memberof IPSetForCreateIPSetsInput
-     */
-    IPSetId?: string;
-
-    /**
-     * @type {string}
-     * @memberof IPSetForCreateIPSetsInput
-     */
     IPVersion?: string;
 
     /**
      * @type {string}
      * @memberof IPSetForCreateIPSetsInput
      */
-    State?: string;
+    IspType?: string;
 }

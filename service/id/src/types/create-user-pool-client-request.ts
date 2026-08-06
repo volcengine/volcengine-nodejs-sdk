@@ -45,6 +45,18 @@ export interface CreateUserPoolClientRequest {
     DevelopmentModeEnabled?: boolean;
 
     /**
+     * @type {boolean}
+     * @memberof CreateUserPoolClientRequest
+     */
+    DeviceFlowEnabled?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof CreateUserPoolClientRequest
+     */
+    DismissLoginPageEnabled?: boolean;
+
+    /**
      * @type {string}
      * @memberof CreateUserPoolClientRequest
      */
@@ -55,6 +67,12 @@ export interface CreateUserPoolClientRequest {
      * @memberof CreateUserPoolClientRequest
      */
     Name: string;
+
+    /**
+     * @type {boolean}
+     * @memberof CreateUserPoolClientRequest
+     */
+    SkipConsentEnabled?: boolean;
 
     /**
      * @type {string}

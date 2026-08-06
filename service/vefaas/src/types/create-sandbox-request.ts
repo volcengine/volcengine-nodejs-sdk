@@ -115,6 +115,12 @@ export interface CreateSandboxRequest {
      * @type {string}
      * @memberof CreateSandboxRequest
      */
+    RoleTrn?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateSandboxRequest
+     */
     SessionId?: string;
 
     /**
@@ -122,6 +128,12 @@ export interface CreateSandboxRequest {
      * @memberof CreateSandboxRequest
      */
     Sidecars?: Array<SidecarForCreateSandboxInput>;
+
+    /**
+     * @type {string}
+     * @memberof CreateSandboxRequest
+     */
+    SnapshotId?: string;
 
     /**
      * @type {number}

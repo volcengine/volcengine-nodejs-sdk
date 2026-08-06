@@ -21,6 +21,12 @@
 export interface DataVolumeForListNodePoolsOutput {
 
     /**
+     * @type {boolean}
+     * @memberof DataVolumeForListNodePoolsOutput
+     */
+    BurstEnabled?: boolean;
+
+    /**
      * @type {number}
      * @memberof DataVolumeForListNodePoolsOutput
      */

@@ -108,6 +108,18 @@ export interface TaskInfoForVideoProjectSerialTaskCreateInput {
     llmVideoUnderstandingType?: number;
 
     /**
+     * @type {number}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
+    maxTargetSubtitleLines?: number;
+
+    /**
+     * @type {boolean}
+     * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
+     */
+    needTermValidation?: boolean;
+
+    /**
      * @type {boolean}
      * @memberof TaskInfoForVideoProjectSerialTaskCreateInput
      */

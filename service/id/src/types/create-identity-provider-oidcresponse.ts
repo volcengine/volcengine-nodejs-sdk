@@ -12,8 +12,11 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForCreateIdentityProviderOIDCOutput } from './attribute-mapping-for-create-identity-provider-oidcoutput';
 import { ClaimsPropagationConfigForCreateIdentityProviderOIDCOutput } from './claims-propagation-config-for-create-identity-provider-oidcoutput';
+import { EipRecordForCreateIdentityProviderOIDCOutput } from './eip-record-for-create-identity-provider-oidcoutput';
 import { ProviderOptionsForCreateIdentityProviderOIDCOutput } from './provider-options-for-create-identity-provider-oidcoutput';
+import { ScimProvisioningForCreateIdentityProviderOIDCOutput } from './scim-provisioning-for-create-identity-provider-oidcoutput';
  /**
  * 
  *
@@ -21,6 +24,12 @@ import { ProviderOptionsForCreateIdentityProviderOIDCOutput } from './provider-o
  * @interface CreateIdentityProviderOIDCResponse
  */
 export interface CreateIdentityProviderOIDCResponse {
+
+    /**
+     * @type {Array<AttributeMappingForCreateIdentityProviderOIDCOutput>}
+     * @memberof CreateIdentityProviderOIDCResponse
+     */
+    AttributeMappings?: Array<AttributeMappingForCreateIdentityProviderOIDCOutput>;
 
     /**
      * @type {ClaimsPropagationConfigForCreateIdentityProviderOIDCOutput}
@@ -39,6 +48,12 @@ export interface CreateIdentityProviderOIDCResponse {
      * @memberof CreateIdentityProviderOIDCResponse
      */
     ClientSecret?: string;
+
+    /**
+     * @type {EipRecordForCreateIdentityProviderOIDCOutput}
+     * @memberof CreateIdentityProviderOIDCResponse
+     */
+    EipRecord?: EipRecordForCreateIdentityProviderOIDCOutput;
 
     /**
      * @type {boolean}
@@ -77,10 +92,22 @@ export interface CreateIdentityProviderOIDCResponse {
     ProviderOptions?: ProviderOptionsForCreateIdentityProviderOIDCOutput;
 
     /**
+     * @type {ScimProvisioningForCreateIdentityProviderOIDCOutput}
+     * @memberof CreateIdentityProviderOIDCResponse
+     */
+    ScimProvisioning?: ScimProvisioningForCreateIdentityProviderOIDCOutput;
+
+    /**
      * @type {Array<string>}
      * @memberof CreateIdentityProviderOIDCResponse
      */
     ScopesList?: Array<string>;
+
+    /**
+     * @type {boolean}
+     * @memberof CreateIdentityProviderOIDCResponse
+     */
+    SoleProviderConnection?: boolean;
 
     /**
      * @type {string}

@@ -1,5 +1,10 @@
 {
-  "description": "VKE: 新增 ScaleNodePool；修改 ListScalingPolicies",
+  "actions": [
+    "CreateCluster",
+    "ListClusters",
+    "UpdateClusterConfig"
+  ],
+  "description": "VKE: 修改 CreateCluster, ListClusters, UpdateClusterConfig",
   "modules": "service/vke",
-  "type": "feature"
+  "type": "breaking-change"
 }

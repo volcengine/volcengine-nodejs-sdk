@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { MetaDataForCreateWorkloadIdentityInput } from './meta-data-for-create-workload-identity-input';
  /**
  * 
  *
@@ -37,6 +38,12 @@ export interface CreateWorkloadIdentityRequest {
      * @memberof CreateWorkloadIdentityRequest
      */
     Description?: string;
+
+    /**
+     * @type {Array<MetaDataForCreateWorkloadIdentityInput>}
+     * @memberof CreateWorkloadIdentityRequest
+     */
+    MetaData?: Array<MetaDataForCreateWorkloadIdentityInput>;
 
     /**
      * @type {string}
