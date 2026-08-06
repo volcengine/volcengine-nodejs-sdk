@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { CustomAttributeFilterForListUsersInput } from './custom-attribute-filter-for-list-users-input';
+import { UniversalSearchForListUsersInput } from './universal-search-for-list-users-input';
  /**
  * 
  *
@@ -27,10 +29,52 @@ export interface FilterForListUsersInput {
     Connection?: string;
 
     /**
+     * @type {CustomAttributeFilterForListUsersInput}
+     * @memberof FilterForListUsersInput
+     */
+    CustomAttributeFilter?: CustomAttributeFilterForListUsersInput;
+
+    /**
+     * @type {string}
+     * @memberof FilterForListUsersInput
+     */
+    DepartmentUid?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    DepartmentUidRecursive?: boolean;
+
+    /**
      * @type {string}
      * @memberof FilterForListUsersInput
      */
     Email?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    EmailIsDuplicated?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    EmailIsNullOrEmpty?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    EmailPhoneNameIsNullOrEmpty?: boolean;
+
+    /**
+     * @type {Array<string>}
+     * @memberof FilterForListUsersInput
+     */
+    ExternalProviderUserIdentifiersOr?: Array<string>;
 
     /**
      * @type {string}
@@ -39,16 +83,46 @@ export interface FilterForListUsersInput {
     FamilyName?: string;
 
     /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    FamilyNameIsNullOrEmpty?: boolean;
+
+    /**
      * @type {string}
      * @memberof FilterForListUsersInput
      */
     Gender?: string;
 
     /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    GenderIsNullOrEmpty?: boolean;
+
+    /**
      * @type {string}
      * @memberof FilterForListUsersInput
      */
     GivenName?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    GivenNameIsNullOrEmpty?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof FilterForListUsersInput
+     */
+    GroupUid?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof FilterForListUsersInput
+     */
+    GroupUidsOr?: Array<string>;
 
     /**
      * @type {string}
@@ -75,10 +149,22 @@ export interface FilterForListUsersInput {
     MiddleName?: string;
 
     /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    MiddleNameIsNullOrEmpty?: boolean;
+
+    /**
      * @type {string}
      * @memberof FilterForListUsersInput
      */
     Name?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    NameIsNullOrEmpty?: boolean;
 
     /**
      * @type {string}
@@ -87,10 +173,40 @@ export interface FilterForListUsersInput {
     Nickname?: string;
 
     /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    NicknameIsNullOrEmpty?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    NotInAnyDepartment?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    NotInAnyGroup?: boolean;
+
+    /**
      * @type {string}
      * @memberof FilterForListUsersInput
      */
     PhoneNumber?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    PhoneNumberIsDuplicated?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    PhoneNumberIsNullOrEmpty?: boolean;
 
     /**
      * @type {string}
@@ -99,8 +215,32 @@ export interface FilterForListUsersInput {
     PreferredUsername?: string;
 
     /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    PreferredUsernameIsNullOrEmpty?: boolean;
+
+    /**
+     * @type {Array<UniversalSearchForListUsersInput>}
+     * @memberof FilterForListUsersInput
+     */
+    UniversalSearch?: Array<UniversalSearchForListUsersInput>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof FilterForListUsersInput
+     */
+    UserUidsOr?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof FilterForListUsersInput
      */
     Website?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof FilterForListUsersInput
+     */
+    WebsiteIsNullOrEmpty?: boolean;
 }

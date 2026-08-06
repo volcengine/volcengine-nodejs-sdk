@@ -13,7 +13,9 @@
  */
 
 import { ClaimsPropagationConfigForListIdentityProvidersSAMLOutput } from './claims-propagation-config-for-list-identity-providers-samloutput';
+import { EipRecordForListIdentityProvidersSAMLOutput } from './eip-record-for-list-identity-providers-samloutput';
 import { ProviderOptionsForListIdentityProvidersSAMLOutput } from './provider-options-for-list-identity-providers-samloutput';
+import { ScimProvisioningForListIdentityProvidersSAMLOutput } from './scim-provisioning-for-list-identity-providers-samloutput';
  /**
  * 
  *
@@ -39,6 +41,12 @@ export interface DataForListIdentityProvidersSAMLOutput {
      * @memberof DataForListIdentityProvidersSAMLOutput
      */
     ClaimsPropagationConfig?: ClaimsPropagationConfigForListIdentityProvidersSAMLOutput;
+
+    /**
+     * @type {EipRecordForListIdentityProvidersSAMLOutput}
+     * @memberof DataForListIdentityProvidersSAMLOutput
+     */
+    EipRecord?: EipRecordForListIdentityProvidersSAMLOutput;
 
     /**
      * @type {boolean}
@@ -87,6 +95,18 @@ export interface DataForListIdentityProvidersSAMLOutput {
      * @memberof DataForListIdentityProvidersSAMLOutput
      */
     ProviderOptions?: ProviderOptionsForListIdentityProvidersSAMLOutput;
+
+    /**
+     * @type {ScimProvisioningForListIdentityProvidersSAMLOutput}
+     * @memberof DataForListIdentityProvidersSAMLOutput
+     */
+    ScimProvisioning?: ScimProvisioningForListIdentityProvidersSAMLOutput;
+
+    /**
+     * @type {string}
+     * @memberof DataForListIdentityProvidersSAMLOutput
+     */
+    SpMetadata?: string;
 
     /**
      * @type {string}

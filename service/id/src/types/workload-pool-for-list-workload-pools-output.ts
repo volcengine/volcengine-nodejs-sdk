@@ -70,6 +70,12 @@ export interface WorkloadPoolForListWorkloadPoolsOutput {
     Trn?: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof WorkloadPoolForListWorkloadPoolsOutput
+     */
+    TrustAnchors?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof WorkloadPoolForListWorkloadPoolsOutput
      */

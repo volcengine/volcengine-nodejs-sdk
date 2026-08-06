@@ -24,5 +24,11 @@ export interface DeleteIpamScopeResponse {
      * @type {string}
      * @memberof DeleteIpamScopeResponse
      */
+    AsyncTaskId?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteIpamScopeResponse
+     */
     RequestId?: string;
 }

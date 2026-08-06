@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { CustomAttributeForGetUserOutput } from './custom-attribute-for-get-user-output';
+import { ExternalIdentityForGetUserOutput } from './external-identity-for-get-user-output';
  /**
  * 
  *
@@ -39,6 +41,18 @@ export interface GetUserResponse {
     CreateTime?: string;
 
     /**
+     * @type {Array<CustomAttributeForGetUserOutput>}
+     * @memberof GetUserResponse
+     */
+    CustomAttributes?: Array<CustomAttributeForGetUserOutput>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof GetUserResponse
+     */
+    DepartmentUids?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof GetUserResponse
      */
@@ -49,6 +63,12 @@ export interface GetUserResponse {
      * @memberof GetUserResponse
      */
     EmailVerified?: boolean;
+
+    /**
+     * @type {Array<ExternalIdentityForGetUserOutput>}
+     * @memberof GetUserResponse
+     */
+    ExternalIdentities?: Array<ExternalIdentityForGetUserOutput>;
 
     /**
      * @type {string}
@@ -69,6 +89,12 @@ export interface GetUserResponse {
     GivenName?: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof GetUserResponse
+     */
+    GroupUids?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof GetUserResponse
      */
@@ -79,6 +105,24 @@ export interface GetUserResponse {
      * @memberof GetUserResponse
      */
     LatestLogin?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetUserResponse
+     */
+    LatestLoginConnectionName?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetUserResponse
+     */
+    LatestLoginConnectionProvider?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetUserResponse
+     */
+    LatestLoginConnectionType?: string;
 
     /**
      * @type {string}

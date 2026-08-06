@@ -13,6 +13,7 @@
  */
 
 import { FilterForListUserPoolsInput } from './filter-for-list-user-pools-input';
+import { TagFilterForListUserPoolsInput } from './tag-filter-for-list-user-pools-input';
  /**
  * 
  *
@@ -56,4 +57,10 @@ export interface ListUserPoolsRequest {
      * @memberof ListUserPoolsRequest
      */
     SortField?: string;
+
+    /**
+     * @type {Array<TagFilterForListUserPoolsInput>}
+     * @memberof ListUserPoolsRequest
+     */
+    TagFilters?: Array<TagFilterForListUserPoolsInput>;
 }

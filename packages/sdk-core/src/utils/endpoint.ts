@@ -159,6 +159,7 @@ const defaultEndpoint: Record<string, ServiceEndpointInfo> = {
   veenedge: { Service: "veenedge", IsGlobal: true },
   cloudcontrol: { Service: "cloudcontrol", IsGlobal: false },
   volcsms: { Service: "volcsms", IsGlobal: true },
+  id: { Service: "id", IsGlobal: false },
 };
 
 const bootstrapRegion: Record<string, unknown> = {

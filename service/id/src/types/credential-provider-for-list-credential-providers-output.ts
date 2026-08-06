@@ -21,6 +21,12 @@
 export interface CredentialProviderForListCredentialProvidersOutput {
 
     /**
+     * @type {number}
+     * @memberof CredentialProviderForListCredentialProvidersOutput
+     */
+    BindingResourceNumber?: number;
+
+    /**
      * @type {string}
      * @memberof CredentialProviderForListCredentialProvidersOutput
      */
@@ -49,6 +55,12 @@ export interface CredentialProviderForListCredentialProvidersOutput {
      * @memberof CredentialProviderForListCredentialProvidersOutput
      */
     PoolName?: string;
+
+    /**
+     * @type {string}
+     * @memberof CredentialProviderForListCredentialProvidersOutput
+     */
+    ProjectName?: string;
 
     /**
      * @type {string}

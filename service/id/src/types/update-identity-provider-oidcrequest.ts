@@ -12,8 +12,10 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForUpdateIdentityProviderOIDCInput } from './attribute-mapping-for-update-identity-provider-oidcinput';
 import { ClaimsPropagationConfigForUpdateIdentityProviderOIDCInput } from './claims-propagation-config-for-update-identity-provider-oidcinput';
 import { ProviderOptionsForUpdateIdentityProviderOIDCInput } from './provider-options-for-update-identity-provider-oidcinput';
+import { ScimProvisioningForUpdateIdentityProviderOIDCInput } from './scim-provisioning-for-update-identity-provider-oidcinput';
  /**
  * 
  *
@@ -21,6 +23,12 @@ import { ProviderOptionsForUpdateIdentityProviderOIDCInput } from './provider-op
  * @interface UpdateIdentityProviderOIDCRequest
  */
 export interface UpdateIdentityProviderOIDCRequest {
+
+    /**
+     * @type {Array<AttributeMappingForUpdateIdentityProviderOIDCInput>}
+     * @memberof UpdateIdentityProviderOIDCRequest
+     */
+    AttributeMappings?: Array<AttributeMappingForUpdateIdentityProviderOIDCInput>;
 
     /**
      * @type {ClaimsPropagationConfigForUpdateIdentityProviderOIDCInput}
@@ -45,6 +53,12 @@ export interface UpdateIdentityProviderOIDCRequest {
      * @memberof UpdateIdentityProviderOIDCRequest
      */
     ConnectionUid: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateIdentityProviderOIDCRequest
+     */
+    EipId?: string;
 
     /**
      * @type {boolean}
@@ -75,6 +89,12 @@ export interface UpdateIdentityProviderOIDCRequest {
      * @memberof UpdateIdentityProviderOIDCRequest
      */
     ProviderOptions?: ProviderOptionsForUpdateIdentityProviderOIDCInput;
+
+    /**
+     * @type {ScimProvisioningForUpdateIdentityProviderOIDCInput}
+     * @memberof UpdateIdentityProviderOIDCRequest
+     */
+    ScimProvisioning?: ScimProvisioningForUpdateIdentityProviderOIDCInput;
 
     /**
      * @type {Array<string>}

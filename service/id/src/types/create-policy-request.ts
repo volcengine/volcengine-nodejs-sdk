@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DefinitionForCreatePolicyInput } from './definition-for-create-policy-input';
  /**
  * 
  *
@@ -19,6 +20,12 @@
  * @interface CreatePolicyRequest
  */
 export interface CreatePolicyRequest {
+
+    /**
+     * @type {DefinitionForCreatePolicyInput}
+     * @memberof CreatePolicyRequest
+     */
+    Definition?: DefinitionForCreatePolicyInput;
 
     /**
      * @type {string}
@@ -43,4 +50,10 @@ export interface CreatePolicyRequest {
      * @memberof CreatePolicyRequest
      */
     PolicyName?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreatePolicyRequest
+     */
+    Status?: string;
 }

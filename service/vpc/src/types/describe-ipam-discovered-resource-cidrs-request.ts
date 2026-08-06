@@ -39,6 +39,18 @@ export interface DescribeIpamDiscoveredResourceCidrsRequest {
     NextToken?: string;
 
     /**
+     * @type {number}
+     * @memberof DescribeIpamDiscoveredResourceCidrsRequest
+     */
+    PageNumber?: number;
+
+    /**
+     * @type {number}
+     * @memberof DescribeIpamDiscoveredResourceCidrsRequest
+     */
+    PageSize?: number;
+
+    /**
      * @type {string}
      * @memberof DescribeIpamDiscoveredResourceCidrsRequest
      */
@@ -48,5 +60,5 @@ export interface DescribeIpamDiscoveredResourceCidrsRequest {
      * @type {string}
      * @memberof DescribeIpamDiscoveredResourceCidrsRequest
      */
-    ResourceType: string;
+    ResourceType?: string;
 }

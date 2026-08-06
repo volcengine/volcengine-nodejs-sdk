@@ -40,6 +40,18 @@ export interface CreateOauth2CredentialProviderRequest {
     PoolName?: string;
 
     /**
+     * @type {string}
+     * @memberof CreateOauth2CredentialProviderRequest
+     */
+    ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateOauth2CredentialProviderRequest
+     */
+    Source?: string;
+
+    /**
      * @type {number}
      * @memberof CreateOauth2CredentialProviderRequest
      */

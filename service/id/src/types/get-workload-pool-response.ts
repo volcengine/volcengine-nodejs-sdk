@@ -22,6 +22,12 @@ import { TagForGetWorkloadPoolOutput } from './tag-for-get-workload-pool-output'
 export interface GetWorkloadPoolResponse {
 
     /**
+     * @type {boolean}
+     * @memberof GetWorkloadPoolResponse
+     */
+    AllowAutoCreateIdentity?: boolean;
+
+    /**
      * @type {string}
      * @memberof GetWorkloadPoolResponse
      */
@@ -70,10 +76,22 @@ export interface GetWorkloadPoolResponse {
     Trn?: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof GetWorkloadPoolResponse
+     */
+    TrustAnchors?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof GetWorkloadPoolResponse
      */
     UpdatedAt?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetWorkloadPoolResponse
+     */
+    Url?: string;
 
     /**
      * @type {string}

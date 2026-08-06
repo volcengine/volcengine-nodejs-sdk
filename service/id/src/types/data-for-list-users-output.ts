@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { CustomAttributeForListUsersOutput } from './custom-attribute-for-list-users-output';
+import { ExternalIdentityForListUsersOutput } from './external-identity-for-list-users-output';
  /**
  * 
  *
@@ -39,6 +41,18 @@ export interface DataForListUsersOutput {
     CreateTime?: string;
 
     /**
+     * @type {Array<CustomAttributeForListUsersOutput>}
+     * @memberof DataForListUsersOutput
+     */
+    CustomAttributes?: Array<CustomAttributeForListUsersOutput>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof DataForListUsersOutput
+     */
+    DepartmentUids?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof DataForListUsersOutput
      */
@@ -49,6 +63,12 @@ export interface DataForListUsersOutput {
      * @memberof DataForListUsersOutput
      */
     EmailVerified?: boolean;
+
+    /**
+     * @type {Array<ExternalIdentityForListUsersOutput>}
+     * @memberof DataForListUsersOutput
+     */
+    ExternalIdentities?: Array<ExternalIdentityForListUsersOutput>;
 
     /**
      * @type {string}
@@ -69,6 +89,12 @@ export interface DataForListUsersOutput {
     GivenName?: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof DataForListUsersOutput
+     */
+    GroupUids?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof DataForListUsersOutput
      */
@@ -79,6 +105,24 @@ export interface DataForListUsersOutput {
      * @memberof DataForListUsersOutput
      */
     LatestLogin?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListUsersOutput
+     */
+    LatestLoginConnectionName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListUsersOutput
+     */
+    LatestLoginConnectionProvider?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListUsersOutput
+     */
+    LatestLoginConnectionType?: string;
 
     /**
      * @type {string}

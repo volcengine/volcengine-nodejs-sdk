@@ -24,7 +24,25 @@ export interface ErrorsStructuredForCreateUsersCSVOutput {
      * @type {string}
      * @memberof ErrorsStructuredForCreateUsersCSVOutput
      */
+    DuplicatedUserUid?: string;
+
+    /**
+     * @type {string}
+     * @memberof ErrorsStructuredForCreateUsersCSVOutput
+     */
     Error?: string;
+
+    /**
+     * @type {string}
+     * @memberof ErrorsStructuredForCreateUsersCSVOutput
+     */
+    ErrorType?: string;
+
+    /**
+     * @type {string}
+     * @memberof ErrorsStructuredForCreateUsersCSVOutput
+     */
+    ExternalProviderUserIdentifier?: string;
 
     /**
      * @type {string}
