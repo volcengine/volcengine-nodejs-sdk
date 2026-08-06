@@ -23,6 +23,8 @@
     "node": ">=18"
   },
   "scripts": {
+    "check-version": "node scripts/check-version.js",
+    "prebuild": "node scripts/check-version.js",
     "build": "rslib build",
     "test": "jest --maxWorkers=2",
     "clean": "rm -rf dist",

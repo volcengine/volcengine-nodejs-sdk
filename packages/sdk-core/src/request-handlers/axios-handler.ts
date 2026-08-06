@@ -13,13 +13,14 @@ import http from "http";
 import https from "https";
 import type { Socket } from "net";
 import { HttpOptions } from "../types/types";
+import { SDK_NAME, SDK_VERSION } from "../version";
 
 export type AxiosRequestHandlerOptions = HttpOptions;
 
 /**
- * 默认 User-Agent
+ * 默认 User-Agent，格式为 <SDK 名称>/<版本>
  */
-const DEFAULT_USER_AGENT = "volcengine-nodejs-sdk";
+const DEFAULT_USER_AGENT = `${SDK_NAME}/${SDK_VERSION}`;
 
 /**
  * 创建带有连接超时的 Agent
