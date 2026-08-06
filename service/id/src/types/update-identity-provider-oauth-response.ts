@@ -12,7 +12,10 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForUpdateIdentityProviderOAuthOutput } from './attribute-mapping-for-update-identity-provider-oauth-output';
 import { ClaimsPropagationConfigForUpdateIdentityProviderOAuthOutput } from './claims-propagation-config-for-update-identity-provider-oauth-output';
+import { EipRecordForUpdateIdentityProviderOAuthOutput } from './eip-record-for-update-identity-provider-oauth-output';
+import { ExtraProviderConfigurationForUpdateIdentityProviderOAuthOutput } from './extra-provider-configuration-for-update-identity-provider-oauth-output';
 import { ProviderOptionsForUpdateIdentityProviderOAuthOutput } from './provider-options-for-update-identity-provider-oauth-output';
  /**
  * 
@@ -21,6 +24,12 @@ import { ProviderOptionsForUpdateIdentityProviderOAuthOutput } from './provider-
  * @interface UpdateIdentityProviderOAuthResponse
  */
 export interface UpdateIdentityProviderOAuthResponse {
+
+    /**
+     * @type {Array<AttributeMappingForUpdateIdentityProviderOAuthOutput>}
+     * @memberof UpdateIdentityProviderOAuthResponse
+     */
+    AttributeMappings?: Array<AttributeMappingForUpdateIdentityProviderOAuthOutput>;
 
     /**
      * @type {string}
@@ -47,10 +56,22 @@ export interface UpdateIdentityProviderOAuthResponse {
     ClientSecret?: string;
 
     /**
+     * @type {EipRecordForUpdateIdentityProviderOAuthOutput}
+     * @memberof UpdateIdentityProviderOAuthResponse
+     */
+    EipRecord?: EipRecordForUpdateIdentityProviderOAuthOutput;
+
+    /**
      * @type {boolean}
      * @memberof UpdateIdentityProviderOAuthResponse
      */
     Enabled?: boolean;
+
+    /**
+     * @type {ExtraProviderConfigurationForUpdateIdentityProviderOAuthOutput}
+     * @memberof UpdateIdentityProviderOAuthResponse
+     */
+    ExtraProviderConfiguration?: ExtraProviderConfigurationForUpdateIdentityProviderOAuthOutput;
 
     /**
      * @type {string}
@@ -81,6 +102,12 @@ export interface UpdateIdentityProviderOAuthResponse {
      * @memberof UpdateIdentityProviderOAuthResponse
      */
     ScopesList?: Array<string>;
+
+    /**
+     * @type {boolean}
+     * @memberof UpdateIdentityProviderOAuthResponse
+     */
+    SoleProviderConnection?: boolean;
 
     /**
      * @type {string}

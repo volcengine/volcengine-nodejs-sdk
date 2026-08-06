@@ -12,8 +12,11 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForGetIdentityProviderSAMLOutput } from './attribute-mapping-for-get-identity-provider-samloutput';
 import { ClaimsPropagationConfigForGetIdentityProviderSAMLOutput } from './claims-propagation-config-for-get-identity-provider-samloutput';
+import { EipRecordForGetIdentityProviderSAMLOutput } from './eip-record-for-get-identity-provider-samloutput';
 import { ProviderOptionsForGetIdentityProviderSAMLOutput } from './provider-options-for-get-identity-provider-samloutput';
+import { ScimProvisioningForGetIdentityProviderSAMLOutput } from './scim-provisioning-for-get-identity-provider-samloutput';
  /**
  * 
  *
@@ -29,6 +32,12 @@ export interface GetIdentityProviderSAMLResponse {
     AttributeMapping?: string;
 
     /**
+     * @type {Array<AttributeMappingForGetIdentityProviderSAMLOutput>}
+     * @memberof GetIdentityProviderSAMLResponse
+     */
+    AttributeMappings?: Array<AttributeMappingForGetIdentityProviderSAMLOutput>;
+
+    /**
      * @type {string}
      * @memberof GetIdentityProviderSAMLResponse
      */
@@ -39,6 +48,12 @@ export interface GetIdentityProviderSAMLResponse {
      * @memberof GetIdentityProviderSAMLResponse
      */
     ClaimsPropagationConfig?: ClaimsPropagationConfigForGetIdentityProviderSAMLOutput;
+
+    /**
+     * @type {EipRecordForGetIdentityProviderSAMLOutput}
+     * @memberof GetIdentityProviderSAMLResponse
+     */
+    EipRecord?: EipRecordForGetIdentityProviderSAMLOutput;
 
     /**
      * @type {boolean}
@@ -87,6 +102,18 @@ export interface GetIdentityProviderSAMLResponse {
      * @memberof GetIdentityProviderSAMLResponse
      */
     ProviderOptions?: ProviderOptionsForGetIdentityProviderSAMLOutput;
+
+    /**
+     * @type {ScimProvisioningForGetIdentityProviderSAMLOutput}
+     * @memberof GetIdentityProviderSAMLResponse
+     */
+    ScimProvisioning?: ScimProvisioningForGetIdentityProviderSAMLOutput;
+
+    /**
+     * @type {string}
+     * @memberof GetIdentityProviderSAMLResponse
+     */
+    SpMetadata?: string;
 
     /**
      * @type {string}

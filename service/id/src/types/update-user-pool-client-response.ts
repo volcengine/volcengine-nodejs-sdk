@@ -77,6 +77,12 @@ export interface UpdateUserPoolClientResponse {
     DevelopmentModeEnabled?: boolean;
 
     /**
+     * @type {boolean}
+     * @memberof UpdateUserPoolClientResponse
+     */
+    DismissLoginPageEnabled?: boolean;
+
+    /**
      * @type {IdTokenForUpdateUserPoolClientOutput}
      * @memberof UpdateUserPoolClientResponse
      */
@@ -105,6 +111,12 @@ export interface UpdateUserPoolClientResponse {
      * @memberof UpdateUserPoolClientResponse
      */
     RefreshToken?: RefreshTokenForUpdateUserPoolClientOutput;
+
+    /**
+     * @type {boolean}
+     * @memberof UpdateUserPoolClientResponse
+     */
+    SkipConsentEnabled?: boolean;
 
     /**
      * @type {string}
