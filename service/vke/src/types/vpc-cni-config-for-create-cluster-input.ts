@@ -25,10 +25,4 @@ export interface VpcCniConfigForCreateClusterInput {
      * @memberof VpcCniConfigForCreateClusterInput
      */
     SubnetIds?: Array<string>;
-
-    /**
-     * @type {boolean}
-     * @memberof VpcCniConfigForCreateClusterInput
-     */
-    TrunkEniEnabled?: boolean;
 }

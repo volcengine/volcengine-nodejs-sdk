@@ -12,57 +12,57 @@
  * Do not edit the class manually.
  */
 
-import { TaskConfigForListClustersOutput } from './task-config-for-list-clusters-output';
+import { TaskConfigForCreateClusterInput } from './task-config-for-create-cluster-input';
  /**
  * 
  *
  * @export
- * @interface MaintenanceWindowConfigForListClustersOutput
+ * @interface MaintenanceWindowConfigForCreateClusterInput
  */
-export interface MaintenanceWindowConfigForListClustersOutput {
+export interface MaintenanceWindowConfigForCreateClusterInput {
 
     /**
      * @type {number}
-     * @memberof MaintenanceWindowConfigForListClustersOutput
+     * @memberof MaintenanceWindowConfigForCreateClusterInput
      */
     Duration?: number;
 
     /**
      * @type {string}
-     * @memberof MaintenanceWindowConfigForListClustersOutput
+     * @memberof MaintenanceWindowConfigForCreateClusterInput
      */
     ExemptEndDate?: string;
 
     /**
      * @type {string}
-     * @memberof MaintenanceWindowConfigForListClustersOutput
+     * @memberof MaintenanceWindowConfigForCreateClusterInput
      */
     ExemptStartDate?: string;
 
     /**
      * @type {string}
-     * @memberof MaintenanceWindowConfigForListClustersOutput
+     * @memberof MaintenanceWindowConfigForCreateClusterInput
      */
     StartTime?: string;
 
     /**
-     * @type {Array<TaskConfigForListClustersOutput>}
-     * @memberof MaintenanceWindowConfigForListClustersOutput
+     * @type {Array<TaskConfigForCreateClusterInput>}
+     * @memberof MaintenanceWindowConfigForCreateClusterInput
      */
-    TaskConfigs?: Array<TaskConfigForListClustersOutput>;
+    TaskConfigs?: Array<TaskConfigForCreateClusterInput>;
 
     /**
      * @type {Array<string>}
-     * @memberof MaintenanceWindowConfigForListClustersOutput
+     * @memberof MaintenanceWindowConfigForCreateClusterInput
      */
-    WeeklyCycle?: Array<MaintenanceWindowConfigForListClustersOutputWeeklyCycleEnum>;
+    WeeklyCycle?: Array<MaintenanceWindowConfigForCreateClusterInputWeeklyCycleEnum>;
 }
 
 /**
  * @export
  * @enum {string}
  */
-export enum MaintenanceWindowConfigForListClustersOutputWeeklyCycleEnum {
+export enum MaintenanceWindowConfigForCreateClusterInputWeeklyCycleEnum {
     Monday = 'Monday',
     Tuesday = 'Tuesday',
     Wednesday = 'Wednesday',
