@@ -49,4 +49,10 @@ export interface ProviderOptionsForUpdateIdentityProviderSAMLInput {
      * @memberof ProviderOptionsForUpdateIdentityProviderSAMLInput
      */
     IsLinkingAllowed?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof ProviderOptionsForUpdateIdentityProviderSAMLInput
+     */
+    UserLinkingPromptEnabled?: boolean;
 }

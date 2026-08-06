@@ -14,6 +14,7 @@
 
 import { CustomParametersForGetOauth2CredentialProviderOutput } from './custom-parameters-for-get-oauth2-credential-provider-output';
 import { Oauth2DiscoveryForGetOauth2CredentialProviderOutput } from './oauth2-discovery-for-get-oauth2-credential-provider-output';
+import { SecretStorageForGetOauth2CredentialProviderOutput } from './secret-storage-for-get-oauth2-credential-provider-output';
  /**
  * 
  *
@@ -81,6 +82,12 @@ export interface ConfigForGetOauth2CredentialProviderOutput {
      * @memberof ConfigForGetOauth2CredentialProviderOutput
      */
     Scopes?: Array<string>;
+
+    /**
+     * @type {SecretStorageForGetOauth2CredentialProviderOutput}
+     * @memberof ConfigForGetOauth2CredentialProviderOutput
+     */
+    SecretStorage?: SecretStorageForGetOauth2CredentialProviderOutput;
 }
 
 /**

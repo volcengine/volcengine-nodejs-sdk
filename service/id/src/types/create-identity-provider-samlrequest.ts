@@ -12,8 +12,10 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForCreateIdentityProviderSAMLInput } from './attribute-mapping-for-create-identity-provider-samlinput';
 import { ClaimsPropagationConfigForCreateIdentityProviderSAMLInput } from './claims-propagation-config-for-create-identity-provider-samlinput';
 import { ProviderOptionsForCreateIdentityProviderSAMLInput } from './provider-options-for-create-identity-provider-samlinput';
+import { ScimProvisioningForCreateIdentityProviderSAMLInput } from './scim-provisioning-for-create-identity-provider-samlinput';
  /**
  * 
  *
@@ -29,10 +31,22 @@ export interface CreateIdentityProviderSAMLRequest {
     AttributeMapping: string;
 
     /**
+     * @type {Array<AttributeMappingForCreateIdentityProviderSAMLInput>}
+     * @memberof CreateIdentityProviderSAMLRequest
+     */
+    AttributeMappings?: Array<AttributeMappingForCreateIdentityProviderSAMLInput>;
+
+    /**
      * @type {ClaimsPropagationConfigForCreateIdentityProviderSAMLInput}
      * @memberof CreateIdentityProviderSAMLRequest
      */
     ClaimsPropagationConfig?: ClaimsPropagationConfigForCreateIdentityProviderSAMLInput;
+
+    /**
+     * @type {string}
+     * @memberof CreateIdentityProviderSAMLRequest
+     */
+    EipId?: string;
 
     /**
      * @type {boolean}
@@ -81,6 +95,12 @@ export interface CreateIdentityProviderSAMLRequest {
      * @memberof CreateIdentityProviderSAMLRequest
      */
     ProviderOptions?: ProviderOptionsForCreateIdentityProviderSAMLInput;
+
+    /**
+     * @type {ScimProvisioningForCreateIdentityProviderSAMLInput}
+     * @memberof CreateIdentityProviderSAMLRequest
+     */
+    ScimProvisioning?: ScimProvisioningForCreateIdentityProviderSAMLInput;
 
     /**
      * @type {string}

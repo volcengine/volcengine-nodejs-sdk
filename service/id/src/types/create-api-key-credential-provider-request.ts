@@ -13,6 +13,7 @@
  */
 
 import { ApiKeyMetadataForCreateApiKeyCredentialProviderInput } from './api-key-metadata-for-create-api-key-credential-provider-input';
+import { SecretStorageForCreateApiKeyCredentialProviderInput } from './secret-storage-for-create-api-key-credential-provider-input';
  /**
  * 
  *
@@ -44,4 +45,22 @@ export interface CreateApiKeyCredentialProviderRequest {
      * @memberof CreateApiKeyCredentialProviderRequest
      */
     PoolName?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateApiKeyCredentialProviderRequest
+     */
+    ProjectName?: string;
+
+    /**
+     * @type {SecretStorageForCreateApiKeyCredentialProviderInput}
+     * @memberof CreateApiKeyCredentialProviderRequest
+     */
+    SecretStorage?: SecretStorageForCreateApiKeyCredentialProviderInput;
+
+    /**
+     * @type {string}
+     * @memberof CreateApiKeyCredentialProviderRequest
+     */
+    Source?: string;
 }

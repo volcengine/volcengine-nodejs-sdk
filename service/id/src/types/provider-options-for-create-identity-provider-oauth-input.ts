@@ -49,4 +49,10 @@ export interface ProviderOptionsForCreateIdentityProviderOAuthInput {
      * @memberof ProviderOptionsForCreateIdentityProviderOAuthInput
      */
     IsLinkingAllowed?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof ProviderOptionsForCreateIdentityProviderOAuthInput
+     */
+    UserLinkingPromptEnabled?: boolean;
 }

@@ -13,6 +13,7 @@
  */
 
 import { ClaimsPropagationConfigForListIdentityProvidersOAuthOutput } from './claims-propagation-config-for-list-identity-providers-oauth-output';
+import { EipRecordForListIdentityProvidersOAuthOutput } from './eip-record-for-list-identity-providers-oauth-output';
 import { ProviderOptionsForListIdentityProvidersOAuthOutput } from './provider-options-for-list-identity-providers-oauth-output';
  /**
  * 
@@ -45,6 +46,12 @@ export interface DataForListIdentityProvidersOAuthOutput {
      * @memberof DataForListIdentityProvidersOAuthOutput
      */
     ClientSecret?: string;
+
+    /**
+     * @type {EipRecordForListIdentityProvidersOAuthOutput}
+     * @memberof DataForListIdentityProvidersOAuthOutput
+     */
+    EipRecord?: EipRecordForListIdentityProvidersOAuthOutput;
 
     /**
      * @type {boolean}

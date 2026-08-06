@@ -34,8 +34,26 @@ export interface DescribeIpamPoolAllocationsResponse {
     NextToken?: string;
 
     /**
+     * @type {number}
+     * @memberof DescribeIpamPoolAllocationsResponse
+     */
+    PageNumber?: number;
+
+    /**
+     * @type {number}
+     * @memberof DescribeIpamPoolAllocationsResponse
+     */
+    PageSize?: number;
+
+    /**
      * @type {string}
      * @memberof DescribeIpamPoolAllocationsResponse
      */
     RequestId?: string;
+
+    /**
+     * @type {number}
+     * @memberof DescribeIpamPoolAllocationsResponse
+     */
+    TotalCount?: number;
 }

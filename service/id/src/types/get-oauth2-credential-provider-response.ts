@@ -62,6 +62,12 @@ export interface GetOauth2CredentialProviderResponse {
      * @type {string}
      * @memberof GetOauth2CredentialProviderResponse
      */
+    ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetOauth2CredentialProviderResponse
+     */
     SecretTrn?: string;
 
     /**

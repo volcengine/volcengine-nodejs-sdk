@@ -24,6 +24,12 @@ export interface CreateIpamScopeResponse {
      * @type {string}
      * @memberof CreateIpamScopeResponse
      */
+    AsyncTaskId?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateIpamScopeResponse
+     */
     IpamScopeId?: string;
 
     /**

@@ -115,6 +115,12 @@ export interface CreateSandboxRequest {
      * @type {string}
      * @memberof CreateSandboxRequest
      */
+    RoleTrn?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateSandboxRequest
+     */
     SessionId?: string;
 
     /**

@@ -49,4 +49,10 @@ export interface ProviderOptionsForUpdateIdentityProviderOIDCInput {
      * @memberof ProviderOptionsForUpdateIdentityProviderOIDCInput
      */
     IsLinkingAllowed?: boolean;
+
+    /**
+     * @type {boolean}
+     * @memberof ProviderOptionsForUpdateIdentityProviderOIDCInput
+     */
+    UserLinkingPromptEnabled?: boolean;
 }

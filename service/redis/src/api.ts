@@ -16,6 +16,8 @@ import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandO
 
 import { AddTagsToResourceRequest } from './types/index';
 import { AddTagsToResourceResponse } from './types/index';
+import { ApplyParameterGroupRequest } from './types/index';
+import { ApplyParameterGroupResponse } from './types/index';
 import { AssociateAllowListRequest } from './types/index';
 import { AssociateAllowListResponse } from './types/index';
 import { CreateAllowListRequest } from './types/index';
@@ -74,6 +76,8 @@ import { DescribeBigKeysRequest } from './types/index';
 import { DescribeBigKeysResponse } from './types/index';
 import { DescribeBlueGreenDeploymentsRequest } from './types/index';
 import { DescribeBlueGreenDeploymentsResponse } from './types/index';
+import { DescribeClientSessionSnapshotRequest } from './types/index';
+import { DescribeClientSessionSnapshotResponse } from './types/index';
 import { DescribeCrossRegionBackupPolicyRequest } from './types/index';
 import { DescribeCrossRegionBackupPolicyResponse } from './types/index';
 import { DescribeCrossRegionBackupsRequest } from './types/index';
@@ -128,6 +132,8 @@ import { DescribeSlowLogsRequest } from './types/index';
 import { DescribeSlowLogsResponse } from './types/index';
 import { DescribeTagsByResourceRequest } from './types/index';
 import { DescribeTagsByResourceResponse } from './types/index';
+import { DescribeTasksRequest } from './types/index';
+import { DescribeTasksResponse } from './types/index';
 import { DescribeZonesRequest } from './types/index';
 import { DescribeZonesResponse } from './types/index';
 import { DisassociateAllowListRequest } from './types/index';
@@ -210,6 +216,8 @@ import { SwitchOverRequest } from './types/index';
 import { SwitchOverResponse } from './types/index';
 import { SwitchoverBlueGreenDeploymentRequest } from './types/index';
 import { SwitchoverBlueGreenDeploymentResponse } from './types/index';
+import { SyncAllowListRequest } from './types/index';
+import { SyncAllowListResponse } from './types/index';
 import { TestFailoverDBInstanceZoneRequest } from './types/index';
 import { TestFailoverDBInstanceZoneResponse } from './types/index';
 import { TestShutDownDBInstanceNodesRequest } from './types/index';
@@ -221,6 +229,7 @@ import { UpgradeAllowListVersionResponse } from './types/index';
 // Output Type Definitions
 // ============================================================================
 export type AddTagsToResourceCommandOutput = CommandOutput<AddTagsToResourceResponse>;
+export type ApplyParameterGroupCommandOutput = CommandOutput<ApplyParameterGroupResponse>;
 export type AssociateAllowListCommandOutput = CommandOutput<AssociateAllowListResponse>;
 export type CreateAllowListCommandOutput = CommandOutput<CreateAllowListResponse>;
 export type CreateBackupCommandOutput = CommandOutput<CreateBackupResponse>;
@@ -250,6 +259,7 @@ export type DescribeBackupPointDownloadUrlsCommandOutput = CommandOutput<Describ
 export type DescribeBackupsCommandOutput = CommandOutput<DescribeBackupsResponse>;
 export type DescribeBigKeysCommandOutput = CommandOutput<DescribeBigKeysResponse>;
 export type DescribeBlueGreenDeploymentsCommandOutput = CommandOutput<DescribeBlueGreenDeploymentsResponse>;
+export type DescribeClientSessionSnapshotCommandOutput = CommandOutput<DescribeClientSessionSnapshotResponse>;
 export type DescribeCrossRegionBackupPolicyCommandOutput = CommandOutput<DescribeCrossRegionBackupPolicyResponse>;
 export type DescribeCrossRegionBackupsCommandOutput = CommandOutput<DescribeCrossRegionBackupsResponse>;
 export type DescribeDBEngineVersionsCommandOutput = CommandOutput<DescribeDBEngineVersionsResponse>;
@@ -277,6 +287,7 @@ export type DescribePlannedEventsCommandOutput = CommandOutput<DescribePlannedEv
 export type DescribeRegionsCommandOutput = CommandOutput<DescribeRegionsResponse>;
 export type DescribeSlowLogsCommandOutput = CommandOutput<DescribeSlowLogsResponse>;
 export type DescribeTagsByResourceCommandOutput = CommandOutput<DescribeTagsByResourceResponse>;
+export type DescribeTasksCommandOutput = CommandOutput<DescribeTasksResponse>;
 export type DescribeZonesCommandOutput = CommandOutput<DescribeZonesResponse>;
 export type DisassociateAllowListCommandOutput = CommandOutput<DisassociateAllowListResponse>;
 export type EnableDBInstanceHACommandOutput = CommandOutput<EnableDBInstanceHAResponse>;
@@ -318,6 +329,7 @@ export type StartContinuousBackupCommandOutput = CommandOutput<StartContinuousBa
 export type StopContinuousBackupCommandOutput = CommandOutput<StopContinuousBackupResponse>;
 export type SwitchOverCommandOutput = CommandOutput<SwitchOverResponse>;
 export type SwitchoverBlueGreenDeploymentCommandOutput = CommandOutput<SwitchoverBlueGreenDeploymentResponse>;
+export type SyncAllowListCommandOutput = CommandOutput<SyncAllowListResponse>;
 export type TestFailoverDBInstanceZoneCommandOutput = CommandOutput<TestFailoverDBInstanceZoneResponse>;
 export type TestShutDownDBInstanceNodesCommandOutput = CommandOutput<TestShutDownDBInstanceNodesResponse>;
 export type UpgradeAllowListVersionCommandOutput = CommandOutput<UpgradeAllowListVersionResponse>;
@@ -348,6 +360,21 @@ export class AddTagsToResourceCommand extends Command<
   constructor(input: AddTagsToResourceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(AddTagsToResourceCommand.metaPath);
+  }
+}
+/**
+ * Command to ApplyParameterGroup
+ */
+export class ApplyParameterGroupCommand extends Command<
+  ApplyParameterGroupRequest,
+  ApplyParameterGroupCommandOutput,
+  'ApplyParameterGroupCommand'
+> {
+  static readonly metaPath = '/ApplyParameterGroup/2020-12-07/redis/post/application_json/';
+
+  constructor(input: ApplyParameterGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ApplyParameterGroupCommand.metaPath);
   }
 }
 /**
@@ -786,6 +813,21 @@ export class DescribeBlueGreenDeploymentsCommand extends Command<
   }
 }
 /**
+ * Command to DescribeClientSessionSnapshot
+ */
+export class DescribeClientSessionSnapshotCommand extends Command<
+  DescribeClientSessionSnapshotRequest,
+  DescribeClientSessionSnapshotCommandOutput,
+  'DescribeClientSessionSnapshotCommand'
+> {
+  static readonly metaPath = '/DescribeClientSessionSnapshot/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribeClientSessionSnapshotRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeClientSessionSnapshotCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeCrossRegionBackupPolicy
  */
 export class DescribeCrossRegionBackupPolicyCommand extends Command<
@@ -1188,6 +1230,21 @@ export class DescribeTagsByResourceCommand extends Command<
   constructor(input: DescribeTagsByResourceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeTagsByResourceCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeTasks
+ */
+export class DescribeTasksCommand extends Command<
+  DescribeTasksRequest,
+  DescribeTasksCommandOutput,
+  'DescribeTasksCommand'
+> {
+  static readonly metaPath = '/DescribeTasks/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribeTasksRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeTasksCommand.metaPath);
   }
 }
 /**
@@ -1806,6 +1863,21 @@ export class SwitchoverBlueGreenDeploymentCommand extends Command<
   }
 }
 /**
+ * Command to SyncAllowList
+ */
+export class SyncAllowListCommand extends Command<
+  SyncAllowListRequest,
+  SyncAllowListCommandOutput,
+  'SyncAllowListCommand'
+> {
+  static readonly metaPath = '/SyncAllowList/2020-12-07/redis/post/application_json/';
+
+  constructor(input: SyncAllowListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(SyncAllowListCommand.metaPath);
+  }
+}
+/**
  * Command to TestFailoverDBInstanceZone
  */
 export class TestFailoverDBInstanceZoneCommand extends Command<
@@ -1854,6 +1926,7 @@ export class UpgradeAllowListVersionCommand extends Command<
 export default {
   REDISClient,
   AddTagsToResourceCommand,
+  ApplyParameterGroupCommand,
   AssociateAllowListCommand,
   CreateAllowListCommand,
   CreateBackupCommand,
@@ -1883,6 +1956,7 @@ export default {
   DescribeBackupsCommand,
   DescribeBigKeysCommand,
   DescribeBlueGreenDeploymentsCommand,
+  DescribeClientSessionSnapshotCommand,
   DescribeCrossRegionBackupPolicyCommand,
   DescribeCrossRegionBackupsCommand,
   DescribeDBEngineVersionsCommand,
@@ -1910,6 +1984,7 @@ export default {
   DescribeRegionsCommand,
   DescribeSlowLogsCommand,
   DescribeTagsByResourceCommand,
+  DescribeTasksCommand,
   DescribeZonesCommand,
   DisassociateAllowListCommand,
   EnableDBInstanceHACommand,
@@ -1951,6 +2026,7 @@ export default {
   StopContinuousBackupCommand,
   SwitchOverCommand,
   SwitchoverBlueGreenDeploymentCommand,
+  SyncAllowListCommand,
   TestFailoverDBInstanceZoneCommand,
   TestShutDownDBInstanceNodesCommand,
   UpgradeAllowListVersionCommand,

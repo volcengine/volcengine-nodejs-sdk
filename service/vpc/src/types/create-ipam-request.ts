@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { TagForCreateIpamInput } from './tag-for-create-ipam-input';
  /**
  * 
  *
@@ -37,4 +38,16 @@ export interface CreateIpamRequest {
      * @memberof CreateIpamRequest
      */
     OperatingRegions?: Array<string>;
+
+    /**
+     * @type {string}
+     * @memberof CreateIpamRequest
+     */
+    ProjectName?: string;
+
+    /**
+     * @type {Array<TagForCreateIpamInput>}
+     * @memberof CreateIpamRequest
+     */
+    Tags?: Array<TagForCreateIpamInput>;
 }
