@@ -115,6 +115,12 @@ export interface DescribeDBInstanceDetailResponse {
     MaxConnections?: number;
 
     /**
+     * @type {Array<string>}
+     * @memberof DescribeDBInstanceDetailResponse
+     */
+    Modules?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof DescribeDBInstanceDetailResponse
      */
