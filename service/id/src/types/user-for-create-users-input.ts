@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { CustomAttributesToUpsertForCreateUsersInput } from './custom-attributes-to-upsert-for-create-users-input';
  /**
  * 
  *
@@ -27,6 +28,12 @@ export interface UserForCreateUsersInput {
     Birthdate?: string;
 
     /**
+     * @type {Array<CustomAttributesToUpsertForCreateUsersInput>}
+     * @memberof UserForCreateUsersInput
+     */
+    CustomAttributesToUpsert?: Array<CustomAttributesToUpsertForCreateUsersInput>;
+
+    /**
      * @type {string}
      * @memberof UserForCreateUsersInput
      */
@@ -37,6 +44,12 @@ export interface UserForCreateUsersInput {
      * @memberof UserForCreateUsersInput
      */
     EmailVerified?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof UserForCreateUsersInput
+     */
+    ExternalProviderUserIdentifier?: string;
 
     /**
      * @type {string}

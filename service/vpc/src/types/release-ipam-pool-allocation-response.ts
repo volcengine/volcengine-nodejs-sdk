@@ -24,11 +24,5 @@ export interface ReleaseIpamPoolAllocationResponse {
      * @type {string}
      * @memberof ReleaseIpamPoolAllocationResponse
      */
-    AsyncTaskId?: string;
-
-    /**
-     * @type {string}
-     * @memberof ReleaseIpamPoolAllocationResponse
-     */
     RequestId?: string;
 }

@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ResponseValueMaskForGetUserInput } from './response-value-mask-for-get-user-input';
  /**
  * 
  *
@@ -19,6 +20,12 @@
  * @interface GetUserRequest
  */
 export interface GetUserRequest {
+
+    /**
+     * @type {ResponseValueMaskForGetUserInput}
+     * @memberof GetUserRequest
+     */
+    ResponseValueMask?: ResponseValueMaskForGetUserInput;
 
     /**
      * @type {string}

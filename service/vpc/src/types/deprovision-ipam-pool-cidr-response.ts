@@ -24,5 +24,11 @@ export interface DeprovisionIpamPoolCidrResponse {
      * @type {string}
      * @memberof DeprovisionIpamPoolCidrResponse
      */
+    AsyncTaskId?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeprovisionIpamPoolCidrResponse
+     */
     RequestId?: string;
 }

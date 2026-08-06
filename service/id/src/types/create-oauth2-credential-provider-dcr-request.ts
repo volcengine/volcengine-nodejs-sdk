@@ -47,6 +47,12 @@ export interface CreateOauth2CredentialProviderDcrRequest {
     PoolName?: string;
 
     /**
+     * @type {string}
+     * @memberof CreateOauth2CredentialProviderDcrRequest
+     */
+    ProjectName?: string;
+
+    /**
      * @type {number}
      * @memberof CreateOauth2CredentialProviderDcrRequest
      */

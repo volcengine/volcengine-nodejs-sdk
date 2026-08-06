@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { CustomAttributesToUpsertForUpdateUserInput } from './custom-attributes-to-upsert-for-update-user-input';
  /**
  * 
  *
@@ -25,6 +26,12 @@ export interface UpdateUserRequest {
      * @memberof UpdateUserRequest
      */
     Birthdate?: string;
+
+    /**
+     * @type {Array<CustomAttributesToUpsertForUpdateUserInput>}
+     * @memberof UpdateUserRequest
+     */
+    CustomAttributesToUpsert?: Array<CustomAttributesToUpsertForUpdateUserInput>;
 
     /**
      * @type {string}

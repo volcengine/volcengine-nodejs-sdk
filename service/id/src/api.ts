@@ -14,36 +14,90 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { AddUsersToDepartmentRequest } from './types/index';
+import { AddUsersToDepartmentResponse } from './types/index';
+import { AddUsersToGroupRequest } from './types/index';
+import { AddUsersToGroupResponse } from './types/index';
+import { AddWorkloadMetaDataRequest } from './types/index';
+import { AddWorkloadMetaDataResponse } from './types/index';
 import { AttachInboundAuthConfigRequest } from './types/index';
 import { AttachInboundAuthConfigResponse } from './types/index';
+import { BatchConvertFederatedUsersToNativeUsersRequest } from './types/index';
+import { BatchConvertFederatedUsersToNativeUsersResponse } from './types/index';
 import { BatchCreateRoutesRequest } from './types/index';
 import { BatchCreateRoutesResponse } from './types/index';
 import { BatchGetApiKeyCredentialProvidersRequest } from './types/index';
 import { BatchGetApiKeyCredentialProvidersResponse } from './types/index';
+import { BatchGetDepartmentsRequest } from './types/index';
+import { BatchGetDepartmentsResponse } from './types/index';
 import { BatchGetInboundAuthConfigRequest } from './types/index';
 import { BatchGetInboundAuthConfigResponse } from './types/index';
 import { BatchGetOauth2CredentialProvidersRequest } from './types/index';
 import { BatchGetOauth2CredentialProvidersResponse } from './types/index';
+import { BatchGetObjectPermissionsRequest } from './types/index';
+import { BatchGetObjectPermissionsResponse } from './types/index';
+import { BatchGetSubjectPermissionsRequest } from './types/index';
+import { BatchGetSubjectPermissionsResponse } from './types/index';
+import { BatchListDepartmentsForUsersRequest } from './types/index';
+import { BatchListDepartmentsForUsersResponse } from './types/index';
+import { BatchSyncDepartmentMembersRequest } from './types/index';
+import { BatchSyncDepartmentMembersResponse } from './types/index';
+import { BatchUpsertDepartmentsRequest } from './types/index';
+import { BatchUpsertDepartmentsResponse } from './types/index';
+import { BindCredentialProviderRequest } from './types/index';
+import { BindCredentialProviderResponse } from './types/index';
+import { BindWorkloadPoolTrustAnchorRequest } from './types/index';
+import { BindWorkloadPoolTrustAnchorResponse } from './types/index';
+import { CancelDepartmentSyncSessionRequest } from './types/index';
+import { CancelDepartmentSyncSessionResponse } from './types/index';
+import { CancelTaskRequest } from './types/index';
+import { CancelTaskResponse } from './types/index';
+import { CancelTaskUserSyncRequest } from './types/index';
+import { CancelTaskUserSyncResponse } from './types/index';
+import { ChangeUsersDepartmentRequest } from './types/index';
+import { ChangeUsersDepartmentResponse } from './types/index';
+import { ChangeUsersGroupRequest } from './types/index';
+import { ChangeUsersGroupResponse } from './types/index';
 import { CheckApiKeyRequest } from './types/index';
 import { CheckApiKeyResponse } from './types/index';
 import { CheckPermissionRequest } from './types/index';
 import { CheckPermissionResponse } from './types/index';
 import { CheckServiceNameRequest } from './types/index';
 import { CheckServiceNameResponse } from './types/index';
+import { CommitDepartmentSyncSessionRequest } from './types/index';
+import { CommitDepartmentSyncSessionResponse } from './types/index';
 import { CompleteResourceTokenAuthRequest } from './types/index';
 import { CompleteResourceTokenAuthResponse } from './types/index';
+import { CreateActionRequest } from './types/index';
+import { CreateActionResponse } from './types/index';
 import { CreateApiKeyCredentialProviderRequest } from './types/index';
 import { CreateApiKeyCredentialProviderResponse } from './types/index';
 import { CreateApiKeyRequest } from './types/index';
 import { CreateApiKeyResponse } from './types/index';
+import { CreateDepartmentRequest } from './types/index';
+import { CreateDepartmentResponse } from './types/index';
+import { CreateDepartmentSyncSessionRequest } from './types/index';
+import { CreateDepartmentSyncSessionResponse } from './types/index';
 import { CreateFaasServiceRequest } from './types/index';
 import { CreateFaasServiceResponse } from './types/index';
+import { CreateGroupRequest } from './types/index';
+import { CreateGroupResponse } from './types/index';
+import { CreateIamOidcProviderRequest } from './types/index';
+import { CreateIamOidcProviderResponse } from './types/index';
+import { CreateIamRoleAttachmentRequest } from './types/index';
+import { CreateIamRoleAttachmentResponse } from './types/index';
+import { CreateIdentityProviderLDAPADAgentRequest } from './types/index';
+import { CreateIdentityProviderLDAPADAgentResponse } from './types/index';
 import { CreateIdentityProviderOAuthRequest } from './types/index';
 import { CreateIdentityProviderOAuthResponse } from './types/index';
 import { CreateIdentityProviderOIDCRequest } from './types/index';
 import { CreateIdentityProviderOIDCResponse } from './types/index';
 import { CreateIdentityProviderSAMLRequest } from './types/index';
 import { CreateIdentityProviderSAMLResponse } from './types/index';
+import { CreateIdentityProviderTokenExchangeRequest } from './types/index';
+import { CreateIdentityProviderTokenExchangeResponse } from './types/index';
+import { CreateIdentityProviderWeComRequest } from './types/index';
+import { CreateIdentityProviderWeComResponse } from './types/index';
 import { CreateInboundAuthConfigRequest } from './types/index';
 import { CreateInboundAuthConfigResponse } from './types/index';
 import { CreateNamespaceRequest } from './types/index';
@@ -52,18 +106,48 @@ import { CreateOauth2CredentialProviderDcrRequest } from './types/index';
 import { CreateOauth2CredentialProviderDcrResponse } from './types/index';
 import { CreateOauth2CredentialProviderRequest } from './types/index';
 import { CreateOauth2CredentialProviderResponse } from './types/index';
+import { CreateOutboundEgressIPRequest } from './types/index';
+import { CreateOutboundEgressIPResponse } from './types/index';
+import { CreatePermissionPointRequest } from './types/index';
+import { CreatePermissionPointResponse } from './types/index';
 import { CreatePolicyRequest } from './types/index';
 import { CreatePolicyResponse } from './types/index';
+import { CreateResourceRequest } from './types/index';
+import { CreateResourceResponse } from './types/index';
+import { CreateRoleCredentialProviderRequest } from './types/index';
+import { CreateRoleCredentialProviderResponse } from './types/index';
 import { CreateRouteFromTemplateRequest } from './types/index';
 import { CreateRouteFromTemplateResponse } from './types/index';
 import { CreateRouteRequest } from './types/index';
 import { CreateRouteResponse } from './types/index';
+import { CreateSCIMTokenRequest } from './types/index';
+import { CreateSCIMTokenResponse } from './types/index';
 import { CreateServiceFromTemplateRequest } from './types/index';
 import { CreateServiceFromTemplateResponse } from './types/index';
 import { CreateServiceRequest } from './types/index';
 import { CreateServiceResponse } from './types/index';
+import { CreateTaskCommitAppVisibleUsersRequest } from './types/index';
+import { CreateTaskCommitAppVisibleUsersResponse } from './types/index';
+import { CreateTaskMergeUserSyncRequest } from './types/index';
+import { CreateTaskMergeUserSyncResponse } from './types/index';
+import { CreateTaskRetrieveAppVisibleUsersRequest } from './types/index';
+import { CreateTaskRetrieveAppVisibleUsersResponse } from './types/index';
+import { CreateTaskRetrieveUserSyncAttachmentRequest } from './types/index';
+import { CreateTaskRetrieveUserSyncAttachmentResponse } from './types/index';
+import { CreateTaskRetrieveUserSyncRequest } from './types/index';
+import { CreateTaskRetrieveUserSyncResponse } from './types/index';
+import { CreateTrustAnchorRequest } from './types/index';
+import { CreateTrustAnchorResponse } from './types/index';
+import { CreateUserCredentialRequest } from './types/index';
+import { CreateUserCredentialResponse } from './types/index';
+import { CreateUserGroupsCsvRequest } from './types/index';
+import { CreateUserGroupsCsvResponse } from './types/index';
 import { CreateUserPoolClientRequest } from './types/index';
 import { CreateUserPoolClientResponse } from './types/index';
+import { CreateUserPoolCustomAttributeRequest } from './types/index';
+import { CreateUserPoolCustomAttributeResponse } from './types/index';
+import { CreateUserPoolDomainRequest } from './types/index';
+import { CreateUserPoolDomainResponse } from './types/index';
 import { CreateUserPoolRequest } from './types/index';
 import { CreateUserPoolResponse } from './types/index';
 import { CreateUserRequest } from './types/index';
@@ -76,12 +160,24 @@ import { CreateWorkloadIdentityRequest } from './types/index';
 import { CreateWorkloadIdentityResponse } from './types/index';
 import { CreateWorkloadPoolRequest } from './types/index';
 import { CreateWorkloadPoolResponse } from './types/index';
+import { DeleteActionRequest } from './types/index';
+import { DeleteActionResponse } from './types/index';
 import { DeleteApiKeyCredentialProviderRequest } from './types/index';
 import { DeleteApiKeyCredentialProviderResponse } from './types/index';
 import { DeleteApiKeyRequest } from './types/index';
 import { DeleteApiKeyResponse } from './types/index';
+import { DeleteDepartmentRequest } from './types/index';
+import { DeleteDepartmentResponse } from './types/index';
+import { DeleteEmailServiceRequest } from './types/index';
+import { DeleteEmailServiceResponse } from './types/index';
+import { DeleteExternalProviderRequest } from './types/index';
+import { DeleteExternalProviderResponse } from './types/index';
 import { DeleteFaasServiceRequest } from './types/index';
 import { DeleteFaasServiceResponse } from './types/index';
+import { DeleteGroupRequest } from './types/index';
+import { DeleteGroupResponse } from './types/index';
+import { DeleteIdentityProviderLDAPADAgentRequest } from './types/index';
+import { DeleteIdentityProviderLDAPADAgentResponse } from './types/index';
 import { DeleteIdentityProviderOAuthRequest } from './types/index';
 import { DeleteIdentityProviderOAuthResponse } from './types/index';
 import { DeleteIdentityProviderOIDCRequest } from './types/index';
@@ -90,20 +186,42 @@ import { DeleteIdentityProviderRequest } from './types/index';
 import { DeleteIdentityProviderResponse } from './types/index';
 import { DeleteIdentityProviderSAMLRequest } from './types/index';
 import { DeleteIdentityProviderSAMLResponse } from './types/index';
+import { DeleteIdentityProviderTokenExchangeRequest } from './types/index';
+import { DeleteIdentityProviderTokenExchangeResponse } from './types/index';
+import { DeleteIdentityProviderWeComRequest } from './types/index';
+import { DeleteIdentityProviderWeComResponse } from './types/index';
 import { DeleteInboundAuthConfigRequest } from './types/index';
 import { DeleteInboundAuthConfigResponse } from './types/index';
 import { DeleteNamespaceRequest } from './types/index';
 import { DeleteNamespaceResponse } from './types/index';
 import { DeleteOauth2CredentialProviderRequest } from './types/index';
 import { DeleteOauth2CredentialProviderResponse } from './types/index';
+import { DeleteOutboundEgressIPRequest } from './types/index';
+import { DeleteOutboundEgressIPResponse } from './types/index';
+import { DeletePermissionPointRequest } from './types/index';
+import { DeletePermissionPointResponse } from './types/index';
 import { DeletePolicyRequest } from './types/index';
 import { DeletePolicyResponse } from './types/index';
+import { DeleteResourceRequest } from './types/index';
+import { DeleteResourceResponse } from './types/index';
+import { DeleteRoleCredentialProviderRequest } from './types/index';
+import { DeleteRoleCredentialProviderResponse } from './types/index';
 import { DeleteRouteRequest } from './types/index';
 import { DeleteRouteResponse } from './types/index';
+import { DeleteSCIMTokenRequest } from './types/index';
+import { DeleteSCIMTokenResponse } from './types/index';
 import { DeleteServiceRequest } from './types/index';
 import { DeleteServiceResponse } from './types/index';
+import { DeleteTrustAnchorRequest } from './types/index';
+import { DeleteTrustAnchorResponse } from './types/index';
+import { DeleteUserCredentialRequest } from './types/index';
+import { DeleteUserCredentialResponse } from './types/index';
 import { DeleteUserPoolClientRequest } from './types/index';
 import { DeleteUserPoolClientResponse } from './types/index';
+import { DeleteUserPoolCustomAttributeRequest } from './types/index';
+import { DeleteUserPoolCustomAttributeResponse } from './types/index';
+import { DeleteUserPoolDomainRequest } from './types/index';
+import { DeleteUserPoolDomainResponse } from './types/index';
 import { DeleteUserPoolRequest } from './types/index';
 import { DeleteUserPoolResponse } from './types/index';
 import { DeleteUsersRequest } from './types/index';
@@ -120,44 +238,102 @@ import { DescribeTemplateOptionsRequest } from './types/index';
 import { DescribeTemplateOptionsResponse } from './types/index';
 import { DetachInboundAuthConfigRequest } from './types/index';
 import { DetachInboundAuthConfigResponse } from './types/index';
+import { DisableIdentityProviderForUserRequest } from './types/index';
+import { DisableIdentityProviderForUserResponse } from './types/index';
 import { DisableRouteRequest } from './types/index';
 import { DisableRouteResponse } from './types/index';
+import { GetActionRequest } from './types/index';
+import { GetActionResponse } from './types/index';
 import { GetApiKeyCredentialProviderRequest } from './types/index';
 import { GetApiKeyCredentialProviderResponse } from './types/index';
+import { GetDepartmentPathRequest } from './types/index';
+import { GetDepartmentPathResponse } from './types/index';
+import { GetDepartmentRequest } from './types/index';
+import { GetDepartmentResponse } from './types/index';
+import { GetDepartmentSyncJobRequest } from './types/index';
+import { GetDepartmentSyncJobResponse } from './types/index';
+import { GetDepartmentSyncSessionRequest } from './types/index';
+import { GetDepartmentSyncSessionResponse } from './types/index';
+import { GetDepartmentTreeRequest } from './types/index';
+import { GetDepartmentTreeResponse } from './types/index';
 import { GetDocumentStatusRequest } from './types/index';
 import { GetDocumentStatusResponse } from './types/index';
+import { GetEmailServiceRequest } from './types/index';
+import { GetEmailServiceResponse } from './types/index';
+import { GetExternalProviderRequest } from './types/index';
+import { GetExternalProviderResponse } from './types/index';
 import { GetFaasServiceRequest } from './types/index';
 import { GetFaasServiceResponse } from './types/index';
+import { GetGroupRequest } from './types/index';
+import { GetGroupResponse } from './types/index';
+import { GetIamRoleAttachmentRequest } from './types/index';
+import { GetIamRoleAttachmentResponse } from './types/index';
+import { GetIdentityProviderFeishuScopesRequest } from './types/index';
+import { GetIdentityProviderFeishuScopesResponse } from './types/index';
+import { GetIdentityProviderLDAPADAgentRequest } from './types/index';
+import { GetIdentityProviderLDAPADAgentResponse } from './types/index';
 import { GetIdentityProviderOAuthRequest } from './types/index';
 import { GetIdentityProviderOAuthResponse } from './types/index';
 import { GetIdentityProviderOIDCRequest } from './types/index';
 import { GetIdentityProviderOIDCResponse } from './types/index';
 import { GetIdentityProviderSAMLRequest } from './types/index';
 import { GetIdentityProviderSAMLResponse } from './types/index';
+import { GetIdentityProviderTokenExchangeRequest } from './types/index';
+import { GetIdentityProviderTokenExchangeResponse } from './types/index';
+import { GetIdentityProviderWeComRequest } from './types/index';
+import { GetIdentityProviderWeComResponse } from './types/index';
 import { GetInboundAuthConfigRequest } from './types/index';
 import { GetInboundAuthConfigResponse } from './types/index';
 import { GetNamespaceRequest } from './types/index';
 import { GetNamespaceResponse } from './types/index';
 import { GetOauth2CredentialProviderRequest } from './types/index';
 import { GetOauth2CredentialProviderResponse } from './types/index';
+import { GetOutboundEgressIPRequest } from './types/index';
+import { GetOutboundEgressIPResponse } from './types/index';
+import { GetPermissionPointRequest } from './types/index';
+import { GetPermissionPointResponse } from './types/index';
 import { GetPolicyRequest } from './types/index';
 import { GetPolicyResponse } from './types/index';
 import { GetResourceApiKeyRequest } from './types/index';
 import { GetResourceApiKeyResponse } from './types/index';
 import { GetResourceOauth2TokenRequest } from './types/index';
 import { GetResourceOauth2TokenResponse } from './types/index';
+import { GetResourceRequest } from './types/index';
+import { GetResourceResponse } from './types/index';
+import { GetRoleCredentialProviderRequest } from './types/index';
+import { GetRoleCredentialProviderResponse } from './types/index';
+import { GetRoleCredentialsRequest } from './types/index';
+import { GetRoleCredentialsResponse } from './types/index';
 import { GetRouteRequest } from './types/index';
 import { GetRouteResponse } from './types/index';
+import { GetSCIMProvisioningDefaultsRequest } from './types/index';
+import { GetSCIMProvisioningDefaultsResponse } from './types/index';
 import { GetServiceRequest } from './types/index';
 import { GetServiceResponse } from './types/index';
 import { GetSmsServiceRequest } from './types/index';
 import { GetSmsServiceResponse } from './types/index';
+import { GetTaskRequest } from './types/index';
+import { GetTaskResponse } from './types/index';
+import { GetTaskStateRetrieveAppVisibleUsersRequest } from './types/index';
+import { GetTaskStateRetrieveAppVisibleUsersResponse } from './types/index';
+import { GetTaskStateUserSyncRequest } from './types/index';
+import { GetTaskStateUserSyncResponse } from './types/index';
 import { GetTenantServiceStatusRequest } from './types/index';
 import { GetTenantServiceStatusResponse } from './types/index';
+import { GetTrustAnchorRequest } from './types/index';
+import { GetTrustAnchorResponse } from './types/index';
 import { GetUserCSVTemplateRequest } from './types/index';
 import { GetUserCSVTemplateResponse } from './types/index';
+import { GetUserCredentialRequest } from './types/index';
+import { GetUserCredentialResponse } from './types/index';
+import { GetUserGroupsCsvTemplateRequest } from './types/index';
+import { GetUserGroupsCsvTemplateResponse } from './types/index';
 import { GetUserPoolClientRequest } from './types/index';
 import { GetUserPoolClientResponse } from './types/index';
+import { GetUserPoolDomainRequest } from './types/index';
+import { GetUserPoolDomainResponse } from './types/index';
+import { GetUserPoolIamCredentialsServiceConfigRequest } from './types/index';
+import { GetUserPoolIamCredentialsServiceConfigResponse } from './types/index';
 import { GetUserPoolMausRequest } from './types/index';
 import { GetUserPoolMausResponse } from './types/index';
 import { GetUserPoolRequest } from './types/index';
@@ -176,12 +352,38 @@ import { GetWorkloadPoolRequest } from './types/index';
 import { GetWorkloadPoolResponse } from './types/index';
 import { GrantPermissionRequest } from './types/index';
 import { GrantPermissionResponse } from './types/index';
+import { LinkIdentityProviderToUserRequest } from './types/index';
+import { LinkIdentityProviderToUserResponse } from './types/index';
+import { ListActionsRequest } from './types/index';
+import { ListActionsResponse } from './types/index';
+import { ListAllIdentityProvidersRequest } from './types/index';
+import { ListAllIdentityProvidersResponse } from './types/index';
 import { ListApiKeyCredentialProvidersRequest } from './types/index';
 import { ListApiKeyCredentialProvidersResponse } from './types/index';
+import { ListCommitAppVisibleUsersRequest } from './types/index';
+import { ListCommitAppVisibleUsersResponse } from './types/index';
+import { ListCredentialProviderBindingsRequest } from './types/index';
+import { ListCredentialProviderBindingsResponse } from './types/index';
 import { ListCredentialProvidersRequest } from './types/index';
 import { ListCredentialProvidersResponse } from './types/index';
+import { ListDepartmentMembersRequest } from './types/index';
+import { ListDepartmentMembersResponse } from './types/index';
+import { ListDepartmentSyncJobsRequest } from './types/index';
+import { ListDepartmentSyncJobsResponse } from './types/index';
+import { ListDepartmentsForUserRequest } from './types/index';
+import { ListDepartmentsForUserResponse } from './types/index';
+import { ListDepartmentsRequest } from './types/index';
+import { ListDepartmentsResponse } from './types/index';
 import { ListFaasServicesRequest } from './types/index';
 import { ListFaasServicesResponse } from './types/index';
+import { ListGroupsForUserRequest } from './types/index';
+import { ListGroupsForUserResponse } from './types/index';
+import { ListGroupsForUsersRequest } from './types/index';
+import { ListGroupsForUsersResponse } from './types/index';
+import { ListGroupsRequest } from './types/index';
+import { ListGroupsResponse } from './types/index';
+import { ListIdentityProviderLDAPADAgentRequest } from './types/index';
+import { ListIdentityProviderLDAPADAgentResponse } from './types/index';
 import { ListIdentityProvidersOAuthRequest } from './types/index';
 import { ListIdentityProvidersOAuthResponse } from './types/index';
 import { ListIdentityProvidersOIDCRequest } from './types/index';
@@ -190,124 +392,273 @@ import { ListIdentityProvidersRequest } from './types/index';
 import { ListIdentityProvidersResponse } from './types/index';
 import { ListIdentityProvidersSAMLRequest } from './types/index';
 import { ListIdentityProvidersSAMLResponse } from './types/index';
+import { ListIdentityProvidersTokenExchangeRequest } from './types/index';
+import { ListIdentityProvidersTokenExchangeResponse } from './types/index';
+import { ListIdentityProvidersWeComRequest } from './types/index';
+import { ListIdentityProvidersWeComResponse } from './types/index';
 import { ListInboundAuthConfigsRequest } from './types/index';
 import { ListInboundAuthConfigsResponse } from './types/index';
+import { ListMergeUserSyncResultUsersRequest } from './types/index';
+import { ListMergeUserSyncResultUsersResponse } from './types/index';
 import { ListNamespacesRequest } from './types/index';
 import { ListNamespacesResponse } from './types/index';
 import { ListOauth2CredentialProvidersRequest } from './types/index';
 import { ListOauth2CredentialProvidersResponse } from './types/index';
+import { ListOutboundEgressIPsRequest } from './types/index';
+import { ListOutboundEgressIPsResponse } from './types/index';
+import { ListPermissionPointsRequest } from './types/index';
+import { ListPermissionPointsResponse } from './types/index';
 import { ListPoliciesRequest } from './types/index';
 import { ListPoliciesResponse } from './types/index';
+import { ListResourcesRequest } from './types/index';
+import { ListResourcesResponse } from './types/index';
+import { ListRetrieveUserSyncUsersRequest } from './types/index';
+import { ListRetrieveUserSyncUsersResponse } from './types/index';
+import { ListRoleCredentialProvidersRequest } from './types/index';
+import { ListRoleCredentialProvidersResponse } from './types/index';
 import { ListRoutesRequest } from './types/index';
 import { ListRoutesResponse } from './types/index';
+import { ListSCIMTokensRequest } from './types/index';
+import { ListSCIMTokensResponse } from './types/index';
 import { ListServicesRequest } from './types/index';
 import { ListServicesResponse } from './types/index';
 import { ListTagsForResourcesRequest } from './types/index';
 import { ListTagsForResourcesResponse } from './types/index';
+import { ListTasksRequest } from './types/index';
+import { ListTasksResponse } from './types/index';
+import { ListTrustAnchorsRequest } from './types/index';
+import { ListTrustAnchorsResponse } from './types/index';
 import { ListUserPoolClientsRequest } from './types/index';
 import { ListUserPoolClientsResponse } from './types/index';
+import { ListUserPoolDomainOperationsRequest } from './types/index';
+import { ListUserPoolDomainOperationsResponse } from './types/index';
+import { ListUserPoolWellKnownEndpointsRequest } from './types/index';
+import { ListUserPoolWellKnownEndpointsResponse } from './types/index';
 import { ListUserPoolsRequest } from './types/index';
 import { ListUserPoolsResponse } from './types/index';
+import { ListUsersInDepartmentRequest } from './types/index';
+import { ListUsersInDepartmentResponse } from './types/index';
+import { ListUsersInGroupRequest } from './types/index';
+import { ListUsersInGroupResponse } from './types/index';
 import { ListUsersRequest } from './types/index';
 import { ListUsersResponse } from './types/index';
 import { ListWorkloadIdentitiesRequest } from './types/index';
 import { ListWorkloadIdentitiesResponse } from './types/index';
 import { ListWorkloadPoolsRequest } from './types/index';
 import { ListWorkloadPoolsResponse } from './types/index';
+import { ModifyOutboundEgressIPRequest } from './types/index';
+import { ModifyOutboundEgressIPResponse } from './types/index';
 import { Oauth2CallbackRequest } from './types/index';
 import { Oauth2CallbackResponse } from './types/index';
+import { PrepareIdentityProviderSSODebugRequest } from './types/index';
+import { PrepareIdentityProviderSSODebugResponse } from './types/index';
 import { PublishRouteRequest } from './types/index';
 import { PublishRouteResponse } from './types/index';
 import { PublishServiceRequest } from './types/index';
 import { PublishServiceResponse } from './types/index';
 import { RegisterServiceRequest } from './types/index';
 import { RegisterServiceResponse } from './types/index';
+import { RemoveUsersFromDepartmentRequest } from './types/index';
+import { RemoveUsersFromDepartmentResponse } from './types/index';
+import { RemoveUsersFromGroupRequest } from './types/index';
+import { RemoveUsersFromGroupResponse } from './types/index';
+import { RemoveWorkloadMetaDataRequest } from './types/index';
+import { RemoveWorkloadMetaDataResponse } from './types/index';
 import { TagResourcesRequest } from './types/index';
 import { TagResourcesResponse } from './types/index';
+import { UnBindCredentialProviderRequest } from './types/index';
+import { UnBindCredentialProviderResponse } from './types/index';
+import { UnBindWorkloadPoolTrustAnchorRequest } from './types/index';
+import { UnBindWorkloadPoolTrustAnchorResponse } from './types/index';
 import { UntagResourcesRequest } from './types/index';
 import { UntagResourcesResponse } from './types/index';
+import { UpdateActionRequest } from './types/index';
+import { UpdateActionResponse } from './types/index';
 import { UpdateApiKeyCredentialProviderRequest } from './types/index';
 import { UpdateApiKeyCredentialProviderResponse } from './types/index';
+import { UpdateDepartmentMemberRequest } from './types/index';
+import { UpdateDepartmentMemberResponse } from './types/index';
+import { UpdateDepartmentRequest } from './types/index';
+import { UpdateDepartmentResponse } from './types/index';
 import { UpdateFaasServiceRequest } from './types/index';
 import { UpdateFaasServiceResponse } from './types/index';
+import { UpdateGroupRequest } from './types/index';
+import { UpdateGroupResponse } from './types/index';
+import { UpdateIamCredentialsServiceConfigRequest } from './types/index';
+import { UpdateIamCredentialsServiceConfigResponse } from './types/index';
+import { UpdateIamRoleAttachmentRequest } from './types/index';
+import { UpdateIamRoleAttachmentResponse } from './types/index';
 import { UpdateIdentityProviderOAuthRequest } from './types/index';
 import { UpdateIdentityProviderOAuthResponse } from './types/index';
 import { UpdateIdentityProviderOIDCRequest } from './types/index';
 import { UpdateIdentityProviderOIDCResponse } from './types/index';
 import { UpdateIdentityProviderSAMLRequest } from './types/index';
 import { UpdateIdentityProviderSAMLResponse } from './types/index';
+import { UpdateIdentityProviderTokenExchangeRequest } from './types/index';
+import { UpdateIdentityProviderTokenExchangeResponse } from './types/index';
+import { UpdateIdentityProviderWeComRequest } from './types/index';
+import { UpdateIdentityProviderWeComResponse } from './types/index';
 import { UpdateInboundAuthConfigRequest } from './types/index';
 import { UpdateInboundAuthConfigResponse } from './types/index';
 import { UpdateNamespaceRequest } from './types/index';
 import { UpdateNamespaceResponse } from './types/index';
 import { UpdateOauth2CredentialProviderRequest } from './types/index';
 import { UpdateOauth2CredentialProviderResponse } from './types/index';
+import { UpdatePermissionPointRequest } from './types/index';
+import { UpdatePermissionPointResponse } from './types/index';
+import { UpdatePolicyRequest } from './types/index';
+import { UpdatePolicyResponse } from './types/index';
+import { UpdateResourceRequest } from './types/index';
+import { UpdateResourceResponse } from './types/index';
+import { UpdateRetrieveUserSyncUserRequest } from './types/index';
+import { UpdateRetrieveUserSyncUserResponse } from './types/index';
+import { UpdateRoleCredentialProviderRequest } from './types/index';
+import { UpdateRoleCredentialProviderResponse } from './types/index';
 import { UpdateRouteRequest } from './types/index';
 import { UpdateRouteResponse } from './types/index';
 import { UpdateServiceRequest } from './types/index';
 import { UpdateServiceResponse } from './types/index';
 import { UpdateSmsServiceRequest } from './types/index';
 import { UpdateSmsServiceResponse } from './types/index';
+import { UpdateTrustAnchorRequest } from './types/index';
+import { UpdateTrustAnchorResponse } from './types/index';
+import { UpdateUserCredentialRequest } from './types/index';
+import { UpdateUserCredentialResponse } from './types/index';
 import { UpdateUserPoolClientRequest } from './types/index';
 import { UpdateUserPoolClientResponse } from './types/index';
+import { UpdateUserPoolCustomAttributeRequest } from './types/index';
+import { UpdateUserPoolCustomAttributeResponse } from './types/index';
+import { UpdateUserPoolDomainRequest } from './types/index';
+import { UpdateUserPoolDomainResponse } from './types/index';
 import { UpdateUserPoolRequest } from './types/index';
 import { UpdateUserPoolResponse } from './types/index';
 import { UpdateUserRequest } from './types/index';
 import { UpdateUserResponse } from './types/index';
+import { UpdateUsersRequest } from './types/index';
+import { UpdateUsersResponse } from './types/index';
 import { UpdateWorkloadIdentityRequest } from './types/index';
 import { UpdateWorkloadIdentityResponse } from './types/index';
 import { UpdateWorkloadPoolRequest } from './types/index';
 import { UpdateWorkloadPoolResponse } from './types/index';
+import { UploadDepartmentSyncDepartmentsRequest } from './types/index';
+import { UploadDepartmentSyncDepartmentsResponse } from './types/index';
+import { UploadDepartmentSyncMembersRequest } from './types/index';
+import { UploadDepartmentSyncMembersResponse } from './types/index';
+import { UpsertEmailServiceRequest } from './types/index';
+import { UpsertEmailServiceResponse } from './types/index';
+import { UpsertExternalProviderRequest } from './types/index';
+import { UpsertExternalProviderResponse } from './types/index';
+import { ValidateDepartmentSyncSessionRequest } from './types/index';
+import { ValidateDepartmentSyncSessionResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type AddUsersToDepartmentCommandOutput = CommandOutput<AddUsersToDepartmentResponse>;
+export type AddUsersToGroupCommandOutput = CommandOutput<AddUsersToGroupResponse>;
+export type AddWorkloadMetaDataCommandOutput = CommandOutput<AddWorkloadMetaDataResponse>;
 export type AttachInboundAuthConfigCommandOutput = CommandOutput<AttachInboundAuthConfigResponse>;
+export type BatchConvertFederatedUsersToNativeUsersCommandOutput = CommandOutput<BatchConvertFederatedUsersToNativeUsersResponse>;
 export type BatchCreateRoutesCommandOutput = CommandOutput<BatchCreateRoutesResponse>;
 export type BatchGetApiKeyCredentialProvidersCommandOutput = CommandOutput<BatchGetApiKeyCredentialProvidersResponse>;
+export type BatchGetDepartmentsCommandOutput = CommandOutput<BatchGetDepartmentsResponse>;
 export type BatchGetInboundAuthConfigCommandOutput = CommandOutput<BatchGetInboundAuthConfigResponse>;
 export type BatchGetOauth2CredentialProvidersCommandOutput = CommandOutput<BatchGetOauth2CredentialProvidersResponse>;
+export type BatchGetObjectPermissionsCommandOutput = CommandOutput<BatchGetObjectPermissionsResponse>;
+export type BatchGetSubjectPermissionsCommandOutput = CommandOutput<BatchGetSubjectPermissionsResponse>;
+export type BatchListDepartmentsForUsersCommandOutput = CommandOutput<BatchListDepartmentsForUsersResponse>;
+export type BatchSyncDepartmentMembersCommandOutput = CommandOutput<BatchSyncDepartmentMembersResponse>;
+export type BatchUpsertDepartmentsCommandOutput = CommandOutput<BatchUpsertDepartmentsResponse>;
+export type BindCredentialProviderCommandOutput = CommandOutput<BindCredentialProviderResponse>;
+export type BindWorkloadPoolTrustAnchorCommandOutput = CommandOutput<BindWorkloadPoolTrustAnchorResponse>;
+export type CancelDepartmentSyncSessionCommandOutput = CommandOutput<CancelDepartmentSyncSessionResponse>;
+export type CancelTaskCommandOutput = CommandOutput<CancelTaskResponse>;
+export type CancelTaskUserSyncCommandOutput = CommandOutput<CancelTaskUserSyncResponse>;
+export type ChangeUsersDepartmentCommandOutput = CommandOutput<ChangeUsersDepartmentResponse>;
+export type ChangeUsersGroupCommandOutput = CommandOutput<ChangeUsersGroupResponse>;
 export type CheckApiKeyCommandOutput = CommandOutput<CheckApiKeyResponse>;
 export type CheckPermissionCommandOutput = CommandOutput<CheckPermissionResponse>;
 export type CheckServiceNameCommandOutput = CommandOutput<CheckServiceNameResponse>;
+export type CommitDepartmentSyncSessionCommandOutput = CommandOutput<CommitDepartmentSyncSessionResponse>;
 export type CompleteResourceTokenAuthCommandOutput = CommandOutput<CompleteResourceTokenAuthResponse>;
+export type CreateActionCommandOutput = CommandOutput<CreateActionResponse>;
 export type CreateApiKeyCommandOutput = CommandOutput<CreateApiKeyResponse>;
 export type CreateApiKeyCredentialProviderCommandOutput = CommandOutput<CreateApiKeyCredentialProviderResponse>;
+export type CreateDepartmentCommandOutput = CommandOutput<CreateDepartmentResponse>;
+export type CreateDepartmentSyncSessionCommandOutput = CommandOutput<CreateDepartmentSyncSessionResponse>;
 export type CreateFaasServiceCommandOutput = CommandOutput<CreateFaasServiceResponse>;
+export type CreateGroupCommandOutput = CommandOutput<CreateGroupResponse>;
+export type CreateIamOidcProviderCommandOutput = CommandOutput<CreateIamOidcProviderResponse>;
+export type CreateIamRoleAttachmentCommandOutput = CommandOutput<CreateIamRoleAttachmentResponse>;
+export type CreateIdentityProviderLDAPADAgentCommandOutput = CommandOutput<CreateIdentityProviderLDAPADAgentResponse>;
 export type CreateIdentityProviderOAuthCommandOutput = CommandOutput<CreateIdentityProviderOAuthResponse>;
 export type CreateIdentityProviderOIDCCommandOutput = CommandOutput<CreateIdentityProviderOIDCResponse>;
 export type CreateIdentityProviderSAMLCommandOutput = CommandOutput<CreateIdentityProviderSAMLResponse>;
+export type CreateIdentityProviderTokenExchangeCommandOutput = CommandOutput<CreateIdentityProviderTokenExchangeResponse>;
+export type CreateIdentityProviderWeComCommandOutput = CommandOutput<CreateIdentityProviderWeComResponse>;
 export type CreateInboundAuthConfigCommandOutput = CommandOutput<CreateInboundAuthConfigResponse>;
 export type CreateNamespaceCommandOutput = CommandOutput<CreateNamespaceResponse>;
 export type CreateOauth2CredentialProviderCommandOutput = CommandOutput<CreateOauth2CredentialProviderResponse>;
 export type CreateOauth2CredentialProviderDcrCommandOutput = CommandOutput<CreateOauth2CredentialProviderDcrResponse>;
+export type CreateOutboundEgressIPCommandOutput = CommandOutput<CreateOutboundEgressIPResponse>;
+export type CreatePermissionPointCommandOutput = CommandOutput<CreatePermissionPointResponse>;
 export type CreatePolicyCommandOutput = CommandOutput<CreatePolicyResponse>;
+export type CreateResourceCommandOutput = CommandOutput<CreateResourceResponse>;
+export type CreateRoleCredentialProviderCommandOutput = CommandOutput<CreateRoleCredentialProviderResponse>;
 export type CreateRouteCommandOutput = CommandOutput<CreateRouteResponse>;
 export type CreateRouteFromTemplateCommandOutput = CommandOutput<CreateRouteFromTemplateResponse>;
+export type CreateSCIMTokenCommandOutput = CommandOutput<CreateSCIMTokenResponse>;
 export type CreateServiceCommandOutput = CommandOutput<CreateServiceResponse>;
 export type CreateServiceFromTemplateCommandOutput = CommandOutput<CreateServiceFromTemplateResponse>;
+export type CreateTaskCommitAppVisibleUsersCommandOutput = CommandOutput<CreateTaskCommitAppVisibleUsersResponse>;
+export type CreateTaskMergeUserSyncCommandOutput = CommandOutput<CreateTaskMergeUserSyncResponse>;
+export type CreateTaskRetrieveAppVisibleUsersCommandOutput = CommandOutput<CreateTaskRetrieveAppVisibleUsersResponse>;
+export type CreateTaskRetrieveUserSyncCommandOutput = CommandOutput<CreateTaskRetrieveUserSyncResponse>;
+export type CreateTaskRetrieveUserSyncAttachmentCommandOutput = CommandOutput<CreateTaskRetrieveUserSyncAttachmentResponse>;
+export type CreateTrustAnchorCommandOutput = CommandOutput<CreateTrustAnchorResponse>;
 export type CreateUserCommandOutput = CommandOutput<CreateUserResponse>;
+export type CreateUserCredentialCommandOutput = CommandOutput<CreateUserCredentialResponse>;
+export type CreateUserGroupsCsvCommandOutput = CommandOutput<CreateUserGroupsCsvResponse>;
 export type CreateUserPoolCommandOutput = CommandOutput<CreateUserPoolResponse>;
 export type CreateUserPoolClientCommandOutput = CommandOutput<CreateUserPoolClientResponse>;
+export type CreateUserPoolCustomAttributeCommandOutput = CommandOutput<CreateUserPoolCustomAttributeResponse>;
+export type CreateUserPoolDomainCommandOutput = CommandOutput<CreateUserPoolDomainResponse>;
 export type CreateUsersCommandOutput = CommandOutput<CreateUsersResponse>;
 export type CreateUsersCSVCommandOutput = CommandOutput<CreateUsersCSVResponse>;
 export type CreateWorkloadIdentityCommandOutput = CommandOutput<CreateWorkloadIdentityResponse>;
 export type CreateWorkloadPoolCommandOutput = CommandOutput<CreateWorkloadPoolResponse>;
+export type DeleteActionCommandOutput = CommandOutput<DeleteActionResponse>;
 export type DeleteApiKeyCommandOutput = CommandOutput<DeleteApiKeyResponse>;
 export type DeleteApiKeyCredentialProviderCommandOutput = CommandOutput<DeleteApiKeyCredentialProviderResponse>;
+export type DeleteDepartmentCommandOutput = CommandOutput<DeleteDepartmentResponse>;
+export type DeleteEmailServiceCommandOutput = CommandOutput<DeleteEmailServiceResponse>;
+export type DeleteExternalProviderCommandOutput = CommandOutput<DeleteExternalProviderResponse>;
 export type DeleteFaasServiceCommandOutput = CommandOutput<DeleteFaasServiceResponse>;
+export type DeleteGroupCommandOutput = CommandOutput<DeleteGroupResponse>;
 export type DeleteIdentityProviderCommandOutput = CommandOutput<DeleteIdentityProviderResponse>;
+export type DeleteIdentityProviderLDAPADAgentCommandOutput = CommandOutput<DeleteIdentityProviderLDAPADAgentResponse>;
 export type DeleteIdentityProviderOAuthCommandOutput = CommandOutput<DeleteIdentityProviderOAuthResponse>;
 export type DeleteIdentityProviderOIDCCommandOutput = CommandOutput<DeleteIdentityProviderOIDCResponse>;
 export type DeleteIdentityProviderSAMLCommandOutput = CommandOutput<DeleteIdentityProviderSAMLResponse>;
+export type DeleteIdentityProviderTokenExchangeCommandOutput = CommandOutput<DeleteIdentityProviderTokenExchangeResponse>;
+export type DeleteIdentityProviderWeComCommandOutput = CommandOutput<DeleteIdentityProviderWeComResponse>;
 export type DeleteInboundAuthConfigCommandOutput = CommandOutput<DeleteInboundAuthConfigResponse>;
 export type DeleteNamespaceCommandOutput = CommandOutput<DeleteNamespaceResponse>;
 export type DeleteOauth2CredentialProviderCommandOutput = CommandOutput<DeleteOauth2CredentialProviderResponse>;
+export type DeleteOutboundEgressIPCommandOutput = CommandOutput<DeleteOutboundEgressIPResponse>;
+export type DeletePermissionPointCommandOutput = CommandOutput<DeletePermissionPointResponse>;
 export type DeletePolicyCommandOutput = CommandOutput<DeletePolicyResponse>;
+export type DeleteResourceCommandOutput = CommandOutput<DeleteResourceResponse>;
+export type DeleteRoleCredentialProviderCommandOutput = CommandOutput<DeleteRoleCredentialProviderResponse>;
 export type DeleteRouteCommandOutput = CommandOutput<DeleteRouteResponse>;
+export type DeleteSCIMTokenCommandOutput = CommandOutput<DeleteSCIMTokenResponse>;
 export type DeleteServiceCommandOutput = CommandOutput<DeleteServiceResponse>;
+export type DeleteTrustAnchorCommandOutput = CommandOutput<DeleteTrustAnchorResponse>;
+export type DeleteUserCredentialCommandOutput = CommandOutput<DeleteUserCredentialResponse>;
 export type DeleteUserPoolCommandOutput = CommandOutput<DeleteUserPoolResponse>;
 export type DeleteUserPoolClientCommandOutput = CommandOutput<DeleteUserPoolClientResponse>;
+export type DeleteUserPoolCustomAttributeCommandOutput = CommandOutput<DeleteUserPoolCustomAttributeResponse>;
+export type DeleteUserPoolDomainCommandOutput = CommandOutput<DeleteUserPoolDomainResponse>;
 export type DeleteUsersCommandOutput = CommandOutput<DeleteUsersResponse>;
 export type DeleteWorkloadIdentityCommandOutput = CommandOutput<DeleteWorkloadIdentityResponse>;
 export type DeleteWorkloadPoolCommandOutput = CommandOutput<DeleteWorkloadPoolResponse>;
@@ -315,27 +666,56 @@ export type DescribeRouteTemplateOptionsCommandOutput = CommandOutput<DescribeRo
 export type DescribeTagOptionsCommandOutput = CommandOutput<DescribeTagOptionsResponse>;
 export type DescribeTemplateOptionsCommandOutput = CommandOutput<DescribeTemplateOptionsResponse>;
 export type DetachInboundAuthConfigCommandOutput = CommandOutput<DetachInboundAuthConfigResponse>;
+export type DisableIdentityProviderForUserCommandOutput = CommandOutput<DisableIdentityProviderForUserResponse>;
 export type DisableRouteCommandOutput = CommandOutput<DisableRouteResponse>;
+export type GetActionCommandOutput = CommandOutput<GetActionResponse>;
 export type GetApiKeyCredentialProviderCommandOutput = CommandOutput<GetApiKeyCredentialProviderResponse>;
+export type GetDepartmentCommandOutput = CommandOutput<GetDepartmentResponse>;
+export type GetDepartmentPathCommandOutput = CommandOutput<GetDepartmentPathResponse>;
+export type GetDepartmentSyncJobCommandOutput = CommandOutput<GetDepartmentSyncJobResponse>;
+export type GetDepartmentSyncSessionCommandOutput = CommandOutput<GetDepartmentSyncSessionResponse>;
+export type GetDepartmentTreeCommandOutput = CommandOutput<GetDepartmentTreeResponse>;
 export type GetDocumentStatusCommandOutput = CommandOutput<GetDocumentStatusResponse>;
+export type GetEmailServiceCommandOutput = CommandOutput<GetEmailServiceResponse>;
+export type GetExternalProviderCommandOutput = CommandOutput<GetExternalProviderResponse>;
 export type GetFaasServiceCommandOutput = CommandOutput<GetFaasServiceResponse>;
+export type GetGroupCommandOutput = CommandOutput<GetGroupResponse>;
+export type GetIamRoleAttachmentCommandOutput = CommandOutput<GetIamRoleAttachmentResponse>;
+export type GetIdentityProviderFeishuScopesCommandOutput = CommandOutput<GetIdentityProviderFeishuScopesResponse>;
+export type GetIdentityProviderLDAPADAgentCommandOutput = CommandOutput<GetIdentityProviderLDAPADAgentResponse>;
 export type GetIdentityProviderOAuthCommandOutput = CommandOutput<GetIdentityProviderOAuthResponse>;
 export type GetIdentityProviderOIDCCommandOutput = CommandOutput<GetIdentityProviderOIDCResponse>;
 export type GetIdentityProviderSAMLCommandOutput = CommandOutput<GetIdentityProviderSAMLResponse>;
+export type GetIdentityProviderTokenExchangeCommandOutput = CommandOutput<GetIdentityProviderTokenExchangeResponse>;
+export type GetIdentityProviderWeComCommandOutput = CommandOutput<GetIdentityProviderWeComResponse>;
 export type GetInboundAuthConfigCommandOutput = CommandOutput<GetInboundAuthConfigResponse>;
 export type GetNamespaceCommandOutput = CommandOutput<GetNamespaceResponse>;
 export type GetOauth2CredentialProviderCommandOutput = CommandOutput<GetOauth2CredentialProviderResponse>;
+export type GetOutboundEgressIPCommandOutput = CommandOutput<GetOutboundEgressIPResponse>;
+export type GetPermissionPointCommandOutput = CommandOutput<GetPermissionPointResponse>;
 export type GetPolicyCommandOutput = CommandOutput<GetPolicyResponse>;
+export type GetResourceCommandOutput = CommandOutput<GetResourceResponse>;
 export type GetResourceApiKeyCommandOutput = CommandOutput<GetResourceApiKeyResponse>;
 export type GetResourceOauth2TokenCommandOutput = CommandOutput<GetResourceOauth2TokenResponse>;
+export type GetRoleCredentialProviderCommandOutput = CommandOutput<GetRoleCredentialProviderResponse>;
+export type GetRoleCredentialsCommandOutput = CommandOutput<GetRoleCredentialsResponse>;
 export type GetRouteCommandOutput = CommandOutput<GetRouteResponse>;
+export type GetSCIMProvisioningDefaultsCommandOutput = CommandOutput<GetSCIMProvisioningDefaultsResponse>;
 export type GetServiceCommandOutput = CommandOutput<GetServiceResponse>;
 export type GetSmsServiceCommandOutput = CommandOutput<GetSmsServiceResponse>;
+export type GetTaskCommandOutput = CommandOutput<GetTaskResponse>;
+export type GetTaskStateRetrieveAppVisibleUsersCommandOutput = CommandOutput<GetTaskStateRetrieveAppVisibleUsersResponse>;
+export type GetTaskStateUserSyncCommandOutput = CommandOutput<GetTaskStateUserSyncResponse>;
 export type GetTenantServiceStatusCommandOutput = CommandOutput<GetTenantServiceStatusResponse>;
+export type GetTrustAnchorCommandOutput = CommandOutput<GetTrustAnchorResponse>;
 export type GetUserCommandOutput = CommandOutput<GetUserResponse>;
 export type GetUserCSVTemplateCommandOutput = CommandOutput<GetUserCSVTemplateResponse>;
+export type GetUserCredentialCommandOutput = CommandOutput<GetUserCredentialResponse>;
+export type GetUserGroupsCsvTemplateCommandOutput = CommandOutput<GetUserGroupsCsvTemplateResponse>;
 export type GetUserPoolCommandOutput = CommandOutput<GetUserPoolResponse>;
 export type GetUserPoolClientCommandOutput = CommandOutput<GetUserPoolClientResponse>;
+export type GetUserPoolDomainCommandOutput = CommandOutput<GetUserPoolDomainResponse>;
+export type GetUserPoolIamCredentialsServiceConfigCommandOutput = CommandOutput<GetUserPoolIamCredentialsServiceConfigResponse>;
 export type GetUserPoolMausCommandOutput = CommandOutput<GetUserPoolMausResponse>;
 export type GetWorkloadAccessTokenCommandOutput = CommandOutput<GetWorkloadAccessTokenResponse>;
 export type GetWorkloadAccessTokenForJWTCommandOutput = CommandOutput<GetWorkloadAccessTokenForJWTResponse>;
@@ -343,47 +723,105 @@ export type GetWorkloadAccessTokenForUserIdCommandOutput = CommandOutput<GetWork
 export type GetWorkloadIdentityCommandOutput = CommandOutput<GetWorkloadIdentityResponse>;
 export type GetWorkloadPoolCommandOutput = CommandOutput<GetWorkloadPoolResponse>;
 export type GrantPermissionCommandOutput = CommandOutput<GrantPermissionResponse>;
+export type LinkIdentityProviderToUserCommandOutput = CommandOutput<LinkIdentityProviderToUserResponse>;
+export type ListActionsCommandOutput = CommandOutput<ListActionsResponse>;
+export type ListAllIdentityProvidersCommandOutput = CommandOutput<ListAllIdentityProvidersResponse>;
 export type ListApiKeyCredentialProvidersCommandOutput = CommandOutput<ListApiKeyCredentialProvidersResponse>;
+export type ListCommitAppVisibleUsersCommandOutput = CommandOutput<ListCommitAppVisibleUsersResponse>;
+export type ListCredentialProviderBindingsCommandOutput = CommandOutput<ListCredentialProviderBindingsResponse>;
 export type ListCredentialProvidersCommandOutput = CommandOutput<ListCredentialProvidersResponse>;
+export type ListDepartmentMembersCommandOutput = CommandOutput<ListDepartmentMembersResponse>;
+export type ListDepartmentSyncJobsCommandOutput = CommandOutput<ListDepartmentSyncJobsResponse>;
+export type ListDepartmentsCommandOutput = CommandOutput<ListDepartmentsResponse>;
+export type ListDepartmentsForUserCommandOutput = CommandOutput<ListDepartmentsForUserResponse>;
 export type ListFaasServicesCommandOutput = CommandOutput<ListFaasServicesResponse>;
+export type ListGroupsCommandOutput = CommandOutput<ListGroupsResponse>;
+export type ListGroupsForUserCommandOutput = CommandOutput<ListGroupsForUserResponse>;
+export type ListGroupsForUsersCommandOutput = CommandOutput<ListGroupsForUsersResponse>;
+export type ListIdentityProviderLDAPADAgentCommandOutput = CommandOutput<ListIdentityProviderLDAPADAgentResponse>;
 export type ListIdentityProvidersCommandOutput = CommandOutput<ListIdentityProvidersResponse>;
 export type ListIdentityProvidersOAuthCommandOutput = CommandOutput<ListIdentityProvidersOAuthResponse>;
 export type ListIdentityProvidersOIDCCommandOutput = CommandOutput<ListIdentityProvidersOIDCResponse>;
 export type ListIdentityProvidersSAMLCommandOutput = CommandOutput<ListIdentityProvidersSAMLResponse>;
+export type ListIdentityProvidersTokenExchangeCommandOutput = CommandOutput<ListIdentityProvidersTokenExchangeResponse>;
+export type ListIdentityProvidersWeComCommandOutput = CommandOutput<ListIdentityProvidersWeComResponse>;
 export type ListInboundAuthConfigsCommandOutput = CommandOutput<ListInboundAuthConfigsResponse>;
+export type ListMergeUserSyncResultUsersCommandOutput = CommandOutput<ListMergeUserSyncResultUsersResponse>;
 export type ListNamespacesCommandOutput = CommandOutput<ListNamespacesResponse>;
 export type ListOauth2CredentialProvidersCommandOutput = CommandOutput<ListOauth2CredentialProvidersResponse>;
+export type ListOutboundEgressIPsCommandOutput = CommandOutput<ListOutboundEgressIPsResponse>;
+export type ListPermissionPointsCommandOutput = CommandOutput<ListPermissionPointsResponse>;
 export type ListPoliciesCommandOutput = CommandOutput<ListPoliciesResponse>;
+export type ListResourcesCommandOutput = CommandOutput<ListResourcesResponse>;
+export type ListRetrieveUserSyncUsersCommandOutput = CommandOutput<ListRetrieveUserSyncUsersResponse>;
+export type ListRoleCredentialProvidersCommandOutput = CommandOutput<ListRoleCredentialProvidersResponse>;
 export type ListRoutesCommandOutput = CommandOutput<ListRoutesResponse>;
+export type ListSCIMTokensCommandOutput = CommandOutput<ListSCIMTokensResponse>;
 export type ListServicesCommandOutput = CommandOutput<ListServicesResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
+export type ListTasksCommandOutput = CommandOutput<ListTasksResponse>;
+export type ListTrustAnchorsCommandOutput = CommandOutput<ListTrustAnchorsResponse>;
 export type ListUserPoolClientsCommandOutput = CommandOutput<ListUserPoolClientsResponse>;
+export type ListUserPoolDomainOperationsCommandOutput = CommandOutput<ListUserPoolDomainOperationsResponse>;
+export type ListUserPoolWellKnownEndpointsCommandOutput = CommandOutput<ListUserPoolWellKnownEndpointsResponse>;
 export type ListUserPoolsCommandOutput = CommandOutput<ListUserPoolsResponse>;
 export type ListUsersCommandOutput = CommandOutput<ListUsersResponse>;
+export type ListUsersInDepartmentCommandOutput = CommandOutput<ListUsersInDepartmentResponse>;
+export type ListUsersInGroupCommandOutput = CommandOutput<ListUsersInGroupResponse>;
 export type ListWorkloadIdentitiesCommandOutput = CommandOutput<ListWorkloadIdentitiesResponse>;
 export type ListWorkloadPoolsCommandOutput = CommandOutput<ListWorkloadPoolsResponse>;
+export type ModifyOutboundEgressIPCommandOutput = CommandOutput<ModifyOutboundEgressIPResponse>;
 export type Oauth2CallbackCommandOutput = CommandOutput<Oauth2CallbackResponse>;
+export type PrepareIdentityProviderSSODebugCommandOutput = CommandOutput<PrepareIdentityProviderSSODebugResponse>;
 export type PublishRouteCommandOutput = CommandOutput<PublishRouteResponse>;
 export type PublishServiceCommandOutput = CommandOutput<PublishServiceResponse>;
 export type RegisterServiceCommandOutput = CommandOutput<RegisterServiceResponse>;
+export type RemoveUsersFromDepartmentCommandOutput = CommandOutput<RemoveUsersFromDepartmentResponse>;
+export type RemoveUsersFromGroupCommandOutput = CommandOutput<RemoveUsersFromGroupResponse>;
+export type RemoveWorkloadMetaDataCommandOutput = CommandOutput<RemoveWorkloadMetaDataResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
+export type UnBindCredentialProviderCommandOutput = CommandOutput<UnBindCredentialProviderResponse>;
+export type UnBindWorkloadPoolTrustAnchorCommandOutput = CommandOutput<UnBindWorkloadPoolTrustAnchorResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
+export type UpdateActionCommandOutput = CommandOutput<UpdateActionResponse>;
 export type UpdateApiKeyCredentialProviderCommandOutput = CommandOutput<UpdateApiKeyCredentialProviderResponse>;
+export type UpdateDepartmentCommandOutput = CommandOutput<UpdateDepartmentResponse>;
+export type UpdateDepartmentMemberCommandOutput = CommandOutput<UpdateDepartmentMemberResponse>;
 export type UpdateFaasServiceCommandOutput = CommandOutput<UpdateFaasServiceResponse>;
+export type UpdateGroupCommandOutput = CommandOutput<UpdateGroupResponse>;
+export type UpdateIamCredentialsServiceConfigCommandOutput = CommandOutput<UpdateIamCredentialsServiceConfigResponse>;
+export type UpdateIamRoleAttachmentCommandOutput = CommandOutput<UpdateIamRoleAttachmentResponse>;
 export type UpdateIdentityProviderOAuthCommandOutput = CommandOutput<UpdateIdentityProviderOAuthResponse>;
 export type UpdateIdentityProviderOIDCCommandOutput = CommandOutput<UpdateIdentityProviderOIDCResponse>;
 export type UpdateIdentityProviderSAMLCommandOutput = CommandOutput<UpdateIdentityProviderSAMLResponse>;
+export type UpdateIdentityProviderTokenExchangeCommandOutput = CommandOutput<UpdateIdentityProviderTokenExchangeResponse>;
+export type UpdateIdentityProviderWeComCommandOutput = CommandOutput<UpdateIdentityProviderWeComResponse>;
 export type UpdateInboundAuthConfigCommandOutput = CommandOutput<UpdateInboundAuthConfigResponse>;
 export type UpdateNamespaceCommandOutput = CommandOutput<UpdateNamespaceResponse>;
 export type UpdateOauth2CredentialProviderCommandOutput = CommandOutput<UpdateOauth2CredentialProviderResponse>;
+export type UpdatePermissionPointCommandOutput = CommandOutput<UpdatePermissionPointResponse>;
+export type UpdatePolicyCommandOutput = CommandOutput<UpdatePolicyResponse>;
+export type UpdateResourceCommandOutput = CommandOutput<UpdateResourceResponse>;
+export type UpdateRetrieveUserSyncUserCommandOutput = CommandOutput<UpdateRetrieveUserSyncUserResponse>;
+export type UpdateRoleCredentialProviderCommandOutput = CommandOutput<UpdateRoleCredentialProviderResponse>;
 export type UpdateRouteCommandOutput = CommandOutput<UpdateRouteResponse>;
 export type UpdateServiceCommandOutput = CommandOutput<UpdateServiceResponse>;
 export type UpdateSmsServiceCommandOutput = CommandOutput<UpdateSmsServiceResponse>;
+export type UpdateTrustAnchorCommandOutput = CommandOutput<UpdateTrustAnchorResponse>;
 export type UpdateUserCommandOutput = CommandOutput<UpdateUserResponse>;
+export type UpdateUserCredentialCommandOutput = CommandOutput<UpdateUserCredentialResponse>;
 export type UpdateUserPoolCommandOutput = CommandOutput<UpdateUserPoolResponse>;
 export type UpdateUserPoolClientCommandOutput = CommandOutput<UpdateUserPoolClientResponse>;
+export type UpdateUserPoolCustomAttributeCommandOutput = CommandOutput<UpdateUserPoolCustomAttributeResponse>;
+export type UpdateUserPoolDomainCommandOutput = CommandOutput<UpdateUserPoolDomainResponse>;
+export type UpdateUsersCommandOutput = CommandOutput<UpdateUsersResponse>;
 export type UpdateWorkloadIdentityCommandOutput = CommandOutput<UpdateWorkloadIdentityResponse>;
 export type UpdateWorkloadPoolCommandOutput = CommandOutput<UpdateWorkloadPoolResponse>;
+export type UploadDepartmentSyncDepartmentsCommandOutput = CommandOutput<UploadDepartmentSyncDepartmentsResponse>;
+export type UploadDepartmentSyncMembersCommandOutput = CommandOutput<UploadDepartmentSyncMembersResponse>;
+export type UpsertEmailServiceCommandOutput = CommandOutput<UpsertEmailServiceResponse>;
+export type UpsertExternalProviderCommandOutput = CommandOutput<UpsertExternalProviderResponse>;
+export type ValidateDepartmentSyncSessionCommandOutput = CommandOutput<ValidateDepartmentSyncSessionResponse>;
 
 /**
  * IDClient Service Client
@@ -399,6 +837,51 @@ export class IDClient extends Client {
 }
 
 /**
+ * Command to AddUsersToDepartment
+ */
+export class AddUsersToDepartmentCommand extends Command<
+  AddUsersToDepartmentRequest,
+  AddUsersToDepartmentCommandOutput,
+  'AddUsersToDepartmentCommand'
+> {
+  static readonly metaPath = '/AddUsersToDepartment/2025-10-30/id/post/application_json/';
+
+  constructor(input: AddUsersToDepartmentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddUsersToDepartmentCommand.metaPath);
+  }
+}
+/**
+ * Command to AddUsersToGroup
+ */
+export class AddUsersToGroupCommand extends Command<
+  AddUsersToGroupRequest,
+  AddUsersToGroupCommandOutput,
+  'AddUsersToGroupCommand'
+> {
+  static readonly metaPath = '/AddUsersToGroup/2025-10-30/id/post/application_json/';
+
+  constructor(input: AddUsersToGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddUsersToGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to AddWorkloadMetaData
+ */
+export class AddWorkloadMetaDataCommand extends Command<
+  AddWorkloadMetaDataRequest,
+  AddWorkloadMetaDataCommandOutput,
+  'AddWorkloadMetaDataCommand'
+> {
+  static readonly metaPath = '/AddWorkloadMetaData/2025-10-30/id/post/application_json/';
+
+  constructor(input: AddWorkloadMetaDataRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddWorkloadMetaDataCommand.metaPath);
+  }
+}
+/**
  * Command to AttachInboundAuthConfig
  */
 export class AttachInboundAuthConfigCommand extends Command<
@@ -411,6 +894,21 @@ export class AttachInboundAuthConfigCommand extends Command<
   constructor(input: AttachInboundAuthConfigRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(AttachInboundAuthConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to BatchConvertFederatedUsersToNativeUsers
+ */
+export class BatchConvertFederatedUsersToNativeUsersCommand extends Command<
+  BatchConvertFederatedUsersToNativeUsersRequest,
+  BatchConvertFederatedUsersToNativeUsersCommandOutput,
+  'BatchConvertFederatedUsersToNativeUsersCommand'
+> {
+  static readonly metaPath = '/BatchConvertFederatedUsersToNativeUsers/2025-10-30/id/post/application_json/';
+
+  constructor(input: BatchConvertFederatedUsersToNativeUsersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchConvertFederatedUsersToNativeUsersCommand.metaPath);
   }
 }
 /**
@@ -444,6 +942,21 @@ export class BatchGetApiKeyCredentialProvidersCommand extends Command<
   }
 }
 /**
+ * Command to BatchGetDepartments
+ */
+export class BatchGetDepartmentsCommand extends Command<
+  BatchGetDepartmentsRequest,
+  BatchGetDepartmentsCommandOutput,
+  'BatchGetDepartmentsCommand'
+> {
+  static readonly metaPath = '/BatchGetDepartments/2025-10-30/id/post/application_json/';
+
+  constructor(input: BatchGetDepartmentsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchGetDepartmentsCommand.metaPath);
+  }
+}
+/**
  * Command to BatchGetInboundAuthConfig
  */
 export class BatchGetInboundAuthConfigCommand extends Command<
@@ -471,6 +984,186 @@ export class BatchGetOauth2CredentialProvidersCommand extends Command<
   constructor(input: BatchGetOauth2CredentialProvidersRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(BatchGetOauth2CredentialProvidersCommand.metaPath);
+  }
+}
+/**
+ * Command to BatchGetObjectPermissions
+ */
+export class BatchGetObjectPermissionsCommand extends Command<
+  BatchGetObjectPermissionsRequest,
+  BatchGetObjectPermissionsCommandOutput,
+  'BatchGetObjectPermissionsCommand'
+> {
+  static readonly metaPath = '/BatchGetObjectPermissions/2025-10-30/id/post/application_json/';
+
+  constructor(input: BatchGetObjectPermissionsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchGetObjectPermissionsCommand.metaPath);
+  }
+}
+/**
+ * Command to BatchGetSubjectPermissions
+ */
+export class BatchGetSubjectPermissionsCommand extends Command<
+  BatchGetSubjectPermissionsRequest,
+  BatchGetSubjectPermissionsCommandOutput,
+  'BatchGetSubjectPermissionsCommand'
+> {
+  static readonly metaPath = '/BatchGetSubjectPermissions/2025-10-30/id/post/application_json/';
+
+  constructor(input: BatchGetSubjectPermissionsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchGetSubjectPermissionsCommand.metaPath);
+  }
+}
+/**
+ * Command to BatchListDepartmentsForUsers
+ */
+export class BatchListDepartmentsForUsersCommand extends Command<
+  BatchListDepartmentsForUsersRequest,
+  BatchListDepartmentsForUsersCommandOutput,
+  'BatchListDepartmentsForUsersCommand'
+> {
+  static readonly metaPath = '/BatchListDepartmentsForUsers/2025-10-30/id/post/application_json/';
+
+  constructor(input: BatchListDepartmentsForUsersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchListDepartmentsForUsersCommand.metaPath);
+  }
+}
+/**
+ * Command to BatchSyncDepartmentMembers
+ */
+export class BatchSyncDepartmentMembersCommand extends Command<
+  BatchSyncDepartmentMembersRequest,
+  BatchSyncDepartmentMembersCommandOutput,
+  'BatchSyncDepartmentMembersCommand'
+> {
+  static readonly metaPath = '/BatchSyncDepartmentMembers/2025-10-30/id/post/application_json/';
+
+  constructor(input: BatchSyncDepartmentMembersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchSyncDepartmentMembersCommand.metaPath);
+  }
+}
+/**
+ * Command to BatchUpsertDepartments
+ */
+export class BatchUpsertDepartmentsCommand extends Command<
+  BatchUpsertDepartmentsRequest,
+  BatchUpsertDepartmentsCommandOutput,
+  'BatchUpsertDepartmentsCommand'
+> {
+  static readonly metaPath = '/BatchUpsertDepartments/2025-10-30/id/post/application_json/';
+
+  constructor(input: BatchUpsertDepartmentsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchUpsertDepartmentsCommand.metaPath);
+  }
+}
+/**
+ * Command to BindCredentialProvider
+ */
+export class BindCredentialProviderCommand extends Command<
+  BindCredentialProviderRequest,
+  BindCredentialProviderCommandOutput,
+  'BindCredentialProviderCommand'
+> {
+  static readonly metaPath = '/BindCredentialProvider/2025-10-30/id/post/application_json/';
+
+  constructor(input: BindCredentialProviderRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BindCredentialProviderCommand.metaPath);
+  }
+}
+/**
+ * Command to BindWorkloadPoolTrustAnchor
+ */
+export class BindWorkloadPoolTrustAnchorCommand extends Command<
+  BindWorkloadPoolTrustAnchorRequest,
+  BindWorkloadPoolTrustAnchorCommandOutput,
+  'BindWorkloadPoolTrustAnchorCommand'
+> {
+  static readonly metaPath = '/BindWorkloadPoolTrustAnchor/2025-10-30/id/post/application_json/';
+
+  constructor(input: BindWorkloadPoolTrustAnchorRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BindWorkloadPoolTrustAnchorCommand.metaPath);
+  }
+}
+/**
+ * Command to CancelDepartmentSyncSession
+ */
+export class CancelDepartmentSyncSessionCommand extends Command<
+  CancelDepartmentSyncSessionRequest,
+  CancelDepartmentSyncSessionCommandOutput,
+  'CancelDepartmentSyncSessionCommand'
+> {
+  static readonly metaPath = '/CancelDepartmentSyncSession/2025-10-30/id/post/application_json/';
+
+  constructor(input: CancelDepartmentSyncSessionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CancelDepartmentSyncSessionCommand.metaPath);
+  }
+}
+/**
+ * Command to CancelTask
+ */
+export class CancelTaskCommand extends Command<
+  CancelTaskRequest,
+  CancelTaskCommandOutput,
+  'CancelTaskCommand'
+> {
+  static readonly metaPath = '/CancelTask/2025-10-30/id/post/application_json/';
+
+  constructor(input: CancelTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CancelTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to CancelTaskUserSync
+ */
+export class CancelTaskUserSyncCommand extends Command<
+  CancelTaskUserSyncRequest,
+  CancelTaskUserSyncCommandOutput,
+  'CancelTaskUserSyncCommand'
+> {
+  static readonly metaPath = '/CancelTaskUserSync/2025-10-30/id/post/application_json/';
+
+  constructor(input: CancelTaskUserSyncRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CancelTaskUserSyncCommand.metaPath);
+  }
+}
+/**
+ * Command to ChangeUsersDepartment
+ */
+export class ChangeUsersDepartmentCommand extends Command<
+  ChangeUsersDepartmentRequest,
+  ChangeUsersDepartmentCommandOutput,
+  'ChangeUsersDepartmentCommand'
+> {
+  static readonly metaPath = '/ChangeUsersDepartment/2025-10-30/id/post/application_json/';
+
+  constructor(input: ChangeUsersDepartmentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ChangeUsersDepartmentCommand.metaPath);
+  }
+}
+/**
+ * Command to ChangeUsersGroup
+ */
+export class ChangeUsersGroupCommand extends Command<
+  ChangeUsersGroupRequest,
+  ChangeUsersGroupCommandOutput,
+  'ChangeUsersGroupCommand'
+> {
+  static readonly metaPath = '/ChangeUsersGroup/2025-10-30/id/post/application_json/';
+
+  constructor(input: ChangeUsersGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ChangeUsersGroupCommand.metaPath);
   }
 }
 /**
@@ -519,6 +1212,21 @@ export class CheckServiceNameCommand extends Command<
   }
 }
 /**
+ * Command to CommitDepartmentSyncSession
+ */
+export class CommitDepartmentSyncSessionCommand extends Command<
+  CommitDepartmentSyncSessionRequest,
+  CommitDepartmentSyncSessionCommandOutput,
+  'CommitDepartmentSyncSessionCommand'
+> {
+  static readonly metaPath = '/CommitDepartmentSyncSession/2025-10-30/id/post/application_json/';
+
+  constructor(input: CommitDepartmentSyncSessionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CommitDepartmentSyncSessionCommand.metaPath);
+  }
+}
+/**
  * Command to CompleteResourceTokenAuth
  */
 export class CompleteResourceTokenAuthCommand extends Command<
@@ -531,6 +1239,21 @@ export class CompleteResourceTokenAuthCommand extends Command<
   constructor(input: CompleteResourceTokenAuthRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CompleteResourceTokenAuthCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateAction
+ */
+export class CreateActionCommand extends Command<
+  CreateActionRequest,
+  CreateActionCommandOutput,
+  'CreateActionCommand'
+> {
+  static readonly metaPath = '/CreateAction/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateActionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateActionCommand.metaPath);
   }
 }
 /**
@@ -564,6 +1287,36 @@ export class CreateApiKeyCredentialProviderCommand extends Command<
   }
 }
 /**
+ * Command to CreateDepartment
+ */
+export class CreateDepartmentCommand extends Command<
+  CreateDepartmentRequest,
+  CreateDepartmentCommandOutput,
+  'CreateDepartmentCommand'
+> {
+  static readonly metaPath = '/CreateDepartment/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateDepartmentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateDepartmentCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateDepartmentSyncSession
+ */
+export class CreateDepartmentSyncSessionCommand extends Command<
+  CreateDepartmentSyncSessionRequest,
+  CreateDepartmentSyncSessionCommandOutput,
+  'CreateDepartmentSyncSessionCommand'
+> {
+  static readonly metaPath = '/CreateDepartmentSyncSession/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateDepartmentSyncSessionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateDepartmentSyncSessionCommand.metaPath);
+  }
+}
+/**
  * Command to CreateFaasService
  */
 export class CreateFaasServiceCommand extends Command<
@@ -576,6 +1329,66 @@ export class CreateFaasServiceCommand extends Command<
   constructor(input: CreateFaasServiceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateFaasServiceCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateGroup
+ */
+export class CreateGroupCommand extends Command<
+  CreateGroupRequest,
+  CreateGroupCommandOutput,
+  'CreateGroupCommand'
+> {
+  static readonly metaPath = '/CreateGroup/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateIamOidcProvider
+ */
+export class CreateIamOidcProviderCommand extends Command<
+  CreateIamOidcProviderRequest,
+  CreateIamOidcProviderCommandOutput,
+  'CreateIamOidcProviderCommand'
+> {
+  static readonly metaPath = '/CreateIamOidcProvider/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateIamOidcProviderRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateIamOidcProviderCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateIamRoleAttachment
+ */
+export class CreateIamRoleAttachmentCommand extends Command<
+  CreateIamRoleAttachmentRequest,
+  CreateIamRoleAttachmentCommandOutput,
+  'CreateIamRoleAttachmentCommand'
+> {
+  static readonly metaPath = '/CreateIamRoleAttachment/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateIamRoleAttachmentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateIamRoleAttachmentCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateIdentityProviderLDAPADAgent
+ */
+export class CreateIdentityProviderLDAPADAgentCommand extends Command<
+  CreateIdentityProviderLDAPADAgentRequest,
+  CreateIdentityProviderLDAPADAgentCommandOutput,
+  'CreateIdentityProviderLDAPADAgentCommand'
+> {
+  static readonly metaPath = '/CreateIdentityProviderLDAPADAgent/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateIdentityProviderLDAPADAgentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateIdentityProviderLDAPADAgentCommand.metaPath);
   }
 }
 /**
@@ -621,6 +1434,36 @@ export class CreateIdentityProviderSAMLCommand extends Command<
   constructor(input: CreateIdentityProviderSAMLRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateIdentityProviderSAMLCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateIdentityProviderTokenExchange
+ */
+export class CreateIdentityProviderTokenExchangeCommand extends Command<
+  CreateIdentityProviderTokenExchangeRequest,
+  CreateIdentityProviderTokenExchangeCommandOutput,
+  'CreateIdentityProviderTokenExchangeCommand'
+> {
+  static readonly metaPath = '/CreateIdentityProviderTokenExchange/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateIdentityProviderTokenExchangeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateIdentityProviderTokenExchangeCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateIdentityProviderWeCom
+ */
+export class CreateIdentityProviderWeComCommand extends Command<
+  CreateIdentityProviderWeComRequest,
+  CreateIdentityProviderWeComCommandOutput,
+  'CreateIdentityProviderWeComCommand'
+> {
+  static readonly metaPath = '/CreateIdentityProviderWeCom/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateIdentityProviderWeComRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateIdentityProviderWeComCommand.metaPath);
   }
 }
 /**
@@ -684,6 +1527,36 @@ export class CreateOauth2CredentialProviderDcrCommand extends Command<
   }
 }
 /**
+ * Command to CreateOutboundEgressIP
+ */
+export class CreateOutboundEgressIPCommand extends Command<
+  CreateOutboundEgressIPRequest,
+  CreateOutboundEgressIPCommandOutput,
+  'CreateOutboundEgressIPCommand'
+> {
+  static readonly metaPath = '/CreateOutboundEgressIP/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateOutboundEgressIPRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateOutboundEgressIPCommand.metaPath);
+  }
+}
+/**
+ * Command to CreatePermissionPoint
+ */
+export class CreatePermissionPointCommand extends Command<
+  CreatePermissionPointRequest,
+  CreatePermissionPointCommandOutput,
+  'CreatePermissionPointCommand'
+> {
+  static readonly metaPath = '/CreatePermissionPoint/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreatePermissionPointRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreatePermissionPointCommand.metaPath);
+  }
+}
+/**
  * Command to CreatePolicy
  */
 export class CreatePolicyCommand extends Command<
@@ -696,6 +1569,36 @@ export class CreatePolicyCommand extends Command<
   constructor(input: CreatePolicyRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreatePolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateResource
+ */
+export class CreateResourceCommand extends Command<
+  CreateResourceRequest,
+  CreateResourceCommandOutput,
+  'CreateResourceCommand'
+> {
+  static readonly metaPath = '/CreateResource/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateResourceCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateRoleCredentialProvider
+ */
+export class CreateRoleCredentialProviderCommand extends Command<
+  CreateRoleCredentialProviderRequest,
+  CreateRoleCredentialProviderCommandOutput,
+  'CreateRoleCredentialProviderCommand'
+> {
+  static readonly metaPath = '/CreateRoleCredentialProvider/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateRoleCredentialProviderRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateRoleCredentialProviderCommand.metaPath);
   }
 }
 /**
@@ -729,6 +1632,21 @@ export class CreateRouteFromTemplateCommand extends Command<
   }
 }
 /**
+ * Command to CreateSCIMToken
+ */
+export class CreateSCIMTokenCommand extends Command<
+  CreateSCIMTokenRequest,
+  CreateSCIMTokenCommandOutput,
+  'CreateSCIMTokenCommand'
+> {
+  static readonly metaPath = '/CreateSCIMToken/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateSCIMTokenRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateSCIMTokenCommand.metaPath);
+  }
+}
+/**
  * Command to CreateService
  */
 export class CreateServiceCommand extends Command<
@@ -759,6 +1677,96 @@ export class CreateServiceFromTemplateCommand extends Command<
   }
 }
 /**
+ * Command to CreateTaskCommitAppVisibleUsers
+ */
+export class CreateTaskCommitAppVisibleUsersCommand extends Command<
+  CreateTaskCommitAppVisibleUsersRequest,
+  CreateTaskCommitAppVisibleUsersCommandOutput,
+  'CreateTaskCommitAppVisibleUsersCommand'
+> {
+  static readonly metaPath = '/CreateTaskCommitAppVisibleUsers/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateTaskCommitAppVisibleUsersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateTaskCommitAppVisibleUsersCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateTaskMergeUserSync
+ */
+export class CreateTaskMergeUserSyncCommand extends Command<
+  CreateTaskMergeUserSyncRequest,
+  CreateTaskMergeUserSyncCommandOutput,
+  'CreateTaskMergeUserSyncCommand'
+> {
+  static readonly metaPath = '/CreateTaskMergeUserSync/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateTaskMergeUserSyncRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateTaskMergeUserSyncCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateTaskRetrieveAppVisibleUsers
+ */
+export class CreateTaskRetrieveAppVisibleUsersCommand extends Command<
+  CreateTaskRetrieveAppVisibleUsersRequest,
+  CreateTaskRetrieveAppVisibleUsersCommandOutput,
+  'CreateTaskRetrieveAppVisibleUsersCommand'
+> {
+  static readonly metaPath = '/CreateTaskRetrieveAppVisibleUsers/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateTaskRetrieveAppVisibleUsersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateTaskRetrieveAppVisibleUsersCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateTaskRetrieveUserSync
+ */
+export class CreateTaskRetrieveUserSyncCommand extends Command<
+  CreateTaskRetrieveUserSyncRequest,
+  CreateTaskRetrieveUserSyncCommandOutput,
+  'CreateTaskRetrieveUserSyncCommand'
+> {
+  static readonly metaPath = '/CreateTaskRetrieveUserSync/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateTaskRetrieveUserSyncRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateTaskRetrieveUserSyncCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateTaskRetrieveUserSyncAttachment
+ */
+export class CreateTaskRetrieveUserSyncAttachmentCommand extends Command<
+  CreateTaskRetrieveUserSyncAttachmentRequest,
+  CreateTaskRetrieveUserSyncAttachmentCommandOutput,
+  'CreateTaskRetrieveUserSyncAttachmentCommand'
+> {
+  static readonly metaPath = '/CreateTaskRetrieveUserSyncAttachment/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateTaskRetrieveUserSyncAttachmentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateTaskRetrieveUserSyncAttachmentCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateTrustAnchor
+ */
+export class CreateTrustAnchorCommand extends Command<
+  CreateTrustAnchorRequest,
+  CreateTrustAnchorCommandOutput,
+  'CreateTrustAnchorCommand'
+> {
+  static readonly metaPath = '/CreateTrustAnchor/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateTrustAnchorRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateTrustAnchorCommand.metaPath);
+  }
+}
+/**
  * Command to CreateUser
  */
 export class CreateUserCommand extends Command<
@@ -771,6 +1779,36 @@ export class CreateUserCommand extends Command<
   constructor(input: CreateUserRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateUserCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateUserCredential
+ */
+export class CreateUserCredentialCommand extends Command<
+  CreateUserCredentialRequest,
+  CreateUserCredentialCommandOutput,
+  'CreateUserCredentialCommand'
+> {
+  static readonly metaPath = '/CreateUserCredential/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateUserCredentialRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateUserCredentialCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateUserGroupsCsv
+ */
+export class CreateUserGroupsCsvCommand extends Command<
+  CreateUserGroupsCsvRequest,
+  CreateUserGroupsCsvCommandOutput,
+  'CreateUserGroupsCsvCommand'
+> {
+  static readonly metaPath = '/CreateUserGroupsCsv/2025-10-30/id/post/application_x-www-form-urlencoded/';
+
+  constructor(input: CreateUserGroupsCsvRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateUserGroupsCsvCommand.metaPath);
   }
 }
 /**
@@ -801,6 +1839,36 @@ export class CreateUserPoolClientCommand extends Command<
   constructor(input: CreateUserPoolClientRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateUserPoolClientCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateUserPoolCustomAttribute
+ */
+export class CreateUserPoolCustomAttributeCommand extends Command<
+  CreateUserPoolCustomAttributeRequest,
+  CreateUserPoolCustomAttributeCommandOutput,
+  'CreateUserPoolCustomAttributeCommand'
+> {
+  static readonly metaPath = '/CreateUserPoolCustomAttribute/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateUserPoolCustomAttributeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateUserPoolCustomAttributeCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateUserPoolDomain
+ */
+export class CreateUserPoolDomainCommand extends Command<
+  CreateUserPoolDomainRequest,
+  CreateUserPoolDomainCommandOutput,
+  'CreateUserPoolDomainCommand'
+> {
+  static readonly metaPath = '/CreateUserPoolDomain/2025-10-30/id/post/application_json/';
+
+  constructor(input: CreateUserPoolDomainRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateUserPoolDomainCommand.metaPath);
   }
 }
 /**
@@ -864,6 +1932,21 @@ export class CreateWorkloadPoolCommand extends Command<
   }
 }
 /**
+ * Command to DeleteAction
+ */
+export class DeleteActionCommand extends Command<
+  DeleteActionRequest,
+  DeleteActionCommandOutput,
+  'DeleteActionCommand'
+> {
+  static readonly metaPath = '/DeleteAction/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteActionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteActionCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteApiKey
  */
 export class DeleteApiKeyCommand extends Command<
@@ -894,6 +1977,51 @@ export class DeleteApiKeyCredentialProviderCommand extends Command<
   }
 }
 /**
+ * Command to DeleteDepartment
+ */
+export class DeleteDepartmentCommand extends Command<
+  DeleteDepartmentRequest,
+  DeleteDepartmentCommandOutput,
+  'DeleteDepartmentCommand'
+> {
+  static readonly metaPath = '/DeleteDepartment/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteDepartmentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteDepartmentCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteEmailService
+ */
+export class DeleteEmailServiceCommand extends Command<
+  DeleteEmailServiceRequest,
+  DeleteEmailServiceCommandOutput,
+  'DeleteEmailServiceCommand'
+> {
+  static readonly metaPath = '/DeleteEmailService/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteEmailServiceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteEmailServiceCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteExternalProvider
+ */
+export class DeleteExternalProviderCommand extends Command<
+  DeleteExternalProviderRequest,
+  DeleteExternalProviderCommandOutput,
+  'DeleteExternalProviderCommand'
+> {
+  static readonly metaPath = '/DeleteExternalProvider/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteExternalProviderRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteExternalProviderCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteFaasService
  */
 export class DeleteFaasServiceCommand extends Command<
@@ -909,6 +2037,21 @@ export class DeleteFaasServiceCommand extends Command<
   }
 }
 /**
+ * Command to DeleteGroup
+ */
+export class DeleteGroupCommand extends Command<
+  DeleteGroupRequest,
+  DeleteGroupCommandOutput,
+  'DeleteGroupCommand'
+> {
+  static readonly metaPath = '/DeleteGroup/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteGroupCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteIdentityProvider
  */
 export class DeleteIdentityProviderCommand extends Command<
@@ -921,6 +2064,21 @@ export class DeleteIdentityProviderCommand extends Command<
   constructor(input: DeleteIdentityProviderRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteIdentityProviderCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteIdentityProviderLDAPADAgent
+ */
+export class DeleteIdentityProviderLDAPADAgentCommand extends Command<
+  DeleteIdentityProviderLDAPADAgentRequest,
+  DeleteIdentityProviderLDAPADAgentCommandOutput,
+  'DeleteIdentityProviderLDAPADAgentCommand'
+> {
+  static readonly metaPath = '/DeleteIdentityProviderLDAPADAgent/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteIdentityProviderLDAPADAgentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteIdentityProviderLDAPADAgentCommand.metaPath);
   }
 }
 /**
@@ -969,6 +2127,36 @@ export class DeleteIdentityProviderSAMLCommand extends Command<
   }
 }
 /**
+ * Command to DeleteIdentityProviderTokenExchange
+ */
+export class DeleteIdentityProviderTokenExchangeCommand extends Command<
+  DeleteIdentityProviderTokenExchangeRequest,
+  DeleteIdentityProviderTokenExchangeCommandOutput,
+  'DeleteIdentityProviderTokenExchangeCommand'
+> {
+  static readonly metaPath = '/DeleteIdentityProviderTokenExchange/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteIdentityProviderTokenExchangeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteIdentityProviderTokenExchangeCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteIdentityProviderWeCom
+ */
+export class DeleteIdentityProviderWeComCommand extends Command<
+  DeleteIdentityProviderWeComRequest,
+  DeleteIdentityProviderWeComCommandOutput,
+  'DeleteIdentityProviderWeComCommand'
+> {
+  static readonly metaPath = '/DeleteIdentityProviderWeCom/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteIdentityProviderWeComRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteIdentityProviderWeComCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteInboundAuthConfig
  */
 export class DeleteInboundAuthConfigCommand extends Command<
@@ -1014,6 +2202,36 @@ export class DeleteOauth2CredentialProviderCommand extends Command<
   }
 }
 /**
+ * Command to DeleteOutboundEgressIP
+ */
+export class DeleteOutboundEgressIPCommand extends Command<
+  DeleteOutboundEgressIPRequest,
+  DeleteOutboundEgressIPCommandOutput,
+  'DeleteOutboundEgressIPCommand'
+> {
+  static readonly metaPath = '/DeleteOutboundEgressIP/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteOutboundEgressIPRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteOutboundEgressIPCommand.metaPath);
+  }
+}
+/**
+ * Command to DeletePermissionPoint
+ */
+export class DeletePermissionPointCommand extends Command<
+  DeletePermissionPointRequest,
+  DeletePermissionPointCommandOutput,
+  'DeletePermissionPointCommand'
+> {
+  static readonly metaPath = '/DeletePermissionPoint/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeletePermissionPointRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeletePermissionPointCommand.metaPath);
+  }
+}
+/**
  * Command to DeletePolicy
  */
 export class DeletePolicyCommand extends Command<
@@ -1026,6 +2244,36 @@ export class DeletePolicyCommand extends Command<
   constructor(input: DeletePolicyRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeletePolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteResource
+ */
+export class DeleteResourceCommand extends Command<
+  DeleteResourceRequest,
+  DeleteResourceCommandOutput,
+  'DeleteResourceCommand'
+> {
+  static readonly metaPath = '/DeleteResource/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteResourceCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteRoleCredentialProvider
+ */
+export class DeleteRoleCredentialProviderCommand extends Command<
+  DeleteRoleCredentialProviderRequest,
+  DeleteRoleCredentialProviderCommandOutput,
+  'DeleteRoleCredentialProviderCommand'
+> {
+  static readonly metaPath = '/DeleteRoleCredentialProvider/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteRoleCredentialProviderRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteRoleCredentialProviderCommand.metaPath);
   }
 }
 /**
@@ -1044,6 +2292,21 @@ export class DeleteRouteCommand extends Command<
   }
 }
 /**
+ * Command to DeleteSCIMToken
+ */
+export class DeleteSCIMTokenCommand extends Command<
+  DeleteSCIMTokenRequest,
+  DeleteSCIMTokenCommandOutput,
+  'DeleteSCIMTokenCommand'
+> {
+  static readonly metaPath = '/DeleteSCIMToken/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteSCIMTokenRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteSCIMTokenCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteService
  */
 export class DeleteServiceCommand extends Command<
@@ -1056,6 +2319,36 @@ export class DeleteServiceCommand extends Command<
   constructor(input: DeleteServiceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteServiceCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteTrustAnchor
+ */
+export class DeleteTrustAnchorCommand extends Command<
+  DeleteTrustAnchorRequest,
+  DeleteTrustAnchorCommandOutput,
+  'DeleteTrustAnchorCommand'
+> {
+  static readonly metaPath = '/DeleteTrustAnchor/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteTrustAnchorRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteTrustAnchorCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteUserCredential
+ */
+export class DeleteUserCredentialCommand extends Command<
+  DeleteUserCredentialRequest,
+  DeleteUserCredentialCommandOutput,
+  'DeleteUserCredentialCommand'
+> {
+  static readonly metaPath = '/DeleteUserCredential/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteUserCredentialRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteUserCredentialCommand.metaPath);
   }
 }
 /**
@@ -1086,6 +2379,36 @@ export class DeleteUserPoolClientCommand extends Command<
   constructor(input: DeleteUserPoolClientRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteUserPoolClientCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteUserPoolCustomAttribute
+ */
+export class DeleteUserPoolCustomAttributeCommand extends Command<
+  DeleteUserPoolCustomAttributeRequest,
+  DeleteUserPoolCustomAttributeCommandOutput,
+  'DeleteUserPoolCustomAttributeCommand'
+> {
+  static readonly metaPath = '/DeleteUserPoolCustomAttribute/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteUserPoolCustomAttributeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteUserPoolCustomAttributeCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteUserPoolDomain
+ */
+export class DeleteUserPoolDomainCommand extends Command<
+  DeleteUserPoolDomainRequest,
+  DeleteUserPoolDomainCommandOutput,
+  'DeleteUserPoolDomainCommand'
+> {
+  static readonly metaPath = '/DeleteUserPoolDomain/2025-10-30/id/post/application_json/';
+
+  constructor(input: DeleteUserPoolDomainRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteUserPoolDomainCommand.metaPath);
   }
 }
 /**
@@ -1194,6 +2517,21 @@ export class DetachInboundAuthConfigCommand extends Command<
   }
 }
 /**
+ * Command to DisableIdentityProviderForUser
+ */
+export class DisableIdentityProviderForUserCommand extends Command<
+  DisableIdentityProviderForUserRequest,
+  DisableIdentityProviderForUserCommandOutput,
+  'DisableIdentityProviderForUserCommand'
+> {
+  static readonly metaPath = '/DisableIdentityProviderForUser/2025-10-30/id/post/application_json/';
+
+  constructor(input: DisableIdentityProviderForUserRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisableIdentityProviderForUserCommand.metaPath);
+  }
+}
+/**
  * Command to DisableRoute
  */
 export class DisableRouteCommand extends Command<
@@ -1206,6 +2544,21 @@ export class DisableRouteCommand extends Command<
   constructor(input: DisableRouteRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DisableRouteCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAction
+ */
+export class GetActionCommand extends Command<
+  GetActionRequest,
+  GetActionCommandOutput,
+  'GetActionCommand'
+> {
+  static readonly metaPath = '/GetAction/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetActionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetActionCommand.metaPath);
   }
 }
 /**
@@ -1224,6 +2577,81 @@ export class GetApiKeyCredentialProviderCommand extends Command<
   }
 }
 /**
+ * Command to GetDepartment
+ */
+export class GetDepartmentCommand extends Command<
+  GetDepartmentRequest,
+  GetDepartmentCommandOutput,
+  'GetDepartmentCommand'
+> {
+  static readonly metaPath = '/GetDepartment/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetDepartmentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDepartmentCommand.metaPath);
+  }
+}
+/**
+ * Command to GetDepartmentPath
+ */
+export class GetDepartmentPathCommand extends Command<
+  GetDepartmentPathRequest,
+  GetDepartmentPathCommandOutput,
+  'GetDepartmentPathCommand'
+> {
+  static readonly metaPath = '/GetDepartmentPath/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetDepartmentPathRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDepartmentPathCommand.metaPath);
+  }
+}
+/**
+ * Command to GetDepartmentSyncJob
+ */
+export class GetDepartmentSyncJobCommand extends Command<
+  GetDepartmentSyncJobRequest,
+  GetDepartmentSyncJobCommandOutput,
+  'GetDepartmentSyncJobCommand'
+> {
+  static readonly metaPath = '/GetDepartmentSyncJob/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetDepartmentSyncJobRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDepartmentSyncJobCommand.metaPath);
+  }
+}
+/**
+ * Command to GetDepartmentSyncSession
+ */
+export class GetDepartmentSyncSessionCommand extends Command<
+  GetDepartmentSyncSessionRequest,
+  GetDepartmentSyncSessionCommandOutput,
+  'GetDepartmentSyncSessionCommand'
+> {
+  static readonly metaPath = '/GetDepartmentSyncSession/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetDepartmentSyncSessionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDepartmentSyncSessionCommand.metaPath);
+  }
+}
+/**
+ * Command to GetDepartmentTree
+ */
+export class GetDepartmentTreeCommand extends Command<
+  GetDepartmentTreeRequest,
+  GetDepartmentTreeCommandOutput,
+  'GetDepartmentTreeCommand'
+> {
+  static readonly metaPath = '/GetDepartmentTree/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetDepartmentTreeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetDepartmentTreeCommand.metaPath);
+  }
+}
+/**
  * Command to GetDocumentStatus
  */
 export class GetDocumentStatusCommand extends Command<
@@ -1239,6 +2667,36 @@ export class GetDocumentStatusCommand extends Command<
   }
 }
 /**
+ * Command to GetEmailService
+ */
+export class GetEmailServiceCommand extends Command<
+  GetEmailServiceRequest,
+  GetEmailServiceCommandOutput,
+  'GetEmailServiceCommand'
+> {
+  static readonly metaPath = '/GetEmailService/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetEmailServiceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetEmailServiceCommand.metaPath);
+  }
+}
+/**
+ * Command to GetExternalProvider
+ */
+export class GetExternalProviderCommand extends Command<
+  GetExternalProviderRequest,
+  GetExternalProviderCommandOutput,
+  'GetExternalProviderCommand'
+> {
+  static readonly metaPath = '/GetExternalProvider/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetExternalProviderRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetExternalProviderCommand.metaPath);
+  }
+}
+/**
  * Command to GetFaasService
  */
 export class GetFaasServiceCommand extends Command<
@@ -1251,6 +2709,66 @@ export class GetFaasServiceCommand extends Command<
   constructor(input: GetFaasServiceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetFaasServiceCommand.metaPath);
+  }
+}
+/**
+ * Command to GetGroup
+ */
+export class GetGroupCommand extends Command<
+  GetGroupRequest,
+  GetGroupCommandOutput,
+  'GetGroupCommand'
+> {
+  static readonly metaPath = '/GetGroup/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to GetIamRoleAttachment
+ */
+export class GetIamRoleAttachmentCommand extends Command<
+  GetIamRoleAttachmentRequest,
+  GetIamRoleAttachmentCommandOutput,
+  'GetIamRoleAttachmentCommand'
+> {
+  static readonly metaPath = '/GetIamRoleAttachment/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetIamRoleAttachmentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetIamRoleAttachmentCommand.metaPath);
+  }
+}
+/**
+ * Command to GetIdentityProviderFeishuScopes
+ */
+export class GetIdentityProviderFeishuScopesCommand extends Command<
+  GetIdentityProviderFeishuScopesRequest,
+  GetIdentityProviderFeishuScopesCommandOutput,
+  'GetIdentityProviderFeishuScopesCommand'
+> {
+  static readonly metaPath = '/GetIdentityProviderFeishuScopes/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetIdentityProviderFeishuScopesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetIdentityProviderFeishuScopesCommand.metaPath);
+  }
+}
+/**
+ * Command to GetIdentityProviderLDAPADAgent
+ */
+export class GetIdentityProviderLDAPADAgentCommand extends Command<
+  GetIdentityProviderLDAPADAgentRequest,
+  GetIdentityProviderLDAPADAgentCommandOutput,
+  'GetIdentityProviderLDAPADAgentCommand'
+> {
+  static readonly metaPath = '/GetIdentityProviderLDAPADAgent/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetIdentityProviderLDAPADAgentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetIdentityProviderLDAPADAgentCommand.metaPath);
   }
 }
 /**
@@ -1299,6 +2817,36 @@ export class GetIdentityProviderSAMLCommand extends Command<
   }
 }
 /**
+ * Command to GetIdentityProviderTokenExchange
+ */
+export class GetIdentityProviderTokenExchangeCommand extends Command<
+  GetIdentityProviderTokenExchangeRequest,
+  GetIdentityProviderTokenExchangeCommandOutput,
+  'GetIdentityProviderTokenExchangeCommand'
+> {
+  static readonly metaPath = '/GetIdentityProviderTokenExchange/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetIdentityProviderTokenExchangeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetIdentityProviderTokenExchangeCommand.metaPath);
+  }
+}
+/**
+ * Command to GetIdentityProviderWeCom
+ */
+export class GetIdentityProviderWeComCommand extends Command<
+  GetIdentityProviderWeComRequest,
+  GetIdentityProviderWeComCommandOutput,
+  'GetIdentityProviderWeComCommand'
+> {
+  static readonly metaPath = '/GetIdentityProviderWeCom/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetIdentityProviderWeComRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetIdentityProviderWeComCommand.metaPath);
+  }
+}
+/**
  * Command to GetInboundAuthConfig
  */
 export class GetInboundAuthConfigCommand extends Command<
@@ -1344,6 +2892,36 @@ export class GetOauth2CredentialProviderCommand extends Command<
   }
 }
 /**
+ * Command to GetOutboundEgressIP
+ */
+export class GetOutboundEgressIPCommand extends Command<
+  GetOutboundEgressIPRequest,
+  GetOutboundEgressIPCommandOutput,
+  'GetOutboundEgressIPCommand'
+> {
+  static readonly metaPath = '/GetOutboundEgressIP/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetOutboundEgressIPRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetOutboundEgressIPCommand.metaPath);
+  }
+}
+/**
+ * Command to GetPermissionPoint
+ */
+export class GetPermissionPointCommand extends Command<
+  GetPermissionPointRequest,
+  GetPermissionPointCommandOutput,
+  'GetPermissionPointCommand'
+> {
+  static readonly metaPath = '/GetPermissionPoint/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetPermissionPointRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetPermissionPointCommand.metaPath);
+  }
+}
+/**
  * Command to GetPolicy
  */
 export class GetPolicyCommand extends Command<
@@ -1356,6 +2934,21 @@ export class GetPolicyCommand extends Command<
   constructor(input: GetPolicyRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to GetResource
+ */
+export class GetResourceCommand extends Command<
+  GetResourceRequest,
+  GetResourceCommandOutput,
+  'GetResourceCommand'
+> {
+  static readonly metaPath = '/GetResource/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetResourceCommand.metaPath);
   }
 }
 /**
@@ -1389,6 +2982,36 @@ export class GetResourceOauth2TokenCommand extends Command<
   }
 }
 /**
+ * Command to GetRoleCredentialProvider
+ */
+export class GetRoleCredentialProviderCommand extends Command<
+  GetRoleCredentialProviderRequest,
+  GetRoleCredentialProviderCommandOutput,
+  'GetRoleCredentialProviderCommand'
+> {
+  static readonly metaPath = '/GetRoleCredentialProvider/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetRoleCredentialProviderRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRoleCredentialProviderCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRoleCredentials
+ */
+export class GetRoleCredentialsCommand extends Command<
+  GetRoleCredentialsRequest,
+  GetRoleCredentialsCommandOutput,
+  'GetRoleCredentialsCommand'
+> {
+  static readonly metaPath = '/GetRoleCredentials/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetRoleCredentialsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRoleCredentialsCommand.metaPath);
+  }
+}
+/**
  * Command to GetRoute
  */
 export class GetRouteCommand extends Command<
@@ -1401,6 +3024,21 @@ export class GetRouteCommand extends Command<
   constructor(input: GetRouteRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetRouteCommand.metaPath);
+  }
+}
+/**
+ * Command to GetSCIMProvisioningDefaults
+ */
+export class GetSCIMProvisioningDefaultsCommand extends Command<
+  GetSCIMProvisioningDefaultsRequest,
+  GetSCIMProvisioningDefaultsCommandOutput,
+  'GetSCIMProvisioningDefaultsCommand'
+> {
+  static readonly metaPath = '/GetSCIMProvisioningDefaults/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetSCIMProvisioningDefaultsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetSCIMProvisioningDefaultsCommand.metaPath);
   }
 }
 /**
@@ -1434,6 +3072,51 @@ export class GetSmsServiceCommand extends Command<
   }
 }
 /**
+ * Command to GetTask
+ */
+export class GetTaskCommand extends Command<
+  GetTaskRequest,
+  GetTaskCommandOutput,
+  'GetTaskCommand'
+> {
+  static readonly metaPath = '/GetTask/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to GetTaskStateRetrieveAppVisibleUsers
+ */
+export class GetTaskStateRetrieveAppVisibleUsersCommand extends Command<
+  GetTaskStateRetrieveAppVisibleUsersRequest,
+  GetTaskStateRetrieveAppVisibleUsersCommandOutput,
+  'GetTaskStateRetrieveAppVisibleUsersCommand'
+> {
+  static readonly metaPath = '/GetTaskStateRetrieveAppVisibleUsers/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetTaskStateRetrieveAppVisibleUsersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetTaskStateRetrieveAppVisibleUsersCommand.metaPath);
+  }
+}
+/**
+ * Command to GetTaskStateUserSync
+ */
+export class GetTaskStateUserSyncCommand extends Command<
+  GetTaskStateUserSyncRequest,
+  GetTaskStateUserSyncCommandOutput,
+  'GetTaskStateUserSyncCommand'
+> {
+  static readonly metaPath = '/GetTaskStateUserSync/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetTaskStateUserSyncRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetTaskStateUserSyncCommand.metaPath);
+  }
+}
+/**
  * Command to GetTenantServiceStatus
  */
 export class GetTenantServiceStatusCommand extends Command<
@@ -1446,6 +3129,21 @@ export class GetTenantServiceStatusCommand extends Command<
   constructor(input: GetTenantServiceStatusRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetTenantServiceStatusCommand.metaPath);
+  }
+}
+/**
+ * Command to GetTrustAnchor
+ */
+export class GetTrustAnchorCommand extends Command<
+  GetTrustAnchorRequest,
+  GetTrustAnchorCommandOutput,
+  'GetTrustAnchorCommand'
+> {
+  static readonly metaPath = '/GetTrustAnchor/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetTrustAnchorRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetTrustAnchorCommand.metaPath);
   }
 }
 /**
@@ -1479,6 +3177,36 @@ export class GetUserCSVTemplateCommand extends Command<
   }
 }
 /**
+ * Command to GetUserCredential
+ */
+export class GetUserCredentialCommand extends Command<
+  GetUserCredentialRequest,
+  GetUserCredentialCommandOutput,
+  'GetUserCredentialCommand'
+> {
+  static readonly metaPath = '/GetUserCredential/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetUserCredentialRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetUserCredentialCommand.metaPath);
+  }
+}
+/**
+ * Command to GetUserGroupsCsvTemplate
+ */
+export class GetUserGroupsCsvTemplateCommand extends Command<
+  GetUserGroupsCsvTemplateRequest,
+  GetUserGroupsCsvTemplateCommandOutput,
+  'GetUserGroupsCsvTemplateCommand'
+> {
+  static readonly metaPath = '/GetUserGroupsCsvTemplate/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetUserGroupsCsvTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetUserGroupsCsvTemplateCommand.metaPath);
+  }
+}
+/**
  * Command to GetUserPool
  */
 export class GetUserPoolCommand extends Command<
@@ -1506,6 +3234,36 @@ export class GetUserPoolClientCommand extends Command<
   constructor(input: GetUserPoolClientRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetUserPoolClientCommand.metaPath);
+  }
+}
+/**
+ * Command to GetUserPoolDomain
+ */
+export class GetUserPoolDomainCommand extends Command<
+  GetUserPoolDomainRequest,
+  GetUserPoolDomainCommandOutput,
+  'GetUserPoolDomainCommand'
+> {
+  static readonly metaPath = '/GetUserPoolDomain/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetUserPoolDomainRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetUserPoolDomainCommand.metaPath);
+  }
+}
+/**
+ * Command to GetUserPoolIamCredentialsServiceConfig
+ */
+export class GetUserPoolIamCredentialsServiceConfigCommand extends Command<
+  GetUserPoolIamCredentialsServiceConfigRequest,
+  GetUserPoolIamCredentialsServiceConfigCommandOutput,
+  'GetUserPoolIamCredentialsServiceConfigCommand'
+> {
+  static readonly metaPath = '/GetUserPoolIamCredentialsServiceConfig/2025-10-30/id/post/application_json/';
+
+  constructor(input: GetUserPoolIamCredentialsServiceConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetUserPoolIamCredentialsServiceConfigCommand.metaPath);
   }
 }
 /**
@@ -1614,6 +3372,51 @@ export class GrantPermissionCommand extends Command<
   }
 }
 /**
+ * Command to LinkIdentityProviderToUser
+ */
+export class LinkIdentityProviderToUserCommand extends Command<
+  LinkIdentityProviderToUserRequest,
+  LinkIdentityProviderToUserCommandOutput,
+  'LinkIdentityProviderToUserCommand'
+> {
+  static readonly metaPath = '/LinkIdentityProviderToUser/2025-10-30/id/post/application_json/';
+
+  constructor(input: LinkIdentityProviderToUserRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(LinkIdentityProviderToUserCommand.metaPath);
+  }
+}
+/**
+ * Command to ListActions
+ */
+export class ListActionsCommand extends Command<
+  ListActionsRequest,
+  ListActionsCommandOutput,
+  'ListActionsCommand'
+> {
+  static readonly metaPath = '/ListActions/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListActionsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListActionsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAllIdentityProviders
+ */
+export class ListAllIdentityProvidersCommand extends Command<
+  ListAllIdentityProvidersRequest,
+  ListAllIdentityProvidersCommandOutput,
+  'ListAllIdentityProvidersCommand'
+> {
+  static readonly metaPath = '/ListAllIdentityProviders/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListAllIdentityProvidersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAllIdentityProvidersCommand.metaPath);
+  }
+}
+/**
  * Command to ListApiKeyCredentialProviders
  */
 export class ListApiKeyCredentialProvidersCommand extends Command<
@@ -1626,6 +3429,36 @@ export class ListApiKeyCredentialProvidersCommand extends Command<
   constructor(input: ListApiKeyCredentialProvidersRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListApiKeyCredentialProvidersCommand.metaPath);
+  }
+}
+/**
+ * Command to ListCommitAppVisibleUsers
+ */
+export class ListCommitAppVisibleUsersCommand extends Command<
+  ListCommitAppVisibleUsersRequest,
+  ListCommitAppVisibleUsersCommandOutput,
+  'ListCommitAppVisibleUsersCommand'
+> {
+  static readonly metaPath = '/ListCommitAppVisibleUsers/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListCommitAppVisibleUsersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListCommitAppVisibleUsersCommand.metaPath);
+  }
+}
+/**
+ * Command to ListCredentialProviderBindings
+ */
+export class ListCredentialProviderBindingsCommand extends Command<
+  ListCredentialProviderBindingsRequest,
+  ListCredentialProviderBindingsCommandOutput,
+  'ListCredentialProviderBindingsCommand'
+> {
+  static readonly metaPath = '/ListCredentialProviderBindings/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListCredentialProviderBindingsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListCredentialProviderBindingsCommand.metaPath);
   }
 }
 /**
@@ -1644,6 +3477,66 @@ export class ListCredentialProvidersCommand extends Command<
   }
 }
 /**
+ * Command to ListDepartmentMembers
+ */
+export class ListDepartmentMembersCommand extends Command<
+  ListDepartmentMembersRequest,
+  ListDepartmentMembersCommandOutput,
+  'ListDepartmentMembersCommand'
+> {
+  static readonly metaPath = '/ListDepartmentMembers/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListDepartmentMembersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDepartmentMembersCommand.metaPath);
+  }
+}
+/**
+ * Command to ListDepartmentSyncJobs
+ */
+export class ListDepartmentSyncJobsCommand extends Command<
+  ListDepartmentSyncJobsRequest,
+  ListDepartmentSyncJobsCommandOutput,
+  'ListDepartmentSyncJobsCommand'
+> {
+  static readonly metaPath = '/ListDepartmentSyncJobs/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListDepartmentSyncJobsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDepartmentSyncJobsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListDepartments
+ */
+export class ListDepartmentsCommand extends Command<
+  ListDepartmentsRequest,
+  ListDepartmentsCommandOutput,
+  'ListDepartmentsCommand'
+> {
+  static readonly metaPath = '/ListDepartments/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListDepartmentsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDepartmentsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListDepartmentsForUser
+ */
+export class ListDepartmentsForUserCommand extends Command<
+  ListDepartmentsForUserRequest,
+  ListDepartmentsForUserCommandOutput,
+  'ListDepartmentsForUserCommand'
+> {
+  static readonly metaPath = '/ListDepartmentsForUser/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListDepartmentsForUserRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDepartmentsForUserCommand.metaPath);
+  }
+}
+/**
  * Command to ListFaasServices
  */
 export class ListFaasServicesCommand extends Command<
@@ -1656,6 +3549,66 @@ export class ListFaasServicesCommand extends Command<
   constructor(input: ListFaasServicesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListFaasServicesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListGroups
+ */
+export class ListGroupsCommand extends Command<
+  ListGroupsRequest,
+  ListGroupsCommandOutput,
+  'ListGroupsCommand'
+> {
+  static readonly metaPath = '/ListGroups/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListGroupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListGroupsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListGroupsForUser
+ */
+export class ListGroupsForUserCommand extends Command<
+  ListGroupsForUserRequest,
+  ListGroupsForUserCommandOutput,
+  'ListGroupsForUserCommand'
+> {
+  static readonly metaPath = '/ListGroupsForUser/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListGroupsForUserRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListGroupsForUserCommand.metaPath);
+  }
+}
+/**
+ * Command to ListGroupsForUsers
+ */
+export class ListGroupsForUsersCommand extends Command<
+  ListGroupsForUsersRequest,
+  ListGroupsForUsersCommandOutput,
+  'ListGroupsForUsersCommand'
+> {
+  static readonly metaPath = '/ListGroupsForUsers/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListGroupsForUsersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListGroupsForUsersCommand.metaPath);
+  }
+}
+/**
+ * Command to ListIdentityProviderLDAPADAgent
+ */
+export class ListIdentityProviderLDAPADAgentCommand extends Command<
+  ListIdentityProviderLDAPADAgentRequest,
+  ListIdentityProviderLDAPADAgentCommandOutput,
+  'ListIdentityProviderLDAPADAgentCommand'
+> {
+  static readonly metaPath = '/ListIdentityProviderLDAPADAgent/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListIdentityProviderLDAPADAgentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListIdentityProviderLDAPADAgentCommand.metaPath);
   }
 }
 /**
@@ -1719,6 +3672,36 @@ export class ListIdentityProvidersSAMLCommand extends Command<
   }
 }
 /**
+ * Command to ListIdentityProvidersTokenExchange
+ */
+export class ListIdentityProvidersTokenExchangeCommand extends Command<
+  ListIdentityProvidersTokenExchangeRequest,
+  ListIdentityProvidersTokenExchangeCommandOutput,
+  'ListIdentityProvidersTokenExchangeCommand'
+> {
+  static readonly metaPath = '/ListIdentityProvidersTokenExchange/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListIdentityProvidersTokenExchangeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListIdentityProvidersTokenExchangeCommand.metaPath);
+  }
+}
+/**
+ * Command to ListIdentityProvidersWeCom
+ */
+export class ListIdentityProvidersWeComCommand extends Command<
+  ListIdentityProvidersWeComRequest,
+  ListIdentityProvidersWeComCommandOutput,
+  'ListIdentityProvidersWeComCommand'
+> {
+  static readonly metaPath = '/ListIdentityProvidersWeCom/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListIdentityProvidersWeComRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListIdentityProvidersWeComCommand.metaPath);
+  }
+}
+/**
  * Command to ListInboundAuthConfigs
  */
 export class ListInboundAuthConfigsCommand extends Command<
@@ -1731,6 +3714,21 @@ export class ListInboundAuthConfigsCommand extends Command<
   constructor(input: ListInboundAuthConfigsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListInboundAuthConfigsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListMergeUserSyncResultUsers
+ */
+export class ListMergeUserSyncResultUsersCommand extends Command<
+  ListMergeUserSyncResultUsersRequest,
+  ListMergeUserSyncResultUsersCommandOutput,
+  'ListMergeUserSyncResultUsersCommand'
+> {
+  static readonly metaPath = '/ListMergeUserSyncResultUsers/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListMergeUserSyncResultUsersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListMergeUserSyncResultUsersCommand.metaPath);
   }
 }
 /**
@@ -1764,6 +3762,36 @@ export class ListOauth2CredentialProvidersCommand extends Command<
   }
 }
 /**
+ * Command to ListOutboundEgressIPs
+ */
+export class ListOutboundEgressIPsCommand extends Command<
+  ListOutboundEgressIPsRequest,
+  ListOutboundEgressIPsCommandOutput,
+  'ListOutboundEgressIPsCommand'
+> {
+  static readonly metaPath = '/ListOutboundEgressIPs/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListOutboundEgressIPsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListOutboundEgressIPsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListPermissionPoints
+ */
+export class ListPermissionPointsCommand extends Command<
+  ListPermissionPointsRequest,
+  ListPermissionPointsCommandOutput,
+  'ListPermissionPointsCommand'
+> {
+  static readonly metaPath = '/ListPermissionPoints/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListPermissionPointsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListPermissionPointsCommand.metaPath);
+  }
+}
+/**
  * Command to ListPolicies
  */
 export class ListPoliciesCommand extends Command<
@@ -1779,6 +3807,51 @@ export class ListPoliciesCommand extends Command<
   }
 }
 /**
+ * Command to ListResources
+ */
+export class ListResourcesCommand extends Command<
+  ListResourcesRequest,
+  ListResourcesCommandOutput,
+  'ListResourcesCommand'
+> {
+  static readonly metaPath = '/ListResources/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListResourcesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListResourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRetrieveUserSyncUsers
+ */
+export class ListRetrieveUserSyncUsersCommand extends Command<
+  ListRetrieveUserSyncUsersRequest,
+  ListRetrieveUserSyncUsersCommandOutput,
+  'ListRetrieveUserSyncUsersCommand'
+> {
+  static readonly metaPath = '/ListRetrieveUserSyncUsers/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListRetrieveUserSyncUsersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRetrieveUserSyncUsersCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRoleCredentialProviders
+ */
+export class ListRoleCredentialProvidersCommand extends Command<
+  ListRoleCredentialProvidersRequest,
+  ListRoleCredentialProvidersCommandOutput,
+  'ListRoleCredentialProvidersCommand'
+> {
+  static readonly metaPath = '/ListRoleCredentialProviders/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListRoleCredentialProvidersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRoleCredentialProvidersCommand.metaPath);
+  }
+}
+/**
  * Command to ListRoutes
  */
 export class ListRoutesCommand extends Command<
@@ -1791,6 +3864,21 @@ export class ListRoutesCommand extends Command<
   constructor(input: ListRoutesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListRoutesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListSCIMTokens
+ */
+export class ListSCIMTokensCommand extends Command<
+  ListSCIMTokensRequest,
+  ListSCIMTokensCommandOutput,
+  'ListSCIMTokensCommand'
+> {
+  static readonly metaPath = '/ListSCIMTokens/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListSCIMTokensRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListSCIMTokensCommand.metaPath);
   }
 }
 /**
@@ -1824,6 +3912,36 @@ export class ListTagsForResourcesCommand extends Command<
   }
 }
 /**
+ * Command to ListTasks
+ */
+export class ListTasksCommand extends Command<
+  ListTasksRequest,
+  ListTasksCommandOutput,
+  'ListTasksCommand'
+> {
+  static readonly metaPath = '/ListTasks/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListTasksRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListTasksCommand.metaPath);
+  }
+}
+/**
+ * Command to ListTrustAnchors
+ */
+export class ListTrustAnchorsCommand extends Command<
+  ListTrustAnchorsRequest,
+  ListTrustAnchorsCommandOutput,
+  'ListTrustAnchorsCommand'
+> {
+  static readonly metaPath = '/ListTrustAnchors/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListTrustAnchorsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListTrustAnchorsCommand.metaPath);
+  }
+}
+/**
  * Command to ListUserPoolClients
  */
 export class ListUserPoolClientsCommand extends Command<
@@ -1836,6 +3954,36 @@ export class ListUserPoolClientsCommand extends Command<
   constructor(input: ListUserPoolClientsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListUserPoolClientsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListUserPoolDomainOperations
+ */
+export class ListUserPoolDomainOperationsCommand extends Command<
+  ListUserPoolDomainOperationsRequest,
+  ListUserPoolDomainOperationsCommandOutput,
+  'ListUserPoolDomainOperationsCommand'
+> {
+  static readonly metaPath = '/ListUserPoolDomainOperations/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListUserPoolDomainOperationsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListUserPoolDomainOperationsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListUserPoolWellKnownEndpoints
+ */
+export class ListUserPoolWellKnownEndpointsCommand extends Command<
+  ListUserPoolWellKnownEndpointsRequest,
+  ListUserPoolWellKnownEndpointsCommandOutput,
+  'ListUserPoolWellKnownEndpointsCommand'
+> {
+  static readonly metaPath = '/ListUserPoolWellKnownEndpoints/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListUserPoolWellKnownEndpointsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListUserPoolWellKnownEndpointsCommand.metaPath);
   }
 }
 /**
@@ -1869,6 +4017,36 @@ export class ListUsersCommand extends Command<
   }
 }
 /**
+ * Command to ListUsersInDepartment
+ */
+export class ListUsersInDepartmentCommand extends Command<
+  ListUsersInDepartmentRequest,
+  ListUsersInDepartmentCommandOutput,
+  'ListUsersInDepartmentCommand'
+> {
+  static readonly metaPath = '/ListUsersInDepartment/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListUsersInDepartmentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListUsersInDepartmentCommand.metaPath);
+  }
+}
+/**
+ * Command to ListUsersInGroup
+ */
+export class ListUsersInGroupCommand extends Command<
+  ListUsersInGroupRequest,
+  ListUsersInGroupCommandOutput,
+  'ListUsersInGroupCommand'
+> {
+  static readonly metaPath = '/ListUsersInGroup/2025-10-30/id/post/application_json/';
+
+  constructor(input: ListUsersInGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListUsersInGroupCommand.metaPath);
+  }
+}
+/**
  * Command to ListWorkloadIdentities
  */
 export class ListWorkloadIdentitiesCommand extends Command<
@@ -1899,6 +4077,21 @@ export class ListWorkloadPoolsCommand extends Command<
   }
 }
 /**
+ * Command to ModifyOutboundEgressIP
+ */
+export class ModifyOutboundEgressIPCommand extends Command<
+  ModifyOutboundEgressIPRequest,
+  ModifyOutboundEgressIPCommandOutput,
+  'ModifyOutboundEgressIPCommand'
+> {
+  static readonly metaPath = '/ModifyOutboundEgressIP/2025-10-30/id/post/application_json/';
+
+  constructor(input: ModifyOutboundEgressIPRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyOutboundEgressIPCommand.metaPath);
+  }
+}
+/**
  * Command to Oauth2Callback
  */
 export class Oauth2CallbackCommand extends Command<
@@ -1911,6 +4104,21 @@ export class Oauth2CallbackCommand extends Command<
   constructor(input: Oauth2CallbackRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(Oauth2CallbackCommand.metaPath);
+  }
+}
+/**
+ * Command to PrepareIdentityProviderSSODebug
+ */
+export class PrepareIdentityProviderSSODebugCommand extends Command<
+  PrepareIdentityProviderSSODebugRequest,
+  PrepareIdentityProviderSSODebugCommandOutput,
+  'PrepareIdentityProviderSSODebugCommand'
+> {
+  static readonly metaPath = '/PrepareIdentityProviderSSODebug/2025-10-30/id/post/application_json/';
+
+  constructor(input: PrepareIdentityProviderSSODebugRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(PrepareIdentityProviderSSODebugCommand.metaPath);
   }
 }
 /**
@@ -1959,6 +4167,51 @@ export class RegisterServiceCommand extends Command<
   }
 }
 /**
+ * Command to RemoveUsersFromDepartment
+ */
+export class RemoveUsersFromDepartmentCommand extends Command<
+  RemoveUsersFromDepartmentRequest,
+  RemoveUsersFromDepartmentCommandOutput,
+  'RemoveUsersFromDepartmentCommand'
+> {
+  static readonly metaPath = '/RemoveUsersFromDepartment/2025-10-30/id/post/application_json/';
+
+  constructor(input: RemoveUsersFromDepartmentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RemoveUsersFromDepartmentCommand.metaPath);
+  }
+}
+/**
+ * Command to RemoveUsersFromGroup
+ */
+export class RemoveUsersFromGroupCommand extends Command<
+  RemoveUsersFromGroupRequest,
+  RemoveUsersFromGroupCommandOutput,
+  'RemoveUsersFromGroupCommand'
+> {
+  static readonly metaPath = '/RemoveUsersFromGroup/2025-10-30/id/post/application_json/';
+
+  constructor(input: RemoveUsersFromGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RemoveUsersFromGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to RemoveWorkloadMetaData
+ */
+export class RemoveWorkloadMetaDataCommand extends Command<
+  RemoveWorkloadMetaDataRequest,
+  RemoveWorkloadMetaDataCommandOutput,
+  'RemoveWorkloadMetaDataCommand'
+> {
+  static readonly metaPath = '/RemoveWorkloadMetaData/2025-10-30/id/post/application_json/';
+
+  constructor(input: RemoveWorkloadMetaDataRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RemoveWorkloadMetaDataCommand.metaPath);
+  }
+}
+/**
  * Command to TagResources
  */
 export class TagResourcesCommand extends Command<
@@ -1971,6 +4224,36 @@ export class TagResourcesCommand extends Command<
   constructor(input: TagResourcesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(TagResourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to UnBindCredentialProvider
+ */
+export class UnBindCredentialProviderCommand extends Command<
+  UnBindCredentialProviderRequest,
+  UnBindCredentialProviderCommandOutput,
+  'UnBindCredentialProviderCommand'
+> {
+  static readonly metaPath = '/UnBindCredentialProvider/2025-10-30/id/post/application_json/';
+
+  constructor(input: UnBindCredentialProviderRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UnBindCredentialProviderCommand.metaPath);
+  }
+}
+/**
+ * Command to UnBindWorkloadPoolTrustAnchor
+ */
+export class UnBindWorkloadPoolTrustAnchorCommand extends Command<
+  UnBindWorkloadPoolTrustAnchorRequest,
+  UnBindWorkloadPoolTrustAnchorCommandOutput,
+  'UnBindWorkloadPoolTrustAnchorCommand'
+> {
+  static readonly metaPath = '/UnBindWorkloadPoolTrustAnchor/2025-10-30/id/post/application_json/';
+
+  constructor(input: UnBindWorkloadPoolTrustAnchorRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UnBindWorkloadPoolTrustAnchorCommand.metaPath);
   }
 }
 /**
@@ -1989,6 +4272,21 @@ export class UntagResourcesCommand extends Command<
   }
 }
 /**
+ * Command to UpdateAction
+ */
+export class UpdateActionCommand extends Command<
+  UpdateActionRequest,
+  UpdateActionCommandOutput,
+  'UpdateActionCommand'
+> {
+  static readonly metaPath = '/UpdateAction/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateActionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateActionCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateApiKeyCredentialProvider
  */
 export class UpdateApiKeyCredentialProviderCommand extends Command<
@@ -2004,6 +4302,36 @@ export class UpdateApiKeyCredentialProviderCommand extends Command<
   }
 }
 /**
+ * Command to UpdateDepartment
+ */
+export class UpdateDepartmentCommand extends Command<
+  UpdateDepartmentRequest,
+  UpdateDepartmentCommandOutput,
+  'UpdateDepartmentCommand'
+> {
+  static readonly metaPath = '/UpdateDepartment/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateDepartmentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateDepartmentCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateDepartmentMember
+ */
+export class UpdateDepartmentMemberCommand extends Command<
+  UpdateDepartmentMemberRequest,
+  UpdateDepartmentMemberCommandOutput,
+  'UpdateDepartmentMemberCommand'
+> {
+  static readonly metaPath = '/UpdateDepartmentMember/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateDepartmentMemberRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateDepartmentMemberCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateFaasService
  */
 export class UpdateFaasServiceCommand extends Command<
@@ -2016,6 +4344,51 @@ export class UpdateFaasServiceCommand extends Command<
   constructor(input: UpdateFaasServiceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateFaasServiceCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateGroup
+ */
+export class UpdateGroupCommand extends Command<
+  UpdateGroupRequest,
+  UpdateGroupCommandOutput,
+  'UpdateGroupCommand'
+> {
+  static readonly metaPath = '/UpdateGroup/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateIamCredentialsServiceConfig
+ */
+export class UpdateIamCredentialsServiceConfigCommand extends Command<
+  UpdateIamCredentialsServiceConfigRequest,
+  UpdateIamCredentialsServiceConfigCommandOutput,
+  'UpdateIamCredentialsServiceConfigCommand'
+> {
+  static readonly metaPath = '/UpdateIamCredentialsServiceConfig/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateIamCredentialsServiceConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateIamCredentialsServiceConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateIamRoleAttachment
+ */
+export class UpdateIamRoleAttachmentCommand extends Command<
+  UpdateIamRoleAttachmentRequest,
+  UpdateIamRoleAttachmentCommandOutput,
+  'UpdateIamRoleAttachmentCommand'
+> {
+  static readonly metaPath = '/UpdateIamRoleAttachment/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateIamRoleAttachmentRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateIamRoleAttachmentCommand.metaPath);
   }
 }
 /**
@@ -2064,6 +4437,36 @@ export class UpdateIdentityProviderSAMLCommand extends Command<
   }
 }
 /**
+ * Command to UpdateIdentityProviderTokenExchange
+ */
+export class UpdateIdentityProviderTokenExchangeCommand extends Command<
+  UpdateIdentityProviderTokenExchangeRequest,
+  UpdateIdentityProviderTokenExchangeCommandOutput,
+  'UpdateIdentityProviderTokenExchangeCommand'
+> {
+  static readonly metaPath = '/UpdateIdentityProviderTokenExchange/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateIdentityProviderTokenExchangeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateIdentityProviderTokenExchangeCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateIdentityProviderWeCom
+ */
+export class UpdateIdentityProviderWeComCommand extends Command<
+  UpdateIdentityProviderWeComRequest,
+  UpdateIdentityProviderWeComCommandOutput,
+  'UpdateIdentityProviderWeComCommand'
+> {
+  static readonly metaPath = '/UpdateIdentityProviderWeCom/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateIdentityProviderWeComRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateIdentityProviderWeComCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateInboundAuthConfig
  */
 export class UpdateInboundAuthConfigCommand extends Command<
@@ -2106,6 +4509,81 @@ export class UpdateOauth2CredentialProviderCommand extends Command<
   constructor(input: UpdateOauth2CredentialProviderRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateOauth2CredentialProviderCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdatePermissionPoint
+ */
+export class UpdatePermissionPointCommand extends Command<
+  UpdatePermissionPointRequest,
+  UpdatePermissionPointCommandOutput,
+  'UpdatePermissionPointCommand'
+> {
+  static readonly metaPath = '/UpdatePermissionPoint/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdatePermissionPointRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdatePermissionPointCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdatePolicy
+ */
+export class UpdatePolicyCommand extends Command<
+  UpdatePolicyRequest,
+  UpdatePolicyCommandOutput,
+  'UpdatePolicyCommand'
+> {
+  static readonly metaPath = '/UpdatePolicy/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdatePolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdatePolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateResource
+ */
+export class UpdateResourceCommand extends Command<
+  UpdateResourceRequest,
+  UpdateResourceCommandOutput,
+  'UpdateResourceCommand'
+> {
+  static readonly metaPath = '/UpdateResource/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateResourceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateResourceCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateRetrieveUserSyncUser
+ */
+export class UpdateRetrieveUserSyncUserCommand extends Command<
+  UpdateRetrieveUserSyncUserRequest,
+  UpdateRetrieveUserSyncUserCommandOutput,
+  'UpdateRetrieveUserSyncUserCommand'
+> {
+  static readonly metaPath = '/UpdateRetrieveUserSyncUser/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateRetrieveUserSyncUserRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateRetrieveUserSyncUserCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateRoleCredentialProvider
+ */
+export class UpdateRoleCredentialProviderCommand extends Command<
+  UpdateRoleCredentialProviderRequest,
+  UpdateRoleCredentialProviderCommandOutput,
+  'UpdateRoleCredentialProviderCommand'
+> {
+  static readonly metaPath = '/UpdateRoleCredentialProvider/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateRoleCredentialProviderRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateRoleCredentialProviderCommand.metaPath);
   }
 }
 /**
@@ -2154,6 +4632,21 @@ export class UpdateSmsServiceCommand extends Command<
   }
 }
 /**
+ * Command to UpdateTrustAnchor
+ */
+export class UpdateTrustAnchorCommand extends Command<
+  UpdateTrustAnchorRequest,
+  UpdateTrustAnchorCommandOutput,
+  'UpdateTrustAnchorCommand'
+> {
+  static readonly metaPath = '/UpdateTrustAnchor/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateTrustAnchorRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateTrustAnchorCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateUser
  */
 export class UpdateUserCommand extends Command<
@@ -2166,6 +4659,21 @@ export class UpdateUserCommand extends Command<
   constructor(input: UpdateUserRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateUserCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateUserCredential
+ */
+export class UpdateUserCredentialCommand extends Command<
+  UpdateUserCredentialRequest,
+  UpdateUserCredentialCommandOutput,
+  'UpdateUserCredentialCommand'
+> {
+  static readonly metaPath = '/UpdateUserCredential/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateUserCredentialRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateUserCredentialCommand.metaPath);
   }
 }
 /**
@@ -2199,6 +4707,51 @@ export class UpdateUserPoolClientCommand extends Command<
   }
 }
 /**
+ * Command to UpdateUserPoolCustomAttribute
+ */
+export class UpdateUserPoolCustomAttributeCommand extends Command<
+  UpdateUserPoolCustomAttributeRequest,
+  UpdateUserPoolCustomAttributeCommandOutput,
+  'UpdateUserPoolCustomAttributeCommand'
+> {
+  static readonly metaPath = '/UpdateUserPoolCustomAttribute/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateUserPoolCustomAttributeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateUserPoolCustomAttributeCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateUserPoolDomain
+ */
+export class UpdateUserPoolDomainCommand extends Command<
+  UpdateUserPoolDomainRequest,
+  UpdateUserPoolDomainCommandOutput,
+  'UpdateUserPoolDomainCommand'
+> {
+  static readonly metaPath = '/UpdateUserPoolDomain/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateUserPoolDomainRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateUserPoolDomainCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateUsers
+ */
+export class UpdateUsersCommand extends Command<
+  UpdateUsersRequest,
+  UpdateUsersCommandOutput,
+  'UpdateUsersCommand'
+> {
+  static readonly metaPath = '/UpdateUsers/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpdateUsersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateUsersCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateWorkloadIdentity
  */
 export class UpdateWorkloadIdentityCommand extends Command<
@@ -2228,55 +4781,189 @@ export class UpdateWorkloadPoolCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateWorkloadPoolCommand.metaPath);
   }
 }
+/**
+ * Command to UploadDepartmentSyncDepartments
+ */
+export class UploadDepartmentSyncDepartmentsCommand extends Command<
+  UploadDepartmentSyncDepartmentsRequest,
+  UploadDepartmentSyncDepartmentsCommandOutput,
+  'UploadDepartmentSyncDepartmentsCommand'
+> {
+  static readonly metaPath = '/UploadDepartmentSyncDepartments/2025-10-30/id/post/application_json/';
+
+  constructor(input: UploadDepartmentSyncDepartmentsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UploadDepartmentSyncDepartmentsCommand.metaPath);
+  }
+}
+/**
+ * Command to UploadDepartmentSyncMembers
+ */
+export class UploadDepartmentSyncMembersCommand extends Command<
+  UploadDepartmentSyncMembersRequest,
+  UploadDepartmentSyncMembersCommandOutput,
+  'UploadDepartmentSyncMembersCommand'
+> {
+  static readonly metaPath = '/UploadDepartmentSyncMembers/2025-10-30/id/post/application_json/';
+
+  constructor(input: UploadDepartmentSyncMembersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UploadDepartmentSyncMembersCommand.metaPath);
+  }
+}
+/**
+ * Command to UpsertEmailService
+ */
+export class UpsertEmailServiceCommand extends Command<
+  UpsertEmailServiceRequest,
+  UpsertEmailServiceCommandOutput,
+  'UpsertEmailServiceCommand'
+> {
+  static readonly metaPath = '/UpsertEmailService/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpsertEmailServiceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpsertEmailServiceCommand.metaPath);
+  }
+}
+/**
+ * Command to UpsertExternalProvider
+ */
+export class UpsertExternalProviderCommand extends Command<
+  UpsertExternalProviderRequest,
+  UpsertExternalProviderCommandOutput,
+  'UpsertExternalProviderCommand'
+> {
+  static readonly metaPath = '/UpsertExternalProvider/2025-10-30/id/post/application_json/';
+
+  constructor(input: UpsertExternalProviderRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpsertExternalProviderCommand.metaPath);
+  }
+}
+/**
+ * Command to ValidateDepartmentSyncSession
+ */
+export class ValidateDepartmentSyncSessionCommand extends Command<
+  ValidateDepartmentSyncSessionRequest,
+  ValidateDepartmentSyncSessionCommandOutput,
+  'ValidateDepartmentSyncSessionCommand'
+> {
+  static readonly metaPath = '/ValidateDepartmentSyncSession/2025-10-30/id/post/application_json/';
+
+  constructor(input: ValidateDepartmentSyncSessionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ValidateDepartmentSyncSessionCommand.metaPath);
+  }
+}
 
 export default {
   IDClient,
+  AddUsersToDepartmentCommand,
+  AddUsersToGroupCommand,
+  AddWorkloadMetaDataCommand,
   AttachInboundAuthConfigCommand,
+  BatchConvertFederatedUsersToNativeUsersCommand,
   BatchCreateRoutesCommand,
   BatchGetApiKeyCredentialProvidersCommand,
+  BatchGetDepartmentsCommand,
   BatchGetInboundAuthConfigCommand,
   BatchGetOauth2CredentialProvidersCommand,
+  BatchGetObjectPermissionsCommand,
+  BatchGetSubjectPermissionsCommand,
+  BatchListDepartmentsForUsersCommand,
+  BatchSyncDepartmentMembersCommand,
+  BatchUpsertDepartmentsCommand,
+  BindCredentialProviderCommand,
+  BindWorkloadPoolTrustAnchorCommand,
+  CancelDepartmentSyncSessionCommand,
+  CancelTaskCommand,
+  CancelTaskUserSyncCommand,
+  ChangeUsersDepartmentCommand,
+  ChangeUsersGroupCommand,
   CheckApiKeyCommand,
   CheckPermissionCommand,
   CheckServiceNameCommand,
+  CommitDepartmentSyncSessionCommand,
   CompleteResourceTokenAuthCommand,
+  CreateActionCommand,
   CreateApiKeyCommand,
   CreateApiKeyCredentialProviderCommand,
+  CreateDepartmentCommand,
+  CreateDepartmentSyncSessionCommand,
   CreateFaasServiceCommand,
+  CreateGroupCommand,
+  CreateIamOidcProviderCommand,
+  CreateIamRoleAttachmentCommand,
+  CreateIdentityProviderLDAPADAgentCommand,
   CreateIdentityProviderOAuthCommand,
   CreateIdentityProviderOIDCCommand,
   CreateIdentityProviderSAMLCommand,
+  CreateIdentityProviderTokenExchangeCommand,
+  CreateIdentityProviderWeComCommand,
   CreateInboundAuthConfigCommand,
   CreateNamespaceCommand,
   CreateOauth2CredentialProviderCommand,
   CreateOauth2CredentialProviderDcrCommand,
+  CreateOutboundEgressIPCommand,
+  CreatePermissionPointCommand,
   CreatePolicyCommand,
+  CreateResourceCommand,
+  CreateRoleCredentialProviderCommand,
   CreateRouteCommand,
   CreateRouteFromTemplateCommand,
+  CreateSCIMTokenCommand,
   CreateServiceCommand,
   CreateServiceFromTemplateCommand,
+  CreateTaskCommitAppVisibleUsersCommand,
+  CreateTaskMergeUserSyncCommand,
+  CreateTaskRetrieveAppVisibleUsersCommand,
+  CreateTaskRetrieveUserSyncCommand,
+  CreateTaskRetrieveUserSyncAttachmentCommand,
+  CreateTrustAnchorCommand,
   CreateUserCommand,
+  CreateUserCredentialCommand,
+  CreateUserGroupsCsvCommand,
   CreateUserPoolCommand,
   CreateUserPoolClientCommand,
+  CreateUserPoolCustomAttributeCommand,
+  CreateUserPoolDomainCommand,
   CreateUsersCommand,
   CreateUsersCSVCommand,
   CreateWorkloadIdentityCommand,
   CreateWorkloadPoolCommand,
+  DeleteActionCommand,
   DeleteApiKeyCommand,
   DeleteApiKeyCredentialProviderCommand,
+  DeleteDepartmentCommand,
+  DeleteEmailServiceCommand,
+  DeleteExternalProviderCommand,
   DeleteFaasServiceCommand,
+  DeleteGroupCommand,
   DeleteIdentityProviderCommand,
+  DeleteIdentityProviderLDAPADAgentCommand,
   DeleteIdentityProviderOAuthCommand,
   DeleteIdentityProviderOIDCCommand,
   DeleteIdentityProviderSAMLCommand,
+  DeleteIdentityProviderTokenExchangeCommand,
+  DeleteIdentityProviderWeComCommand,
   DeleteInboundAuthConfigCommand,
   DeleteNamespaceCommand,
   DeleteOauth2CredentialProviderCommand,
+  DeleteOutboundEgressIPCommand,
+  DeletePermissionPointCommand,
   DeletePolicyCommand,
+  DeleteResourceCommand,
+  DeleteRoleCredentialProviderCommand,
   DeleteRouteCommand,
+  DeleteSCIMTokenCommand,
   DeleteServiceCommand,
+  DeleteTrustAnchorCommand,
+  DeleteUserCredentialCommand,
   DeleteUserPoolCommand,
   DeleteUserPoolClientCommand,
+  DeleteUserPoolCustomAttributeCommand,
+  DeleteUserPoolDomainCommand,
   DeleteUsersCommand,
   DeleteWorkloadIdentityCommand,
   DeleteWorkloadPoolCommand,
@@ -2284,27 +4971,56 @@ export default {
   DescribeTagOptionsCommand,
   DescribeTemplateOptionsCommand,
   DetachInboundAuthConfigCommand,
+  DisableIdentityProviderForUserCommand,
   DisableRouteCommand,
+  GetActionCommand,
   GetApiKeyCredentialProviderCommand,
+  GetDepartmentCommand,
+  GetDepartmentPathCommand,
+  GetDepartmentSyncJobCommand,
+  GetDepartmentSyncSessionCommand,
+  GetDepartmentTreeCommand,
   GetDocumentStatusCommand,
+  GetEmailServiceCommand,
+  GetExternalProviderCommand,
   GetFaasServiceCommand,
+  GetGroupCommand,
+  GetIamRoleAttachmentCommand,
+  GetIdentityProviderFeishuScopesCommand,
+  GetIdentityProviderLDAPADAgentCommand,
   GetIdentityProviderOAuthCommand,
   GetIdentityProviderOIDCCommand,
   GetIdentityProviderSAMLCommand,
+  GetIdentityProviderTokenExchangeCommand,
+  GetIdentityProviderWeComCommand,
   GetInboundAuthConfigCommand,
   GetNamespaceCommand,
   GetOauth2CredentialProviderCommand,
+  GetOutboundEgressIPCommand,
+  GetPermissionPointCommand,
   GetPolicyCommand,
+  GetResourceCommand,
   GetResourceApiKeyCommand,
   GetResourceOauth2TokenCommand,
+  GetRoleCredentialProviderCommand,
+  GetRoleCredentialsCommand,
   GetRouteCommand,
+  GetSCIMProvisioningDefaultsCommand,
   GetServiceCommand,
   GetSmsServiceCommand,
+  GetTaskCommand,
+  GetTaskStateRetrieveAppVisibleUsersCommand,
+  GetTaskStateUserSyncCommand,
   GetTenantServiceStatusCommand,
+  GetTrustAnchorCommand,
   GetUserCommand,
   GetUserCSVTemplateCommand,
+  GetUserCredentialCommand,
+  GetUserGroupsCsvTemplateCommand,
   GetUserPoolCommand,
   GetUserPoolClientCommand,
+  GetUserPoolDomainCommand,
+  GetUserPoolIamCredentialsServiceConfigCommand,
   GetUserPoolMausCommand,
   GetWorkloadAccessTokenCommand,
   GetWorkloadAccessTokenForJWTCommand,
@@ -2312,45 +5028,103 @@ export default {
   GetWorkloadIdentityCommand,
   GetWorkloadPoolCommand,
   GrantPermissionCommand,
+  LinkIdentityProviderToUserCommand,
+  ListActionsCommand,
+  ListAllIdentityProvidersCommand,
   ListApiKeyCredentialProvidersCommand,
+  ListCommitAppVisibleUsersCommand,
+  ListCredentialProviderBindingsCommand,
   ListCredentialProvidersCommand,
+  ListDepartmentMembersCommand,
+  ListDepartmentSyncJobsCommand,
+  ListDepartmentsCommand,
+  ListDepartmentsForUserCommand,
   ListFaasServicesCommand,
+  ListGroupsCommand,
+  ListGroupsForUserCommand,
+  ListGroupsForUsersCommand,
+  ListIdentityProviderLDAPADAgentCommand,
   ListIdentityProvidersCommand,
   ListIdentityProvidersOAuthCommand,
   ListIdentityProvidersOIDCCommand,
   ListIdentityProvidersSAMLCommand,
+  ListIdentityProvidersTokenExchangeCommand,
+  ListIdentityProvidersWeComCommand,
   ListInboundAuthConfigsCommand,
+  ListMergeUserSyncResultUsersCommand,
   ListNamespacesCommand,
   ListOauth2CredentialProvidersCommand,
+  ListOutboundEgressIPsCommand,
+  ListPermissionPointsCommand,
   ListPoliciesCommand,
+  ListResourcesCommand,
+  ListRetrieveUserSyncUsersCommand,
+  ListRoleCredentialProvidersCommand,
   ListRoutesCommand,
+  ListSCIMTokensCommand,
   ListServicesCommand,
   ListTagsForResourcesCommand,
+  ListTasksCommand,
+  ListTrustAnchorsCommand,
   ListUserPoolClientsCommand,
+  ListUserPoolDomainOperationsCommand,
+  ListUserPoolWellKnownEndpointsCommand,
   ListUserPoolsCommand,
   ListUsersCommand,
+  ListUsersInDepartmentCommand,
+  ListUsersInGroupCommand,
   ListWorkloadIdentitiesCommand,
   ListWorkloadPoolsCommand,
+  ModifyOutboundEgressIPCommand,
   Oauth2CallbackCommand,
+  PrepareIdentityProviderSSODebugCommand,
   PublishRouteCommand,
   PublishServiceCommand,
   RegisterServiceCommand,
+  RemoveUsersFromDepartmentCommand,
+  RemoveUsersFromGroupCommand,
+  RemoveWorkloadMetaDataCommand,
   TagResourcesCommand,
+  UnBindCredentialProviderCommand,
+  UnBindWorkloadPoolTrustAnchorCommand,
   UntagResourcesCommand,
+  UpdateActionCommand,
   UpdateApiKeyCredentialProviderCommand,
+  UpdateDepartmentCommand,
+  UpdateDepartmentMemberCommand,
   UpdateFaasServiceCommand,
+  UpdateGroupCommand,
+  UpdateIamCredentialsServiceConfigCommand,
+  UpdateIamRoleAttachmentCommand,
   UpdateIdentityProviderOAuthCommand,
   UpdateIdentityProviderOIDCCommand,
   UpdateIdentityProviderSAMLCommand,
+  UpdateIdentityProviderTokenExchangeCommand,
+  UpdateIdentityProviderWeComCommand,
   UpdateInboundAuthConfigCommand,
   UpdateNamespaceCommand,
   UpdateOauth2CredentialProviderCommand,
+  UpdatePermissionPointCommand,
+  UpdatePolicyCommand,
+  UpdateResourceCommand,
+  UpdateRetrieveUserSyncUserCommand,
+  UpdateRoleCredentialProviderCommand,
   UpdateRouteCommand,
   UpdateServiceCommand,
   UpdateSmsServiceCommand,
+  UpdateTrustAnchorCommand,
   UpdateUserCommand,
+  UpdateUserCredentialCommand,
   UpdateUserPoolCommand,
   UpdateUserPoolClientCommand,
+  UpdateUserPoolCustomAttributeCommand,
+  UpdateUserPoolDomainCommand,
+  UpdateUsersCommand,
   UpdateWorkloadIdentityCommand,
   UpdateWorkloadPoolCommand,
+  UploadDepartmentSyncDepartmentsCommand,
+  UploadDepartmentSyncMembersCommand,
+  UpsertEmailServiceCommand,
+  UpsertExternalProviderCommand,
+  ValidateDepartmentSyncSessionCommand,
 };

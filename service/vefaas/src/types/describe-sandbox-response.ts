@@ -147,6 +147,18 @@ export interface DescribeSandboxResponse {
     RevisionNumber?: number;
 
     /**
+     * @type {Array<string>}
+     * @memberof DescribeSandboxResponse
+     */
+    RoleChainTrn?: Array<string>;
+
+    /**
+     * @type {string}
+     * @memberof DescribeSandboxResponse
+     */
+    RoleTrn?: string;
+
+    /**
      * @type {string}
      * @memberof DescribeSandboxResponse
      */

@@ -12,8 +12,11 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForCreateIdentityProviderOIDCInput } from './attribute-mapping-for-create-identity-provider-oidcinput';
 import { ClaimsPropagationConfigForCreateIdentityProviderOIDCInput } from './claims-propagation-config-for-create-identity-provider-oidcinput';
+import { PassvaultOauth2CredentialProviderOptionsForCreateIdentityProviderOIDCInput } from './passvault-oauth2-credential-provider-options-for-create-identity-provider-oidcinput';
 import { ProviderOptionsForCreateIdentityProviderOIDCInput } from './provider-options-for-create-identity-provider-oidcinput';
+import { ScimProvisioningForCreateIdentityProviderOIDCInput } from './scim-provisioning-for-create-identity-provider-oidcinput';
  /**
  * 
  *
@@ -21,6 +24,12 @@ import { ProviderOptionsForCreateIdentityProviderOIDCInput } from './provider-op
  * @interface CreateIdentityProviderOIDCRequest
  */
 export interface CreateIdentityProviderOIDCRequest {
+
+    /**
+     * @type {Array<AttributeMappingForCreateIdentityProviderOIDCInput>}
+     * @memberof CreateIdentityProviderOIDCRequest
+     */
+    AttributeMappings?: Array<AttributeMappingForCreateIdentityProviderOIDCInput>;
 
     /**
      * @type {ClaimsPropagationConfigForCreateIdentityProviderOIDCInput}
@@ -39,6 +48,12 @@ export interface CreateIdentityProviderOIDCRequest {
      * @memberof CreateIdentityProviderOIDCRequest
      */
     ClientSecret: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateIdentityProviderOIDCRequest
+     */
+    EipId?: string;
 
     /**
      * @type {boolean}
@@ -65,6 +80,12 @@ export interface CreateIdentityProviderOIDCRequest {
     Name: string;
 
     /**
+     * @type {PassvaultOauth2CredentialProviderOptionsForCreateIdentityProviderOIDCInput}
+     * @memberof CreateIdentityProviderOIDCRequest
+     */
+    PassvaultOauth2CredentialProviderOptions?: PassvaultOauth2CredentialProviderOptionsForCreateIdentityProviderOIDCInput;
+
+    /**
      * @type {string}
      * @memberof CreateIdentityProviderOIDCRequest
      */
@@ -77,10 +98,22 @@ export interface CreateIdentityProviderOIDCRequest {
     ProviderOptions?: ProviderOptionsForCreateIdentityProviderOIDCInput;
 
     /**
+     * @type {ScimProvisioningForCreateIdentityProviderOIDCInput}
+     * @memberof CreateIdentityProviderOIDCRequest
+     */
+    ScimProvisioning?: ScimProvisioningForCreateIdentityProviderOIDCInput;
+
+    /**
      * @type {Array<string>}
      * @memberof CreateIdentityProviderOIDCRequest
      */
     ScopesList?: Array<string>;
+
+    /**
+     * @type {boolean}
+     * @memberof CreateIdentityProviderOIDCRequest
+     */
+    SoleProviderConnection?: boolean;
 
     /**
      * @type {boolean}

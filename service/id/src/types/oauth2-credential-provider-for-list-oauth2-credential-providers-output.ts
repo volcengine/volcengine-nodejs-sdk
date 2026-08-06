@@ -42,6 +42,12 @@ export interface Oauth2CredentialProviderForListOauth2CredentialProvidersOutput 
      * @type {string}
      * @memberof Oauth2CredentialProviderForListOauth2CredentialProvidersOutput
      */
+    ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof Oauth2CredentialProviderForListOauth2CredentialProvidersOutput
+     */
     UpdatedAt?: string;
 
     /**

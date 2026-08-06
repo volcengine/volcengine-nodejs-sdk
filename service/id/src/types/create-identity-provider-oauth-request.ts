@@ -12,7 +12,10 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForCreateIdentityProviderOAuthInput } from './attribute-mapping-for-create-identity-provider-oauth-input';
 import { ClaimsPropagationConfigForCreateIdentityProviderOAuthInput } from './claims-propagation-config-for-create-identity-provider-oauth-input';
+import { ExtraProviderConfigurationForCreateIdentityProviderOAuthInput } from './extra-provider-configuration-for-create-identity-provider-oauth-input';
+import { PassvaultOauth2CredentialProviderOptionsForCreateIdentityProviderOAuthInput } from './passvault-oauth2-credential-provider-options-for-create-identity-provider-oauth-input';
 import { ProviderOptionsForCreateIdentityProviderOAuthInput } from './provider-options-for-create-identity-provider-oauth-input';
  /**
  * 
@@ -21,6 +24,12 @@ import { ProviderOptionsForCreateIdentityProviderOAuthInput } from './provider-o
  * @interface CreateIdentityProviderOAuthRequest
  */
 export interface CreateIdentityProviderOAuthRequest {
+
+    /**
+     * @type {Array<AttributeMappingForCreateIdentityProviderOAuthInput>}
+     * @memberof CreateIdentityProviderOAuthRequest
+     */
+    AttributeMappings?: Array<AttributeMappingForCreateIdentityProviderOAuthInput>;
 
     /**
      * @type {string}
@@ -47,10 +56,22 @@ export interface CreateIdentityProviderOAuthRequest {
     ClientSecret: string;
 
     /**
+     * @type {string}
+     * @memberof CreateIdentityProviderOAuthRequest
+     */
+    EipId?: string;
+
+    /**
      * @type {boolean}
      * @memberof CreateIdentityProviderOAuthRequest
      */
     Enabled: boolean;
+
+    /**
+     * @type {ExtraProviderConfigurationForCreateIdentityProviderOAuthInput}
+     * @memberof CreateIdentityProviderOAuthRequest
+     */
+    ExtraProviderConfiguration?: ExtraProviderConfigurationForCreateIdentityProviderOAuthInput;
 
     /**
      * @type {string}
@@ -63,6 +84,12 @@ export interface CreateIdentityProviderOAuthRequest {
      * @memberof CreateIdentityProviderOAuthRequest
      */
     Name: string;
+
+    /**
+     * @type {PassvaultOauth2CredentialProviderOptionsForCreateIdentityProviderOAuthInput}
+     * @memberof CreateIdentityProviderOAuthRequest
+     */
+    PassvaultOauth2CredentialProviderOptions?: PassvaultOauth2CredentialProviderOptionsForCreateIdentityProviderOAuthInput;
 
     /**
      * @type {string}
@@ -81,6 +108,12 @@ export interface CreateIdentityProviderOAuthRequest {
      * @memberof CreateIdentityProviderOAuthRequest
      */
     ScopesList?: Array<string>;
+
+    /**
+     * @type {boolean}
+     * @memberof CreateIdentityProviderOAuthRequest
+     */
+    SoleProviderConnection?: boolean;
 
     /**
      * @type {string}

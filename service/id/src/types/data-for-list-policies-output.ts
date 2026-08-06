@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DefinitionForListPoliciesOutput } from './definition-for-list-policies-output';
  /**
  * 
  *
@@ -25,6 +26,12 @@ export interface DataForListPoliciesOutput {
      * @memberof DataForListPoliciesOutput
      */
     CreateTime?: string;
+
+    /**
+     * @type {DefinitionForListPoliciesOutput}
+     * @memberof DataForListPoliciesOutput
+     */
+    Definition?: DefinitionForListPoliciesOutput;
 
     /**
      * @type {string}
@@ -55,6 +62,12 @@ export interface DataForListPoliciesOutput {
      * @memberof DataForListPoliciesOutput
      */
     PolicyName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListPoliciesOutput
+     */
+    Status?: string;
 
     /**
      * @type {string}
