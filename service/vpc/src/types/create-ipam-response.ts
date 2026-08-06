@@ -24,6 +24,12 @@ export interface CreateIpamResponse {
      * @type {string}
      * @memberof CreateIpamResponse
      */
+    AsyncTaskId?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateIpamResponse
+     */
     DefaultResourceDiscoveryId?: string;
 
     /**

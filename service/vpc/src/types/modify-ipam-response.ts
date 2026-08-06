@@ -24,5 +24,11 @@ export interface ModifyIpamResponse {
      * @type {string}
      * @memberof ModifyIpamResponse
      */
+    AsyncTaskId?: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyIpamResponse
+     */
     RequestId?: string;
 }
