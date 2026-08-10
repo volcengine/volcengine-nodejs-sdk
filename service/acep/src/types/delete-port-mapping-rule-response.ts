@@ -12,18 +12,29 @@
  * Do not edit the class manually.
  */
 
-import { DetailForDeletePodOutput } from './detail-for-delete-pod-output';
  /**
  * 
  *
  * @export
- * @interface DeletePodResponse
+ * @interface DeletePortMappingRuleResponse
  */
-export interface DeletePodResponse {
+export interface DeletePortMappingRuleResponse {
 
     /**
-     * @type {Array<DetailForDeletePodOutput>}
-     * @memberof DeletePodResponse
+     * @type {string}
+     * @memberof DeletePortMappingRuleResponse
      */
-    Details?: Array<DetailForDeletePodOutput>;
+    PortMappingRuleId?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeletePortMappingRuleResponse
+     */
+    Protocol?: string;
+
+    /**
+     * @type {number}
+     * @memberof DeletePortMappingRuleResponse
+     */
+    SourcePort?: number;
 }
