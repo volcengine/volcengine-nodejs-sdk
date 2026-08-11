@@ -13,8 +13,14 @@ import http from "http";
 import https from "https";
 import type { Socket } from "net";
 import { HttpOptions } from "../types/types";
+import { SDK_NAME, SDK_VERSION } from "../version";
 
 export type AxiosRequestHandlerOptions = HttpOptions;
+
+/**
+ * 默认 User-Agent，格式为 <SDK 名称>/<版本>
+ */
+const DEFAULT_USER_AGENT = `${SDK_NAME}/${SDK_VERSION}`;
 
 /**
  * 创建带有连接超时的 Agent
@@ -39,7 +45,11 @@ function createAgentWithConnectTimeout<T extends http.Agent>(
     options: any,
     callback: (err: Error | null, socket?: Socket) => void,
   ) {
-    const socket: Socket = originalCreateConnection.call(this, options, callback);
+    const socket: Socket = originalCreateConnection.call(
+      this,
+      options,
+      callback,
+    );
 
     let connectTimer: ReturnType<typeof setTimeout> | null = null;
 
@@ -160,10 +170,18 @@ export class AxiosRequestHandler implements RequestHandler {
    * 发送 HTTP 请求
    */
   async request<T>(config: HttpRequestConfig): Promise<HttpResponse<T>> {
+    const headers = { ...config.headers };
+    const hasUserAgent = Object.keys(headers).some(
+      (key) => key.toLowerCase() === "user-agent",
+    );
+    if (!hasUserAgent) {
+      headers["User-Agent"] = DEFAULT_USER_AGENT;
+    }
+
     const axiosConfig: AxiosRequestConfig = {
       url: config.url,
       method: config.method as any,
-      headers: config.headers,
+      headers,
       data: config.data,
       timeout: config.timeout,
       proxy: config.proxy,
