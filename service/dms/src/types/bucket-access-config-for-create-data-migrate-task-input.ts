@@ -60,5 +60,11 @@ export interface BucketAccessConfigForCreateDataMigrateTaskInput {
      * @type {string}
      * @memberof BucketAccessConfigForCreateDataMigrateTaskInput
      */
+    SecurityToken?: string;
+
+    /**
+     * @type {string}
+     * @memberof BucketAccessConfigForCreateDataMigrateTaskInput
+     */
     Vendor?: string;
 }

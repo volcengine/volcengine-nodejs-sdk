@@ -62,6 +62,18 @@ export interface BasicConfigForCreateDataMigrateTaskInput {
      * @type {string}
      * @memberof BasicConfigForCreateDataMigrateTaskInput
      */
+    ReportPathPrefix?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof BasicConfigForCreateDataMigrateTaskInput
+     */
+    SkipArchiveObject?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof BasicConfigForCreateDataMigrateTaskInput
+     */
     SourceType?: BasicConfigForCreateDataMigrateTaskInputSourceTypeEnum;
 
     /**

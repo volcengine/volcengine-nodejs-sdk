@@ -18,12 +18,18 @@ import { CreateDataMigrateTaskRequest } from './types/index';
 import { CreateDataMigrateTaskResponse } from './types/index';
 import { CreateFailureDataMigrateTaskRequest } from './types/index';
 import { CreateFailureDataMigrateTaskResponse } from './types/index';
+import { DeleteDataMigrateTaskRequest } from './types/index';
+import { DeleteDataMigrateTaskResponse } from './types/index';
 import { ListDataMigrateTaskRequest } from './types/index';
 import { ListDataMigrateTaskResponse } from './types/index';
+import { ListFailedObjectsRequest } from './types/index';
+import { ListFailedObjectsResponse } from './types/index';
 import { QueryDataMigrateTaskRequest } from './types/index';
 import { QueryDataMigrateTaskResponse } from './types/index';
 import { ResumeDataMigrateTaskRequest } from './types/index';
 import { ResumeDataMigrateTaskResponse } from './types/index';
+import { RetryMigrateTaskCallbackRequest } from './types/index';
+import { RetryMigrateTaskCallbackResponse } from './types/index';
 import { StopDataMigrateTaskRequest } from './types/index';
 import { StopDataMigrateTaskResponse } from './types/index';
 
@@ -32,11 +38,13 @@ import { StopDataMigrateTaskResponse } from './types/index';
 // ============================================================================
 export type CreateDataMigrateTaskCommandOutput = CommandOutput<CreateDataMigrateTaskResponse>;
 export type CreateFailureDataMigrateTaskCommandOutput = CommandOutput<CreateFailureDataMigrateTaskResponse>;
+export type DeleteDataMigrateTaskCommandOutput = CommandOutput<DeleteDataMigrateTaskResponse>;
 export type ListDataMigrateTaskCommandOutput = CommandOutput<ListDataMigrateTaskResponse>;
+export type ListFailedObjectsCommandOutput = CommandOutput<ListFailedObjectsResponse>;
 export type QueryDataMigrateTaskCommandOutput = CommandOutput<QueryDataMigrateTaskResponse>;
 export type ResumeDataMigrateTaskCommandOutput = CommandOutput<ResumeDataMigrateTaskResponse>;
+export type RetryMigrateTaskCallbackCommandOutput = CommandOutput<RetryMigrateTaskCallbackResponse>;
 export type StopDataMigrateTaskCommandOutput = CommandOutput<StopDataMigrateTaskResponse>;
-
 
 /**
  * DMSClient Service Client
@@ -82,6 +90,21 @@ export class CreateFailureDataMigrateTaskCommand extends Command<
   }
 }
 /**
+ * Command to DeleteDataMigrateTask
+ */
+export class DeleteDataMigrateTaskCommand extends Command<
+  DeleteDataMigrateTaskRequest,
+  DeleteDataMigrateTaskCommandOutput,
+  'DeleteDataMigrateTaskCommand'
+> {
+  static readonly metaPath = '/DeleteDataMigrateTask/2018-01-01/dms/post/application_json/';
+
+  constructor(input: DeleteDataMigrateTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteDataMigrateTaskCommand.metaPath);
+  }
+}
+/**
  * Command to ListDataMigrateTask
  */
 export class ListDataMigrateTaskCommand extends Command<
@@ -94,6 +117,21 @@ export class ListDataMigrateTaskCommand extends Command<
   constructor(input: ListDataMigrateTaskRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListDataMigrateTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to ListFailedObjects
+ */
+export class ListFailedObjectsCommand extends Command<
+  ListFailedObjectsRequest,
+  ListFailedObjectsCommandOutput,
+  'ListFailedObjectsCommand'
+> {
+  static readonly metaPath = '/ListFailedObjects/2018-01-01/dms/post/application_json/';
+
+  constructor(input: ListFailedObjectsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListFailedObjectsCommand.metaPath);
   }
 }
 /**
@@ -127,6 +165,21 @@ export class ResumeDataMigrateTaskCommand extends Command<
   }
 }
 /**
+ * Command to RetryMigrateTaskCallback
+ */
+export class RetryMigrateTaskCallbackCommand extends Command<
+  RetryMigrateTaskCallbackRequest,
+  RetryMigrateTaskCallbackCommandOutput,
+  'RetryMigrateTaskCallbackCommand'
+> {
+  static readonly metaPath = '/RetryMigrateTaskCallback/2018-01-01/dms/post/application_json/';
+
+  constructor(input: RetryMigrateTaskCallbackRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RetryMigrateTaskCallbackCommand.metaPath);
+  }
+}
+/**
  * Command to StopDataMigrateTask
  */
 export class StopDataMigrateTaskCommand extends Command<
@@ -146,8 +199,11 @@ export default {
   DMSClient,
   CreateDataMigrateTaskCommand,
   CreateFailureDataMigrateTaskCommand,
+  DeleteDataMigrateTaskCommand,
   ListDataMigrateTaskCommand,
+  ListFailedObjectsCommand,
   QueryDataMigrateTaskCommand,
   ResumeDataMigrateTaskCommand,
+  RetryMigrateTaskCallbackCommand,
   StopDataMigrateTaskCommand,
 };

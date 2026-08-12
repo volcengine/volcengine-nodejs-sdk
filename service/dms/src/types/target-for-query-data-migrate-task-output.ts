@@ -60,5 +60,11 @@ export interface TargetForQueryDataMigrateTaskOutput {
      * @type {string}
      * @memberof TargetForQueryDataMigrateTaskOutput
      */
+    SecurityToken?: string;
+
+    /**
+     * @type {string}
+     * @memberof TargetForQueryDataMigrateTaskOutput
+     */
     Vendor?: string;
 }
