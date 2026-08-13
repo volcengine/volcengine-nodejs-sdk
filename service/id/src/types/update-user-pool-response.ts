@@ -13,6 +13,7 @@
  */
 
 import { BrandForUpdateUserPoolOutput } from './brand-for-update-user-pool-output';
+import { CustomAttributeForUpdateUserPoolOutput } from './custom-attribute-for-update-user-pool-output';
 import { TagForUpdateUserPoolOutput } from './tag-for-update-user-pool-output';
  /**
  * 
@@ -21,6 +22,12 @@ import { TagForUpdateUserPoolOutput } from './tag-for-update-user-pool-output';
  * @interface UpdateUserPoolResponse
  */
 export interface UpdateUserPoolResponse {
+
+    /**
+     * @type {Array<string>}
+     * @memberof UpdateUserPoolResponse
+     */
+    AuthenticationMethodOrder?: Array<string>;
 
     /**
      * @type {BrandForUpdateUserPoolOutput}
@@ -33,6 +40,18 @@ export interface UpdateUserPoolResponse {
      * @memberof UpdateUserPoolResponse
      */
     CreateTime?: string;
+
+    /**
+     * @type {Array<CustomAttributeForUpdateUserPoolOutput>}
+     * @memberof UpdateUserPoolResponse
+     */
+    CustomAttributes?: Array<CustomAttributeForUpdateUserPoolOutput>;
+
+    /**
+     * @type {string}
+     * @memberof UpdateUserPoolResponse
+     */
+    CustomDomain?: string;
 
     /**
      * @type {string}
@@ -51,6 +70,12 @@ export interface UpdateUserPoolResponse {
      * @memberof UpdateUserPoolResponse
      */
     Domain?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof UpdateUserPoolResponse
+     */
+    EmailAnonymousSignUpEnabled?: boolean;
 
     /**
      * @type {boolean}
@@ -135,6 +160,12 @@ export interface UpdateUserPoolResponse {
      * @memberof UpdateUserPoolResponse
      */
     SelfAccountRecoveryEnabled?: boolean;
+
+    /**
+     * @type {Array<string>}
+     * @memberof UpdateUserPoolResponse
+     */
+    SelfAccountRecoveryVerificationAttributes?: Array<string>;
 
     /**
      * @type {boolean}

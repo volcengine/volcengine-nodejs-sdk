@@ -28,10 +28,16 @@ export interface MaintenanceWindowConfigForListClustersOutput {
     Duration?: number;
 
     /**
-     * @type {boolean}
+     * @type {string}
      * @memberof MaintenanceWindowConfigForListClustersOutput
      */
-    Enabled?: boolean;
+    ExemptEndDate?: string;
+
+    /**
+     * @type {string}
+     * @memberof MaintenanceWindowConfigForListClustersOutput
+     */
+    ExemptStartDate?: string;
 
     /**
      * @type {string}

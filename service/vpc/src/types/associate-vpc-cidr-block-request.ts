@@ -24,6 +24,12 @@ export interface AssociateVpcCidrBlockRequest {
      * @type {string}
      * @memberof AssociateVpcCidrBlockRequest
      */
+    Ipv4IpamPoolId?: string;
+
+    /**
+     * @type {string}
+     * @memberof AssociateVpcCidrBlockRequest
+     */
     Ipv6CidrBlock?: string;
 
     /**

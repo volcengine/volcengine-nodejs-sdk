@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForListIdentityProvidersOutput } from './attribute-mapping-for-list-identity-providers-output';
  /**
  * 
  *
@@ -19,6 +20,12 @@
  * @interface DataForListIdentityProvidersOutput
  */
 export interface DataForListIdentityProvidersOutput {
+
+    /**
+     * @type {Array<AttributeMappingForListIdentityProvidersOutput>}
+     * @memberof DataForListIdentityProvidersOutput
+     */
+    AttributeMappings?: Array<AttributeMappingForListIdentityProvidersOutput>;
 
     /**
      * @type {string}
@@ -31,6 +38,12 @@ export interface DataForListIdentityProvidersOutput {
      * @memberof DataForListIdentityProvidersOutput
      */
     CreateTime?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof DataForListIdentityProvidersOutput
+     */
+    Enabled?: boolean;
 
     /**
      * @type {string}

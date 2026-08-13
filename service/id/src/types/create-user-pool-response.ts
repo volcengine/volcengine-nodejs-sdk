@@ -23,6 +23,12 @@ import { TagForCreateUserPoolOutput } from './tag-for-create-user-pool-output';
 export interface CreateUserPoolResponse {
 
     /**
+     * @type {Array<string>}
+     * @memberof CreateUserPoolResponse
+     */
+    AuthenticationMethodOrder?: Array<string>;
+
+    /**
      * @type {BrandForCreateUserPoolOutput}
      * @memberof CreateUserPoolResponse
      */
@@ -33,6 +39,18 @@ export interface CreateUserPoolResponse {
      * @memberof CreateUserPoolResponse
      */
     CreateTime?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateUserPoolResponse
+     */
+    CustomAttributes?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateUserPoolResponse
+     */
+    CustomDomain?: string;
 
     /**
      * @type {string}
@@ -51,6 +69,12 @@ export interface CreateUserPoolResponse {
      * @memberof CreateUserPoolResponse
      */
     Domain?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof CreateUserPoolResponse
+     */
+    EmailAnonymousSignUpEnabled?: boolean;
 
     /**
      * @type {boolean}
@@ -135,6 +159,12 @@ export interface CreateUserPoolResponse {
      * @memberof CreateUserPoolResponse
      */
     SelfAccountRecoveryEnabled?: boolean;
+
+    /**
+     * @type {Array<string>}
+     * @memberof CreateUserPoolResponse
+     */
+    SelfAccountRecoveryVerificationAttributes?: Array<string>;
 
     /**
      * @type {boolean}

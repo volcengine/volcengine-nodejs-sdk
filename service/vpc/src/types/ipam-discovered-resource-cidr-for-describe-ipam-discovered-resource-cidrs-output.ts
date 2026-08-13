@@ -24,12 +24,6 @@ export interface IpamDiscoveredResourceCidrForDescribeIpamDiscoveredResourceCidr
      * @type {string}
      * @memberof IpamDiscoveredResourceCidrForDescribeIpamDiscoveredResourceCidrsOutput
      */
-    CidrBlock?: string;
-
-    /**
-     * @type {string}
-     * @memberof IpamDiscoveredResourceCidrForDescribeIpamDiscoveredResourceCidrsOutput
-     */
     DiscoveryTime?: string;
 
     /**
@@ -48,7 +42,25 @@ export interface IpamDiscoveredResourceCidrForDescribeIpamDiscoveredResourceCidr
      * @type {string}
      * @memberof IpamDiscoveredResourceCidrForDescribeIpamDiscoveredResourceCidrsOutput
      */
+    ResourceCidr?: string;
+
+    /**
+     * @type {string}
+     * @memberof IpamDiscoveredResourceCidrForDescribeIpamDiscoveredResourceCidrsOutput
+     */
     ResourceId?: string;
+
+    /**
+     * @type {string}
+     * @memberof IpamDiscoveredResourceCidrForDescribeIpamDiscoveredResourceCidrsOutput
+     */
+    ResourceName?: string;
+
+    /**
+     * @type {string}
+     * @memberof IpamDiscoveredResourceCidrForDescribeIpamDiscoveredResourceCidrsOutput
+     */
+    ResourceOwnerId?: string;
 
     /**
      * @type {string}

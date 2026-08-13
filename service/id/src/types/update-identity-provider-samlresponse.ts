@@ -12,8 +12,11 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForUpdateIdentityProviderSAMLOutput } from './attribute-mapping-for-update-identity-provider-samloutput';
 import { ClaimsPropagationConfigForUpdateIdentityProviderSAMLOutput } from './claims-propagation-config-for-update-identity-provider-samloutput';
+import { EipRecordForUpdateIdentityProviderSAMLOutput } from './eip-record-for-update-identity-provider-samloutput';
 import { ProviderOptionsForUpdateIdentityProviderSAMLOutput } from './provider-options-for-update-identity-provider-samloutput';
+import { ScimProvisioningForUpdateIdentityProviderSAMLOutput } from './scim-provisioning-for-update-identity-provider-samloutput';
  /**
  * 
  *
@@ -29,6 +32,12 @@ export interface UpdateIdentityProviderSAMLResponse {
     AttributeMapping?: string;
 
     /**
+     * @type {Array<AttributeMappingForUpdateIdentityProviderSAMLOutput>}
+     * @memberof UpdateIdentityProviderSAMLResponse
+     */
+    AttributeMappings?: Array<AttributeMappingForUpdateIdentityProviderSAMLOutput>;
+
+    /**
      * @type {string}
      * @memberof UpdateIdentityProviderSAMLResponse
      */
@@ -39,6 +48,12 @@ export interface UpdateIdentityProviderSAMLResponse {
      * @memberof UpdateIdentityProviderSAMLResponse
      */
     ClaimsPropagationConfig?: ClaimsPropagationConfigForUpdateIdentityProviderSAMLOutput;
+
+    /**
+     * @type {EipRecordForUpdateIdentityProviderSAMLOutput}
+     * @memberof UpdateIdentityProviderSAMLResponse
+     */
+    EipRecord?: EipRecordForUpdateIdentityProviderSAMLOutput;
 
     /**
      * @type {boolean}
@@ -87,6 +102,18 @@ export interface UpdateIdentityProviderSAMLResponse {
      * @memberof UpdateIdentityProviderSAMLResponse
      */
     ProviderOptions?: ProviderOptionsForUpdateIdentityProviderSAMLOutput;
+
+    /**
+     * @type {ScimProvisioningForUpdateIdentityProviderSAMLOutput}
+     * @memberof UpdateIdentityProviderSAMLResponse
+     */
+    ScimProvisioning?: ScimProvisioningForUpdateIdentityProviderSAMLOutput;
+
+    /**
+     * @type {string}
+     * @memberof UpdateIdentityProviderSAMLResponse
+     */
+    SpMetadata?: string;
 
     /**
      * @type {string}

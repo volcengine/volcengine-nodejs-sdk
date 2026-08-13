@@ -28,6 +28,12 @@ export interface ListUsersResponse {
     Data?: Array<DataForListUsersOutput>;
 
     /**
+     * @type {string}
+     * @memberof ListUsersResponse
+     */
+    NextToken?: string;
+
+    /**
      * @type {number}
      * @memberof ListUsersResponse
      */

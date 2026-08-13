@@ -21,6 +21,12 @@
 export interface FilterForListCredentialProvidersInput {
 
     /**
+     * @type {boolean}
+     * @memberof FilterForListCredentialProvidersInput
+     */
+    BindingStatus?: boolean;
+
+    /**
      * @type {string}
      * @memberof FilterForListCredentialProvidersInput
      */
@@ -37,6 +43,18 @@ export interface FilterForListCredentialProvidersInput {
      * @memberof FilterForListCredentialProvidersInput
      */
     PoolName?: string;
+
+    /**
+     * @type {string}
+     * @memberof FilterForListCredentialProvidersInput
+     */
+    ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof FilterForListCredentialProvidersInput
+     */
+    Source?: string;
 
     /**
      * @type {string}

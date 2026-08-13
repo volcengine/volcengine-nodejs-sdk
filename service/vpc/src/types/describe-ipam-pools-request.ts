@@ -43,6 +43,12 @@ export interface DescribeIpamPoolsRequest {
      * @type {string}
      * @memberof DescribeIpamPoolsRequest
      */
+    IpamPoolOwnerId?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeIpamPoolsRequest
+     */
     IpamScopeId?: string;
 
     /**

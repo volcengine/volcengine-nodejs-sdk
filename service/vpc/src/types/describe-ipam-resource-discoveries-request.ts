@@ -34,6 +34,12 @@ export interface DescribeIpamResourceDiscoveriesRequest {
     IpamResourceDiscoveryName?: string;
 
     /**
+     * @type {string}
+     * @memberof DescribeIpamResourceDiscoveriesRequest
+     */
+    IpamResourceDiscoveryOwnerId?: string;
+
+    /**
      * @type {number}
      * @memberof DescribeIpamResourceDiscoveriesRequest
      */

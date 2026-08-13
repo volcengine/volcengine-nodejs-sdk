@@ -27,8 +27,8 @@ export interface DeletePolicyResponse {
     Message?: string;
 
     /**
-     * @type {number}
+     * @type {boolean}
      * @memberof DeletePolicyResponse
      */
-    Success?: number;
+    Success?: boolean;
 }

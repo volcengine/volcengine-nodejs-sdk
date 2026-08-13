@@ -34,8 +34,26 @@ export interface DescribeIpamDiscoveredResourceCidrsResponse {
     NextToken?: string;
 
     /**
+     * @type {number}
+     * @memberof DescribeIpamDiscoveredResourceCidrsResponse
+     */
+    PageNumber?: number;
+
+    /**
+     * @type {number}
+     * @memberof DescribeIpamDiscoveredResourceCidrsResponse
+     */
+    PageSize?: number;
+
+    /**
      * @type {string}
      * @memberof DescribeIpamDiscoveredResourceCidrsResponse
      */
     RequestId?: string;
+
+    /**
+     * @type {number}
+     * @memberof DescribeIpamDiscoveredResourceCidrsResponse
+     */
+    TotalCount?: number;
 }

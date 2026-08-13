@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { MetaDataForUpdateWorkloadIdentityInput } from './meta-data-for-update-workload-identity-input';
  /**
  * 
  *
@@ -31,6 +32,18 @@ export interface UpdateWorkloadIdentityRequest {
      * @memberof UpdateWorkloadIdentityRequest
      */
     Description?: string;
+
+    /**
+     * @type {Array<MetaDataForUpdateWorkloadIdentityInput>}
+     * @memberof UpdateWorkloadIdentityRequest
+     */
+    MetaData?: Array<MetaDataForUpdateWorkloadIdentityInput>;
+
+    /**
+     * @type {string}
+     * @memberof UpdateWorkloadIdentityRequest
+     */
+    MetaDataUpdateMode?: string;
 
     /**
      * @type {string}

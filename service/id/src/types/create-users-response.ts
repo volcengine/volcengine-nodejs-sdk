@@ -13,6 +13,7 @@
  */
 
 import { ErrorsStructuredForCreateUsersOutput } from './errors-structured-for-create-users-output';
+import { SuccessfulUidsStructuredForCreateUsersOutput } from './successful-uids-structured-for-create-users-output';
  /**
  * 
  *
@@ -50,4 +51,10 @@ export interface CreateUsersResponse {
      * @memberof CreateUsersResponse
      */
     SuccessfulUids?: Array<string>;
+
+    /**
+     * @type {Array<SuccessfulUidsStructuredForCreateUsersOutput>}
+     * @memberof CreateUsersResponse
+     */
+    SuccessfulUidsStructured?: Array<SuccessfulUidsStructuredForCreateUsersOutput>;
 }

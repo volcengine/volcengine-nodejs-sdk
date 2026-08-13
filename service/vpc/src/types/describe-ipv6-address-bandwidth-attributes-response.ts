@@ -70,6 +70,12 @@ export interface DescribeIpv6AddressBandwidthAttributesResponse {
     ISP?: string;
 
     /**
+     * @type {boolean}
+     * @memberof DescribeIpv6AddressBandwidthAttributesResponse
+     */
+    IndependentLimited?: boolean;
+
+    /**
      * @type {string}
      * @memberof DescribeIpv6AddressBandwidthAttributesResponse
      */
@@ -122,6 +128,12 @@ export interface DescribeIpv6AddressBandwidthAttributesResponse {
      * @memberof DescribeIpv6AddressBandwidthAttributesResponse
      */
     RequestId?: string;
+
+    /**
+     * @type {number}
+     * @memberof DescribeIpv6AddressBandwidthAttributesResponse
+     */
+    ReservationBandwidth?: number;
 
     /**
      * @type {boolean}

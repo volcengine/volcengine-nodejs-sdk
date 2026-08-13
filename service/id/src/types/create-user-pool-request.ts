@@ -23,6 +23,12 @@ import { TagForCreateUserPoolInput } from './tag-for-create-user-pool-input';
 export interface CreateUserPoolRequest {
 
     /**
+     * @type {Array<string>}
+     * @memberof CreateUserPoolRequest
+     */
+    AuthenticationMethodOrder?: Array<string>;
+
+    /**
      * @type {BrandForCreateUserPoolInput}
      * @memberof CreateUserPoolRequest
      */
@@ -33,6 +39,12 @@ export interface CreateUserPoolRequest {
      * @memberof CreateUserPoolRequest
      */
     Description?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof CreateUserPoolRequest
+     */
+    EmailAnonymousSignUpEnabled?: boolean;
 
     /**
      * @type {boolean}
@@ -71,6 +83,12 @@ export interface CreateUserPoolRequest {
     SelfAccountRecoveryEnabled?: boolean;
 
     /**
+     * @type {Array<string>}
+     * @memberof CreateUserPoolRequest
+     */
+    SelfAccountRecoveryVerificationAttributes?: Array<string>;
+
+    /**
      * @type {boolean}
      * @memberof CreateUserPoolRequest
      */
@@ -89,10 +107,10 @@ export interface CreateUserPoolRequest {
     SignUpAutoVerificationEnabled?: boolean;
 
     /**
-     * @type {string}
+     * @type {boolean}
      * @memberof CreateUserPoolRequest
      */
-    SmsAnonymousSignUpEnabled?: string;
+    SmsAnonymousSignUpEnabled?: boolean;
 
     /**
      * @type {boolean}

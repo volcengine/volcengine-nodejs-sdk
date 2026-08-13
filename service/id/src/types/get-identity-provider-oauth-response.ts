@@ -12,7 +12,10 @@
  * Do not edit the class manually.
  */
 
+import { AttributeMappingForGetIdentityProviderOAuthOutput } from './attribute-mapping-for-get-identity-provider-oauth-output';
 import { ClaimsPropagationConfigForGetIdentityProviderOAuthOutput } from './claims-propagation-config-for-get-identity-provider-oauth-output';
+import { EipRecordForGetIdentityProviderOAuthOutput } from './eip-record-for-get-identity-provider-oauth-output';
+import { ExtraProviderConfigurationForGetIdentityProviderOAuthOutput } from './extra-provider-configuration-for-get-identity-provider-oauth-output';
 import { ProviderOptionsForGetIdentityProviderOAuthOutput } from './provider-options-for-get-identity-provider-oauth-output';
  /**
  * 
@@ -21,6 +24,12 @@ import { ProviderOptionsForGetIdentityProviderOAuthOutput } from './provider-opt
  * @interface GetIdentityProviderOAuthResponse
  */
 export interface GetIdentityProviderOAuthResponse {
+
+    /**
+     * @type {Array<AttributeMappingForGetIdentityProviderOAuthOutput>}
+     * @memberof GetIdentityProviderOAuthResponse
+     */
+    AttributeMappings?: Array<AttributeMappingForGetIdentityProviderOAuthOutput>;
 
     /**
      * @type {string}
@@ -47,10 +56,22 @@ export interface GetIdentityProviderOAuthResponse {
     ClientSecret?: string;
 
     /**
+     * @type {EipRecordForGetIdentityProviderOAuthOutput}
+     * @memberof GetIdentityProviderOAuthResponse
+     */
+    EipRecord?: EipRecordForGetIdentityProviderOAuthOutput;
+
+    /**
      * @type {boolean}
      * @memberof GetIdentityProviderOAuthResponse
      */
     Enabled?: boolean;
+
+    /**
+     * @type {ExtraProviderConfigurationForGetIdentityProviderOAuthOutput}
+     * @memberof GetIdentityProviderOAuthResponse
+     */
+    ExtraProviderConfiguration?: ExtraProviderConfigurationForGetIdentityProviderOAuthOutput;
 
     /**
      * @type {string}
@@ -81,6 +102,12 @@ export interface GetIdentityProviderOAuthResponse {
      * @memberof GetIdentityProviderOAuthResponse
      */
     ScopesList?: Array<string>;
+
+    /**
+     * @type {boolean}
+     * @memberof GetIdentityProviderOAuthResponse
+     */
+    SoleProviderConnection?: boolean;
 
     /**
      * @type {string}
