@@ -171,11 +171,26 @@ export class AxiosRequestHandler implements RequestHandler {
    */
   async request<T>(config: HttpRequestConfig): Promise<HttpResponse<T>> {
     const headers = { ...config.headers };
-    const hasUserAgent = Object.keys(headers).some(
+    // User-Agent 采用 append 模式：SDK 默认 UA 始终保留在前，
+    // 用户自定义的 UA 追加在其后（空格分隔），与 Go / PHP SDK 行为一致。
+    const userAgentKey = Object.keys(headers).find(
       (key) => key.toLowerCase() === "user-agent",
     );
-    if (!hasUserAgent) {
-      headers["User-Agent"] = DEFAULT_USER_AGENT;
+    const customUserAgent =
+      userAgentKey !== undefined ? String(headers[userAgentKey]).trim() : "";
+    if (userAgentKey !== undefined) {
+      delete headers[userAgentKey];
+    }
+    if (
+      customUserAgent === "" ||
+      customUserAgent === DEFAULT_USER_AGENT ||
+      customUserAgent.startsWith(`${DEFAULT_USER_AGENT} `)
+    ) {
+      // 无自定义，或已包含 SDK UA 前缀，避免重复拼接
+      headers["User-Agent"] =
+        customUserAgent === "" ? DEFAULT_USER_AGENT : customUserAgent;
+    } else {
+      headers["User-Agent"] = `${DEFAULT_USER_AGENT} ${customUserAgent}`;
     }
 
     const axiosConfig: AxiosRequestConfig = {

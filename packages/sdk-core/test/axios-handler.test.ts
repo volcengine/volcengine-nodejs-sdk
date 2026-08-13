@@ -1,4 +1,5 @@
 import { AxiosRequestHandler } from "../src/request-handlers/axios-handler";
+import { SDK_NAME, SDK_VERSION } from "../src/version";
 import { HttpOptions } from "../src/types/types";
 import type {
   AxiosInstance,
@@ -71,11 +72,7 @@ describe("AxiosRequestHandler - normalizeHeaders", () => {
         "x-custom-list": ["item1", "item2", "item3"],
       };
       const normalized = (handler as any).normalizeHeaders(headers);
-      expect(normalized["x-custom-list"]).toEqual([
-        "item1",
-        "item2",
-        "item3",
-      ]);
+      expect(normalized["x-custom-list"]).toEqual(["item1", "item2", "item3"]);
     });
 
     test("should handle array with numbers", () => {
@@ -264,6 +261,72 @@ describe("AxiosRequestHandler - normalizeHeaders", () => {
     });
   });
 
+  describe("User-Agent append behavior", () => {
+    const DEFAULT_UA = `${SDK_NAME}/${SDK_VERSION}`;
+
+    const getSentUserAgent = () => {
+      const sentConfig = (mockAxiosInstance.request as jest.Mock).mock
+        .calls[0][0];
+      return sentConfig.headers["User-Agent"];
+    };
+
+    beforeEach(() => {
+      (mockAxiosInstance.request as jest.Mock).mockResolvedValue(
+        createAxiosResponse({ ok: true }),
+      );
+    });
+
+    test("should use default UA when none provided", async () => {
+      await handler.request({
+        url: "https://example.com/api",
+        method: "GET",
+        headers: {},
+        data: undefined,
+      });
+      expect(getSentUserAgent()).toBe(DEFAULT_UA);
+    });
+
+    test("should append custom UA after default UA", async () => {
+      await handler.request({
+        url: "https://example.com/api",
+        method: "GET",
+        headers: { "User-Agent": "my-app/2.0" },
+        data: undefined,
+      });
+      expect(getSentUserAgent()).toBe(`${DEFAULT_UA} my-app/2.0`);
+    });
+
+    test("should append custom UA regardless of header casing", async () => {
+      await handler.request({
+        url: "https://example.com/api",
+        method: "GET",
+        headers: { "user-agent": "my-app/2.0" },
+        data: undefined,
+      });
+      expect(getSentUserAgent()).toBe(`${DEFAULT_UA} my-app/2.0`);
+    });
+
+    test("should not duplicate SDK UA when custom already carries the prefix", async () => {
+      await handler.request({
+        url: "https://example.com/api",
+        method: "GET",
+        headers: { "User-Agent": `${DEFAULT_UA} my-app/2.0` },
+        data: undefined,
+      });
+      expect(getSentUserAgent()).toBe(`${DEFAULT_UA} my-app/2.0`);
+    });
+
+    test("should fall back to default UA when custom is empty/whitespace", async () => {
+      await handler.request({
+        url: "https://example.com/api",
+        method: "GET",
+        headers: { "User-Agent": "   " },
+        data: undefined,
+      });
+      expect(getSentUserAgent()).toBe(DEFAULT_UA);
+    });
+  });
+
   describe("destroy method", () => {
     test("should not throw when destroy is called", () => {
       expect(() => handler.destroy()).not.toThrow();
@@ -345,7 +408,7 @@ describe("AxiosRequestHandler - httpsAgent", () => {
         ignoreSSL: true,
         pool: { keepAlive: true },
       },
-      mockClientFactory
+      mockClientFactory,
     );
     const config = mockClientFactory.mock.calls[0][0];
     expect(config.httpsAgent).toBe(providedAgent);
