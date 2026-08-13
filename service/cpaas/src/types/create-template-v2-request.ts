@@ -31,7 +31,7 @@ export interface CreateTemplateV2Request {
      * @type {string}
      * @memberof CreateTemplateV2Request
      */
-    EnableShortUrl?: string;
+    EnabledShortUrl?: string;
 
     /**
      * @type {string}
@@ -50,12 +50,6 @@ export interface CreateTemplateV2Request {
      * @memberof CreateTemplateV2Request
      */
     SendAudit?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateTemplateV2Request
-     */
-    Signature?: string;
 
     /**
      * @type {string}
