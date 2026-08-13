@@ -5,4 +5,4 @@
  * 版本号在源码中维护，发布时需与 package.json 的 version 同步。
  */
 export const SDK_NAME = "volcengine-nodejs-sdk";
-export const SDK_VERSION = "1.0.2";
+export const SDK_VERSION = process.env.SDK_VERSION;
