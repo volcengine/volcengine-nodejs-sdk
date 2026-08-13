@@ -62,6 +62,18 @@ export interface BasicConfigForQueryDataMigrateTaskOutput {
      * @type {string}
      * @memberof BasicConfigForQueryDataMigrateTaskOutput
      */
+    ReportPathPrefix?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof BasicConfigForQueryDataMigrateTaskOutput
+     */
+    SkipArchiveObject?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof BasicConfigForQueryDataMigrateTaskOutput
+     */
     SourceType?: BasicConfigForQueryDataMigrateTaskOutputSourceTypeEnum;
 
     /**
