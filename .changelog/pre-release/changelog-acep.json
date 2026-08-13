@@ -1,12 +1,9 @@
 {
   "actions": [
-    "ListAppImage",
-    "CreateAppImage",
-    "DeleteAppImage",
-    "DetailAppImage",
-    "GetEdgeTunnelConnectionInfo"
+    "DeletePortMappingRule",
+    "DeletePod"
   ],
-  "description": "ACEP: 新增 ListAppImage, CreateAppImage, DeleteAppImage, DetailAppImage, GetEdgeTunnelConnectionInfo",
+  "description": "ACEP: 新增 DeletePortMappingRule；修改 DeletePod",
   "modules": "service/ACEP",
-  "type": "feature"
+  "type": "breaking-change"
 }

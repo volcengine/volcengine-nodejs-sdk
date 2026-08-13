@@ -78,6 +78,8 @@ import { DeleteDisplayLayoutRequest } from './types/index';
 import { DeleteDisplayLayoutResponse } from './types/index';
 import { DeletePodRequest } from './types/index';
 import { DeletePodResponse } from './types/index';
+import { DeletePortMappingRuleRequest } from './types/index';
+import { DeletePortMappingRuleResponse } from './types/index';
 import { DeleteTagRequest } from './types/index';
 import { DeleteTagResponse } from './types/index';
 import { DetailAppImageRequest } from './types/index';
@@ -292,6 +294,7 @@ export type DeleteCustomRouteCommandOutput = CommandOutput<DeleteCustomRouteResp
 export type DeleteDNSRuleCommandOutput = CommandOutput<DeleteDNSRuleResponse>;
 export type DeleteDisplayLayoutCommandOutput = CommandOutput<DeleteDisplayLayoutResponse>;
 export type DeletePodCommandOutput = CommandOutput<DeletePodResponse>;
+export type DeletePortMappingRuleCommandOutput = CommandOutput<DeletePortMappingRuleResponse>;
 export type DeleteTagCommandOutput = CommandOutput<DeleteTagResponse>;
 export type DetailAppCommandOutput = CommandOutput<DetailAppResponse>;
 export type DetailAppImageCommandOutput = CommandOutput<DetailAppImageResponse>;
@@ -873,6 +876,21 @@ export class DeletePodCommand extends Command<
   constructor(input: DeletePodRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeletePodCommand.metaPath);
+  }
+}
+/**
+ * Command to DeletePortMappingRule
+ */
+export class DeletePortMappingRuleCommand extends Command<
+  DeletePortMappingRuleRequest,
+  DeletePortMappingRuleCommandOutput,
+  'DeletePortMappingRuleCommand'
+> {
+  static readonly metaPath = '/DeletePortMappingRule/2025-05-01/acep/post/application_json/';
+
+  constructor(input: DeletePortMappingRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeletePortMappingRuleCommand.metaPath);
   }
 }
 /**
@@ -2245,6 +2263,7 @@ export default {
   DeleteDNSRuleCommand,
   DeleteDisplayLayoutCommand,
   DeletePodCommand,
+  DeletePortMappingRuleCommand,
   DeleteTagCommand,
   DetailAppCommand,
   DetailAppImageCommand,
