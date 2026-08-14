@@ -60,5 +60,11 @@ export interface BucketAccessConfigForQueryDataMigrateTaskOutput {
      * @type {string}
      * @memberof BucketAccessConfigForQueryDataMigrateTaskOutput
      */
+    SecurityToken?: string;
+
+    /**
+     * @type {string}
+     * @memberof BucketAccessConfigForQueryDataMigrateTaskOutput
+     */
     Vendor?: string;
 }

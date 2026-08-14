@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { DetailForDeletePodOutput } from './detail-for-delete-pod-output';
  /**
  * 
  *
@@ -19,4 +20,10 @@
  * @interface DeletePodResponse
  */
 export interface DeletePodResponse {
+
+    /**
+     * @type {Array<DetailForDeletePodOutput>}
+     * @memberof DeletePodResponse
+     */
+    Details?: Array<DetailForDeletePodOutput>;
 }

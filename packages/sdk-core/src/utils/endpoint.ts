@@ -160,6 +160,7 @@ const defaultEndpoint: Record<string, ServiceEndpointInfo> = {
   cloudcontrol: { Service: "cloudcontrol", IsGlobal: false },
   volcsms: { Service: "volcsms", IsGlobal: true },
   id: { Service: "id", IsGlobal: false },
+  tidb: { Service: "tidb", IsGlobal: false },
 };
 
 const bootstrapRegion: Record<string, unknown> = {
