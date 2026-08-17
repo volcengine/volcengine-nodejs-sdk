@@ -161,6 +161,7 @@ const defaultEndpoint: Record<string, ServiceEndpointInfo> = {
   volcsms: { Service: "volcsms", IsGlobal: true },
   id: { Service: "id", IsGlobal: false },
   tidb: { Service: "tidb", IsGlobal: false },
+  vikingdb: { Service: "vikingdb", IsGlobal: false },
 };
 
 const bootstrapRegion: Record<string, unknown> = {
