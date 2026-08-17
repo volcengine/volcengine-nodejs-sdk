@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { AutoPauseConfigForCreateSandboxInput } from './auto-pause-config-for-create-sandbox-input';
+import { AutoSnapshotConfigForCreateSandboxInput } from './auto-snapshot-config-for-create-sandbox-input';
 import { EBSVolumeForCreateSandboxInput } from './ebsvolume-for-create-sandbox-input';
 import { EmptyDirVolumeForCreateSandboxInput } from './empty-dir-volume-for-create-sandbox-input';
 import { EnvForCreateSandboxInput } from './env-for-create-sandbox-input';
@@ -32,6 +34,18 @@ export interface CreateSandboxRequest {
      * @memberof CreateSandboxRequest
      */
     Async?: boolean;
+
+    /**
+     * @type {AutoPauseConfigForCreateSandboxInput}
+     * @memberof CreateSandboxRequest
+     */
+    AutoPauseConfig?: AutoPauseConfigForCreateSandboxInput;
+
+    /**
+     * @type {AutoSnapshotConfigForCreateSandboxInput}
+     * @memberof CreateSandboxRequest
+     */
+    AutoSnapshotConfig?: AutoSnapshotConfigForCreateSandboxInput;
 
     /**
      * @type {number}
