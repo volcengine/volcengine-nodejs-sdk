@@ -34,10 +34,10 @@ export interface PtBRForTermBaseTermGroupsOutput {
     applyMode?: number;
 
     /**
-     * @type {number}
+     * @type {boolean}
      * @memberof PtBRForTermBaseTermGroupsOutput
      */
-    caseSensitive?: number;
+    caseSensitive?: boolean;
 
     /**
      * @type {string}

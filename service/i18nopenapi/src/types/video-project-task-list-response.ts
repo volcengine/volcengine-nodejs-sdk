@@ -13,6 +13,7 @@
  */
 
 import { DataForVideoProjectTaskListOutput } from './data-for-video-project-task-list-output';
+import { PaginationForVideoProjectTaskListOutput } from './pagination-for-video-project-task-list-output';
  /**
  * 
  *
@@ -26,4 +27,16 @@ export interface VideoProjectTaskListResponse {
      * @memberof VideoProjectTaskListResponse
      */
     data?: DataForVideoProjectTaskListOutput;
+
+    /**
+     * @type {PaginationForVideoProjectTaskListOutput}
+     * @memberof VideoProjectTaskListResponse
+     */
+    pagination?: PaginationForVideoProjectTaskListOutput;
+
+    /**
+     * @type {number}
+     * @memberof VideoProjectTaskListResponse
+     */
+    total?: number;
 }

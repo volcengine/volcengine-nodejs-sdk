@@ -34,10 +34,10 @@ export interface ItITForTermBaseTermGroupsOutput {
     applyMode?: number;
 
     /**
-     * @type {number}
+     * @type {boolean}
      * @memberof ItITForTermBaseTermGroupsOutput
      */
-    caseSensitive?: number;
+    caseSensitive?: boolean;
 
     /**
      * @type {string}

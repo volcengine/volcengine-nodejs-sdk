@@ -34,10 +34,10 @@ export interface ArSYForTermBaseTermGroupsOutput {
     applyMode?: number;
 
     /**
-     * @type {number}
+     * @type {boolean}
      * @memberof ArSYForTermBaseTermGroupsOutput
      */
-    caseSensitive?: number;
+    caseSensitive?: boolean;
 
     /**
      * @type {string}

@@ -34,10 +34,10 @@ export interface FaIRForTermBaseTermGroupsOutput {
     applyMode?: number;
 
     /**
-     * @type {number}
+     * @type {boolean}
      * @memberof FaIRForTermBaseTermGroupsOutput
      */
-    caseSensitive?: number;
+    caseSensitive?: boolean;
 
     /**
      * @type {string}

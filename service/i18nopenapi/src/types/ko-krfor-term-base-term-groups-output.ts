@@ -34,10 +34,10 @@ export interface KoKRForTermBaseTermGroupsOutput {
     applyMode?: number;
 
     /**
-     * @type {number}
+     * @type {boolean}
      * @memberof KoKRForTermBaseTermGroupsOutput
      */
-    caseSensitive?: number;
+    caseSensitive?: boolean;
 
     /**
      * @type {string}

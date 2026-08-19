@@ -59,6 +59,12 @@ export interface VideoProjectAddTargetLangsToExistingDramaRequest {
     isDub?: boolean;
 
     /**
+     * @type {boolean}
+     * @memberof VideoProjectAddTargetLangsToExistingDramaRequest
+     */
+    needTermValidation?: boolean;
+
+    /**
      * @type {string}
      * @memberof VideoProjectAddTargetLangsToExistingDramaRequest
      */

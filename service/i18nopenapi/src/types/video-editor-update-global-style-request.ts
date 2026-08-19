@@ -31,5 +31,5 @@ export interface VideoEditorUpdateGlobalStyleRequest {
      * @type {string}
      * @memberof VideoEditorUpdateGlobalStyleRequest
      */
-    subtaskId?: string;
+    subtaskId: string;
 }

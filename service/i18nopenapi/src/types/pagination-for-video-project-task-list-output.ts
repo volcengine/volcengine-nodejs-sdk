@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface CreateVideoCreateResponse
+ * @interface PaginationForVideoProjectTaskListOutput
  */
-export interface CreateVideoCreateResponse {
+export interface PaginationForVideoProjectTaskListOutput {
 
     /**
      * @type {number}
-     * @memberof CreateVideoCreateResponse
+     * @memberof PaginationForVideoProjectTaskListOutput
      */
-    projectId?: number;
+    limit?: number;
 
     /**
-     * @type {string}
-     * @memberof CreateVideoCreateResponse
+     * @type {number}
+     * @memberof PaginationForVideoProjectTaskListOutput
      */
-    projectName?: string;
+    offset?: number;
 }

@@ -39,10 +39,10 @@ export interface TargetForVideoEditorUpdateGlobalStyleInput {
     fontSize?: number;
 
     /**
-     * @type {number}
+     * @type {boolean}
      * @memberof TargetForVideoEditorUpdateGlobalStyleInput
      */
-    show?: number;
+    show?: boolean;
 
     /**
      * @type {number}
