@@ -13,6 +13,7 @@
  */
 
 import { AsyncTaskConfigForCreateFunctionInput } from './async-task-config-for-create-function-input';
+import { EfsMountConfigForCreateFunctionInput } from './efs-mount-config-for-create-function-input';
 import { EnvForCreateFunctionInput } from './env-for-create-function-input';
 import { NasStorageForCreateFunctionInput } from './nas-storage-for-create-function-input';
 import { SourceAccessConfigForCreateFunctionInput } from './source-access-config-for-create-function-input';
@@ -63,6 +64,12 @@ export interface CreateFunctionRequest {
      * @memberof CreateFunctionRequest
      */
     Description?: string;
+
+    /**
+     * @type {EfsMountConfigForCreateFunctionInput}
+     * @memberof CreateFunctionRequest
+     */
+    EfsMountConfig?: EfsMountConfigForCreateFunctionInput;
 
     /**
      * @type {boolean}

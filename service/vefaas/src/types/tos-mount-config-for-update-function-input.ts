@@ -23,6 +23,12 @@ import { MountPointForUpdateFunctionInput } from './mount-point-for-update-funct
 export interface TosMountConfigForUpdateFunctionInput {
 
     /**
+     * @type {string}
+     * @memberof TosMountConfigForUpdateFunctionInput
+     */
+    AuthMode?: string;
+
+    /**
      * @type {CredentialsForUpdateFunctionInput}
      * @memberof TosMountConfigForUpdateFunctionInput
      */
