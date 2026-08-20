@@ -102,6 +102,12 @@ export interface ImageForDescribeImagesOutput {
     LicenseType?: string;
 
     /**
+     * @type {string}
+     * @memberof ImageForDescribeImagesOutput
+     */
+    LifecycleStatus?: string;
+
+    /**
      * @type {number}
      * @memberof ImageForDescribeImagesOutput
      */
