@@ -56,6 +56,12 @@ export interface DataForVideoEditorListSubtitlesOutput {
      * @type {string}
      * @memberof DataForVideoEditorListSubtitlesOutput
      */
+    emotionTag?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForVideoEditorListSubtitlesOutput
+     */
     endTime?: string;
 
     /**
