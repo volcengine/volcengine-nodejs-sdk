@@ -1,9 +1,9 @@
 {
   "actions": [
-    "DescribeSandbox",
+    "CreateSandboxSnapshot",
     "CreateSandbox"
   ],
-  "description": "VEFAAS: 修改 DescribeSandbox, CreateSandbox",
+  "description": "VEFAAS: 修改 CreateSandbox, CreateSandboxSnapshot",
   "modules": "service/vefaas",
   "type": "feature"
 }

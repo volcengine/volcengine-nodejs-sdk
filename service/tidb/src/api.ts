@@ -18,18 +18,34 @@ import { CancelExportTaskRequest } from './types/index';
 import { CancelExportTaskResponse } from './types/index';
 import { CancelImportTaskRequest } from './types/index';
 import { CancelImportTaskResponse } from './types/index';
+import { ChangeBranchPasswordRequest } from './types/index';
+import { ChangeBranchPasswordResponse } from './types/index';
+import { CreateBranchRequest } from './types/index';
+import { CreateBranchResponse } from './types/index';
+import { CreateClusterRequest } from './types/index';
+import { CreateClusterResponse } from './types/index';
 import { CreateExportTaskRequest } from './types/index';
 import { CreateExportTaskResponse } from './types/index';
 import { CreateImportTaskRequest } from './types/index';
 import { CreateImportTaskResponse } from './types/index';
 import { CreateImportUploadUrlRequest } from './types/index';
 import { CreateImportUploadUrlResponse } from './types/index';
+import { DeleteBranchRequest } from './types/index';
+import { DeleteBranchResponse } from './types/index';
+import { DeleteClusterRequest } from './types/index';
+import { DeleteClusterResponse } from './types/index';
 import { DeleteExportTaskRequest } from './types/index';
 import { DeleteExportTaskResponse } from './types/index';
+import { DescribePriceDetailRequest } from './types/index';
+import { DescribePriceDetailResponse } from './types/index';
 import { GetBackupRequest } from './types/index';
 import { GetBackupResponse } from './types/index';
 import { GetBackupRetentionRequest } from './types/index';
 import { GetBackupRetentionResponse } from './types/index';
+import { GetBranchDetailsRequest } from './types/index';
+import { GetBranchDetailsResponse } from './types/index';
+import { GetClusterDetailsRequest } from './types/index';
+import { GetClusterDetailsResponse } from './types/index';
 import { GetExportTaskDetailsRequest } from './types/index';
 import { GetExportTaskDetailsResponse } from './types/index';
 import { GetImportTableColumnsRequest } from './types/index';
@@ -46,6 +62,14 @@ import { GetStatementPlanDetailsRequest } from './types/index';
 import { GetStatementPlanDetailsResponse } from './types/index';
 import { ListBackupsRequest } from './types/index';
 import { ListBackupsResponse } from './types/index';
+import { ListBranchDatabasesRequest } from './types/index';
+import { ListBranchDatabasesResponse } from './types/index';
+import { ListBranchesRequest } from './types/index';
+import { ListBranchesResponse } from './types/index';
+import { ListClusterDatabasesRequest } from './types/index';
+import { ListClusterDatabasesResponse } from './types/index';
+import { ListClustersRequest } from './types/index';
+import { ListClustersResponse } from './types/index';
 import { ListEventsRequest } from './types/index';
 import { ListEventsResponse } from './types/index';
 import { ListExportTasksRequest } from './types/index';
@@ -74,8 +98,16 @@ import { PrecheckImportTaskRequest } from './types/index';
 import { PrecheckImportTaskResponse } from './types/index';
 import { PreviewLocalImportRequest } from './types/index';
 import { PreviewLocalImportResponse } from './types/index';
+import { ResetBranchRequest } from './types/index';
+import { ResetBranchResponse } from './types/index';
+import { ResetClusterPasswordRequest } from './types/index';
+import { ResetClusterPasswordResponse } from './types/index';
 import { RestoreClusterRequest } from './types/index';
 import { RestoreClusterResponse } from './types/index';
+import { UpdateBranchRequest } from './types/index';
+import { UpdateBranchResponse } from './types/index';
+import { UpdateClusterRequest } from './types/index';
+import { UpdateClusterResponse } from './types/index';
 import { ValidateImportTaskRequest } from './types/index';
 import { ValidateImportTaskResponse } from './types/index';
 
@@ -84,12 +116,20 @@ import { ValidateImportTaskResponse } from './types/index';
 // ============================================================================
 export type CancelExportTaskCommandOutput = CommandOutput<CancelExportTaskResponse>;
 export type CancelImportTaskCommandOutput = CommandOutput<CancelImportTaskResponse>;
+export type ChangeBranchPasswordCommandOutput = CommandOutput<ChangeBranchPasswordResponse>;
+export type CreateBranchCommandOutput = CommandOutput<CreateBranchResponse>;
+export type CreateClusterCommandOutput = CommandOutput<CreateClusterResponse>;
 export type CreateExportTaskCommandOutput = CommandOutput<CreateExportTaskResponse>;
 export type CreateImportTaskCommandOutput = CommandOutput<CreateImportTaskResponse>;
 export type CreateImportUploadUrlCommandOutput = CommandOutput<CreateImportUploadUrlResponse>;
+export type DeleteBranchCommandOutput = CommandOutput<DeleteBranchResponse>;
+export type DeleteClusterCommandOutput = CommandOutput<DeleteClusterResponse>;
 export type DeleteExportTaskCommandOutput = CommandOutput<DeleteExportTaskResponse>;
+export type DescribePriceDetailCommandOutput = CommandOutput<DescribePriceDetailResponse>;
 export type GetBackupCommandOutput = CommandOutput<GetBackupResponse>;
 export type GetBackupRetentionCommandOutput = CommandOutput<GetBackupRetentionResponse>;
+export type GetBranchDetailsCommandOutput = CommandOutput<GetBranchDetailsResponse>;
+export type GetClusterDetailsCommandOutput = CommandOutput<GetClusterDetailsResponse>;
 export type GetExportTaskDetailsCommandOutput = CommandOutput<GetExportTaskDetailsResponse>;
 export type GetImportTableColumnsCommandOutput = CommandOutput<GetImportTableColumnsResponse>;
 export type GetImportTaskDetailsCommandOutput = CommandOutput<GetImportTaskDetailsResponse>;
@@ -98,6 +138,10 @@ export type GetRestoreProgressCommandOutput = CommandOutput<GetRestoreProgressRe
 export type GetSlowQueryDetailsCommandOutput = CommandOutput<GetSlowQueryDetailsResponse>;
 export type GetStatementPlanDetailsCommandOutput = CommandOutput<GetStatementPlanDetailsResponse>;
 export type ListBackupsCommandOutput = CommandOutput<ListBackupsResponse>;
+export type ListBranchDatabasesCommandOutput = CommandOutput<ListBranchDatabasesResponse>;
+export type ListBranchesCommandOutput = CommandOutput<ListBranchesResponse>;
+export type ListClusterDatabasesCommandOutput = CommandOutput<ListClusterDatabasesResponse>;
+export type ListClustersCommandOutput = CommandOutput<ListClustersResponse>;
 export type ListEventsCommandOutput = CommandOutput<ListEventsResponse>;
 export type ListExportTasksCommandOutput = CommandOutput<ListExportTasksResponse>;
 export type ListImportSupportedDataTypesCommandOutput = CommandOutput<ListImportSupportedDataTypesResponse>;
@@ -112,7 +156,11 @@ export type ListStatementsCommandOutput = CommandOutput<ListStatementsResponse>;
 export type ListZonesCommandOutput = CommandOutput<ListZonesResponse>;
 export type PrecheckImportTaskCommandOutput = CommandOutput<PrecheckImportTaskResponse>;
 export type PreviewLocalImportCommandOutput = CommandOutput<PreviewLocalImportResponse>;
+export type ResetBranchCommandOutput = CommandOutput<ResetBranchResponse>;
+export type ResetClusterPasswordCommandOutput = CommandOutput<ResetClusterPasswordResponse>;
 export type RestoreClusterCommandOutput = CommandOutput<RestoreClusterResponse>;
+export type UpdateBranchCommandOutput = CommandOutput<UpdateBranchResponse>;
+export type UpdateClusterCommandOutput = CommandOutput<UpdateClusterResponse>;
 export type ValidateImportTaskCommandOutput = CommandOutput<ValidateImportTaskResponse>;
 
 /**
@@ -156,6 +204,51 @@ export class CancelImportTaskCommand extends Command<
   constructor(input: CancelImportTaskRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CancelImportTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to ChangeBranchPassword
+ */
+export class ChangeBranchPasswordCommand extends Command<
+  ChangeBranchPasswordRequest,
+  ChangeBranchPasswordCommandOutput,
+  'ChangeBranchPasswordCommand'
+> {
+  static readonly metaPath = '/ChangeBranchPassword/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ChangeBranchPasswordRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ChangeBranchPasswordCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateBranch
+ */
+export class CreateBranchCommand extends Command<
+  CreateBranchRequest,
+  CreateBranchCommandOutput,
+  'CreateBranchCommand'
+> {
+  static readonly metaPath = '/CreateBranch/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: CreateBranchRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateBranchCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateCluster
+ */
+export class CreateClusterCommand extends Command<
+  CreateClusterRequest,
+  CreateClusterCommandOutput,
+  'CreateClusterCommand'
+> {
+  static readonly metaPath = '/CreateCluster/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: CreateClusterRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateClusterCommand.metaPath);
   }
 }
 /**
@@ -204,6 +297,36 @@ export class CreateImportUploadUrlCommand extends Command<
   }
 }
 /**
+ * Command to DeleteBranch
+ */
+export class DeleteBranchCommand extends Command<
+  DeleteBranchRequest,
+  DeleteBranchCommandOutput,
+  'DeleteBranchCommand'
+> {
+  static readonly metaPath = '/DeleteBranch/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: DeleteBranchRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteBranchCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteCluster
+ */
+export class DeleteClusterCommand extends Command<
+  DeleteClusterRequest,
+  DeleteClusterCommandOutput,
+  'DeleteClusterCommand'
+> {
+  static readonly metaPath = '/DeleteCluster/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: DeleteClusterRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteClusterCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteExportTask
  */
 export class DeleteExportTaskCommand extends Command<
@@ -216,6 +339,21 @@ export class DeleteExportTaskCommand extends Command<
   constructor(input: DeleteExportTaskRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteExportTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribePriceDetail
+ */
+export class DescribePriceDetailCommand extends Command<
+  DescribePriceDetailRequest,
+  DescribePriceDetailCommandOutput,
+  'DescribePriceDetailCommand'
+> {
+  static readonly metaPath = '/DescribePriceDetail/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: DescribePriceDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePriceDetailCommand.metaPath);
   }
 }
 /**
@@ -246,6 +384,36 @@ export class GetBackupRetentionCommand extends Command<
   constructor(input: GetBackupRetentionRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetBackupRetentionCommand.metaPath);
+  }
+}
+/**
+ * Command to GetBranchDetails
+ */
+export class GetBranchDetailsCommand extends Command<
+  GetBranchDetailsRequest,
+  GetBranchDetailsCommandOutput,
+  'GetBranchDetailsCommand'
+> {
+  static readonly metaPath = '/GetBranchDetails/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: GetBranchDetailsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetBranchDetailsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetClusterDetails
+ */
+export class GetClusterDetailsCommand extends Command<
+  GetClusterDetailsRequest,
+  GetClusterDetailsCommandOutput,
+  'GetClusterDetailsCommand'
+> {
+  static readonly metaPath = '/GetClusterDetails/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: GetClusterDetailsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetClusterDetailsCommand.metaPath);
   }
 }
 /**
@@ -366,6 +534,66 @@ export class ListBackupsCommand extends Command<
   constructor(input: ListBackupsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListBackupsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListBranchDatabases
+ */
+export class ListBranchDatabasesCommand extends Command<
+  ListBranchDatabasesRequest,
+  ListBranchDatabasesCommandOutput,
+  'ListBranchDatabasesCommand'
+> {
+  static readonly metaPath = '/ListBranchDatabases/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ListBranchDatabasesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListBranchDatabasesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListBranches
+ */
+export class ListBranchesCommand extends Command<
+  ListBranchesRequest,
+  ListBranchesCommandOutput,
+  'ListBranchesCommand'
+> {
+  static readonly metaPath = '/ListBranches/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ListBranchesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListBranchesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListClusterDatabases
+ */
+export class ListClusterDatabasesCommand extends Command<
+  ListClusterDatabasesRequest,
+  ListClusterDatabasesCommandOutput,
+  'ListClusterDatabasesCommand'
+> {
+  static readonly metaPath = '/ListClusterDatabases/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ListClusterDatabasesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListClusterDatabasesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListClusters
+ */
+export class ListClustersCommand extends Command<
+  ListClustersRequest,
+  ListClustersCommandOutput,
+  'ListClustersCommand'
+> {
+  static readonly metaPath = '/ListClusters/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ListClustersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListClustersCommand.metaPath);
   }
 }
 /**
@@ -579,6 +807,36 @@ export class PreviewLocalImportCommand extends Command<
   }
 }
 /**
+ * Command to ResetBranch
+ */
+export class ResetBranchCommand extends Command<
+  ResetBranchRequest,
+  ResetBranchCommandOutput,
+  'ResetBranchCommand'
+> {
+  static readonly metaPath = '/ResetBranch/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ResetBranchRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ResetBranchCommand.metaPath);
+  }
+}
+/**
+ * Command to ResetClusterPassword
+ */
+export class ResetClusterPasswordCommand extends Command<
+  ResetClusterPasswordRequest,
+  ResetClusterPasswordCommandOutput,
+  'ResetClusterPasswordCommand'
+> {
+  static readonly metaPath = '/ResetClusterPassword/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ResetClusterPasswordRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ResetClusterPasswordCommand.metaPath);
+  }
+}
+/**
  * Command to RestoreCluster
  */
 export class RestoreClusterCommand extends Command<
@@ -591,6 +849,36 @@ export class RestoreClusterCommand extends Command<
   constructor(input: RestoreClusterRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(RestoreClusterCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateBranch
+ */
+export class UpdateBranchCommand extends Command<
+  UpdateBranchRequest,
+  UpdateBranchCommandOutput,
+  'UpdateBranchCommand'
+> {
+  static readonly metaPath = '/UpdateBranch/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: UpdateBranchRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateBranchCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateCluster
+ */
+export class UpdateClusterCommand extends Command<
+  UpdateClusterRequest,
+  UpdateClusterCommandOutput,
+  'UpdateClusterCommand'
+> {
+  static readonly metaPath = '/UpdateCluster/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: UpdateClusterRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateClusterCommand.metaPath);
   }
 }
 /**
@@ -613,12 +901,20 @@ export default {
   TIDBClient,
   CancelExportTaskCommand,
   CancelImportTaskCommand,
+  ChangeBranchPasswordCommand,
+  CreateBranchCommand,
+  CreateClusterCommand,
   CreateExportTaskCommand,
   CreateImportTaskCommand,
   CreateImportUploadUrlCommand,
+  DeleteBranchCommand,
+  DeleteClusterCommand,
   DeleteExportTaskCommand,
+  DescribePriceDetailCommand,
   GetBackupCommand,
   GetBackupRetentionCommand,
+  GetBranchDetailsCommand,
+  GetClusterDetailsCommand,
   GetExportTaskDetailsCommand,
   GetImportTableColumnsCommand,
   GetImportTaskDetailsCommand,
@@ -627,6 +923,10 @@ export default {
   GetSlowQueryDetailsCommand,
   GetStatementPlanDetailsCommand,
   ListBackupsCommand,
+  ListBranchDatabasesCommand,
+  ListBranchesCommand,
+  ListClusterDatabasesCommand,
+  ListClustersCommand,
   ListEventsCommand,
   ListExportTasksCommand,
   ListImportSupportedDataTypesCommand,
@@ -641,6 +941,10 @@ export default {
   ListZonesCommand,
   PrecheckImportTaskCommand,
   PreviewLocalImportCommand,
+  ResetBranchCommand,
+  ResetClusterPasswordCommand,
   RestoreClusterCommand,
+  UpdateBranchCommand,
+  UpdateClusterCommand,
   ValidateImportTaskCommand,
 };
