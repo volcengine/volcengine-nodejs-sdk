@@ -24,7 +24,7 @@ export interface VideoProjectDeleteVideoDramaRequest {
      * @type {boolean}
      * @memberof VideoProjectDeleteVideoDramaRequest
      */
-    deleteSourceVideo: boolean;
+    deleteSourceVideo?: boolean;
 
     /**
      * @type {string}

@@ -116,6 +116,12 @@ export interface DataForTermBaseTermGroupsOutput {
     termBaseId?: string;
 
     /**
+     * @type {string}
+     * @memberof DataForTermBaseTermGroupsOutput
+     */
+    termKey?: string;
+
+    /**
      * @type {number}
      * @memberof DataForTermBaseTermGroupsOutput
      */
