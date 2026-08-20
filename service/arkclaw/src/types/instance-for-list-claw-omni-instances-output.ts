@@ -13,7 +13,9 @@
  */
 
 import { ModelConfigForListClawOmniInstancesOutput } from './model-config-for-list-claw-omni-instances-output';
+import { OperationLockForListClawOmniInstancesOutput } from './operation-lock-for-list-claw-omni-instances-output';
 import { TagForListClawOmniInstancesOutput } from './tag-for-list-claw-omni-instances-output';
+import { TokenQuotaForListClawOmniInstancesOutput } from './token-quota-for-list-claw-omni-instances-output';
  /**
  * 
  *
@@ -101,6 +103,12 @@ export interface InstanceForListClawOmniInstancesOutput {
     Name?: string;
 
     /**
+     * @type {OperationLockForListClawOmniInstancesOutput}
+     * @memberof InstanceForListClawOmniInstancesOutput
+     */
+    OperationLock?: OperationLockForListClawOmniInstancesOutput;
+
+    /**
      * @type {string}
      * @memberof InstanceForListClawOmniInstancesOutput
      */
@@ -135,6 +143,30 @@ export interface InstanceForListClawOmniInstancesOutput {
      * @memberof InstanceForListClawOmniInstancesOutput
      */
     TemplateId?: string;
+
+    /**
+     * @type {string}
+     * @memberof InstanceForListClawOmniInstancesOutput
+     */
+    TokenLimitPerDay?: string;
+
+    /**
+     * @type {string}
+     * @memberof InstanceForListClawOmniInstancesOutput
+     */
+    TokenLimitPerMin?: string;
+
+    /**
+     * @type {string}
+     * @memberof InstanceForListClawOmniInstancesOutput
+     */
+    TokenLimitPerWeek?: string;
+
+    /**
+     * @type {TokenQuotaForListClawOmniInstancesOutput}
+     * @memberof InstanceForListClawOmniInstancesOutput
+     */
+    TokenQuota?: TokenQuotaForListClawOmniInstancesOutput;
 
     /**
      * @type {string}

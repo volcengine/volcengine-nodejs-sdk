@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { OperationLockForUpdateClawOmniInstanceInput } from './operation-lock-for-update-claw-omni-instance-input';
  /**
  * 
  *
@@ -31,6 +32,24 @@ export interface UpdateClawOmniInstanceRequest {
      * @memberof UpdateClawOmniInstanceRequest
      */
     Id: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateClawOmniInstanceRequest
+     */
+    Name: string;
+
+    /**
+     * @type {OperationLockForUpdateClawOmniInstanceInput}
+     * @memberof UpdateClawOmniInstanceRequest
+     */
+    OperationLock?: OperationLockForUpdateClawOmniInstanceInput;
+
+    /**
+     * @type {number}
+     * @memberof UpdateClawOmniInstanceRequest
+     */
+    Timeout?: number;
 
     /**
      * @type {number}
