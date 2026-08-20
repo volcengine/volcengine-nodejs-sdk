@@ -56,6 +56,12 @@ export interface SubForVideoEditorSaveSubtitleOutput {
      * @type {string}
      * @memberof SubForVideoEditorSaveSubtitleOutput
      */
+    emotionTag?: string;
+
+    /**
+     * @type {string}
+     * @memberof SubForVideoEditorSaveSubtitleOutput
+     */
     endTime?: string;
 
     /**

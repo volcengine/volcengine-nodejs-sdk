@@ -56,6 +56,12 @@ export interface UpdatedSegmentForVideoEditorAddSubtitleOutput {
      * @type {string}
      * @memberof UpdatedSegmentForVideoEditorAddSubtitleOutput
      */
+    emotionTag?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdatedSegmentForVideoEditorAddSubtitleOutput
+     */
     endTime?: string;
 
     /**

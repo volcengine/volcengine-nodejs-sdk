@@ -22,6 +22,12 @@ import { SubtitleStyleForVideoEditorBatchUpdateStyleInput } from './subtitle-sty
 export interface VideoEditorBatchUpdateStyleRequest {
 
     /**
+     * @type {string}
+     * @memberof VideoEditorBatchUpdateStyleRequest
+     */
+    subtaskId: string;
+
+    /**
      * @type {Array<SubtitleStyleForVideoEditorBatchUpdateStyleInput>}
      * @memberof VideoEditorBatchUpdateStyleRequest
      */
