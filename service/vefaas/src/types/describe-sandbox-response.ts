@@ -12,11 +12,15 @@
  * Do not edit the class manually.
  */
 
+import { AutoPauseConfigForDescribeSandboxOutput } from './auto-pause-config-for-describe-sandbox-output';
+import { AutoSnapshotConfigForDescribeSandboxOutput } from './auto-snapshot-config-for-describe-sandbox-output';
 import { EnvForDescribeSandboxOutput } from './env-for-describe-sandbox-output';
 import { ImageInfoForDescribeSandboxOutput } from './image-info-for-describe-sandbox-output';
+import { InstanceEfsMountConfigForDescribeSandboxOutput } from './instance-efs-mount-config-for-describe-sandbox-output';
 import { InstanceNasMountConfigForDescribeSandboxOutput } from './instance-nas-mount-config-for-describe-sandbox-output';
 import { InstanceTosMountConfigForDescribeSandboxOutput } from './instance-tos-mount-config-for-describe-sandbox-output';
 import { MetadataListForDescribeSandboxOutput } from './metadata-list-for-describe-sandbox-output';
+import { NetworkRulesForDescribeSandboxOutput } from './network-rules-for-describe-sandbox-output';
 import { SidecarForDescribeSandboxOutput } from './sidecar-for-describe-sandbox-output';
  /**
  * 
@@ -31,6 +35,18 @@ export interface DescribeSandboxResponse {
      * @memberof DescribeSandboxResponse
      */
     AssignStatus?: string;
+
+    /**
+     * @type {AutoPauseConfigForDescribeSandboxOutput}
+     * @memberof DescribeSandboxResponse
+     */
+    AutoPauseConfig?: AutoPauseConfigForDescribeSandboxOutput;
+
+    /**
+     * @type {AutoSnapshotConfigForDescribeSandboxOutput}
+     * @memberof DescribeSandboxResponse
+     */
+    AutoSnapshotConfig?: AutoSnapshotConfigForDescribeSandboxOutput;
 
     /**
      * @type {string}
@@ -93,6 +109,12 @@ export interface DescribeSandboxResponse {
     ImageInfo?: ImageInfoForDescribeSandboxOutput;
 
     /**
+     * @type {InstanceEfsMountConfigForDescribeSandboxOutput}
+     * @memberof DescribeSandboxResponse
+     */
+    InstanceEfsMountConfig?: InstanceEfsMountConfigForDescribeSandboxOutput;
+
+    /**
      * @type {InstanceNasMountConfigForDescribeSandboxOutput}
      * @memberof DescribeSandboxResponse
      */
@@ -127,6 +149,18 @@ export interface DescribeSandboxResponse {
      * @memberof DescribeSandboxResponse
      */
     MetadataList?: Array<MetadataListForDescribeSandboxOutput>;
+
+    /**
+     * @type {NetworkRulesForDescribeSandboxOutput}
+     * @memberof DescribeSandboxResponse
+     */
+    NetworkRules?: NetworkRulesForDescribeSandboxOutput;
+
+    /**
+     * @type {string}
+     * @memberof DescribeSandboxResponse
+     */
+    PausedAt?: string;
 
     /**
      * @type {boolean}

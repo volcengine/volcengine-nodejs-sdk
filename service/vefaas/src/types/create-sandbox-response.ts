@@ -24,6 +24,12 @@ export interface CreateSandboxResponse {
      * @type {string}
      * @memberof CreateSandboxResponse
      */
+    AssignMissedReason?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateSandboxResponse
+     */
     AssignStatus?: string;
 
     /**

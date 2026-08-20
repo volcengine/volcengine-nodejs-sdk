@@ -13,6 +13,7 @@
  */
 
 import { AsyncTaskConfigForGetFunctionOutput } from './async-task-config-for-get-function-output';
+import { EfsMountConfigForGetFunctionOutput } from './efs-mount-config-for-get-function-output';
 import { EnvForGetFunctionOutput } from './env-for-get-function-output';
 import { NasStorageForGetFunctionOutput } from './nas-storage-for-get-function-output';
 import { TlsConfigForGetFunctionOutput } from './tls-config-for-get-function-output';
@@ -73,6 +74,12 @@ export interface GetFunctionResponse {
      * @memberof GetFunctionResponse
      */
     Description?: string;
+
+    /**
+     * @type {EfsMountConfigForGetFunctionOutput}
+     * @memberof GetFunctionResponse
+     */
+    EfsMountConfig?: EfsMountConfigForGetFunctionOutput;
 
     /**
      * @type {boolean}

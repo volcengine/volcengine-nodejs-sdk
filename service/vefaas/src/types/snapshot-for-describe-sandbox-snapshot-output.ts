@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { MetadataForDescribeSandboxSnapshotOutput } from './metadata-for-describe-sandbox-snapshot-output';
+import { SandboxInfoForDescribeSandboxSnapshotOutput } from './sandbox-info-for-describe-sandbox-snapshot-output';
  /**
  * 
  *
@@ -30,7 +32,37 @@ export interface SnapshotForDescribeSandboxSnapshotOutput {
      * @type {string}
      * @memberof SnapshotForDescribeSandboxSnapshotOutput
      */
+    CreatedByJobId?: string;
+
+    /**
+     * @type {MetadataForDescribeSandboxSnapshotOutput}
+     * @memberof SnapshotForDescribeSandboxSnapshotOutput
+     */
+    Metadata?: MetadataForDescribeSandboxSnapshotOutput;
+
+    /**
+     * @type {number}
+     * @memberof SnapshotForDescribeSandboxSnapshotOutput
+     */
+    RetentionDays?: number;
+
+    /**
+     * @type {string}
+     * @memberof SnapshotForDescribeSandboxSnapshotOutput
+     */
+    RetentionExpiresAt?: string;
+
+    /**
+     * @type {string}
+     * @memberof SnapshotForDescribeSandboxSnapshotOutput
+     */
     SandboxId?: string;
+
+    /**
+     * @type {SandboxInfoForDescribeSandboxSnapshotOutput}
+     * @memberof SnapshotForDescribeSandboxSnapshotOutput
+     */
+    SandboxInfo?: SandboxInfoForDescribeSandboxSnapshotOutput;
 
     /**
      * @type {string}

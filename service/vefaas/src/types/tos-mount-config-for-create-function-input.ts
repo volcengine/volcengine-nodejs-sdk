@@ -23,6 +23,12 @@ import { MountPointForCreateFunctionInput } from './mount-point-for-create-funct
 export interface TosMountConfigForCreateFunctionInput {
 
     /**
+     * @type {string}
+     * @memberof TosMountConfigForCreateFunctionInput
+     */
+    AuthMode?: string;
+
+    /**
      * @type {CredentialsForCreateFunctionInput}
      * @memberof TosMountConfigForCreateFunctionInput
      */
