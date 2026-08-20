@@ -29,10 +29,10 @@ export interface SubForVideoEditorSaveSubtitleInput {
     aiVoiceId?: string;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof SubForVideoEditorSaveSubtitleInput
      */
-    effectType?: string;
+    effectType?: number;
 
     /**
      * @type {string}

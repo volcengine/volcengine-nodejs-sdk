@@ -48,6 +48,24 @@ export interface CreateScheduledJobRequest {
      * @type {string}
      * @memberof CreateScheduledJobRequest
      */
+    ResultDelivery_Channel?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateScheduledJobRequest
+     */
+    ResultDelivery_ChatId?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateScheduledJobRequest
+     */
+    ResultDelivery_Target?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateScheduledJobRequest
+     */
     ScheduleExpr: string;
 
     /**

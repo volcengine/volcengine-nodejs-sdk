@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { DataForVideoProjectVideoDeleteOutput } from './data-for-video-project-video-delete-output';
  /**
  * 
  *
@@ -20,10 +19,4 @@ import { DataForVideoProjectVideoDeleteOutput } from './data-for-video-project-v
  * @interface VideoProjectVideoDeleteResponse
  */
 export interface VideoProjectVideoDeleteResponse {
-
-    /**
-     * @type {DataForVideoProjectVideoDeleteOutput}
-     * @memberof VideoProjectVideoDeleteResponse
-     */
-    data?: DataForVideoProjectVideoDeleteOutput;
 }

@@ -26,8 +26,18 @@ import { CreateClawOmniInstanceCommandJobRequest } from './types/index';
 import { CreateClawOmniInstanceCommandJobResponse } from './types/index';
 import { CreateClawOmniInstanceRequest } from './types/index';
 import { CreateClawOmniInstanceResponse } from './types/index';
+import { CreateIdentityProviderTokenExchangeRequest } from './types/index';
+import { CreateIdentityProviderTokenExchangeResponse } from './types/index';
 import { CreatePrivateClawOmniSpaceTemplateRequest } from './types/index';
 import { CreatePrivateClawOmniSpaceTemplateResponse } from './types/index';
+import { CreatePrivateEgressDnsBlockRuleRequest } from './types/index';
+import { CreatePrivateEgressDnsBlockRuleResponse } from './types/index';
+import { CreatePrivateEgressEndpointRequest } from './types/index';
+import { CreatePrivateEgressEndpointResponse } from './types/index';
+import { CreatePrivateEgressNetworkAccessRuleRequest } from './types/index';
+import { CreatePrivateEgressNetworkAccessRuleResponse } from './types/index';
+import { CreatePrivateEgressWebAccessRuleRequest } from './types/index';
+import { CreatePrivateEgressWebAccessRuleResponse } from './types/index';
 import { CreateScheduledJobRequest } from './types/index';
 import { CreateScheduledJobResponse } from './types/index';
 import { DeleteClawInstanceRequest } from './types/index';
@@ -36,10 +46,66 @@ import { DeleteClawOmniChannelRequest } from './types/index';
 import { DeleteClawOmniChannelResponse } from './types/index';
 import { DeleteClawOmniInstanceRequest } from './types/index';
 import { DeleteClawOmniInstanceResponse } from './types/index';
+import { DeleteIdentityProviderTokenExchangeRequest } from './types/index';
+import { DeleteIdentityProviderTokenExchangeResponse } from './types/index';
+import { DeletePrivateEgressDnsBlockRuleRequest } from './types/index';
+import { DeletePrivateEgressDnsBlockRuleResponse } from './types/index';
+import { DeletePrivateEgressEndpointRequest } from './types/index';
+import { DeletePrivateEgressEndpointResponse } from './types/index';
+import { DeletePrivateEgressNetworkAccessRuleRequest } from './types/index';
+import { DeletePrivateEgressNetworkAccessRuleResponse } from './types/index';
+import { DeletePrivateEgressWebAccessRuleRequest } from './types/index';
+import { DeletePrivateEgressWebAccessRuleResponse } from './types/index';
 import { DeleteScheduledJobRequest } from './types/index';
 import { DeleteScheduledJobResponse } from './types/index';
+import { DescribeAccountWhiteListRequest } from './types/index';
+import { DescribeAccountWhiteListResponse } from './types/index';
+import { DescribePrivateEgressAvailableZonesRequest } from './types/index';
+import { DescribePrivateEgressAvailableZonesResponse } from './types/index';
+import { DescribePrivateEgressDnsBlockRulesRequest } from './types/index';
+import { DescribePrivateEgressDnsBlockRulesResponse } from './types/index';
+import { DescribePrivateEgressEndpointsRequest } from './types/index';
+import { DescribePrivateEgressEndpointsResponse } from './types/index';
+import { DescribePrivateEgressManagedWebAccessRuleTemplatesRequest } from './types/index';
+import { DescribePrivateEgressManagedWebAccessRuleTemplatesResponse } from './types/index';
+import { DescribePrivateEgressNetworkAccessPolicyRequest } from './types/index';
+import { DescribePrivateEgressNetworkAccessPolicyResponse } from './types/index';
+import { DescribePrivateEgressNetworkAccessRuleAttributesRequest } from './types/index';
+import { DescribePrivateEgressNetworkAccessRuleAttributesResponse } from './types/index';
+import { DescribePrivateEgressNetworkAccessRulesRequest } from './types/index';
+import { DescribePrivateEgressNetworkAccessRulesResponse } from './types/index';
+import { DescribePrivateEgressRequest } from './types/index';
+import { DescribePrivateEgressResponse } from './types/index';
+import { DescribePrivateEgressWebAccessPolicyRequest } from './types/index';
+import { DescribePrivateEgressWebAccessPolicyResponse } from './types/index';
+import { DescribePrivateEgressWebAccessRuleAttributesRequest } from './types/index';
+import { DescribePrivateEgressWebAccessRuleAttributesResponse } from './types/index';
+import { DescribePrivateEgressWebAccessRulesRequest } from './types/index';
+import { DescribePrivateEgressWebAccessRulesResponse } from './types/index';
+import { DisablePrivateEgressAccessLogRequest } from './types/index';
+import { DisablePrivateEgressAccessLogResponse } from './types/index';
+import { DisablePrivateEgressDnsBlockRuleRequest } from './types/index';
+import { DisablePrivateEgressDnsBlockRuleResponse } from './types/index';
+import { DisablePrivateEgressDnsRequest } from './types/index';
+import { DisablePrivateEgressDnsResponse } from './types/index';
+import { DisablePrivateEgressNetworkAccessPolicyRequest } from './types/index';
+import { DisablePrivateEgressNetworkAccessPolicyResponse } from './types/index';
+import { DisablePrivateEgressWebAccessPolicyRequest } from './types/index';
+import { DisablePrivateEgressWebAccessPolicyResponse } from './types/index';
+import { EnablePrivateEgressAccessLogRequest } from './types/index';
+import { EnablePrivateEgressAccessLogResponse } from './types/index';
+import { EnablePrivateEgressDnsBlockRuleRequest } from './types/index';
+import { EnablePrivateEgressDnsBlockRuleResponse } from './types/index';
+import { EnablePrivateEgressDnsRequest } from './types/index';
+import { EnablePrivateEgressDnsResponse } from './types/index';
+import { EnablePrivateEgressNetworkAccessPolicyRequest } from './types/index';
+import { EnablePrivateEgressNetworkAccessPolicyResponse } from './types/index';
+import { EnablePrivateEgressWebAccessPolicyRequest } from './types/index';
+import { EnablePrivateEgressWebAccessPolicyResponse } from './types/index';
 import { ExecuteClawOmniInstanceCommandRequest } from './types/index';
 import { ExecuteClawOmniInstanceCommandResponse } from './types/index';
+import { GetArkclawOmniInstanceWebuiRequest } from './types/index';
+import { GetArkclawOmniInstanceWebuiResponse } from './types/index';
 import { GetClawInstanceRequest } from './types/index';
 import { GetClawInstanceResponse } from './types/index';
 import { GetClawOmniAutoChannelJobRequest } from './types/index';
@@ -54,8 +120,12 @@ import { GetClawOmniInstanceSkillsRequest } from './types/index';
 import { GetClawOmniInstanceSkillsResponse } from './types/index';
 import { GetClawOmniSpaceTemplateRequest } from './types/index';
 import { GetClawOmniSpaceTemplateResponse } from './types/index';
+import { GetIdentityProviderTokenExchangeRequest } from './types/index';
+import { GetIdentityProviderTokenExchangeResponse } from './types/index';
 import { GetScheduledJobRequest } from './types/index';
 import { GetScheduledJobResponse } from './types/index';
+import { GetUserPoolClientRequest } from './types/index';
+import { GetUserPoolClientResponse } from './types/index';
 import { InstallClawOmniInstanceSkillRequest } from './types/index';
 import { InstallClawOmniInstanceSkillResponse } from './types/index';
 import { ListClawInstancesRequest } from './types/index';
@@ -76,12 +146,26 @@ import { ListClawOmniSpaceTemplatesRequest } from './types/index';
 import { ListClawOmniSpaceTemplatesResponse } from './types/index';
 import { ListClawSpaceSeatsRequest } from './types/index';
 import { ListClawSpaceSeatsResponse } from './types/index';
+import { ListIdentityProvidersTokenExchangeRequest } from './types/index';
+import { ListIdentityProvidersTokenExchangeResponse } from './types/index';
 import { ListScheduledJobRunsRequest } from './types/index';
 import { ListScheduledJobRunsResponse } from './types/index';
 import { ListScheduledJobsRequest } from './types/index';
 import { ListScheduledJobsResponse } from './types/index';
 import { ListUsersRequest } from './types/index';
 import { ListUsersResponse } from './types/index';
+import { ModifyPrivateEgressDnsBlockRuleRequest } from './types/index';
+import { ModifyPrivateEgressDnsBlockRuleResponse } from './types/index';
+import { ModifyPrivateEgressDnsRequest } from './types/index';
+import { ModifyPrivateEgressDnsResponse } from './types/index';
+import { ModifyPrivateEgressEndpointRequest } from './types/index';
+import { ModifyPrivateEgressEndpointResponse } from './types/index';
+import { ModifyPrivateEgressNetworkAccessRuleRequest } from './types/index';
+import { ModifyPrivateEgressNetworkAccessRuleResponse } from './types/index';
+import { ModifyPrivateEgressRequest } from './types/index';
+import { ModifyPrivateEgressResponse } from './types/index';
+import { ModifyPrivateEgressWebAccessRuleRequest } from './types/index';
+import { ModifyPrivateEgressWebAccessRuleResponse } from './types/index';
 import { PauseClawOmniInstanceRequest } from './types/index';
 import { PauseClawOmniInstanceResponse } from './types/index';
 import { RejectClawOmniInstanceDevicePairingRequest } from './types/index';
@@ -90,16 +174,22 @@ import { RemoveClawOmniInstanceDevicePairedRequest } from './types/index';
 import { RemoveClawOmniInstanceDevicePairedResponse } from './types/index';
 import { ResetClawOmniInstanceRequest } from './types/index';
 import { ResetClawOmniInstanceResponse } from './types/index';
+import { RestartClawInstanceRequest } from './types/index';
+import { RestartClawInstanceResponse } from './types/index';
 import { ResumeClawOmniInstanceRequest } from './types/index';
 import { ResumeClawOmniInstanceResponse } from './types/index';
 import { StopClawOmniAutoChannelJobRequest } from './types/index';
 import { StopClawOmniAutoChannelJobResponse } from './types/index';
 import { StopClawOmniInstanceCommandJobRequest } from './types/index';
 import { StopClawOmniInstanceCommandJobResponse } from './types/index';
+import { UnbindClawInstanceRequest } from './types/index';
+import { UnbindClawInstanceResponse } from './types/index';
 import { UpdateClawOmniInstanceModelRequest } from './types/index';
 import { UpdateClawOmniInstanceModelResponse } from './types/index';
 import { UpdateClawOmniInstanceRequest } from './types/index';
 import { UpdateClawOmniInstanceResponse } from './types/index';
+import { UpdateIdentityProviderTokenExchangeRequest } from './types/index';
+import { UpdateIdentityProviderTokenExchangeResponse } from './types/index';
 import { UpdatePrivateClawOmniSpaceTemplateRequest } from './types/index';
 import { UpdatePrivateClawOmniSpaceTemplateResponse } from './types/index';
 import { UpdateScheduledJobRequest } from './types/index';
@@ -118,13 +208,46 @@ export type CreateClawInstanceCommandOutput = CommandOutput<CreateClawInstanceRe
 export type CreateClawOmniAutoChannelJobCommandOutput = CommandOutput<CreateClawOmniAutoChannelJobResponse>;
 export type CreateClawOmniInstanceCommandOutput = CommandOutput<CreateClawOmniInstanceResponse>;
 export type CreateClawOmniInstanceCommandJobCommandOutput = CommandOutput<CreateClawOmniInstanceCommandJobResponse>;
+export type CreateIdentityProviderTokenExchangeCommandOutput = CommandOutput<CreateIdentityProviderTokenExchangeResponse>;
 export type CreatePrivateClawOmniSpaceTemplateCommandOutput = CommandOutput<CreatePrivateClawOmniSpaceTemplateResponse>;
+export type CreatePrivateEgressDnsBlockRuleCommandOutput = CommandOutput<CreatePrivateEgressDnsBlockRuleResponse>;
+export type CreatePrivateEgressEndpointCommandOutput = CommandOutput<CreatePrivateEgressEndpointResponse>;
+export type CreatePrivateEgressNetworkAccessRuleCommandOutput = CommandOutput<CreatePrivateEgressNetworkAccessRuleResponse>;
+export type CreatePrivateEgressWebAccessRuleCommandOutput = CommandOutput<CreatePrivateEgressWebAccessRuleResponse>;
 export type CreateScheduledJobCommandOutput = CommandOutput<CreateScheduledJobResponse>;
 export type DeleteClawInstanceCommandOutput = CommandOutput<DeleteClawInstanceResponse>;
 export type DeleteClawOmniChannelCommandOutput = CommandOutput<DeleteClawOmniChannelResponse>;
 export type DeleteClawOmniInstanceCommandOutput = CommandOutput<DeleteClawOmniInstanceResponse>;
+export type DeleteIdentityProviderTokenExchangeCommandOutput = CommandOutput<DeleteIdentityProviderTokenExchangeResponse>;
+export type DeletePrivateEgressDnsBlockRuleCommandOutput = CommandOutput<DeletePrivateEgressDnsBlockRuleResponse>;
+export type DeletePrivateEgressEndpointCommandOutput = CommandOutput<DeletePrivateEgressEndpointResponse>;
+export type DeletePrivateEgressNetworkAccessRuleCommandOutput = CommandOutput<DeletePrivateEgressNetworkAccessRuleResponse>;
+export type DeletePrivateEgressWebAccessRuleCommandOutput = CommandOutput<DeletePrivateEgressWebAccessRuleResponse>;
 export type DeleteScheduledJobCommandOutput = CommandOutput<DeleteScheduledJobResponse>;
+export type DescribeAccountWhiteListCommandOutput = CommandOutput<DescribeAccountWhiteListResponse>;
+export type DescribePrivateEgressCommandOutput = CommandOutput<DescribePrivateEgressResponse>;
+export type DescribePrivateEgressAvailableZonesCommandOutput = CommandOutput<DescribePrivateEgressAvailableZonesResponse>;
+export type DescribePrivateEgressDnsBlockRulesCommandOutput = CommandOutput<DescribePrivateEgressDnsBlockRulesResponse>;
+export type DescribePrivateEgressEndpointsCommandOutput = CommandOutput<DescribePrivateEgressEndpointsResponse>;
+export type DescribePrivateEgressManagedWebAccessRuleTemplatesCommandOutput = CommandOutput<DescribePrivateEgressManagedWebAccessRuleTemplatesResponse>;
+export type DescribePrivateEgressNetworkAccessPolicyCommandOutput = CommandOutput<DescribePrivateEgressNetworkAccessPolicyResponse>;
+export type DescribePrivateEgressNetworkAccessRuleAttributesCommandOutput = CommandOutput<DescribePrivateEgressNetworkAccessRuleAttributesResponse>;
+export type DescribePrivateEgressNetworkAccessRulesCommandOutput = CommandOutput<DescribePrivateEgressNetworkAccessRulesResponse>;
+export type DescribePrivateEgressWebAccessPolicyCommandOutput = CommandOutput<DescribePrivateEgressWebAccessPolicyResponse>;
+export type DescribePrivateEgressWebAccessRuleAttributesCommandOutput = CommandOutput<DescribePrivateEgressWebAccessRuleAttributesResponse>;
+export type DescribePrivateEgressWebAccessRulesCommandOutput = CommandOutput<DescribePrivateEgressWebAccessRulesResponse>;
+export type DisablePrivateEgressAccessLogCommandOutput = CommandOutput<DisablePrivateEgressAccessLogResponse>;
+export type DisablePrivateEgressDnsCommandOutput = CommandOutput<DisablePrivateEgressDnsResponse>;
+export type DisablePrivateEgressDnsBlockRuleCommandOutput = CommandOutput<DisablePrivateEgressDnsBlockRuleResponse>;
+export type DisablePrivateEgressNetworkAccessPolicyCommandOutput = CommandOutput<DisablePrivateEgressNetworkAccessPolicyResponse>;
+export type DisablePrivateEgressWebAccessPolicyCommandOutput = CommandOutput<DisablePrivateEgressWebAccessPolicyResponse>;
+export type EnablePrivateEgressAccessLogCommandOutput = CommandOutput<EnablePrivateEgressAccessLogResponse>;
+export type EnablePrivateEgressDnsCommandOutput = CommandOutput<EnablePrivateEgressDnsResponse>;
+export type EnablePrivateEgressDnsBlockRuleCommandOutput = CommandOutput<EnablePrivateEgressDnsBlockRuleResponse>;
+export type EnablePrivateEgressNetworkAccessPolicyCommandOutput = CommandOutput<EnablePrivateEgressNetworkAccessPolicyResponse>;
+export type EnablePrivateEgressWebAccessPolicyCommandOutput = CommandOutput<EnablePrivateEgressWebAccessPolicyResponse>;
 export type ExecuteClawOmniInstanceCommandCommandOutput = CommandOutput<ExecuteClawOmniInstanceCommandResponse>;
+export type GetArkclawOmniInstanceWebuiCommandOutput = CommandOutput<GetArkclawOmniInstanceWebuiResponse>;
 export type GetClawInstanceCommandOutput = CommandOutput<GetClawInstanceResponse>;
 export type GetClawOmniAutoChannelJobCommandOutput = CommandOutput<GetClawOmniAutoChannelJobResponse>;
 export type GetClawOmniInstanceCommandOutput = CommandOutput<GetClawOmniInstanceResponse>;
@@ -132,7 +255,9 @@ export type GetClawOmniInstanceCommandJobCommandOutput = CommandOutput<GetClawOm
 export type GetClawOmniInstanceCommandJobLogCommandOutput = CommandOutput<GetClawOmniInstanceCommandJobLogResponse>;
 export type GetClawOmniInstanceSkillsCommandOutput = CommandOutput<GetClawOmniInstanceSkillsResponse>;
 export type GetClawOmniSpaceTemplateCommandOutput = CommandOutput<GetClawOmniSpaceTemplateResponse>;
+export type GetIdentityProviderTokenExchangeCommandOutput = CommandOutput<GetIdentityProviderTokenExchangeResponse>;
 export type GetScheduledJobCommandOutput = CommandOutput<GetScheduledJobResponse>;
+export type GetUserPoolClientCommandOutput = CommandOutput<GetUserPoolClientResponse>;
 export type InstallClawOmniInstanceSkillCommandOutput = CommandOutput<InstallClawOmniInstanceSkillResponse>;
 export type ListClawInstancesCommandOutput = CommandOutput<ListClawInstancesResponse>;
 export type ListClawOmniChannelsCommandOutput = CommandOutput<ListClawOmniChannelsResponse>;
@@ -143,18 +268,28 @@ export type ListClawOmniInstancesCommandOutput = CommandOutput<ListClawOmniInsta
 export type ListClawOmniSpaceEnabledModelsCommandOutput = CommandOutput<ListClawOmniSpaceEnabledModelsResponse>;
 export type ListClawOmniSpaceTemplatesCommandOutput = CommandOutput<ListClawOmniSpaceTemplatesResponse>;
 export type ListClawSpaceSeatsCommandOutput = CommandOutput<ListClawSpaceSeatsResponse>;
+export type ListIdentityProvidersTokenExchangeCommandOutput = CommandOutput<ListIdentityProvidersTokenExchangeResponse>;
 export type ListScheduledJobRunsCommandOutput = CommandOutput<ListScheduledJobRunsResponse>;
 export type ListScheduledJobsCommandOutput = CommandOutput<ListScheduledJobsResponse>;
 export type ListUsersCommandOutput = CommandOutput<ListUsersResponse>;
+export type ModifyPrivateEgressCommandOutput = CommandOutput<ModifyPrivateEgressResponse>;
+export type ModifyPrivateEgressDnsCommandOutput = CommandOutput<ModifyPrivateEgressDnsResponse>;
+export type ModifyPrivateEgressDnsBlockRuleCommandOutput = CommandOutput<ModifyPrivateEgressDnsBlockRuleResponse>;
+export type ModifyPrivateEgressEndpointCommandOutput = CommandOutput<ModifyPrivateEgressEndpointResponse>;
+export type ModifyPrivateEgressNetworkAccessRuleCommandOutput = CommandOutput<ModifyPrivateEgressNetworkAccessRuleResponse>;
+export type ModifyPrivateEgressWebAccessRuleCommandOutput = CommandOutput<ModifyPrivateEgressWebAccessRuleResponse>;
 export type PauseClawOmniInstanceCommandOutput = CommandOutput<PauseClawOmniInstanceResponse>;
 export type RejectClawOmniInstanceDevicePairingCommandOutput = CommandOutput<RejectClawOmniInstanceDevicePairingResponse>;
 export type RemoveClawOmniInstanceDevicePairedCommandOutput = CommandOutput<RemoveClawOmniInstanceDevicePairedResponse>;
 export type ResetClawOmniInstanceCommandOutput = CommandOutput<ResetClawOmniInstanceResponse>;
+export type RestartClawInstanceCommandOutput = CommandOutput<RestartClawInstanceResponse>;
 export type ResumeClawOmniInstanceCommandOutput = CommandOutput<ResumeClawOmniInstanceResponse>;
 export type StopClawOmniAutoChannelJobCommandOutput = CommandOutput<StopClawOmniAutoChannelJobResponse>;
 export type StopClawOmniInstanceCommandJobCommandOutput = CommandOutput<StopClawOmniInstanceCommandJobResponse>;
+export type UnbindClawInstanceCommandOutput = CommandOutput<UnbindClawInstanceResponse>;
 export type UpdateClawOmniInstanceCommandOutput = CommandOutput<UpdateClawOmniInstanceResponse>;
 export type UpdateClawOmniInstanceModelCommandOutput = CommandOutput<UpdateClawOmniInstanceModelResponse>;
+export type UpdateIdentityProviderTokenExchangeCommandOutput = CommandOutput<UpdateIdentityProviderTokenExchangeResponse>;
 export type UpdatePrivateClawOmniSpaceTemplateCommandOutput = CommandOutput<UpdatePrivateClawOmniSpaceTemplateResponse>;
 export type UpdateScheduledJobCommandOutput = CommandOutput<UpdateScheduledJobResponse>;
 export type UpdateSpaceUserConfigsCommandOutput = CommandOutput<UpdateSpaceUserConfigsResponse>;
@@ -264,6 +399,21 @@ export class CreateClawOmniInstanceCommandJobCommand extends Command<
   }
 }
 /**
+ * Command to CreateIdentityProviderTokenExchange
+ */
+export class CreateIdentityProviderTokenExchangeCommand extends Command<
+  CreateIdentityProviderTokenExchangeRequest,
+  CreateIdentityProviderTokenExchangeCommandOutput,
+  'CreateIdentityProviderTokenExchangeCommand'
+> {
+  static readonly metaPath = '/CreateIdentityProviderTokenExchange/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: CreateIdentityProviderTokenExchangeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateIdentityProviderTokenExchangeCommand.metaPath);
+  }
+}
+/**
  * Command to CreatePrivateClawOmniSpaceTemplate
  */
 export class CreatePrivateClawOmniSpaceTemplateCommand extends Command<
@@ -276,6 +426,66 @@ export class CreatePrivateClawOmniSpaceTemplateCommand extends Command<
   constructor(input: CreatePrivateClawOmniSpaceTemplateRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreatePrivateClawOmniSpaceTemplateCommand.metaPath);
+  }
+}
+/**
+ * Command to CreatePrivateEgressDnsBlockRule
+ */
+export class CreatePrivateEgressDnsBlockRuleCommand extends Command<
+  CreatePrivateEgressDnsBlockRuleRequest,
+  CreatePrivateEgressDnsBlockRuleCommandOutput,
+  'CreatePrivateEgressDnsBlockRuleCommand'
+> {
+  static readonly metaPath = '/CreatePrivateEgressDnsBlockRule/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: CreatePrivateEgressDnsBlockRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreatePrivateEgressDnsBlockRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to CreatePrivateEgressEndpoint
+ */
+export class CreatePrivateEgressEndpointCommand extends Command<
+  CreatePrivateEgressEndpointRequest,
+  CreatePrivateEgressEndpointCommandOutput,
+  'CreatePrivateEgressEndpointCommand'
+> {
+  static readonly metaPath = '/CreatePrivateEgressEndpoint/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: CreatePrivateEgressEndpointRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreatePrivateEgressEndpointCommand.metaPath);
+  }
+}
+/**
+ * Command to CreatePrivateEgressNetworkAccessRule
+ */
+export class CreatePrivateEgressNetworkAccessRuleCommand extends Command<
+  CreatePrivateEgressNetworkAccessRuleRequest,
+  CreatePrivateEgressNetworkAccessRuleCommandOutput,
+  'CreatePrivateEgressNetworkAccessRuleCommand'
+> {
+  static readonly metaPath = '/CreatePrivateEgressNetworkAccessRule/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: CreatePrivateEgressNetworkAccessRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreatePrivateEgressNetworkAccessRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to CreatePrivateEgressWebAccessRule
+ */
+export class CreatePrivateEgressWebAccessRuleCommand extends Command<
+  CreatePrivateEgressWebAccessRuleRequest,
+  CreatePrivateEgressWebAccessRuleCommandOutput,
+  'CreatePrivateEgressWebAccessRuleCommand'
+> {
+  static readonly metaPath = '/CreatePrivateEgressWebAccessRule/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: CreatePrivateEgressWebAccessRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreatePrivateEgressWebAccessRuleCommand.metaPath);
   }
 }
 /**
@@ -339,6 +549,81 @@ export class DeleteClawOmniInstanceCommand extends Command<
   }
 }
 /**
+ * Command to DeleteIdentityProviderTokenExchange
+ */
+export class DeleteIdentityProviderTokenExchangeCommand extends Command<
+  DeleteIdentityProviderTokenExchangeRequest,
+  DeleteIdentityProviderTokenExchangeCommandOutput,
+  'DeleteIdentityProviderTokenExchangeCommand'
+> {
+  static readonly metaPath = '/DeleteIdentityProviderTokenExchange/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: DeleteIdentityProviderTokenExchangeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteIdentityProviderTokenExchangeCommand.metaPath);
+  }
+}
+/**
+ * Command to DeletePrivateEgressDnsBlockRule
+ */
+export class DeletePrivateEgressDnsBlockRuleCommand extends Command<
+  DeletePrivateEgressDnsBlockRuleRequest,
+  DeletePrivateEgressDnsBlockRuleCommandOutput,
+  'DeletePrivateEgressDnsBlockRuleCommand'
+> {
+  static readonly metaPath = '/DeletePrivateEgressDnsBlockRule/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DeletePrivateEgressDnsBlockRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeletePrivateEgressDnsBlockRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to DeletePrivateEgressEndpoint
+ */
+export class DeletePrivateEgressEndpointCommand extends Command<
+  DeletePrivateEgressEndpointRequest,
+  DeletePrivateEgressEndpointCommandOutput,
+  'DeletePrivateEgressEndpointCommand'
+> {
+  static readonly metaPath = '/DeletePrivateEgressEndpoint/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DeletePrivateEgressEndpointRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeletePrivateEgressEndpointCommand.metaPath);
+  }
+}
+/**
+ * Command to DeletePrivateEgressNetworkAccessRule
+ */
+export class DeletePrivateEgressNetworkAccessRuleCommand extends Command<
+  DeletePrivateEgressNetworkAccessRuleRequest,
+  DeletePrivateEgressNetworkAccessRuleCommandOutput,
+  'DeletePrivateEgressNetworkAccessRuleCommand'
+> {
+  static readonly metaPath = '/DeletePrivateEgressNetworkAccessRule/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DeletePrivateEgressNetworkAccessRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeletePrivateEgressNetworkAccessRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to DeletePrivateEgressWebAccessRule
+ */
+export class DeletePrivateEgressWebAccessRuleCommand extends Command<
+  DeletePrivateEgressWebAccessRuleRequest,
+  DeletePrivateEgressWebAccessRuleCommandOutput,
+  'DeletePrivateEgressWebAccessRuleCommand'
+> {
+  static readonly metaPath = '/DeletePrivateEgressWebAccessRule/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DeletePrivateEgressWebAccessRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeletePrivateEgressWebAccessRuleCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteScheduledJob
  */
 export class DeleteScheduledJobCommand extends Command<
@@ -354,6 +639,336 @@ export class DeleteScheduledJobCommand extends Command<
   }
 }
 /**
+ * Command to DescribeAccountWhiteList
+ */
+export class DescribeAccountWhiteListCommand extends Command<
+  DescribeAccountWhiteListRequest,
+  DescribeAccountWhiteListCommandOutput,
+  'DescribeAccountWhiteListCommand'
+> {
+  static readonly metaPath = '/DescribeAccountWhiteList/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DescribeAccountWhiteListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeAccountWhiteListCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribePrivateEgress
+ */
+export class DescribePrivateEgressCommand extends Command<
+  DescribePrivateEgressRequest,
+  DescribePrivateEgressCommandOutput,
+  'DescribePrivateEgressCommand'
+> {
+  static readonly metaPath = '/DescribePrivateEgress/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DescribePrivateEgressRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePrivateEgressCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribePrivateEgressAvailableZones
+ */
+export class DescribePrivateEgressAvailableZonesCommand extends Command<
+  DescribePrivateEgressAvailableZonesRequest,
+  DescribePrivateEgressAvailableZonesCommandOutput,
+  'DescribePrivateEgressAvailableZonesCommand'
+> {
+  static readonly metaPath = '/DescribePrivateEgressAvailableZones/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DescribePrivateEgressAvailableZonesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePrivateEgressAvailableZonesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribePrivateEgressDnsBlockRules
+ */
+export class DescribePrivateEgressDnsBlockRulesCommand extends Command<
+  DescribePrivateEgressDnsBlockRulesRequest,
+  DescribePrivateEgressDnsBlockRulesCommandOutput,
+  'DescribePrivateEgressDnsBlockRulesCommand'
+> {
+  static readonly metaPath = '/DescribePrivateEgressDnsBlockRules/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DescribePrivateEgressDnsBlockRulesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePrivateEgressDnsBlockRulesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribePrivateEgressEndpoints
+ */
+export class DescribePrivateEgressEndpointsCommand extends Command<
+  DescribePrivateEgressEndpointsRequest,
+  DescribePrivateEgressEndpointsCommandOutput,
+  'DescribePrivateEgressEndpointsCommand'
+> {
+  static readonly metaPath = '/DescribePrivateEgressEndpoints/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DescribePrivateEgressEndpointsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePrivateEgressEndpointsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribePrivateEgressManagedWebAccessRuleTemplates
+ */
+export class DescribePrivateEgressManagedWebAccessRuleTemplatesCommand extends Command<
+  DescribePrivateEgressManagedWebAccessRuleTemplatesRequest,
+  DescribePrivateEgressManagedWebAccessRuleTemplatesCommandOutput,
+  'DescribePrivateEgressManagedWebAccessRuleTemplatesCommand'
+> {
+  static readonly metaPath = '/DescribePrivateEgressManagedWebAccessRuleTemplates/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DescribePrivateEgressManagedWebAccessRuleTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePrivateEgressManagedWebAccessRuleTemplatesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribePrivateEgressNetworkAccessPolicy
+ */
+export class DescribePrivateEgressNetworkAccessPolicyCommand extends Command<
+  DescribePrivateEgressNetworkAccessPolicyRequest,
+  DescribePrivateEgressNetworkAccessPolicyCommandOutput,
+  'DescribePrivateEgressNetworkAccessPolicyCommand'
+> {
+  static readonly metaPath = '/DescribePrivateEgressNetworkAccessPolicy/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DescribePrivateEgressNetworkAccessPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePrivateEgressNetworkAccessPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribePrivateEgressNetworkAccessRuleAttributes
+ */
+export class DescribePrivateEgressNetworkAccessRuleAttributesCommand extends Command<
+  DescribePrivateEgressNetworkAccessRuleAttributesRequest,
+  DescribePrivateEgressNetworkAccessRuleAttributesCommandOutput,
+  'DescribePrivateEgressNetworkAccessRuleAttributesCommand'
+> {
+  static readonly metaPath = '/DescribePrivateEgressNetworkAccessRuleAttributes/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DescribePrivateEgressNetworkAccessRuleAttributesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePrivateEgressNetworkAccessRuleAttributesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribePrivateEgressNetworkAccessRules
+ */
+export class DescribePrivateEgressNetworkAccessRulesCommand extends Command<
+  DescribePrivateEgressNetworkAccessRulesRequest,
+  DescribePrivateEgressNetworkAccessRulesCommandOutput,
+  'DescribePrivateEgressNetworkAccessRulesCommand'
+> {
+  static readonly metaPath = '/DescribePrivateEgressNetworkAccessRules/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DescribePrivateEgressNetworkAccessRulesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePrivateEgressNetworkAccessRulesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribePrivateEgressWebAccessPolicy
+ */
+export class DescribePrivateEgressWebAccessPolicyCommand extends Command<
+  DescribePrivateEgressWebAccessPolicyRequest,
+  DescribePrivateEgressWebAccessPolicyCommandOutput,
+  'DescribePrivateEgressWebAccessPolicyCommand'
+> {
+  static readonly metaPath = '/DescribePrivateEgressWebAccessPolicy/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DescribePrivateEgressWebAccessPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePrivateEgressWebAccessPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribePrivateEgressWebAccessRuleAttributes
+ */
+export class DescribePrivateEgressWebAccessRuleAttributesCommand extends Command<
+  DescribePrivateEgressWebAccessRuleAttributesRequest,
+  DescribePrivateEgressWebAccessRuleAttributesCommandOutput,
+  'DescribePrivateEgressWebAccessRuleAttributesCommand'
+> {
+  static readonly metaPath = '/DescribePrivateEgressWebAccessRuleAttributes/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DescribePrivateEgressWebAccessRuleAttributesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePrivateEgressWebAccessRuleAttributesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribePrivateEgressWebAccessRules
+ */
+export class DescribePrivateEgressWebAccessRulesCommand extends Command<
+  DescribePrivateEgressWebAccessRulesRequest,
+  DescribePrivateEgressWebAccessRulesCommandOutput,
+  'DescribePrivateEgressWebAccessRulesCommand'
+> {
+  static readonly metaPath = '/DescribePrivateEgressWebAccessRules/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DescribePrivateEgressWebAccessRulesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePrivateEgressWebAccessRulesCommand.metaPath);
+  }
+}
+/**
+ * Command to DisablePrivateEgressAccessLog
+ */
+export class DisablePrivateEgressAccessLogCommand extends Command<
+  DisablePrivateEgressAccessLogRequest,
+  DisablePrivateEgressAccessLogCommandOutput,
+  'DisablePrivateEgressAccessLogCommand'
+> {
+  static readonly metaPath = '/DisablePrivateEgressAccessLog/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DisablePrivateEgressAccessLogRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisablePrivateEgressAccessLogCommand.metaPath);
+  }
+}
+/**
+ * Command to DisablePrivateEgressDns
+ */
+export class DisablePrivateEgressDnsCommand extends Command<
+  DisablePrivateEgressDnsRequest,
+  DisablePrivateEgressDnsCommandOutput,
+  'DisablePrivateEgressDnsCommand'
+> {
+  static readonly metaPath = '/DisablePrivateEgressDns/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DisablePrivateEgressDnsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisablePrivateEgressDnsCommand.metaPath);
+  }
+}
+/**
+ * Command to DisablePrivateEgressDnsBlockRule
+ */
+export class DisablePrivateEgressDnsBlockRuleCommand extends Command<
+  DisablePrivateEgressDnsBlockRuleRequest,
+  DisablePrivateEgressDnsBlockRuleCommandOutput,
+  'DisablePrivateEgressDnsBlockRuleCommand'
+> {
+  static readonly metaPath = '/DisablePrivateEgressDnsBlockRule/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DisablePrivateEgressDnsBlockRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisablePrivateEgressDnsBlockRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to DisablePrivateEgressNetworkAccessPolicy
+ */
+export class DisablePrivateEgressNetworkAccessPolicyCommand extends Command<
+  DisablePrivateEgressNetworkAccessPolicyRequest,
+  DisablePrivateEgressNetworkAccessPolicyCommandOutput,
+  'DisablePrivateEgressNetworkAccessPolicyCommand'
+> {
+  static readonly metaPath = '/DisablePrivateEgressNetworkAccessPolicy/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DisablePrivateEgressNetworkAccessPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisablePrivateEgressNetworkAccessPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to DisablePrivateEgressWebAccessPolicy
+ */
+export class DisablePrivateEgressWebAccessPolicyCommand extends Command<
+  DisablePrivateEgressWebAccessPolicyRequest,
+  DisablePrivateEgressWebAccessPolicyCommandOutput,
+  'DisablePrivateEgressWebAccessPolicyCommand'
+> {
+  static readonly metaPath = '/DisablePrivateEgressWebAccessPolicy/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: DisablePrivateEgressWebAccessPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DisablePrivateEgressWebAccessPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to EnablePrivateEgressAccessLog
+ */
+export class EnablePrivateEgressAccessLogCommand extends Command<
+  EnablePrivateEgressAccessLogRequest,
+  EnablePrivateEgressAccessLogCommandOutput,
+  'EnablePrivateEgressAccessLogCommand'
+> {
+  static readonly metaPath = '/EnablePrivateEgressAccessLog/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: EnablePrivateEgressAccessLogRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnablePrivateEgressAccessLogCommand.metaPath);
+  }
+}
+/**
+ * Command to EnablePrivateEgressDns
+ */
+export class EnablePrivateEgressDnsCommand extends Command<
+  EnablePrivateEgressDnsRequest,
+  EnablePrivateEgressDnsCommandOutput,
+  'EnablePrivateEgressDnsCommand'
+> {
+  static readonly metaPath = '/EnablePrivateEgressDns/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: EnablePrivateEgressDnsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnablePrivateEgressDnsCommand.metaPath);
+  }
+}
+/**
+ * Command to EnablePrivateEgressDnsBlockRule
+ */
+export class EnablePrivateEgressDnsBlockRuleCommand extends Command<
+  EnablePrivateEgressDnsBlockRuleRequest,
+  EnablePrivateEgressDnsBlockRuleCommandOutput,
+  'EnablePrivateEgressDnsBlockRuleCommand'
+> {
+  static readonly metaPath = '/EnablePrivateEgressDnsBlockRule/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: EnablePrivateEgressDnsBlockRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnablePrivateEgressDnsBlockRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to EnablePrivateEgressNetworkAccessPolicy
+ */
+export class EnablePrivateEgressNetworkAccessPolicyCommand extends Command<
+  EnablePrivateEgressNetworkAccessPolicyRequest,
+  EnablePrivateEgressNetworkAccessPolicyCommandOutput,
+  'EnablePrivateEgressNetworkAccessPolicyCommand'
+> {
+  static readonly metaPath = '/EnablePrivateEgressNetworkAccessPolicy/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: EnablePrivateEgressNetworkAccessPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnablePrivateEgressNetworkAccessPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to EnablePrivateEgressWebAccessPolicy
+ */
+export class EnablePrivateEgressWebAccessPolicyCommand extends Command<
+  EnablePrivateEgressWebAccessPolicyRequest,
+  EnablePrivateEgressWebAccessPolicyCommandOutput,
+  'EnablePrivateEgressWebAccessPolicyCommand'
+> {
+  static readonly metaPath = '/EnablePrivateEgressWebAccessPolicy/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: EnablePrivateEgressWebAccessPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EnablePrivateEgressWebAccessPolicyCommand.metaPath);
+  }
+}
+/**
  * Command to ExecuteClawOmniInstanceCommand
  */
 export class ExecuteClawOmniInstanceCommandCommand extends Command<
@@ -366,6 +981,21 @@ export class ExecuteClawOmniInstanceCommandCommand extends Command<
   constructor(input: ExecuteClawOmniInstanceCommandRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ExecuteClawOmniInstanceCommandCommand.metaPath);
+  }
+}
+/**
+ * Command to GetArkclawOmniInstanceWebui
+ */
+export class GetArkclawOmniInstanceWebuiCommand extends Command<
+  GetArkclawOmniInstanceWebuiRequest,
+  GetArkclawOmniInstanceWebuiCommandOutput,
+  'GetArkclawOmniInstanceWebuiCommand'
+> {
+  static readonly metaPath = '/GetArkclawOmniInstanceWebui/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: GetArkclawOmniInstanceWebuiRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetArkclawOmniInstanceWebuiCommand.metaPath);
   }
 }
 /**
@@ -474,6 +1104,21 @@ export class GetClawOmniSpaceTemplateCommand extends Command<
   }
 }
 /**
+ * Command to GetIdentityProviderTokenExchange
+ */
+export class GetIdentityProviderTokenExchangeCommand extends Command<
+  GetIdentityProviderTokenExchangeRequest,
+  GetIdentityProviderTokenExchangeCommandOutput,
+  'GetIdentityProviderTokenExchangeCommand'
+> {
+  static readonly metaPath = '/GetIdentityProviderTokenExchange/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: GetIdentityProviderTokenExchangeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetIdentityProviderTokenExchangeCommand.metaPath);
+  }
+}
+/**
  * Command to GetScheduledJob
  */
 export class GetScheduledJobCommand extends Command<
@@ -486,6 +1131,21 @@ export class GetScheduledJobCommand extends Command<
   constructor(input: GetScheduledJobRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetScheduledJobCommand.metaPath);
+  }
+}
+/**
+ * Command to GetUserPoolClient
+ */
+export class GetUserPoolClientCommand extends Command<
+  GetUserPoolClientRequest,
+  GetUserPoolClientCommandOutput,
+  'GetUserPoolClientCommand'
+> {
+  static readonly metaPath = '/GetUserPoolClient/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: GetUserPoolClientRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetUserPoolClientCommand.metaPath);
   }
 }
 /**
@@ -639,6 +1299,21 @@ export class ListClawSpaceSeatsCommand extends Command<
   }
 }
 /**
+ * Command to ListIdentityProvidersTokenExchange
+ */
+export class ListIdentityProvidersTokenExchangeCommand extends Command<
+  ListIdentityProvidersTokenExchangeRequest,
+  ListIdentityProvidersTokenExchangeCommandOutput,
+  'ListIdentityProvidersTokenExchangeCommand'
+> {
+  static readonly metaPath = '/ListIdentityProvidersTokenExchange/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: ListIdentityProvidersTokenExchangeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListIdentityProvidersTokenExchangeCommand.metaPath);
+  }
+}
+/**
  * Command to ListScheduledJobRuns
  */
 export class ListScheduledJobRunsCommand extends Command<
@@ -681,6 +1356,96 @@ export class ListUsersCommand extends Command<
   constructor(input: ListUsersRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListUsersCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyPrivateEgress
+ */
+export class ModifyPrivateEgressCommand extends Command<
+  ModifyPrivateEgressRequest,
+  ModifyPrivateEgressCommandOutput,
+  'ModifyPrivateEgressCommand'
+> {
+  static readonly metaPath = '/ModifyPrivateEgress/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: ModifyPrivateEgressRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyPrivateEgressCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyPrivateEgressDns
+ */
+export class ModifyPrivateEgressDnsCommand extends Command<
+  ModifyPrivateEgressDnsRequest,
+  ModifyPrivateEgressDnsCommandOutput,
+  'ModifyPrivateEgressDnsCommand'
+> {
+  static readonly metaPath = '/ModifyPrivateEgressDns/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: ModifyPrivateEgressDnsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyPrivateEgressDnsCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyPrivateEgressDnsBlockRule
+ */
+export class ModifyPrivateEgressDnsBlockRuleCommand extends Command<
+  ModifyPrivateEgressDnsBlockRuleRequest,
+  ModifyPrivateEgressDnsBlockRuleCommandOutput,
+  'ModifyPrivateEgressDnsBlockRuleCommand'
+> {
+  static readonly metaPath = '/ModifyPrivateEgressDnsBlockRule/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: ModifyPrivateEgressDnsBlockRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyPrivateEgressDnsBlockRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyPrivateEgressEndpoint
+ */
+export class ModifyPrivateEgressEndpointCommand extends Command<
+  ModifyPrivateEgressEndpointRequest,
+  ModifyPrivateEgressEndpointCommandOutput,
+  'ModifyPrivateEgressEndpointCommand'
+> {
+  static readonly metaPath = '/ModifyPrivateEgressEndpoint/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: ModifyPrivateEgressEndpointRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyPrivateEgressEndpointCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyPrivateEgressNetworkAccessRule
+ */
+export class ModifyPrivateEgressNetworkAccessRuleCommand extends Command<
+  ModifyPrivateEgressNetworkAccessRuleRequest,
+  ModifyPrivateEgressNetworkAccessRuleCommandOutput,
+  'ModifyPrivateEgressNetworkAccessRuleCommand'
+> {
+  static readonly metaPath = '/ModifyPrivateEgressNetworkAccessRule/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: ModifyPrivateEgressNetworkAccessRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyPrivateEgressNetworkAccessRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyPrivateEgressWebAccessRule
+ */
+export class ModifyPrivateEgressWebAccessRuleCommand extends Command<
+  ModifyPrivateEgressWebAccessRuleRequest,
+  ModifyPrivateEgressWebAccessRuleCommandOutput,
+  'ModifyPrivateEgressWebAccessRuleCommand'
+> {
+  static readonly metaPath = '/ModifyPrivateEgressWebAccessRule/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: ModifyPrivateEgressWebAccessRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyPrivateEgressWebAccessRuleCommand.metaPath);
   }
 }
 /**
@@ -744,6 +1509,21 @@ export class ResetClawOmniInstanceCommand extends Command<
   }
 }
 /**
+ * Command to RestartClawInstance
+ */
+export class RestartClawInstanceCommand extends Command<
+  RestartClawInstanceRequest,
+  RestartClawInstanceCommandOutput,
+  'RestartClawInstanceCommand'
+> {
+  static readonly metaPath = '/RestartClawInstance/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: RestartClawInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RestartClawInstanceCommand.metaPath);
+  }
+}
+/**
  * Command to ResumeClawOmniInstance
  */
 export class ResumeClawOmniInstanceCommand extends Command<
@@ -789,6 +1569,21 @@ export class StopClawOmniInstanceCommandJobCommand extends Command<
   }
 }
 /**
+ * Command to UnbindClawInstance
+ */
+export class UnbindClawInstanceCommand extends Command<
+  UnbindClawInstanceRequest,
+  UnbindClawInstanceCommandOutput,
+  'UnbindClawInstanceCommand'
+> {
+  static readonly metaPath = '/UnbindClawInstance/2026-03-01/arkclaw/post/application_json/';
+
+  constructor(input: UnbindClawInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UnbindClawInstanceCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateClawOmniInstance
  */
 export class UpdateClawOmniInstanceCommand extends Command<
@@ -796,7 +1591,7 @@ export class UpdateClawOmniInstanceCommand extends Command<
   UpdateClawOmniInstanceCommandOutput,
   'UpdateClawOmniInstanceCommand'
 > {
-  static readonly metaPath = '/UpdateClawOmniInstance/2026-03-01/arkclaw/post/application_json/';
+  static readonly metaPath = '/UpdateClawOmniInstance/2026-03-01/arkclaw/get/text_plain/';
 
   constructor(input: UpdateClawOmniInstanceRequest) {
     super(input);
@@ -816,6 +1611,21 @@ export class UpdateClawOmniInstanceModelCommand extends Command<
   constructor(input: UpdateClawOmniInstanceModelRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateClawOmniInstanceModelCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateIdentityProviderTokenExchange
+ */
+export class UpdateIdentityProviderTokenExchangeCommand extends Command<
+  UpdateIdentityProviderTokenExchangeRequest,
+  UpdateIdentityProviderTokenExchangeCommandOutput,
+  'UpdateIdentityProviderTokenExchangeCommand'
+> {
+  static readonly metaPath = '/UpdateIdentityProviderTokenExchange/2026-03-01/arkclaw/get/text_plain/';
+
+  constructor(input: UpdateIdentityProviderTokenExchangeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateIdentityProviderTokenExchangeCommand.metaPath);
   }
 }
 /**
@@ -887,13 +1697,46 @@ export default {
   CreateClawOmniAutoChannelJobCommand,
   CreateClawOmniInstanceCommand,
   CreateClawOmniInstanceCommandJobCommand,
+  CreateIdentityProviderTokenExchangeCommand,
   CreatePrivateClawOmniSpaceTemplateCommand,
+  CreatePrivateEgressDnsBlockRuleCommand,
+  CreatePrivateEgressEndpointCommand,
+  CreatePrivateEgressNetworkAccessRuleCommand,
+  CreatePrivateEgressWebAccessRuleCommand,
   CreateScheduledJobCommand,
   DeleteClawInstanceCommand,
   DeleteClawOmniChannelCommand,
   DeleteClawOmniInstanceCommand,
+  DeleteIdentityProviderTokenExchangeCommand,
+  DeletePrivateEgressDnsBlockRuleCommand,
+  DeletePrivateEgressEndpointCommand,
+  DeletePrivateEgressNetworkAccessRuleCommand,
+  DeletePrivateEgressWebAccessRuleCommand,
   DeleteScheduledJobCommand,
+  DescribeAccountWhiteListCommand,
+  DescribePrivateEgressCommand,
+  DescribePrivateEgressAvailableZonesCommand,
+  DescribePrivateEgressDnsBlockRulesCommand,
+  DescribePrivateEgressEndpointsCommand,
+  DescribePrivateEgressManagedWebAccessRuleTemplatesCommand,
+  DescribePrivateEgressNetworkAccessPolicyCommand,
+  DescribePrivateEgressNetworkAccessRuleAttributesCommand,
+  DescribePrivateEgressNetworkAccessRulesCommand,
+  DescribePrivateEgressWebAccessPolicyCommand,
+  DescribePrivateEgressWebAccessRuleAttributesCommand,
+  DescribePrivateEgressWebAccessRulesCommand,
+  DisablePrivateEgressAccessLogCommand,
+  DisablePrivateEgressDnsCommand,
+  DisablePrivateEgressDnsBlockRuleCommand,
+  DisablePrivateEgressNetworkAccessPolicyCommand,
+  DisablePrivateEgressWebAccessPolicyCommand,
+  EnablePrivateEgressAccessLogCommand,
+  EnablePrivateEgressDnsCommand,
+  EnablePrivateEgressDnsBlockRuleCommand,
+  EnablePrivateEgressNetworkAccessPolicyCommand,
+  EnablePrivateEgressWebAccessPolicyCommand,
   ExecuteClawOmniInstanceCommandCommand,
+  GetArkclawOmniInstanceWebuiCommand,
   GetClawInstanceCommand,
   GetClawOmniAutoChannelJobCommand,
   GetClawOmniInstanceCommand,
@@ -901,7 +1744,9 @@ export default {
   GetClawOmniInstanceCommandJobLogCommand,
   GetClawOmniInstanceSkillsCommand,
   GetClawOmniSpaceTemplateCommand,
+  GetIdentityProviderTokenExchangeCommand,
   GetScheduledJobCommand,
+  GetUserPoolClientCommand,
   InstallClawOmniInstanceSkillCommand,
   ListClawInstancesCommand,
   ListClawOmniChannelsCommand,
@@ -912,18 +1757,28 @@ export default {
   ListClawOmniSpaceEnabledModelsCommand,
   ListClawOmniSpaceTemplatesCommand,
   ListClawSpaceSeatsCommand,
+  ListIdentityProvidersTokenExchangeCommand,
   ListScheduledJobRunsCommand,
   ListScheduledJobsCommand,
   ListUsersCommand,
+  ModifyPrivateEgressCommand,
+  ModifyPrivateEgressDnsCommand,
+  ModifyPrivateEgressDnsBlockRuleCommand,
+  ModifyPrivateEgressEndpointCommand,
+  ModifyPrivateEgressNetworkAccessRuleCommand,
+  ModifyPrivateEgressWebAccessRuleCommand,
   PauseClawOmniInstanceCommand,
   RejectClawOmniInstanceDevicePairingCommand,
   RemoveClawOmniInstanceDevicePairedCommand,
   ResetClawOmniInstanceCommand,
+  RestartClawInstanceCommand,
   ResumeClawOmniInstanceCommand,
   StopClawOmniAutoChannelJobCommand,
   StopClawOmniInstanceCommandJobCommand,
+  UnbindClawInstanceCommand,
   UpdateClawOmniInstanceCommand,
   UpdateClawOmniInstanceModelCommand,
+  UpdateIdentityProviderTokenExchangeCommand,
   UpdatePrivateClawOmniSpaceTemplateCommand,
   UpdateScheduledJobCommand,
   UpdateSpaceUserConfigsCommand,

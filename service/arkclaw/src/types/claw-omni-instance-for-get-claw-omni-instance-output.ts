@@ -13,7 +13,9 @@
  */
 
 import { ModelConfigForGetClawOmniInstanceOutput } from './model-config-for-get-claw-omni-instance-output';
+import { OperationLockForGetClawOmniInstanceOutput } from './operation-lock-for-get-claw-omni-instance-output';
 import { TagForGetClawOmniInstanceOutput } from './tag-for-get-claw-omni-instance-output';
+import { TokenQuotaForGetClawOmniInstanceOutput } from './token-quota-for-get-claw-omni-instance-output';
  /**
  * 
  *
@@ -101,6 +103,12 @@ export interface ClawOmniInstanceForGetClawOmniInstanceOutput {
     Name?: string;
 
     /**
+     * @type {OperationLockForGetClawOmniInstanceOutput}
+     * @memberof ClawOmniInstanceForGetClawOmniInstanceOutput
+     */
+    OperationLock?: OperationLockForGetClawOmniInstanceOutput;
+
+    /**
      * @type {string}
      * @memberof ClawOmniInstanceForGetClawOmniInstanceOutput
      */
@@ -135,6 +143,30 @@ export interface ClawOmniInstanceForGetClawOmniInstanceOutput {
      * @memberof ClawOmniInstanceForGetClawOmniInstanceOutput
      */
     TemplateId?: string;
+
+    /**
+     * @type {string}
+     * @memberof ClawOmniInstanceForGetClawOmniInstanceOutput
+     */
+    TokenLimitPerDay?: string;
+
+    /**
+     * @type {string}
+     * @memberof ClawOmniInstanceForGetClawOmniInstanceOutput
+     */
+    TokenLimitPerMin?: string;
+
+    /**
+     * @type {string}
+     * @memberof ClawOmniInstanceForGetClawOmniInstanceOutput
+     */
+    TokenLimitPerWeek?: string;
+
+    /**
+     * @type {TokenQuotaForGetClawOmniInstanceOutput}
+     * @memberof ClawOmniInstanceForGetClawOmniInstanceOutput
+     */
+    TokenQuota?: TokenQuotaForGetClawOmniInstanceOutput;
 
     /**
      * @type {string}

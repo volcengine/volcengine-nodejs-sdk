@@ -69,6 +69,12 @@ export interface UploadSubtitleInfoForVideoProjectGetUploadSubtitleStatusOutput 
     subtitleId?: string;
 
     /**
+     * @type {number}
+     * @memberof UploadSubtitleInfoForVideoProjectGetUploadSubtitleStatusOutput
+     */
+    type?: number;
+
+    /**
      * @type {string}
      * @memberof UploadSubtitleInfoForVideoProjectGetUploadSubtitleStatusOutput
      */
