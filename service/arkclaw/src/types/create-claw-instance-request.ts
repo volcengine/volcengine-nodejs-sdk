@@ -51,6 +51,12 @@ export interface CreateClawInstanceRequest {
     DryRun?: boolean;
 
     /**
+     * @type {boolean}
+     * @memberof CreateClawInstanceRequest
+     */
+    EnableHeadless?: boolean;
+
+    /**
      * @type {string}
      * @memberof CreateClawInstanceRequest
      */
