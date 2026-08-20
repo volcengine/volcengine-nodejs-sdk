@@ -42,6 +42,8 @@ import { DeleteAccessKeyRequest } from './types/index';
 import { DeleteAccessKeyResponse } from './types/index';
 import { DeleteAllowListRequest } from './types/index';
 import { DeleteAllowListResponse } from './types/index';
+import { DeleteConsumerGroupSubscriptionRequest } from './types/index';
+import { DeleteConsumerGroupSubscriptionResponse } from './types/index';
 import { DeleteGroupAsyncRequest } from './types/index';
 import { DeleteGroupAsyncResponse } from './types/index';
 import { DeleteGroupRequest } from './types/index';
@@ -86,6 +88,8 @@ import { DescribeInstancesRequest } from './types/index';
 import { DescribeInstancesResponse } from './types/index';
 import { DescribePLWhitelistRequest } from './types/index';
 import { DescribePLWhitelistResponse } from './types/index';
+import { DescribeProducersRequest } from './types/index';
+import { DescribeProducersResponse } from './types/index';
 import { DescribeRegionsRequest } from './types/index';
 import { DescribeRegionsResponse } from './types/index';
 import { DescribeSecretKeyRequest } from './types/index';
@@ -110,10 +114,14 @@ import { EnableInstanceBurstTpsRequest } from './types/index';
 import { EnableInstanceBurstTpsResponse } from './types/index';
 import { EnableInstanceInspectRequest } from './types/index';
 import { EnableInstanceInspectResponse } from './types/index';
+import { ExportDLQMessagesRequest } from './types/index';
+import { ExportDLQMessagesResponse } from './types/index';
 import { GetInspectConfigRequest } from './types/index';
 import { GetInspectConfigResponse } from './types/index';
 import { GetInstanceInspectResultRequest } from './types/index';
 import { GetInstanceInspectResultResponse } from './types/index';
+import { ListRocketmqVersionsRequest } from './types/index';
+import { ListRocketmqVersionsResponse } from './types/index';
 import { ManualProcessResultRequest } from './types/index';
 import { ManualProcessResultResponse } from './types/index';
 import { ManualTriggerInspectRequest } from './types/index';
@@ -160,6 +168,10 @@ import { ResendDLQMessageByIdRequest } from './types/index';
 import { ResendDLQMessageByIdResponse } from './types/index';
 import { ResetConsumedOffsetsRequest } from './types/index';
 import { ResetConsumedOffsetsResponse } from './types/index';
+import { UpdateGroupRequest } from './types/index';
+import { UpdateGroupResponse } from './types/index';
+import { UpdateTopicRequest } from './types/index';
+import { UpdateTopicResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
@@ -178,6 +190,7 @@ export type CreateTopicCommandOutput = CommandOutput<CreateTopicResponse>;
 export type CreateTopicAsyncCommandOutput = CommandOutput<CreateTopicAsyncResponse>;
 export type DeleteAccessKeyCommandOutput = CommandOutput<DeleteAccessKeyResponse>;
 export type DeleteAllowListCommandOutput = CommandOutput<DeleteAllowListResponse>;
+export type DeleteConsumerGroupSubscriptionCommandOutput = CommandOutput<DeleteConsumerGroupSubscriptionResponse>;
 export type DeleteGroupCommandOutput = CommandOutput<DeleteGroupResponse>;
 export type DeleteGroupAsyncCommandOutput = CommandOutput<DeleteGroupAsyncResponse>;
 export type DeleteGroupsCommandOutput = CommandOutput<DeleteGroupsResponse>;
@@ -200,6 +213,7 @@ export type DescribeGroupsDetailCommandOutput = CommandOutput<DescribeGroupsDeta
 export type DescribeInstanceDetailCommandOutput = CommandOutput<DescribeInstanceDetailResponse>;
 export type DescribeInstancesCommandOutput = CommandOutput<DescribeInstancesResponse>;
 export type DescribePLWhitelistCommandOutput = CommandOutput<DescribePLWhitelistResponse>;
+export type DescribeProducersCommandOutput = CommandOutput<DescribeProducersResponse>;
 export type DescribeRegionsCommandOutput = CommandOutput<DescribeRegionsResponse>;
 export type DescribeSecretKeyCommandOutput = CommandOutput<DescribeSecretKeyResponse>;
 export type DescribeTagsByResourceCommandOutput = CommandOutput<DescribeTagsByResourceResponse>;
@@ -212,8 +226,10 @@ export type DisassociateAllowListCommandOutput = CommandOutput<DisassociateAllow
 export type EnableAutoCreateGroupCommandOutput = CommandOutput<EnableAutoCreateGroupResponse>;
 export type EnableInstanceBurstTpsCommandOutput = CommandOutput<EnableInstanceBurstTpsResponse>;
 export type EnableInstanceInspectCommandOutput = CommandOutput<EnableInstanceInspectResponse>;
+export type ExportDLQMessagesCommandOutput = CommandOutput<ExportDLQMessagesResponse>;
 export type GetInspectConfigCommandOutput = CommandOutput<GetInspectConfigResponse>;
 export type GetInstanceInspectResultCommandOutput = CommandOutput<GetInstanceInspectResultResponse>;
+export type ListRocketmqVersionsCommandOutput = CommandOutput<ListRocketmqVersionsResponse>;
 export type ManualProcessResultCommandOutput = CommandOutput<ManualProcessResultResponse>;
 export type ManualTriggerInspectCommandOutput = CommandOutput<ManualTriggerInspectResponse>;
 export type MessageSendCommandOutput = CommandOutput<MessageSendResponse>;
@@ -237,6 +253,8 @@ export type RemovePLWhitelistCommandOutput = CommandOutput<RemovePLWhitelistResp
 export type RemoveTagsFromResourceCommandOutput = CommandOutput<RemoveTagsFromResourceResponse>;
 export type ResendDLQMessageByIdCommandOutput = CommandOutput<ResendDLQMessageByIdResponse>;
 export type ResetConsumedOffsetsCommandOutput = CommandOutput<ResetConsumedOffsetsResponse>;
+export type UpdateGroupCommandOutput = CommandOutput<UpdateGroupResponse>;
+export type UpdateTopicCommandOutput = CommandOutput<UpdateTopicResponse>;
 
 /**
  * ROCKETMQClient Service Client
@@ -459,6 +477,21 @@ export class DeleteAllowListCommand extends Command<
   constructor(input: DeleteAllowListRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteAllowListCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteConsumerGroupSubscription
+ */
+export class DeleteConsumerGroupSubscriptionCommand extends Command<
+  DeleteConsumerGroupSubscriptionRequest,
+  DeleteConsumerGroupSubscriptionCommandOutput,
+  'DeleteConsumerGroupSubscriptionCommand'
+> {
+  static readonly metaPath = '/DeleteConsumerGroupSubscription/2023-01-01/rocketmq/post/application_json/';
+
+  constructor(input: DeleteConsumerGroupSubscriptionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteConsumerGroupSubscriptionCommand.metaPath);
   }
 }
 /**
@@ -792,6 +825,21 @@ export class DescribePLWhitelistCommand extends Command<
   }
 }
 /**
+ * Command to DescribeProducers
+ */
+export class DescribeProducersCommand extends Command<
+  DescribeProducersRequest,
+  DescribeProducersCommandOutput,
+  'DescribeProducersCommand'
+> {
+  static readonly metaPath = '/DescribeProducers/2023-01-01/rocketmq/post/application_json/';
+
+  constructor(input: DescribeProducersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeProducersCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeRegions
  */
 export class DescribeRegionsCommand extends Command<
@@ -972,6 +1020,21 @@ export class EnableInstanceInspectCommand extends Command<
   }
 }
 /**
+ * Command to ExportDLQMessages
+ */
+export class ExportDLQMessagesCommand extends Command<
+  ExportDLQMessagesRequest,
+  ExportDLQMessagesCommandOutput,
+  'ExportDLQMessagesCommand'
+> {
+  static readonly metaPath = '/ExportDLQMessages/2023-01-01/rocketmq/post/application_json/';
+
+  constructor(input: ExportDLQMessagesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExportDLQMessagesCommand.metaPath);
+  }
+}
+/**
  * Command to GetInspectConfig
  */
 export class GetInspectConfigCommand extends Command<
@@ -999,6 +1062,21 @@ export class GetInstanceInspectResultCommand extends Command<
   constructor(input: GetInstanceInspectResultRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetInstanceInspectResultCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRocketmqVersions
+ */
+export class ListRocketmqVersionsCommand extends Command<
+  ListRocketmqVersionsRequest,
+  ListRocketmqVersionsCommandOutput,
+  'ListRocketmqVersionsCommand'
+> {
+  static readonly metaPath = '/ListRocketmqVersions/2023-01-01/rocketmq/post/application_json/';
+
+  constructor(input: ListRocketmqVersionsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRocketmqVersionsCommand.metaPath);
   }
 }
 /**
@@ -1346,6 +1424,36 @@ export class ResetConsumedOffsetsCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(ResetConsumedOffsetsCommand.metaPath);
   }
 }
+/**
+ * Command to UpdateGroup
+ */
+export class UpdateGroupCommand extends Command<
+  UpdateGroupRequest,
+  UpdateGroupCommandOutput,
+  'UpdateGroupCommand'
+> {
+  static readonly metaPath = '/UpdateGroup/2023-01-01/rocketmq/post/application_json/';
+
+  constructor(input: UpdateGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateTopic
+ */
+export class UpdateTopicCommand extends Command<
+  UpdateTopicRequest,
+  UpdateTopicCommandOutput,
+  'UpdateTopicCommand'
+> {
+  static readonly metaPath = '/UpdateTopic/2023-01-01/rocketmq/post/application_json/';
+
+  constructor(input: UpdateTopicRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateTopicCommand.metaPath);
+  }
+}
 
 export default {
   ROCKETMQClient,
@@ -1363,6 +1471,7 @@ export default {
   CreateTopicAsyncCommand,
   DeleteAccessKeyCommand,
   DeleteAllowListCommand,
+  DeleteConsumerGroupSubscriptionCommand,
   DeleteGroupCommand,
   DeleteGroupAsyncCommand,
   DeleteGroupsCommand,
@@ -1385,6 +1494,7 @@ export default {
   DescribeInstanceDetailCommand,
   DescribeInstancesCommand,
   DescribePLWhitelistCommand,
+  DescribeProducersCommand,
   DescribeRegionsCommand,
   DescribeSecretKeyCommand,
   DescribeTagsByResourceCommand,
@@ -1397,8 +1507,10 @@ export default {
   EnableAutoCreateGroupCommand,
   EnableInstanceBurstTpsCommand,
   EnableInstanceInspectCommand,
+  ExportDLQMessagesCommand,
   GetInspectConfigCommand,
   GetInstanceInspectResultCommand,
+  ListRocketmqVersionsCommand,
   ManualProcessResultCommand,
   ManualTriggerInspectCommand,
   MessageSendCommand,
@@ -1422,4 +1534,6 @@ export default {
   RemoveTagsFromResourceCommand,
   ResendDLQMessageByIdCommand,
   ResetConsumedOffsetsCommand,
+  UpdateGroupCommand,
+  UpdateTopicCommand,
 };
