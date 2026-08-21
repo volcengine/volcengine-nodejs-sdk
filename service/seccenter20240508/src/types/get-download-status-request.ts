@@ -24,5 +24,5 @@ export interface GetDownloadStatusRequest {
      * @type {string}
      * @memberof GetDownloadStatusRequest
      */
-    FileName?: string;
+    FileName: string;
 }

@@ -24,13 +24,13 @@ export interface GetAlarmBySmithKeyRequest {
      * @type {string}
      * @memberof GetAlarmBySmithKeyRequest
      */
-    AlarmCategory?: string;
+    AlarmCategory: string;
 
     /**
      * @type {string}
      * @memberof GetAlarmBySmithKeyRequest
      */
-    SmithKey?: string;
+    SmithKey: string;
 
     /**
      * @type {string}

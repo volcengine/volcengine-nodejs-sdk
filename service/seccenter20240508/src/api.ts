@@ -28,6 +28,8 @@ import { AddMonitorPolicyRequest } from './types/index';
 import { AddMonitorPolicyResponse } from './types/index';
 import { AddRaspConfigRequest } from './types/index';
 import { AddRaspConfigResponse } from './types/index';
+import { AddTrustDirectoryRequest } from './types/index';
+import { AddTrustDirectoryResponse } from './types/index';
 import { AddUserAutoDefenseRuleRequest } from './types/index';
 import { AddUserAutoDefenseRuleResponse } from './types/index';
 import { AddWhiteListRequest } from './types/index';
@@ -72,6 +74,8 @@ import { ControlMonitorPolicyRequest } from './types/index';
 import { ControlMonitorPolicyResponse } from './types/index';
 import { CreatFileScanTaskRequest } from './types/index';
 import { CreatFileScanTaskResponse } from './types/index';
+import { CreateAutoHardeningConfigRequest } from './types/index';
+import { CreateAutoHardeningConfigResponse } from './types/index';
 import { CreateHostTagRequest } from './types/index';
 import { CreateHostTagResponse } from './types/index';
 import { CreateLayeredGroupRequest } from './types/index';
@@ -86,10 +90,14 @@ import { CreateRepoRegistryVpcAuthRequest } from './types/index';
 import { CreateRepoRegistryVpcAuthResponse } from './types/index';
 import { CreateVarmorPolicyRequest } from './types/index';
 import { CreateVarmorPolicyResponse } from './types/index';
+import { CreateVulnExportJobRequest } from './types/index';
+import { CreateVulnExportJobResponse } from './types/index';
 import { DeleteAgentProxyRequest } from './types/index';
 import { DeleteAgentProxyResponse } from './types/index';
 import { DeleteAgentProxyServerRequest } from './types/index';
 import { DeleteAgentProxyServerResponse } from './types/index';
+import { DeleteAutoHardeningConfigRequest } from './types/index';
+import { DeleteAutoHardeningConfigResponse } from './types/index';
 import { DeleteAutoIsolateAgentListRequest } from './types/index';
 import { DeleteAutoIsolateAgentListResponse } from './types/index';
 import { DeleteBaselineCheckConfigRequest } from './types/index';
@@ -98,6 +106,8 @@ import { DeleteCloudEnvRequest } from './types/index';
 import { DeleteCloudEnvResponse } from './types/index';
 import { DeleteCommandRequest } from './types/index';
 import { DeleteCommandResponse } from './types/index';
+import { DeleteExportFileJobRequest } from './types/index';
+import { DeleteExportFileJobResponse } from './types/index';
 import { DeleteHostTagRequest } from './types/index';
 import { DeleteHostTagResponse } from './types/index';
 import { DeleteLayeredGroupRequest } from './types/index';
@@ -110,6 +120,8 @@ import { DeleteMultiLevelInstitutionRequest } from './types/index';
 import { DeleteMultiLevelInstitutionResponse } from './types/index';
 import { DeleteRaspConfigRequest } from './types/index';
 import { DeleteRaspConfigResponse } from './types/index';
+import { DeleteTrustDirectoryRequest } from './types/index';
+import { DeleteTrustDirectoryResponse } from './types/index';
 import { DeleteUserAutoDefenseRuleRequest } from './types/index';
 import { DeleteUserAutoDefenseRuleResponse } from './types/index';
 import { DeleteWhiteListsRequest } from './types/index';
@@ -158,6 +170,8 @@ import { EditMonitorPolicyRequest } from './types/index';
 import { EditMonitorPolicyResponse } from './types/index';
 import { EditRaspConfigRequest } from './types/index';
 import { EditRaspConfigResponse } from './types/index';
+import { EditTrustDirectoryRequest } from './types/index';
+import { EditTrustDirectoryResponse } from './types/index';
 import { EditVulnScanConfigRequest } from './types/index';
 import { EditVulnScanConfigResponse } from './types/index';
 import { EnableHostImportantProtectRequest } from './types/index';
@@ -234,6 +248,12 @@ import { GetAssetClustersSyncEndRequest } from './types/index';
 import { GetAssetClustersSyncEndResponse } from './types/index';
 import { GetAssetWorkloadStatisticRequest } from './types/index';
 import { GetAssetWorkloadStatisticResponse } from './types/index';
+import { GetAutoHardeningConfigRequest } from './types/index';
+import { GetAutoHardeningConfigResponse } from './types/index';
+import { GetAutoHardeningEnabledRequest } from './types/index';
+import { GetAutoHardeningEnabledResponse } from './types/index';
+import { GetAutoHardeningPolicyRequest } from './types/index';
+import { GetAutoHardeningPolicyResponse } from './types/index';
 import { GetAutoIsolateAgentListRequest } from './types/index';
 import { GetAutoIsolateAgentListResponse } from './types/index';
 import { GetAutoProtectConfigRequest } from './types/index';
@@ -412,6 +432,8 @@ import { GetSecurityOverviewScoreStatsRequest } from './types/index';
 import { GetSecurityOverviewScoreStatsResponse } from './types/index';
 import { GetStackTraceRequest } from './types/index';
 import { GetStackTraceResponse } from './types/index';
+import { GetSupportedVarmorVersionsRequest } from './types/index';
+import { GetSupportedVarmorVersionsResponse } from './types/index';
 import { GetTLSInfoRequest } from './types/index';
 import { GetTLSInfoResponse } from './types/index';
 import { GetTenantQuotaRequest } from './types/index';
@@ -466,6 +488,8 @@ import { InstallAgentProxyServerCommandRequest } from './types/index';
 import { InstallAgentProxyServerCommandResponse } from './types/index';
 import { IsolateFileRequest } from './types/index';
 import { IsolateFileResponse } from './types/index';
+import { JudgeAlarmBySecurityIntelligenceRequest } from './types/index';
+import { JudgeAlarmBySecurityIntelligenceResponse } from './types/index';
 import { ListAIApplicationBasicInfoRequest } from './types/index';
 import { ListAIApplicationBasicInfoResponse } from './types/index';
 import { ListAgentProxiesRequest } from './types/index';
@@ -504,6 +528,10 @@ import { ListAutoDefenseHostsRequest } from './types/index';
 import { ListAutoDefenseHostsResponse } from './types/index';
 import { ListAutoDefenseRulesRequest } from './types/index';
 import { ListAutoDefenseRulesResponse } from './types/index';
+import { ListAutoHardeningConfigsRequest } from './types/index';
+import { ListAutoHardeningConfigsResponse } from './types/index';
+import { ListAutoHardeningPoliciesRequest } from './types/index';
+import { ListAutoHardeningPoliciesResponse } from './types/index';
 import { ListBanIPListRequest } from './types/index';
 import { ListBanIPListResponse } from './types/index';
 import { ListBaselineBasicInfoRequest } from './types/index';
@@ -550,6 +578,8 @@ import { ListDevRegionRequest } from './types/index';
 import { ListDevRegionResponse } from './types/index';
 import { ListEndpointHandleMethodsRequest } from './types/index';
 import { ListEndpointHandleMethodsResponse } from './types/index';
+import { ListExportFileJobRequest } from './types/index';
+import { ListExportFileJobResponse } from './types/index';
 import { ListFileMonitorAlarmsRequest } from './types/index';
 import { ListFileMonitorAlarmsResponse } from './types/index';
 import { ListFingerprintCollectConfigRequest } from './types/index';
@@ -640,6 +670,8 @@ import { ListTagRelatedAgentRequest } from './types/index';
 import { ListTagRelatedAgentResponse } from './types/index';
 import { ListTagsDetailRequest } from './types/index';
 import { ListTagsDetailResponse } from './types/index';
+import { ListTrustDirectoriesRequest } from './types/index';
+import { ListTrustDirectoriesResponse } from './types/index';
 import { ListVarmorPoliciesRequest } from './types/index';
 import { ListVarmorPoliciesResponse } from './types/index';
 import { ListVirusAlarmsRequest } from './types/index';
@@ -708,6 +740,8 @@ import { SaveRepoImageScanScopeRequest } from './types/index';
 import { SaveRepoImageScanScopeResponse } from './types/index';
 import { SetAIAlarmJudgeConfigRequest } from './types/index';
 import { SetAIAlarmJudgeConfigResponse } from './types/index';
+import { SetAutoHardeningEnabledRequest } from './types/index';
+import { SetAutoHardeningEnabledResponse } from './types/index';
 import { SetBruteForceBanConfigRequest } from './types/index';
 import { SetBruteForceBanConfigResponse } from './types/index';
 import { SetCustomWeakPasswordsRequest } from './types/index';
@@ -716,6 +750,8 @@ import { SetRegularVirusScanConfigRequest } from './types/index';
 import { SetRegularVirusScanConfigResponse } from './types/index';
 import { StopMLPAssetSyncTaskRequest } from './types/index';
 import { StopMLPAssetSyncTaskResponse } from './types/index';
+import { StopScanTaskRequest } from './types/index';
+import { StopScanTaskResponse } from './types/index';
 import { SwitchCloudEnvSyncRequest } from './types/index';
 import { SwitchCloudEnvSyncResponse } from './types/index';
 import { SyncRegistryImagesRequest } from './types/index';
@@ -732,6 +768,8 @@ import { UpdateAlarmTagsRequest } from './types/index';
 import { UpdateAlarmTagsResponse } from './types/index';
 import { UpdateAssetClustersRequest } from './types/index';
 import { UpdateAssetClustersResponse } from './types/index';
+import { UpdateAutoHardeningConfigRequest } from './types/index';
+import { UpdateAutoHardeningConfigResponse } from './types/index';
 import { UpdateAutoProtectConfigRequest } from './types/index';
 import { UpdateAutoProtectConfigResponse } from './types/index';
 import { UpdateBaselineCheckConfigSwitchRequest } from './types/index';
@@ -771,6 +809,7 @@ export type AddCloudEnvCommandOutput = CommandOutput<AddCloudEnvResponse>;
 export type AddLoginConfigCommandOutput = CommandOutput<AddLoginConfigResponse>;
 export type AddMonitorPolicyCommandOutput = CommandOutput<AddMonitorPolicyResponse>;
 export type AddRaspConfigCommandOutput = CommandOutput<AddRaspConfigResponse>;
+export type AddTrustDirectoryCommandOutput = CommandOutput<AddTrustDirectoryResponse>;
 export type AddUserAutoDefenseRuleCommandOutput = CommandOutput<AddUserAutoDefenseRuleResponse>;
 export type AddWhiteListCommandOutput = CommandOutput<AddWhiteListResponse>;
 export type AllAssetScanCommandOutput = CommandOutput<AllAssetScanResponse>;
@@ -793,6 +832,7 @@ export type CheckInstallRaspCommandOutput = CommandOutput<CheckInstallRaspRespon
 export type CheckMonitorPolicyCommandOutput = CommandOutput<CheckMonitorPolicyResponse>;
 export type ControlMonitorPolicyCommandOutput = CommandOutput<ControlMonitorPolicyResponse>;
 export type CreatFileScanTaskCommandOutput = CommandOutput<CreatFileScanTaskResponse>;
+export type CreateAutoHardeningConfigCommandOutput = CommandOutput<CreateAutoHardeningConfigResponse>;
 export type CreateHostTagCommandOutput = CommandOutput<CreateHostTagResponse>;
 export type CreateLayeredGroupCommandOutput = CommandOutput<CreateLayeredGroupResponse>;
 export type CreateMLPAssetSyncTaskCommandOutput = CommandOutput<CreateMLPAssetSyncTaskResponse>;
@@ -800,18 +840,22 @@ export type CreateMLPUpdateSoftwareTaskCommandOutput = CommandOutput<CreateMLPUp
 export type CreateMultiLevelInstitutionCommandOutput = CommandOutput<CreateMultiLevelInstitutionResponse>;
 export type CreateRepoRegistryVpcAuthCommandOutput = CommandOutput<CreateRepoRegistryVpcAuthResponse>;
 export type CreateVarmorPolicyCommandOutput = CommandOutput<CreateVarmorPolicyResponse>;
+export type CreateVulnExportJobCommandOutput = CommandOutput<CreateVulnExportJobResponse>;
 export type DeleteAgentProxyCommandOutput = CommandOutput<DeleteAgentProxyResponse>;
 export type DeleteAgentProxyServerCommandOutput = CommandOutput<DeleteAgentProxyServerResponse>;
+export type DeleteAutoHardeningConfigCommandOutput = CommandOutput<DeleteAutoHardeningConfigResponse>;
 export type DeleteAutoIsolateAgentListCommandOutput = CommandOutput<DeleteAutoIsolateAgentListResponse>;
 export type DeleteBaselineCheckConfigCommandOutput = CommandOutput<DeleteBaselineCheckConfigResponse>;
 export type DeleteCloudEnvCommandOutput = CommandOutput<DeleteCloudEnvResponse>;
 export type DeleteCommandCommandOutput = CommandOutput<DeleteCommandResponse>;
+export type DeleteExportFileJobCommandOutput = CommandOutput<DeleteExportFileJobResponse>;
 export type DeleteHostTagCommandOutput = CommandOutput<DeleteHostTagResponse>;
 export type DeleteLayeredGroupCommandOutput = CommandOutput<DeleteLayeredGroupResponse>;
 export type DeleteLoginConfigCommandOutput = CommandOutput<DeleteLoginConfigResponse>;
 export type DeleteMonitorPolicyCommandOutput = CommandOutput<DeleteMonitorPolicyResponse>;
 export type DeleteMultiLevelInstitutionCommandOutput = CommandOutput<DeleteMultiLevelInstitutionResponse>;
 export type DeleteRaspConfigCommandOutput = CommandOutput<DeleteRaspConfigResponse>;
+export type DeleteTrustDirectoryCommandOutput = CommandOutput<DeleteTrustDirectoryResponse>;
 export type DeleteUserAutoDefenseRuleCommandOutput = CommandOutput<DeleteUserAutoDefenseRuleResponse>;
 export type DeleteWhiteListsCommandOutput = CommandOutput<DeleteWhiteListsResponse>;
 export type DescribeFileChangeTrendTop5CommandOutput = CommandOutput<DescribeFileChangeTrendTop5Response>;
@@ -836,6 +880,7 @@ export type EditBaselineCheckConfigCommandOutput = CommandOutput<EditBaselineChe
 export type EditFingerprintCollectConfigCommandOutput = CommandOutput<EditFingerprintCollectConfigResponse>;
 export type EditMonitorPolicyCommandOutput = CommandOutput<EditMonitorPolicyResponse>;
 export type EditRaspConfigCommandOutput = CommandOutput<EditRaspConfigResponse>;
+export type EditTrustDirectoryCommandOutput = CommandOutput<EditTrustDirectoryResponse>;
 export type EditVulnScanConfigCommandOutput = CommandOutput<EditVulnScanConfigResponse>;
 export type EnableHostImportantProtectCommandOutput = CommandOutput<EnableHostImportantProtectResponse>;
 export type ExportAIFingerprintDataCommandOutput = CommandOutput<ExportAIFingerprintDataResponse>;
@@ -874,6 +919,9 @@ export type GetArmorProfileCommandOutput = CommandOutput<GetArmorProfileResponse
 export type GetAssetClusterStatisticCommandOutput = CommandOutput<GetAssetClusterStatisticResponse>;
 export type GetAssetClustersSyncEndCommandOutput = CommandOutput<GetAssetClustersSyncEndResponse>;
 export type GetAssetWorkloadStatisticCommandOutput = CommandOutput<GetAssetWorkloadStatisticResponse>;
+export type GetAutoHardeningConfigCommandOutput = CommandOutput<GetAutoHardeningConfigResponse>;
+export type GetAutoHardeningEnabledCommandOutput = CommandOutput<GetAutoHardeningEnabledResponse>;
+export type GetAutoHardeningPolicyCommandOutput = CommandOutput<GetAutoHardeningPolicyResponse>;
 export type GetAutoIsolateAgentListCommandOutput = CommandOutput<GetAutoIsolateAgentListResponse>;
 export type GetAutoProtectConfigCommandOutput = CommandOutput<GetAutoProtectConfigResponse>;
 export type GetBaselineDetectProgressDetailCommandOutput = CommandOutput<GetBaselineDetectProgressDetailResponse>;
@@ -963,6 +1011,7 @@ export type GetSOCPrecautionBaselineStatsCommandOutput = CommandOutput<GetSOCPre
 export type GetSecurityOverviewCommandOutput = CommandOutput<GetSecurityOverviewResponse>;
 export type GetSecurityOverviewScoreStatsCommandOutput = CommandOutput<GetSecurityOverviewScoreStatsResponse>;
 export type GetStackTraceCommandOutput = CommandOutput<GetStackTraceResponse>;
+export type GetSupportedVarmorVersionsCommandOutput = CommandOutput<GetSupportedVarmorVersionsResponse>;
 export type GetTLSInfoCommandOutput = CommandOutput<GetTLSInfoResponse>;
 export type GetTenantQuotaCommandOutput = CommandOutput<GetTenantQuotaResponse>;
 export type GetUserBatchScanStatusCommandOutput = CommandOutput<GetUserBatchScanStatusResponse>;
@@ -990,6 +1039,7 @@ export type HandleVulnCommandOutput = CommandOutput<HandleVulnResponse>;
 export type InstallAgentClientCommandOutput = CommandOutput<InstallAgentClientResponse>;
 export type InstallAgentProxyServerCommandCommandOutput = CommandOutput<InstallAgentProxyServerCommandResponse>;
 export type IsolateFileCommandOutput = CommandOutput<IsolateFileResponse>;
+export type JudgeAlarmBySecurityIntelligenceCommandOutput = CommandOutput<JudgeAlarmBySecurityIntelligenceResponse>;
 export type ListAIApplicationBasicInfoCommandOutput = CommandOutput<ListAIApplicationBasicInfoResponse>;
 export type ListAgentProxiesCommandOutput = CommandOutput<ListAgentProxiesResponse>;
 export type ListAgentProxyServersCommandOutput = CommandOutput<ListAgentProxyServersResponse>;
@@ -1009,6 +1059,8 @@ export type ListAssetTagsCommandOutput = CommandOutput<ListAssetTagsResponse>;
 export type ListAssetWorkloadsCommandOutput = CommandOutput<ListAssetWorkloadsResponse>;
 export type ListAutoDefenseHostsCommandOutput = CommandOutput<ListAutoDefenseHostsResponse>;
 export type ListAutoDefenseRulesCommandOutput = CommandOutput<ListAutoDefenseRulesResponse>;
+export type ListAutoHardeningConfigsCommandOutput = CommandOutput<ListAutoHardeningConfigsResponse>;
+export type ListAutoHardeningPoliciesCommandOutput = CommandOutput<ListAutoHardeningPoliciesResponse>;
 export type ListBanIPListCommandOutput = CommandOutput<ListBanIPListResponse>;
 export type ListBaselineBasicInfoCommandOutput = CommandOutput<ListBaselineBasicInfoResponse>;
 export type ListBaselineCheckConfigCommandOutput = CommandOutput<ListBaselineCheckConfigResponse>;
@@ -1032,6 +1084,7 @@ export type ListDevBasicInfosCommandOutput = CommandOutput<ListDevBasicInfosResp
 export type ListDevPlatformCommandOutput = CommandOutput<ListDevPlatformResponse>;
 export type ListDevRegionCommandOutput = CommandOutput<ListDevRegionResponse>;
 export type ListEndpointHandleMethodsCommandOutput = CommandOutput<ListEndpointHandleMethodsResponse>;
+export type ListExportFileJobCommandOutput = CommandOutput<ListExportFileJobResponse>;
 export type ListFileMonitorAlarmsCommandOutput = CommandOutput<ListFileMonitorAlarmsResponse>;
 export type ListFingerprintCollectConfigCommandOutput = CommandOutput<ListFingerprintCollectConfigResponse>;
 export type ListGroupRelatedAgentCommandOutput = CommandOutput<ListGroupRelatedAgentResponse>;
@@ -1077,6 +1130,7 @@ export type ListScanTaskHostsCommandOutput = CommandOutput<ListScanTaskHostsResp
 export type ListScanTasksCommandOutput = CommandOutput<ListScanTasksResponse>;
 export type ListTagRelatedAgentCommandOutput = CommandOutput<ListTagRelatedAgentResponse>;
 export type ListTagsDetailCommandOutput = CommandOutput<ListTagsDetailResponse>;
+export type ListTrustDirectoriesCommandOutput = CommandOutput<ListTrustDirectoriesResponse>;
 export type ListVarmorPoliciesCommandOutput = CommandOutput<ListVarmorPoliciesResponse>;
 export type ListVirusAlarmsCommandOutput = CommandOutput<ListVirusAlarmsResponse>;
 export type ListVulByPodCommandOutput = CommandOutput<ListVulByPodResponse>;
@@ -1111,10 +1165,12 @@ export type RetryIPOperationCommandOutput = CommandOutput<RetryIPOperationRespon
 export type SaveRepoImageScanCronCommandOutput = CommandOutput<SaveRepoImageScanCronResponse>;
 export type SaveRepoImageScanScopeCommandOutput = CommandOutput<SaveRepoImageScanScopeResponse>;
 export type SetAIAlarmJudgeConfigCommandOutput = CommandOutput<SetAIAlarmJudgeConfigResponse>;
+export type SetAutoHardeningEnabledCommandOutput = CommandOutput<SetAutoHardeningEnabledResponse>;
 export type SetBruteForceBanConfigCommandOutput = CommandOutput<SetBruteForceBanConfigResponse>;
 export type SetCustomWeakPasswordsCommandOutput = CommandOutput<SetCustomWeakPasswordsResponse>;
 export type SetRegularVirusScanConfigCommandOutput = CommandOutput<SetRegularVirusScanConfigResponse>;
 export type StopMLPAssetSyncTaskCommandOutput = CommandOutput<StopMLPAssetSyncTaskResponse>;
+export type StopScanTaskCommandOutput = CommandOutput<StopScanTaskResponse>;
 export type SwitchCloudEnvSyncCommandOutput = CommandOutput<SwitchCloudEnvSyncResponse>;
 export type SyncRegistryImagesCommandOutput = CommandOutput<SyncRegistryImagesResponse>;
 export type UnBanIPItemCommandOutput = CommandOutput<UnBanIPItemResponse>;
@@ -1123,6 +1179,7 @@ export type UninstallAgentClientCommandOutput = CommandOutput<UninstallAgentClie
 export type UninstallCommandsCommandOutput = CommandOutput<UninstallCommandsResponse>;
 export type UpdateAlarmTagsCommandOutput = CommandOutput<UpdateAlarmTagsResponse>;
 export type UpdateAssetClustersCommandOutput = CommandOutput<UpdateAssetClustersResponse>;
+export type UpdateAutoHardeningConfigCommandOutput = CommandOutput<UpdateAutoHardeningConfigResponse>;
 export type UpdateAutoProtectConfigCommandOutput = CommandOutput<UpdateAutoProtectConfigResponse>;
 export type UpdateBaselineCheckConfigSwitchCommandOutput = CommandOutput<UpdateBaselineCheckConfigSwitchResponse>;
 export type UpdateCloudProviderCommandOutput = CommandOutput<UpdateCloudProviderResponse>;
@@ -1254,6 +1311,21 @@ export class AddRaspConfigCommand extends Command<
   constructor(input: AddRaspConfigRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(AddRaspConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to AddTrustDirectory
+ */
+export class AddTrustDirectoryCommand extends Command<
+  AddTrustDirectoryRequest,
+  AddTrustDirectoryCommandOutput,
+  'AddTrustDirectoryCommand'
+> {
+  static readonly metaPath = '/AddTrustDirectory/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: AddTrustDirectoryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AddTrustDirectoryCommand.metaPath);
   }
 }
 /**
@@ -1587,6 +1659,21 @@ export class CreatFileScanTaskCommand extends Command<
   }
 }
 /**
+ * Command to CreateAutoHardeningConfig
+ */
+export class CreateAutoHardeningConfigCommand extends Command<
+  CreateAutoHardeningConfigRequest,
+  CreateAutoHardeningConfigCommandOutput,
+  'CreateAutoHardeningConfigCommand'
+> {
+  static readonly metaPath = '/CreateAutoHardeningConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: CreateAutoHardeningConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateAutoHardeningConfigCommand.metaPath);
+  }
+}
+/**
  * Command to CreateHostTag
  */
 export class CreateHostTagCommand extends Command<
@@ -1692,6 +1779,21 @@ export class CreateVarmorPolicyCommand extends Command<
   }
 }
 /**
+ * Command to CreateVulnExportJob
+ */
+export class CreateVulnExportJobCommand extends Command<
+  CreateVulnExportJobRequest,
+  CreateVulnExportJobCommandOutput,
+  'CreateVulnExportJobCommand'
+> {
+  static readonly metaPath = '/CreateVulnExportJob/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: CreateVulnExportJobRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateVulnExportJobCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteAgentProxy
  */
 export class DeleteAgentProxyCommand extends Command<
@@ -1719,6 +1821,21 @@ export class DeleteAgentProxyServerCommand extends Command<
   constructor(input: DeleteAgentProxyServerRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteAgentProxyServerCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteAutoHardeningConfig
+ */
+export class DeleteAutoHardeningConfigCommand extends Command<
+  DeleteAutoHardeningConfigRequest,
+  DeleteAutoHardeningConfigCommandOutput,
+  'DeleteAutoHardeningConfigCommand'
+> {
+  static readonly metaPath = '/DeleteAutoHardeningConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteAutoHardeningConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAutoHardeningConfigCommand.metaPath);
   }
 }
 /**
@@ -1779,6 +1896,21 @@ export class DeleteCommandCommand extends Command<
   constructor(input: DeleteCommandRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteCommandCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteExportFileJob
+ */
+export class DeleteExportFileJobCommand extends Command<
+  DeleteExportFileJobRequest,
+  DeleteExportFileJobCommandOutput,
+  'DeleteExportFileJobCommand'
+> {
+  static readonly metaPath = '/DeleteExportFileJob/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteExportFileJobRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteExportFileJobCommand.metaPath);
   }
 }
 /**
@@ -1869,6 +2001,21 @@ export class DeleteRaspConfigCommand extends Command<
   constructor(input: DeleteRaspConfigRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteRaspConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteTrustDirectory
+ */
+export class DeleteTrustDirectoryCommand extends Command<
+  DeleteTrustDirectoryRequest,
+  DeleteTrustDirectoryCommandOutput,
+  'DeleteTrustDirectoryCommand'
+> {
+  static readonly metaPath = '/DeleteTrustDirectory/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: DeleteTrustDirectoryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteTrustDirectoryCommand.metaPath);
   }
 }
 /**
@@ -2229,6 +2376,21 @@ export class EditRaspConfigCommand extends Command<
   constructor(input: EditRaspConfigRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(EditRaspConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to EditTrustDirectory
+ */
+export class EditTrustDirectoryCommand extends Command<
+  EditTrustDirectoryRequest,
+  EditTrustDirectoryCommandOutput,
+  'EditTrustDirectoryCommand'
+> {
+  static readonly metaPath = '/EditTrustDirectory/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: EditTrustDirectoryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EditTrustDirectoryCommand.metaPath);
   }
 }
 /**
@@ -2799,6 +2961,51 @@ export class GetAssetWorkloadStatisticCommand extends Command<
   constructor(input: GetAssetWorkloadStatisticRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetAssetWorkloadStatisticCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAutoHardeningConfig
+ */
+export class GetAutoHardeningConfigCommand extends Command<
+  GetAutoHardeningConfigRequest,
+  GetAutoHardeningConfigCommandOutput,
+  'GetAutoHardeningConfigCommand'
+> {
+  static readonly metaPath = '/GetAutoHardeningConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAutoHardeningConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAutoHardeningConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAutoHardeningEnabled
+ */
+export class GetAutoHardeningEnabledCommand extends Command<
+  GetAutoHardeningEnabledRequest,
+  GetAutoHardeningEnabledCommandOutput,
+  'GetAutoHardeningEnabledCommand'
+> {
+  static readonly metaPath = '/GetAutoHardeningEnabled/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAutoHardeningEnabledRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAutoHardeningEnabledCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAutoHardeningPolicy
+ */
+export class GetAutoHardeningPolicyCommand extends Command<
+  GetAutoHardeningPolicyRequest,
+  GetAutoHardeningPolicyCommandOutput,
+  'GetAutoHardeningPolicyCommand'
+> {
+  static readonly metaPath = '/GetAutoHardeningPolicy/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetAutoHardeningPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAutoHardeningPolicyCommand.metaPath);
   }
 }
 /**
@@ -4137,6 +4344,21 @@ export class GetStackTraceCommand extends Command<
   }
 }
 /**
+ * Command to GetSupportedVarmorVersions
+ */
+export class GetSupportedVarmorVersionsCommand extends Command<
+  GetSupportedVarmorVersionsRequest,
+  GetSupportedVarmorVersionsCommandOutput,
+  'GetSupportedVarmorVersionsCommand'
+> {
+  static readonly metaPath = '/GetSupportedVarmorVersions/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetSupportedVarmorVersionsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetSupportedVarmorVersionsCommand.metaPath);
+  }
+}
+/**
  * Command to GetTLSInfo
  */
 export class GetTLSInfoCommand extends Command<
@@ -4542,6 +4764,21 @@ export class IsolateFileCommand extends Command<
   }
 }
 /**
+ * Command to JudgeAlarmBySecurityIntelligence
+ */
+export class JudgeAlarmBySecurityIntelligenceCommand extends Command<
+  JudgeAlarmBySecurityIntelligenceRequest,
+  JudgeAlarmBySecurityIntelligenceCommandOutput,
+  'JudgeAlarmBySecurityIntelligenceCommand'
+> {
+  static readonly metaPath = '/JudgeAlarmBySecurityIntelligence/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: JudgeAlarmBySecurityIntelligenceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(JudgeAlarmBySecurityIntelligenceCommand.metaPath);
+  }
+}
+/**
  * Command to ListAIApplicationBasicInfo
  */
 export class ListAIApplicationBasicInfoCommand extends Command<
@@ -4824,6 +5061,36 @@ export class ListAutoDefenseRulesCommand extends Command<
   constructor(input: ListAutoDefenseRulesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListAutoDefenseRulesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAutoHardeningConfigs
+ */
+export class ListAutoHardeningConfigsCommand extends Command<
+  ListAutoHardeningConfigsRequest,
+  ListAutoHardeningConfigsCommandOutput,
+  'ListAutoHardeningConfigsCommand'
+> {
+  static readonly metaPath = '/ListAutoHardeningConfigs/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListAutoHardeningConfigsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAutoHardeningConfigsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAutoHardeningPolicies
+ */
+export class ListAutoHardeningPoliciesCommand extends Command<
+  ListAutoHardeningPoliciesRequest,
+  ListAutoHardeningPoliciesCommandOutput,
+  'ListAutoHardeningPoliciesCommand'
+> {
+  static readonly metaPath = '/ListAutoHardeningPolicies/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListAutoHardeningPoliciesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAutoHardeningPoliciesCommand.metaPath);
   }
 }
 /**
@@ -5169,6 +5436,21 @@ export class ListEndpointHandleMethodsCommand extends Command<
   constructor(input: ListEndpointHandleMethodsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListEndpointHandleMethodsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListExportFileJob
+ */
+export class ListExportFileJobCommand extends Command<
+  ListExportFileJobRequest,
+  ListExportFileJobCommandOutput,
+  'ListExportFileJobCommand'
+> {
+  static readonly metaPath = '/ListExportFileJob/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListExportFileJobRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListExportFileJobCommand.metaPath);
   }
 }
 /**
@@ -5847,6 +6129,21 @@ export class ListTagsDetailCommand extends Command<
   }
 }
 /**
+ * Command to ListTrustDirectories
+ */
+export class ListTrustDirectoriesCommand extends Command<
+  ListTrustDirectoriesRequest,
+  ListTrustDirectoriesCommandOutput,
+  'ListTrustDirectoriesCommand'
+> {
+  static readonly metaPath = '/ListTrustDirectories/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListTrustDirectoriesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListTrustDirectoriesCommand.metaPath);
+  }
+}
+/**
  * Command to ListVarmorPolicies
  */
 export class ListVarmorPoliciesCommand extends Command<
@@ -6357,6 +6654,21 @@ export class SetAIAlarmJudgeConfigCommand extends Command<
   }
 }
 /**
+ * Command to SetAutoHardeningEnabled
+ */
+export class SetAutoHardeningEnabledCommand extends Command<
+  SetAutoHardeningEnabledRequest,
+  SetAutoHardeningEnabledCommandOutput,
+  'SetAutoHardeningEnabledCommand'
+> {
+  static readonly metaPath = '/SetAutoHardeningEnabled/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: SetAutoHardeningEnabledRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(SetAutoHardeningEnabledCommand.metaPath);
+  }
+}
+/**
  * Command to SetBruteForceBanConfig
  */
 export class SetBruteForceBanConfigCommand extends Command<
@@ -6414,6 +6726,21 @@ export class StopMLPAssetSyncTaskCommand extends Command<
   constructor(input: StopMLPAssetSyncTaskRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(StopMLPAssetSyncTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to StopScanTask
+ */
+export class StopScanTaskCommand extends Command<
+  StopScanTaskRequest,
+  StopScanTaskCommandOutput,
+  'StopScanTaskCommand'
+> {
+  static readonly metaPath = '/StopScanTask/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: StopScanTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StopScanTaskCommand.metaPath);
   }
 }
 /**
@@ -6534,6 +6861,21 @@ export class UpdateAssetClustersCommand extends Command<
   constructor(input: UpdateAssetClustersRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateAssetClustersCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateAutoHardeningConfig
+ */
+export class UpdateAutoHardeningConfigCommand extends Command<
+  UpdateAutoHardeningConfigRequest,
+  UpdateAutoHardeningConfigCommandOutput,
+  'UpdateAutoHardeningConfigCommand'
+> {
+  static readonly metaPath = '/UpdateAutoHardeningConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: UpdateAutoHardeningConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAutoHardeningConfigCommand.metaPath);
   }
 }
 /**
@@ -6756,6 +7098,7 @@ export default {
   AddLoginConfigCommand,
   AddMonitorPolicyCommand,
   AddRaspConfigCommand,
+  AddTrustDirectoryCommand,
   AddUserAutoDefenseRuleCommand,
   AddWhiteListCommand,
   AllAssetScanCommand,
@@ -6778,6 +7121,7 @@ export default {
   CheckMonitorPolicyCommand,
   ControlMonitorPolicyCommand,
   CreatFileScanTaskCommand,
+  CreateAutoHardeningConfigCommand,
   CreateHostTagCommand,
   CreateLayeredGroupCommand,
   CreateMLPAssetSyncTaskCommand,
@@ -6785,18 +7129,22 @@ export default {
   CreateMultiLevelInstitutionCommand,
   CreateRepoRegistryVpcAuthCommand,
   CreateVarmorPolicyCommand,
+  CreateVulnExportJobCommand,
   DeleteAgentProxyCommand,
   DeleteAgentProxyServerCommand,
+  DeleteAutoHardeningConfigCommand,
   DeleteAutoIsolateAgentListCommand,
   DeleteBaselineCheckConfigCommand,
   DeleteCloudEnvCommand,
   DeleteCommandCommand,
+  DeleteExportFileJobCommand,
   DeleteHostTagCommand,
   DeleteLayeredGroupCommand,
   DeleteLoginConfigCommand,
   DeleteMonitorPolicyCommand,
   DeleteMultiLevelInstitutionCommand,
   DeleteRaspConfigCommand,
+  DeleteTrustDirectoryCommand,
   DeleteUserAutoDefenseRuleCommand,
   DeleteWhiteListsCommand,
   DescribeFileChangeTrendTop5Command,
@@ -6821,6 +7169,7 @@ export default {
   EditFingerprintCollectConfigCommand,
   EditMonitorPolicyCommand,
   EditRaspConfigCommand,
+  EditTrustDirectoryCommand,
   EditVulnScanConfigCommand,
   EnableHostImportantProtectCommand,
   ExportAIFingerprintDataCommand,
@@ -6859,6 +7208,9 @@ export default {
   GetAssetClusterStatisticCommand,
   GetAssetClustersSyncEndCommand,
   GetAssetWorkloadStatisticCommand,
+  GetAutoHardeningConfigCommand,
+  GetAutoHardeningEnabledCommand,
+  GetAutoHardeningPolicyCommand,
   GetAutoIsolateAgentListCommand,
   GetAutoProtectConfigCommand,
   GetBaselineDetectProgressDetailCommand,
@@ -6948,6 +7300,7 @@ export default {
   GetSecurityOverviewCommand,
   GetSecurityOverviewScoreStatsCommand,
   GetStackTraceCommand,
+  GetSupportedVarmorVersionsCommand,
   GetTLSInfoCommand,
   GetTenantQuotaCommand,
   GetUserBatchScanStatusCommand,
@@ -6975,6 +7328,7 @@ export default {
   InstallAgentClientCommand,
   InstallAgentProxyServerCommandCommand,
   IsolateFileCommand,
+  JudgeAlarmBySecurityIntelligenceCommand,
   ListAIApplicationBasicInfoCommand,
   ListAgentProxiesCommand,
   ListAgentProxyServersCommand,
@@ -6994,6 +7348,8 @@ export default {
   ListAssetWorkloadsCommand,
   ListAutoDefenseHostsCommand,
   ListAutoDefenseRulesCommand,
+  ListAutoHardeningConfigsCommand,
+  ListAutoHardeningPoliciesCommand,
   ListBanIPListCommand,
   ListBaselineBasicInfoCommand,
   ListBaselineCheckConfigCommand,
@@ -7017,6 +7373,7 @@ export default {
   ListDevPlatformCommand,
   ListDevRegionCommand,
   ListEndpointHandleMethodsCommand,
+  ListExportFileJobCommand,
   ListFileMonitorAlarmsCommand,
   ListFingerprintCollectConfigCommand,
   ListGroupRelatedAgentCommand,
@@ -7062,6 +7419,7 @@ export default {
   ListScanTasksCommand,
   ListTagRelatedAgentCommand,
   ListTagsDetailCommand,
+  ListTrustDirectoriesCommand,
   ListVarmorPoliciesCommand,
   ListVirusAlarmsCommand,
   ListVulByPodCommand,
@@ -7096,10 +7454,12 @@ export default {
   SaveRepoImageScanCronCommand,
   SaveRepoImageScanScopeCommand,
   SetAIAlarmJudgeConfigCommand,
+  SetAutoHardeningEnabledCommand,
   SetBruteForceBanConfigCommand,
   SetCustomWeakPasswordsCommand,
   SetRegularVirusScanConfigCommand,
   StopMLPAssetSyncTaskCommand,
+  StopScanTaskCommand,
   SwitchCloudEnvSyncCommand,
   SyncRegistryImagesCommand,
   UnBanIPItemCommand,
@@ -7108,6 +7468,7 @@ export default {
   UninstallCommandsCommand,
   UpdateAlarmTagsCommand,
   UpdateAssetClustersCommand,
+  UpdateAutoHardeningConfigCommand,
   UpdateAutoProtectConfigCommand,
   UpdateBaselineCheckConfigSwitchCommand,
   UpdateCloudProviderCommand,

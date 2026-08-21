@@ -291,7 +291,19 @@ export interface DataForListFileMonitorAlarmsOutput {
      * @type {string}
      * @memberof DataForListFileMonitorAlarmsOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListFileMonitorAlarmsOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListFileMonitorAlarmsOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}

@@ -188,6 +188,18 @@ export interface DataForListAutoDefenseHostsOutput {
      * @type {string}
      * @memberof DataForListAutoDefenseHostsOutput
      */
+    State?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListAutoDefenseHostsOutput
+     */
+    StateDetail?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListAutoDefenseHostsOutput
+     */
     Status?: string;
 
     /**

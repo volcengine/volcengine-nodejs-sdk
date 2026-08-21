@@ -24,5 +24,5 @@ export interface GetStackTraceRequest {
      * @type {string}
      * @memberof GetStackTraceRequest
      */
-    StackTraceHash?: string;
+    StackTraceHash: string;
 }

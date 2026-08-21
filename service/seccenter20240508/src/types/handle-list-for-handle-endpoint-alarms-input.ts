@@ -45,4 +45,16 @@ export interface HandleListForHandleEndpointAlarmsInput {
      * @memberof HandleListForHandleEndpointAlarmsInput
      */
     Processes?: Array<ProcessForHandleEndpointAlarmsInput>;
+
+    /**
+     * @type {Array<number>}
+     * @memberof HandleListForHandleEndpointAlarmsInput
+     */
+    SpanTraceID?: Array<number>;
+
+    /**
+     * @type {Array<number>}
+     * @memberof HandleListForHandleEndpointAlarmsInput
+     */
+    SpanUniqueID?: Array<number>;
 }

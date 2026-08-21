@@ -19,4 +19,10 @@
  * @interface HandleEndpointAlarmsResponse
  */
 export interface HandleEndpointAlarmsResponse {
+
+    /**
+     * @type {string}
+     * @memberof HandleEndpointAlarmsResponse
+     */
+    Data?: string;
 }

@@ -19,4 +19,10 @@
  * @interface DeleteMultiLevelInstitutionResponse
  */
 export interface DeleteMultiLevelInstitutionResponse {
+
+    /**
+     * @type {string}
+     * @memberof DeleteMultiLevelInstitutionResponse
+     */
+    Data?: string;
 }
