@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { SecurityGroupBindInfoForCreateAllowListInput } from './security-group-bind-info-for-create-allow-list-input';
  /**
  * 
  *
@@ -24,7 +25,7 @@ export interface CreateAllowListRequest {
      * @type {string}
      * @memberof CreateAllowListRequest
      */
-    AllowList: string;
+    AllowList?: string;
 
     /**
      * @type {string}
@@ -49,4 +50,16 @@ export interface CreateAllowListRequest {
      * @memberof CreateAllowListRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {Array<SecurityGroupBindInfoForCreateAllowListInput>}
+     * @memberof CreateAllowListRequest
+     */
+    SecurityGroupBindInfos?: Array<SecurityGroupBindInfoForCreateAllowListInput>;
+
+    /**
+     * @type {string}
+     * @memberof CreateAllowListRequest
+     */
+    UserAllowList?: string;
 }

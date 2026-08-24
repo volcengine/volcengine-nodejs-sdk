@@ -16,25 +16,19 @@
  * 
  *
  * @export
- * @interface DatabasesPrivilegeForDescribeDatabasesOutput
+ * @interface ModifyDBInstanceStorageTypeResponse
  */
-export interface DatabasesPrivilegeForDescribeDatabasesOutput {
+export interface ModifyDBInstanceStorageTypeResponse {
 
     /**
      * @type {string}
-     * @memberof DatabasesPrivilegeForDescribeDatabasesOutput
+     * @memberof ModifyDBInstanceStorageTypeResponse
      */
-    AccountName?: string;
+    InstanceId?: string;
 
     /**
      * @type {string}
-     * @memberof DatabasesPrivilegeForDescribeDatabasesOutput
+     * @memberof ModifyDBInstanceStorageTypeResponse
      */
-    AccountPrivilege?: string;
-
-    /**
-     * @type {string}
-     * @memberof DatabasesPrivilegeForDescribeDatabasesOutput
-     */
-    AccountPrivilegeDetail?: string;
+    OrderNO?: string;
 }

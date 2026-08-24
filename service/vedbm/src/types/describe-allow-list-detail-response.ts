@@ -68,4 +68,10 @@ export interface DescribeAllowListDetailResponse {
      * @memberof DescribeAllowListDetailResponse
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeAllowListDetailResponse
+     */
+    UserAllowList?: string;
 }

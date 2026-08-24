@@ -44,6 +44,12 @@ export interface InstanceForDescribeExistDBInstancePriceInput {
      * @memberof InstanceForDescribeExistDBInstancePriceInput
      */
     StorageChargeType?: InstanceForDescribeExistDBInstancePriceInputStorageChargeTypeEnum;
+
+    /**
+     * @type {string}
+     * @memberof InstanceForDescribeExistDBInstancePriceInput
+     */
+    StorageType?: InstanceForDescribeExistDBInstancePriceInputStorageTypeEnum;
 }
 
 /**
@@ -53,5 +59,13 @@ export interface InstanceForDescribeExistDBInstancePriceInput {
 export enum InstanceForDescribeExistDBInstancePriceInputStorageChargeTypeEnum {
     PostPaid = 'PostPaid',
     PrePaid = 'PrePaid'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum InstanceForDescribeExistDBInstancePriceInputStorageTypeEnum {
+    IOOptimizedStorage = 'IOOptimizedStorage',
+    SmartCompressedStorage = 'SmartCompressedStorage'
 }
 

@@ -30,7 +30,7 @@ export interface ParameterForDescribeDBInstanceParametersOutput {
      * @type {string}
      * @memberof ParameterForDescribeDBInstanceParametersOutput
      */
-    DataType?: ParameterForDescribeDBInstanceParametersOutputDataTypeEnum;
+    DataType?: string;
 
     /**
      * @type {boolean}
@@ -78,24 +78,5 @@ export interface ParameterForDescribeDBInstanceParametersOutput {
      * @type {string}
      * @memberof ParameterForDescribeDBInstanceParametersOutput
      */
-    Status?: ParameterForDescribeDBInstanceParametersOutputStatusEnum;
+    Status?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum ParameterForDescribeDBInstanceParametersOutputDataTypeEnum {
-    FLOAT = 'FLOAT',
-    INT = 'INT',
-    STRING = 'STRING'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum ParameterForDescribeDBInstanceParametersOutputStatusEnum {
-    Applied = 'Applied',
-    Syncing = 'Syncing'
-}
-
