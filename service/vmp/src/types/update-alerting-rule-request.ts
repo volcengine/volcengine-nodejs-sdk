@@ -70,7 +70,19 @@ export interface UpdateAlertingRuleRequest {
      * @type {string}
      * @memberof UpdateAlertingRuleRequest
      */
+    NotifyGroupPolicySource?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateAlertingRuleRequest
+     */
     NotifyPolicyId?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateAlertingRuleRequest
+     */
+    NotifyPolicySource?: string;
 
     /**
      * @type {QueryForUpdateAlertingRuleInput}
