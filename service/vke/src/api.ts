@@ -108,6 +108,8 @@ import { UpdateAddonVersionRequest } from './types/index';
 import { UpdateAddonVersionResponse } from './types/index';
 import { UpdateClusterConfigRequest } from './types/index';
 import { UpdateClusterConfigResponse } from './types/index';
+import { UpdateKubernetesObservabilityComponentConfigsRequest } from './types/index';
+import { UpdateKubernetesObservabilityComponentConfigsResponse } from './types/index';
 import { UpdateNodePoolConfigRequest } from './types/index';
 import { UpdateNodePoolConfigResponse } from './types/index';
 import { UpdateScalingPolicyRequest } from './types/index';
@@ -163,6 +165,7 @@ export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateAddonConfigCommandOutput = CommandOutput<UpdateAddonConfigResponse>;
 export type UpdateAddonVersionCommandOutput = CommandOutput<UpdateAddonVersionResponse>;
 export type UpdateClusterConfigCommandOutput = CommandOutput<UpdateClusterConfigResponse>;
+export type UpdateKubernetesObservabilityComponentConfigsCommandOutput = CommandOutput<UpdateKubernetesObservabilityComponentConfigsResponse>;
 export type UpdateNodePoolConfigCommandOutput = CommandOutput<UpdateNodePoolConfigResponse>;
 export type UpdateScalingPolicyCommandOutput = CommandOutput<UpdateScalingPolicyResponse>;
 
@@ -885,6 +888,21 @@ export class UpdateClusterConfigCommand extends Command<
   }
 }
 /**
+ * Command to UpdateKubernetesObservabilityComponentConfigs
+ */
+export class UpdateKubernetesObservabilityComponentConfigsCommand extends Command<
+  UpdateKubernetesObservabilityComponentConfigsRequest,
+  UpdateKubernetesObservabilityComponentConfigsCommandOutput,
+  'UpdateKubernetesObservabilityComponentConfigsCommand'
+> {
+  static readonly metaPath = '/UpdateKubernetesObservabilityComponentConfigs/2022-05-12/vke/post/application_json/';
+
+  constructor(input: UpdateKubernetesObservabilityComponentConfigsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateKubernetesObservabilityComponentConfigsCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateNodePoolConfig
  */
 export class UpdateNodePoolConfigCommand extends Command<
@@ -964,6 +982,7 @@ export default {
   UpdateAddonConfigCommand,
   UpdateAddonVersionCommand,
   UpdateClusterConfigCommand,
+  UpdateKubernetesObservabilityComponentConfigsCommand,
   UpdateNodePoolConfigCommand,
   UpdateScalingPolicyCommand,
 };
