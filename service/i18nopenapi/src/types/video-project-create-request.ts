@@ -33,10 +33,10 @@ export interface VideoProjectCreateRequest {
     comment?: string;
 
     /**
-     * @type {Array<number>}
+     * @type {Array<string>}
      * @memberof VideoProjectCreateRequest
      */
-    contributors?: Array<number>;
+    contributors?: Array<string>;
 
     /**
      * @type {string}

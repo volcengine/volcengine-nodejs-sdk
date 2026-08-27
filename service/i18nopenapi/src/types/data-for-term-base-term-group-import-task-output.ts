@@ -48,7 +48,7 @@ export interface DataForTermBaseTermGroupImportTaskOutput {
      * @type {string}
      * @memberof DataForTermBaseTermGroupImportTaskOutput
      */
-    termBaseld?: string;
+    termBaseId?: string;
 
     /**
      * @type {number}

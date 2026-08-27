@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { EncryptionConfigForUpdateFunctionOutput } from './encryption-config-for-update-function-output';
  /**
  * 
  *
@@ -31,6 +32,12 @@ export interface MountPointForUpdateFunctionOutput {
      * @memberof MountPointForUpdateFunctionOutput
      */
     BucketPath?: string;
+
+    /**
+     * @type {EncryptionConfigForUpdateFunctionOutput}
+     * @memberof MountPointForUpdateFunctionOutput
+     */
+    EncryptionConfig?: EncryptionConfigForUpdateFunctionOutput;
 
     /**
      * @type {string}

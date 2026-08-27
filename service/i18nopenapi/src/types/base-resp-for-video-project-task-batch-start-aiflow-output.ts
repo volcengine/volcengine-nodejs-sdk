@@ -21,10 +21,10 @@
 export interface BaseRespForVideoProjectTaskBatchStartAIFlowOutput {
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof BaseRespForVideoProjectTaskBatchStartAIFlowOutput
      */
-    statusCode?: string;
+    statusCode?: number;
 
     /**
      * @type {string}

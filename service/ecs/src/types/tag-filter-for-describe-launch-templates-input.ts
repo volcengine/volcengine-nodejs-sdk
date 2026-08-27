@@ -30,11 +30,5 @@ export interface TagFilterForDescribeLaunchTemplatesInput {
      * @type {Array<string>}
      * @memberof TagFilterForDescribeLaunchTemplatesInput
      */
-    Value?: Array<string>;
-
-    /**
-     * @type {Array<string>}
-     * @memberof TagFilterForDescribeLaunchTemplatesInput
-     */
     Values?: Array<string>;
 }

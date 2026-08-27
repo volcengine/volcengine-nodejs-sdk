@@ -1,13 +1,10 @@
 {
   "actions": [
-    "VideoProjectVideoDelete",
-    "VideoEditorDeleteSubtitle",
-    "VideoEditorGetEmotionTags",
-    "VideoProjectSerialDubTaskCreate",
-    "VideoProjectSerialTaskCreate",
-    "VideoProjectSubtitleDelete"
+    "VideoEditorAddSubtitle",
+    "VideoEditorListSubtitles",
+    "VideoEditorSaveSubtitle"
   ],
-  "description": "I18N_OPENAPI: 新增 VideoProjectSubtitleDelete, VideoProjectVideoDelete, VideoEditorDeleteSubtitle；修改 VideoEditorDeleteSubtitle, VideoEditorGetEmotionTags, VideoProjectSerialDubTaskCreate, VideoProjectSerialTaskCreate",
+  "description": "I18N_OPENAPI: 修改 VideoEditorAddSubtitle, VideoEditorListSubtitles, VideoEditorSaveSubtitle",
   "modules": "service/i18n_openapi",
-  "type": "breaking-change"
+  "type": "feature"
 }
