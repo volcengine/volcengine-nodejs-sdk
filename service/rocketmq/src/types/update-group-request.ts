@@ -16,55 +16,37 @@
  * 
  *
  * @export
- * @interface CreateGroupAsyncRequest
+ * @interface UpdateGroupRequest
  */
-export interface CreateGroupAsyncRequest {
+export interface UpdateGroupRequest {
 
     /**
      * @type {boolean}
-     * @memberof CreateGroupAsyncRequest
+     * @memberof UpdateGroupRequest
      */
-    ConsumeMessageOrderly?: boolean;
+    ConsumeMessageOrderly: boolean;
 
     /**
      * @type {string}
-     * @memberof CreateGroupAsyncRequest
+     * @memberof UpdateGroupRequest
      */
     Description?: string;
 
     /**
      * @type {string}
-     * @memberof CreateGroupAsyncRequest
+     * @memberof UpdateGroupRequest
      */
     GroupId: string;
 
     /**
      * @type {string}
-     * @memberof CreateGroupAsyncRequest
-     */
-    GroupType: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateGroupAsyncRequest
+     * @memberof UpdateGroupRequest
      */
     InstanceId: string;
 
     /**
-     * @type {string}
-     * @memberof CreateGroupAsyncRequest
-     */
-    MessageModel?: string;
-
-    /**
      * @type {number}
-     * @memberof CreateGroupAsyncRequest
+     * @memberof UpdateGroupRequest
      */
-    RetryMaxTimes?: number;
-
-    /**
-     * @type {string}
-     * @memberof CreateGroupAsyncRequest
-     */
-    TopicName?: string;
+    RetryMaxTimes: number;
 }
