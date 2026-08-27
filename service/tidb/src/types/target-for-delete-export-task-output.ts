@@ -12,10 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { AzureBlobForDeleteExportTaskOutput } from './azure-blob-for-delete-export-task-output';
-import { GcsForDeleteExportTaskOutput } from './gcs-for-delete-export-task-output';
-import { OssForDeleteExportTaskOutput } from './oss-for-delete-export-task-output';
-import { S3ForDeleteExportTaskOutput } from './s3-for-delete-export-task-output';
 import { TosForDeleteExportTaskOutput } from './tos-for-delete-export-task-output';
  /**
  * 
@@ -24,30 +20,6 @@ import { TosForDeleteExportTaskOutput } from './tos-for-delete-export-task-outpu
  * @interface TargetForDeleteExportTaskOutput
  */
 export interface TargetForDeleteExportTaskOutput {
-
-    /**
-     * @type {AzureBlobForDeleteExportTaskOutput}
-     * @memberof TargetForDeleteExportTaskOutput
-     */
-    AzureBlob?: AzureBlobForDeleteExportTaskOutput;
-
-    /**
-     * @type {GcsForDeleteExportTaskOutput}
-     * @memberof TargetForDeleteExportTaskOutput
-     */
-    Gcs?: GcsForDeleteExportTaskOutput;
-
-    /**
-     * @type {OssForDeleteExportTaskOutput}
-     * @memberof TargetForDeleteExportTaskOutput
-     */
-    Oss?: OssForDeleteExportTaskOutput;
-
-    /**
-     * @type {S3ForDeleteExportTaskOutput}
-     * @memberof TargetForDeleteExportTaskOutput
-     */
-    S3?: S3ForDeleteExportTaskOutput;
 
     /**
      * @type {TosForDeleteExportTaskOutput}
@@ -67,11 +39,6 @@ export interface TargetForDeleteExportTaskOutput {
  * @enum {string}
  */
 export enum TargetForDeleteExportTaskOutputTypeEnum {
-    LOCAL = 'LOCAL',
-    S3 = 'S3',
-    GCS = 'GCS',
-    AZUREBLOB = 'AZURE_BLOB',
-    OSS = 'OSS',
-    TOS = 'TOS'
+    _6 = '6'
 }
 

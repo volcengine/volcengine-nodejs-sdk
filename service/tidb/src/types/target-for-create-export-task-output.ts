@@ -12,10 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { AzureBlobForCreateExportTaskOutput } from './azure-blob-for-create-export-task-output';
-import { GcsForCreateExportTaskOutput } from './gcs-for-create-export-task-output';
-import { OssForCreateExportTaskOutput } from './oss-for-create-export-task-output';
-import { S3ForCreateExportTaskOutput } from './s3-for-create-export-task-output';
 import { TosForCreateExportTaskOutput } from './tos-for-create-export-task-output';
  /**
  * 
@@ -24,30 +20,6 @@ import { TosForCreateExportTaskOutput } from './tos-for-create-export-task-outpu
  * @interface TargetForCreateExportTaskOutput
  */
 export interface TargetForCreateExportTaskOutput {
-
-    /**
-     * @type {AzureBlobForCreateExportTaskOutput}
-     * @memberof TargetForCreateExportTaskOutput
-     */
-    AzureBlob?: AzureBlobForCreateExportTaskOutput;
-
-    /**
-     * @type {GcsForCreateExportTaskOutput}
-     * @memberof TargetForCreateExportTaskOutput
-     */
-    Gcs?: GcsForCreateExportTaskOutput;
-
-    /**
-     * @type {OssForCreateExportTaskOutput}
-     * @memberof TargetForCreateExportTaskOutput
-     */
-    Oss?: OssForCreateExportTaskOutput;
-
-    /**
-     * @type {S3ForCreateExportTaskOutput}
-     * @memberof TargetForCreateExportTaskOutput
-     */
-    S3?: S3ForCreateExportTaskOutput;
 
     /**
      * @type {TosForCreateExportTaskOutput}
@@ -67,11 +39,6 @@ export interface TargetForCreateExportTaskOutput {
  * @enum {string}
  */
 export enum TargetForCreateExportTaskOutputTypeEnum {
-    LOCAL = 'LOCAL',
-    S3 = 'S3',
-    GCS = 'GCS',
-    AZUREBLOB = 'AZURE_BLOB',
-    OSS = 'OSS',
-    TOS = 'TOS'
+    _6 = '6'
 }
 

@@ -1,23 +1,24 @@
 {
   "actions": [
-    "DeleteBranch",
-    "DeleteCluster",
-    "GetClusterDetails",
-    "UpdateCluster",
-    "ListClusters",
-    "ResetClusterPassword",
-    "ListBranches",
-    "ResetBranch",
-    "ListClusterDatabases",
-    "UpdateBranch",
-    "GetBranchDetails",
-    "CreateCluster",
-    "CreateBranch",
-    "DescribePriceDetail",
-    "ListBranchDatabases",
-    "ChangeBranchPassword"
+    "PrecheckImportTask",
+    "DeleteExportTask",
+    "CreateExportTask",
+    "UntagResources",
+    "UpdatePrivateEndpointAllowlistRule",
+    "ListExportTasks",
+    "CancelExportTask",
+    "ListTagsForResources",
+    "TagResources",
+    "CreatePrivateEndpointAllowlistRule",
+    "GetExportTaskDetails",
+    "ListPrivateEndpointAllowlist",
+    "GetImportTaskDetails",
+    "ListImportTasks",
+    "DeletePrivateEndpointAllowlistRule",
+    "CreateImportTask",
+    "ValidateImportTask"
   ],
-  "description": "TIDB: 新增 CreateCluster, DeleteBranch, DeleteCluster, GetClusterDetails, ResetClusterPassword, CreateBranch, ListBranches, ResetBranch, UpdateCluster, DescribePriceDetail, ListBranchDatabases, ChangeBranchPassword, GetBranchDetails, ListClusterDatabases, ListClusters, UpdateBranch",
+  "description": "TIDB: 新增 DeletePrivateEndpointAllowlistRule, ListPrivateEndpointAllowlist, ListTagsForResources, TagResources, UntagResources, UpdatePrivateEndpointAllowlistRule, CreatePrivateEndpointAllowlistRule；修改 CancelExportTask, GetImportTaskDetails, ListExportTasks, ListImportTasks, CreateImportTask, PrecheckImportTask, ValidateImportTask, DeleteExportTask, GetExportTaskDetails, CreateExportTask",
   "modules": "service/tidb",
-  "type": "feature"
+  "type": "breaking-change"
 }

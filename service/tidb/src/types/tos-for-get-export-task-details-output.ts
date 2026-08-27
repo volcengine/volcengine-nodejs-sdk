@@ -45,9 +45,6 @@ export interface TosForGetExportTaskDetailsOutput {
  * @enum {string}
  */
 export enum TosForGetExportTaskDetailsOutputAuthTypeEnum {
-    ROLEARN = 'ROLE_ARN',
-    ACCESSKEY = 'ACCESS_KEY',
-    SERVICEACCOUNTKEY = 'SERVICE_ACCOUNT_KEY',
-    SASTOKEN = 'SAS_TOKEN'
+    _2 = '2'
 }
 
