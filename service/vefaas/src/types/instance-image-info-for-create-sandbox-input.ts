@@ -43,4 +43,10 @@ export interface InstanceImageInfoForCreateSandboxInput {
      * @memberof InstanceImageInfoForCreateSandboxInput
      */
     Port?: number;
+
+    /**
+     * @type {string}
+     * @memberof InstanceImageInfoForCreateSandboxInput
+     */
+    SourceImageUrl?: string;
 }

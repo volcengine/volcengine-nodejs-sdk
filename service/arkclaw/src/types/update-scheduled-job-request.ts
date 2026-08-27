@@ -13,6 +13,7 @@
  */
 
 import { FieldMaskForUpdateScheduledJobInput } from './field-mask-for-update-scheduled-job-input';
+import { ResultDeliveryForUpdateScheduledJobInput } from './result-delivery-for-update-scheduled-job-input';
  /**
  * 
  *
@@ -50,6 +51,12 @@ export interface UpdateScheduledJobRequest {
      * @memberof UpdateScheduledJobRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {ResultDeliveryForUpdateScheduledJobInput}
+     * @memberof UpdateScheduledJobRequest
+     */
+    ResultDelivery?: ResultDeliveryForUpdateScheduledJobInput;
 
     /**
      * @type {string}

@@ -70,6 +70,12 @@ export interface TaskForVideoProjectTaskDetailOutput {
     name?: string;
 
     /**
+     * @type {boolean}
+     * @memberof TaskForVideoProjectTaskDetailOutput
+     */
+    needTermValidation?: boolean;
+
+    /**
      * @type {string}
      * @memberof TaskForVideoProjectTaskDetailOutput
      */

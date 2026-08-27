@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { EncryptionConfigForCreateFunctionInput } from './encryption-config-for-create-function-input';
  /**
  * 
  *
@@ -31,6 +32,12 @@ export interface MountPointForCreateFunctionInput {
      * @memberof MountPointForCreateFunctionInput
      */
     BucketPath?: string;
+
+    /**
+     * @type {EncryptionConfigForCreateFunctionInput}
+     * @memberof MountPointForCreateFunctionInput
+     */
+    EncryptionConfig?: EncryptionConfigForCreateFunctionInput;
 
     /**
      * @type {string}
