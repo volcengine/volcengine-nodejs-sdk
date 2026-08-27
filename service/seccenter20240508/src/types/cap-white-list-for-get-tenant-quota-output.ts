@@ -49,4 +49,10 @@ export interface CapWhiteListForGetTenantQuotaOutput {
      * @memberof CapWhiteListForGetTenantQuotaOutput
      */
     SecurityAgentCap?: number;
+
+    /**
+     * @type {number}
+     * @memberof CapWhiteListForGetTenantQuotaOutput
+     */
+    UserAutoDefenseCap?: number;
 }

@@ -194,6 +194,18 @@ export interface DataForListMultiLevelAssetHostsOutput {
      * @type {string}
      * @memberof DataForListMultiLevelAssetHostsOutput
      */
+    State?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListMultiLevelAssetHostsOutput
+     */
+    StateDetail?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListMultiLevelAssetHostsOutput
+     */
     Status?: string;
 
     /**

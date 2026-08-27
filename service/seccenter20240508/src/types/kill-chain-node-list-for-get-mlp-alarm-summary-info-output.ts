@@ -632,7 +632,19 @@ export interface KillChainNodeListForGetMlpAlarmSummaryInfoOutput {
      * @type {string}
      * @memberof KillChainNodeListForGetMlpAlarmSummaryInfoOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof KillChainNodeListForGetMlpAlarmSummaryInfoOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof KillChainNodeListForGetMlpAlarmSummaryInfoOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}

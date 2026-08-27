@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { SecurityGroupBindInfoForModifyAllowListInput } from './security-group-bind-info-for-modify-allow-list-input';
  /**
  * 
  *
@@ -55,6 +56,18 @@ export interface ModifyAllowListRequest {
      * @memberof ModifyAllowListRequest
      */
     ModifyMode?: ModifyAllowListRequestModifyModeEnum;
+
+    /**
+     * @type {Array<SecurityGroupBindInfoForModifyAllowListInput>}
+     * @memberof ModifyAllowListRequest
+     */
+    SecurityGroupBindInfos?: Array<SecurityGroupBindInfoForModifyAllowListInput>;
+
+    /**
+     * @type {string}
+     * @memberof ModifyAllowListRequest
+     */
+    UserAllowList?: string;
 }
 
 /**

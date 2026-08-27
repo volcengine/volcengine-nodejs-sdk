@@ -43,15 +43,5 @@ export interface AccountForDescribeDBAccountsOutput {
      * @type {string}
      * @memberof AccountForDescribeDBAccountsOutput
      */
-    AccountType?: AccountForDescribeDBAccountsOutputAccountTypeEnum;
+    AccountType?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum AccountForDescribeDBAccountsOutputAccountTypeEnum {
-    Normal = 'Normal',
-    Super = 'Super'
-}
-

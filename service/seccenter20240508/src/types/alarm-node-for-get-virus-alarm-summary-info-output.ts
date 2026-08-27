@@ -632,7 +632,19 @@ export interface AlarmNodeForGetVirusAlarmSummaryInfoOutput {
      * @type {string}
      * @memberof AlarmNodeForGetVirusAlarmSummaryInfoOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof AlarmNodeForGetVirusAlarmSummaryInfoOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof AlarmNodeForGetVirusAlarmSummaryInfoOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}

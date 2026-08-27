@@ -24,5 +24,5 @@ export interface GetOneRaspAlarmRequest {
      * @type {string}
      * @memberof GetOneRaspAlarmRequest
      */
-    AlarmID?: string;
+    AlarmID: string;
 }

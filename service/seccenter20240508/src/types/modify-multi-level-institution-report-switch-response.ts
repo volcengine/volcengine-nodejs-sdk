@@ -19,4 +19,10 @@
  * @interface ModifyMultiLevelInstitutionReportSwitchResponse
  */
 export interface ModifyMultiLevelInstitutionReportSwitchResponse {
+
+    /**
+     * @type {string}
+     * @memberof ModifyMultiLevelInstitutionReportSwitchResponse
+     */
+    Data?: string;
 }

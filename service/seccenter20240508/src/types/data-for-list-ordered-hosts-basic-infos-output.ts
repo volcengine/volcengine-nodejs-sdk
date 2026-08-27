@@ -109,6 +109,18 @@ export interface DataForListOrderedHostsBasicInfosOutput {
      * @type {string}
      * @memberof DataForListOrderedHostsBasicInfosOutput
      */
+    State?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListOrderedHostsBasicInfosOutput
+     */
+    StateDetail?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListOrderedHostsBasicInfosOutput
+     */
     Status?: string;
 
     /**

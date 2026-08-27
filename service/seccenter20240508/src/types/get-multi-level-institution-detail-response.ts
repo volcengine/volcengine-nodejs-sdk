@@ -44,26 +44,26 @@ export interface GetMultiLevelInstitutionDetailResponse {
     BaseInfo?: BaseInfoForGetMultiLevelInstitutionDetailOutput;
 
     /**
+     * @type {HostOverviewForGetMultiLevelInstitutionDetailOutput}
+     * @memberof GetMultiLevelInstitutionDetailResponse
+     */
+    HostOverview?: HostOverviewForGetMultiLevelInstitutionDetailOutput;
+
+    /**
      * @type {string}
      * @memberof GetMultiLevelInstitutionDetailResponse
      */
     ID?: string;
 
     /**
+     * @type {ThreatenForGetMultiLevelInstitutionDetailOutput}
+     * @memberof GetMultiLevelInstitutionDetailResponse
+     */
+    Threaten?: ThreatenForGetMultiLevelInstitutionDetailOutput;
+
+    /**
      * @type {ConfigurationForGetMultiLevelInstitutionDetailOutput}
      * @memberof GetMultiLevelInstitutionDetailResponse
      */
     configuration?: ConfigurationForGetMultiLevelInstitutionDetailOutput;
-
-    /**
-     * @type {HostOverviewForGetMultiLevelInstitutionDetailOutput}
-     * @memberof GetMultiLevelInstitutionDetailResponse
-     */
-    hostOverview?: HostOverviewForGetMultiLevelInstitutionDetailOutput;
-
-    /**
-     * @type {ThreatenForGetMultiLevelInstitutionDetailOutput}
-     * @memberof GetMultiLevelInstitutionDetailResponse
-     */
-    threaten?: ThreatenForGetMultiLevelInstitutionDetailOutput;
 }

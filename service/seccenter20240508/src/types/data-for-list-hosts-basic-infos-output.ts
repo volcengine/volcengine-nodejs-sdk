@@ -187,6 +187,18 @@ export interface DataForListHostsBasicInfosOutput {
      * @type {string}
      * @memberof DataForListHostsBasicInfosOutput
      */
+    State?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListHostsBasicInfosOutput
+     */
+    StateDetail?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListHostsBasicInfosOutput
+     */
     Status?: string;
 
     /**

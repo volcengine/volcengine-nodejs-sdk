@@ -23,6 +23,12 @@ import { MaintenanceWindowForDescribeDBInstanceDetailOutput } from './maintenanc
 export interface InstanceDetailForDescribeDBInstanceDetailOutput {
 
     /**
+     * @type {number}
+     * @memberof InstanceDetailForDescribeDBInstanceDetailOutput
+     */
+    CompressedStorageUsedGiB?: number;
+
+    /**
      * @type {string}
      * @memberof InstanceDetailForDescribeDBInstanceDetailOutput
      */
@@ -32,13 +38,13 @@ export interface InstanceDetailForDescribeDBInstanceDetailOutput {
      * @type {string}
      * @memberof InstanceDetailForDescribeDBInstanceDetailOutput
      */
-    DBEngineVersion?: InstanceDetailForDescribeDBInstanceDetailOutputDBEngineVersionEnum;
+    DBEngineVersion?: string;
 
     /**
      * @type {string}
      * @memberof InstanceDetailForDescribeDBInstanceDetailOutput
      */
-    DeletionProtection?: InstanceDetailForDescribeDBInstanceDetailOutputDeletionProtectionEnum;
+    DeletionProtection?: string;
 
     /**
      * @type {string}
@@ -56,7 +62,7 @@ export interface InstanceDetailForDescribeDBInstanceDetailOutput {
      * @type {string}
      * @memberof InstanceDetailForDescribeDBInstanceDetailOutput
      */
-    InstanceStatus?: InstanceDetailForDescribeDBInstanceDetailOutputInstanceStatusEnum;
+    InstanceStatus?: string;
 
     /**
      * @type {Array<InstanceStructureForDescribeDBInstanceDetailOutput>}
@@ -98,13 +104,19 @@ export interface InstanceDetailForDescribeDBInstanceDetailOutput {
      * @type {string}
      * @memberof InstanceDetailForDescribeDBInstanceDetailOutput
      */
-    SpecFamily?: InstanceDetailForDescribeDBInstanceDetailOutputSpecFamilyEnum;
+    SpecFamily?: string;
 
     /**
      * @type {string}
      * @memberof InstanceDetailForDescribeDBInstanceDetailOutput
      */
-    StorageChargeType?: InstanceDetailForDescribeDBInstanceDetailOutputStorageChargeTypeEnum;
+    StorageChargeType?: string;
+
+    /**
+     * @type {string}
+     * @memberof InstanceDetailForDescribeDBInstanceDetailOutput
+     */
+    StorageType?: string;
 
     /**
      * @type {number}
@@ -136,60 +148,3 @@ export interface InstanceDetailForDescribeDBInstanceDetailOutput {
      */
     ZoneIds?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum InstanceDetailForDescribeDBInstanceDetailOutputDBEngineVersionEnum {
-    MySQL57 = 'MySQL_5_7',
-    MySQL80 = 'MySQL_8_0'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum InstanceDetailForDescribeDBInstanceDetailOutputDeletionProtectionEnum {
-    Disabled = 'disabled',
-    Enabled = 'enabled'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum InstanceDetailForDescribeDBInstanceDetailOutputInstanceStatusEnum {
-    AddressModifying = 'AddressModifying',
-    AllowListMaintaining = 'AllowListMaintaining',
-    CreateFailed = 'CreateFailed',
-    Creating = 'Creating',
-    Deleting = 'Deleting',
-    Error = 'Error',
-    Expired = 'Expired',
-    Owing = 'Owing',
-    PrimaryChanging = 'PrimaryChanging',
-    Reclaiming = 'Reclaiming',
-    Restarting = 'Restarting',
-    Restoring = 'Restoring',
-    Resuming = 'Resuming',
-    Running = 'Running',
-    Scaling = 'Scaling',
-    Upgrading = 'Upgrading',
-    WaitingPaid = 'WaitingPaid'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum InstanceDetailForDescribeDBInstanceDetailOutputSpecFamilyEnum {
-    Exclusive = 'Exclusive',
-    General = 'General'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum InstanceDetailForDescribeDBInstanceDetailOutputStorageChargeTypeEnum {
-    PostPaid = 'PostPaid',
-    PrePaid = 'PrePaid'
-}
-

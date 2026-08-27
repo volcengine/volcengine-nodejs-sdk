@@ -24,5 +24,5 @@ export interface GetVirusAlarmSummaryInfoRequest {
      * @type {string}
      * @memberof GetVirusAlarmSummaryInfoRequest
      */
-    AlarmID?: string;
+    AlarmID: string;
 }

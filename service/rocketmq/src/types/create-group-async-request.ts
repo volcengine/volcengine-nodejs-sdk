@@ -51,8 +51,20 @@ export interface CreateGroupAsyncRequest {
     InstanceId: string;
 
     /**
+     * @type {string}
+     * @memberof CreateGroupAsyncRequest
+     */
+    MessageModel?: string;
+
+    /**
      * @type {number}
      * @memberof CreateGroupAsyncRequest
      */
     RetryMaxTimes?: number;
+
+    /**
+     * @type {string}
+     * @memberof CreateGroupAsyncRequest
+     */
+    TopicName?: string;
 }

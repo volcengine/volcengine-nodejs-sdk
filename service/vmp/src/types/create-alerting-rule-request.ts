@@ -65,7 +65,19 @@ export interface CreateAlertingRuleRequest {
      * @type {string}
      * @memberof CreateAlertingRuleRequest
      */
+    NotifyGroupPolicySource?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateAlertingRuleRequest
+     */
     NotifyPolicyId?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateAlertingRuleRequest
+     */
+    NotifyPolicySource?: string;
 
     /**
      * @type {string}

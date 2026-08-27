@@ -43,4 +43,10 @@ export interface GetAIAlarmJudgeConfigResponse {
      * @memberof GetAIAlarmJudgeConfigResponse
      */
     ManagerID?: string;
+
+    /**
+     * @type {number}
+     * @memberof GetAIAlarmJudgeConfigResponse
+     */
+    RemainQuota?: number;
 }

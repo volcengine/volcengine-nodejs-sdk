@@ -27,6 +27,12 @@ export interface GetAIFingerprintAppRequest {
     AppID?: string;
 
     /**
+     * @type {string}
+     * @memberof GetAIFingerprintAppRequest
+     */
+    Name?: string;
+
+    /**
      * @type {boolean}
      * @memberof GetAIFingerprintAppRequest
      */

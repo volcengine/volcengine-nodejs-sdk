@@ -24,5 +24,5 @@ export interface GetFingerprintTop5Request {
      * @type {string}
      * @memberof GetFingerprintTop5Request
      */
-    FingerprintType?: string;
+    FingerprintType: string;
 }

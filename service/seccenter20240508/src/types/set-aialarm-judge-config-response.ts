@@ -19,4 +19,10 @@
  * @interface SetAIAlarmJudgeConfigResponse
  */
 export interface SetAIAlarmJudgeConfigResponse {
+
+    /**
+     * @type {string}
+     * @memberof SetAIAlarmJudgeConfigResponse
+     */
+    Data?: string;
 }
