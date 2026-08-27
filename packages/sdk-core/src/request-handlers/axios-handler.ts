@@ -176,8 +176,14 @@ export class AxiosRequestHandler implements RequestHandler {
     const userAgentKey = Object.keys(headers).find(
       (key) => key.toLowerCase() === "user-agent",
     );
+    const rawUserAgent =
+      userAgentKey !== undefined ? headers[userAgentKey] : undefined;
+    // undefined / null 视为“无自定义”，回退到默认 UA，与 PHP SDK 行为一致，
+    // 避免拼出 "volcengine-nodejs-sdk/x.y.z undefined" 这类脏 UA。
     const customUserAgent =
-      userAgentKey !== undefined ? String(headers[userAgentKey]).trim() : "";
+      rawUserAgent === undefined || rawUserAgent === null
+        ? ""
+        : String(rawUserAgent).trim();
     if (userAgentKey !== undefined) {
       delete headers[userAgentKey];
     }

@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from "uuid";
+import { randomUUID } from "crypto";
 import type { CredentialValue, Provider } from "./types";
 import type { StsAssumeRoleParams } from "../types/types";
 
@@ -87,7 +87,7 @@ export class StsAssumeRoleProvider implements Provider {
           DurationSeconds: this.params.durationSeconds || 3600,
           RoleTrn: this.params.roleTrn,
           // 唯一值，建议使用 UUID
-          RoleSessionName: this.params.roleSessionName || uuidv4(),
+          RoleSessionName: this.params.roleSessionName || randomUUID(),
           Policy: this.params.policy,
           Tags: this.params.tags,
         });

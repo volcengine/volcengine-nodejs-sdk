@@ -2,7 +2,7 @@ import type { Clock } from "../types/clock";
 import type { Args, MiddlewareFunction, MiddlewareStackOptions } from "./types";
 import { PRIORITY } from "./priority";
 import type { RetryStrategy } from "../types/types";
-import { v4 as uuidv4 } from "uuid";
+import { randomUUID } from "crypto";
 
 const RETRY_INVOCATION_ID_HEADER = "X-Sdk-Invocation-Id";
 const RETRY_ATTEMPT_HEADER = "X-Sdk-Request";
@@ -57,7 +57,7 @@ export function createRetryMiddleware(
       }
 
       const customRetryStrategy = clientConfig.retryStrategy;
-      const invocationId = uuidv4();
+      const invocationId = randomUUID();
 
       let lastError: any;
 

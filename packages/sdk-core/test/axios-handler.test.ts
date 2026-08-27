@@ -325,6 +325,26 @@ describe("AxiosRequestHandler - normalizeHeaders", () => {
       });
       expect(getSentUserAgent()).toBe(DEFAULT_UA);
     });
+
+    test("should fall back to default UA when custom is undefined", async () => {
+      await handler.request({
+        url: "https://example.com/api",
+        method: "GET",
+        headers: { "User-Agent": undefined } as any,
+        data: undefined,
+      });
+      expect(getSentUserAgent()).toBe(DEFAULT_UA);
+    });
+
+    test("should fall back to default UA when custom is null", async () => {
+      await handler.request({
+        url: "https://example.com/api",
+        method: "GET",
+        headers: { "User-Agent": null } as any,
+        data: undefined,
+      });
+      expect(getSentUserAgent()).toBe(DEFAULT_UA);
+    });
   });
 
   describe("destroy method", () => {
