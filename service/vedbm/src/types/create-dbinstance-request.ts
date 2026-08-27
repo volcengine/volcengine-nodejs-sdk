@@ -127,6 +127,12 @@ export interface CreateDBInstanceRequest {
      * @type {string}
      * @memberof CreateDBInstanceRequest
      */
+    StorageType?: CreateDBInstanceRequestStorageTypeEnum;
+
+    /**
+     * @type {string}
+     * @memberof CreateDBInstanceRequest
+     */
     SubnetId: string;
 
     /**
@@ -246,5 +252,13 @@ export enum CreateDBInstanceRequestPeriodUnitEnum {
 export enum CreateDBInstanceRequestStorageChargeTypeEnum {
     PostPaid = 'PostPaid',
     PrePaid = 'PrePaid'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum CreateDBInstanceRequestStorageTypeEnum {
+    IOOptimizedStorage = 'IOOptimizedStorage',
+    SmartCompressedStorage = 'SmartCompressedStorage'
 }
 

@@ -16,25 +16,29 @@
  * 
  *
  * @export
- * @interface DatabasesPrivilegeForDescribeDatabasesOutput
+ * @interface ModifyConnectionPersistenceRequest
  */
-export interface DatabasesPrivilegeForDescribeDatabasesOutput {
+export interface ModifyConnectionPersistenceRequest {
 
     /**
      * @type {string}
-     * @memberof DatabasesPrivilegeForDescribeDatabasesOutput
+     * @memberof ModifyConnectionPersistenceRequest
      */
-    AccountName?: string;
+    ConnectionPersistence: ModifyConnectionPersistenceRequestConnectionPersistenceEnum;
 
     /**
      * @type {string}
-     * @memberof DatabasesPrivilegeForDescribeDatabasesOutput
+     * @memberof ModifyConnectionPersistenceRequest
      */
-    AccountPrivilege?: string;
-
-    /**
-     * @type {string}
-     * @memberof DatabasesPrivilegeForDescribeDatabasesOutput
-     */
-    AccountPrivilegeDetail?: string;
+    InstanceId: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ModifyConnectionPersistenceRequestConnectionPersistenceEnum {
+    OFF = 'OFF',
+    ON = 'ON'
+}
+

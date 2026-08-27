@@ -118,6 +118,8 @@ import { ModifyAllowListRequest } from './types/index';
 import { ModifyAllowListResponse } from './types/index';
 import { ModifyBackupPolicyRequest } from './types/index';
 import { ModifyBackupPolicyResponse } from './types/index';
+import { ModifyConnectionPersistenceRequest } from './types/index';
+import { ModifyConnectionPersistenceResponse } from './types/index';
 import { ModifyCrossRegionBackupPolicyRequest } from './types/index';
 import { ModifyCrossRegionBackupPolicyResponse } from './types/index';
 import { ModifyDBAccountDescriptionRequest } from './types/index';
@@ -140,6 +142,8 @@ import { ModifyDBInstanceParametersRequest } from './types/index';
 import { ModifyDBInstanceParametersResponse } from './types/index';
 import { ModifyDBInstanceSpecRequest } from './types/index';
 import { ModifyDBInstanceSpecResponse } from './types/index';
+import { ModifyDBInstanceStorageTypeRequest } from './types/index';
+import { ModifyDBInstanceStorageTypeResponse } from './types/index';
 import { ModifyDBNodeConfigRequest } from './types/index';
 import { ModifyDBNodeConfigResponse } from './types/index';
 import { ModifyDatabaseDescriptionRequest } from './types/index';
@@ -220,6 +224,7 @@ export type DisassociateAllowListCommandOutput = CommandOutput<DisassociateAllow
 export type GrantDBAccountPrivilegeCommandOutput = CommandOutput<GrantDBAccountPrivilegeResponse>;
 export type ModifyAllowListCommandOutput = CommandOutput<ModifyAllowListResponse>;
 export type ModifyBackupPolicyCommandOutput = CommandOutput<ModifyBackupPolicyResponse>;
+export type ModifyConnectionPersistenceCommandOutput = CommandOutput<ModifyConnectionPersistenceResponse>;
 export type ModifyCrossRegionBackupPolicyCommandOutput = CommandOutput<ModifyCrossRegionBackupPolicyResponse>;
 export type ModifyDBAccountDescriptionCommandOutput = CommandOutput<ModifyDBAccountDescriptionResponse>;
 export type ModifyDBEndpointCommandOutput = CommandOutput<ModifyDBEndpointResponse>;
@@ -231,6 +236,7 @@ export type ModifyDBInstanceMaintenanceWindowCommandOutput = CommandOutput<Modif
 export type ModifyDBInstanceNameCommandOutput = CommandOutput<ModifyDBInstanceNameResponse>;
 export type ModifyDBInstanceParametersCommandOutput = CommandOutput<ModifyDBInstanceParametersResponse>;
 export type ModifyDBInstanceSpecCommandOutput = CommandOutput<ModifyDBInstanceSpecResponse>;
+export type ModifyDBInstanceStorageTypeCommandOutput = CommandOutput<ModifyDBInstanceStorageTypeResponse>;
 export type ModifyDBNodeConfigCommandOutput = CommandOutput<ModifyDBNodeConfigResponse>;
 export type ModifyDatabaseDescriptionCommandOutput = CommandOutput<ModifyDatabaseDescriptionResponse>;
 export type ModifyParameterTemplateCommandOutput = CommandOutput<ModifyParameterTemplateResponse>;
@@ -1038,6 +1044,21 @@ export class ModifyBackupPolicyCommand extends Command<
   }
 }
 /**
+ * Command to ModifyConnectionPersistence
+ */
+export class ModifyConnectionPersistenceCommand extends Command<
+  ModifyConnectionPersistenceRequest,
+  ModifyConnectionPersistenceCommandOutput,
+  'ModifyConnectionPersistenceCommand'
+> {
+  static readonly metaPath = '/ModifyConnectionPersistence/2022-01-01/vedbm/post/application_json/';
+
+  constructor(input: ModifyConnectionPersistenceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyConnectionPersistenceCommand.metaPath);
+  }
+}
+/**
  * Command to ModifyCrossRegionBackupPolicy
  */
 export class ModifyCrossRegionBackupPolicyCommand extends Command<
@@ -1200,6 +1221,21 @@ export class ModifyDBInstanceSpecCommand extends Command<
   constructor(input: ModifyDBInstanceSpecRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ModifyDBInstanceSpecCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyDBInstanceStorageType
+ */
+export class ModifyDBInstanceStorageTypeCommand extends Command<
+  ModifyDBInstanceStorageTypeRequest,
+  ModifyDBInstanceStorageTypeCommandOutput,
+  'ModifyDBInstanceStorageTypeCommand'
+> {
+  static readonly metaPath = '/ModifyDBInstanceStorageType/2022-01-01/vedbm/post/application_json/';
+
+  constructor(input: ModifyDBInstanceStorageTypeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyDBInstanceStorageTypeCommand.metaPath);
   }
 }
 /**
@@ -1437,6 +1473,7 @@ export default {
   GrantDBAccountPrivilegeCommand,
   ModifyAllowListCommand,
   ModifyBackupPolicyCommand,
+  ModifyConnectionPersistenceCommand,
   ModifyCrossRegionBackupPolicyCommand,
   ModifyDBAccountDescriptionCommand,
   ModifyDBEndpointCommand,
@@ -1448,6 +1485,7 @@ export default {
   ModifyDBInstanceNameCommand,
   ModifyDBInstanceParametersCommand,
   ModifyDBInstanceSpecCommand,
+  ModifyDBInstanceStorageTypeCommand,
   ModifyDBNodeConfigCommand,
   ModifyDatabaseDescriptionCommand,
   ModifyParameterTemplateCommand,

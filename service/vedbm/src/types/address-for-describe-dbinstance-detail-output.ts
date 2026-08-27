@@ -48,7 +48,7 @@ export interface AddressForDescribeDBInstanceDetailOutput {
      * @type {string}
      * @memberof AddressForDescribeDBInstanceDetailOutput
      */
-    NetworkType?: AddressForDescribeDBInstanceDetailOutputNetworkTypeEnum;
+    NetworkType?: string;
 
     /**
      * @type {string}
@@ -62,13 +62,3 @@ export interface AddressForDescribeDBInstanceDetailOutput {
      */
     SubnetId?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum AddressForDescribeDBInstanceDetailOutputNetworkTypeEnum {
-    Private = 'Private',
-    Public = 'Public'
-}
-

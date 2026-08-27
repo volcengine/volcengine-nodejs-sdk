@@ -37,7 +37,13 @@ export interface EndpointForDescribeDBEndpointOutput {
      * @type {string}
      * @memberof EndpointForDescribeDBEndpointOutput
      */
-    ConsistLevel?: EndpointForDescribeDBEndpointOutputConsistLevelEnum;
+    ConnectionPool?: string;
+
+    /**
+     * @type {string}
+     * @memberof EndpointForDescribeDBEndpointOutput
+     */
+    ConsistLevel?: string;
 
     /**
      * @type {number}
@@ -49,7 +55,7 @@ export interface EndpointForDescribeDBEndpointOutput {
      * @type {string}
      * @memberof EndpointForDescribeDBEndpointOutput
      */
-    ConsistTimeoutAction?: EndpointForDescribeDBEndpointOutputConsistTimeoutActionEnum;
+    ConsistTimeoutAction?: string;
 
     /**
      * @type {string}
@@ -79,7 +85,7 @@ export interface EndpointForDescribeDBEndpointOutput {
      * @type {string}
      * @memberof EndpointForDescribeDBEndpointOutput
      */
-    EndpointType?: EndpointForDescribeDBEndpointOutputEndpointTypeEnum;
+    EndpointType?: string;
 
     /**
      * @type {boolean}
@@ -97,41 +103,5 @@ export interface EndpointForDescribeDBEndpointOutput {
      * @type {string}
      * @memberof EndpointForDescribeDBEndpointOutput
      */
-    ReadWriteMode?: EndpointForDescribeDBEndpointOutputReadWriteModeEnum;
+    ReadWriteMode?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum EndpointForDescribeDBEndpointOutputConsistLevelEnum {
-    Eventual = 'Eventual',
-    Global = 'Global',
-    Session = 'Session'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum EndpointForDescribeDBEndpointOutputConsistTimeoutActionEnum {
-    ReadMaster = 'ReadMaster',
-    ReturnError = 'ReturnError'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum EndpointForDescribeDBEndpointOutputEndpointTypeEnum {
-    Cluster = 'Cluster',
-    Custom = 'Custom',
-    Primary = 'Primary'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum EndpointForDescribeDBEndpointOutputReadWriteModeEnum {
-    ReadOnly = 'ReadOnly',
-    ReadWrite = 'ReadWrite'
-}
-

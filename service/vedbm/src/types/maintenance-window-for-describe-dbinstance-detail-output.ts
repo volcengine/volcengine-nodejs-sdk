@@ -24,7 +24,7 @@ export interface MaintenanceWindowForDescribeDBInstanceDetailOutput {
      * @type {string}
      * @memberof MaintenanceWindowForDescribeDBInstanceDetailOutput
      */
-    DayKind?: MaintenanceWindowForDescribeDBInstanceDetailOutputDayKindEnum;
+    DayKind?: string;
 
     /**
      * @type {Array<number>}
@@ -36,7 +36,7 @@ export interface MaintenanceWindowForDescribeDBInstanceDetailOutput {
      * @type {Array<string>}
      * @memberof MaintenanceWindowForDescribeDBInstanceDetailOutput
      */
-    DayOfWeek?: Array<MaintenanceWindowForDescribeDBInstanceDetailOutputDayOfWeekEnum>;
+    DayOfWeek?: Array<string>;
 
     /**
      * @type {string}
@@ -44,26 +44,3 @@ export interface MaintenanceWindowForDescribeDBInstanceDetailOutput {
      */
     MaintenanceTime?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum MaintenanceWindowForDescribeDBInstanceDetailOutputDayKindEnum {
-    Month = 'Month',
-    Week = 'Week'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum MaintenanceWindowForDescribeDBInstanceDetailOutputDayOfWeekEnum {
-    Friday = 'Friday',
-    Monday = 'Monday',
-    Saturday = 'Saturday',
-    Sunday = 'Sunday',
-    Thursday = 'Thursday',
-    Tuesday = 'Tuesday',
-    Wednesday = 'Wednesday'
-}
-

@@ -74,6 +74,7 @@ export enum DescribeExistDBInstancePriceRequestPeriodUnitEnum {
  */
 export enum DescribeExistDBInstancePriceRequestUserActionEnum {
     ModifyDBInstanceChargeType = 'ModifyDBInstanceChargeType',
-    ModifyDBInstanceSpec = 'ModifyDBInstanceSpec'
+    ModifyDBInstanceSpec = 'ModifyDBInstanceSpec',
+    ModifyDBInstanceStorageType = 'ModifyDBInstanceStorageType'
 }
 
