@@ -71,6 +71,12 @@ export interface BasicInfoForDescribeDBInstanceDetailOutput {
     InstanceType?: string;
 
     /**
+     * @type {string}
+     * @memberof BasicInfoForDescribeDBInstanceDetailOutput
+     */
+    KMSTrn?: string;
+
+    /**
      * @type {MaintenanceWindowForDescribeDBInstanceDetailOutput}
      * @memberof BasicInfoForDescribeDBInstanceDetailOutput
      */
@@ -153,6 +159,12 @@ export interface BasicInfoForDescribeDBInstanceDetailOutput {
      * @memberof BasicInfoForDescribeDBInstanceDetailOutput
      */
     SubnetId?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof BasicInfoForDescribeDBInstanceDetailOutput
+     */
+    TDEEnable?: boolean;
 
     /**
      * @type {string}

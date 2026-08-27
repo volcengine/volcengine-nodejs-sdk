@@ -49,6 +49,12 @@ export interface CreateDBInstanceRequest {
     InstanceName?: string;
 
     /**
+     * @type {string}
+     * @memberof CreateDBInstanceRequest
+     */
+    KMSTrn?: string;
+
+    /**
      * @type {MaintenanceWindowForCreateDBInstanceInput}
      * @memberof CreateDBInstanceRequest
      */
@@ -83,6 +89,12 @@ export interface CreateDBInstanceRequest {
      * @memberof CreateDBInstanceRequest
      */
     SubnetId: string;
+
+    /**
+     * @type {boolean}
+     * @memberof CreateDBInstanceRequest
+     */
+    TDEEnable?: boolean;
 
     /**
      * @type {Array<TagForCreateDBInstanceInput>}
