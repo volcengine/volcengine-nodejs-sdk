@@ -24,5 +24,5 @@ export interface GetMlpAlarmSummaryInfoRequest {
      * @type {string}
      * @memberof GetMlpAlarmSummaryInfoRequest
      */
-    AlarmID?: string;
+    AlarmID: string;
 }

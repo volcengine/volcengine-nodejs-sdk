@@ -31,13 +31,13 @@ export interface ListOrderedHostsBasicInfosRequest {
      * @type {number}
      * @memberof ListOrderedHostsBasicInfosRequest
      */
-    PageNumber?: number;
+    PageNumber: number;
 
     /**
      * @type {number}
      * @memberof ListOrderedHostsBasicInfosRequest
      */
-    PageSize?: number;
+    PageSize: number;
 
     /**
      * @type {string}

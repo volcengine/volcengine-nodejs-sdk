@@ -24,5 +24,5 @@ export interface DownloadRawTraceDataRequest {
      * @type {string}
      * @memberof DownloadRawTraceDataRequest
      */
-    TraceID?: string;
+    TraceID: string;
 }

@@ -31,7 +31,7 @@ export interface ExportDevFingerprintDataRequest {
      * @type {string}
      * @memberof ExportDevFingerprintDataRequest
      */
-    FingerprintType?: ExportDevFingerprintDataRequestFingerprintTypeEnum;
+    FingerprintType?: string;
 
     /**
      * @type {Array<string>}
@@ -39,14 +39,3 @@ export interface ExportDevFingerprintDataRequest {
      */
     IDList?: Array<string>;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum ExportDevFingerprintDataRequestFingerprintTypeEnum {
-    Process = 'process',
-    Port = 'port',
-    Software = 'software'
-}
-

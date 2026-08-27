@@ -632,7 +632,19 @@ export interface AlarmNodeForGetMlpAlarmSummaryInfoOutput {
      * @type {string}
      * @memberof AlarmNodeForGetMlpAlarmSummaryInfoOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof AlarmNodeForGetMlpAlarmSummaryInfoOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof AlarmNodeForGetMlpAlarmSummaryInfoOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}

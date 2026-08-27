@@ -24,5 +24,5 @@ export interface GetDevDetailRequest {
      * @type {string}
      * @memberof GetDevDetailRequest
      */
-    AssetID?: string;
+    AssetID: string;
 }

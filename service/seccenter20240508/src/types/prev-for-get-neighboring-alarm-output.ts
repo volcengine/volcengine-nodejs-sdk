@@ -291,7 +291,19 @@ export interface PrevForGetNeighboringAlarmOutput {
      * @type {string}
      * @memberof PrevForGetNeighboringAlarmOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrevForGetNeighboringAlarmOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrevForGetNeighboringAlarmOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}

@@ -33,10 +33,10 @@ export interface DataForGetAIFingerprintAppOutput {
     Description?: string;
 
     /**
-     * @type {boolean}
+     * @type {string}
      * @memberof DataForGetAIFingerprintAppOutput
      */
-    Enabled?: boolean;
+    Enabled?: string;
 
     /**
      * @type {string}

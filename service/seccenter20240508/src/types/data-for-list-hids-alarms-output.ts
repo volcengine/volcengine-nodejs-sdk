@@ -291,7 +291,19 @@ export interface DataForListHidsAlarmsOutput {
      * @type {string}
      * @memberof DataForListHidsAlarmsOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListHidsAlarmsOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListHidsAlarmsOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}

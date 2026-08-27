@@ -283,7 +283,6 @@ export type SaveAsParameterTemplateCommandOutput = CommandOutput<SaveAsParameter
 export type UnifyNewAllowListCommandOutput = CommandOutput<UnifyNewAllowListResponse>;
 export type UpgradeAllowListVersionCommandOutput = CommandOutput<UpgradeAllowListVersionResponse>;
 
-
 /**
  * RDSPOSTGRESQLClient Service Client
  */

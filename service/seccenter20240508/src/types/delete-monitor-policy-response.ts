@@ -19,4 +19,10 @@
  * @interface DeleteMonitorPolicyResponse
  */
 export interface DeleteMonitorPolicyResponse {
+
+    /**
+     * @type {string}
+     * @memberof DeleteMonitorPolicyResponse
+     */
+    Data?: string;
 }

@@ -24,5 +24,5 @@ export interface DeleteLayeredGroupRequest {
      * @type {string}
      * @memberof DeleteLayeredGroupRequest
      */
-    GroupID?: string;
+    GroupID: string;
 }

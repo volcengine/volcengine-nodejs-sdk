@@ -24,5 +24,5 @@ export interface GetRaspAlarmSummaryInfoRequest {
      * @type {string}
      * @memberof GetRaspAlarmSummaryInfoRequest
      */
-    AlarmID?: string;
+    AlarmID: string;
 }
