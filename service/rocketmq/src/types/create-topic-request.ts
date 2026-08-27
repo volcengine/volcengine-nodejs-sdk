@@ -43,6 +43,12 @@ export interface CreateTopicRequest {
      * @type {number}
      * @memberof CreateTopicRequest
      */
+    LiteTopicTTLMinutes?: number;
+
+    /**
+     * @type {number}
+     * @memberof CreateTopicRequest
+     */
     MessageType: number;
 
     /**

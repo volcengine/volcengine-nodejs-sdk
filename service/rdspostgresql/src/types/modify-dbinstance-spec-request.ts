@@ -74,4 +74,10 @@ export interface ModifyDBInstanceSpecRequest {
      * @memberof ModifyDBInstanceSpecRequest
      */
     StorageType?: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyDBInstanceSpecRequest
+     */
+    SwitchType?: string;
 }

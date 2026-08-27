@@ -57,6 +57,12 @@ export interface ListVarmorPoliciesRequest {
     PageSize: number;
 
     /**
+     * @type {Array<string>}
+     * @memberof ListVarmorPoliciesRequest
+     */
+    PolicyIds?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof ListVarmorPoliciesRequest
      */

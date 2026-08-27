@@ -48,6 +48,12 @@ export interface BasicQuotaForGetTenantQuotaOutput {
      * @type {number}
      * @memberof BasicQuotaForGetTenantQuotaOutput
      */
+    RunningUsedCount?: number;
+
+    /**
+     * @type {number}
+     * @memberof BasicQuotaForGetTenantQuotaOutput
+     */
     TotalCount?: number;
 
     /**

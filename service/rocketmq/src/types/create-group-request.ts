@@ -51,8 +51,30 @@ export interface CreateGroupRequest {
     InstanceId: string;
 
     /**
+     * @type {string}
+     * @memberof CreateGroupRequest
+     */
+    MessageModel?: CreateGroupRequestMessageModelEnum;
+
+    /**
      * @type {number}
      * @memberof CreateGroupRequest
      */
     RetryMaxTimes?: number;
+
+    /**
+     * @type {string}
+     * @memberof CreateGroupRequest
+     */
+    TopicName?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum CreateGroupRequestMessageModelEnum {
+    CLUSTERING = 'CLUSTERING',
+    LITESELECTIVE = 'LITE_SELECTIVE'
+}
+

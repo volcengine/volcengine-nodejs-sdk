@@ -632,7 +632,19 @@ export interface KillChainNodeListForGetRaspAlarmSummaryInfoOutput {
      * @type {string}
      * @memberof KillChainNodeListForGetRaspAlarmSummaryInfoOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof KillChainNodeListForGetRaspAlarmSummaryInfoOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof KillChainNodeListForGetRaspAlarmSummaryInfoOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}

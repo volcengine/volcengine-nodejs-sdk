@@ -42,5 +42,5 @@ export interface UninstallAgentClientRequest {
      * @type {string}
      * @memberof UninstallAgentClientRequest
      */
-    Type?: string;
+    Type: string;
 }

@@ -24,5 +24,5 @@ export interface GetMonitorPolicyDirectoryRequest {
      * @type {string}
      * @memberof GetMonitorPolicyDirectoryRequest
      */
-    ID?: string;
+    ID: string;
 }

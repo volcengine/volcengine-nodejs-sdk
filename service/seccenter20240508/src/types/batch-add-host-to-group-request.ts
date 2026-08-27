@@ -30,7 +30,7 @@ export interface BatchAddHostToGroupRequest {
      * @type {string}
      * @memberof BatchAddHostToGroupRequest
      */
-    GroupID?: string;
+    GroupID: string;
 
     /**
      * @type {boolean}

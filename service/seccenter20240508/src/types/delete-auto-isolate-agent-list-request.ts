@@ -31,5 +31,5 @@ export interface DeleteAutoIsolateAgentListRequest {
      * @type {BasicQueryForDeleteAutoIsolateAgentListInput}
      * @memberof DeleteAutoIsolateAgentListRequest
      */
-    basicQuery?: BasicQueryForDeleteAutoIsolateAgentListInput;
+    BasicQuery?: BasicQueryForDeleteAutoIsolateAgentListInput;
 }

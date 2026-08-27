@@ -46,6 +46,12 @@ export interface DownloadVulnListRequest {
     Conditions?: ConditionsForDownloadVulnListInput;
 
     /**
+     * @type {string}
+     * @memberof DownloadVulnListRequest
+     */
+    ExportJobType?: string;
+
+    /**
      * @type {Array<string>}
      * @memberof DownloadVulnListRequest
      */

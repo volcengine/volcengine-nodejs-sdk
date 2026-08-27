@@ -24,5 +24,5 @@ export interface GetHidsAlarmInfoRequest {
      * @type {string}
      * @memberof GetHidsAlarmInfoRequest
      */
-    AlarmID?: string;
+    AlarmID: string;
 }

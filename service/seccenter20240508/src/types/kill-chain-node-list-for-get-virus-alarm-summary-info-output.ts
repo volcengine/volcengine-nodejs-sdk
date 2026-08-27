@@ -632,7 +632,19 @@ export interface KillChainNodeListForGetVirusAlarmSummaryInfoOutput {
      * @type {string}
      * @memberof KillChainNodeListForGetVirusAlarmSummaryInfoOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof KillChainNodeListForGetVirusAlarmSummaryInfoOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof KillChainNodeListForGetVirusAlarmSummaryInfoOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}

@@ -58,6 +58,12 @@ export interface DownloadVulListByPodRequest {
     Conditions?: ConditionsForDownloadVulListByPodInput;
 
     /**
+     * @type {string}
+     * @memberof DownloadVulListByPodRequest
+     */
+    ExportJobType?: string;
+
+    /**
      * @type {Array<string>}
      * @memberof DownloadVulListByPodRequest
      */

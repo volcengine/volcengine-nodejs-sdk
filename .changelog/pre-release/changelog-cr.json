@@ -1,0 +1,9 @@
+{
+  "actions": [
+    "UpdateRegistry",
+    "UpdateTagDescription"
+  ],
+  "description": "CR: 新增 UpdateTagDescription, UpdateRegistry",
+  "modules": "service/cr",
+  "type": "feature"
+}

@@ -85,7 +85,7 @@ export interface DataForListClustersAndVarmorAppsOutput {
      * @type {string}
      * @memberof DataForListClustersAndVarmorAppsOutput
      */
-    VarmorInstallStatus?: DataForListClustersAndVarmorAppsOutputVarmorInstallStatusEnum;
+    VarmorInstallStatus?: string;
 
     /**
      * @type {string}
@@ -103,28 +103,5 @@ export interface DataForListClustersAndVarmorAppsOutput {
      * @type {string}
      * @memberof DataForListClustersAndVarmorAppsOutput
      */
-    VarmorVersionStatus?: DataForListClustersAndVarmorAppsOutputVarmorVersionStatusEnum;
+    VarmorVersionStatus?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum DataForListClustersAndVarmorAppsOutputVarmorInstallStatusEnum {
-    NotInstalled = 'NotInstalled',
-    Installed = 'Installed',
-    Changing = 'Changing',
-    InstallFailed = 'InstallFailed',
-    UninstallFailed = 'UninstallFailed'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum DataForListClustersAndVarmorAppsOutputVarmorVersionStatusEnum {
-    NotInstalled = 'NotInstalled',
-    Upgradable = 'Upgradable',
-    UpgradeFailed = 'UpgradeFailed',
-    Latest = 'Latest'
-}
-

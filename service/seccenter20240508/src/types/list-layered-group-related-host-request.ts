@@ -24,5 +24,5 @@ export interface ListLayeredGroupRelatedHostRequest {
      * @type {string}
      * @memberof ListLayeredGroupRelatedHostRequest
      */
-    GroupID?: string;
+    GroupID: string;
 }

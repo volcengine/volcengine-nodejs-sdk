@@ -19,4 +19,10 @@
  * @interface UpdateLoginConfigResponse
  */
 export interface UpdateLoginConfigResponse {
+
+    /**
+     * @type {string}
+     * @memberof UpdateLoginConfigResponse
+     */
+    Data?: string;
 }
