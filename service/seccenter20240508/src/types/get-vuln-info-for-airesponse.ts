@@ -206,4 +206,34 @@ export interface GetVulnInfoForAIResponse {
      * @memberof GetVulnInfoForAIResponse
      */
     cwpp_id?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetVulnInfoForAIResponse
+     */
+    is_important_vul?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetVulnInfoForAIResponse
+     */
+    is_llm_vul?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetVulnInfoForAIResponse
+     */
+    need_quick_follow?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetVulnInfoForAIResponse
+     */
+    need_rasp?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetVulnInfoForAIResponse
+     */
+    need_varmor?: string;
 }

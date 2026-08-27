@@ -25,17 +25,17 @@ export interface GetSOCPrecautionBaselineStatsResponse {
      * @type {number}
      * @memberof GetSOCPrecautionBaselineStatsResponse
      */
-    passed?: number;
+    Passed?: number;
 
     /**
      * @type {RiskyForGetSOCPrecautionBaselineStatsOutput}
      * @memberof GetSOCPrecautionBaselineStatsResponse
      */
-    risky?: RiskyForGetSOCPrecautionBaselineStatsOutput;
+    Risky?: RiskyForGetSOCPrecautionBaselineStatsOutput;
 
     /**
      * @type {number}
      * @memberof GetSOCPrecautionBaselineStatsResponse
      */
-    total?: number;
+    Total?: number;
 }

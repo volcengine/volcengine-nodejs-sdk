@@ -291,7 +291,19 @@ export interface DataForListRaspAlarmsOutput {
      * @type {string}
      * @memberof DataForListRaspAlarmsOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListRaspAlarmsOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListRaspAlarmsOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}

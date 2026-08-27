@@ -25,6 +25,12 @@ export interface VarmorConfigForListClustersAndVarmorAppsOutput {
      * @type {string}
      * @memberof VarmorConfigForListClustersAndVarmorAppsOutput
      */
+    AddonJsonConfig?: string;
+
+    /**
+     * @type {string}
+     * @memberof VarmorConfigForListClustersAndVarmorAppsOutput
+     */
     ConfigType?: string;
 
     /**

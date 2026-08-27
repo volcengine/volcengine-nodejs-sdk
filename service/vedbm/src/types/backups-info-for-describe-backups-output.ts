@@ -54,7 +54,7 @@ export interface BackupsInfoForDescribeBackupsOutput {
      * @type {string}
      * @memberof BackupsInfoForDescribeBackupsOutput
      */
-    BackupStatus?: BackupsInfoForDescribeBackupsOutputBackupStatusEnum;
+    BackupStatus?: string;
 
     /**
      * @type {string}
@@ -74,14 +74,3 @@ export interface BackupsInfoForDescribeBackupsOutput {
      */
     CreateType?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum BackupsInfoForDescribeBackupsOutputBackupStatusEnum {
-    Failed = 'Failed',
-    Running = 'Running',
-    Success = 'Success'
-}
-

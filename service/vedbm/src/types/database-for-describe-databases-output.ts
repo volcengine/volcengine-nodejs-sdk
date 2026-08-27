@@ -25,7 +25,7 @@ export interface DatabaseForDescribeDatabasesOutput {
      * @type {string}
      * @memberof DatabaseForDescribeDatabasesOutput
      */
-    CharacterSetName?: DatabaseForDescribeDatabasesOutputCharacterSetNameEnum;
+    CharacterSetName?: string;
 
     /**
      * @type {string}
@@ -45,15 +45,3 @@ export interface DatabaseForDescribeDatabasesOutput {
      */
     DatabasesPrivileges?: Array<DatabasesPrivilegeForDescribeDatabasesOutput>;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum DatabaseForDescribeDatabasesOutputCharacterSetNameEnum {
-    Ascii = 'ascii',
-    Latin1 = 'latin1',
-    Utf8 = 'utf8',
-    Utf8mb4 = 'utf8mb4'
-}
-

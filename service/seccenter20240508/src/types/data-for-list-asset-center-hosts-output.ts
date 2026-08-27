@@ -188,6 +188,18 @@ export interface DataForListAssetCenterHostsOutput {
      * @type {string}
      * @memberof DataForListAssetCenterHostsOutput
      */
+    State?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListAssetCenterHostsOutput
+     */
+    StateDetail?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListAssetCenterHostsOutput
+     */
     Status?: string;
 
     /**

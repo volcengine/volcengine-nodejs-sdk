@@ -15,6 +15,7 @@
 import { BasicInfoForDescribeInstanceDetailOutput } from './basic-info-for-describe-instance-detail-output';
 import { ChargeDetailForDescribeInstanceDetailOutput } from './charge-detail-for-describe-instance-detail-output';
 import { ConnectionInfoForDescribeInstanceDetailOutput } from './connection-info-for-describe-instance-detail-output';
+import { QuotaObjectForDescribeInstanceDetailOutput } from './quota-object-for-describe-instance-detail-output';
  /**
  * 
  *
@@ -46,4 +47,10 @@ export interface DescribeInstanceDetailResponse {
      * @memberof DescribeInstanceDetailResponse
      */
     FileReservedTime?: number;
+
+    /**
+     * @type {Array<QuotaObjectForDescribeInstanceDetailOutput>}
+     * @memberof DescribeInstanceDetailResponse
+     */
+    QuotaObjects?: Array<QuotaObjectForDescribeInstanceDetailOutput>;
 }

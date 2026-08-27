@@ -54,7 +54,7 @@ export enum DeleteClusterRequestCascadingDeleteResourcesEnum {
     Clb = 'Clb',
     NodePoolResource = 'NodePoolResource',
     DefaultNodePoolResource = 'DefaultNodePoolResource',
-    TryBest = 'TryBest'
+    All = 'All'
 }
 /**
  * @export

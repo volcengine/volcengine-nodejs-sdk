@@ -42,13 +42,13 @@ export interface ChargeDetailForDescribeDBInstancesOutput {
      * @type {string}
      * @memberof ChargeDetailForDescribeDBInstancesOutput
      */
-    ChargeStatus?: ChargeDetailForDescribeDBInstancesOutputChargeStatusEnum;
+    ChargeStatus?: string;
 
     /**
      * @type {string}
      * @memberof ChargeDetailForDescribeDBInstancesOutput
      */
-    ChargeType?: ChargeDetailForDescribeDBInstancesOutputChargeTypeEnum;
+    ChargeType?: string;
 
     /**
      * @type {string}
@@ -62,24 +62,3 @@ export interface ChargeDetailForDescribeDBInstancesOutput {
      */
     OverdueTime?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum ChargeDetailForDescribeDBInstancesOutputChargeStatusEnum {
-    Expired = 'Expired',
-    Normal = 'Normal',
-    Overdue = 'Overdue',
-    Recycled = 'Recycled',
-    Shutdown = 'Shutdown'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum ChargeDetailForDescribeDBInstancesOutputChargeTypeEnum {
-    PostPaid = 'PostPaid',
-    PrePaid = 'PrePaid'
-}
-

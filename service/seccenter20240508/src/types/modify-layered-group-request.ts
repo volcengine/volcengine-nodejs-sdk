@@ -30,7 +30,7 @@ export interface ModifyLayeredGroupRequest {
      * @type {string}
      * @memberof ModifyLayeredGroupRequest
      */
-    GroupID?: string;
+    GroupID: string;
 
     /**
      * @type {string}

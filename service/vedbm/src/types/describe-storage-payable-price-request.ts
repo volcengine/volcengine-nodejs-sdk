@@ -33,6 +33,7 @@ export interface DescribeStoragePayablePriceRequest {
  */
 export enum DescribeStoragePayablePriceRequestStorageTypesEnum {
     Clusterpool = 'Clusterpool',
-    ColdDataArchive = 'ColdDataArchive'
+    ColdDataArchive = 'ColdDataArchive',
+    CompressClusterpool = 'CompressClusterpool'
 }
 

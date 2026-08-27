@@ -60,7 +60,7 @@ export interface NodeSpecForDescribeDBInstanceSpecsOutput {
      * @type {string}
      * @memberof NodeSpecForDescribeDBInstanceSpecsOutput
      */
-    SpecFamily?: NodeSpecForDescribeDBInstanceSpecsOutputSpecFamilyEnum;
+    SpecFamily?: string;
 
     /**
      * @type {number}
@@ -68,13 +68,3 @@ export interface NodeSpecForDescribeDBInstanceSpecsOutput {
      */
     vCPU?: number;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum NodeSpecForDescribeDBInstanceSpecsOutputSpecFamilyEnum {
-    Exclusive = 'Exclusive',
-    General = 'General'
-}
-

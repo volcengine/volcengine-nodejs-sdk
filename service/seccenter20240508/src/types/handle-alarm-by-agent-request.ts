@@ -32,7 +32,7 @@ export interface HandleAlarmByAgentRequest {
      * @type {string}
      * @memberof HandleAlarmByAgentRequest
      */
-    AlarmType: HandleAlarmByAgentRequestAlarmTypeEnum;
+    AlarmType: string;
 
     /**
      * @type {Array<FileForHandleAlarmByAgentInput>}
@@ -45,14 +45,16 @@ export interface HandleAlarmByAgentRequest {
      * @memberof HandleAlarmByAgentRequest
      */
     Processes?: Array<ProcessForHandleAlarmByAgentInput>;
-}
 
-/**
- * @export
- * @enum {string}
- */
-export enum HandleAlarmByAgentRequestAlarmTypeEnum {
-    Hids = 'hids',
-    Virus = 'virus'
-}
+    /**
+     * @type {Array<number>}
+     * @memberof HandleAlarmByAgentRequest
+     */
+    SpanTraceID?: Array<number>;
 
+    /**
+     * @type {Array<number>}
+     * @memberof HandleAlarmByAgentRequest
+     */
+    SpanUniqueID?: Array<number>;
+}

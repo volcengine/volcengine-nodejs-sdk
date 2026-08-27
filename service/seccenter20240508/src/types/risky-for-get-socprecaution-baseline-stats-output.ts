@@ -24,29 +24,29 @@ export interface RiskyForGetSOCPrecautionBaselineStatsOutput {
      * @type {number}
      * @memberof RiskyForGetSOCPrecautionBaselineStatsOutput
      */
-    critical?: number;
+    Critical?: number;
 
     /**
      * @type {number}
      * @memberof RiskyForGetSOCPrecautionBaselineStatsOutput
      */
-    high?: number;
+    High?: number;
 
     /**
      * @type {number}
      * @memberof RiskyForGetSOCPrecautionBaselineStatsOutput
      */
-    info?: number;
+    Info?: number;
 
     /**
      * @type {number}
      * @memberof RiskyForGetSOCPrecautionBaselineStatsOutput
      */
-    low?: number;
+    Low?: number;
 
     /**
      * @type {number}
      * @memberof RiskyForGetSOCPrecautionBaselineStatsOutput
      */
-    medium?: number;
+    Medium?: number;
 }

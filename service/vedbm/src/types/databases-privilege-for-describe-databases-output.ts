@@ -30,7 +30,7 @@ export interface DatabasesPrivilegeForDescribeDatabasesOutput {
      * @type {string}
      * @memberof DatabasesPrivilegeForDescribeDatabasesOutput
      */
-    AccountPrivilege?: DatabasesPrivilegeForDescribeDatabasesOutputAccountPrivilegeEnum;
+    AccountPrivilege?: string;
 
     /**
      * @type {string}
@@ -38,16 +38,3 @@ export interface DatabasesPrivilegeForDescribeDatabasesOutput {
      */
     AccountPrivilegeDetail?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum DatabasesPrivilegeForDescribeDatabasesOutputAccountPrivilegeEnum {
-    Custom = 'Custom',
-    DDLOnly = 'DDLOnly',
-    DMLOnly = 'DMLOnly',
-    ReadOnly = 'ReadOnly',
-    ReadWrite = 'ReadWrite'
-}
-

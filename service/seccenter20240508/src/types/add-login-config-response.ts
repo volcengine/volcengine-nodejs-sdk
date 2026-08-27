@@ -19,4 +19,10 @@
  * @interface AddLoginConfigResponse
  */
 export interface AddLoginConfigResponse {
+
+    /**
+     * @type {string}
+     * @memberof AddLoginConfigResponse
+     */
+    Data?: string;
 }

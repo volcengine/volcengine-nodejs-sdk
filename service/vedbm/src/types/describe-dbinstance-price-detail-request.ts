@@ -67,6 +67,12 @@ export interface DescribeDBInstancePriceDetailRequest {
      * @memberof DescribeDBInstancePriceDetailRequest
      */
     StorageChargeType?: DescribeDBInstancePriceDetailRequestStorageChargeTypeEnum;
+
+    /**
+     * @type {string}
+     * @memberof DescribeDBInstancePriceDetailRequest
+     */
+    StorageType?: DescribeDBInstancePriceDetailRequestStorageTypeEnum;
 }
 
 /**
@@ -92,5 +98,13 @@ export enum DescribeDBInstancePriceDetailRequestPeriodUnitEnum {
 export enum DescribeDBInstancePriceDetailRequestStorageChargeTypeEnum {
     PostPaid = 'PostPaid',
     PrePaid = 'PrePaid'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum DescribeDBInstancePriceDetailRequestStorageTypeEnum {
+    IOOptimizedStorage = 'IOOptimizedStorage',
+    SmartCompressedStorage = 'SmartCompressedStorage'
 }
 

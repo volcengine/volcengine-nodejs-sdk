@@ -48,7 +48,7 @@ export interface ScheduleTasksInfoForDescribeScheduleEventsOutput {
      * @type {string}
      * @memberof ScheduleTasksInfoForDescribeScheduleEventsOutput
      */
-    EventKind?: ScheduleTasksInfoForDescribeScheduleEventsOutputEventKindEnum;
+    EventKind?: string;
 
     /**
      * @type {string}
@@ -90,45 +90,11 @@ export interface ScheduleTasksInfoForDescribeScheduleEventsOutput {
      * @type {string}
      * @memberof ScheduleTasksInfoForDescribeScheduleEventsOutput
      */
-    ScheduleType?: ScheduleTasksInfoForDescribeScheduleEventsOutputScheduleTypeEnum;
+    ScheduleType?: string;
 
     /**
      * @type {string}
      * @memberof ScheduleTasksInfoForDescribeScheduleEventsOutput
      */
-    Status?: ScheduleTasksInfoForDescribeScheduleEventsOutputStatusEnum;
+    Status?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum ScheduleTasksInfoForDescribeScheduleEventsOutputEventKindEnum {
-    Inspection = 'Inspection',
-    ModifyClusterParams = 'ModifyClusterParams',
-    ModifyDBInstanceParameters = 'ModifyDBInstanceParameters',
-    ModifyDBInstanceSpec = 'ModifyDBInstanceSpec',
-    RestartDBInstance = 'RestartDBInstance',
-    UpgradeInstance = 'UpgradeInstance'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum ScheduleTasksInfoForDescribeScheduleEventsOutputScheduleTypeEnum {
-    Immediate = 'Immediate',
-    MaintainTime = 'MaintainTime',
-    SpecifiedTime = 'SpecifiedTime'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum ScheduleTasksInfoForDescribeScheduleEventsOutputStatusEnum {
-    Cancel = 'cancel',
-    Executing = 'executing',
-    Failure = 'failure',
-    Finish = 'finish',
-    Pending = 'pending'
-}
-

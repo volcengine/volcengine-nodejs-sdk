@@ -42,13 +42,19 @@ export interface NodeForDescribeDBInstanceDetailOutput {
      * @type {string}
      * @memberof NodeForDescribeDBInstanceDetailOutput
      */
-    NodeSpec?: NodeForDescribeDBInstanceDetailOutputNodeSpecEnum;
+    NodeSpec?: string;
 
     /**
      * @type {string}
      * @memberof NodeForDescribeDBInstanceDetailOutput
      */
-    NodeType?: NodeForDescribeDBInstanceDetailOutputNodeTypeEnum;
+    NodeType?: string;
+
+    /**
+     * @type {string}
+     * @memberof NodeForDescribeDBInstanceDetailOutput
+     */
+    SubInstanceType?: string;
 
     /**
      * @type {string}
@@ -62,35 +68,3 @@ export interface NodeForDescribeDBInstanceDetailOutput {
      */
     vCPU?: number;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum NodeForDescribeDBInstanceDetailOutputNodeSpecEnum {
-    VedbMysqlG42xlarge = 'vedb.mysql.g4.2xlarge',
-    VedbMysqlG44xlarge = 'vedb.mysql.g4.4xlarge',
-    VedbMysqlG4Large = 'vedb.mysql.g4.large',
-    VedbMysqlG4Xlarge = 'vedb.mysql.g4.xlarge',
-    VedbMysqlG82xlarge = 'vedb.mysql.g8.2xlarge',
-    VedbMysqlX42xlarge = 'vedb.mysql.x4.2xlarge',
-    VedbMysqlX44xlarge = 'vedb.mysql.x4.4xlarge',
-    VedbMysqlX48xlarge = 'vedb.mysql.x4.8xlarge',
-    VedbMysqlX4Large = 'vedb.mysql.x4.large',
-    VedbMysqlX4Xlarge = 'vedb.mysql.x4.xlarge',
-    VedbMysqlX82xlarge = 'vedb.mysql.x8.2xlarge',
-    VedbMysqlX84xlarge = 'vedb.mysql.x8.4xlarge',
-    VedbMysqlX86xlarge = 'vedb.mysql.x8.6xlarge',
-    VedbMysqlX88xlarge = 'vedb.mysql.x8.8xlarge',
-    VedbMysqlX8Large = 'vedb.mysql.x8.large',
-    VedbMysqlX8Xlarge = 'vedb.mysql.x8.xlarge'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum NodeForDescribeDBInstanceDetailOutputNodeTypeEnum {
-    Primary = 'Primary',
-    ReadOnly = 'ReadOnly'
-}
-

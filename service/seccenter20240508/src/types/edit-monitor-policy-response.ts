@@ -19,4 +19,10 @@
  * @interface EditMonitorPolicyResponse
  */
 export interface EditMonitorPolicyResponse {
+
+    /**
+     * @type {string}
+     * @memberof EditMonitorPolicyResponse
+     */
+    Data?: string;
 }

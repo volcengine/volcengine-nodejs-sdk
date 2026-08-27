@@ -632,7 +632,19 @@ export interface AlarmNodeForGetHidsAlarmSummaryInfoOutput {
      * @type {string}
      * @memberof AlarmNodeForGetHidsAlarmSummaryInfoOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof AlarmNodeForGetHidsAlarmSummaryInfoOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof AlarmNodeForGetHidsAlarmSummaryInfoOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}
