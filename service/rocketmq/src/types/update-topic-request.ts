@@ -12,54 +12,35 @@
  * Do not edit the class manually.
  */
 
-import { AccessPolicyForCreateTopicInput } from './access-policy-for-create-topic-input';
  /**
  * 
  *
  * @export
- * @interface CreateTopicRequest
+ * @interface UpdateTopicRequest
  */
-export interface CreateTopicRequest {
-
-    /**
-     * @type {Array<AccessPolicyForCreateTopicInput>}
-     * @memberof CreateTopicRequest
-     */
-    AccessPolicies?: Array<AccessPolicyForCreateTopicInput>;
+export interface UpdateTopicRequest {
 
     /**
      * @type {string}
-     * @memberof CreateTopicRequest
+     * @memberof UpdateTopicRequest
      */
     Description?: string;
 
     /**
      * @type {string}
-     * @memberof CreateTopicRequest
+     * @memberof UpdateTopicRequest
      */
     InstanceId: string;
 
     /**
      * @type {number}
-     * @memberof CreateTopicRequest
+     * @memberof UpdateTopicRequest
      */
     LiteTopicTTLMinutes?: number;
 
     /**
-     * @type {number}
-     * @memberof CreateTopicRequest
-     */
-    MessageType: number;
-
-    /**
-     * @type {number}
-     * @memberof CreateTopicRequest
-     */
-    QueueNumber: number;
-
-    /**
      * @type {string}
-     * @memberof CreateTopicRequest
+     * @memberof UpdateTopicRequest
      */
     TopicName: string;
 }

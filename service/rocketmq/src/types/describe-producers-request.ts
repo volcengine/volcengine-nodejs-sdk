@@ -16,43 +16,31 @@
  * 
  *
  * @export
- * @interface QueryMessageByTimestampRequest
+ * @interface DescribeProducersRequest
  */
-export interface QueryMessageByTimestampRequest {
+export interface DescribeProducersRequest {
 
     /**
      * @type {string}
-     * @memberof QueryMessageByTimestampRequest
+     * @memberof DescribeProducersRequest
      */
     InstanceId: string;
 
     /**
-     * @type {string}
-     * @memberof QueryMessageByTimestampRequest
-     */
-    LiteTopic?: string;
-
-    /**
      * @type {number}
-     * @memberof QueryMessageByTimestampRequest
+     * @memberof DescribeProducersRequest
      */
     PageNumber: number;
 
     /**
-     * @type {string}
-     * @memberof QueryMessageByTimestampRequest
+     * @type {number}
+     * @memberof DescribeProducersRequest
      */
-    QueryEndTimestamp: string;
+    PageSize: number;
 
     /**
      * @type {string}
-     * @memberof QueryMessageByTimestampRequest
+     * @memberof DescribeProducersRequest
      */
-    QueryStartTimestamp: string;
-
-    /**
-     * @type {string}
-     * @memberof QueryMessageByTimestampRequest
-     */
-    TopicName: string;
+    TopicName?: string;
 }
