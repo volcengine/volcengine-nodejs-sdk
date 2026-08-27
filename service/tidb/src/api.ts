@@ -30,12 +30,16 @@ import { CreateImportTaskRequest } from './types/index';
 import { CreateImportTaskResponse } from './types/index';
 import { CreateImportUploadUrlRequest } from './types/index';
 import { CreateImportUploadUrlResponse } from './types/index';
+import { CreatePrivateEndpointAllowlistRuleRequest } from './types/index';
+import { CreatePrivateEndpointAllowlistRuleResponse } from './types/index';
 import { DeleteBranchRequest } from './types/index';
 import { DeleteBranchResponse } from './types/index';
 import { DeleteClusterRequest } from './types/index';
 import { DeleteClusterResponse } from './types/index';
 import { DeleteExportTaskRequest } from './types/index';
 import { DeleteExportTaskResponse } from './types/index';
+import { DeletePrivateEndpointAllowlistRuleRequest } from './types/index';
+import { DeletePrivateEndpointAllowlistRuleResponse } from './types/index';
 import { DescribePriceDetailRequest } from './types/index';
 import { DescribePriceDetailResponse } from './types/index';
 import { GetBackupRequest } from './types/index';
@@ -80,6 +84,8 @@ import { ListImportTargetTablesRequest } from './types/index';
 import { ListImportTargetTablesResponse } from './types/index';
 import { ListImportTasksRequest } from './types/index';
 import { ListImportTasksResponse } from './types/index';
+import { ListPrivateEndpointAllowlistRequest } from './types/index';
+import { ListPrivateEndpointAllowlistResponse } from './types/index';
 import { ListRegionsRequest } from './types/index';
 import { ListRegionsResponse } from './types/index';
 import { ListSlowQueriesRequest } from './types/index';
@@ -92,6 +98,8 @@ import { ListStatementTypesRequest } from './types/index';
 import { ListStatementTypesResponse } from './types/index';
 import { ListStatementsRequest } from './types/index';
 import { ListStatementsResponse } from './types/index';
+import { ListTagsForResourcesRequest } from './types/index';
+import { ListTagsForResourcesResponse } from './types/index';
 import { ListZonesRequest } from './types/index';
 import { ListZonesResponse } from './types/index';
 import { PrecheckImportTaskRequest } from './types/index';
@@ -104,10 +112,16 @@ import { ResetClusterPasswordRequest } from './types/index';
 import { ResetClusterPasswordResponse } from './types/index';
 import { RestoreClusterRequest } from './types/index';
 import { RestoreClusterResponse } from './types/index';
+import { TagResourcesRequest } from './types/index';
+import { TagResourcesResponse } from './types/index';
+import { UntagResourcesRequest } from './types/index';
+import { UntagResourcesResponse } from './types/index';
 import { UpdateBranchRequest } from './types/index';
 import { UpdateBranchResponse } from './types/index';
 import { UpdateClusterRequest } from './types/index';
 import { UpdateClusterResponse } from './types/index';
+import { UpdatePrivateEndpointAllowlistRuleRequest } from './types/index';
+import { UpdatePrivateEndpointAllowlistRuleResponse } from './types/index';
 import { ValidateImportTaskRequest } from './types/index';
 import { ValidateImportTaskResponse } from './types/index';
 
@@ -122,9 +136,11 @@ export type CreateClusterCommandOutput = CommandOutput<CreateClusterResponse>;
 export type CreateExportTaskCommandOutput = CommandOutput<CreateExportTaskResponse>;
 export type CreateImportTaskCommandOutput = CommandOutput<CreateImportTaskResponse>;
 export type CreateImportUploadUrlCommandOutput = CommandOutput<CreateImportUploadUrlResponse>;
+export type CreatePrivateEndpointAllowlistRuleCommandOutput = CommandOutput<CreatePrivateEndpointAllowlistRuleResponse>;
 export type DeleteBranchCommandOutput = CommandOutput<DeleteBranchResponse>;
 export type DeleteClusterCommandOutput = CommandOutput<DeleteClusterResponse>;
 export type DeleteExportTaskCommandOutput = CommandOutput<DeleteExportTaskResponse>;
+export type DeletePrivateEndpointAllowlistRuleCommandOutput = CommandOutput<DeletePrivateEndpointAllowlistRuleResponse>;
 export type DescribePriceDetailCommandOutput = CommandOutput<DescribePriceDetailResponse>;
 export type GetBackupCommandOutput = CommandOutput<GetBackupResponse>;
 export type GetBackupRetentionCommandOutput = CommandOutput<GetBackupRetentionResponse>;
@@ -147,20 +163,25 @@ export type ListExportTasksCommandOutput = CommandOutput<ListExportTasksResponse
 export type ListImportSupportedDataTypesCommandOutput = CommandOutput<ListImportSupportedDataTypesResponse>;
 export type ListImportTargetTablesCommandOutput = CommandOutput<ListImportTargetTablesResponse>;
 export type ListImportTasksCommandOutput = CommandOutput<ListImportTasksResponse>;
+export type ListPrivateEndpointAllowlistCommandOutput = CommandOutput<ListPrivateEndpointAllowlistResponse>;
 export type ListRegionsCommandOutput = CommandOutput<ListRegionsResponse>;
 export type ListSlowQueriesCommandOutput = CommandOutput<ListSlowQueriesResponse>;
 export type ListStatementPlansCommandOutput = CommandOutput<ListStatementPlansResponse>;
 export type ListStatementSlowQueriesCommandOutput = CommandOutput<ListStatementSlowQueriesResponse>;
 export type ListStatementTypesCommandOutput = CommandOutput<ListStatementTypesResponse>;
 export type ListStatementsCommandOutput = CommandOutput<ListStatementsResponse>;
+export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
 export type ListZonesCommandOutput = CommandOutput<ListZonesResponse>;
 export type PrecheckImportTaskCommandOutput = CommandOutput<PrecheckImportTaskResponse>;
 export type PreviewLocalImportCommandOutput = CommandOutput<PreviewLocalImportResponse>;
 export type ResetBranchCommandOutput = CommandOutput<ResetBranchResponse>;
 export type ResetClusterPasswordCommandOutput = CommandOutput<ResetClusterPasswordResponse>;
 export type RestoreClusterCommandOutput = CommandOutput<RestoreClusterResponse>;
+export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
+export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateBranchCommandOutput = CommandOutput<UpdateBranchResponse>;
 export type UpdateClusterCommandOutput = CommandOutput<UpdateClusterResponse>;
+export type UpdatePrivateEndpointAllowlistRuleCommandOutput = CommandOutput<UpdatePrivateEndpointAllowlistRuleResponse>;
 export type ValidateImportTaskCommandOutput = CommandOutput<ValidateImportTaskResponse>;
 
 /**
@@ -297,6 +318,21 @@ export class CreateImportUploadUrlCommand extends Command<
   }
 }
 /**
+ * Command to CreatePrivateEndpointAllowlistRule
+ */
+export class CreatePrivateEndpointAllowlistRuleCommand extends Command<
+  CreatePrivateEndpointAllowlistRuleRequest,
+  CreatePrivateEndpointAllowlistRuleCommandOutput,
+  'CreatePrivateEndpointAllowlistRuleCommand'
+> {
+  static readonly metaPath = '/CreatePrivateEndpointAllowlistRule/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: CreatePrivateEndpointAllowlistRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreatePrivateEndpointAllowlistRuleCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteBranch
  */
 export class DeleteBranchCommand extends Command<
@@ -339,6 +375,21 @@ export class DeleteExportTaskCommand extends Command<
   constructor(input: DeleteExportTaskRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteExportTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to DeletePrivateEndpointAllowlistRule
+ */
+export class DeletePrivateEndpointAllowlistRuleCommand extends Command<
+  DeletePrivateEndpointAllowlistRuleRequest,
+  DeletePrivateEndpointAllowlistRuleCommandOutput,
+  'DeletePrivateEndpointAllowlistRuleCommand'
+> {
+  static readonly metaPath = '/DeletePrivateEndpointAllowlistRule/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: DeletePrivateEndpointAllowlistRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeletePrivateEndpointAllowlistRuleCommand.metaPath);
   }
 }
 /**
@@ -672,6 +723,21 @@ export class ListImportTasksCommand extends Command<
   }
 }
 /**
+ * Command to ListPrivateEndpointAllowlist
+ */
+export class ListPrivateEndpointAllowlistCommand extends Command<
+  ListPrivateEndpointAllowlistRequest,
+  ListPrivateEndpointAllowlistCommandOutput,
+  'ListPrivateEndpointAllowlistCommand'
+> {
+  static readonly metaPath = '/ListPrivateEndpointAllowlist/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ListPrivateEndpointAllowlistRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListPrivateEndpointAllowlistCommand.metaPath);
+  }
+}
+/**
  * Command to ListRegions
  */
 export class ListRegionsCommand extends Command<
@@ -759,6 +825,21 @@ export class ListStatementsCommand extends Command<
   constructor(input: ListStatementsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListStatementsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListTagsForResources
+ */
+export class ListTagsForResourcesCommand extends Command<
+  ListTagsForResourcesRequest,
+  ListTagsForResourcesCommandOutput,
+  'ListTagsForResourcesCommand'
+> {
+  static readonly metaPath = '/ListTagsForResources/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ListTagsForResourcesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListTagsForResourcesCommand.metaPath);
   }
 }
 /**
@@ -852,6 +933,36 @@ export class RestoreClusterCommand extends Command<
   }
 }
 /**
+ * Command to TagResources
+ */
+export class TagResourcesCommand extends Command<
+  TagResourcesRequest,
+  TagResourcesCommandOutput,
+  'TagResourcesCommand'
+> {
+  static readonly metaPath = '/TagResources/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: TagResourcesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(TagResourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to UntagResources
+ */
+export class UntagResourcesCommand extends Command<
+  UntagResourcesRequest,
+  UntagResourcesCommandOutput,
+  'UntagResourcesCommand'
+> {
+  static readonly metaPath = '/UntagResources/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: UntagResourcesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UntagResourcesCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateBranch
  */
 export class UpdateBranchCommand extends Command<
@@ -882,6 +993,21 @@ export class UpdateClusterCommand extends Command<
   }
 }
 /**
+ * Command to UpdatePrivateEndpointAllowlistRule
+ */
+export class UpdatePrivateEndpointAllowlistRuleCommand extends Command<
+  UpdatePrivateEndpointAllowlistRuleRequest,
+  UpdatePrivateEndpointAllowlistRuleCommandOutput,
+  'UpdatePrivateEndpointAllowlistRuleCommand'
+> {
+  static readonly metaPath = '/UpdatePrivateEndpointAllowlistRule/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: UpdatePrivateEndpointAllowlistRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdatePrivateEndpointAllowlistRuleCommand.metaPath);
+  }
+}
+/**
  * Command to ValidateImportTask
  */
 export class ValidateImportTaskCommand extends Command<
@@ -907,9 +1033,11 @@ export default {
   CreateExportTaskCommand,
   CreateImportTaskCommand,
   CreateImportUploadUrlCommand,
+  CreatePrivateEndpointAllowlistRuleCommand,
   DeleteBranchCommand,
   DeleteClusterCommand,
   DeleteExportTaskCommand,
+  DeletePrivateEndpointAllowlistRuleCommand,
   DescribePriceDetailCommand,
   GetBackupCommand,
   GetBackupRetentionCommand,
@@ -932,19 +1060,24 @@ export default {
   ListImportSupportedDataTypesCommand,
   ListImportTargetTablesCommand,
   ListImportTasksCommand,
+  ListPrivateEndpointAllowlistCommand,
   ListRegionsCommand,
   ListSlowQueriesCommand,
   ListStatementPlansCommand,
   ListStatementSlowQueriesCommand,
   ListStatementTypesCommand,
   ListStatementsCommand,
+  ListTagsForResourcesCommand,
   ListZonesCommand,
   PrecheckImportTaskCommand,
   PreviewLocalImportCommand,
   ResetBranchCommand,
   ResetClusterPasswordCommand,
   RestoreClusterCommand,
+  TagResourcesCommand,
+  UntagResourcesCommand,
   UpdateBranchCommand,
   UpdateClusterCommand,
+  UpdatePrivateEndpointAllowlistRuleCommand,
   ValidateImportTaskCommand,
 };

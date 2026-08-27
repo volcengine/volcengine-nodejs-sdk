@@ -12,12 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AzureBlobForPrecheckImportTaskInput } from './azure-blob-for-precheck-import-task-input';
-import { GcsForPrecheckImportTaskInput } from './gcs-for-precheck-import-task-input';
 import { LocalForPrecheckImportTaskInput } from './local-for-precheck-import-task-input';
-import { OssForPrecheckImportTaskInput } from './oss-for-precheck-import-task-input';
-import { S3CompatibleForPrecheckImportTaskInput } from './s3-compatible-for-precheck-import-task-input';
-import { S3ForPrecheckImportTaskInput } from './s3-for-precheck-import-task-input';
 import { TargetTableInfoForPrecheckImportTaskInput } from './target-table-info-for-precheck-import-task-input';
 import { TosForPrecheckImportTaskInput } from './tos-for-precheck-import-task-input';
  /**
@@ -29,40 +24,10 @@ import { TosForPrecheckImportTaskInput } from './tos-for-precheck-import-task-in
 export interface SourceForPrecheckImportTaskInput {
 
     /**
-     * @type {AzureBlobForPrecheckImportTaskInput}
-     * @memberof SourceForPrecheckImportTaskInput
-     */
-    AzureBlob?: AzureBlobForPrecheckImportTaskInput;
-
-    /**
-     * @type {GcsForPrecheckImportTaskInput}
-     * @memberof SourceForPrecheckImportTaskInput
-     */
-    Gcs?: GcsForPrecheckImportTaskInput;
-
-    /**
      * @type {LocalForPrecheckImportTaskInput}
      * @memberof SourceForPrecheckImportTaskInput
      */
     Local?: LocalForPrecheckImportTaskInput;
-
-    /**
-     * @type {OssForPrecheckImportTaskInput}
-     * @memberof SourceForPrecheckImportTaskInput
-     */
-    Oss?: OssForPrecheckImportTaskInput;
-
-    /**
-     * @type {S3ForPrecheckImportTaskInput}
-     * @memberof SourceForPrecheckImportTaskInput
-     */
-    S3?: S3ForPrecheckImportTaskInput;
-
-    /**
-     * @type {S3CompatibleForPrecheckImportTaskInput}
-     * @memberof SourceForPrecheckImportTaskInput
-     */
-    S3Compatible?: S3CompatibleForPrecheckImportTaskInput;
 
     /**
      * @type {Array<TargetTableInfoForPrecheckImportTaskInput>}

@@ -12,12 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AzureBlobForValidateImportTaskInput } from './azure-blob-for-validate-import-task-input';
-import { GcsForValidateImportTaskInput } from './gcs-for-validate-import-task-input';
 import { LocalForValidateImportTaskInput } from './local-for-validate-import-task-input';
-import { OssForValidateImportTaskInput } from './oss-for-validate-import-task-input';
-import { S3CompatibleForValidateImportTaskInput } from './s3-compatible-for-validate-import-task-input';
-import { S3ForValidateImportTaskInput } from './s3-for-validate-import-task-input';
 import { TargetTableInfoForValidateImportTaskInput } from './target-table-info-for-validate-import-task-input';
 import { TosForValidateImportTaskInput } from './tos-for-validate-import-task-input';
  /**
@@ -29,40 +24,10 @@ import { TosForValidateImportTaskInput } from './tos-for-validate-import-task-in
 export interface SourceForValidateImportTaskInput {
 
     /**
-     * @type {AzureBlobForValidateImportTaskInput}
-     * @memberof SourceForValidateImportTaskInput
-     */
-    AzureBlob?: AzureBlobForValidateImportTaskInput;
-
-    /**
-     * @type {GcsForValidateImportTaskInput}
-     * @memberof SourceForValidateImportTaskInput
-     */
-    Gcs?: GcsForValidateImportTaskInput;
-
-    /**
      * @type {LocalForValidateImportTaskInput}
      * @memberof SourceForValidateImportTaskInput
      */
     Local?: LocalForValidateImportTaskInput;
-
-    /**
-     * @type {OssForValidateImportTaskInput}
-     * @memberof SourceForValidateImportTaskInput
-     */
-    Oss?: OssForValidateImportTaskInput;
-
-    /**
-     * @type {S3ForValidateImportTaskInput}
-     * @memberof SourceForValidateImportTaskInput
-     */
-    S3?: S3ForValidateImportTaskInput;
-
-    /**
-     * @type {S3CompatibleForValidateImportTaskInput}
-     * @memberof SourceForValidateImportTaskInput
-     */
-    S3Compatible?: S3CompatibleForValidateImportTaskInput;
 
     /**
      * @type {Array<TargetTableInfoForValidateImportTaskInput>}

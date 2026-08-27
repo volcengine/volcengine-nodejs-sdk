@@ -12,10 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { AzureBlobForGetExportTaskDetailsOutput } from './azure-blob-for-get-export-task-details-output';
-import { GcsForGetExportTaskDetailsOutput } from './gcs-for-get-export-task-details-output';
-import { OssForGetExportTaskDetailsOutput } from './oss-for-get-export-task-details-output';
-import { S3ForGetExportTaskDetailsOutput } from './s3-for-get-export-task-details-output';
 import { TosForGetExportTaskDetailsOutput } from './tos-for-get-export-task-details-output';
  /**
  * 
@@ -24,30 +20,6 @@ import { TosForGetExportTaskDetailsOutput } from './tos-for-get-export-task-deta
  * @interface TargetForGetExportTaskDetailsOutput
  */
 export interface TargetForGetExportTaskDetailsOutput {
-
-    /**
-     * @type {AzureBlobForGetExportTaskDetailsOutput}
-     * @memberof TargetForGetExportTaskDetailsOutput
-     */
-    AzureBlob?: AzureBlobForGetExportTaskDetailsOutput;
-
-    /**
-     * @type {GcsForGetExportTaskDetailsOutput}
-     * @memberof TargetForGetExportTaskDetailsOutput
-     */
-    Gcs?: GcsForGetExportTaskDetailsOutput;
-
-    /**
-     * @type {OssForGetExportTaskDetailsOutput}
-     * @memberof TargetForGetExportTaskDetailsOutput
-     */
-    Oss?: OssForGetExportTaskDetailsOutput;
-
-    /**
-     * @type {S3ForGetExportTaskDetailsOutput}
-     * @memberof TargetForGetExportTaskDetailsOutput
-     */
-    S3?: S3ForGetExportTaskDetailsOutput;
 
     /**
      * @type {TosForGetExportTaskDetailsOutput}
@@ -67,11 +39,6 @@ export interface TargetForGetExportTaskDetailsOutput {
  * @enum {string}
  */
 export enum TargetForGetExportTaskDetailsOutputTypeEnum {
-    LOCAL = 'LOCAL',
-    S3 = 'S3',
-    GCS = 'GCS',
-    AZUREBLOB = 'AZURE_BLOB',
-    OSS = 'OSS',
-    TOS = 'TOS'
+    _6 = '6'
 }
 
