@@ -206,6 +206,18 @@ export interface DataForGetOfflineNotificationListOutput {
      * @type {string}
      * @memberof DataForGetOfflineNotificationListOutput
      */
+    State?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForGetOfflineNotificationListOutput
+     */
+    StateDetail?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForGetOfflineNotificationListOutput
+     */
     Status?: string;
 
     /**

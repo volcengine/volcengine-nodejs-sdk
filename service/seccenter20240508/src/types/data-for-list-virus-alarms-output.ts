@@ -291,7 +291,19 @@ export interface DataForListVirusAlarmsOutput {
      * @type {string}
      * @memberof DataForListVirusAlarmsOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListVirusAlarmsOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListVirusAlarmsOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}

@@ -46,6 +46,12 @@ export interface ListVulDetailRequest {
     Conditions?: ConditionsForListVulDetailInput;
 
     /**
+     * @type {string}
+     * @memberof ListVulDetailRequest
+     */
+    ExportJobType?: string;
+
+    /**
      * @type {Array<string>}
      * @memberof ListVulDetailRequest
      */

@@ -21,6 +21,12 @@
 export interface GetAIApplicationSyncConfigResponse {
 
     /**
+     * @type {boolean}
+     * @memberof GetAIApplicationSyncConfigResponse
+     */
+    Enable?: boolean;
+
+    /**
      * @type {number}
      * @memberof GetAIApplicationSyncConfigResponse
      */

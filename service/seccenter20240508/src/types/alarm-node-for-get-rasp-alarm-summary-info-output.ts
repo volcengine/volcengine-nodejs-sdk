@@ -632,7 +632,19 @@ export interface AlarmNodeForGetRaspAlarmSummaryInfoOutput {
      * @type {string}
      * @memberof AlarmNodeForGetRaspAlarmSummaryInfoOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof AlarmNodeForGetRaspAlarmSummaryInfoOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof AlarmNodeForGetRaspAlarmSummaryInfoOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}

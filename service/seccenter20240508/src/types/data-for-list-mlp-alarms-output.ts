@@ -291,7 +291,19 @@ export interface DataForListMlpAlarmsOutput {
      * @type {string}
      * @memberof DataForListMlpAlarmsOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListMlpAlarmsOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForListMlpAlarmsOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}

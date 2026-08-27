@@ -204,6 +204,18 @@ export interface GetHostBasicInfoResponse {
      * @type {string}
      * @memberof GetHostBasicInfoResponse
      */
+    State?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetHostBasicInfoResponse
+     */
+    StateDetail?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetHostBasicInfoResponse
+     */
     Status?: string;
 
     /**

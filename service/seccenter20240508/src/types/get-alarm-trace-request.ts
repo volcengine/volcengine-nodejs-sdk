@@ -24,5 +24,5 @@ export interface GetAlarmTraceRequest {
      * @type {string}
      * @memberof GetAlarmTraceRequest
      */
-    TraceID?: string;
+    TraceID: string;
 }

@@ -103,21 +103,5 @@ export interface DataForListVarmorPoliciesOutput {
      * @type {string}
      * @memberof DataForListVarmorPoliciesOutput
      */
-    Status?: DataForListVarmorPoliciesOutputStatusEnum;
+    Status?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum DataForListVarmorPoliciesOutputStatusEnum {
-    Pending = 'Pending',
-    Protecting = 'Protecting',
-    Modeling = 'Modeling',
-    Completed = 'Completed',
-    Error = 'Error',
-    Failed = 'Failed',
-    Unknown = 'Unknown',
-    Unchanged = 'Unchanged'
-}
-

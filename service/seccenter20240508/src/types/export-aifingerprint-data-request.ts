@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ConditionForExportAIFingerprintDataInput } from './condition-for-export-aifingerprint-data-input';
  /**
  * 
  *
@@ -21,10 +22,10 @@
 export interface ExportAIFingerprintDataRequest {
 
     /**
-     * @type {Array<number>}
+     * @type {Array<ConditionForExportAIFingerprintDataInput>}
      * @memberof ExportAIFingerprintDataRequest
      */
-    Conditions?: Array<number>;
+    Conditions?: Array<ConditionForExportAIFingerprintDataInput>;
 
     /**
      * @type {string}
