@@ -12,18 +12,23 @@
  * Do not edit the class manually.
  */
 
-import { QuotaInfoListForGetPoolQuotaInfoOutput } from './quota-info-list-for-get-pool-quota-info-output';
  /**
  * 
  *
  * @export
- * @interface GetPoolQuotaInfoResponse
+ * @interface MigrateDeviceWithoutApprovalResponse
  */
-export interface GetPoolQuotaInfoResponse {
+export interface MigrateDeviceWithoutApprovalResponse {
 
     /**
-     * @type {Array<QuotaInfoListForGetPoolQuotaInfoOutput>}
-     * @memberof GetPoolQuotaInfoResponse
+     * @type {string}
+     * @memberof MigrateDeviceWithoutApprovalResponse
      */
-    quotaInfoList?: Array<QuotaInfoListForGetPoolQuotaInfoOutput>;
+    BatchStatus?: string;
+
+    /**
+     * @type {string}
+     * @memberof MigrateDeviceWithoutApprovalResponse
+     */
+    FailReason?: string;
 }
