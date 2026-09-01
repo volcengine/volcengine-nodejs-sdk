@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { BackendForListRevisionsOutput } from './backend-for-list-revisions-output';
  /**
  * 
  *
@@ -22,10 +21,22 @@ import { BackendForListRevisionsOutput } from './backend-for-list-revisions-outp
 export interface ConvertMountPointForListRevisionsOutput {
 
     /**
-     * @type {BackendForListRevisionsOutput}
+     * @type {string}
      * @memberof ConvertMountPointForListRevisionsOutput
      */
-    Backend?: BackendForListRevisionsOutput;
+    BucketName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertMountPointForListRevisionsOutput
+     */
+    BucketPath?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertMountPointForListRevisionsOutput
+     */
+    Endpoint?: string;
 
     /**
      * @type {string}

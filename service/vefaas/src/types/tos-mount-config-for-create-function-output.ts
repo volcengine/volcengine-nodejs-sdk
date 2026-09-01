@@ -12,8 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { ConvertMountPointForCreateFunctionOutput } from './convert-mount-point-for-create-function-output';
 import { CredentialsForCreateFunctionOutput } from './credentials-for-create-function-output';
-import { MountPointForCreateFunctionOutput } from './mount-point-for-create-function-output';
  /**
  * 
  *
@@ -41,8 +41,8 @@ export interface TosMountConfigForCreateFunctionOutput {
     EnableTos?: boolean;
 
     /**
-     * @type {Array<MountPointForCreateFunctionOutput>}
+     * @type {Array<ConvertMountPointForCreateFunctionOutput>}
      * @memberof TosMountConfigForCreateFunctionOutput
      */
-    MountPoints?: Array<MountPointForCreateFunctionOutput>;
+    MountPoints?: Array<ConvertMountPointForCreateFunctionOutput>;
 }

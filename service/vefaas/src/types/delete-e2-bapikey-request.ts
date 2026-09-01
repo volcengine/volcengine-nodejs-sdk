@@ -16,25 +16,13 @@
  * 
  *
  * @export
- * @interface PortForDescribeSandboxOutput
+ * @interface DeleteE2BAPIKeyRequest
  */
-export interface PortForDescribeSandboxOutput {
-
-    /**
-     * @type {number}
-     * @memberof PortForDescribeSandboxOutput
-     */
-    EndPort?: number;
-
-    /**
-     * @type {number}
-     * @memberof PortForDescribeSandboxOutput
-     */
-    Port?: number;
+export interface DeleteE2BAPIKeyRequest {
 
     /**
      * @type {string}
-     * @memberof PortForDescribeSandboxOutput
+     * @memberof DeleteE2BAPIKeyRequest
      */
-    Protocol?: string;
+    Id: string;
 }

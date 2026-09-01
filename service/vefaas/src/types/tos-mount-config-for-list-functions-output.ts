@@ -12,8 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { ConvertMountPointForListFunctionsOutput } from './convert-mount-point-for-list-functions-output';
 import { CredentialsForListFunctionsOutput } from './credentials-for-list-functions-output';
-import { MountPointForListFunctionsOutput } from './mount-point-for-list-functions-output';
  /**
  * 
  *
@@ -35,8 +35,8 @@ export interface TosMountConfigForListFunctionsOutput {
     EnableTos?: boolean;
 
     /**
-     * @type {Array<MountPointForListFunctionsOutput>}
+     * @type {Array<ConvertMountPointForListFunctionsOutput>}
      * @memberof TosMountConfigForListFunctionsOutput
      */
-    MountPoints?: Array<MountPointForListFunctionsOutput>;
+    MountPoints?: Array<ConvertMountPointForListFunctionsOutput>;
 }

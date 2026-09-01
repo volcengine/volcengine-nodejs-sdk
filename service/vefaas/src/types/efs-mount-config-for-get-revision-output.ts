@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertMountPointForGetRevisionOutput } from './convert-mount-point-for-get-revision-output';
+import { MountPointForGetRevisionOutput } from './mount-point-for-get-revision-output';
  /**
  * 
  *
@@ -22,8 +22,8 @@ import { ConvertMountPointForGetRevisionOutput } from './convert-mount-point-for
 export interface EfsMountConfigForGetRevisionOutput {
 
     /**
-     * @type {Array<ConvertMountPointForGetRevisionOutput>}
+     * @type {Array<MountPointForGetRevisionOutput>}
      * @memberof EfsMountConfigForGetRevisionOutput
      */
-    MountPoints?: Array<ConvertMountPointForGetRevisionOutput>;
+    MountPoints?: Array<MountPointForGetRevisionOutput>;
 }

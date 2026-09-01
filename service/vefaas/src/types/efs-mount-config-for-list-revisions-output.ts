@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertMountPointForListRevisionsOutput } from './convert-mount-point-for-list-revisions-output';
+import { MountPointForListRevisionsOutput } from './mount-point-for-list-revisions-output';
  /**
  * 
  *
@@ -22,8 +22,8 @@ import { ConvertMountPointForListRevisionsOutput } from './convert-mount-point-f
 export interface EfsMountConfigForListRevisionsOutput {
 
     /**
-     * @type {Array<ConvertMountPointForListRevisionsOutput>}
+     * @type {Array<MountPointForListRevisionsOutput>}
      * @memberof EfsMountConfigForListRevisionsOutput
      */
-    MountPoints?: Array<ConvertMountPointForListRevisionsOutput>;
+    MountPoints?: Array<MountPointForListRevisionsOutput>;
 }

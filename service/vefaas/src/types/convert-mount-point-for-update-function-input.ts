@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { BackendForUpdateFunctionInput } from './backend-for-update-function-input';
+import { EncryptionConfigForUpdateFunctionInput } from './encryption-config-for-update-function-input';
  /**
  * 
  *
@@ -22,10 +22,28 @@ import { BackendForUpdateFunctionInput } from './backend-for-update-function-inp
 export interface ConvertMountPointForUpdateFunctionInput {
 
     /**
-     * @type {BackendForUpdateFunctionInput}
+     * @type {string}
      * @memberof ConvertMountPointForUpdateFunctionInput
      */
-    Backend?: BackendForUpdateFunctionInput;
+    BucketName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertMountPointForUpdateFunctionInput
+     */
+    BucketPath?: string;
+
+    /**
+     * @type {EncryptionConfigForUpdateFunctionInput}
+     * @memberof ConvertMountPointForUpdateFunctionInput
+     */
+    EncryptionConfig?: EncryptionConfigForUpdateFunctionInput;
+
+    /**
+     * @type {string}
+     * @memberof ConvertMountPointForUpdateFunctionInput
+     */
+    Endpoint?: string;
 
     /**
      * @type {string}

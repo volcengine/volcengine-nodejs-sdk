@@ -12,8 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { ConvertMountPointForCreateFunctionInput } from './convert-mount-point-for-create-function-input';
 import { CredentialsForCreateFunctionInput } from './credentials-for-create-function-input';
-import { MountPointForCreateFunctionInput } from './mount-point-for-create-function-input';
  /**
  * 
  *
@@ -41,8 +41,8 @@ export interface TosMountConfigForCreateFunctionInput {
     EnableTos?: boolean;
 
     /**
-     * @type {Array<MountPointForCreateFunctionInput>}
+     * @type {Array<ConvertMountPointForCreateFunctionInput>}
      * @memberof TosMountConfigForCreateFunctionInput
      */
-    MountPoints?: Array<MountPointForCreateFunctionInput>;
+    MountPoints?: Array<ConvertMountPointForCreateFunctionInput>;
 }

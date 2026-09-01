@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { BackendForGetRevisionOutput } from './backend-for-get-revision-output';
  /**
  * 
  *
@@ -22,10 +21,22 @@ import { BackendForGetRevisionOutput } from './backend-for-get-revision-output';
 export interface ConvertMountPointForGetRevisionOutput {
 
     /**
-     * @type {BackendForGetRevisionOutput}
+     * @type {string}
      * @memberof ConvertMountPointForGetRevisionOutput
      */
-    Backend?: BackendForGetRevisionOutput;
+    BucketName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertMountPointForGetRevisionOutput
+     */
+    BucketPath?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertMountPointForGetRevisionOutput
+     */
+    Endpoint?: string;
 
     /**
      * @type {string}

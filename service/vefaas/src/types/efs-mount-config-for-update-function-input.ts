@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertMountPointForUpdateFunctionInput } from './convert-mount-point-for-update-function-input';
+import { MountPointForUpdateFunctionInput } from './mount-point-for-update-function-input';
  /**
  * 
  *
@@ -22,8 +22,8 @@ import { ConvertMountPointForUpdateFunctionInput } from './convert-mount-point-f
 export interface EfsMountConfigForUpdateFunctionInput {
 
     /**
-     * @type {Array<ConvertMountPointForUpdateFunctionInput>}
+     * @type {Array<MountPointForUpdateFunctionInput>}
      * @memberof EfsMountConfigForUpdateFunctionInput
      */
-    MountPoints?: Array<ConvertMountPointForUpdateFunctionInput>;
+    MountPoints?: Array<MountPointForUpdateFunctionInput>;
 }

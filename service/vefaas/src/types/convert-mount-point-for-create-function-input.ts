@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { BackendForCreateFunctionInput } from './backend-for-create-function-input';
+import { EncryptionConfigForCreateFunctionInput } from './encryption-config-for-create-function-input';
  /**
  * 
  *
@@ -22,10 +22,28 @@ import { BackendForCreateFunctionInput } from './backend-for-create-function-inp
 export interface ConvertMountPointForCreateFunctionInput {
 
     /**
-     * @type {BackendForCreateFunctionInput}
+     * @type {string}
      * @memberof ConvertMountPointForCreateFunctionInput
      */
-    Backend?: BackendForCreateFunctionInput;
+    BucketName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertMountPointForCreateFunctionInput
+     */
+    BucketPath?: string;
+
+    /**
+     * @type {EncryptionConfigForCreateFunctionInput}
+     * @memberof ConvertMountPointForCreateFunctionInput
+     */
+    EncryptionConfig?: EncryptionConfigForCreateFunctionInput;
+
+    /**
+     * @type {string}
+     * @memberof ConvertMountPointForCreateFunctionInput
+     */
+    Endpoint?: string;
 
     /**
      * @type {string}
