@@ -40,6 +40,18 @@ export interface ObjectSourceConfigForCreateDataMigrateTaskInput {
     KeyListFile?: string;
 
     /**
+     * @type {number}
+     * @memberof ObjectSourceConfigForCreateDataMigrateTaskInput
+     */
+    ListEndTime?: number;
+
+    /**
+     * @type {number}
+     * @memberof ObjectSourceConfigForCreateDataMigrateTaskInput
+     */
+    ListStartTime?: number;
+
+    /**
      * @type {Array<string>}
      * @memberof ObjectSourceConfigForCreateDataMigrateTaskInput
      */
