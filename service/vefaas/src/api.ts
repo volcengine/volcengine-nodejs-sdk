@@ -32,6 +32,8 @@ import { CreateSandboxSnapshotRequest } from './types/index';
 import { CreateSandboxSnapshotResponse } from './types/index';
 import { CreateTimerRequest } from './types/index';
 import { CreateTimerResponse } from './types/index';
+import { DeleteE2BAPIKeyRequest } from './types/index';
+import { DeleteE2BAPIKeyResponse } from './types/index';
 import { DeleteFunctionRequest } from './types/index';
 import { DeleteFunctionResponse } from './types/index';
 import { DeleteKafkaTriggerRequest } from './types/index';
@@ -149,6 +151,7 @@ export type CreateKafkaTriggerCommandOutput = CommandOutput<CreateKafkaTriggerRe
 export type CreateSandboxCommandOutput = CommandOutput<CreateSandboxResponse>;
 export type CreateSandboxSnapshotCommandOutput = CommandOutput<CreateSandboxSnapshotResponse>;
 export type CreateTimerCommandOutput = CommandOutput<CreateTimerResponse>;
+export type DeleteE2BAPIKeyCommandOutput = CommandOutput<DeleteE2BAPIKeyResponse>;
 export type DeleteFunctionCommandOutput = CommandOutput<DeleteFunctionResponse>;
 export type DeleteKafkaTriggerCommandOutput = CommandOutput<DeleteKafkaTriggerResponse>;
 export type DeleteSandboxImageCommandOutput = CommandOutput<DeleteSandboxImageResponse>;
@@ -348,6 +351,21 @@ export class CreateTimerCommand extends Command<
   constructor(input: CreateTimerRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateTimerCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteE2BAPIKey
+ */
+export class DeleteE2BAPIKeyCommand extends Command<
+  DeleteE2BAPIKeyRequest,
+  DeleteE2BAPIKeyCommandOutput,
+  'DeleteE2BAPIKeyCommand'
+> {
+  static readonly metaPath = '/DeleteE2BAPIKey/2024-06-06/vefaas/post/application_json/';
+
+  constructor(input: DeleteE2BAPIKeyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteE2BAPIKeyCommand.metaPath);
   }
 }
 /**
@@ -1142,6 +1160,7 @@ export default {
   CreateSandboxCommand,
   CreateSandboxSnapshotCommand,
   CreateTimerCommand,
+  DeleteE2BAPIKeyCommand,
   DeleteFunctionCommand,
   DeleteKafkaTriggerCommand,
   DeleteSandboxImageCommand,

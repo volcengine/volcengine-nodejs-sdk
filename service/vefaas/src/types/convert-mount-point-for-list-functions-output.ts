@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { BackendForListFunctionsOutput } from './backend-for-list-functions-output';
  /**
  * 
  *
@@ -22,10 +21,22 @@ import { BackendForListFunctionsOutput } from './backend-for-list-functions-outp
 export interface ConvertMountPointForListFunctionsOutput {
 
     /**
-     * @type {BackendForListFunctionsOutput}
+     * @type {string}
      * @memberof ConvertMountPointForListFunctionsOutput
      */
-    Backend?: BackendForListFunctionsOutput;
+    BucketName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertMountPointForListFunctionsOutput
+     */
+    BucketPath?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertMountPointForListFunctionsOutput
+     */
+    Endpoint?: string;
 
     /**
      * @type {string}

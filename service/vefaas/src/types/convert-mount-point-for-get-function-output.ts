@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { BackendForGetFunctionOutput } from './backend-for-get-function-output';
  /**
  * 
  *
@@ -22,10 +21,22 @@ import { BackendForGetFunctionOutput } from './backend-for-get-function-output';
 export interface ConvertMountPointForGetFunctionOutput {
 
     /**
-     * @type {BackendForGetFunctionOutput}
+     * @type {string}
      * @memberof ConvertMountPointForGetFunctionOutput
      */
-    Backend?: BackendForGetFunctionOutput;
+    BucketName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertMountPointForGetFunctionOutput
+     */
+    BucketPath?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertMountPointForGetFunctionOutput
+     */
+    Endpoint?: string;
 
     /**
      * @type {string}

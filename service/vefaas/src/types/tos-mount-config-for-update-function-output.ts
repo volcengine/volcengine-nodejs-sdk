@@ -12,8 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { ConvertMountPointForUpdateFunctionOutput } from './convert-mount-point-for-update-function-output';
 import { CredentialsForUpdateFunctionOutput } from './credentials-for-update-function-output';
-import { MountPointForUpdateFunctionOutput } from './mount-point-for-update-function-output';
  /**
  * 
  *
@@ -41,8 +41,8 @@ export interface TosMountConfigForUpdateFunctionOutput {
     EnableTos?: boolean;
 
     /**
-     * @type {Array<MountPointForUpdateFunctionOutput>}
+     * @type {Array<ConvertMountPointForUpdateFunctionOutput>}
      * @memberof TosMountConfigForUpdateFunctionOutput
      */
-    MountPoints?: Array<MountPointForUpdateFunctionOutput>;
+    MountPoints?: Array<ConvertMountPointForUpdateFunctionOutput>;
 }

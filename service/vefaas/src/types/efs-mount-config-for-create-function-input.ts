@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertMountPointForCreateFunctionInput } from './convert-mount-point-for-create-function-input';
+import { MountPointForCreateFunctionInput } from './mount-point-for-create-function-input';
  /**
  * 
  *
@@ -22,8 +22,8 @@ import { ConvertMountPointForCreateFunctionInput } from './convert-mount-point-f
 export interface EfsMountConfigForCreateFunctionInput {
 
     /**
-     * @type {Array<ConvertMountPointForCreateFunctionInput>}
+     * @type {Array<MountPointForCreateFunctionInput>}
      * @memberof EfsMountConfigForCreateFunctionInput
      */
-    MountPoints?: Array<ConvertMountPointForCreateFunctionInput>;
+    MountPoints?: Array<MountPointForCreateFunctionInput>;
 }

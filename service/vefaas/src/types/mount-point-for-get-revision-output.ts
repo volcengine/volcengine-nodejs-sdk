@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { BackendForGetRevisionOutput } from './backend-for-get-revision-output';
  /**
  * 
  *
@@ -21,22 +22,10 @@
 export interface MountPointForGetRevisionOutput {
 
     /**
-     * @type {string}
+     * @type {BackendForGetRevisionOutput}
      * @memberof MountPointForGetRevisionOutput
      */
-    BucketName?: string;
-
-    /**
-     * @type {string}
-     * @memberof MountPointForGetRevisionOutput
-     */
-    BucketPath?: string;
-
-    /**
-     * @type {string}
-     * @memberof MountPointForGetRevisionOutput
-     */
-    Endpoint?: string;
+    Backend?: BackendForGetRevisionOutput;
 
     /**
      * @type {string}

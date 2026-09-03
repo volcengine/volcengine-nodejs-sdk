@@ -16,13 +16,7 @@
  * 
  *
  * @export
- * @interface DomainRuleForListSandboxesOutput
+ * @interface DeleteE2BAPIKeyResponse
  */
-export interface DomainRuleForListSandboxesOutput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof DomainRuleForListSandboxesOutput
-     */
-    Domains?: Array<string>;
+export interface DeleteE2BAPIKeyResponse {
 }

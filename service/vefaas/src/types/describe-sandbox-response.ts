@@ -20,7 +20,6 @@ import { InstanceEfsMountConfigForDescribeSandboxOutput } from './instance-efs-m
 import { InstanceNasMountConfigForDescribeSandboxOutput } from './instance-nas-mount-config-for-describe-sandbox-output';
 import { InstanceTosMountConfigForDescribeSandboxOutput } from './instance-tos-mount-config-for-describe-sandbox-output';
 import { MetadataListForDescribeSandboxOutput } from './metadata-list-for-describe-sandbox-output';
-import { NetworkRulesForDescribeSandboxOutput } from './network-rules-for-describe-sandbox-output';
 import { SidecarForDescribeSandboxOutput } from './sidecar-for-describe-sandbox-output';
  /**
  * 
@@ -149,12 +148,6 @@ export interface DescribeSandboxResponse {
      * @memberof DescribeSandboxResponse
      */
     MetadataList?: Array<MetadataListForDescribeSandboxOutput>;
-
-    /**
-     * @type {NetworkRulesForDescribeSandboxOutput}
-     * @memberof DescribeSandboxResponse
-     */
-    NetworkRules?: NetworkRulesForDescribeSandboxOutput;
 
     /**
      * @type {string}

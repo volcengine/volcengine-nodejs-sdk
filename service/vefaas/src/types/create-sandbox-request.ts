@@ -21,7 +21,6 @@ import { InstanceEfsMountConfigForCreateSandboxInput } from './instance-efs-moun
 import { InstanceImageInfoForCreateSandboxInput } from './instance-image-info-for-create-sandbox-input';
 import { InstanceNasMountConfigForCreateSandboxInput } from './instance-nas-mount-config-for-create-sandbox-input';
 import { InstanceTosMountConfigForCreateSandboxInput } from './instance-tos-mount-config-for-create-sandbox-input';
-import { NetworkRulesForCreateSandboxInput } from './network-rules-for-create-sandbox-input';
 import { SidecarForCreateSandboxInput } from './sidecar-for-create-sandbox-input';
  /**
  * 
@@ -120,12 +119,6 @@ export interface CreateSandboxRequest {
      * @memberof CreateSandboxRequest
      */
     Metadata?: { [key: string]: string; };
-
-    /**
-     * @type {NetworkRulesForCreateSandboxInput}
-     * @memberof CreateSandboxRequest
-     */
-    NetworkRules?: NetworkRulesForCreateSandboxInput;
 
     /**
      * @type {number}

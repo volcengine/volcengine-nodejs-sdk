@@ -12,8 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { ConvertMountPointForGetFunctionOutput } from './convert-mount-point-for-get-function-output';
 import { CredentialsForGetFunctionOutput } from './credentials-for-get-function-output';
-import { MountPointForGetFunctionOutput } from './mount-point-for-get-function-output';
  /**
  * 
  *
@@ -35,8 +35,8 @@ export interface TosMountConfigForGetFunctionOutput {
     EnableTos?: boolean;
 
     /**
-     * @type {Array<MountPointForGetFunctionOutput>}
+     * @type {Array<ConvertMountPointForGetFunctionOutput>}
      * @memberof TosMountConfigForGetFunctionOutput
      */
-    MountPoints?: Array<MountPointForGetFunctionOutput>;
+    MountPoints?: Array<ConvertMountPointForGetFunctionOutput>;
 }

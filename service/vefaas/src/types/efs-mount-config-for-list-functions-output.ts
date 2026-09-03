@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { ConvertMountPointForListFunctionsOutput } from './convert-mount-point-for-list-functions-output';
+import { MountPointForListFunctionsOutput } from './mount-point-for-list-functions-output';
  /**
  * 
  *
@@ -22,8 +22,8 @@ import { ConvertMountPointForListFunctionsOutput } from './convert-mount-point-f
 export interface EfsMountConfigForListFunctionsOutput {
 
     /**
-     * @type {Array<ConvertMountPointForListFunctionsOutput>}
+     * @type {Array<MountPointForListFunctionsOutput>}
      * @memberof EfsMountConfigForListFunctionsOutput
      */
-    MountPoints?: Array<ConvertMountPointForListFunctionsOutput>;
+    MountPoints?: Array<MountPointForListFunctionsOutput>;
 }

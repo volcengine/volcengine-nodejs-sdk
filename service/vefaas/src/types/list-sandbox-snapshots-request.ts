@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { FilterForListSandboxSnapshotsInput } from './filter-for-list-sandbox-snapshots-input';
  /**
  * 
  *
@@ -21,10 +22,28 @@
 export interface ListSandboxSnapshotsRequest {
 
     /**
+     * @type {Array<FilterForListSandboxSnapshotsInput>}
+     * @memberof ListSandboxSnapshotsRequest
+     */
+    Filters?: Array<FilterForListSandboxSnapshotsInput>;
+
+    /**
      * @type {string}
      * @memberof ListSandboxSnapshotsRequest
      */
     FunctionId: string;
+
+    /**
+     * @type {number}
+     * @memberof ListSandboxSnapshotsRequest
+     */
+    PageNumber?: number;
+
+    /**
+     * @type {number}
+     * @memberof ListSandboxSnapshotsRequest
+     */
+    PageSize?: number;
 
     /**
      * @type {string}

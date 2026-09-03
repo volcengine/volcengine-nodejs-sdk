@@ -14,7 +14,6 @@
 
 import { EBSVolumeForListSandboxesOutput } from './ebsvolume-for-list-sandboxes-output';
 import { InstanceEfsMountConfigForListSandboxesOutput } from './instance-efs-mount-config-for-list-sandboxes-output';
-import { NetworkRulesForListSandboxesOutput } from './network-rules-for-list-sandboxes-output';
 import { SidecarForListSandboxesOutput } from './sidecar-for-list-sandboxes-output';
  /**
  * 
@@ -113,12 +112,6 @@ export interface SandboxForListSandboxesOutput {
      * @memberof SandboxForListSandboxesOutput
      */
     Metadata?: { [key: string]: string; };
-
-    /**
-     * @type {NetworkRulesForListSandboxesOutput}
-     * @memberof SandboxForListSandboxesOutput
-     */
-    NetworkRules?: NetworkRulesForListSandboxesOutput;
 
     /**
      * @type {string}

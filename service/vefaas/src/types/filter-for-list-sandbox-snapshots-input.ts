@@ -12,24 +12,23 @@
  * Do not edit the class manually.
  */
 
-import { PortForDescribeSandboxOutput } from './port-for-describe-sandbox-output';
  /**
  * 
  *
  * @export
- * @interface IpRuleForDescribeSandboxOutput
+ * @interface FilterForListSandboxSnapshotsInput
  */
-export interface IpRuleForDescribeSandboxOutput {
+export interface FilterForListSandboxSnapshotsInput {
+
+    /**
+     * @type {string}
+     * @memberof FilterForListSandboxSnapshotsInput
+     */
+    Name?: string;
 
     /**
      * @type {Array<string>}
-     * @memberof IpRuleForDescribeSandboxOutput
+     * @memberof FilterForListSandboxSnapshotsInput
      */
-    Cidrs?: Array<string>;
-
-    /**
-     * @type {Array<PortForDescribeSandboxOutput>}
-     * @memberof IpRuleForDescribeSandboxOutput
-     */
-    Ports?: Array<PortForDescribeSandboxOutput>;
+    Values?: Array<string>;
 }

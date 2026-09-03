@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { EncryptionConfigForUpdateFunctionOutput } from './encryption-config-for-update-function-output';
+import { BackendForUpdateFunctionOutput } from './backend-for-update-function-output';
  /**
  * 
  *
@@ -22,28 +22,10 @@ import { EncryptionConfigForUpdateFunctionOutput } from './encryption-config-for
 export interface MountPointForUpdateFunctionOutput {
 
     /**
-     * @type {string}
+     * @type {BackendForUpdateFunctionOutput}
      * @memberof MountPointForUpdateFunctionOutput
      */
-    BucketName?: string;
-
-    /**
-     * @type {string}
-     * @memberof MountPointForUpdateFunctionOutput
-     */
-    BucketPath?: string;
-
-    /**
-     * @type {EncryptionConfigForUpdateFunctionOutput}
-     * @memberof MountPointForUpdateFunctionOutput
-     */
-    EncryptionConfig?: EncryptionConfigForUpdateFunctionOutput;
-
-    /**
-     * @type {string}
-     * @memberof MountPointForUpdateFunctionOutput
-     */
-    Endpoint?: string;
+    Backend?: BackendForUpdateFunctionOutput;
 
     /**
      * @type {string}

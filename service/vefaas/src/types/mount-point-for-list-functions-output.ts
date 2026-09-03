@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { BackendForListFunctionsOutput } from './backend-for-list-functions-output';
  /**
  * 
  *
@@ -21,22 +22,10 @@
 export interface MountPointForListFunctionsOutput {
 
     /**
-     * @type {string}
+     * @type {BackendForListFunctionsOutput}
      * @memberof MountPointForListFunctionsOutput
      */
-    BucketName?: string;
-
-    /**
-     * @type {string}
-     * @memberof MountPointForListFunctionsOutput
-     */
-    BucketPath?: string;
-
-    /**
-     * @type {string}
-     * @memberof MountPointForListFunctionsOutput
-     */
-    Endpoint?: string;
+    Backend?: BackendForListFunctionsOutput;
 
     /**
      * @type {string}
