@@ -24,11 +24,5 @@ export interface SourceForVideoEditorAddSubtitleInput {
      * @type {string}
      * @memberof SourceForVideoEditorAddSubtitleInput
      */
-    style?: string;
-
-    /**
-     * @type {string}
-     * @memberof SourceForVideoEditorAddSubtitleInput
-     */
     text?: string;
 }

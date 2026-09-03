@@ -238,6 +238,8 @@ import { VideoProjectSubtitleUploadRequest } from './types/index';
 import { VideoProjectSubtitleUploadResponse } from './types/index';
 import { VideoProjectSuppressionStartRequest } from './types/index';
 import { VideoProjectSuppressionStartResponse } from './types/index';
+import { VideoProjectTaskBatchSetExpeditedRequest } from './types/index';
+import { VideoProjectTaskBatchSetExpeditedResponse } from './types/index';
 import { VideoProjectTaskBatchStartAIFlowRequest } from './types/index';
 import { VideoProjectTaskBatchStartAIFlowResponse } from './types/index';
 import { VideoProjectTaskDetailRequest } from './types/index';
@@ -368,6 +370,7 @@ export type VideoProjectSubmitTermValidationCommandOutput = CommandOutput<VideoP
 export type VideoProjectSubtitleDeleteCommandOutput = CommandOutput<VideoProjectSubtitleDeleteResponse>;
 export type VideoProjectSubtitleUploadCommandOutput = CommandOutput<VideoProjectSubtitleUploadResponse>;
 export type VideoProjectSuppressionStartCommandOutput = CommandOutput<VideoProjectSuppressionStartResponse>;
+export type VideoProjectTaskBatchSetExpeditedCommandOutput = CommandOutput<VideoProjectTaskBatchSetExpeditedResponse>;
 export type VideoProjectTaskBatchStartAIFlowCommandOutput = CommandOutput<VideoProjectTaskBatchStartAIFlowResponse>;
 export type VideoProjectTaskDetailCommandOutput = CommandOutput<VideoProjectTaskDetailResponse>;
 export type VideoProjectTaskListCommandOutput = CommandOutput<VideoProjectTaskListResponse>;
@@ -2070,6 +2073,21 @@ export class VideoProjectSuppressionStartCommand extends Command<
   }
 }
 /**
+ * Command to VideoProjectTaskBatchSetExpedited
+ */
+export class VideoProjectTaskBatchSetExpeditedCommand extends Command<
+  VideoProjectTaskBatchSetExpeditedRequest,
+  VideoProjectTaskBatchSetExpeditedCommandOutput,
+  'VideoProjectTaskBatchSetExpeditedCommand'
+> {
+  static readonly metaPath = '/VideoProjectTaskBatchSetExpedited/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoProjectTaskBatchSetExpeditedRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectTaskBatchSetExpeditedCommand.metaPath);
+  }
+}
+/**
  * Command to VideoProjectTaskBatchStartAIFlow
  */
 export class VideoProjectTaskBatchStartAIFlowCommand extends Command<
@@ -2289,6 +2307,7 @@ export default {
   VideoProjectSubtitleDeleteCommand,
   VideoProjectSubtitleUploadCommand,
   VideoProjectSuppressionStartCommand,
+  VideoProjectTaskBatchSetExpeditedCommand,
   VideoProjectTaskBatchStartAIFlowCommand,
   VideoProjectTaskDetailCommand,
   VideoProjectTaskListCommand,
