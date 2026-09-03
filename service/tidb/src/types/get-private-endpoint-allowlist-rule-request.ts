@@ -16,19 +16,25 @@
  * 
  *
  * @export
- * @interface CreateBranchResponse
+ * @interface GetPrivateEndpointAllowlistRuleRequest
  */
-export interface CreateBranchResponse {
+export interface GetPrivateEndpointAllowlistRuleRequest {
 
     /**
      * @type {string}
-     * @memberof CreateBranchResponse
+     * @memberof GetPrivateEndpointAllowlistRuleRequest
      */
-    BranchId?: string;
+    ClusterId: string;
 
     /**
      * @type {string}
-     * @memberof CreateBranchResponse
+     * @memberof GetPrivateEndpointAllowlistRuleRequest
      */
-    ClusterId?: string;
+    ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetPrivateEndpointAllowlistRuleRequest
+     */
+    VpcEndpointId: string;
 }

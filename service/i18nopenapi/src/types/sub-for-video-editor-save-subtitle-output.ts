@@ -32,18 +32,6 @@ export interface SubForVideoEditorSaveSubtitleOutput {
      * @type {string}
      * @memberof SubForVideoEditorSaveSubtitleOutput
      */
-    assistText?: string;
-
-    /**
-     * @type {number}
-     * @memberof SubForVideoEditorSaveSubtitleOutput
-     */
-    assistTextType?: number;
-
-    /**
-     * @type {string}
-     * @memberof SubForVideoEditorSaveSubtitleOutput
-     */
     createTime?: string;
 
     /**
@@ -68,19 +56,7 @@ export interface SubForVideoEditorSaveSubtitleOutput {
      * @type {string}
      * @memberof SubForVideoEditorSaveSubtitleOutput
      */
-    extra?: string;
-
-    /**
-     * @type {string}
-     * @memberof SubForVideoEditorSaveSubtitleOutput
-     */
     operator?: string;
-
-    /**
-     * @type {string}
-     * @memberof SubForVideoEditorSaveSubtitleOutput
-     */
-    relatedSegmentId?: string;
 
     /**
      * @type {string}
