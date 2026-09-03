@@ -100,7 +100,8 @@ export class Client {
     const httpRequest = createHttpRequestMiddleware(this.requestHandler);
     this.middlewareStack.add(httpRequest.middleware, httpRequest.options);
 
-    // Finalize middleware - retry logic (wrapper around HTTP request, priority 100)
+    // Build middleware - retry logic wraps signing and HTTP sending so each
+    // attempt gets fresh retry headers covered by its signature.
     const retry = createRetryMiddleware(
       this.clock,
       (error) => shouldRetry(error),

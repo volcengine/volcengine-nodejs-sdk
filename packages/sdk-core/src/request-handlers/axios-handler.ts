@@ -13,8 +13,14 @@ import http from "http";
 import https from "https";
 import type { Socket } from "net";
 import { HttpOptions } from "../types/types";
+import { SDK_NAME, SDK_VERSION } from "../version";
 
 export type AxiosRequestHandlerOptions = HttpOptions;
+
+/**
+ * 默认 User-Agent，格式为 <SDK 名称>/<版本>
+ */
+const DEFAULT_USER_AGENT = `${SDK_NAME}/${SDK_VERSION}`;
 
 /**
  * 创建带有连接超时的 Agent
@@ -39,7 +45,11 @@ function createAgentWithConnectTimeout<T extends http.Agent>(
     options: any,
     callback: (err: Error | null, socket?: Socket) => void,
   ) {
-    const socket: Socket = originalCreateConnection.call(this, options, callback);
+    const socket: Socket = originalCreateConnection.call(
+      this,
+      options,
+      callback,
+    );
 
     let connectTimer: ReturnType<typeof setTimeout> | null = null;
 
@@ -160,10 +170,39 @@ export class AxiosRequestHandler implements RequestHandler {
    * 发送 HTTP 请求
    */
   async request<T>(config: HttpRequestConfig): Promise<HttpResponse<T>> {
+    const headers = { ...config.headers };
+    // User-Agent 采用 append 模式：SDK 默认 UA 始终保留在前，
+    // 用户自定义的 UA 追加在其后（空格分隔），与 Go / PHP SDK 行为一致。
+    const userAgentKey = Object.keys(headers).find(
+      (key) => key.toLowerCase() === "user-agent",
+    );
+    const rawUserAgent =
+      userAgentKey !== undefined ? headers[userAgentKey] : undefined;
+    // undefined / null 视为“无自定义”，回退到默认 UA，与 PHP SDK 行为一致，
+    // 避免拼出 "volcengine-nodejs-sdk/x.y.z undefined" 这类脏 UA。
+    const customUserAgent =
+      rawUserAgent === undefined || rawUserAgent === null
+        ? ""
+        : String(rawUserAgent).trim();
+    if (userAgentKey !== undefined) {
+      delete headers[userAgentKey];
+    }
+    if (
+      customUserAgent === "" ||
+      customUserAgent === DEFAULT_USER_AGENT ||
+      customUserAgent.startsWith(`${DEFAULT_USER_AGENT} `)
+    ) {
+      // 无自定义，或已包含 SDK UA 前缀，避免重复拼接
+      headers["User-Agent"] =
+        customUserAgent === "" ? DEFAULT_USER_AGENT : customUserAgent;
+    } else {
+      headers["User-Agent"] = `${DEFAULT_USER_AGENT} ${customUserAgent}`;
+    }
+
     const axiosConfig: AxiosRequestConfig = {
       url: config.url,
       method: config.method as any,
-      headers: config.headers,
+      headers,
       data: config.data,
       timeout: config.timeout,
       proxy: config.proxy,

@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from "uuid";
+import { randomUUID } from "crypto";
 import { ClientConfig, AssumeRoleParams } from "../types/types";
 
 // 缓存类型定义
@@ -64,7 +64,7 @@ export async function getAssumeRole(assumeRoleParams: AssumeRoleParams) {
         DurationSeconds: assumeRoleParams?.durationSeconds || 3600,
         RoleTrn: `trn:iam::${assumeRoleParams.accountId}:role/${assumeRoleParams.roleName}`,
         // 唯一值，建议使用 UUID
-        RoleSessionName: uuidv4(),
+        RoleSessionName: randomUUID(),
         Policy: assumeRoleParams?.policy,
         Tags: assumeRoleParams?.tags,
       });

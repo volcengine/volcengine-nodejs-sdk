@@ -6,9 +6,10 @@ jest.mock("fs", () => ({
   },
 }));
 
-// Mock uuid
-jest.mock("uuid", () => ({
-  v4: jest.fn().mockReturnValue("mock-uuid-1234"),
+// Mock crypto.randomUUID
+jest.mock("crypto", () => ({
+  ...jest.requireActual("crypto"),
+  randomUUID: jest.fn().mockReturnValue("mock-uuid-1234"),
 }));
 
 // Mock the dynamic import of stsClient

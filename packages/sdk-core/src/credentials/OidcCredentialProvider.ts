@@ -1,5 +1,5 @@
 import { promises as fsPromises } from "fs";
-import { v4 as uuidv4 } from "uuid";
+import { randomUUID } from "crypto";
 import type { CredentialValue, Provider } from "./types";
 import type { AssumeRoleWithOIDCParams } from "../types/types";
 import { loadEnv } from "../utils/env";
@@ -146,7 +146,7 @@ export class OidcCredentialProvider implements Provider {
           DurationSeconds: this.params.durationSeconds || 3600,
           RoleTrn: this.params.roleTrn,
           // 唯一值，建议使用 UUID
-          RoleSessionName: this.params.roleSessionName || uuidv4(),
+          RoleSessionName: this.params.roleSessionName || randomUUID(),
           OIDCToken,
           Policy: this.params.policy,
         });
