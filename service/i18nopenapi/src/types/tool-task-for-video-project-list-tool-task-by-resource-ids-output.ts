@@ -32,18 +32,6 @@ export interface ToolTaskForVideoProjectListToolTaskByResourceIDsOutput {
      * @type {string}
      * @memberof ToolTaskForVideoProjectListToolTaskByResourceIDsOutput
      */
-    inputVid?: string;
-
-    /**
-     * @type {string}
-     * @memberof ToolTaskForVideoProjectListToolTaskByResourceIDsOutput
-     */
-    outputVid?: string;
-
-    /**
-     * @type {string}
-     * @memberof ToolTaskForVideoProjectListToolTaskByResourceIDsOutput
-     */
     projectId?: string;
 
     /**

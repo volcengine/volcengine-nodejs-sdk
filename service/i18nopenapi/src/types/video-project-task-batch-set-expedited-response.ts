@@ -12,17 +12,18 @@
  * Do not edit the class manually.
  */
 
+import { DataForVideoProjectTaskBatchSetExpeditedOutput } from './data-for-video-project-task-batch-set-expedited-output';
  /**
  * 
  *
  * @export
- * @interface TargetForVideoEditorAddSubtitleOutput
+ * @interface VideoProjectTaskBatchSetExpeditedResponse
  */
-export interface TargetForVideoEditorAddSubtitleOutput {
+export interface VideoProjectTaskBatchSetExpeditedResponse {
 
     /**
-     * @type {string}
-     * @memberof TargetForVideoEditorAddSubtitleOutput
+     * @type {DataForVideoProjectTaskBatchSetExpeditedOutput}
+     * @memberof VideoProjectTaskBatchSetExpeditedResponse
      */
-    text?: string;
+    data?: DataForVideoProjectTaskBatchSetExpeditedOutput;
 }
