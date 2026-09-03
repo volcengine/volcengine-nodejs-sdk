@@ -1,5 +1,12 @@
 # @volcengine/ark-runtime
 
+## 1.0.11
+
+### Patch Changes
+
+- Updated dependencies
+  - @volcengine/ark@1.0.4
+
 ## 1.0.10
 
 ### Patch Changes
