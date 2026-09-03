@@ -24,23 +24,23 @@ export interface QuotaInfoListForGetPoolQuotaInfoOutput {
      * @type {number}
      * @memberof QuotaInfoListForGetPoolQuotaInfoOutput
      */
-    availableAmount?: number;
+    AvailableAmount?: number;
 
     /**
      * @type {string}
      * @memberof QuotaInfoListForGetPoolQuotaInfoOutput
      */
-    configurationCode?: string;
+    ConfigurationCode?: string;
 
     /**
      * @type {string}
      * @memberof QuotaInfoListForGetPoolQuotaInfoOutput
      */
-    packageName?: string;
+    PackageName?: string;
 
     /**
      * @type {number}
      * @memberof QuotaInfoListForGetPoolQuotaInfoOutput
      */
-    totalAmount?: number;
+    TotalAmount?: number;
 }

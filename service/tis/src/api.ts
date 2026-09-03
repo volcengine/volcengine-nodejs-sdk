@@ -38,6 +38,8 @@ import { GetQuotaInfoRequest } from './types/index';
 import { GetQuotaInfoResponse } from './types/index';
 import { GetSpeakerListRequest } from './types/index';
 import { GetSpeakerListResponse } from './types/index';
+import { MigrateDeviceWithoutApprovalRequest } from './types/index';
+import { MigrateDeviceWithoutApprovalResponse } from './types/index';
 import { PushMsgToDeviceRequest } from './types/index';
 import { PushMsgToDeviceResponse } from './types/index';
 import { QueryVoicePrintRequest } from './types/index';
@@ -62,6 +64,7 @@ export type GetPoolDetailListCommandOutput = CommandOutput<GetPoolDetailListResp
 export type GetPoolQuotaInfoCommandOutput = CommandOutput<GetPoolQuotaInfoResponse>;
 export type GetQuotaInfoCommandOutput = CommandOutput<GetQuotaInfoResponse>;
 export type GetSpeakerListCommandOutput = CommandOutput<GetSpeakerListResponse>;
+export type MigrateDeviceWithoutApprovalCommandOutput = CommandOutput<MigrateDeviceWithoutApprovalResponse>;
 export type PushMsgToDeviceCommandOutput = CommandOutput<PushMsgToDeviceResponse>;
 export type QueryVoicePrintCommandOutput = CommandOutput<QueryVoicePrintResponse>;
 export type TopActionDispatchCommandOutput = CommandOutput<TopActionDispatchResponse>;
@@ -261,6 +264,21 @@ export class GetSpeakerListCommand extends Command<
   }
 }
 /**
+ * Command to MigrateDeviceWithoutApproval
+ */
+export class MigrateDeviceWithoutApprovalCommand extends Command<
+  MigrateDeviceWithoutApprovalRequest,
+  MigrateDeviceWithoutApprovalCommandOutput,
+  'MigrateDeviceWithoutApprovalCommand'
+> {
+  static readonly metaPath = '/MigrateDeviceWithoutApproval/2024-07-31/tis/post/application_json/';
+
+  constructor(input: MigrateDeviceWithoutApprovalRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(MigrateDeviceWithoutApprovalCommand.metaPath);
+  }
+}
+/**
  * Command to PushMsgToDevice
  */
 export class PushMsgToDeviceCommand extends Command<
@@ -335,6 +353,7 @@ export default {
   GetPoolQuotaInfoCommand,
   GetQuotaInfoCommand,
   GetSpeakerListCommand,
+  MigrateDeviceWithoutApprovalCommand,
   PushMsgToDeviceCommand,
   QueryVoicePrintCommand,
   TopActionDispatchCommand,
