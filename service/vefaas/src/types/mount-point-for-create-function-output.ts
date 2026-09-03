@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { BackendForCreateFunctionOutput } from './backend-for-create-function-output';
  /**
  * 
  *
@@ -21,22 +22,10 @@
 export interface MountPointForCreateFunctionOutput {
 
     /**
-     * @type {string}
+     * @type {BackendForCreateFunctionOutput}
      * @memberof MountPointForCreateFunctionOutput
      */
-    BucketName?: string;
-
-    /**
-     * @type {string}
-     * @memberof MountPointForCreateFunctionOutput
-     */
-    BucketPath?: string;
-
-    /**
-     * @type {string}
-     * @memberof MountPointForCreateFunctionOutput
-     */
-    Endpoint?: string;
+    Backend?: BackendForCreateFunctionOutput;
 
     /**
      * @type {string}

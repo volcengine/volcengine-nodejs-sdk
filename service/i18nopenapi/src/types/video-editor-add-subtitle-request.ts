@@ -37,7 +37,7 @@ export interface VideoEditorAddSubtitleRequest {
      * @type {string}
      * @memberof VideoEditorAddSubtitleRequest
      */
-    subtaskId?: string;
+    subtaskId: string;
 
     /**
      * @type {string}

@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { EfsMountConfigForListFunctionsOutput } from './efs-mount-config-for-list-functions-output';
 import { EnvForListFunctionsOutput } from './env-for-list-functions-output';
 import { NasStorageForListFunctionsOutput } from './nas-storage-for-list-functions-output';
 import { TagForListFunctionsOutput } from './tag-for-list-functions-output';
@@ -73,6 +74,12 @@ export interface ItemForListFunctionsOutput {
      * @memberof ItemForListFunctionsOutput
      */
     Description?: string;
+
+    /**
+     * @type {EfsMountConfigForListFunctionsOutput}
+     * @memberof ItemForListFunctionsOutput
+     */
+    EfsMountConfig?: EfsMountConfigForListFunctionsOutput;
 
     /**
      * @type {boolean}

@@ -632,7 +632,19 @@ export interface KillChainNodeListForGetHidsAlarmSummaryInfoOutput {
      * @type {string}
      * @memberof KillChainNodeListForGetHidsAlarmSummaryInfoOutput
      */
+    SecurityIntelligenceError?: string;
+
+    /**
+     * @type {string}
+     * @memberof KillChainNodeListForGetHidsAlarmSummaryInfoOutput
+     */
     SecurityIntelligenceResult?: string;
+
+    /**
+     * @type {string}
+     * @memberof KillChainNodeListForGetHidsAlarmSummaryInfoOutput
+     */
+    SecurityIntelligenceStatus?: string;
 
     /**
      * @type {string}

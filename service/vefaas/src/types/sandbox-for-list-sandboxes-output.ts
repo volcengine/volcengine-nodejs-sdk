@@ -13,6 +13,7 @@
  */
 
 import { EBSVolumeForListSandboxesOutput } from './ebsvolume-for-list-sandboxes-output';
+import { InstanceEfsMountConfigForListSandboxesOutput } from './instance-efs-mount-config-for-list-sandboxes-output';
 import { SidecarForListSandboxesOutput } from './sidecar-for-list-sandboxes-output';
  /**
  * 
@@ -89,6 +90,12 @@ export interface SandboxForListSandboxesOutput {
     Image?: string;
 
     /**
+     * @type {InstanceEfsMountConfigForListSandboxesOutput}
+     * @memberof SandboxForListSandboxesOutput
+     */
+    InstanceEfsMountConfig?: InstanceEfsMountConfigForListSandboxesOutput;
+
+    /**
      * @type {string}
      * @memberof SandboxForListSandboxesOutput
      */
@@ -123,6 +130,18 @@ export interface SandboxForListSandboxesOutput {
      * @memberof SandboxForListSandboxesOutput
      */
     RevisionNumber?: number;
+
+    /**
+     * @type {Array<string>}
+     * @memberof SandboxForListSandboxesOutput
+     */
+    RoleChainTrn?: Array<string>;
+
+    /**
+     * @type {string}
+     * @memberof SandboxForListSandboxesOutput
+     */
+    RoleTrn?: string;
 
     /**
      * @type {string}

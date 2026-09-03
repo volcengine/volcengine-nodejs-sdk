@@ -13,6 +13,7 @@
  */
 
 import { AsyncTaskConfigForUpdateFunctionInput } from './async-task-config-for-update-function-input';
+import { EfsMountConfigForUpdateFunctionInput } from './efs-mount-config-for-update-function-input';
 import { EnvForUpdateFunctionInput } from './env-for-update-function-input';
 import { NasStorageForUpdateFunctionInput } from './nas-storage-for-update-function-input';
 import { SourceAccessConfigForUpdateFunctionInput } from './source-access-config-for-update-function-input';
@@ -51,6 +52,12 @@ export interface UpdateFunctionRequest {
      * @memberof UpdateFunctionRequest
      */
     Description?: string;
+
+    /**
+     * @type {EfsMountConfigForUpdateFunctionInput}
+     * @memberof UpdateFunctionRequest
+     */
+    EfsMountConfig?: EfsMountConfigForUpdateFunctionInput;
 
     /**
      * @type {boolean}

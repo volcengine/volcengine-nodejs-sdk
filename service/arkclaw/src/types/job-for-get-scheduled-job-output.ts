@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ResultDeliveryForGetScheduledJobOutput } from './result-delivery-for-get-scheduled-job-output';
  /**
  * 
  *
@@ -49,6 +50,12 @@ export interface JobForGetScheduledJobOutput {
      * @memberof JobForGetScheduledJobOutput
      */
     Name?: string;
+
+    /**
+     * @type {ResultDeliveryForGetScheduledJobOutput}
+     * @memberof JobForGetScheduledJobOutput
+     */
+    ResultDelivery?: ResultDeliveryForGetScheduledJobOutput;
 
     /**
      * @type {string}

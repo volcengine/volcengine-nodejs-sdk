@@ -21,6 +21,12 @@
 export interface EditAIApplicationSyncConfigRequest {
 
     /**
+     * @type {boolean}
+     * @memberof EditAIApplicationSyncConfigRequest
+     */
+    Enable?: boolean;
+
+    /**
      * @type {number}
      * @memberof EditAIApplicationSyncConfigRequest
      */

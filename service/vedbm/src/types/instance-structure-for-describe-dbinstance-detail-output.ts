@@ -31,7 +31,7 @@ export interface InstanceStructureForDescribeDBInstanceDetailOutput {
      * @type {string}
      * @memberof InstanceStructureForDescribeDBInstanceDetailOutput
      */
-    SubInstanceType?: InstanceStructureForDescribeDBInstanceDetailOutputSubInstanceTypeEnum;
+    SubInstanceType?: string;
 
     /**
      * @type {string}
@@ -39,14 +39,3 @@ export interface InstanceStructureForDescribeDBInstanceDetailOutput {
      */
     ZoneIds?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum InstanceStructureForDescribeDBInstanceDetailOutputSubInstanceTypeEnum {
-    HotStandby = 'HotStandby',
-    Primary = 'Primary',
-    ZoneStandby = 'ZoneStandby'
-}
-

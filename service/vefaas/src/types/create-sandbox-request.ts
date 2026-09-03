@@ -12,9 +12,12 @@
  * Do not edit the class manually.
  */
 
+import { AutoPauseConfigForCreateSandboxInput } from './auto-pause-config-for-create-sandbox-input';
+import { AutoSnapshotConfigForCreateSandboxInput } from './auto-snapshot-config-for-create-sandbox-input';
 import { EBSVolumeForCreateSandboxInput } from './ebsvolume-for-create-sandbox-input';
 import { EmptyDirVolumeForCreateSandboxInput } from './empty-dir-volume-for-create-sandbox-input';
 import { EnvForCreateSandboxInput } from './env-for-create-sandbox-input';
+import { InstanceEfsMountConfigForCreateSandboxInput } from './instance-efs-mount-config-for-create-sandbox-input';
 import { InstanceImageInfoForCreateSandboxInput } from './instance-image-info-for-create-sandbox-input';
 import { InstanceNasMountConfigForCreateSandboxInput } from './instance-nas-mount-config-for-create-sandbox-input';
 import { InstanceTosMountConfigForCreateSandboxInput } from './instance-tos-mount-config-for-create-sandbox-input';
@@ -32,6 +35,18 @@ export interface CreateSandboxRequest {
      * @memberof CreateSandboxRequest
      */
     Async?: boolean;
+
+    /**
+     * @type {AutoPauseConfigForCreateSandboxInput}
+     * @memberof CreateSandboxRequest
+     */
+    AutoPauseConfig?: AutoPauseConfigForCreateSandboxInput;
+
+    /**
+     * @type {AutoSnapshotConfigForCreateSandboxInput}
+     * @memberof CreateSandboxRequest
+     */
+    AutoSnapshotConfig?: AutoSnapshotConfigForCreateSandboxInput;
 
     /**
      * @type {number}
@@ -62,6 +77,12 @@ export interface CreateSandboxRequest {
      * @memberof CreateSandboxRequest
      */
     FunctionId: string;
+
+    /**
+     * @type {InstanceEfsMountConfigForCreateSandboxInput}
+     * @memberof CreateSandboxRequest
+     */
+    InstanceEfsMountConfig?: InstanceEfsMountConfigForCreateSandboxInput;
 
     /**
      * @type {InstanceImageInfoForCreateSandboxInput}

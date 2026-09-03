@@ -13,6 +13,7 @@
  */
 
 import { AsyncTaskConfigForListRevisionsOutput } from './async-task-config-for-list-revisions-output';
+import { EfsMountConfigForListRevisionsOutput } from './efs-mount-config-for-list-revisions-output';
 import { EnvForListRevisionsOutput } from './env-for-list-revisions-output';
 import { HealthCheckConfigForListRevisionsOutput } from './health-check-config-for-list-revisions-output';
 import { NasStorageForListRevisionsOutput } from './nas-storage-for-list-revisions-output';
@@ -56,6 +57,12 @@ export interface ItemForListRevisionsOutput {
      * @memberof ItemForListRevisionsOutput
      */
     Description?: string;
+
+    /**
+     * @type {EfsMountConfigForListRevisionsOutput}
+     * @memberof ItemForListRevisionsOutput
+     */
+    EfsMountConfig?: EfsMountConfigForListRevisionsOutput;
 
     /**
      * @type {Array<EnvForListRevisionsOutput>}

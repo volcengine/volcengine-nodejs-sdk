@@ -37,7 +37,13 @@ export interface EndpointForDescribeDBInstanceDetailOutput {
      * @type {string}
      * @memberof EndpointForDescribeDBInstanceDetailOutput
      */
-    ConsistLevel?: EndpointForDescribeDBInstanceDetailOutputConsistLevelEnum;
+    ConnectionPool?: string;
+
+    /**
+     * @type {string}
+     * @memberof EndpointForDescribeDBInstanceDetailOutput
+     */
+    ConsistLevel?: string;
 
     /**
      * @type {number}
@@ -49,7 +55,7 @@ export interface EndpointForDescribeDBInstanceDetailOutput {
      * @type {string}
      * @memberof EndpointForDescribeDBInstanceDetailOutput
      */
-    ConsistTimeoutAction?: EndpointForDescribeDBInstanceDetailOutputConsistTimeoutActionEnum;
+    ConsistTimeoutAction?: string;
 
     /**
      * @type {string}
@@ -79,7 +85,7 @@ export interface EndpointForDescribeDBInstanceDetailOutput {
      * @type {string}
      * @memberof EndpointForDescribeDBInstanceDetailOutput
      */
-    EndpointType?: EndpointForDescribeDBInstanceDetailOutputEndpointTypeEnum;
+    EndpointType?: string;
 
     /**
      * @type {boolean}
@@ -97,41 +103,5 @@ export interface EndpointForDescribeDBInstanceDetailOutput {
      * @type {string}
      * @memberof EndpointForDescribeDBInstanceDetailOutput
      */
-    ReadWriteMode?: EndpointForDescribeDBInstanceDetailOutputReadWriteModeEnum;
+    ReadWriteMode?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum EndpointForDescribeDBInstanceDetailOutputConsistLevelEnum {
-    Eventual = 'Eventual',
-    Global = 'Global',
-    Session = 'Session'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum EndpointForDescribeDBInstanceDetailOutputConsistTimeoutActionEnum {
-    ReadMaster = 'ReadMaster',
-    ReturnError = 'ReturnError'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum EndpointForDescribeDBInstanceDetailOutputEndpointTypeEnum {
-    Cluster = 'Cluster',
-    Custom = 'Custom',
-    Primary = 'Primary'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum EndpointForDescribeDBInstanceDetailOutputReadWriteModeEnum {
-    ReadOnly = 'ReadOnly',
-    ReadWrite = 'ReadWrite'
-}
-

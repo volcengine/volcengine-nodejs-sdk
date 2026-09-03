@@ -13,6 +13,7 @@
  */
 
 import { AsyncTaskConfigForUpdateFunctionOutput } from './async-task-config-for-update-function-output';
+import { EfsMountConfigForUpdateFunctionOutput } from './efs-mount-config-for-update-function-output';
 import { EnvForUpdateFunctionOutput } from './env-for-update-function-output';
 import { NasStorageForUpdateFunctionOutput } from './nas-storage-for-update-function-output';
 import { TagForUpdateFunctionOutput } from './tag-for-update-function-output';
@@ -74,6 +75,12 @@ export interface UpdateFunctionResponse {
      * @memberof UpdateFunctionResponse
      */
     Description?: string;
+
+    /**
+     * @type {EfsMountConfigForUpdateFunctionOutput}
+     * @memberof UpdateFunctionResponse
+     */
+    EfsMountConfig?: EfsMountConfigForUpdateFunctionOutput;
 
     /**
      * @type {boolean}

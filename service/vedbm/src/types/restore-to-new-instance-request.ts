@@ -127,6 +127,12 @@ export interface RestoreToNewInstanceRequest {
      * @type {string}
      * @memberof RestoreToNewInstanceRequest
      */
+    StorageType?: RestoreToNewInstanceRequestStorageTypeEnum;
+
+    /**
+     * @type {string}
+     * @memberof RestoreToNewInstanceRequest
+     */
     SubnetId: string;
 
     /**
@@ -180,5 +186,13 @@ export enum RestoreToNewInstanceRequestDeletionProtectionEnum {
 export enum RestoreToNewInstanceRequestPeriodUnitEnum {
     Month = 'Month',
     Year = 'Year'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum RestoreToNewInstanceRequestStorageTypeEnum {
+    IOOptimizedStorage = 'IOOptimizedStorage',
+    SmartCompressedStorage = 'SmartCompressedStorage'
 }
 

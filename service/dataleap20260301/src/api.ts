@@ -16,20 +16,50 @@ import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandO
 
 import { CreateDataSourceRequest } from './types/index';
 import { CreateDataSourceResponse } from './types/index';
+import { CreateExclusiveComputeResourceGroupRequest } from './types/index';
+import { CreateExclusiveComputeResourceGroupResponse } from './types/index';
+import { CreateExclusiveScheduleResourceGroupRequest } from './types/index';
+import { CreateExclusiveScheduleResourceGroupResponse } from './types/index';
 import { CreateSolutionRequest } from './types/index';
 import { CreateSolutionResponse } from './types/index';
 import { DeleteDataSourceRequest } from './types/index';
 import { DeleteDataSourceResponse } from './types/index';
+import { DeleteEmrAccountRelationRequest } from './types/index';
+import { DeleteEmrAccountRelationResponse } from './types/index';
+import { DeleteEntityTagRequest } from './types/index';
+import { DeleteEntityTagResponse } from './types/index';
+import { DeleteExclusiveComputeResourceGroupRequest } from './types/index';
+import { DeleteExclusiveComputeResourceGroupResponse } from './types/index';
+import { DeleteExclusiveScheduleResourceGroupRequest } from './types/index';
+import { DeleteExclusiveScheduleResourceGroupResponse } from './types/index';
 import { DeleteSolutionRequest } from './types/index';
 import { DeleteSolutionResponse } from './types/index';
+import { GetBackfillInstancesRequest } from './types/index';
+import { GetBackfillInstancesResponse } from './types/index';
+import { GetBackfillRequest } from './types/index';
+import { GetBackfillResponse } from './types/index';
 import { GetDataSourceRequest } from './types/index';
 import { GetDataSourceResponse } from './types/index';
+import { GetEmrAccountRelationByInternalIdRequest } from './types/index';
+import { GetEmrAccountRelationByInternalIdResponse } from './types/index';
+import { GetExclusiveComputeResourceGroupRequest } from './types/index';
+import { GetExclusiveComputeResourceGroupResponse } from './types/index';
+import { GetExclusiveScheduleResourceGroupRequest } from './types/index';
+import { GetExclusiveScheduleResourceGroupResponse } from './types/index';
 import { GetSolutionExecutionRequest } from './types/index';
 import { GetSolutionExecutionResponse } from './types/index';
 import { GetSolutionRequest } from './types/index';
 import { GetSolutionResponse } from './types/index';
+import { LaunchBackfillRequest } from './types/index';
+import { LaunchBackfillResponse } from './types/index';
 import { ListDataSourcesRequest } from './types/index';
 import { ListDataSourcesResponse } from './types/index';
+import { ListEntityTagsRequest } from './types/index';
+import { ListEntityTagsResponse } from './types/index';
+import { ListExclusiveComputeResourceGroupsRequest } from './types/index';
+import { ListExclusiveComputeResourceGroupsResponse } from './types/index';
+import { ListExclusiveScheduleResourceGroupsRequest } from './types/index';
+import { ListExclusiveScheduleResourceGroupsResponse } from './types/index';
 import { ListSolutionBatchTasksRequest } from './types/index';
 import { ListSolutionBatchTasksResponse } from './types/index';
 import { ListSolutionStreamTasksRequest } from './types/index';
@@ -38,6 +68,8 @@ import { ListSolutionTableMappingsRequest } from './types/index';
 import { ListSolutionTableMappingsResponse } from './types/index';
 import { ListSolutionsRequest } from './types/index';
 import { ListSolutionsResponse } from './types/index';
+import { ModifyEmrAccountRelationRequest } from './types/index';
+import { ModifyEmrAccountRelationResponse } from './types/index';
 import { StartSolutionRequest } from './types/index';
 import { StartSolutionResponse } from './types/index';
 import { StartSolutionSubTaskRequest } from './types/index';
@@ -46,6 +78,8 @@ import { SubmitSolutionRequest } from './types/index';
 import { SubmitSolutionResponse } from './types/index';
 import { UpdateDataSourceRequest } from './types/index';
 import { UpdateDataSourceResponse } from './types/index';
+import { UpdateEntityTagRequest } from './types/index';
+import { UpdateEntityTagResponse } from './types/index';
 import { UpdateSolutionRequest } from './types/index';
 import { UpdateSolutionResponse } from './types/index';
 import { UpdateSolutionTableMappingsRequest } from './types/index';
@@ -55,21 +89,38 @@ import { UpdateSolutionTableMappingsResponse } from './types/index';
 // Output Type Definitions
 // ============================================================================
 export type CreateDataSourceCommandOutput = CommandOutput<CreateDataSourceResponse>;
+export type CreateExclusiveComputeResourceGroupCommandOutput = CommandOutput<CreateExclusiveComputeResourceGroupResponse>;
+export type CreateExclusiveScheduleResourceGroupCommandOutput = CommandOutput<CreateExclusiveScheduleResourceGroupResponse>;
 export type CreateSolutionCommandOutput = CommandOutput<CreateSolutionResponse>;
 export type DeleteDataSourceCommandOutput = CommandOutput<DeleteDataSourceResponse>;
+export type DeleteEmrAccountRelationCommandOutput = CommandOutput<DeleteEmrAccountRelationResponse>;
+export type DeleteEntityTagCommandOutput = CommandOutput<DeleteEntityTagResponse>;
+export type DeleteExclusiveComputeResourceGroupCommandOutput = CommandOutput<DeleteExclusiveComputeResourceGroupResponse>;
+export type DeleteExclusiveScheduleResourceGroupCommandOutput = CommandOutput<DeleteExclusiveScheduleResourceGroupResponse>;
 export type DeleteSolutionCommandOutput = CommandOutput<DeleteSolutionResponse>;
+export type GetBackfillCommandOutput = CommandOutput<GetBackfillResponse>;
+export type GetBackfillInstancesCommandOutput = CommandOutput<GetBackfillInstancesResponse>;
 export type GetDataSourceCommandOutput = CommandOutput<GetDataSourceResponse>;
+export type GetEmrAccountRelationByInternalIdCommandOutput = CommandOutput<GetEmrAccountRelationByInternalIdResponse>;
+export type GetExclusiveComputeResourceGroupCommandOutput = CommandOutput<GetExclusiveComputeResourceGroupResponse>;
+export type GetExclusiveScheduleResourceGroupCommandOutput = CommandOutput<GetExclusiveScheduleResourceGroupResponse>;
 export type GetSolutionCommandOutput = CommandOutput<GetSolutionResponse>;
 export type GetSolutionExecutionCommandOutput = CommandOutput<GetSolutionExecutionResponse>;
+export type LaunchBackfillCommandOutput = CommandOutput<LaunchBackfillResponse>;
 export type ListDataSourcesCommandOutput = CommandOutput<ListDataSourcesResponse>;
+export type ListEntityTagsCommandOutput = CommandOutput<ListEntityTagsResponse>;
+export type ListExclusiveComputeResourceGroupsCommandOutput = CommandOutput<ListExclusiveComputeResourceGroupsResponse>;
+export type ListExclusiveScheduleResourceGroupsCommandOutput = CommandOutput<ListExclusiveScheduleResourceGroupsResponse>;
 export type ListSolutionBatchTasksCommandOutput = CommandOutput<ListSolutionBatchTasksResponse>;
 export type ListSolutionStreamTasksCommandOutput = CommandOutput<ListSolutionStreamTasksResponse>;
 export type ListSolutionTableMappingsCommandOutput = CommandOutput<ListSolutionTableMappingsResponse>;
 export type ListSolutionsCommandOutput = CommandOutput<ListSolutionsResponse>;
+export type ModifyEmrAccountRelationCommandOutput = CommandOutput<ModifyEmrAccountRelationResponse>;
 export type StartSolutionCommandOutput = CommandOutput<StartSolutionResponse>;
 export type StartSolutionSubTaskCommandOutput = CommandOutput<StartSolutionSubTaskResponse>;
 export type SubmitSolutionCommandOutput = CommandOutput<SubmitSolutionResponse>;
 export type UpdateDataSourceCommandOutput = CommandOutput<UpdateDataSourceResponse>;
+export type UpdateEntityTagCommandOutput = CommandOutput<UpdateEntityTagResponse>;
 export type UpdateSolutionCommandOutput = CommandOutput<UpdateSolutionResponse>;
 export type UpdateSolutionTableMappingsCommandOutput = CommandOutput<UpdateSolutionTableMappingsResponse>;
 
@@ -99,6 +150,36 @@ export class CreateDataSourceCommand extends Command<
   constructor(input: CreateDataSourceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateDataSourceCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateExclusiveComputeResourceGroup
+ */
+export class CreateExclusiveComputeResourceGroupCommand extends Command<
+  CreateExclusiveComputeResourceGroupRequest,
+  CreateExclusiveComputeResourceGroupCommandOutput,
+  'CreateExclusiveComputeResourceGroupCommand'
+> {
+  static readonly metaPath = '/CreateExclusiveComputeResourceGroup/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: CreateExclusiveComputeResourceGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateExclusiveComputeResourceGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateExclusiveScheduleResourceGroup
+ */
+export class CreateExclusiveScheduleResourceGroupCommand extends Command<
+  CreateExclusiveScheduleResourceGroupRequest,
+  CreateExclusiveScheduleResourceGroupCommandOutput,
+  'CreateExclusiveScheduleResourceGroupCommand'
+> {
+  static readonly metaPath = '/CreateExclusiveScheduleResourceGroup/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: CreateExclusiveScheduleResourceGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateExclusiveScheduleResourceGroupCommand.metaPath);
   }
 }
 /**
@@ -132,6 +213,66 @@ export class DeleteDataSourceCommand extends Command<
   }
 }
 /**
+ * Command to DeleteEmrAccountRelation
+ */
+export class DeleteEmrAccountRelationCommand extends Command<
+  DeleteEmrAccountRelationRequest,
+  DeleteEmrAccountRelationCommandOutput,
+  'DeleteEmrAccountRelationCommand'
+> {
+  static readonly metaPath = '/DeleteEmrAccountRelation/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: DeleteEmrAccountRelationRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteEmrAccountRelationCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteEntityTag
+ */
+export class DeleteEntityTagCommand extends Command<
+  DeleteEntityTagRequest,
+  DeleteEntityTagCommandOutput,
+  'DeleteEntityTagCommand'
+> {
+  static readonly metaPath = '/DeleteEntityTag/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: DeleteEntityTagRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteEntityTagCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteExclusiveComputeResourceGroup
+ */
+export class DeleteExclusiveComputeResourceGroupCommand extends Command<
+  DeleteExclusiveComputeResourceGroupRequest,
+  DeleteExclusiveComputeResourceGroupCommandOutput,
+  'DeleteExclusiveComputeResourceGroupCommand'
+> {
+  static readonly metaPath = '/DeleteExclusiveComputeResourceGroup/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: DeleteExclusiveComputeResourceGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteExclusiveComputeResourceGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteExclusiveScheduleResourceGroup
+ */
+export class DeleteExclusiveScheduleResourceGroupCommand extends Command<
+  DeleteExclusiveScheduleResourceGroupRequest,
+  DeleteExclusiveScheduleResourceGroupCommandOutput,
+  'DeleteExclusiveScheduleResourceGroupCommand'
+> {
+  static readonly metaPath = '/DeleteExclusiveScheduleResourceGroup/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: DeleteExclusiveScheduleResourceGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteExclusiveScheduleResourceGroupCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteSolution
  */
 export class DeleteSolutionCommand extends Command<
@@ -147,6 +288,36 @@ export class DeleteSolutionCommand extends Command<
   }
 }
 /**
+ * Command to GetBackfill
+ */
+export class GetBackfillCommand extends Command<
+  GetBackfillRequest,
+  GetBackfillCommandOutput,
+  'GetBackfillCommand'
+> {
+  static readonly metaPath = '/GetBackfill/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: GetBackfillRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetBackfillCommand.metaPath);
+  }
+}
+/**
+ * Command to GetBackfillInstances
+ */
+export class GetBackfillInstancesCommand extends Command<
+  GetBackfillInstancesRequest,
+  GetBackfillInstancesCommandOutput,
+  'GetBackfillInstancesCommand'
+> {
+  static readonly metaPath = '/GetBackfillInstances/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: GetBackfillInstancesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetBackfillInstancesCommand.metaPath);
+  }
+}
+/**
  * Command to GetDataSource
  */
 export class GetDataSourceCommand extends Command<
@@ -159,6 +330,51 @@ export class GetDataSourceCommand extends Command<
   constructor(input: GetDataSourceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetDataSourceCommand.metaPath);
+  }
+}
+/**
+ * Command to GetEmrAccountRelationByInternalId
+ */
+export class GetEmrAccountRelationByInternalIdCommand extends Command<
+  GetEmrAccountRelationByInternalIdRequest,
+  GetEmrAccountRelationByInternalIdCommandOutput,
+  'GetEmrAccountRelationByInternalIdCommand'
+> {
+  static readonly metaPath = '/GetEmrAccountRelationByInternalId/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: GetEmrAccountRelationByInternalIdRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetEmrAccountRelationByInternalIdCommand.metaPath);
+  }
+}
+/**
+ * Command to GetExclusiveComputeResourceGroup
+ */
+export class GetExclusiveComputeResourceGroupCommand extends Command<
+  GetExclusiveComputeResourceGroupRequest,
+  GetExclusiveComputeResourceGroupCommandOutput,
+  'GetExclusiveComputeResourceGroupCommand'
+> {
+  static readonly metaPath = '/GetExclusiveComputeResourceGroup/2026-03-01/dataleap/get/text_plain/';
+
+  constructor(input: GetExclusiveComputeResourceGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetExclusiveComputeResourceGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to GetExclusiveScheduleResourceGroup
+ */
+export class GetExclusiveScheduleResourceGroupCommand extends Command<
+  GetExclusiveScheduleResourceGroupRequest,
+  GetExclusiveScheduleResourceGroupCommandOutput,
+  'GetExclusiveScheduleResourceGroupCommand'
+> {
+  static readonly metaPath = '/GetExclusiveScheduleResourceGroup/2026-03-01/dataleap/get/text_plain/';
+
+  constructor(input: GetExclusiveScheduleResourceGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetExclusiveScheduleResourceGroupCommand.metaPath);
   }
 }
 /**
@@ -192,6 +408,21 @@ export class GetSolutionExecutionCommand extends Command<
   }
 }
 /**
+ * Command to LaunchBackfill
+ */
+export class LaunchBackfillCommand extends Command<
+  LaunchBackfillRequest,
+  LaunchBackfillCommandOutput,
+  'LaunchBackfillCommand'
+> {
+  static readonly metaPath = '/LaunchBackfill/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: LaunchBackfillRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(LaunchBackfillCommand.metaPath);
+  }
+}
+/**
  * Command to ListDataSources
  */
 export class ListDataSourcesCommand extends Command<
@@ -204,6 +435,51 @@ export class ListDataSourcesCommand extends Command<
   constructor(input: ListDataSourcesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListDataSourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListEntityTags
+ */
+export class ListEntityTagsCommand extends Command<
+  ListEntityTagsRequest,
+  ListEntityTagsCommandOutput,
+  'ListEntityTagsCommand'
+> {
+  static readonly metaPath = '/ListEntityTags/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: ListEntityTagsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListEntityTagsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListExclusiveComputeResourceGroups
+ */
+export class ListExclusiveComputeResourceGroupsCommand extends Command<
+  ListExclusiveComputeResourceGroupsRequest,
+  ListExclusiveComputeResourceGroupsCommandOutput,
+  'ListExclusiveComputeResourceGroupsCommand'
+> {
+  static readonly metaPath = '/ListExclusiveComputeResourceGroups/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: ListExclusiveComputeResourceGroupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListExclusiveComputeResourceGroupsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListExclusiveScheduleResourceGroups
+ */
+export class ListExclusiveScheduleResourceGroupsCommand extends Command<
+  ListExclusiveScheduleResourceGroupsRequest,
+  ListExclusiveScheduleResourceGroupsCommandOutput,
+  'ListExclusiveScheduleResourceGroupsCommand'
+> {
+  static readonly metaPath = '/ListExclusiveScheduleResourceGroups/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: ListExclusiveScheduleResourceGroupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListExclusiveScheduleResourceGroupsCommand.metaPath);
   }
 }
 /**
@@ -267,6 +543,21 @@ export class ListSolutionsCommand extends Command<
   }
 }
 /**
+ * Command to ModifyEmrAccountRelation
+ */
+export class ModifyEmrAccountRelationCommand extends Command<
+  ModifyEmrAccountRelationRequest,
+  ModifyEmrAccountRelationCommandOutput,
+  'ModifyEmrAccountRelationCommand'
+> {
+  static readonly metaPath = '/ModifyEmrAccountRelation/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: ModifyEmrAccountRelationRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyEmrAccountRelationCommand.metaPath);
+  }
+}
+/**
  * Command to StartSolution
  */
 export class StartSolutionCommand extends Command<
@@ -327,6 +618,21 @@ export class UpdateDataSourceCommand extends Command<
   }
 }
 /**
+ * Command to UpdateEntityTag
+ */
+export class UpdateEntityTagCommand extends Command<
+  UpdateEntityTagRequest,
+  UpdateEntityTagCommandOutput,
+  'UpdateEntityTagCommand'
+> {
+  static readonly metaPath = '/UpdateEntityTag/2026-03-01/dataleap/post/application_json/';
+
+  constructor(input: UpdateEntityTagRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateEntityTagCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateSolution
  */
 export class UpdateSolutionCommand extends Command<
@@ -360,21 +666,38 @@ export class UpdateSolutionTableMappingsCommand extends Command<
 export default {
   DATALEAP20260301Client,
   CreateDataSourceCommand,
+  CreateExclusiveComputeResourceGroupCommand,
+  CreateExclusiveScheduleResourceGroupCommand,
   CreateSolutionCommand,
   DeleteDataSourceCommand,
+  DeleteEmrAccountRelationCommand,
+  DeleteEntityTagCommand,
+  DeleteExclusiveComputeResourceGroupCommand,
+  DeleteExclusiveScheduleResourceGroupCommand,
   DeleteSolutionCommand,
+  GetBackfillCommand,
+  GetBackfillInstancesCommand,
   GetDataSourceCommand,
+  GetEmrAccountRelationByInternalIdCommand,
+  GetExclusiveComputeResourceGroupCommand,
+  GetExclusiveScheduleResourceGroupCommand,
   GetSolutionCommand,
   GetSolutionExecutionCommand,
+  LaunchBackfillCommand,
   ListDataSourcesCommand,
+  ListEntityTagsCommand,
+  ListExclusiveComputeResourceGroupsCommand,
+  ListExclusiveScheduleResourceGroupsCommand,
   ListSolutionBatchTasksCommand,
   ListSolutionStreamTasksCommand,
   ListSolutionTableMappingsCommand,
   ListSolutionsCommand,
+  ModifyEmrAccountRelationCommand,
   StartSolutionCommand,
   StartSolutionSubTaskCommand,
   SubmitSolutionCommand,
   UpdateDataSourceCommand,
+  UpdateEntityTagCommand,
   UpdateSolutionCommand,
   UpdateSolutionTableMappingsCommand,
 };

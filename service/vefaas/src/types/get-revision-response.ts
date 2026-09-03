@@ -13,6 +13,7 @@
  */
 
 import { AsyncTaskConfigForGetRevisionOutput } from './async-task-config-for-get-revision-output';
+import { EfsMountConfigForGetRevisionOutput } from './efs-mount-config-for-get-revision-output';
 import { EnvForGetRevisionOutput } from './env-for-get-revision-output';
 import { HealthCheckConfigForGetRevisionOutput } from './health-check-config-for-get-revision-output';
 import { NasStorageForGetRevisionOutput } from './nas-storage-for-get-revision-output';
@@ -56,6 +57,12 @@ export interface GetRevisionResponse {
      * @memberof GetRevisionResponse
      */
     Description?: string;
+
+    /**
+     * @type {EfsMountConfigForGetRevisionOutput}
+     * @memberof GetRevisionResponse
+     */
+    EfsMountConfig?: EfsMountConfigForGetRevisionOutput;
 
     /**
      * @type {Array<EnvForGetRevisionOutput>}

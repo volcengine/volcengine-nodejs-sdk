@@ -39,7 +39,7 @@ export interface InstanceForDescribeDBInstancesOutput {
      * @type {string}
      * @memberof InstanceForDescribeDBInstancesOutput
      */
-    DBEngineVersion?: InstanceForDescribeDBInstancesOutputDBEngineVersionEnum;
+    DBEngineVersion?: string;
 
     /**
      * @type {string}
@@ -51,7 +51,7 @@ export interface InstanceForDescribeDBInstancesOutput {
      * @type {string}
      * @memberof InstanceForDescribeDBInstancesOutput
      */
-    DeletionProtection?: InstanceForDescribeDBInstancesOutputDeletionProtectionEnum;
+    DeletionProtection?: string;
 
     /**
      * @type {string}
@@ -69,7 +69,7 @@ export interface InstanceForDescribeDBInstancesOutput {
      * @type {string}
      * @memberof InstanceForDescribeDBInstancesOutput
      */
-    InstanceStatus?: InstanceForDescribeDBInstancesOutputInstanceStatusEnum;
+    InstanceStatus?: string;
 
     /**
      * @type {string}
@@ -111,7 +111,13 @@ export interface InstanceForDescribeDBInstancesOutput {
      * @type {string}
      * @memberof InstanceForDescribeDBInstancesOutput
      */
-    StorageChargeType?: InstanceForDescribeDBInstancesOutputStorageChargeTypeEnum;
+    StorageChargeType?: string;
+
+    /**
+     * @type {string}
+     * @memberof InstanceForDescribeDBInstancesOutput
+     */
+    StorageType?: string;
 
     /**
      * @type {number}
@@ -149,52 +155,3 @@ export interface InstanceForDescribeDBInstancesOutput {
      */
     ZoneIds?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum InstanceForDescribeDBInstancesOutputDBEngineVersionEnum {
-    MySQL57 = 'MySQL_5_7',
-    MySQL80 = 'MySQL_8_0'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum InstanceForDescribeDBInstancesOutputDeletionProtectionEnum {
-    Disabled = 'disabled',
-    Enabled = 'enabled'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum InstanceForDescribeDBInstancesOutputInstanceStatusEnum {
-    AddressModifying = 'AddressModifying',
-    AllowListMaintaining = 'AllowListMaintaining',
-    CreateFailed = 'CreateFailed',
-    Creating = 'Creating',
-    Deleting = 'Deleting',
-    Error = 'Error',
-    Expired = 'Expired',
-    Owing = 'Owing',
-    PrimaryChanging = 'PrimaryChanging',
-    Reclaiming = 'Reclaiming',
-    Restarting = 'Restarting',
-    Restoring = 'Restoring',
-    Resuming = 'Resuming',
-    Running = 'Running',
-    Scaling = 'Scaling',
-    Upgrading = 'Upgrading',
-    WaitingPaid = 'WaitingPaid'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum InstanceForDescribeDBInstancesOutputStorageChargeTypeEnum {
-    PostPaid = 'PostPaid',
-    PrePaid = 'PrePaid'
-}
-

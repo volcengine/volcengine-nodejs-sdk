@@ -51,6 +51,12 @@ export interface DescribeTopicDetailResponse {
     InstanceRegion?: string;
 
     /**
+     * @type {number}
+     * @memberof DescribeTopicDetailResponse
+     */
+    LiteTopicTTLMinutes?: number;
+
+    /**
      * @type {string}
      * @memberof DescribeTopicDetailResponse
      */

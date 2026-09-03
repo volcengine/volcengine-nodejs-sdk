@@ -30,7 +30,7 @@ export interface ParameterForDescribeModifiableParametersOutput {
      * @type {string}
      * @memberof ParameterForDescribeModifiableParametersOutput
      */
-    DataType?: ParameterForDescribeModifiableParametersOutputDataTypeEnum;
+    DataType?: string;
 
     /**
      * @type {boolean}
@@ -78,24 +78,5 @@ export interface ParameterForDescribeModifiableParametersOutput {
      * @type {string}
      * @memberof ParameterForDescribeModifiableParametersOutput
      */
-    Status?: ParameterForDescribeModifiableParametersOutputStatusEnum;
+    Status?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum ParameterForDescribeModifiableParametersOutputDataTypeEnum {
-    FLOAT = 'FLOAT',
-    INT = 'INT',
-    STRING = 'STRING'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum ParameterForDescribeModifiableParametersOutputStatusEnum {
-    Applied = 'Applied',
-    Syncing = 'Syncing'
-}
-

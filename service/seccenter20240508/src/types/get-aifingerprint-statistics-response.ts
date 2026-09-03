@@ -24,6 +24,12 @@ export interface GetAIFingerprintStatisticsResponse {
      * @type {number}
      * @memberof GetAIFingerprintStatisticsResponse
      */
+    AIApp?: number;
+
+    /**
+     * @type {number}
+     * @memberof GetAIFingerprintStatisticsResponse
+     */
     App?: number;
 
     /**

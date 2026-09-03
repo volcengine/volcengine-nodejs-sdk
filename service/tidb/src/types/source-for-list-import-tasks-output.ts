@@ -12,12 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AzureBlobForListImportTasksOutput } from './azure-blob-for-list-import-tasks-output';
-import { GcsForListImportTasksOutput } from './gcs-for-list-import-tasks-output';
 import { LocalForListImportTasksOutput } from './local-for-list-import-tasks-output';
-import { OssForListImportTasksOutput } from './oss-for-list-import-tasks-output';
-import { S3CompatibleForListImportTasksOutput } from './s3-compatible-for-list-import-tasks-output';
-import { S3ForListImportTasksOutput } from './s3-for-list-import-tasks-output';
 import { TargetTableInfoForListImportTasksOutput } from './target-table-info-for-list-import-tasks-output';
 import { TosForListImportTasksOutput } from './tos-for-list-import-tasks-output';
  /**
@@ -29,40 +24,10 @@ import { TosForListImportTasksOutput } from './tos-for-list-import-tasks-output'
 export interface SourceForListImportTasksOutput {
 
     /**
-     * @type {AzureBlobForListImportTasksOutput}
-     * @memberof SourceForListImportTasksOutput
-     */
-    AzureBlob?: AzureBlobForListImportTasksOutput;
-
-    /**
-     * @type {GcsForListImportTasksOutput}
-     * @memberof SourceForListImportTasksOutput
-     */
-    Gcs?: GcsForListImportTasksOutput;
-
-    /**
      * @type {LocalForListImportTasksOutput}
      * @memberof SourceForListImportTasksOutput
      */
     Local?: LocalForListImportTasksOutput;
-
-    /**
-     * @type {OssForListImportTasksOutput}
-     * @memberof SourceForListImportTasksOutput
-     */
-    Oss?: OssForListImportTasksOutput;
-
-    /**
-     * @type {S3ForListImportTasksOutput}
-     * @memberof SourceForListImportTasksOutput
-     */
-    S3?: S3ForListImportTasksOutput;
-
-    /**
-     * @type {S3CompatibleForListImportTasksOutput}
-     * @memberof SourceForListImportTasksOutput
-     */
-    S3Compatible?: S3CompatibleForListImportTasksOutput;
 
     /**
      * @type {Array<TargetTableInfoForListImportTasksOutput>}

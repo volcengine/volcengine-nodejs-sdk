@@ -62,4 +62,16 @@ export interface GetAISessionVulnInfoResponse {
      * @memberof GetAISessionVulnInfoResponse
      */
     Suggest?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetAISessionVulnInfoResponse
+     */
+    ToolID?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetAISessionVulnInfoResponse
+     */
+    ToolName?: string;
 }

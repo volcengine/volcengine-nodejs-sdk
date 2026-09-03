@@ -62,12 +62,16 @@ import { StartRegistryRequest } from './types/index';
 import { StartRegistryResponse } from './types/index';
 import { UpdatePublicEndpointRequest } from './types/index';
 import { UpdatePublicEndpointResponse } from './types/index';
+import { UpdateRegistryRequest } from './types/index';
+import { UpdateRegistryResponse } from './types/index';
 import { UpdateRepositoryRequest } from './types/index';
 import { UpdateRepositoryResponse } from './types/index';
 import { UpdateRobotAccountPasswordRequest } from './types/index';
 import { UpdateRobotAccountPasswordResponse } from './types/index';
 import { UpdateRobotAccountRequest } from './types/index';
 import { UpdateRobotAccountResponse } from './types/index';
+import { UpdateTagDescriptionRequest } from './types/index';
+import { UpdateTagDescriptionResponse } from './types/index';
 import { UpdateVpcEndpointRequest } from './types/index';
 import { UpdateVpcEndpointResponse } from './types/index';
 
@@ -98,11 +102,12 @@ export type ListTagsCommandOutput = CommandOutput<ListTagsResponse>;
 export type SetUserCommandOutput = CommandOutput<SetUserResponse>;
 export type StartRegistryCommandOutput = CommandOutput<StartRegistryResponse>;
 export type UpdatePublicEndpointCommandOutput = CommandOutput<UpdatePublicEndpointResponse>;
+export type UpdateRegistryCommandOutput = CommandOutput<UpdateRegistryResponse>;
 export type UpdateRepositoryCommandOutput = CommandOutput<UpdateRepositoryResponse>;
 export type UpdateRobotAccountCommandOutput = CommandOutput<UpdateRobotAccountResponse>;
 export type UpdateRobotAccountPasswordCommandOutput = CommandOutput<UpdateRobotAccountPasswordResponse>;
+export type UpdateTagDescriptionCommandOutput = CommandOutput<UpdateTagDescriptionResponse>;
 export type UpdateVpcEndpointCommandOutput = CommandOutput<UpdateVpcEndpointResponse>;
-
 
 /**
  * CRClient Service Client
@@ -478,6 +483,21 @@ export class UpdatePublicEndpointCommand extends Command<
   }
 }
 /**
+ * Command to UpdateRegistry
+ */
+export class UpdateRegistryCommand extends Command<
+  UpdateRegistryRequest,
+  UpdateRegistryCommandOutput,
+  'UpdateRegistryCommand'
+> {
+  static readonly metaPath = '/UpdateRegistry/2022-05-12/cr/post/application_json/';
+
+  constructor(input: UpdateRegistryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateRegistryCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateRepository
  */
 export class UpdateRepositoryCommand extends Command<
@@ -523,6 +543,21 @@ export class UpdateRobotAccountPasswordCommand extends Command<
   }
 }
 /**
+ * Command to UpdateTagDescription
+ */
+export class UpdateTagDescriptionCommand extends Command<
+  UpdateTagDescriptionRequest,
+  UpdateTagDescriptionCommandOutput,
+  'UpdateTagDescriptionCommand'
+> {
+  static readonly metaPath = '/UpdateTagDescription/2022-05-12/cr/post/application_json/';
+
+  constructor(input: UpdateTagDescriptionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateTagDescriptionCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateVpcEndpoint
  */
 export class UpdateVpcEndpointCommand extends Command<
@@ -564,8 +599,10 @@ export default {
   SetUserCommand,
   StartRegistryCommand,
   UpdatePublicEndpointCommand,
+  UpdateRegistryCommand,
   UpdateRepositoryCommand,
   UpdateRobotAccountCommand,
   UpdateRobotAccountPasswordCommand,
+  UpdateTagDescriptionCommand,
   UpdateVpcEndpointCommand,
 };

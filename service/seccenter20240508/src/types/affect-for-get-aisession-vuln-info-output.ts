@@ -187,6 +187,18 @@ export interface AffectForGetAISessionVulnInfoOutput {
      * @type {string}
      * @memberof AffectForGetAISessionVulnInfoOutput
      */
+    VulnName?: string;
+
+    /**
+     * @type {string}
+     * @memberof AffectForGetAISessionVulnInfoOutput
+     */
+    VulnNameEn?: string;
+
+    /**
+     * @type {string}
+     * @memberof AffectForGetAISessionVulnInfoOutput
+     */
     WorkloadID?: string;
 
     /**

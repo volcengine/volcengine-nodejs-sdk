@@ -19,4 +19,10 @@
  * @interface DeleteLoginConfigResponse
  */
 export interface DeleteLoginConfigResponse {
+
+    /**
+     * @type {string}
+     * @memberof DeleteLoginConfigResponse
+     */
+    Data?: string;
 }

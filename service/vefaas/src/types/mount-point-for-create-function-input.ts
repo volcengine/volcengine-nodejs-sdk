@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { BackendForCreateFunctionInput } from './backend-for-create-function-input';
  /**
  * 
  *
@@ -21,22 +22,10 @@
 export interface MountPointForCreateFunctionInput {
 
     /**
-     * @type {string}
+     * @type {BackendForCreateFunctionInput}
      * @memberof MountPointForCreateFunctionInput
      */
-    BucketName?: string;
-
-    /**
-     * @type {string}
-     * @memberof MountPointForCreateFunctionInput
-     */
-    BucketPath?: string;
-
-    /**
-     * @type {string}
-     * @memberof MountPointForCreateFunctionInput
-     */
-    Endpoint?: string;
+    Backend?: BackendForCreateFunctionInput;
 
     /**
      * @type {string}

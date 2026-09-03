@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { MetadataForCreateSandboxSnapshotInput } from './metadata-for-create-sandbox-snapshot-input';
  /**
  * 
  *
@@ -25,6 +26,18 @@ export interface CreateSandboxSnapshotRequest {
      * @memberof CreateSandboxSnapshotRequest
      */
     FunctionId: string;
+
+    /**
+     * @type {MetadataForCreateSandboxSnapshotInput}
+     * @memberof CreateSandboxSnapshotRequest
+     */
+    Metadata?: MetadataForCreateSandboxSnapshotInput;
+
+    /**
+     * @type {number}
+     * @memberof CreateSandboxSnapshotRequest
+     */
+    RetentionDays?: number;
 
     /**
      * @type {string}

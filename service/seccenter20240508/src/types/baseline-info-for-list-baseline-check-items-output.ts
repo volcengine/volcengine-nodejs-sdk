@@ -109,4 +109,10 @@ export interface BaselineInfoForListBaselineCheckItemsOutput {
      * @memberof BaselineInfoForListBaselineCheckItemsOutput
      */
     UpdateTime?: number;
+
+    /**
+     * @type {boolean}
+     * @memberof BaselineInfoForListBaselineCheckItemsOutput
+     */
+    WhitelistStatus?: boolean;
 }

@@ -1,10 +1,9 @@
 {
   "actions": [
-    "CreateCluster",
-    "ListClusters",
-    "UpdateClusterConfig"
+    "DeleteCluster",
+    "UpdateKubernetesObservabilityComponentConfigs"
   ],
-  "description": "VKE: 修改 CreateCluster, ListClusters, UpdateClusterConfig",
+  "description": "VKE: 新增 UpdateKubernetesObservabilityComponentConfigs；修改 DeleteCluster",
   "modules": "service/vke",
   "type": "breaking-change"
 }

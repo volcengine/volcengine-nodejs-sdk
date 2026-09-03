@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { BackendForGetFunctionOutput } from './backend-for-get-function-output';
  /**
  * 
  *
@@ -21,22 +22,10 @@
 export interface MountPointForGetFunctionOutput {
 
     /**
-     * @type {string}
+     * @type {BackendForGetFunctionOutput}
      * @memberof MountPointForGetFunctionOutput
      */
-    BucketName?: string;
-
-    /**
-     * @type {string}
-     * @memberof MountPointForGetFunctionOutput
-     */
-    BucketPath?: string;
-
-    /**
-     * @type {string}
-     * @memberof MountPointForGetFunctionOutput
-     */
-    Endpoint?: string;
+    Backend?: BackendForGetFunctionOutput;
 
     /**
      * @type {string}

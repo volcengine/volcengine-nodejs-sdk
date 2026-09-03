@@ -45,6 +45,12 @@ export interface ConditionsForListOrderedHostsBasicInfosInput {
     Hostname?: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof ConditionsForListOrderedHostsBasicInfosInput
+     */
+    InstanceStatus?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof ConditionsForListOrderedHostsBasicInfosInput
      */

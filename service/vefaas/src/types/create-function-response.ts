@@ -13,6 +13,7 @@
  */
 
 import { AsyncTaskConfigForCreateFunctionOutput } from './async-task-config-for-create-function-output';
+import { EfsMountConfigForCreateFunctionOutput } from './efs-mount-config-for-create-function-output';
 import { EnvForCreateFunctionOutput } from './env-for-create-function-output';
 import { NasStorageForCreateFunctionOutput } from './nas-storage-for-create-function-output';
 import { TagForCreateFunctionOutput } from './tag-for-create-function-output';
@@ -80,6 +81,12 @@ export interface CreateFunctionResponse {
      * @memberof CreateFunctionResponse
      */
     Description?: string;
+
+    /**
+     * @type {EfsMountConfigForCreateFunctionOutput}
+     * @memberof CreateFunctionResponse
+     */
+    EfsMountConfig?: EfsMountConfigForCreateFunctionOutput;
 
     /**
      * @type {boolean}

@@ -32,18 +32,6 @@ export interface DataForVideoEditorListSubtitlesOutput {
      * @type {string}
      * @memberof DataForVideoEditorListSubtitlesOutput
      */
-    assistText?: string;
-
-    /**
-     * @type {number}
-     * @memberof DataForVideoEditorListSubtitlesOutput
-     */
-    assistTextType?: number;
-
-    /**
-     * @type {string}
-     * @memberof DataForVideoEditorListSubtitlesOutput
-     */
     createTime?: string;
 
     /**
@@ -56,25 +44,19 @@ export interface DataForVideoEditorListSubtitlesOutput {
      * @type {string}
      * @memberof DataForVideoEditorListSubtitlesOutput
      */
+    emotionTag?: string;
+
+    /**
+     * @type {string}
+     * @memberof DataForVideoEditorListSubtitlesOutput
+     */
     endTime?: string;
 
     /**
      * @type {string}
      * @memberof DataForVideoEditorListSubtitlesOutput
      */
-    extra?: string;
-
-    /**
-     * @type {string}
-     * @memberof DataForVideoEditorListSubtitlesOutput
-     */
     operator?: string;
-
-    /**
-     * @type {string}
-     * @memberof DataForVideoEditorListSubtitlesOutput
-     */
-    relatedSegmentId?: string;
 
     /**
      * @type {string}

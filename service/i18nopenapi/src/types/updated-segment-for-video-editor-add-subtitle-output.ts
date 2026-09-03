@@ -32,18 +32,6 @@ export interface UpdatedSegmentForVideoEditorAddSubtitleOutput {
      * @type {string}
      * @memberof UpdatedSegmentForVideoEditorAddSubtitleOutput
      */
-    assistText?: string;
-
-    /**
-     * @type {number}
-     * @memberof UpdatedSegmentForVideoEditorAddSubtitleOutput
-     */
-    assistTextType?: number;
-
-    /**
-     * @type {string}
-     * @memberof UpdatedSegmentForVideoEditorAddSubtitleOutput
-     */
     createTime?: string;
 
     /**
@@ -56,25 +44,19 @@ export interface UpdatedSegmentForVideoEditorAddSubtitleOutput {
      * @type {string}
      * @memberof UpdatedSegmentForVideoEditorAddSubtitleOutput
      */
+    emotionTag?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdatedSegmentForVideoEditorAddSubtitleOutput
+     */
     endTime?: string;
 
     /**
      * @type {string}
      * @memberof UpdatedSegmentForVideoEditorAddSubtitleOutput
      */
-    extra?: string;
-
-    /**
-     * @type {string}
-     * @memberof UpdatedSegmentForVideoEditorAddSubtitleOutput
-     */
     operator?: string;
-
-    /**
-     * @type {string}
-     * @memberof UpdatedSegmentForVideoEditorAddSubtitleOutput
-     */
-    relatedSegmentId?: string;
 
     /**
      * @type {string}

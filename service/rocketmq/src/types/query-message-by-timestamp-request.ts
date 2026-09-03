@@ -27,6 +27,12 @@ export interface QueryMessageByTimestampRequest {
     InstanceId: string;
 
     /**
+     * @type {string}
+     * @memberof QueryMessageByTimestampRequest
+     */
+    LiteTopic?: string;
+
+    /**
      * @type {number}
      * @memberof QueryMessageByTimestampRequest
      */

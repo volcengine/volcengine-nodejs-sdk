@@ -30,7 +30,7 @@ export interface InstanceForDescribeCrossRegionBackupDBInstancesOutput {
      * @type {string}
      * @memberof InstanceForDescribeCrossRegionBackupDBInstancesOutput
      */
-    DBEngineVersion?: InstanceForDescribeCrossRegionBackupDBInstancesOutputDBEngineVersionEnum;
+    DBEngineVersion?: string;
 
     /**
      * @type {string}
@@ -80,13 +80,3 @@ export interface InstanceForDescribeCrossRegionBackupDBInstancesOutput {
      */
     TimeZone?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum InstanceForDescribeCrossRegionBackupDBInstancesOutputDBEngineVersionEnum {
-    MySQL57 = 'MySQL_5_7',
-    MySQL80 = 'MySQL_8_0'
-}
-

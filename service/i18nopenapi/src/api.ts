@@ -14,8 +14,6 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
-import { CreateVideoCreateRequest } from './types/index';
-import { CreateVideoCreateResponse } from './types/index';
 import { DocumentCreateRequest } from './types/index';
 import { DocumentCreateResponse } from './types/index';
 import { DocumentTaskCreateRequest } from './types/index';
@@ -184,8 +182,6 @@ import { VideoEditorDeleteSubtitleRequest } from './types/index';
 import { VideoEditorDeleteSubtitleResponse } from './types/index';
 import { VideoEditorDownloadSubtitleFileUrlRequest } from './types/index';
 import { VideoEditorDownloadSubtitleFileUrlResponse } from './types/index';
-import { VideoEditorGenDubbingRequest } from './types/index';
-import { VideoEditorGenDubbingResponse } from './types/index';
 import { VideoEditorGetEmotionTagsRequest } from './types/index';
 import { VideoEditorGetEmotionTagsResponse } from './types/index';
 import { VideoEditorGetSpeakersRequest } from './types/index';
@@ -242,6 +238,8 @@ import { VideoProjectSubtitleUploadRequest } from './types/index';
 import { VideoProjectSubtitleUploadResponse } from './types/index';
 import { VideoProjectSuppressionStartRequest } from './types/index';
 import { VideoProjectSuppressionStartResponse } from './types/index';
+import { VideoProjectTaskBatchSetExpeditedRequest } from './types/index';
+import { VideoProjectTaskBatchSetExpeditedResponse } from './types/index';
 import { VideoProjectTaskBatchStartAIFlowRequest } from './types/index';
 import { VideoProjectTaskBatchStartAIFlowResponse } from './types/index';
 import { VideoProjectTaskDetailRequest } from './types/index';
@@ -252,8 +250,6 @@ import { VideoProjectVideoDeleteRequest } from './types/index';
 import { VideoProjectVideoDeleteResponse } from './types/index';
 import { VideoProjectVideoUploadRequest } from './types/index';
 import { VideoProjectVideoUploadResponse } from './types/index';
-import { VideoResourceUploadRequest } from './types/index';
-import { VideoResourceUploadResponse } from './types/index';
 import { VideoTermBasesRequest } from './types/index';
 import { VideoTermBasesResponse } from './types/index';
 import { WebhooksCreateRequest } from './types/index';
@@ -262,7 +258,6 @@ import { WebhooksCreateResponse } from './types/index';
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
-export type CreateVideoCreateCommandOutput = CommandOutput<CreateVideoCreateResponse>;
 export type DocumentCreateCommandOutput = CommandOutput<DocumentCreateResponse>;
 export type DocumentTaskCreateCommandOutput = CommandOutput<DocumentTaskCreateResponse>;
 export type DocumentTaskDeleteCommandOutput = CommandOutput<DocumentTaskDeleteResponse>;
@@ -347,7 +342,6 @@ export type VideoEditorDeleteEmotionTagCommandOutput = CommandOutput<VideoEditor
 export type VideoEditorDeleteSpeakerCommandOutput = CommandOutput<VideoEditorDeleteSpeakerResponse>;
 export type VideoEditorDeleteSubtitleCommandOutput = CommandOutput<VideoEditorDeleteSubtitleResponse>;
 export type VideoEditorDownloadSubtitleFileUrlCommandOutput = CommandOutput<VideoEditorDownloadSubtitleFileUrlResponse>;
-export type VideoEditorGenDubbingCommandOutput = CommandOutput<VideoEditorGenDubbingResponse>;
 export type VideoEditorGetEmotionTagsCommandOutput = CommandOutput<VideoEditorGetEmotionTagsResponse>;
 export type VideoEditorGetSpeakersCommandOutput = CommandOutput<VideoEditorGetSpeakersResponse>;
 export type VideoEditorListSubtitlesCommandOutput = CommandOutput<VideoEditorListSubtitlesResponse>;
@@ -376,12 +370,12 @@ export type VideoProjectSubmitTermValidationCommandOutput = CommandOutput<VideoP
 export type VideoProjectSubtitleDeleteCommandOutput = CommandOutput<VideoProjectSubtitleDeleteResponse>;
 export type VideoProjectSubtitleUploadCommandOutput = CommandOutput<VideoProjectSubtitleUploadResponse>;
 export type VideoProjectSuppressionStartCommandOutput = CommandOutput<VideoProjectSuppressionStartResponse>;
+export type VideoProjectTaskBatchSetExpeditedCommandOutput = CommandOutput<VideoProjectTaskBatchSetExpeditedResponse>;
 export type VideoProjectTaskBatchStartAIFlowCommandOutput = CommandOutput<VideoProjectTaskBatchStartAIFlowResponse>;
 export type VideoProjectTaskDetailCommandOutput = CommandOutput<VideoProjectTaskDetailResponse>;
 export type VideoProjectTaskListCommandOutput = CommandOutput<VideoProjectTaskListResponse>;
 export type VideoProjectVideoDeleteCommandOutput = CommandOutput<VideoProjectVideoDeleteResponse>;
 export type VideoProjectVideoUploadCommandOutput = CommandOutput<VideoProjectVideoUploadResponse>;
-export type VideoResourceUploadCommandOutput = CommandOutput<VideoResourceUploadResponse>;
 export type VideoTermBasesCommandOutput = CommandOutput<VideoTermBasesResponse>;
 export type WebhooksCreateCommandOutput = CommandOutput<WebhooksCreateResponse>;
 
@@ -398,21 +392,6 @@ export class I18NOPENAPIClient extends Client {
   }
 }
 
-/**
- * Command to CreateVideoCreate
- */
-export class CreateVideoCreateCommand extends Command<
-  CreateVideoCreateRequest,
-  CreateVideoCreateCommandOutput,
-  'CreateVideoCreateCommand'
-> {
-  static readonly metaPath = '/CreateVideoCreate/2021-05-21/i18n_openapi/post/application_json/';
-
-  constructor(input: CreateVideoCreateRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(CreateVideoCreateCommand.metaPath);
-  }
-}
 /**
  * Command to DocumentCreate
  */
@@ -1674,21 +1653,6 @@ export class VideoEditorDownloadSubtitleFileUrlCommand extends Command<
   }
 }
 /**
- * Command to VideoEditorGenDubbing
- */
-export class VideoEditorGenDubbingCommand extends Command<
-  VideoEditorGenDubbingRequest,
-  VideoEditorGenDubbingCommandOutput,
-  'VideoEditorGenDubbingCommand'
-> {
-  static readonly metaPath = '/VideoEditorGenDubbing/2021-05-21/i18n_openapi/get/text_plain/';
-
-  constructor(input: VideoEditorGenDubbingRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(VideoEditorGenDubbingCommand.metaPath);
-  }
-}
-/**
  * Command to VideoEditorGetEmotionTags
  */
 export class VideoEditorGetEmotionTagsCommand extends Command<
@@ -2056,7 +2020,7 @@ export class VideoProjectSubmitTermValidationCommand extends Command<
   VideoProjectSubmitTermValidationCommandOutput,
   'VideoProjectSubmitTermValidationCommand'
 > {
-  static readonly metaPath = '/VideoProjectSubmitTermValidation/2021-05-21/i18n_openapi/get/text_plain/';
+  static readonly metaPath = '/VideoProjectSubmitTermValidation/2021-05-21/i18n_openapi/post/application_json/';
 
   constructor(input: VideoProjectSubmitTermValidationRequest) {
     super(input);
@@ -2106,6 +2070,21 @@ export class VideoProjectSuppressionStartCommand extends Command<
   constructor(input: VideoProjectSuppressionStartRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectSuppressionStartCommand.metaPath);
+  }
+}
+/**
+ * Command to VideoProjectTaskBatchSetExpedited
+ */
+export class VideoProjectTaskBatchSetExpeditedCommand extends Command<
+  VideoProjectTaskBatchSetExpeditedRequest,
+  VideoProjectTaskBatchSetExpeditedCommandOutput,
+  'VideoProjectTaskBatchSetExpeditedCommand'
+> {
+  static readonly metaPath = '/VideoProjectTaskBatchSetExpedited/2021-05-21/i18n_openapi/post/application_json/';
+
+  constructor(input: VideoProjectTaskBatchSetExpeditedRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VideoProjectTaskBatchSetExpeditedCommand.metaPath);
   }
 }
 /**
@@ -2184,21 +2163,6 @@ export class VideoProjectVideoUploadCommand extends Command<
   }
 }
 /**
- * Command to VideoResourceUpload
- */
-export class VideoResourceUploadCommand extends Command<
-  VideoResourceUploadRequest,
-  VideoResourceUploadCommandOutput,
-  'VideoResourceUploadCommand'
-> {
-  static readonly metaPath = '/VideoResourceUpload/2021-05-21/i18n_openapi/post/application_x-www-form-urlencoded/';
-
-  constructor(input: VideoResourceUploadRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(VideoResourceUploadCommand.metaPath);
-  }
-}
-/**
  * Command to VideoTermBases
  */
 export class VideoTermBasesCommand extends Command<
@@ -2231,7 +2195,6 @@ export class WebhooksCreateCommand extends Command<
 
 export default {
   I18NOPENAPIClient,
-  CreateVideoCreateCommand,
   DocumentCreateCommand,
   DocumentTaskCreateCommand,
   DocumentTaskDeleteCommand,
@@ -2316,7 +2279,6 @@ export default {
   VideoEditorDeleteSpeakerCommand,
   VideoEditorDeleteSubtitleCommand,
   VideoEditorDownloadSubtitleFileUrlCommand,
-  VideoEditorGenDubbingCommand,
   VideoEditorGetEmotionTagsCommand,
   VideoEditorGetSpeakersCommand,
   VideoEditorListSubtitlesCommand,
@@ -2345,12 +2307,12 @@ export default {
   VideoProjectSubtitleDeleteCommand,
   VideoProjectSubtitleUploadCommand,
   VideoProjectSuppressionStartCommand,
+  VideoProjectTaskBatchSetExpeditedCommand,
   VideoProjectTaskBatchStartAIFlowCommand,
   VideoProjectTaskDetailCommand,
   VideoProjectTaskListCommand,
   VideoProjectVideoDeleteCommand,
   VideoProjectVideoUploadCommand,
-  VideoResourceUploadCommand,
   VideoTermBasesCommand,
   WebhooksCreateCommand,
 };

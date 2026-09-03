@@ -12,8 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { ConvertMountPointForGetRevisionOutput } from './convert-mount-point-for-get-revision-output';
 import { CredentialsForGetRevisionOutput } from './credentials-for-get-revision-output';
-import { MountPointForGetRevisionOutput } from './mount-point-for-get-revision-output';
  /**
  * 
  *
@@ -35,8 +35,8 @@ export interface TosMountConfigForGetRevisionOutput {
     EnableTos?: boolean;
 
     /**
-     * @type {Array<MountPointForGetRevisionOutput>}
+     * @type {Array<ConvertMountPointForGetRevisionOutput>}
      * @memberof TosMountConfigForGetRevisionOutput
      */
-    MountPoints?: Array<MountPointForGetRevisionOutput>;
+    MountPoints?: Array<ConvertMountPointForGetRevisionOutput>;
 }

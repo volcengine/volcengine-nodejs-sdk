@@ -19,4 +19,10 @@
  * @interface ModifyMultiLevelInstitutionResponse
  */
 export interface ModifyMultiLevelInstitutionResponse {
+
+    /**
+     * @type {string}
+     * @memberof ModifyMultiLevelInstitutionResponse
+     */
+    Data?: string;
 }

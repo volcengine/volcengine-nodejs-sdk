@@ -12,12 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AzureBlobForCreateImportTaskOutput } from './azure-blob-for-create-import-task-output';
-import { GcsForCreateImportTaskOutput } from './gcs-for-create-import-task-output';
 import { LocalForCreateImportTaskOutput } from './local-for-create-import-task-output';
-import { OssForCreateImportTaskOutput } from './oss-for-create-import-task-output';
-import { S3CompatibleForCreateImportTaskOutput } from './s3-compatible-for-create-import-task-output';
-import { S3ForCreateImportTaskOutput } from './s3-for-create-import-task-output';
 import { TargetTableInfoForCreateImportTaskOutput } from './target-table-info-for-create-import-task-output';
 import { TosForCreateImportTaskOutput } from './tos-for-create-import-task-output';
  /**
@@ -29,40 +24,10 @@ import { TosForCreateImportTaskOutput } from './tos-for-create-import-task-outpu
 export interface SourceForCreateImportTaskOutput {
 
     /**
-     * @type {AzureBlobForCreateImportTaskOutput}
-     * @memberof SourceForCreateImportTaskOutput
-     */
-    AzureBlob?: AzureBlobForCreateImportTaskOutput;
-
-    /**
-     * @type {GcsForCreateImportTaskOutput}
-     * @memberof SourceForCreateImportTaskOutput
-     */
-    Gcs?: GcsForCreateImportTaskOutput;
-
-    /**
      * @type {LocalForCreateImportTaskOutput}
      * @memberof SourceForCreateImportTaskOutput
      */
     Local?: LocalForCreateImportTaskOutput;
-
-    /**
-     * @type {OssForCreateImportTaskOutput}
-     * @memberof SourceForCreateImportTaskOutput
-     */
-    Oss?: OssForCreateImportTaskOutput;
-
-    /**
-     * @type {S3ForCreateImportTaskOutput}
-     * @memberof SourceForCreateImportTaskOutput
-     */
-    S3?: S3ForCreateImportTaskOutput;
-
-    /**
-     * @type {S3CompatibleForCreateImportTaskOutput}
-     * @memberof SourceForCreateImportTaskOutput
-     */
-    S3Compatible?: S3CompatibleForCreateImportTaskOutput;
 
     /**
      * @type {Array<TargetTableInfoForCreateImportTaskOutput>}

@@ -25,5 +25,5 @@ export interface GetPoolQuotaInfoResponse {
      * @type {Array<QuotaInfoListForGetPoolQuotaInfoOutput>}
      * @memberof GetPoolQuotaInfoResponse
      */
-    QuotaInfoList?: Array<QuotaInfoListForGetPoolQuotaInfoOutput>;
+    quotaInfoList?: Array<QuotaInfoListForGetPoolQuotaInfoOutput>;
 }

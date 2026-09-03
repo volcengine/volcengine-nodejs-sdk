@@ -21,10 +21,22 @@
 export interface VideoProjectTaskListRequest {
 
     /**
+     * @type {string}
+     * @memberof VideoProjectTaskListRequest
+     */
+    dramaId?: string;
+
+    /**
      * @type {number}
      * @memberof VideoProjectTaskListRequest
      */
     endTime?: number;
+
+    /**
+     * @type {string}
+     * @memberof VideoProjectTaskListRequest
+     */
+    isExpedited?: string;
 
     /**
      * @type {number}

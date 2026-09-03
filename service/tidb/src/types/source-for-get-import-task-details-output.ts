@@ -12,12 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AzureBlobForGetImportTaskDetailsOutput } from './azure-blob-for-get-import-task-details-output';
-import { GcsForGetImportTaskDetailsOutput } from './gcs-for-get-import-task-details-output';
 import { LocalForGetImportTaskDetailsOutput } from './local-for-get-import-task-details-output';
-import { OssForGetImportTaskDetailsOutput } from './oss-for-get-import-task-details-output';
-import { S3CompatibleForGetImportTaskDetailsOutput } from './s3-compatible-for-get-import-task-details-output';
-import { S3ForGetImportTaskDetailsOutput } from './s3-for-get-import-task-details-output';
 import { TargetTableInfoForGetImportTaskDetailsOutput } from './target-table-info-for-get-import-task-details-output';
 import { TosForGetImportTaskDetailsOutput } from './tos-for-get-import-task-details-output';
  /**
@@ -29,40 +24,10 @@ import { TosForGetImportTaskDetailsOutput } from './tos-for-get-import-task-deta
 export interface SourceForGetImportTaskDetailsOutput {
 
     /**
-     * @type {AzureBlobForGetImportTaskDetailsOutput}
-     * @memberof SourceForGetImportTaskDetailsOutput
-     */
-    AzureBlob?: AzureBlobForGetImportTaskDetailsOutput;
-
-    /**
-     * @type {GcsForGetImportTaskDetailsOutput}
-     * @memberof SourceForGetImportTaskDetailsOutput
-     */
-    Gcs?: GcsForGetImportTaskDetailsOutput;
-
-    /**
      * @type {LocalForGetImportTaskDetailsOutput}
      * @memberof SourceForGetImportTaskDetailsOutput
      */
     Local?: LocalForGetImportTaskDetailsOutput;
-
-    /**
-     * @type {OssForGetImportTaskDetailsOutput}
-     * @memberof SourceForGetImportTaskDetailsOutput
-     */
-    Oss?: OssForGetImportTaskDetailsOutput;
-
-    /**
-     * @type {S3ForGetImportTaskDetailsOutput}
-     * @memberof SourceForGetImportTaskDetailsOutput
-     */
-    S3?: S3ForGetImportTaskDetailsOutput;
-
-    /**
-     * @type {S3CompatibleForGetImportTaskDetailsOutput}
-     * @memberof SourceForGetImportTaskDetailsOutput
-     */
-    S3Compatible?: S3CompatibleForGetImportTaskDetailsOutput;
 
     /**
      * @type {Array<TargetTableInfoForGetImportTaskDetailsOutput>}

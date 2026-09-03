@@ -42,7 +42,7 @@ export interface TemplateInfoForDescribeParameterTemplatesOutput {
      * @type {string}
      * @memberof TemplateInfoForDescribeParameterTemplatesOutput
      */
-    TemplateCategory?: TemplateInfoForDescribeParameterTemplatesOutputTemplateCategoryEnum;
+    TemplateCategory?: string;
 
     /**
      * @type {string}
@@ -66,19 +66,19 @@ export interface TemplateInfoForDescribeParameterTemplatesOutput {
      * @type {string}
      * @memberof TemplateInfoForDescribeParameterTemplatesOutput
      */
-    TemplateSource?: TemplateInfoForDescribeParameterTemplatesOutputTemplateSourceEnum;
+    TemplateSource?: string;
 
     /**
      * @type {string}
      * @memberof TemplateInfoForDescribeParameterTemplatesOutput
      */
-    TemplateType?: TemplateInfoForDescribeParameterTemplatesOutputTemplateTypeEnum;
+    TemplateType?: string;
 
     /**
      * @type {string}
      * @memberof TemplateInfoForDescribeParameterTemplatesOutput
      */
-    TemplateTypeVersion?: TemplateInfoForDescribeParameterTemplatesOutputTemplateTypeVersionEnum;
+    TemplateTypeVersion?: string;
 
     /**
      * @type {string}
@@ -86,35 +86,3 @@ export interface TemplateInfoForDescribeParameterTemplatesOutput {
      */
     UpdateTime?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum TemplateInfoForDescribeParameterTemplatesOutputTemplateCategoryEnum {
-    DBEngine = 'DBEngine'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum TemplateInfoForDescribeParameterTemplatesOutputTemplateSourceEnum {
-    System = 'System',
-    User = 'User'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum TemplateInfoForDescribeParameterTemplatesOutputTemplateTypeEnum {
-    MySQL = 'MySQL'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum TemplateInfoForDescribeParameterTemplatesOutputTemplateTypeVersionEnum {
-    MySQL57 = 'MySQL_5_7',
-    MySQL80 = 'MySQL_8_0'
-}
-

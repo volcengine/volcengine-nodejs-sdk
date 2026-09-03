@@ -30,6 +30,12 @@ export interface CreateDBEndpointRequest {
      * @type {string}
      * @memberof CreateDBEndpointRequest
      */
+    ConnectionPool: CreateDBEndpointRequestConnectionPoolEnum;
+
+    /**
+     * @type {string}
+     * @memberof CreateDBEndpointRequest
+     */
     ConsistLevel?: CreateDBEndpointRequestConsistLevelEnum;
 
     /**
@@ -93,6 +99,13 @@ export interface CreateDBEndpointRequest {
     ReadWriteMode?: CreateDBEndpointRequestReadWriteModeEnum;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum CreateDBEndpointRequestConnectionPoolEnum {
+    Off = 'Off'
+}
 /**
  * @export
  * @enum {string}

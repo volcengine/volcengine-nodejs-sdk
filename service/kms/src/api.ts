@@ -42,6 +42,10 @@ import { CreateKeyRequest } from './types/index';
 import { CreateKeyResponse } from './types/index';
 import { CreateKeyringRequest } from './types/index';
 import { CreateKeyringResponse } from './types/index';
+import { CreateKmsInstanceRequest } from './types/index';
+import { CreateKmsInstanceResponse } from './types/index';
+import { CreateSecretInstanceRequest } from './types/index';
+import { CreateSecretInstanceResponse } from './types/index';
 import { CreateSecretOrderRequest } from './types/index';
 import { CreateSecretOrderResponse } from './types/index';
 import { CreateSecretRequest } from './types/index';
@@ -62,8 +66,12 @@ import { DescribeKeyringsRequest } from './types/index';
 import { DescribeKeyringsResponse } from './types/index';
 import { DescribeKeysRequest } from './types/index';
 import { DescribeKeysResponse } from './types/index';
+import { DescribeKmsInstancesRequest } from './types/index';
+import { DescribeKmsInstancesResponse } from './types/index';
 import { DescribeRegionsRequest } from './types/index';
 import { DescribeRegionsResponse } from './types/index';
+import { DescribeSecretInstancesRequest } from './types/index';
+import { DescribeSecretInstancesResponse } from './types/index';
 import { DescribeSecretRequest } from './types/index';
 import { DescribeSecretResponse } from './types/index';
 import { DescribeSecretVersionsRequest } from './types/index';
@@ -96,6 +104,10 @@ import { ImportKeyMaterialRequest } from './types/index';
 import { ImportKeyMaterialResponse } from './types/index';
 import { ListTagsForResourcesRequest } from './types/index';
 import { ListTagsForResourcesResponse } from './types/index';
+import { ModifyKmsInstanceSpecRequest } from './types/index';
+import { ModifyKmsInstanceSpecResponse } from './types/index';
+import { ModifySecretInstanceSpecRequest } from './types/index';
+import { ModifySecretInstanceSpecResponse } from './types/index';
 import { QueryKeyringRequest } from './types/index';
 import { QueryKeyringResponse } from './types/index';
 import { ReEncryptRequest } from './types/index';
@@ -148,7 +160,9 @@ export type ConnectCustomKeyStoreCommandOutput = CommandOutput<ConnectCustomKeyS
 export type CreateCustomKeyStoreCommandOutput = CommandOutput<CreateCustomKeyStoreResponse>;
 export type CreateKeyCommandOutput = CommandOutput<CreateKeyResponse>;
 export type CreateKeyringCommandOutput = CommandOutput<CreateKeyringResponse>;
+export type CreateKmsInstanceCommandOutput = CommandOutput<CreateKmsInstanceResponse>;
 export type CreateSecretCommandOutput = CommandOutput<CreateSecretResponse>;
+export type CreateSecretInstanceCommandOutput = CommandOutput<CreateSecretInstanceResponse>;
 export type CreateSecretOrderCommandOutput = CommandOutput<CreateSecretOrderResponse>;
 export type DecryptCommandOutput = CommandOutput<DecryptResponse>;
 export type DeleteCustomKeyStoreCommandOutput = CommandOutput<DeleteCustomKeyStoreResponse>;
@@ -158,8 +172,10 @@ export type DescribeCustomKeyStoresCommandOutput = CommandOutput<DescribeCustomK
 export type DescribeKeyCommandOutput = CommandOutput<DescribeKeyResponse>;
 export type DescribeKeyringsCommandOutput = CommandOutput<DescribeKeyringsResponse>;
 export type DescribeKeysCommandOutput = CommandOutput<DescribeKeysResponse>;
+export type DescribeKmsInstancesCommandOutput = CommandOutput<DescribeKmsInstancesResponse>;
 export type DescribeRegionsCommandOutput = CommandOutput<DescribeRegionsResponse>;
 export type DescribeSecretCommandOutput = CommandOutput<DescribeSecretResponse>;
+export type DescribeSecretInstancesCommandOutput = CommandOutput<DescribeSecretInstancesResponse>;
 export type DescribeSecretVersionsCommandOutput = CommandOutput<DescribeSecretVersionsResponse>;
 export type DescribeSecretsCommandOutput = CommandOutput<DescribeSecretsResponse>;
 export type DisableKeyCommandOutput = CommandOutput<DisableKeyResponse>;
@@ -175,6 +191,8 @@ export type GetPublicKeyCommandOutput = CommandOutput<GetPublicKeyResponse>;
 export type GetSecretValueCommandOutput = CommandOutput<GetSecretValueResponse>;
 export type ImportKeyMaterialCommandOutput = CommandOutput<ImportKeyMaterialResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
+export type ModifyKmsInstanceSpecCommandOutput = CommandOutput<ModifyKmsInstanceSpecResponse>;
+export type ModifySecretInstanceSpecCommandOutput = CommandOutput<ModifySecretInstanceSpecResponse>;
 export type QueryKeyringCommandOutput = CommandOutput<QueryKeyringResponse>;
 export type ReEncryptCommandOutput = CommandOutput<ReEncryptResponse>;
 export type ReplicateKeyCommandOutput = CommandOutput<ReplicateKeyResponse>;
@@ -417,6 +435,21 @@ export class CreateKeyringCommand extends Command<
   }
 }
 /**
+ * Command to CreateKmsInstance
+ */
+export class CreateKmsInstanceCommand extends Command<
+  CreateKmsInstanceRequest,
+  CreateKmsInstanceCommandOutput,
+  'CreateKmsInstanceCommand'
+> {
+  static readonly metaPath = '/CreateKmsInstance/2021-02-18/kms/post/application_json/';
+
+  constructor(input: CreateKmsInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateKmsInstanceCommand.metaPath);
+  }
+}
+/**
  * Command to CreateSecret
  */
 export class CreateSecretCommand extends Command<
@@ -429,6 +462,21 @@ export class CreateSecretCommand extends Command<
   constructor(input: CreateSecretRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateSecretCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateSecretInstance
+ */
+export class CreateSecretInstanceCommand extends Command<
+  CreateSecretInstanceRequest,
+  CreateSecretInstanceCommandOutput,
+  'CreateSecretInstanceCommand'
+> {
+  static readonly metaPath = '/CreateSecretInstance/2021-02-18/kms/post/application_json/';
+
+  constructor(input: CreateSecretInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateSecretInstanceCommand.metaPath);
   }
 }
 /**
@@ -567,6 +615,21 @@ export class DescribeKeysCommand extends Command<
   }
 }
 /**
+ * Command to DescribeKmsInstances
+ */
+export class DescribeKmsInstancesCommand extends Command<
+  DescribeKmsInstancesRequest,
+  DescribeKmsInstancesCommandOutput,
+  'DescribeKmsInstancesCommand'
+> {
+  static readonly metaPath = '/DescribeKmsInstances/2021-02-18/kms/post/application_json/';
+
+  constructor(input: DescribeKmsInstancesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeKmsInstancesCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeRegions
  */
 export class DescribeRegionsCommand extends Command<
@@ -594,6 +657,21 @@ export class DescribeSecretCommand extends Command<
   constructor(input: DescribeSecretRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeSecretCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeSecretInstances
+ */
+export class DescribeSecretInstancesCommand extends Command<
+  DescribeSecretInstancesRequest,
+  DescribeSecretInstancesCommandOutput,
+  'DescribeSecretInstancesCommand'
+> {
+  static readonly metaPath = '/DescribeSecretInstances/2021-02-18/kms/post/application_json/';
+
+  constructor(input: DescribeSecretInstancesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeSecretInstancesCommand.metaPath);
   }
 }
 /**
@@ -819,6 +897,36 @@ export class ListTagsForResourcesCommand extends Command<
   constructor(input: ListTagsForResourcesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListTagsForResourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifyKmsInstanceSpec
+ */
+export class ModifyKmsInstanceSpecCommand extends Command<
+  ModifyKmsInstanceSpecRequest,
+  ModifyKmsInstanceSpecCommandOutput,
+  'ModifyKmsInstanceSpecCommand'
+> {
+  static readonly metaPath = '/ModifyKmsInstanceSpec/2021-02-18/kms/post/application_json/';
+
+  constructor(input: ModifyKmsInstanceSpecRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifyKmsInstanceSpecCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifySecretInstanceSpec
+ */
+export class ModifySecretInstanceSpecCommand extends Command<
+  ModifySecretInstanceSpecRequest,
+  ModifySecretInstanceSpecCommandOutput,
+  'ModifySecretInstanceSpecCommand'
+> {
+  static readonly metaPath = '/ModifySecretInstanceSpec/2021-02-18/kms/post/application_json/';
+
+  constructor(input: ModifySecretInstanceSpecRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifySecretInstanceSpecCommand.metaPath);
   }
 }
 /**
@@ -1093,7 +1201,9 @@ export default {
   CreateCustomKeyStoreCommand,
   CreateKeyCommand,
   CreateKeyringCommand,
+  CreateKmsInstanceCommand,
   CreateSecretCommand,
+  CreateSecretInstanceCommand,
   CreateSecretOrderCommand,
   DecryptCommand,
   DeleteCustomKeyStoreCommand,
@@ -1103,8 +1213,10 @@ export default {
   DescribeKeyCommand,
   DescribeKeyringsCommand,
   DescribeKeysCommand,
+  DescribeKmsInstancesCommand,
   DescribeRegionsCommand,
   DescribeSecretCommand,
+  DescribeSecretInstancesCommand,
   DescribeSecretVersionsCommand,
   DescribeSecretsCommand,
   DisableKeyCommand,
@@ -1120,6 +1232,8 @@ export default {
   GetSecretValueCommand,
   ImportKeyMaterialCommand,
   ListTagsForResourcesCommand,
+  ModifyKmsInstanceSpecCommand,
+  ModifySecretInstanceSpecCommand,
   QueryKeyringCommand,
   ReEncryptCommand,
   ReplicateKeyCommand,

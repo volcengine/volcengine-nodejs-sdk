@@ -48,15 +48,5 @@ export interface ParameterChangeHistoryForDescribeDBInstanceParameterChangeHisto
      * @type {string}
      * @memberof ParameterChangeHistoryForDescribeDBInstanceParameterChangeHistoryOutput
      */
-    Status?: ParameterChangeHistoryForDescribeDBInstanceParameterChangeHistoryOutputStatusEnum;
+    Status?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum ParameterChangeHistoryForDescribeDBInstanceParameterChangeHistoryOutputStatusEnum {
-    Applied = 'Applied',
-    Syncing = 'Syncing'
-}
-

@@ -30,6 +30,12 @@ export interface UpdateFunctionResourceResponse {
      * @type {number}
      * @memberof UpdateFunctionResourceResponse
      */
+    IdleInstance?: number;
+
+    /**
+     * @type {number}
+     * @memberof UpdateFunctionResourceResponse
+     */
     MaxInstance?: number;
 
     /**

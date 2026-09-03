@@ -37,4 +37,10 @@ export interface VideoProjectListRequest {
      * @memberof VideoProjectListRequest
      */
     projectName?: string;
+
+    /**
+     * @type {number}
+     * @memberof VideoProjectListRequest
+     */
+    projectType?: number;
 }

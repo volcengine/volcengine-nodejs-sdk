@@ -12,10 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { AzureBlobForCancelExportTaskOutput } from './azure-blob-for-cancel-export-task-output';
-import { GcsForCancelExportTaskOutput } from './gcs-for-cancel-export-task-output';
-import { OssForCancelExportTaskOutput } from './oss-for-cancel-export-task-output';
-import { S3ForCancelExportTaskOutput } from './s3-for-cancel-export-task-output';
 import { TosForCancelExportTaskOutput } from './tos-for-cancel-export-task-output';
  /**
  * 
@@ -24,30 +20,6 @@ import { TosForCancelExportTaskOutput } from './tos-for-cancel-export-task-outpu
  * @interface TargetForCancelExportTaskOutput
  */
 export interface TargetForCancelExportTaskOutput {
-
-    /**
-     * @type {AzureBlobForCancelExportTaskOutput}
-     * @memberof TargetForCancelExportTaskOutput
-     */
-    AzureBlob?: AzureBlobForCancelExportTaskOutput;
-
-    /**
-     * @type {GcsForCancelExportTaskOutput}
-     * @memberof TargetForCancelExportTaskOutput
-     */
-    Gcs?: GcsForCancelExportTaskOutput;
-
-    /**
-     * @type {OssForCancelExportTaskOutput}
-     * @memberof TargetForCancelExportTaskOutput
-     */
-    Oss?: OssForCancelExportTaskOutput;
-
-    /**
-     * @type {S3ForCancelExportTaskOutput}
-     * @memberof TargetForCancelExportTaskOutput
-     */
-    S3?: S3ForCancelExportTaskOutput;
 
     /**
      * @type {TosForCancelExportTaskOutput}
@@ -67,11 +39,6 @@ export interface TargetForCancelExportTaskOutput {
  * @enum {string}
  */
 export enum TargetForCancelExportTaskOutputTypeEnum {
-    LOCAL = 'LOCAL',
-    S3 = 'S3',
-    GCS = 'GCS',
-    AZUREBLOB = 'AZURE_BLOB',
-    OSS = 'OSS',
-    TOS = 'TOS'
+    _6 = '6'
 }
 

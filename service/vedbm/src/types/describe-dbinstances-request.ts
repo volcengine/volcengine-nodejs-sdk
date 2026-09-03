@@ -94,6 +94,12 @@ export interface DescribeDBInstancesRequest {
     StorageChargeType?: DescribeDBInstancesRequestStorageChargeTypeEnum;
 
     /**
+     * @type {string}
+     * @memberof DescribeDBInstancesRequest
+     */
+    StorageType?: DescribeDBInstancesRequestStorageTypeEnum;
+
+    /**
      * @type {Array<TagFilterForDescribeDBInstancesInput>}
      * @memberof DescribeDBInstancesRequest
      */
@@ -174,5 +180,13 @@ export enum DescribeDBInstancesRequestNodeSpecEnum {
 export enum DescribeDBInstancesRequestStorageChargeTypeEnum {
     PostPaid = 'PostPaid',
     PrePaid = 'PrePaid'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum DescribeDBInstancesRequestStorageTypeEnum {
+    IOOptimizedStorage = 'IOOptimizedStorage',
+    SmartCompressedStorage = 'SmartCompressedStorage'
 }
 

@@ -212,4 +212,34 @@ export interface GetVulnInfoResponse {
      * @memberof GetVulnInfoResponse
      */
     cwpp_id?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetVulnInfoResponse
+     */
+    is_important_vul?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetVulnInfoResponse
+     */
+    is_llm_vul?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetVulnInfoResponse
+     */
+    need_quick_follow?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetVulnInfoResponse
+     */
+    need_rasp?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetVulnInfoResponse
+     */
+    need_varmor?: string;
 }

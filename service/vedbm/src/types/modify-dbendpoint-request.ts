@@ -30,6 +30,12 @@ export interface ModifyDBEndpointRequest {
      * @type {string}
      * @memberof ModifyDBEndpointRequest
      */
+    ConnectionPool?: ModifyDBEndpointRequestConnectionPoolEnum;
+
+    /**
+     * @type {string}
+     * @memberof ModifyDBEndpointRequest
+     */
     ConsistLevel?: ModifyDBEndpointRequestConsistLevelEnum;
 
     /**
@@ -93,6 +99,13 @@ export interface ModifyDBEndpointRequest {
     ReadWriteMode?: ModifyDBEndpointRequestReadWriteModeEnum;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ModifyDBEndpointRequestConnectionPoolEnum {
+    Off = 'Off'
+}
 /**
  * @export
  * @enum {string}
