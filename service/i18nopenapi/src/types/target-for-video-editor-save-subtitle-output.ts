@@ -24,11 +24,5 @@ export interface TargetForVideoEditorSaveSubtitleOutput {
      * @type {string}
      * @memberof TargetForVideoEditorSaveSubtitleOutput
      */
-    style?: string;
-
-    /**
-     * @type {string}
-     * @memberof TargetForVideoEditorSaveSubtitleOutput
-     */
     text?: string;
 }

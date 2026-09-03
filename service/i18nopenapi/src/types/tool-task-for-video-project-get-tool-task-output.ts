@@ -32,18 +32,6 @@ export interface ToolTaskForVideoProjectGetToolTaskOutput {
      * @type {string}
      * @memberof ToolTaskForVideoProjectGetToolTaskOutput
      */
-    inputVid?: string;
-
-    /**
-     * @type {string}
-     * @memberof ToolTaskForVideoProjectGetToolTaskOutput
-     */
-    outputVid?: string;
-
-    /**
-     * @type {string}
-     * @memberof ToolTaskForVideoProjectGetToolTaskOutput
-     */
     projectId?: string;
 
     /**
