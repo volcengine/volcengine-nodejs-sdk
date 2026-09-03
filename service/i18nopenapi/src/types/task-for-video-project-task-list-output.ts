@@ -22,6 +22,12 @@ import { CreatorForVideoProjectTaskListOutput } from './creator-for-video-projec
 export interface TaskForVideoProjectTaskListOutput {
 
     /**
+     * @type {boolean}
+     * @memberof TaskForVideoProjectTaskListOutput
+     */
+    canExpedite?: boolean;
+
+    /**
      * @type {string}
      * @memberof TaskForVideoProjectTaskListOutput
      */
@@ -50,6 +56,12 @@ export interface TaskForVideoProjectTaskListOutput {
      * @memberof TaskForVideoProjectTaskListOutput
      */
     dramaTaskWorkflow?: number;
+
+    /**
+     * @type {boolean}
+     * @memberof TaskForVideoProjectTaskListOutput
+     */
+    isExpedited?: boolean;
 
     /**
      * @type {string}

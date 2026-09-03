@@ -36,7 +36,7 @@ export interface ToolResourceForVideoProjectListToolProjectResourcesOutput {
      * @type {string}
      * @memberof ToolResourceForVideoProjectListToolProjectResourcesOutput
      */
-    resourceID?: string;
+    resourceId?: string;
 
     /**
      * @type {number}

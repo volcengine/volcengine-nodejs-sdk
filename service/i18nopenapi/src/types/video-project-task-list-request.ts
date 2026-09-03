@@ -33,6 +33,12 @@ export interface VideoProjectTaskListRequest {
     endTime?: number;
 
     /**
+     * @type {string}
+     * @memberof VideoProjectTaskListRequest
+     */
+    isExpedited?: string;
+
+    /**
      * @type {number}
      * @memberof VideoProjectTaskListRequest
      */

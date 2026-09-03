@@ -40,6 +40,18 @@ export interface ObjectSourceConfigForQueryDataMigrateTaskOutput {
     KeyListFile?: string;
 
     /**
+     * @type {number}
+     * @memberof ObjectSourceConfigForQueryDataMigrateTaskOutput
+     */
+    ListEndTime?: number;
+
+    /**
+     * @type {number}
+     * @memberof ObjectSourceConfigForQueryDataMigrateTaskOutput
+     */
+    ListStartTime?: number;
+
+    /**
      * @type {Array<string>}
      * @memberof ObjectSourceConfigForQueryDataMigrateTaskOutput
      */
