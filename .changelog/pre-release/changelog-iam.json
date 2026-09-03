@@ -1,5 +1,8 @@
 {
-  "description": "IAM: 新增 CreateApiKey, DeleteApiKey, ListApiKeys, UpdateApiKey",
+  "actions": [
+    "CreateProject"
+  ],
+  "description": "IAM: 修改 CreateProject",
   "modules": "service/iam",
-  "type": "feature"
+  "type": "breaking-change"
 }
