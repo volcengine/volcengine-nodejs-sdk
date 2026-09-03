@@ -24,5 +24,5 @@ export interface DataForVideoProjectCreateToolTaskOutput {
      * @type {string}
      * @memberof DataForVideoProjectCreateToolTaskOutput
      */
-    taskID?: string;
+    taskId?: string;
 }

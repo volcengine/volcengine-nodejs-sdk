@@ -1,10 +1,16 @@
 {
   "actions": [
+    "VideoProjectCreateToolTask",
+    "VideoProjectListToolTaskByResourceIDs",
+    "VideoProjectTaskList",
+    "VideoEditorSaveSubtitle",
+    "VideoProjectTaskBatchSetExpedited",
+    "VideoProjectGetToolTask",
+    "VideoProjectListToolProjectResources",
     "VideoEditorAddSubtitle",
-    "VideoEditorListSubtitles",
-    "VideoEditorSaveSubtitle"
+    "VideoEditorListSubtitles"
   ],
-  "description": "I18N_OPENAPI: 修改 VideoEditorAddSubtitle, VideoEditorListSubtitles, VideoEditorSaveSubtitle",
+  "description": "I18N_OPENAPI: 新增 VideoProjectTaskBatchSetExpedited；修改 VideoProjectCreateToolTask, VideoProjectGetToolTask, VideoProjectListToolProjectResources, VideoProjectListToolTaskByResourceIDs, VideoProjectTaskList, VideoEditorAddSubtitle, VideoEditorListSubtitles, VideoEditorSaveSubtitle",
   "modules": "service/i18n_openapi",
-  "type": "feature"
+  "type": "breaking-change"
 }

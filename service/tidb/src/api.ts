@@ -58,6 +58,8 @@ import { GetImportTaskDetailsRequest } from './types/index';
 import { GetImportTaskDetailsResponse } from './types/index';
 import { GetMetricsRequest } from './types/index';
 import { GetMetricsResponse } from './types/index';
+import { GetPrivateEndpointAllowlistRuleRequest } from './types/index';
+import { GetPrivateEndpointAllowlistRuleResponse } from './types/index';
 import { GetRestoreProgressRequest } from './types/index';
 import { GetRestoreProgressResponse } from './types/index';
 import { GetSlowQueryDetailsRequest } from './types/index';
@@ -150,6 +152,7 @@ export type GetExportTaskDetailsCommandOutput = CommandOutput<GetExportTaskDetai
 export type GetImportTableColumnsCommandOutput = CommandOutput<GetImportTableColumnsResponse>;
 export type GetImportTaskDetailsCommandOutput = CommandOutput<GetImportTaskDetailsResponse>;
 export type GetMetricsCommandOutput = CommandOutput<GetMetricsResponse>;
+export type GetPrivateEndpointAllowlistRuleCommandOutput = CommandOutput<GetPrivateEndpointAllowlistRuleResponse>;
 export type GetRestoreProgressCommandOutput = CommandOutput<GetRestoreProgressResponse>;
 export type GetSlowQueryDetailsCommandOutput = CommandOutput<GetSlowQueryDetailsResponse>;
 export type GetStatementPlanDetailsCommandOutput = CommandOutput<GetStatementPlanDetailsResponse>;
@@ -525,6 +528,21 @@ export class GetMetricsCommand extends Command<
   constructor(input: GetMetricsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetMetricsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetPrivateEndpointAllowlistRule
+ */
+export class GetPrivateEndpointAllowlistRuleCommand extends Command<
+  GetPrivateEndpointAllowlistRuleRequest,
+  GetPrivateEndpointAllowlistRuleCommandOutput,
+  'GetPrivateEndpointAllowlistRuleCommand'
+> {
+  static readonly metaPath = '/GetPrivateEndpointAllowlistRule/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: GetPrivateEndpointAllowlistRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetPrivateEndpointAllowlistRuleCommand.metaPath);
   }
 }
 /**
@@ -1047,6 +1065,7 @@ export default {
   GetImportTableColumnsCommand,
   GetImportTaskDetailsCommand,
   GetMetricsCommand,
+  GetPrivateEndpointAllowlistRuleCommand,
   GetRestoreProgressCommand,
   GetSlowQueryDetailsCommand,
   GetStatementPlanDetailsCommand,

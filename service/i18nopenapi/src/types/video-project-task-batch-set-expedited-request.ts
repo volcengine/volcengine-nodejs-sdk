@@ -16,13 +16,19 @@
  * 
  *
  * @export
- * @interface TargetForVideoEditorAddSubtitleOutput
+ * @interface VideoProjectTaskBatchSetExpeditedRequest
  */
-export interface TargetForVideoEditorAddSubtitleOutput {
+export interface VideoProjectTaskBatchSetExpeditedRequest {
 
     /**
      * @type {string}
-     * @memberof TargetForVideoEditorAddSubtitleOutput
+     * @memberof VideoProjectTaskBatchSetExpeditedRequest
      */
-    text?: string;
+    projectId: string;
+
+    /**
+     * @type {Array<number>}
+     * @memberof VideoProjectTaskBatchSetExpeditedRequest
+     */
+    taskIds?: Array<number>;
 }
