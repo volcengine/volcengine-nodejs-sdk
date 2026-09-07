@@ -27,6 +27,12 @@ export interface DataVolumeForListNodePoolsOutput {
     BurstEnabled?: boolean;
 
     /**
+     * @type {boolean}
+     * @memberof DataVolumeForListNodePoolsOutput
+     */
+    Encrypted?: boolean;
+
+    /**
      * @type {number}
      * @memberof DataVolumeForListNodePoolsOutput
      */
@@ -49,6 +55,12 @@ export interface DataVolumeForListNodePoolsOutput {
      * @memberof DataVolumeForListNodePoolsOutput
      */
     FileSystem?: DataVolumeForListNodePoolsOutputFileSystemEnum;
+
+    /**
+     * @type {string}
+     * @memberof DataVolumeForListNodePoolsOutput
+     */
+    KmsKeyId?: string;
 
     /**
      * @type {string}
