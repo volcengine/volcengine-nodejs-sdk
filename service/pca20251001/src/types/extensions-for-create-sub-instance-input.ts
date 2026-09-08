@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { CustomExtensionsForCreateSubInstanceInput } from './custom-extensions-for-create-sub-instance-input';
+import { CustomExtensionForCreateSubInstanceInput } from './custom-extension-for-create-sub-instance-input';
 import { ExtendedKeyUsagesForCreateSubInstanceInput } from './extended-key-usages-for-create-sub-instance-input';
 import { KeyUsagesForCreateSubInstanceInput } from './key-usages-for-create-sub-instance-input';
  /**
@@ -24,10 +24,10 @@ import { KeyUsagesForCreateSubInstanceInput } from './key-usages-for-create-sub-
 export interface ExtensionsForCreateSubInstanceInput {
 
     /**
-     * @type {CustomExtensionsForCreateSubInstanceInput}
+     * @type {Array<CustomExtensionForCreateSubInstanceInput>}
      * @memberof ExtensionsForCreateSubInstanceInput
      */
-    CustomExtensions?: CustomExtensionsForCreateSubInstanceInput;
+    CustomExtensions?: Array<CustomExtensionForCreateSubInstanceInput>;
 
     /**
      * @type {ExtendedKeyUsagesForCreateSubInstanceInput}

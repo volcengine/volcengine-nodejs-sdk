@@ -16,25 +16,31 @@
  * 
  *
  * @export
- * @interface CustomExtensionsForCreateLeafInstanceInput
+ * @interface CustomExtensionForCreateRootInstanceInput
  */
-export interface CustomExtensionsForCreateLeafInstanceInput {
+export interface CustomExtensionForCreateRootInstanceInput {
 
     /**
      * @type {boolean}
-     * @memberof CustomExtensionsForCreateLeafInstanceInput
+     * @memberof CustomExtensionForCreateRootInstanceInput
      */
     Critical?: boolean;
 
     /**
      * @type {string}
-     * @memberof CustomExtensionsForCreateLeafInstanceInput
+     * @memberof CustomExtensionForCreateRootInstanceInput
      */
     ObjectIdentifier?: string;
 
     /**
      * @type {string}
-     * @memberof CustomExtensionsForCreateLeafInstanceInput
+     * @memberof CustomExtensionForCreateRootInstanceInput
      */
     Value?: string;
+
+    /**
+     * @type {string}
+     * @memberof CustomExtensionForCreateRootInstanceInput
+     */
+    ValueBytes?: string;
 }
