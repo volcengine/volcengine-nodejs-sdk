@@ -16,8 +16,12 @@ import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandO
 
 import { CreateAggregateWorkspaceRequest } from './types/index';
 import { CreateAggregateWorkspaceResponse } from './types/index';
+import { CreateAlertingRuleGroupRequest } from './types/index';
+import { CreateAlertingRuleGroupResponse } from './types/index';
 import { CreateAlertingRuleRequest } from './types/index';
 import { CreateAlertingRuleResponse } from './types/index';
+import { CreateAlertingRuleTemplateRequest } from './types/index';
+import { CreateAlertingRuleTemplateResponse } from './types/index';
 import { CreateContactGroupRequest } from './types/index';
 import { CreateContactGroupResponse } from './types/index';
 import { CreateContactRequest } from './types/index';
@@ -40,6 +44,10 @@ import { CreateWorkspaceRequest } from './types/index';
 import { CreateWorkspaceResponse } from './types/index';
 import { DeleteAggregateWorkspaceRequest } from './types/index';
 import { DeleteAggregateWorkspaceResponse } from './types/index';
+import { DeleteAlertingRuleGroupRequest } from './types/index';
+import { DeleteAlertingRuleGroupResponse } from './types/index';
+import { DeleteAlertingRuleTemplateRequest } from './types/index';
+import { DeleteAlertingRuleTemplateResponse } from './types/index';
 import { DeleteAlertingRulesRequest } from './types/index';
 import { DeleteAlertingRulesResponse } from './types/index';
 import { DeleteContactGroupsRequest } from './types/index';
@@ -80,6 +88,8 @@ import { GetAlertRequest } from './types/index';
 import { GetAlertResponse } from './types/index';
 import { GetAlertingRuleRequest } from './types/index';
 import { GetAlertingRuleResponse } from './types/index';
+import { GetAlertingRuleTemplateRequest } from './types/index';
+import { GetAlertingRuleTemplateResponse } from './types/index';
 import { GetContactGroupRequest } from './types/index';
 import { GetContactGroupResponse } from './types/index';
 import { GetContactRequest } from './types/index';
@@ -100,6 +110,10 @@ import { GetWorkspaceRequest } from './types/index';
 import { GetWorkspaceResponse } from './types/index';
 import { ListAlertSamplesRequest } from './types/index';
 import { ListAlertSamplesResponse } from './types/index';
+import { ListAlertingRuleGroupsRequest } from './types/index';
+import { ListAlertingRuleGroupsResponse } from './types/index';
+import { ListAlertingRuleTemplatesRequest } from './types/index';
+import { ListAlertingRuleTemplatesResponse } from './types/index';
 import { ListAlertingRulesRequest } from './types/index';
 import { ListAlertingRulesResponse } from './types/index';
 import { ListAlertsRequest } from './types/index';
@@ -142,12 +156,18 @@ import { TestWeComBotWebhookRequest } from './types/index';
 import { TestWeComBotWebhookResponse } from './types/index';
 import { TestWebhookRequest } from './types/index';
 import { TestWebhookResponse } from './types/index';
+import { UnbindAlertingRuleGroupTemplateRequest } from './types/index';
+import { UnbindAlertingRuleGroupTemplateResponse } from './types/index';
 import { UntagResourcesRequest } from './types/index';
 import { UntagResourcesResponse } from './types/index';
 import { UpdateAggregateWorkspaceRequest } from './types/index';
 import { UpdateAggregateWorkspaceResponse } from './types/index';
+import { UpdateAlertingRuleGroupRequest } from './types/index';
+import { UpdateAlertingRuleGroupResponse } from './types/index';
 import { UpdateAlertingRuleRequest } from './types/index';
 import { UpdateAlertingRuleResponse } from './types/index';
+import { UpdateAlertingRuleTemplateRequest } from './types/index';
+import { UpdateAlertingRuleTemplateResponse } from './types/index';
 import { UpdateContactGroupRequest } from './types/index';
 import { UpdateContactGroupResponse } from './types/index';
 import { UpdateContactRequest } from './types/index';
@@ -168,12 +188,16 @@ import { UpdateSilencePolicyRequest } from './types/index';
 import { UpdateSilencePolicyResponse } from './types/index';
 import { UpdateWorkspaceRequest } from './types/index';
 import { UpdateWorkspaceResponse } from './types/index';
+import { UpgradeAlertingRuleGroupsRequest } from './types/index';
+import { UpgradeAlertingRuleGroupsResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
 export type CreateAggregateWorkspaceCommandOutput = CommandOutput<CreateAggregateWorkspaceResponse>;
 export type CreateAlertingRuleCommandOutput = CommandOutput<CreateAlertingRuleResponse>;
+export type CreateAlertingRuleGroupCommandOutput = CommandOutput<CreateAlertingRuleGroupResponse>;
+export type CreateAlertingRuleTemplateCommandOutput = CommandOutput<CreateAlertingRuleTemplateResponse>;
 export type CreateContactCommandOutput = CommandOutput<CreateContactResponse>;
 export type CreateContactGroupCommandOutput = CommandOutput<CreateContactGroupResponse>;
 export type CreateExternalPrometheusCommandOutput = CommandOutput<CreateExternalPrometheusResponse>;
@@ -185,6 +209,8 @@ export type CreateRuleFileCommandOutput = CommandOutput<CreateRuleFileResponse>;
 export type CreateSilencePolicyCommandOutput = CommandOutput<CreateSilencePolicyResponse>;
 export type CreateWorkspaceCommandOutput = CommandOutput<CreateWorkspaceResponse>;
 export type DeleteAggregateWorkspaceCommandOutput = CommandOutput<DeleteAggregateWorkspaceResponse>;
+export type DeleteAlertingRuleGroupCommandOutput = CommandOutput<DeleteAlertingRuleGroupResponse>;
+export type DeleteAlertingRuleTemplateCommandOutput = CommandOutput<DeleteAlertingRuleTemplateResponse>;
 export type DeleteAlertingRulesCommandOutput = CommandOutput<DeleteAlertingRulesResponse>;
 export type DeleteContactGroupsCommandOutput = CommandOutput<DeleteContactGroupsResponse>;
 export type DeleteContactsCommandOutput = CommandOutput<DeleteContactsResponse>;
@@ -205,6 +231,7 @@ export type EnableSilencePoliciesCommandOutput = CommandOutput<EnableSilencePoli
 export type GetAggregateWorkspaceCommandOutput = CommandOutput<GetAggregateWorkspaceResponse>;
 export type GetAlertCommandOutput = CommandOutput<GetAlertResponse>;
 export type GetAlertingRuleCommandOutput = CommandOutput<GetAlertingRuleResponse>;
+export type GetAlertingRuleTemplateCommandOutput = CommandOutput<GetAlertingRuleTemplateResponse>;
 export type GetContactCommandOutput = CommandOutput<GetContactResponse>;
 export type GetContactGroupCommandOutput = CommandOutput<GetContactGroupResponse>;
 export type GetExternalPrometheusCommandOutput = CommandOutput<GetExternalPrometheusResponse>;
@@ -215,6 +242,8 @@ export type GetRuleFileCommandOutput = CommandOutput<GetRuleFileResponse>;
 export type GetWorkspaceCommandOutput = CommandOutput<GetWorkspaceResponse>;
 export type GetWorkspaceAuthInfoCommandOutput = CommandOutput<GetWorkspaceAuthInfoResponse>;
 export type ListAlertSamplesCommandOutput = CommandOutput<ListAlertSamplesResponse>;
+export type ListAlertingRuleGroupsCommandOutput = CommandOutput<ListAlertingRuleGroupsResponse>;
+export type ListAlertingRuleTemplatesCommandOutput = CommandOutput<ListAlertingRuleTemplatesResponse>;
 export type ListAlertingRulesCommandOutput = CommandOutput<ListAlertingRulesResponse>;
 export type ListAlertsCommandOutput = CommandOutput<ListAlertsResponse>;
 export type ListContactGroupsCommandOutput = CommandOutput<ListContactGroupsResponse>;
@@ -236,9 +265,12 @@ export type TestDingTalkBotWebhookCommandOutput = CommandOutput<TestDingTalkBotW
 export type TestLarkBotWebhookCommandOutput = CommandOutput<TestLarkBotWebhookResponse>;
 export type TestWeComBotWebhookCommandOutput = CommandOutput<TestWeComBotWebhookResponse>;
 export type TestWebhookCommandOutput = CommandOutput<TestWebhookResponse>;
+export type UnbindAlertingRuleGroupTemplateCommandOutput = CommandOutput<UnbindAlertingRuleGroupTemplateResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateAggregateWorkspaceCommandOutput = CommandOutput<UpdateAggregateWorkspaceResponse>;
 export type UpdateAlertingRuleCommandOutput = CommandOutput<UpdateAlertingRuleResponse>;
+export type UpdateAlertingRuleGroupCommandOutput = CommandOutput<UpdateAlertingRuleGroupResponse>;
+export type UpdateAlertingRuleTemplateCommandOutput = CommandOutput<UpdateAlertingRuleTemplateResponse>;
 export type UpdateContactCommandOutput = CommandOutput<UpdateContactResponse>;
 export type UpdateContactGroupCommandOutput = CommandOutput<UpdateContactGroupResponse>;
 export type UpdateExternalPrometheusCommandOutput = CommandOutput<UpdateExternalPrometheusResponse>;
@@ -249,6 +281,7 @@ export type UpdateNotifyTemplateCommandOutput = CommandOutput<UpdateNotifyTempla
 export type UpdateRuleFileCommandOutput = CommandOutput<UpdateRuleFileResponse>;
 export type UpdateSilencePolicyCommandOutput = CommandOutput<UpdateSilencePolicyResponse>;
 export type UpdateWorkspaceCommandOutput = CommandOutput<UpdateWorkspaceResponse>;
+export type UpgradeAlertingRuleGroupsCommandOutput = CommandOutput<UpgradeAlertingRuleGroupsResponse>;
 
 /**
  * VMPClient Service Client
@@ -291,6 +324,36 @@ export class CreateAlertingRuleCommand extends Command<
   constructor(input: CreateAlertingRuleRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateAlertingRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateAlertingRuleGroup
+ */
+export class CreateAlertingRuleGroupCommand extends Command<
+  CreateAlertingRuleGroupRequest,
+  CreateAlertingRuleGroupCommandOutput,
+  'CreateAlertingRuleGroupCommand'
+> {
+  static readonly metaPath = '/CreateAlertingRuleGroup/2021-03-03/vmp/post/application_json/';
+
+  constructor(input: CreateAlertingRuleGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateAlertingRuleGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateAlertingRuleTemplate
+ */
+export class CreateAlertingRuleTemplateCommand extends Command<
+  CreateAlertingRuleTemplateRequest,
+  CreateAlertingRuleTemplateCommandOutput,
+  'CreateAlertingRuleTemplateCommand'
+> {
+  static readonly metaPath = '/CreateAlertingRuleTemplate/2021-03-03/vmp/post/application_json/';
+
+  constructor(input: CreateAlertingRuleTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateAlertingRuleTemplateCommand.metaPath);
   }
 }
 /**
@@ -456,6 +519,36 @@ export class DeleteAggregateWorkspaceCommand extends Command<
   constructor(input: DeleteAggregateWorkspaceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteAggregateWorkspaceCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteAlertingRuleGroup
+ */
+export class DeleteAlertingRuleGroupCommand extends Command<
+  DeleteAlertingRuleGroupRequest,
+  DeleteAlertingRuleGroupCommandOutput,
+  'DeleteAlertingRuleGroupCommand'
+> {
+  static readonly metaPath = '/DeleteAlertingRuleGroup/2021-03-03/vmp/post/application_json/';
+
+  constructor(input: DeleteAlertingRuleGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAlertingRuleGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteAlertingRuleTemplate
+ */
+export class DeleteAlertingRuleTemplateCommand extends Command<
+  DeleteAlertingRuleTemplateRequest,
+  DeleteAlertingRuleTemplateCommandOutput,
+  'DeleteAlertingRuleTemplateCommand'
+> {
+  static readonly metaPath = '/DeleteAlertingRuleTemplate/2021-03-03/vmp/post/application_json/';
+
+  constructor(input: DeleteAlertingRuleTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAlertingRuleTemplateCommand.metaPath);
   }
 }
 /**
@@ -759,6 +852,21 @@ export class GetAlertingRuleCommand extends Command<
   }
 }
 /**
+ * Command to GetAlertingRuleTemplate
+ */
+export class GetAlertingRuleTemplateCommand extends Command<
+  GetAlertingRuleTemplateRequest,
+  GetAlertingRuleTemplateCommandOutput,
+  'GetAlertingRuleTemplateCommand'
+> {
+  static readonly metaPath = '/GetAlertingRuleTemplate/2021-03-03/vmp/post/application_json/';
+
+  constructor(input: GetAlertingRuleTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAlertingRuleTemplateCommand.metaPath);
+  }
+}
+/**
  * Command to GetContact
  */
 export class GetContactCommand extends Command<
@@ -906,6 +1014,36 @@ export class ListAlertSamplesCommand extends Command<
   constructor(input: ListAlertSamplesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListAlertSamplesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAlertingRuleGroups
+ */
+export class ListAlertingRuleGroupsCommand extends Command<
+  ListAlertingRuleGroupsRequest,
+  ListAlertingRuleGroupsCommandOutput,
+  'ListAlertingRuleGroupsCommand'
+> {
+  static readonly metaPath = '/ListAlertingRuleGroups/2021-03-03/vmp/post/application_json/';
+
+  constructor(input: ListAlertingRuleGroupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAlertingRuleGroupsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAlertingRuleTemplates
+ */
+export class ListAlertingRuleTemplatesCommand extends Command<
+  ListAlertingRuleTemplatesRequest,
+  ListAlertingRuleTemplatesCommandOutput,
+  'ListAlertingRuleTemplatesCommand'
+> {
+  static readonly metaPath = '/ListAlertingRuleTemplates/2021-03-03/vmp/post/application_json/';
+
+  constructor(input: ListAlertingRuleTemplatesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAlertingRuleTemplatesCommand.metaPath);
   }
 }
 /**
@@ -1224,6 +1362,21 @@ export class TestWebhookCommand extends Command<
   }
 }
 /**
+ * Command to UnbindAlertingRuleGroupTemplate
+ */
+export class UnbindAlertingRuleGroupTemplateCommand extends Command<
+  UnbindAlertingRuleGroupTemplateRequest,
+  UnbindAlertingRuleGroupTemplateCommandOutput,
+  'UnbindAlertingRuleGroupTemplateCommand'
+> {
+  static readonly metaPath = '/UnbindAlertingRuleGroupTemplate/2021-03-03/vmp/post/application_json/';
+
+  constructor(input: UnbindAlertingRuleGroupTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UnbindAlertingRuleGroupTemplateCommand.metaPath);
+  }
+}
+/**
  * Command to UntagResources
  */
 export class UntagResourcesCommand extends Command<
@@ -1266,6 +1419,36 @@ export class UpdateAlertingRuleCommand extends Command<
   constructor(input: UpdateAlertingRuleRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateAlertingRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateAlertingRuleGroup
+ */
+export class UpdateAlertingRuleGroupCommand extends Command<
+  UpdateAlertingRuleGroupRequest,
+  UpdateAlertingRuleGroupCommandOutput,
+  'UpdateAlertingRuleGroupCommand'
+> {
+  static readonly metaPath = '/UpdateAlertingRuleGroup/2021-03-03/vmp/post/application_json/';
+
+  constructor(input: UpdateAlertingRuleGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAlertingRuleGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateAlertingRuleTemplate
+ */
+export class UpdateAlertingRuleTemplateCommand extends Command<
+  UpdateAlertingRuleTemplateRequest,
+  UpdateAlertingRuleTemplateCommandOutput,
+  'UpdateAlertingRuleTemplateCommand'
+> {
+  static readonly metaPath = '/UpdateAlertingRuleTemplate/2021-03-03/vmp/post/application_json/';
+
+  constructor(input: UpdateAlertingRuleTemplateRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAlertingRuleTemplateCommand.metaPath);
   }
 }
 /**
@@ -1418,11 +1601,28 @@ export class UpdateWorkspaceCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateWorkspaceCommand.metaPath);
   }
 }
+/**
+ * Command to UpgradeAlertingRuleGroups
+ */
+export class UpgradeAlertingRuleGroupsCommand extends Command<
+  UpgradeAlertingRuleGroupsRequest,
+  UpgradeAlertingRuleGroupsCommandOutput,
+  'UpgradeAlertingRuleGroupsCommand'
+> {
+  static readonly metaPath = '/UpgradeAlertingRuleGroups/2021-03-03/vmp/post/application_json/';
+
+  constructor(input: UpgradeAlertingRuleGroupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpgradeAlertingRuleGroupsCommand.metaPath);
+  }
+}
 
 export default {
   VMPClient,
   CreateAggregateWorkspaceCommand,
   CreateAlertingRuleCommand,
+  CreateAlertingRuleGroupCommand,
+  CreateAlertingRuleTemplateCommand,
   CreateContactCommand,
   CreateContactGroupCommand,
   CreateExternalPrometheusCommand,
@@ -1434,6 +1634,8 @@ export default {
   CreateSilencePolicyCommand,
   CreateWorkspaceCommand,
   DeleteAggregateWorkspaceCommand,
+  DeleteAlertingRuleGroupCommand,
+  DeleteAlertingRuleTemplateCommand,
   DeleteAlertingRulesCommand,
   DeleteContactGroupsCommand,
   DeleteContactsCommand,
@@ -1454,6 +1656,7 @@ export default {
   GetAggregateWorkspaceCommand,
   GetAlertCommand,
   GetAlertingRuleCommand,
+  GetAlertingRuleTemplateCommand,
   GetContactCommand,
   GetContactGroupCommand,
   GetExternalPrometheusCommand,
@@ -1464,6 +1667,8 @@ export default {
   GetWorkspaceCommand,
   GetWorkspaceAuthInfoCommand,
   ListAlertSamplesCommand,
+  ListAlertingRuleGroupsCommand,
+  ListAlertingRuleTemplatesCommand,
   ListAlertingRulesCommand,
   ListAlertsCommand,
   ListContactGroupsCommand,
@@ -1485,9 +1690,12 @@ export default {
   TestLarkBotWebhookCommand,
   TestWeComBotWebhookCommand,
   TestWebhookCommand,
+  UnbindAlertingRuleGroupTemplateCommand,
   UntagResourcesCommand,
   UpdateAggregateWorkspaceCommand,
   UpdateAlertingRuleCommand,
+  UpdateAlertingRuleGroupCommand,
+  UpdateAlertingRuleTemplateCommand,
   UpdateContactCommand,
   UpdateContactGroupCommand,
   UpdateExternalPrometheusCommand,
@@ -1498,4 +1706,5 @@ export default {
   UpdateRuleFileCommand,
   UpdateSilencePolicyCommand,
   UpdateWorkspaceCommand,
+  UpgradeAlertingRuleGroupsCommand,
 };
