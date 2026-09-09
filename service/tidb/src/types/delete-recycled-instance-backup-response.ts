@@ -16,19 +16,7 @@
  * 
  *
  * @export
- * @interface AwsForCreateBranchInput
+ * @interface DeleteRecycledInstanceBackupResponse
  */
-export interface AwsForCreateBranchInput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof AwsForCreateBranchInput
-     */
-    AvailabilityZone?: Array<string>;
-
-    /**
-     * @type {string}
-     * @memberof AwsForCreateBranchInput
-     */
-    ServiceName?: string;
+export interface DeleteRecycledInstanceBackupResponse {
 }

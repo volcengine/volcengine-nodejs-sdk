@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface AwsForGetClusterDetailsOutput
+ * @interface TagForDeleteClusterOutput
  */
-export interface AwsForGetClusterDetailsOutput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof AwsForGetClusterDetailsOutput
-     */
-    AvailabilityZone?: Array<string>;
+export interface TagForDeleteClusterOutput {
 
     /**
      * @type {string}
-     * @memberof AwsForGetClusterDetailsOutput
+     * @memberof TagForDeleteClusterOutput
      */
-    ServiceName?: string;
+    Key?: string;
+
+    /**
+     * @type {string}
+     * @memberof TagForDeleteClusterOutput
+     */
+    Value?: string;
 }

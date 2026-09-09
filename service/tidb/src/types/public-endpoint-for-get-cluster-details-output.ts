@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AuthorizedNetworkForGetClusterDetailsOutput } from './authorized-network-for-get-cluster-details-output';
+import { ConvertAuthorizedNetworkForGetClusterDetailsOutput } from './convert-authorized-network-for-get-cluster-details-output';
  /**
  * 
  *
@@ -22,10 +22,10 @@ import { AuthorizedNetworkForGetClusterDetailsOutput } from './authorized-networ
 export interface PublicEndpointForGetClusterDetailsOutput {
 
     /**
-     * @type {Array<AuthorizedNetworkForGetClusterDetailsOutput>}
+     * @type {Array<ConvertAuthorizedNetworkForGetClusterDetailsOutput>}
      * @memberof PublicEndpointForGetClusterDetailsOutput
      */
-    AuthorizedNetworks?: Array<AuthorizedNetworkForGetClusterDetailsOutput>;
+    AuthorizedNetworks?: Array<ConvertAuthorizedNetworkForGetClusterDetailsOutput>;
 
     /**
      * @type {boolean}

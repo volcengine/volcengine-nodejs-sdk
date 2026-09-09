@@ -37,4 +37,10 @@ export interface AuthorizedNetworkForDeletePrivateEndpointAllowlistRuleOutput {
      * @memberof AuthorizedNetworkForDeletePrivateEndpointAllowlistRuleOutput
      */
     VpcEndpointId?: string;
+
+    /**
+     * @type {string}
+     * @memberof AuthorizedNetworkForDeletePrivateEndpointAllowlistRuleOutput
+     */
+    VpcEndpointName?: string;
 }

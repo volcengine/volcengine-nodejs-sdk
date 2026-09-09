@@ -61,6 +61,12 @@ export interface BackupForGetBackupOutput {
      * @memberof BackupForGetBackupOutput
      */
     State?: BackupForGetBackupOutputStateEnum;
+
+    /**
+     * @type {string}
+     * @memberof BackupForGetBackupOutput
+     */
+    Type?: string;
 }
 
 /**

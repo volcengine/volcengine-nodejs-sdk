@@ -40,6 +40,8 @@ import { DeleteExportTaskRequest } from './types/index';
 import { DeleteExportTaskResponse } from './types/index';
 import { DeletePrivateEndpointAllowlistRuleRequest } from './types/index';
 import { DeletePrivateEndpointAllowlistRuleResponse } from './types/index';
+import { DeleteRecycledInstanceBackupRequest } from './types/index';
+import { DeleteRecycledInstanceBackupResponse } from './types/index';
 import { DescribePriceDetailRequest } from './types/index';
 import { DescribePriceDetailResponse } from './types/index';
 import { GetBackupRequest } from './types/index';
@@ -60,6 +62,8 @@ import { GetMetricsRequest } from './types/index';
 import { GetMetricsResponse } from './types/index';
 import { GetPrivateEndpointAllowlistRuleRequest } from './types/index';
 import { GetPrivateEndpointAllowlistRuleResponse } from './types/index';
+import { GetRecycledInstanceRequest } from './types/index';
+import { GetRecycledInstanceResponse } from './types/index';
 import { GetRestoreProgressRequest } from './types/index';
 import { GetRestoreProgressResponse } from './types/index';
 import { GetSlowQueryDetailsRequest } from './types/index';
@@ -88,6 +92,10 @@ import { ListImportTasksRequest } from './types/index';
 import { ListImportTasksResponse } from './types/index';
 import { ListPrivateEndpointAllowlistRequest } from './types/index';
 import { ListPrivateEndpointAllowlistResponse } from './types/index';
+import { ListRecycledInstanceBackupsRequest } from './types/index';
+import { ListRecycledInstanceBackupsResponse } from './types/index';
+import { ListRecycledInstancesRequest } from './types/index';
+import { ListRecycledInstancesResponse } from './types/index';
 import { ListRegionsRequest } from './types/index';
 import { ListRegionsResponse } from './types/index';
 import { ListSlowQueriesRequest } from './types/index';
@@ -143,6 +151,7 @@ export type DeleteBranchCommandOutput = CommandOutput<DeleteBranchResponse>;
 export type DeleteClusterCommandOutput = CommandOutput<DeleteClusterResponse>;
 export type DeleteExportTaskCommandOutput = CommandOutput<DeleteExportTaskResponse>;
 export type DeletePrivateEndpointAllowlistRuleCommandOutput = CommandOutput<DeletePrivateEndpointAllowlistRuleResponse>;
+export type DeleteRecycledInstanceBackupCommandOutput = CommandOutput<DeleteRecycledInstanceBackupResponse>;
 export type DescribePriceDetailCommandOutput = CommandOutput<DescribePriceDetailResponse>;
 export type GetBackupCommandOutput = CommandOutput<GetBackupResponse>;
 export type GetBackupRetentionCommandOutput = CommandOutput<GetBackupRetentionResponse>;
@@ -153,6 +162,7 @@ export type GetImportTableColumnsCommandOutput = CommandOutput<GetImportTableCol
 export type GetImportTaskDetailsCommandOutput = CommandOutput<GetImportTaskDetailsResponse>;
 export type GetMetricsCommandOutput = CommandOutput<GetMetricsResponse>;
 export type GetPrivateEndpointAllowlistRuleCommandOutput = CommandOutput<GetPrivateEndpointAllowlistRuleResponse>;
+export type GetRecycledInstanceCommandOutput = CommandOutput<GetRecycledInstanceResponse>;
 export type GetRestoreProgressCommandOutput = CommandOutput<GetRestoreProgressResponse>;
 export type GetSlowQueryDetailsCommandOutput = CommandOutput<GetSlowQueryDetailsResponse>;
 export type GetStatementPlanDetailsCommandOutput = CommandOutput<GetStatementPlanDetailsResponse>;
@@ -167,6 +177,8 @@ export type ListImportSupportedDataTypesCommandOutput = CommandOutput<ListImport
 export type ListImportTargetTablesCommandOutput = CommandOutput<ListImportTargetTablesResponse>;
 export type ListImportTasksCommandOutput = CommandOutput<ListImportTasksResponse>;
 export type ListPrivateEndpointAllowlistCommandOutput = CommandOutput<ListPrivateEndpointAllowlistResponse>;
+export type ListRecycledInstanceBackupsCommandOutput = CommandOutput<ListRecycledInstanceBackupsResponse>;
+export type ListRecycledInstancesCommandOutput = CommandOutput<ListRecycledInstancesResponse>;
 export type ListRegionsCommandOutput = CommandOutput<ListRegionsResponse>;
 export type ListSlowQueriesCommandOutput = CommandOutput<ListSlowQueriesResponse>;
 export type ListStatementPlansCommandOutput = CommandOutput<ListStatementPlansResponse>;
@@ -396,6 +408,21 @@ export class DeletePrivateEndpointAllowlistRuleCommand extends Command<
   }
 }
 /**
+ * Command to DeleteRecycledInstanceBackup
+ */
+export class DeleteRecycledInstanceBackupCommand extends Command<
+  DeleteRecycledInstanceBackupRequest,
+  DeleteRecycledInstanceBackupCommandOutput,
+  'DeleteRecycledInstanceBackupCommand'
+> {
+  static readonly metaPath = '/DeleteRecycledInstanceBackup/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: DeleteRecycledInstanceBackupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteRecycledInstanceBackupCommand.metaPath);
+  }
+}
+/**
  * Command to DescribePriceDetail
  */
 export class DescribePriceDetailCommand extends Command<
@@ -543,6 +570,21 @@ export class GetPrivateEndpointAllowlistRuleCommand extends Command<
   constructor(input: GetPrivateEndpointAllowlistRuleRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetPrivateEndpointAllowlistRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to GetRecycledInstance
+ */
+export class GetRecycledInstanceCommand extends Command<
+  GetRecycledInstanceRequest,
+  GetRecycledInstanceCommandOutput,
+  'GetRecycledInstanceCommand'
+> {
+  static readonly metaPath = '/GetRecycledInstance/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: GetRecycledInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetRecycledInstanceCommand.metaPath);
   }
 }
 /**
@@ -753,6 +795,36 @@ export class ListPrivateEndpointAllowlistCommand extends Command<
   constructor(input: ListPrivateEndpointAllowlistRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListPrivateEndpointAllowlistCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRecycledInstanceBackups
+ */
+export class ListRecycledInstanceBackupsCommand extends Command<
+  ListRecycledInstanceBackupsRequest,
+  ListRecycledInstanceBackupsCommandOutput,
+  'ListRecycledInstanceBackupsCommand'
+> {
+  static readonly metaPath = '/ListRecycledInstanceBackups/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ListRecycledInstanceBackupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRecycledInstanceBackupsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListRecycledInstances
+ */
+export class ListRecycledInstancesCommand extends Command<
+  ListRecycledInstancesRequest,
+  ListRecycledInstancesCommandOutput,
+  'ListRecycledInstancesCommand'
+> {
+  static readonly metaPath = '/ListRecycledInstances/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ListRecycledInstancesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListRecycledInstancesCommand.metaPath);
   }
 }
 /**
@@ -1056,6 +1128,7 @@ export default {
   DeleteClusterCommand,
   DeleteExportTaskCommand,
   DeletePrivateEndpointAllowlistRuleCommand,
+  DeleteRecycledInstanceBackupCommand,
   DescribePriceDetailCommand,
   GetBackupCommand,
   GetBackupRetentionCommand,
@@ -1066,6 +1139,7 @@ export default {
   GetImportTaskDetailsCommand,
   GetMetricsCommand,
   GetPrivateEndpointAllowlistRuleCommand,
+  GetRecycledInstanceCommand,
   GetRestoreProgressCommand,
   GetSlowQueryDetailsCommand,
   GetStatementPlanDetailsCommand,
@@ -1080,6 +1154,8 @@ export default {
   ListImportTargetTablesCommand,
   ListImportTasksCommand,
   ListPrivateEndpointAllowlistCommand,
+  ListRecycledInstanceBackupsCommand,
+  ListRecycledInstancesCommand,
   ListRegionsCommand,
   ListSlowQueriesCommand,
   ListStatementPlansCommand,

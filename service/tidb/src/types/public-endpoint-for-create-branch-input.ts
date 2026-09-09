@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AuthorizedNetworkForCreateBranchInput } from './authorized-network-for-create-branch-input';
+import { ConvertAuthorizedNetworkForCreateBranchInput } from './convert-authorized-network-for-create-branch-input';
  /**
  * 
  *
@@ -22,10 +22,10 @@ import { AuthorizedNetworkForCreateBranchInput } from './authorized-network-for-
 export interface PublicEndpointForCreateBranchInput {
 
     /**
-     * @type {Array<AuthorizedNetworkForCreateBranchInput>}
+     * @type {Array<ConvertAuthorizedNetworkForCreateBranchInput>}
      * @memberof PublicEndpointForCreateBranchInput
      */
-    AuthorizedNetworks?: Array<AuthorizedNetworkForCreateBranchInput>;
+    AuthorizedNetworks?: Array<ConvertAuthorizedNetworkForCreateBranchInput>;
 
     /**
      * @type {boolean}

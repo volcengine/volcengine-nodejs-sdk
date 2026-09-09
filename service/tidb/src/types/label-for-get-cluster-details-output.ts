@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface AwsForListBranchesOutput
+ * @interface LabelForGetClusterDetailsOutput
  */
-export interface AwsForListBranchesOutput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof AwsForListBranchesOutput
-     */
-    AvailabilityZone?: Array<string>;
+export interface LabelForGetClusterDetailsOutput {
 
     /**
      * @type {string}
-     * @memberof AwsForListBranchesOutput
+     * @memberof LabelForGetClusterDetailsOutput
      */
-    ServiceName?: string;
+    Key?: string;
+
+    /**
+     * @type {string}
+     * @memberof LabelForGetClusterDetailsOutput
+     */
+    Value?: string;
 }

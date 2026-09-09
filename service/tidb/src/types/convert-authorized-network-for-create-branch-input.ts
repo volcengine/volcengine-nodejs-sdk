@@ -16,19 +16,25 @@
  * 
  *
  * @export
- * @interface AlicloudForDeleteClusterOutput
+ * @interface ConvertAuthorizedNetworkForCreateBranchInput
  */
-export interface AlicloudForDeleteClusterOutput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof AlicloudForDeleteClusterOutput
-     */
-    AvailabilityZone?: Array<string>;
+export interface ConvertAuthorizedNetworkForCreateBranchInput {
 
     /**
      * @type {string}
-     * @memberof AlicloudForDeleteClusterOutput
+     * @memberof ConvertAuthorizedNetworkForCreateBranchInput
      */
-    ServiceName?: string;
+    DisplayName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertAuthorizedNetworkForCreateBranchInput
+     */
+    EndIpAddress?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertAuthorizedNetworkForCreateBranchInput
+     */
+    StartIpAddress?: string;
 }

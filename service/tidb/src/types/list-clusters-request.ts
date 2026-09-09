@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { TagFilterForListClustersInput } from './tag-filter-for-list-clusters-input';
  /**
  * 
  *
@@ -49,4 +50,10 @@ export interface ListClustersRequest {
      * @memberof ListClustersRequest
      */
     Skip?: number;
+
+    /**
+     * @type {Array<TagFilterForListClustersInput>}
+     * @memberof ListClustersRequest
+     */
+    TagFilters?: Array<TagFilterForListClustersInput>;
 }

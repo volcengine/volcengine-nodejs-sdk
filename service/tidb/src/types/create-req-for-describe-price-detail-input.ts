@@ -14,6 +14,7 @@
 
 import { AutoScalingForDescribePriceDetailInput } from './auto-scaling-for-describe-price-detail-input';
 import { EncryptionConfigForDescribePriceDetailInput } from './encryption-config-for-describe-price-detail-input';
+import { TagForDescribePriceDetailInput } from './tag-for-describe-price-detail-input';
 import { ZoneForDescribePriceDetailInput } from './zone-for-describe-price-detail-input';
  /**
  * 
@@ -64,6 +65,12 @@ export interface CreateReqForDescribePriceDetailInput {
      * @memberof CreateReqForDescribePriceDetailInput
      */
     ServicePlan?: CreateReqForDescribePriceDetailInputServicePlanEnum;
+
+    /**
+     * @type {Array<TagForDescribePriceDetailInput>}
+     * @memberof CreateReqForDescribePriceDetailInput
+     */
+    Tags?: Array<TagForDescribePriceDetailInput>;
 
     /**
      * @type {string}

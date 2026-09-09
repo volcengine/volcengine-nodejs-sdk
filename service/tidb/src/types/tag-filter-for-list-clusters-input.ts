@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface AlicloudForGetClusterDetailsOutput
+ * @interface TagFilterForListClustersInput
  */
-export interface AlicloudForGetClusterDetailsOutput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof AlicloudForGetClusterDetailsOutput
-     */
-    AvailabilityZone?: Array<string>;
+export interface TagFilterForListClustersInput {
 
     /**
      * @type {string}
-     * @memberof AlicloudForGetClusterDetailsOutput
+     * @memberof TagFilterForListClustersInput
      */
-    ServiceName?: string;
+    Key?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof TagFilterForListClustersInput
+     */
+    Values?: Array<string>;
 }

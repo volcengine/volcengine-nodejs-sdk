@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AuthorizedNetworkForGetBranchDetailsOutput } from './authorized-network-for-get-branch-details-output';
+import { ConvertAuthorizedNetworkForGetBranchDetailsOutput } from './convert-authorized-network-for-get-branch-details-output';
  /**
  * 
  *
@@ -22,10 +22,10 @@ import { AuthorizedNetworkForGetBranchDetailsOutput } from './authorized-network
 export interface PublicEndpointForGetBranchDetailsOutput {
 
     /**
-     * @type {Array<AuthorizedNetworkForGetBranchDetailsOutput>}
+     * @type {Array<ConvertAuthorizedNetworkForGetBranchDetailsOutput>}
      * @memberof PublicEndpointForGetBranchDetailsOutput
      */
-    AuthorizedNetworks?: Array<AuthorizedNetworkForGetBranchDetailsOutput>;
+    AuthorizedNetworks?: Array<ConvertAuthorizedNetworkForGetBranchDetailsOutput>;
 
     /**
      * @type {boolean}

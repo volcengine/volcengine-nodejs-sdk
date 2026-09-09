@@ -12,8 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AlicloudForListBranchesOutput } from './alicloud-for-list-branches-output';
-import { AwsForListBranchesOutput } from './aws-for-list-branches-output';
+import { AuthorizedNetworkForListBranchesOutput } from './authorized-network-for-list-branches-output';
  /**
  * 
  *
@@ -23,16 +22,16 @@ import { AwsForListBranchesOutput } from './aws-for-list-branches-output';
 export interface PrivateEndpointForListBranchesOutput {
 
     /**
-     * @type {AlicloudForListBranchesOutput}
+     * @type {Array<AuthorizedNetworkForListBranchesOutput>}
      * @memberof PrivateEndpointForListBranchesOutput
      */
-    Alicloud?: AlicloudForListBranchesOutput;
+    AuthorizedNetworks?: Array<AuthorizedNetworkForListBranchesOutput>;
 
     /**
-     * @type {AwsForListBranchesOutput}
+     * @type {boolean}
      * @memberof PrivateEndpointForListBranchesOutput
      */
-    Aws?: AwsForListBranchesOutput;
+    Disabled?: boolean;
 
     /**
      * @type {string}
@@ -45,4 +44,28 @@ export interface PrivateEndpointForListBranchesOutput {
      * @memberof PrivateEndpointForListBranchesOutput
      */
     Port?: number;
+
+    /**
+     * @type {number}
+     * @memberof PrivateEndpointForListBranchesOutput
+     */
+    SecurityGroupCount?: number;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForListBranchesOutput
+     */
+    ServiceName?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForListBranchesOutput
+     */
+    VpcEndpointId?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForListBranchesOutput
+     */
+    VpcEndpointName?: string;
 }

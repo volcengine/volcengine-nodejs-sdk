@@ -12,8 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AlicloudForUpdateClusterInput } from './alicloud-for-update-cluster-input';
-import { AwsForUpdateClusterInput } from './aws-for-update-cluster-input';
+import { AuthorizedNetworkForUpdateClusterInput } from './authorized-network-for-update-cluster-input';
  /**
  * 
  *
@@ -23,16 +22,16 @@ import { AwsForUpdateClusterInput } from './aws-for-update-cluster-input';
 export interface PrivateEndpointForUpdateClusterInput {
 
     /**
-     * @type {AlicloudForUpdateClusterInput}
+     * @type {Array<AuthorizedNetworkForUpdateClusterInput>}
      * @memberof PrivateEndpointForUpdateClusterInput
      */
-    Alicloud?: AlicloudForUpdateClusterInput;
+    AuthorizedNetworks?: Array<AuthorizedNetworkForUpdateClusterInput>;
 
     /**
-     * @type {AwsForUpdateClusterInput}
+     * @type {boolean}
      * @memberof PrivateEndpointForUpdateClusterInput
      */
-    Aws?: AwsForUpdateClusterInput;
+    Disabled?: boolean;
 
     /**
      * @type {string}
@@ -45,4 +44,28 @@ export interface PrivateEndpointForUpdateClusterInput {
      * @memberof PrivateEndpointForUpdateClusterInput
      */
     Port?: number;
+
+    /**
+     * @type {number}
+     * @memberof PrivateEndpointForUpdateClusterInput
+     */
+    SecurityGroupCount?: number;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForUpdateClusterInput
+     */
+    ServiceName?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForUpdateClusterInput
+     */
+    VpcEndpointId?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForUpdateClusterInput
+     */
+    VpcEndpointName?: string;
 }

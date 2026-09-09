@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface AwsForUpdateClusterInput
+ * @interface AnnotationForListBranchesOutput
  */
-export interface AwsForUpdateClusterInput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof AwsForUpdateClusterInput
-     */
-    AvailabilityZone?: Array<string>;
+export interface AnnotationForListBranchesOutput {
 
     /**
      * @type {string}
-     * @memberof AwsForUpdateClusterInput
+     * @memberof AnnotationForListBranchesOutput
      */
-    ServiceName?: string;
+    Key?: string;
+
+    /**
+     * @type {string}
+     * @memberof AnnotationForListBranchesOutput
+     */
+    Value?: string;
 }

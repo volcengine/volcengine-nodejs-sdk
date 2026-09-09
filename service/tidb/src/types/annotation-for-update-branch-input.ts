@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface AwsForGetBranchDetailsOutput
+ * @interface AnnotationForUpdateBranchInput
  */
-export interface AwsForGetBranchDetailsOutput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof AwsForGetBranchDetailsOutput
-     */
-    AvailabilityZone?: Array<string>;
+export interface AnnotationForUpdateBranchInput {
 
     /**
      * @type {string}
-     * @memberof AwsForGetBranchDetailsOutput
+     * @memberof AnnotationForUpdateBranchInput
      */
-    ServiceName?: string;
+    Key?: string;
+
+    /**
+     * @type {string}
+     * @memberof AnnotationForUpdateBranchInput
+     */
+    Value?: string;
 }

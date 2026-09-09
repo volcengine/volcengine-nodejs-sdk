@@ -12,8 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AlicloudForGetClusterDetailsOutput } from './alicloud-for-get-cluster-details-output';
-import { AwsForGetClusterDetailsOutput } from './aws-for-get-cluster-details-output';
+import { AuthorizedNetworkForGetClusterDetailsOutput } from './authorized-network-for-get-cluster-details-output';
  /**
  * 
  *
@@ -23,16 +22,16 @@ import { AwsForGetClusterDetailsOutput } from './aws-for-get-cluster-details-out
 export interface PrivateEndpointForGetClusterDetailsOutput {
 
     /**
-     * @type {AlicloudForGetClusterDetailsOutput}
+     * @type {Array<AuthorizedNetworkForGetClusterDetailsOutput>}
      * @memberof PrivateEndpointForGetClusterDetailsOutput
      */
-    Alicloud?: AlicloudForGetClusterDetailsOutput;
+    AuthorizedNetworks?: Array<AuthorizedNetworkForGetClusterDetailsOutput>;
 
     /**
-     * @type {AwsForGetClusterDetailsOutput}
+     * @type {boolean}
      * @memberof PrivateEndpointForGetClusterDetailsOutput
      */
-    Aws?: AwsForGetClusterDetailsOutput;
+    Disabled?: boolean;
 
     /**
      * @type {string}
@@ -45,4 +44,28 @@ export interface PrivateEndpointForGetClusterDetailsOutput {
      * @memberof PrivateEndpointForGetClusterDetailsOutput
      */
     Port?: number;
+
+    /**
+     * @type {number}
+     * @memberof PrivateEndpointForGetClusterDetailsOutput
+     */
+    SecurityGroupCount?: number;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForGetClusterDetailsOutput
+     */
+    ServiceName?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForGetClusterDetailsOutput
+     */
+    VpcEndpointId?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForGetClusterDetailsOutput
+     */
+    VpcEndpointName?: string;
 }

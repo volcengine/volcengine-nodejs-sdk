@@ -12,8 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AlicloudForCreateBranchInput } from './alicloud-for-create-branch-input';
-import { AwsForCreateBranchInput } from './aws-for-create-branch-input';
+import { AuthorizedNetworkForCreateBranchInput } from './authorized-network-for-create-branch-input';
  /**
  * 
  *
@@ -23,16 +22,16 @@ import { AwsForCreateBranchInput } from './aws-for-create-branch-input';
 export interface PrivateEndpointForCreateBranchInput {
 
     /**
-     * @type {AlicloudForCreateBranchInput}
+     * @type {Array<AuthorizedNetworkForCreateBranchInput>}
      * @memberof PrivateEndpointForCreateBranchInput
      */
-    Alicloud?: AlicloudForCreateBranchInput;
+    AuthorizedNetworks?: Array<AuthorizedNetworkForCreateBranchInput>;
 
     /**
-     * @type {AwsForCreateBranchInput}
+     * @type {boolean}
      * @memberof PrivateEndpointForCreateBranchInput
      */
-    Aws?: AwsForCreateBranchInput;
+    Disabled?: boolean;
 
     /**
      * @type {string}
@@ -45,4 +44,28 @@ export interface PrivateEndpointForCreateBranchInput {
      * @memberof PrivateEndpointForCreateBranchInput
      */
     Port?: number;
+
+    /**
+     * @type {number}
+     * @memberof PrivateEndpointForCreateBranchInput
+     */
+    SecurityGroupCount?: number;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForCreateBranchInput
+     */
+    ServiceName?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForCreateBranchInput
+     */
+    VpcEndpointId?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForCreateBranchInput
+     */
+    VpcEndpointName?: string;
 }
