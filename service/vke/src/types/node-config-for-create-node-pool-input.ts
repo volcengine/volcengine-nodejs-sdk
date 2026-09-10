@@ -18,6 +18,7 @@ import { GpuDriverConfigForCreateNodePoolInput } from './gpu-driver-config-for-c
 import { InstancesDistributionForCreateNodePoolInput } from './instances-distribution-for-create-node-pool-input';
 import { PublicAccessConfigForCreateNodePoolInput } from './public-access-config-for-create-node-pool-input';
 import { SecurityForCreateNodePoolInput } from './security-for-create-node-pool-input';
+import { SpotPriceLimitForCreateNodePoolInput } from './spot-price-limit-for-create-node-pool-input';
 import { SystemVolumeForCreateNodePoolInput } from './system-volume-for-create-node-pool-input';
 import { TagForCreateNodePoolInput } from './tag-for-create-node-pool-input';
  /**
@@ -179,6 +180,12 @@ export interface NodeConfigForCreateNodePoolInput {
     Security?: SecurityForCreateNodePoolInput;
 
     /**
+     * @type {Array<SpotPriceLimitForCreateNodePoolInput>}
+     * @memberof NodeConfigForCreateNodePoolInput
+     */
+    SpotPriceLimits?: Array<SpotPriceLimitForCreateNodePoolInput>;
+
+    /**
      * @type {string}
      * @memberof NodeConfigForCreateNodePoolInput
      */
@@ -217,6 +224,7 @@ export enum NodeConfigForCreateNodePoolInputInstanceChargeTypeEnum {
  */
 export enum NodeConfigForCreateNodePoolInputSpotStrategyEnum {
     NoSpot = 'NoSpot',
-    SpotAsPriceGo = 'SpotAsPriceGo'
+    SpotAsPriceGo = 'SpotAsPriceGo',
+    SpotWithPriceLimit = 'SpotWithPriceLimit'
 }
 

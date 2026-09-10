@@ -16,25 +16,40 @@
  * 
  *
  * @export
- * @interface CustomExtensionsForCreateSubInstanceInput
+ * @interface C2PASignRequest
  */
-export interface CustomExtensionsForCreateSubInstanceInput {
-
-    /**
-     * @type {boolean}
-     * @memberof CustomExtensionsForCreateSubInstanceInput
-     */
-    Critical?: boolean;
+export interface C2PASignRequest {
 
     /**
      * @type {string}
-     * @memberof CustomExtensionsForCreateSubInstanceInput
+     * @memberof C2PASignRequest
      */
-    ObjectIdentifier?: string;
+    InstanceId: string;
 
     /**
      * @type {string}
-     * @memberof CustomExtensionsForCreateSubInstanceInput
+     * @memberof C2PASignRequest
      */
-    Value?: string;
+    Message: string;
+
+    /**
+     * @type {string}
+     * @memberof C2PASignRequest
+     */
+    MessageType: C2PASignRequestMessageTypeEnum;
+
+    /**
+     * @type {string}
+     * @memberof C2PASignRequest
+     */
+    SigningAlgorithm: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum C2PASignRequestMessageTypeEnum {
+    DIGEST = 'DIGEST'
+}
+

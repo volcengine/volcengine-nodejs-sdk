@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { CustomExtensionsForCreateLeafInstanceInput } from './custom-extensions-for-create-leaf-instance-input';
+import { CustomExtensionForCreateLeafInstanceInput } from './custom-extension-for-create-leaf-instance-input';
 import { ExtendedKeyUsagesForCreateLeafInstanceInput } from './extended-key-usages-for-create-leaf-instance-input';
 import { KeyUsagesForCreateLeafInstanceInput } from './key-usages-for-create-leaf-instance-input';
  /**
@@ -24,10 +24,10 @@ import { KeyUsagesForCreateLeafInstanceInput } from './key-usages-for-create-lea
 export interface ExtensionsForCreateLeafInstanceInput {
 
     /**
-     * @type {CustomExtensionsForCreateLeafInstanceInput}
+     * @type {Array<CustomExtensionForCreateLeafInstanceInput>}
      * @memberof ExtensionsForCreateLeafInstanceInput
      */
-    CustomExtensions?: CustomExtensionsForCreateLeafInstanceInput;
+    CustomExtensions?: Array<CustomExtensionForCreateLeafInstanceInput>;
 
     /**
      * @type {ExtendedKeyUsagesForCreateLeafInstanceInput}
