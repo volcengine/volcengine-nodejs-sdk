@@ -14,6 +14,10 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { C2PASignRequest } from './types/index';
+import { C2PASignResponse } from './types/index';
+import { C2PAVerifyRequest } from './types/index';
+import { C2PAVerifyResponse } from './types/index';
 import { CreateLeafInstanceRequest } from './types/index';
 import { CreateLeafInstanceResponse } from './types/index';
 import { CreateRootInstanceRequest } from './types/index';
@@ -26,6 +30,8 @@ import { DeleteRootInstanceRequest } from './types/index';
 import { DeleteRootInstanceResponse } from './types/index';
 import { DeleteSubInstanceRequest } from './types/index';
 import { DeleteSubInstanceResponse } from './types/index';
+import { DescribeC2PAInstanceRequest } from './types/index';
+import { DescribeC2PAInstanceResponse } from './types/index';
 import { DisableRootInstanceRequest } from './types/index';
 import { DisableRootInstanceResponse } from './types/index';
 import { DisableSubInstanceRequest } from './types/index';
@@ -36,6 +42,8 @@ import { EnableRootInstanceRequest } from './types/index';
 import { EnableRootInstanceResponse } from './types/index';
 import { EnableSubInstanceRequest } from './types/index';
 import { EnableSubInstanceResponse } from './types/index';
+import { GetC2PAInstanceRequest } from './types/index';
+import { GetC2PAInstanceResponse } from './types/index';
 import { GetLeafInstanceRequest } from './types/index';
 import { GetLeafInstanceResponse } from './types/index';
 import { GetQuotaDetailRequest } from './types/index';
@@ -44,6 +52,8 @@ import { GetRootInstanceRequest } from './types/index';
 import { GetRootInstanceResponse } from './types/index';
 import { GetSubInstanceRequest } from './types/index';
 import { GetSubInstanceResponse } from './types/index';
+import { ListC2PAInstancesRequest } from './types/index';
+import { ListC2PAInstancesResponse } from './types/index';
 import { ListLeafInstancesRequest } from './types/index';
 import { ListLeafInstancesResponse } from './types/index';
 import { ListRootInstancesRequest } from './types/index';
@@ -70,21 +80,26 @@ import { UploadRootInstanceResponse } from './types/index';
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type C2PASignCommandOutput = CommandOutput<C2PASignResponse>;
+export type C2PAVerifyCommandOutput = CommandOutput<C2PAVerifyResponse>;
 export type CreateLeafInstanceCommandOutput = CommandOutput<CreateLeafInstanceResponse>;
 export type CreateRootInstanceCommandOutput = CommandOutput<CreateRootInstanceResponse>;
 export type CreateSubInstanceCommandOutput = CommandOutput<CreateSubInstanceResponse>;
 export type DeleteLeafInstanceCommandOutput = CommandOutput<DeleteLeafInstanceResponse>;
 export type DeleteRootInstanceCommandOutput = CommandOutput<DeleteRootInstanceResponse>;
 export type DeleteSubInstanceCommandOutput = CommandOutput<DeleteSubInstanceResponse>;
+export type DescribeC2PAInstanceCommandOutput = CommandOutput<DescribeC2PAInstanceResponse>;
 export type DisableRootInstanceCommandOutput = CommandOutput<DisableRootInstanceResponse>;
 export type DisableSubInstanceCommandOutput = CommandOutput<DisableSubInstanceResponse>;
 export type DownloadLeafInstanceCommandOutput = CommandOutput<DownloadLeafInstanceResponse>;
 export type EnableRootInstanceCommandOutput = CommandOutput<EnableRootInstanceResponse>;
 export type EnableSubInstanceCommandOutput = CommandOutput<EnableSubInstanceResponse>;
+export type GetC2PAInstanceCommandOutput = CommandOutput<GetC2PAInstanceResponse>;
 export type GetLeafInstanceCommandOutput = CommandOutput<GetLeafInstanceResponse>;
 export type GetQuotaDetailCommandOutput = CommandOutput<GetQuotaDetailResponse>;
 export type GetRootInstanceCommandOutput = CommandOutput<GetRootInstanceResponse>;
 export type GetSubInstanceCommandOutput = CommandOutput<GetSubInstanceResponse>;
+export type ListC2PAInstancesCommandOutput = CommandOutput<ListC2PAInstancesResponse>;
 export type ListLeafInstancesCommandOutput = CommandOutput<ListLeafInstancesResponse>;
 export type ListRootInstancesCommandOutput = CommandOutput<ListRootInstancesResponse>;
 export type ListSubInstancesCommandOutput = CommandOutput<ListSubInstancesResponse>;
@@ -96,7 +111,6 @@ export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UploadLeafCertificateCommandOutput = CommandOutput<UploadLeafCertificateResponse>;
 export type UploadRootInstanceCommandOutput = CommandOutput<UploadRootInstanceResponse>;
-
 
 /**
  * PCA20251001Client Service Client
@@ -111,6 +125,36 @@ export class PCA20251001Client extends Client {
   }
 }
 
+/**
+ * Command to C2PASign
+ */
+export class C2PASignCommand extends Command<
+  C2PASignRequest,
+  C2PASignCommandOutput,
+  'C2PASignCommand'
+> {
+  static readonly metaPath = '/C2PASign/2025-10-01/pca/post/application_json/';
+
+  constructor(input: C2PASignRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(C2PASignCommand.metaPath);
+  }
+}
+/**
+ * Command to C2PAVerify
+ */
+export class C2PAVerifyCommand extends Command<
+  C2PAVerifyRequest,
+  C2PAVerifyCommandOutput,
+  'C2PAVerifyCommand'
+> {
+  static readonly metaPath = '/C2PAVerify/2025-10-01/pca/post/application_json/';
+
+  constructor(input: C2PAVerifyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(C2PAVerifyCommand.metaPath);
+  }
+}
 /**
  * Command to CreateLeafInstance
  */
@@ -202,6 +246,21 @@ export class DeleteSubInstanceCommand extends Command<
   }
 }
 /**
+ * Command to DescribeC2PAInstance
+ */
+export class DescribeC2PAInstanceCommand extends Command<
+  DescribeC2PAInstanceRequest,
+  DescribeC2PAInstanceCommandOutput,
+  'DescribeC2PAInstanceCommand'
+> {
+  static readonly metaPath = '/DescribeC2PAInstance/2025-10-01/pca/post/application_json/';
+
+  constructor(input: DescribeC2PAInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeC2PAInstanceCommand.metaPath);
+  }
+}
+/**
  * Command to DisableRootInstance
  */
 export class DisableRootInstanceCommand extends Command<
@@ -277,6 +336,21 @@ export class EnableSubInstanceCommand extends Command<
   }
 }
 /**
+ * Command to GetC2PAInstance
+ */
+export class GetC2PAInstanceCommand extends Command<
+  GetC2PAInstanceRequest,
+  GetC2PAInstanceCommandOutput,
+  'GetC2PAInstanceCommand'
+> {
+  static readonly metaPath = '/GetC2PAInstance/2025-10-01/pca/post/application_json/';
+
+  constructor(input: GetC2PAInstanceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetC2PAInstanceCommand.metaPath);
+  }
+}
+/**
  * Command to GetLeafInstance
  */
 export class GetLeafInstanceCommand extends Command<
@@ -334,6 +408,21 @@ export class GetSubInstanceCommand extends Command<
   constructor(input: GetSubInstanceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetSubInstanceCommand.metaPath);
+  }
+}
+/**
+ * Command to ListC2PAInstances
+ */
+export class ListC2PAInstancesCommand extends Command<
+  ListC2PAInstancesRequest,
+  ListC2PAInstancesCommandOutput,
+  'ListC2PAInstancesCommand'
+> {
+  static readonly metaPath = '/ListC2PAInstances/2025-10-01/pca/post/application_json/';
+
+  constructor(input: ListC2PAInstancesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListC2PAInstancesCommand.metaPath);
   }
 }
 /**
@@ -504,21 +593,26 @@ export class UploadRootInstanceCommand extends Command<
 
 export default {
   PCA20251001Client,
+  C2PASignCommand,
+  C2PAVerifyCommand,
   CreateLeafInstanceCommand,
   CreateRootInstanceCommand,
   CreateSubInstanceCommand,
   DeleteLeafInstanceCommand,
   DeleteRootInstanceCommand,
   DeleteSubInstanceCommand,
+  DescribeC2PAInstanceCommand,
   DisableRootInstanceCommand,
   DisableSubInstanceCommand,
   DownloadLeafInstanceCommand,
   EnableRootInstanceCommand,
   EnableSubInstanceCommand,
+  GetC2PAInstanceCommand,
   GetLeafInstanceCommand,
   GetQuotaDetailCommand,
   GetRootInstanceCommand,
   GetSubInstanceCommand,
+  ListC2PAInstancesCommand,
   ListLeafInstancesCommand,
   ListRootInstancesCommand,
   ListSubInstancesCommand,

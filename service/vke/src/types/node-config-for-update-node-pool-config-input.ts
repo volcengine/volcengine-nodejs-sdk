@@ -18,6 +18,7 @@ import { GpuDriverConfigForUpdateNodePoolConfigInput } from './gpu-driver-config
 import { InstancesDistributionForUpdateNodePoolConfigInput } from './instances-distribution-for-update-node-pool-config-input';
 import { PublicAccessConfigForUpdateNodePoolConfigInput } from './public-access-config-for-update-node-pool-config-input';
 import { SecurityForUpdateNodePoolConfigInput } from './security-for-update-node-pool-config-input';
+import { SpotPriceLimitForUpdateNodePoolConfigInput } from './spot-price-limit-for-update-node-pool-config-input';
 import { SystemVolumeForUpdateNodePoolConfigInput } from './system-volume-for-update-node-pool-config-input';
 import { TagForUpdateNodePoolConfigInput } from './tag-for-update-node-pool-config-input';
  /**
@@ -173,6 +174,18 @@ export interface NodeConfigForUpdateNodePoolConfigInput {
     Security?: SecurityForUpdateNodePoolConfigInput;
 
     /**
+     * @type {Array<SpotPriceLimitForUpdateNodePoolConfigInput>}
+     * @memberof NodeConfigForUpdateNodePoolConfigInput
+     */
+    SpotPriceLimits?: Array<SpotPriceLimitForUpdateNodePoolConfigInput>;
+
+    /**
+     * @type {string}
+     * @memberof NodeConfigForUpdateNodePoolConfigInput
+     */
+    SpotStrategy?: NodeConfigForUpdateNodePoolConfigInputSpotStrategyEnum;
+
+    /**
      * @type {Array<string>}
      * @memberof NodeConfigForUpdateNodePoolConfigInput
      */
@@ -198,5 +211,14 @@ export interface NodeConfigForUpdateNodePoolConfigInput {
 export enum NodeConfigForUpdateNodePoolConfigInputInstanceChargeTypeEnum {
     PostPaid = 'PostPaid',
     PrePaid = 'PrePaid'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum NodeConfigForUpdateNodePoolConfigInputSpotStrategyEnum {
+    NoSpot = 'NoSpot',
+    SpotAsPriceGo = 'SpotAsPriceGo',
+    SpotWithPriceLimit = 'SpotWithPriceLimit'
 }
 

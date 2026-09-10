@@ -27,6 +27,12 @@ export interface DataVolumeForUpdateNodePoolConfigInput {
     BurstEnabled?: boolean;
 
     /**
+     * @type {boolean}
+     * @memberof DataVolumeForUpdateNodePoolConfigInput
+     */
+    Encrypted?: boolean;
+
+    /**
      * @type {number}
      * @memberof DataVolumeForUpdateNodePoolConfigInput
      */
@@ -49,6 +55,12 @@ export interface DataVolumeForUpdateNodePoolConfigInput {
      * @memberof DataVolumeForUpdateNodePoolConfigInput
      */
     FileSystem?: DataVolumeForUpdateNodePoolConfigInputFileSystemEnum;
+
+    /**
+     * @type {string}
+     * @memberof DataVolumeForUpdateNodePoolConfigInput
+     */
+    KmsKeyId?: string;
 
     /**
      * @type {string}

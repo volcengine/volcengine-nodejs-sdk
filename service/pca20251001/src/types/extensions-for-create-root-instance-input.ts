@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { CustomExtensionsForCreateRootInstanceInput } from './custom-extensions-for-create-root-instance-input';
+import { CustomExtensionForCreateRootInstanceInput } from './custom-extension-for-create-root-instance-input';
 import { ExtendedKeyUsagesForCreateRootInstanceInput } from './extended-key-usages-for-create-root-instance-input';
 import { KeyUsagesForCreateRootInstanceInput } from './key-usages-for-create-root-instance-input';
  /**
@@ -24,10 +24,10 @@ import { KeyUsagesForCreateRootInstanceInput } from './key-usages-for-create-roo
 export interface ExtensionsForCreateRootInstanceInput {
 
     /**
-     * @type {CustomExtensionsForCreateRootInstanceInput}
+     * @type {Array<CustomExtensionForCreateRootInstanceInput>}
      * @memberof ExtensionsForCreateRootInstanceInput
      */
-    CustomExtensions?: CustomExtensionsForCreateRootInstanceInput;
+    CustomExtensions?: Array<CustomExtensionForCreateRootInstanceInput>;
 
     /**
      * @type {ExtendedKeyUsagesForCreateRootInstanceInput}
