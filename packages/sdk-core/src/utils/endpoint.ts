@@ -162,6 +162,7 @@ const defaultEndpoint: Record<string, ServiceEndpointInfo> = {
   id: { Service: "id", IsGlobal: false },
   tidb: { Service: "tidb", IsGlobal: false },
   vikingdb: { Service: "vikingdb", IsGlobal: false },
+  pca: { Service: "pca", IsGlobal: true },
 };
 
 const bootstrapRegion: Record<string, unknown> = {

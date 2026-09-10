@@ -17,6 +17,7 @@ import { DataVolumeForListNodePoolsOutput } from './data-volume-for-list-node-po
 import { InstancesDistributionForListNodePoolsOutput } from './instances-distribution-for-list-node-pools-output';
 import { PublicAccessConfigForListNodePoolsOutput } from './public-access-config-for-list-node-pools-output';
 import { SecurityForListNodePoolsOutput } from './security-for-list-node-pools-output';
+import { SpotPriceLimitForListNodePoolsOutput } from './spot-price-limit-for-list-node-pools-output';
 import { SystemVolumeForListNodePoolsOutput } from './system-volume-for-list-node-pools-output';
 import { TagForListNodePoolsOutput } from './tag-for-list-node-pools-output';
  /**
@@ -172,6 +173,12 @@ export interface NodeConfigForListNodePoolsOutput {
     Security?: SecurityForListNodePoolsOutput;
 
     /**
+     * @type {Array<SpotPriceLimitForListNodePoolsOutput>}
+     * @memberof NodeConfigForListNodePoolsOutput
+     */
+    SpotPriceLimits?: Array<SpotPriceLimitForListNodePoolsOutput>;
+
+    /**
      * @type {string}
      * @memberof NodeConfigForListNodePoolsOutput
      */
@@ -210,6 +217,7 @@ export enum NodeConfigForListNodePoolsOutputInstanceChargeTypeEnum {
  */
 export enum NodeConfigForListNodePoolsOutputSpotStrategyEnum {
     NoSpot = 'NoSpot',
-    SpotAsPriceGo = 'SpotAsPriceGo'
+    SpotAsPriceGo = 'SpotAsPriceGo',
+    SpotWithPriceLimit = 'SpotWithPriceLimit'
 }
 

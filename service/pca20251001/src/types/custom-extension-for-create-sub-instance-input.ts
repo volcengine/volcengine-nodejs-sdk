@@ -16,25 +16,31 @@
  * 
  *
  * @export
- * @interface CustomExtensionsForCreateRootInstanceInput
+ * @interface CustomExtensionForCreateSubInstanceInput
  */
-export interface CustomExtensionsForCreateRootInstanceInput {
+export interface CustomExtensionForCreateSubInstanceInput {
 
     /**
      * @type {boolean}
-     * @memberof CustomExtensionsForCreateRootInstanceInput
+     * @memberof CustomExtensionForCreateSubInstanceInput
      */
     Critical?: boolean;
 
     /**
      * @type {string}
-     * @memberof CustomExtensionsForCreateRootInstanceInput
+     * @memberof CustomExtensionForCreateSubInstanceInput
      */
     ObjectIdentifier?: string;
 
     /**
      * @type {string}
-     * @memberof CustomExtensionsForCreateRootInstanceInput
+     * @memberof CustomExtensionForCreateSubInstanceInput
      */
     Value?: string;
+
+    /**
+     * @type {string}
+     * @memberof CustomExtensionForCreateSubInstanceInput
+     */
+    ValueBytes?: string;
 }

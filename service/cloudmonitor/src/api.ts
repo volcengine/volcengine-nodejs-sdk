@@ -24,6 +24,8 @@ import { CreateContactsRequest } from './types/index';
 import { CreateContactsResponse } from './types/index';
 import { CreateEventRuleRequest } from './types/index';
 import { CreateEventRuleResponse } from './types/index';
+import { CreateIntegrationCenterIntegrationConfigRequest } from './types/index';
+import { CreateIntegrationCenterIntegrationConfigResponse } from './types/index';
 import { CreateNotificationRequest } from './types/index';
 import { CreateNotificationResponse } from './types/index';
 import { CreateNotifyTemplateRequest } from './types/index';
@@ -46,6 +48,8 @@ import { DeleteContactsByIdsRequest } from './types/index';
 import { DeleteContactsByIdsResponse } from './types/index';
 import { DeleteEventRuleRequest } from './types/index';
 import { DeleteEventRuleResponse } from './types/index';
+import { DeleteIntegrationCenterIntegrationConfigRequest } from './types/index';
+import { DeleteIntegrationCenterIntegrationConfigResponse } from './types/index';
 import { DeleteNotificationsByIdsRequest } from './types/index';
 import { DeleteNotificationsByIdsResponse } from './types/index';
 import { DeleteNotifyTemplatesByIdsRequest } from './types/index';
@@ -66,6 +70,8 @@ import { EnableEventRuleRequest } from './types/index';
 import { EnableEventRuleResponse } from './types/index';
 import { EnablePresetAlertTemplateRequest } from './types/index';
 import { EnablePresetAlertTemplateResponse } from './types/index';
+import { GetIntegrationCenterIntegrationConfigRequest } from './types/index';
+import { GetIntegrationCenterIntegrationConfigResponse } from './types/index';
 import { GetMetricDataRequest } from './types/index';
 import { GetMetricDataResponse } from './types/index';
 import { GetO11yAgentECSAutoInstallRequest } from './types/index';
@@ -92,6 +98,8 @@ import { ListEventRulesRequest } from './types/index';
 import { ListEventRulesResponse } from './types/index';
 import { ListEventsRequest } from './types/index';
 import { ListEventsResponse } from './types/index';
+import { ListIntegrationCenterIntegrationConfigsRequest } from './types/index';
+import { ListIntegrationCenterIntegrationConfigsResponse } from './types/index';
 import { ListNotificationsRequest } from './types/index';
 import { ListNotificationsResponse } from './types/index';
 import { ListNotifyTemplatesRequest } from './types/index';
@@ -122,6 +130,8 @@ import { ListWebhooksRequest } from './types/index';
 import { ListWebhooksResponse } from './types/index';
 import { ModifyStateOfSilencePolicyByIdsRequest } from './types/index';
 import { ModifyStateOfSilencePolicyByIdsResponse } from './types/index';
+import { PerformIntegrationCenterIntegrationConfigRequest } from './types/index';
+import { PerformIntegrationCenterIntegrationConfigResponse } from './types/index';
 import { PerformO11yAgentECSDeployTaskRequest } from './types/index';
 import { PerformO11yAgentECSDeployTaskResponse } from './types/index';
 import { SetStateOfRulesByIdsRequest } from './types/index';
@@ -142,6 +152,8 @@ import { UpdateContactsWithContactGroupsRequest } from './types/index';
 import { UpdateContactsWithContactGroupsResponse } from './types/index';
 import { UpdateEventRuleRequest } from './types/index';
 import { UpdateEventRuleResponse } from './types/index';
+import { UpdateIntegrationCenterIntegrationConfigRequest } from './types/index';
+import { UpdateIntegrationCenterIntegrationConfigResponse } from './types/index';
 import { UpdateNotificationRequest } from './types/index';
 import { UpdateNotificationResponse } from './types/index';
 import { UpdateNotifyTemplateRequest } from './types/index';
@@ -167,6 +179,7 @@ export type CreateAlertTemplateCommandOutput = CommandOutput<CreateAlertTemplate
 export type CreateContactGroupCommandOutput = CommandOutput<CreateContactGroupResponse>;
 export type CreateContactsCommandOutput = CommandOutput<CreateContactsResponse>;
 export type CreateEventRuleCommandOutput = CommandOutput<CreateEventRuleResponse>;
+export type CreateIntegrationCenterIntegrationConfigCommandOutput = CommandOutput<CreateIntegrationCenterIntegrationConfigResponse>;
 export type CreateNotificationCommandOutput = CommandOutput<CreateNotificationResponse>;
 export type CreateNotifyTemplateCommandOutput = CommandOutput<CreateNotifyTemplateResponse>;
 export type CreateO11yAgentECSDeployTaskCommandOutput = CommandOutput<CreateO11yAgentECSDeployTaskResponse>;
@@ -178,6 +191,7 @@ export type DeleteAlertTemplatesByIdsCommandOutput = CommandOutput<DeleteAlertTe
 export type DeleteContactGroupByIdsCommandOutput = CommandOutput<DeleteContactGroupByIdsResponse>;
 export type DeleteContactsByIdsCommandOutput = CommandOutput<DeleteContactsByIdsResponse>;
 export type DeleteEventRuleCommandOutput = CommandOutput<DeleteEventRuleResponse>;
+export type DeleteIntegrationCenterIntegrationConfigCommandOutput = CommandOutput<DeleteIntegrationCenterIntegrationConfigResponse>;
 export type DeleteNotificationsByIdsCommandOutput = CommandOutput<DeleteNotificationsByIdsResponse>;
 export type DeleteNotifyTemplatesByIdsCommandOutput = CommandOutput<DeleteNotifyTemplatesByIdsResponse>;
 export type DeleteObjectGroupCommandOutput = CommandOutput<DeleteObjectGroupResponse>;
@@ -188,6 +202,7 @@ export type DisableEventRuleCommandOutput = CommandOutput<DisableEventRuleRespon
 export type DisablePresetAlertTemplateCommandOutput = CommandOutput<DisablePresetAlertTemplateResponse>;
 export type EnableEventRuleCommandOutput = CommandOutput<EnableEventRuleResponse>;
 export type EnablePresetAlertTemplateCommandOutput = CommandOutput<EnablePresetAlertTemplateResponse>;
+export type GetIntegrationCenterIntegrationConfigCommandOutput = CommandOutput<GetIntegrationCenterIntegrationConfigResponse>;
 export type GetMetricDataCommandOutput = CommandOutput<GetMetricDataResponse>;
 export type GetO11yAgentECSAutoInstallCommandOutput = CommandOutput<GetO11yAgentECSAutoInstallResponse>;
 export type GetTopDataCommandOutput = CommandOutput<GetTopDataResponse>;
@@ -201,6 +216,7 @@ export type ListContactsByIdsCommandOutput = CommandOutput<ListContactsByIdsResp
 export type ListDefaultNotifyTemplatesCommandOutput = CommandOutput<ListDefaultNotifyTemplatesResponse>;
 export type ListEventRulesCommandOutput = CommandOutput<ListEventRulesResponse>;
 export type ListEventsCommandOutput = CommandOutput<ListEventsResponse>;
+export type ListIntegrationCenterIntegrationConfigsCommandOutput = CommandOutput<ListIntegrationCenterIntegrationConfigsResponse>;
 export type ListNotificationsCommandOutput = CommandOutput<ListNotificationsResponse>;
 export type ListNotifyTemplatesCommandOutput = CommandOutput<ListNotifyTemplatesResponse>;
 export type ListO11yAgentECSInstanceMetadataCommandOutput = CommandOutput<ListO11yAgentECSInstanceMetadataResponse>;
@@ -216,6 +232,7 @@ export type ListSilencePolicyCommandOutput = CommandOutput<ListSilencePolicyResp
 export type ListWebhooksCommandOutput = CommandOutput<ListWebhooksResponse>;
 export type ListWebhooksByIdsCommandOutput = CommandOutput<ListWebhooksByIdsResponse>;
 export type ModifyStateOfSilencePolicyByIdsCommandOutput = CommandOutput<ModifyStateOfSilencePolicyByIdsResponse>;
+export type PerformIntegrationCenterIntegrationConfigCommandOutput = CommandOutput<PerformIntegrationCenterIntegrationConfigResponse>;
 export type PerformO11yAgentECSDeployTaskCommandOutput = CommandOutput<PerformO11yAgentECSDeployTaskResponse>;
 export type SetStateOfRulesByIdsCommandOutput = CommandOutput<SetStateOfRulesByIdsResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
@@ -226,6 +243,7 @@ export type UpdateContactGroupWithContactsCommandOutput = CommandOutput<UpdateCo
 export type UpdateContactsCommandOutput = CommandOutput<UpdateContactsResponse>;
 export type UpdateContactsWithContactGroupsCommandOutput = CommandOutput<UpdateContactsWithContactGroupsResponse>;
 export type UpdateEventRuleCommandOutput = CommandOutput<UpdateEventRuleResponse>;
+export type UpdateIntegrationCenterIntegrationConfigCommandOutput = CommandOutput<UpdateIntegrationCenterIntegrationConfigResponse>;
 export type UpdateNotificationCommandOutput = CommandOutput<UpdateNotificationResponse>;
 export type UpdateNotifyTemplateCommandOutput = CommandOutput<UpdateNotifyTemplateResponse>;
 export type UpdateO11yAgentECSAutoInstallCommandOutput = CommandOutput<UpdateO11yAgentECSAutoInstallResponse>;
@@ -321,6 +339,21 @@ export class CreateEventRuleCommand extends Command<
   constructor(input: CreateEventRuleRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateEventRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateIntegrationCenterIntegrationConfig
+ */
+export class CreateIntegrationCenterIntegrationConfigCommand extends Command<
+  CreateIntegrationCenterIntegrationConfigRequest,
+  CreateIntegrationCenterIntegrationConfigCommandOutput,
+  'CreateIntegrationCenterIntegrationConfigCommand'
+> {
+  static readonly metaPath = '/CreateIntegrationCenterIntegrationConfig/2018-01-01/cloudmonitor/post/application_json/';
+
+  constructor(input: CreateIntegrationCenterIntegrationConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateIntegrationCenterIntegrationConfigCommand.metaPath);
   }
 }
 /**
@@ -489,6 +522,21 @@ export class DeleteEventRuleCommand extends Command<
   }
 }
 /**
+ * Command to DeleteIntegrationCenterIntegrationConfig
+ */
+export class DeleteIntegrationCenterIntegrationConfigCommand extends Command<
+  DeleteIntegrationCenterIntegrationConfigRequest,
+  DeleteIntegrationCenterIntegrationConfigCommandOutput,
+  'DeleteIntegrationCenterIntegrationConfigCommand'
+> {
+  static readonly metaPath = '/DeleteIntegrationCenterIntegrationConfig/2018-01-01/cloudmonitor/post/application_json/';
+
+  constructor(input: DeleteIntegrationCenterIntegrationConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteIntegrationCenterIntegrationConfigCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteNotificationsByIds
  */
 export class DeleteNotificationsByIdsCommand extends Command<
@@ -636,6 +684,21 @@ export class EnablePresetAlertTemplateCommand extends Command<
   constructor(input: EnablePresetAlertTemplateRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(EnablePresetAlertTemplateCommand.metaPath);
+  }
+}
+/**
+ * Command to GetIntegrationCenterIntegrationConfig
+ */
+export class GetIntegrationCenterIntegrationConfigCommand extends Command<
+  GetIntegrationCenterIntegrationConfigRequest,
+  GetIntegrationCenterIntegrationConfigCommandOutput,
+  'GetIntegrationCenterIntegrationConfigCommand'
+> {
+  static readonly metaPath = '/GetIntegrationCenterIntegrationConfig/2018-01-01/cloudmonitor/post/application_json/';
+
+  constructor(input: GetIntegrationCenterIntegrationConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetIntegrationCenterIntegrationConfigCommand.metaPath);
   }
 }
 /**
@@ -831,6 +894,21 @@ export class ListEventsCommand extends Command<
   constructor(input: ListEventsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListEventsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListIntegrationCenterIntegrationConfigs
+ */
+export class ListIntegrationCenterIntegrationConfigsCommand extends Command<
+  ListIntegrationCenterIntegrationConfigsRequest,
+  ListIntegrationCenterIntegrationConfigsCommandOutput,
+  'ListIntegrationCenterIntegrationConfigsCommand'
+> {
+  static readonly metaPath = '/ListIntegrationCenterIntegrationConfigs/2018-01-01/cloudmonitor/post/application_json/';
+
+  constructor(input: ListIntegrationCenterIntegrationConfigsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListIntegrationCenterIntegrationConfigsCommand.metaPath);
   }
 }
 /**
@@ -1059,6 +1137,21 @@ export class ModifyStateOfSilencePolicyByIdsCommand extends Command<
   }
 }
 /**
+ * Command to PerformIntegrationCenterIntegrationConfig
+ */
+export class PerformIntegrationCenterIntegrationConfigCommand extends Command<
+  PerformIntegrationCenterIntegrationConfigRequest,
+  PerformIntegrationCenterIntegrationConfigCommandOutput,
+  'PerformIntegrationCenterIntegrationConfigCommand'
+> {
+  static readonly metaPath = '/PerformIntegrationCenterIntegrationConfig/2018-01-01/cloudmonitor/post/application_json/';
+
+  constructor(input: PerformIntegrationCenterIntegrationConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(PerformIntegrationCenterIntegrationConfigCommand.metaPath);
+  }
+}
+/**
  * Command to PerformO11yAgentECSDeployTask
  */
 export class PerformO11yAgentECSDeployTaskCommand extends Command<
@@ -1209,6 +1302,21 @@ export class UpdateEventRuleCommand extends Command<
   }
 }
 /**
+ * Command to UpdateIntegrationCenterIntegrationConfig
+ */
+export class UpdateIntegrationCenterIntegrationConfigCommand extends Command<
+  UpdateIntegrationCenterIntegrationConfigRequest,
+  UpdateIntegrationCenterIntegrationConfigCommandOutput,
+  'UpdateIntegrationCenterIntegrationConfigCommand'
+> {
+  static readonly metaPath = '/UpdateIntegrationCenterIntegrationConfig/2018-01-01/cloudmonitor/post/application_json/';
+
+  constructor(input: UpdateIntegrationCenterIntegrationConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateIntegrationCenterIntegrationConfigCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateNotification
  */
 export class UpdateNotificationCommand extends Command<
@@ -1336,6 +1444,7 @@ export default {
   CreateContactGroupCommand,
   CreateContactsCommand,
   CreateEventRuleCommand,
+  CreateIntegrationCenterIntegrationConfigCommand,
   CreateNotificationCommand,
   CreateNotifyTemplateCommand,
   CreateO11yAgentECSDeployTaskCommand,
@@ -1347,6 +1456,7 @@ export default {
   DeleteContactGroupByIdsCommand,
   DeleteContactsByIdsCommand,
   DeleteEventRuleCommand,
+  DeleteIntegrationCenterIntegrationConfigCommand,
   DeleteNotificationsByIdsCommand,
   DeleteNotifyTemplatesByIdsCommand,
   DeleteObjectGroupCommand,
@@ -1357,6 +1467,7 @@ export default {
   DisablePresetAlertTemplateCommand,
   EnableEventRuleCommand,
   EnablePresetAlertTemplateCommand,
+  GetIntegrationCenterIntegrationConfigCommand,
   GetMetricDataCommand,
   GetO11yAgentECSAutoInstallCommand,
   GetTopDataCommand,
@@ -1370,6 +1481,7 @@ export default {
   ListDefaultNotifyTemplatesCommand,
   ListEventRulesCommand,
   ListEventsCommand,
+  ListIntegrationCenterIntegrationConfigsCommand,
   ListNotificationsCommand,
   ListNotifyTemplatesCommand,
   ListO11yAgentECSInstanceMetadataCommand,
@@ -1385,6 +1497,7 @@ export default {
   ListWebhooksCommand,
   ListWebhooksByIdsCommand,
   ModifyStateOfSilencePolicyByIdsCommand,
+  PerformIntegrationCenterIntegrationConfigCommand,
   PerformO11yAgentECSDeployTaskCommand,
   SetStateOfRulesByIdsCommand,
   TagResourcesCommand,
@@ -1395,6 +1508,7 @@ export default {
   UpdateContactsCommand,
   UpdateContactsWithContactGroupsCommand,
   UpdateEventRuleCommand,
+  UpdateIntegrationCenterIntegrationConfigCommand,
   UpdateNotificationCommand,
   UpdateNotifyTemplateCommand,
   UpdateO11yAgentECSAutoInstallCommand,
