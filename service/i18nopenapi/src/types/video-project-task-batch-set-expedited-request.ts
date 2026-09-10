@@ -27,8 +27,8 @@ export interface VideoProjectTaskBatchSetExpeditedRequest {
     projectId: string;
 
     /**
-     * @type {Array<number>}
+     * @type {Array<string>}
      * @memberof VideoProjectTaskBatchSetExpeditedRequest
      */
-    taskIds?: Array<number>;
+    taskIds?: Array<string>;
 }
