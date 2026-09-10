@@ -27,6 +27,12 @@ export interface ExpertInvokeAPIResponse {
     Asr?: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof ExpertInvokeAPIResponse
+     */
+    ConcernedDepartments?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof ExpertInvokeAPIResponse
      */
