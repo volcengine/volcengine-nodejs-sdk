@@ -58,6 +58,12 @@ export interface GetMetricDataRequest {
     Period?: string;
 
     /**
+     * @type {string}
+     * @memberof GetMetricDataRequest
+     */
+    ProjectName?: string;
+
+    /**
      * @type {number}
      * @memberof GetMetricDataRequest
      */

@@ -1,5 +1,14 @@
 {
-  "description": "CLOUDMONITOR: chore changes",
+  "actions": [
+    "PerformIntegrationCenterIntegrationConfig",
+    "UpdateIntegrationCenterIntegrationConfig",
+    "CreateIntegrationCenterIntegrationConfig",
+    "DeleteIntegrationCenterIntegrationConfig",
+    "GetIntegrationCenterIntegrationConfig",
+    "ListIntegrationCenterIntegrationConfigs",
+    "GetMetricData"
+  ],
+  "description": "CLOUDMONITOR: 新增 PerformIntegrationCenterIntegrationConfig, UpdateIntegrationCenterIntegrationConfig, CreateIntegrationCenterIntegrationConfig, DeleteIntegrationCenterIntegrationConfig, GetIntegrationCenterIntegrationConfig, ListIntegrationCenterIntegrationConfigs；修改 GetMetricData",
   "modules": "service/cloudmonitor",
-  "type": "bugfix"
+  "type": "feature"
 }
