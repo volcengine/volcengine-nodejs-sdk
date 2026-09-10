@@ -27,14 +27,20 @@ export interface AuthorizedNetworkForDeleteClusterOutput {
     DisplayName?: string;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof AuthorizedNetworkForDeleteClusterOutput
      */
-    EndIpAddress?: string;
+    SecurityGroupCount?: number;
 
     /**
      * @type {string}
      * @memberof AuthorizedNetworkForDeleteClusterOutput
      */
-    StartIpAddress?: string;
+    VpcEndpointId?: string;
+
+    /**
+     * @type {string}
+     * @memberof AuthorizedNetworkForDeleteClusterOutput
+     */
+    VpcEndpointName?: string;
 }

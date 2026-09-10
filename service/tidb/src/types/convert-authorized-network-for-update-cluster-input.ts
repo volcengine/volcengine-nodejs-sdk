@@ -16,19 +16,25 @@
  * 
  *
  * @export
- * @interface AlicloudForCreateBranchInput
+ * @interface ConvertAuthorizedNetworkForUpdateClusterInput
  */
-export interface AlicloudForCreateBranchInput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof AlicloudForCreateBranchInput
-     */
-    AvailabilityZone?: Array<string>;
+export interface ConvertAuthorizedNetworkForUpdateClusterInput {
 
     /**
      * @type {string}
-     * @memberof AlicloudForCreateBranchInput
+     * @memberof ConvertAuthorizedNetworkForUpdateClusterInput
      */
-    ServiceName?: string;
+    DisplayName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertAuthorizedNetworkForUpdateClusterInput
+     */
+    EndIpAddress?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertAuthorizedNetworkForUpdateClusterInput
+     */
+    StartIpAddress?: string;
 }

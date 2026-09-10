@@ -12,12 +12,15 @@
  * Do not edit the class manually.
  */
 
+import { AnnotationForUpdateClusterInput } from './annotation-for-update-cluster-input';
 import { AuditLogConfigForUpdateClusterInput } from './audit-log-config-for-update-cluster-input';
 import { AutoScalingForUpdateClusterInput } from './auto-scaling-for-update-cluster-input';
 import { AutomatedBackupPolicyForUpdateClusterInput } from './automated-backup-policy-for-update-cluster-input';
 import { EncryptionConfigForUpdateClusterInput } from './encryption-config-for-update-cluster-input';
 import { EndpointsForUpdateClusterInput } from './endpoints-for-update-cluster-input';
+import { LabelForUpdateClusterInput } from './label-for-update-cluster-input';
 import { SpendingLimitForUpdateClusterInput } from './spending-limit-for-update-cluster-input';
+import { TagForUpdateClusterInput } from './tag-for-update-cluster-input';
 import { ZoneForUpdateClusterInput } from './zone-for-update-cluster-input';
  /**
  * 
@@ -28,10 +31,10 @@ import { ZoneForUpdateClusterInput } from './zone-for-update-cluster-input';
 export interface ClusterForUpdateClusterInput {
 
     /**
-     * @type {string}
+     * @type {Array<AnnotationForUpdateClusterInput>}
      * @memberof ClusterForUpdateClusterInput
      */
-    Annotations?: string;
+    Annotations?: Array<AnnotationForUpdateClusterInput>;
 
     /**
      * @type {AuditLogConfigForUpdateClusterInput}
@@ -88,10 +91,10 @@ export interface ClusterForUpdateClusterInput {
     HighAvailabilityType?: ClusterForUpdateClusterInputHighAvailabilityTypeEnum;
 
     /**
-     * @type {string}
+     * @type {Array<LabelForUpdateClusterInput>}
      * @memberof ClusterForUpdateClusterInput
      */
-    Labels?: string;
+    Labels?: Array<LabelForUpdateClusterInput>;
 
     /**
      * @type {string}
@@ -128,6 +131,12 @@ export interface ClusterForUpdateClusterInput {
      * @memberof ClusterForUpdateClusterInput
      */
     State?: ClusterForUpdateClusterInputStateEnum;
+
+    /**
+     * @type {Array<TagForUpdateClusterInput>}
+     * @memberof ClusterForUpdateClusterInput
+     */
+    Tags?: Array<TagForUpdateClusterInput>;
 
     /**
      * @type {string}

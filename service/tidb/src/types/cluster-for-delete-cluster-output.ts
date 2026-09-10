@@ -12,12 +12,15 @@
  * Do not edit the class manually.
  */
 
+import { AnnotationForDeleteClusterOutput } from './annotation-for-delete-cluster-output';
 import { AuditLogConfigForDeleteClusterOutput } from './audit-log-config-for-delete-cluster-output';
 import { AutoScalingForDeleteClusterOutput } from './auto-scaling-for-delete-cluster-output';
 import { AutomatedBackupPolicyForDeleteClusterOutput } from './automated-backup-policy-for-delete-cluster-output';
 import { EncryptionConfigForDeleteClusterOutput } from './encryption-config-for-delete-cluster-output';
 import { EndpointsForDeleteClusterOutput } from './endpoints-for-delete-cluster-output';
+import { LabelForDeleteClusterOutput } from './label-for-delete-cluster-output';
 import { SpendingLimitForDeleteClusterOutput } from './spending-limit-for-delete-cluster-output';
+import { TagForDeleteClusterOutput } from './tag-for-delete-cluster-output';
 import { ZoneForDeleteClusterOutput } from './zone-for-delete-cluster-output';
  /**
  * 
@@ -28,10 +31,10 @@ import { ZoneForDeleteClusterOutput } from './zone-for-delete-cluster-output';
 export interface ClusterForDeleteClusterOutput {
 
     /**
-     * @type {string}
+     * @type {Array<AnnotationForDeleteClusterOutput>}
      * @memberof ClusterForDeleteClusterOutput
      */
-    Annotations?: string;
+    Annotations?: Array<AnnotationForDeleteClusterOutput>;
 
     /**
      * @type {AuditLogConfigForDeleteClusterOutput}
@@ -88,10 +91,10 @@ export interface ClusterForDeleteClusterOutput {
     HighAvailabilityType?: ClusterForDeleteClusterOutputHighAvailabilityTypeEnum;
 
     /**
-     * @type {string}
+     * @type {Array<LabelForDeleteClusterOutput>}
      * @memberof ClusterForDeleteClusterOutput
      */
-    Labels?: string;
+    Labels?: Array<LabelForDeleteClusterOutput>;
 
     /**
      * @type {string}
@@ -128,6 +131,12 @@ export interface ClusterForDeleteClusterOutput {
      * @memberof ClusterForDeleteClusterOutput
      */
     State?: ClusterForDeleteClusterOutputStateEnum;
+
+    /**
+     * @type {Array<TagForDeleteClusterOutput>}
+     * @memberof ClusterForDeleteClusterOutput
+     */
+    Tags?: Array<TagForDeleteClusterOutput>;
 
     /**
      * @type {string}

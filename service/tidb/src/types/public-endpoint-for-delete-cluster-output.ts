@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AuthorizedNetworkForDeleteClusterOutput } from './authorized-network-for-delete-cluster-output';
+import { ConvertAuthorizedNetworkForDeleteClusterOutput } from './convert-authorized-network-for-delete-cluster-output';
  /**
  * 
  *
@@ -22,10 +22,10 @@ import { AuthorizedNetworkForDeleteClusterOutput } from './authorized-network-fo
 export interface PublicEndpointForDeleteClusterOutput {
 
     /**
-     * @type {Array<AuthorizedNetworkForDeleteClusterOutput>}
+     * @type {Array<ConvertAuthorizedNetworkForDeleteClusterOutput>}
      * @memberof PublicEndpointForDeleteClusterOutput
      */
-    AuthorizedNetworks?: Array<AuthorizedNetworkForDeleteClusterOutput>;
+    AuthorizedNetworks?: Array<ConvertAuthorizedNetworkForDeleteClusterOutput>;
 
     /**
      * @type {boolean}

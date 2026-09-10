@@ -12,8 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AlicloudForUpdateBranchInput } from './alicloud-for-update-branch-input';
-import { AwsForUpdateBranchInput } from './aws-for-update-branch-input';
+import { AuthorizedNetworkForUpdateBranchInput } from './authorized-network-for-update-branch-input';
  /**
  * 
  *
@@ -23,16 +22,16 @@ import { AwsForUpdateBranchInput } from './aws-for-update-branch-input';
 export interface PrivateEndpointForUpdateBranchInput {
 
     /**
-     * @type {AlicloudForUpdateBranchInput}
+     * @type {Array<AuthorizedNetworkForUpdateBranchInput>}
      * @memberof PrivateEndpointForUpdateBranchInput
      */
-    Alicloud?: AlicloudForUpdateBranchInput;
+    AuthorizedNetworks?: Array<AuthorizedNetworkForUpdateBranchInput>;
 
     /**
-     * @type {AwsForUpdateBranchInput}
+     * @type {boolean}
      * @memberof PrivateEndpointForUpdateBranchInput
      */
-    Aws?: AwsForUpdateBranchInput;
+    Disabled?: boolean;
 
     /**
      * @type {string}
@@ -45,4 +44,28 @@ export interface PrivateEndpointForUpdateBranchInput {
      * @memberof PrivateEndpointForUpdateBranchInput
      */
     Port?: number;
+
+    /**
+     * @type {number}
+     * @memberof PrivateEndpointForUpdateBranchInput
+     */
+    SecurityGroupCount?: number;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForUpdateBranchInput
+     */
+    ServiceName?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForUpdateBranchInput
+     */
+    VpcEndpointId?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForUpdateBranchInput
+     */
+    VpcEndpointName?: string;
 }

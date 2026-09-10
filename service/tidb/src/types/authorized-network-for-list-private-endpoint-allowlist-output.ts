@@ -37,4 +37,10 @@ export interface AuthorizedNetworkForListPrivateEndpointAllowlistOutput {
      * @memberof AuthorizedNetworkForListPrivateEndpointAllowlistOutput
      */
     VpcEndpointId?: string;
+
+    /**
+     * @type {string}
+     * @memberof AuthorizedNetworkForListPrivateEndpointAllowlistOutput
+     */
+    VpcEndpointName?: string;
 }

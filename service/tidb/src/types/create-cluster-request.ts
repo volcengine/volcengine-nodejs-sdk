@@ -14,6 +14,7 @@
 
 import { AutoScalingForCreateClusterInput } from './auto-scaling-for-create-cluster-input';
 import { EncryptionConfigForCreateClusterInput } from './encryption-config-for-create-cluster-input';
+import { TagForCreateClusterInput } from './tag-for-create-cluster-input';
 import { ZoneForCreateClusterInput } from './zone-for-create-cluster-input';
  /**
  * 
@@ -64,6 +65,12 @@ export interface CreateClusterRequest {
      * @memberof CreateClusterRequest
      */
     ServicePlan?: CreateClusterRequestServicePlanEnum;
+
+    /**
+     * @type {Array<TagForCreateClusterInput>}
+     * @memberof CreateClusterRequest
+     */
+    Tags?: Array<TagForCreateClusterInput>;
 
     /**
      * @type {string}

@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface AlicloudForUpdateClusterInput
+ * @interface AnnotationForListClustersOutput
  */
-export interface AlicloudForUpdateClusterInput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof AlicloudForUpdateClusterInput
-     */
-    AvailabilityZone?: Array<string>;
+export interface AnnotationForListClustersOutput {
 
     /**
      * @type {string}
-     * @memberof AlicloudForUpdateClusterInput
+     * @memberof AnnotationForListClustersOutput
      */
-    ServiceName?: string;
+    Key?: string;
+
+    /**
+     * @type {string}
+     * @memberof AnnotationForListClustersOutput
+     */
+    Value?: string;
 }

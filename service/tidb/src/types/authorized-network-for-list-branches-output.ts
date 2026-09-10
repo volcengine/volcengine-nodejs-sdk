@@ -27,14 +27,20 @@ export interface AuthorizedNetworkForListBranchesOutput {
     DisplayName?: string;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof AuthorizedNetworkForListBranchesOutput
      */
-    EndIpAddress?: string;
+    SecurityGroupCount?: number;
 
     /**
      * @type {string}
      * @memberof AuthorizedNetworkForListBranchesOutput
      */
-    StartIpAddress?: string;
+    VpcEndpointId?: string;
+
+    /**
+     * @type {string}
+     * @memberof AuthorizedNetworkForListBranchesOutput
+     */
+    VpcEndpointName?: string;
 }

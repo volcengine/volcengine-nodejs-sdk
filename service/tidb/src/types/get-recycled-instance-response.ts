@@ -12,23 +12,18 @@
  * Do not edit the class manually.
  */
 
+import { RecycledInstanceForGetRecycledInstanceOutput } from './recycled-instance-for-get-recycled-instance-output';
  /**
  * 
  *
  * @export
- * @interface AlicloudForListClustersOutput
+ * @interface GetRecycledInstanceResponse
  */
-export interface AlicloudForListClustersOutput {
+export interface GetRecycledInstanceResponse {
 
     /**
-     * @type {Array<string>}
-     * @memberof AlicloudForListClustersOutput
+     * @type {RecycledInstanceForGetRecycledInstanceOutput}
+     * @memberof GetRecycledInstanceResponse
      */
-    AvailabilityZone?: Array<string>;
-
-    /**
-     * @type {string}
-     * @memberof AlicloudForListClustersOutput
-     */
-    ServiceName?: string;
+    RecycledInstance?: RecycledInstanceForGetRecycledInstanceOutput;
 }

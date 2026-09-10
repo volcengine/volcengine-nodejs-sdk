@@ -27,14 +27,20 @@ export interface AuthorizedNetworkForUpdateClusterInput {
     DisplayName?: string;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof AuthorizedNetworkForUpdateClusterInput
      */
-    EndIpAddress?: string;
+    SecurityGroupCount?: number;
 
     /**
      * @type {string}
      * @memberof AuthorizedNetworkForUpdateClusterInput
      */
-    StartIpAddress?: string;
+    VpcEndpointId?: string;
+
+    /**
+     * @type {string}
+     * @memberof AuthorizedNetworkForUpdateClusterInput
+     */
+    VpcEndpointName?: string;
 }

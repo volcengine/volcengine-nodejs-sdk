@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AnnotationForUpdateBranchInput } from './annotation-for-update-branch-input';
 import { EndpointsForUpdateBranchInput } from './endpoints-for-update-branch-input';
 import { UsagesForUpdateBranchInput } from './usages-for-update-branch-input';
  /**
@@ -23,10 +24,10 @@ import { UsagesForUpdateBranchInput } from './usages-for-update-branch-input';
 export interface BranchForUpdateBranchInput {
 
     /**
-     * @type {string}
+     * @type {Array<AnnotationForUpdateBranchInput>}
      * @memberof BranchForUpdateBranchInput
      */
-    Annotations?: string;
+    Annotations?: Array<AnnotationForUpdateBranchInput>;
 
     /**
      * @type {string}
@@ -93,6 +94,12 @@ export interface BranchForUpdateBranchInput {
      * @memberof BranchForUpdateBranchInput
      */
     ParentTimestamp?: string;
+
+    /**
+     * @type {string}
+     * @memberof BranchForUpdateBranchInput
+     */
+    ProjectName?: string;
 
     /**
      * @type {string}

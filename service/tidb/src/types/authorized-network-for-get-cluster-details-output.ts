@@ -27,14 +27,20 @@ export interface AuthorizedNetworkForGetClusterDetailsOutput {
     DisplayName?: string;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof AuthorizedNetworkForGetClusterDetailsOutput
      */
-    EndIpAddress?: string;
+    SecurityGroupCount?: number;
 
     /**
      * @type {string}
      * @memberof AuthorizedNetworkForGetClusterDetailsOutput
      */
-    StartIpAddress?: string;
+    VpcEndpointId?: string;
+
+    /**
+     * @type {string}
+     * @memberof AuthorizedNetworkForGetClusterDetailsOutput
+     */
+    VpcEndpointName?: string;
 }

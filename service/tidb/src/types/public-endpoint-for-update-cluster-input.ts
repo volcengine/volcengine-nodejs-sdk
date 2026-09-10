@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AuthorizedNetworkForUpdateClusterInput } from './authorized-network-for-update-cluster-input';
+import { ConvertAuthorizedNetworkForUpdateClusterInput } from './convert-authorized-network-for-update-cluster-input';
  /**
  * 
  *
@@ -22,10 +22,10 @@ import { AuthorizedNetworkForUpdateClusterInput } from './authorized-network-for
 export interface PublicEndpointForUpdateClusterInput {
 
     /**
-     * @type {Array<AuthorizedNetworkForUpdateClusterInput>}
+     * @type {Array<ConvertAuthorizedNetworkForUpdateClusterInput>}
      * @memberof PublicEndpointForUpdateClusterInput
      */
-    AuthorizedNetworks?: Array<AuthorizedNetworkForUpdateClusterInput>;
+    AuthorizedNetworks?: Array<ConvertAuthorizedNetworkForUpdateClusterInput>;
 
     /**
      * @type {boolean}

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AuthorizedNetworkForUpdateBranchInput } from './authorized-network-for-update-branch-input';
+import { ConvertAuthorizedNetworkForUpdateBranchInput } from './convert-authorized-network-for-update-branch-input';
  /**
  * 
  *
@@ -22,10 +22,10 @@ import { AuthorizedNetworkForUpdateBranchInput } from './authorized-network-for-
 export interface PublicEndpointForUpdateBranchInput {
 
     /**
-     * @type {Array<AuthorizedNetworkForUpdateBranchInput>}
+     * @type {Array<ConvertAuthorizedNetworkForUpdateBranchInput>}
      * @memberof PublicEndpointForUpdateBranchInput
      */
-    AuthorizedNetworks?: Array<AuthorizedNetworkForUpdateBranchInput>;
+    AuthorizedNetworks?: Array<ConvertAuthorizedNetworkForUpdateBranchInput>;
 
     /**
      * @type {boolean}

@@ -12,12 +12,15 @@
  * Do not edit the class manually.
  */
 
+import { AnnotationForGetClusterDetailsOutput } from './annotation-for-get-cluster-details-output';
 import { AuditLogConfigForGetClusterDetailsOutput } from './audit-log-config-for-get-cluster-details-output';
 import { AutoScalingForGetClusterDetailsOutput } from './auto-scaling-for-get-cluster-details-output';
 import { AutomatedBackupPolicyForGetClusterDetailsOutput } from './automated-backup-policy-for-get-cluster-details-output';
 import { EncryptionConfigForGetClusterDetailsOutput } from './encryption-config-for-get-cluster-details-output';
 import { EndpointsForGetClusterDetailsOutput } from './endpoints-for-get-cluster-details-output';
+import { LabelForGetClusterDetailsOutput } from './label-for-get-cluster-details-output';
 import { SpendingLimitForGetClusterDetailsOutput } from './spending-limit-for-get-cluster-details-output';
+import { TagForGetClusterDetailsOutput } from './tag-for-get-cluster-details-output';
 import { ZoneForGetClusterDetailsOutput } from './zone-for-get-cluster-details-output';
  /**
  * 
@@ -28,10 +31,10 @@ import { ZoneForGetClusterDetailsOutput } from './zone-for-get-cluster-details-o
 export interface ClusterForGetClusterDetailsOutput {
 
     /**
-     * @type {string}
+     * @type {Array<AnnotationForGetClusterDetailsOutput>}
      * @memberof ClusterForGetClusterDetailsOutput
      */
-    Annotations?: string;
+    Annotations?: Array<AnnotationForGetClusterDetailsOutput>;
 
     /**
      * @type {AuditLogConfigForGetClusterDetailsOutput}
@@ -88,10 +91,10 @@ export interface ClusterForGetClusterDetailsOutput {
     HighAvailabilityType?: ClusterForGetClusterDetailsOutputHighAvailabilityTypeEnum;
 
     /**
-     * @type {string}
+     * @type {Array<LabelForGetClusterDetailsOutput>}
      * @memberof ClusterForGetClusterDetailsOutput
      */
-    Labels?: string;
+    Labels?: Array<LabelForGetClusterDetailsOutput>;
 
     /**
      * @type {string}
@@ -128,6 +131,12 @@ export interface ClusterForGetClusterDetailsOutput {
      * @memberof ClusterForGetClusterDetailsOutput
      */
     State?: ClusterForGetClusterDetailsOutputStateEnum;
+
+    /**
+     * @type {Array<TagForGetClusterDetailsOutput>}
+     * @memberof ClusterForGetClusterDetailsOutput
+     */
+    Tags?: Array<TagForGetClusterDetailsOutput>;
 
     /**
      * @type {string}

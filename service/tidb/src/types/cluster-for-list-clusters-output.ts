@@ -12,12 +12,15 @@
  * Do not edit the class manually.
  */
 
+import { AnnotationForListClustersOutput } from './annotation-for-list-clusters-output';
 import { AuditLogConfigForListClustersOutput } from './audit-log-config-for-list-clusters-output';
 import { AutoScalingForListClustersOutput } from './auto-scaling-for-list-clusters-output';
 import { AutomatedBackupPolicyForListClustersOutput } from './automated-backup-policy-for-list-clusters-output';
 import { EncryptionConfigForListClustersOutput } from './encryption-config-for-list-clusters-output';
 import { EndpointsForListClustersOutput } from './endpoints-for-list-clusters-output';
+import { LabelForListClustersOutput } from './label-for-list-clusters-output';
 import { SpendingLimitForListClustersOutput } from './spending-limit-for-list-clusters-output';
+import { TagForListClustersOutput } from './tag-for-list-clusters-output';
 import { ZoneForListClustersOutput } from './zone-for-list-clusters-output';
  /**
  * 
@@ -28,10 +31,10 @@ import { ZoneForListClustersOutput } from './zone-for-list-clusters-output';
 export interface ClusterForListClustersOutput {
 
     /**
-     * @type {string}
+     * @type {Array<AnnotationForListClustersOutput>}
      * @memberof ClusterForListClustersOutput
      */
-    Annotations?: string;
+    Annotations?: Array<AnnotationForListClustersOutput>;
 
     /**
      * @type {AuditLogConfigForListClustersOutput}
@@ -88,10 +91,10 @@ export interface ClusterForListClustersOutput {
     HighAvailabilityType?: ClusterForListClustersOutputHighAvailabilityTypeEnum;
 
     /**
-     * @type {string}
+     * @type {Array<LabelForListClustersOutput>}
      * @memberof ClusterForListClustersOutput
      */
-    Labels?: string;
+    Labels?: Array<LabelForListClustersOutput>;
 
     /**
      * @type {string}
@@ -128,6 +131,12 @@ export interface ClusterForListClustersOutput {
      * @memberof ClusterForListClustersOutput
      */
     State?: ClusterForListClustersOutputStateEnum;
+
+    /**
+     * @type {Array<TagForListClustersOutput>}
+     * @memberof ClusterForListClustersOutput
+     */
+    Tags?: Array<TagForListClustersOutput>;
 
     /**
      * @type {string}

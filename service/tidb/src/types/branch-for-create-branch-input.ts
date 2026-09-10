@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AnnotationForCreateBranchInput } from './annotation-for-create-branch-input';
 import { EndpointsForCreateBranchInput } from './endpoints-for-create-branch-input';
 import { UsagesForCreateBranchInput } from './usages-for-create-branch-input';
  /**
@@ -23,10 +24,10 @@ import { UsagesForCreateBranchInput } from './usages-for-create-branch-input';
 export interface BranchForCreateBranchInput {
 
     /**
-     * @type {string}
+     * @type {Array<AnnotationForCreateBranchInput>}
      * @memberof BranchForCreateBranchInput
      */
-    Annotations?: string;
+    Annotations?: Array<AnnotationForCreateBranchInput>;
 
     /**
      * @type {string}
@@ -93,6 +94,12 @@ export interface BranchForCreateBranchInput {
      * @memberof BranchForCreateBranchInput
      */
     ParentTimestamp?: string;
+
+    /**
+     * @type {string}
+     * @memberof BranchForCreateBranchInput
+     */
+    ProjectName?: string;
 
     /**
      * @type {string}

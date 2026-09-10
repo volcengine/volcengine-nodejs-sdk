@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface AwsForUpdateBranchInput
+ * @interface LabelForDeleteClusterOutput
  */
-export interface AwsForUpdateBranchInput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof AwsForUpdateBranchInput
-     */
-    AvailabilityZone?: Array<string>;
+export interface LabelForDeleteClusterOutput {
 
     /**
      * @type {string}
-     * @memberof AwsForUpdateBranchInput
+     * @memberof LabelForDeleteClusterOutput
      */
-    ServiceName?: string;
+    Key?: string;
+
+    /**
+     * @type {string}
+     * @memberof LabelForDeleteClusterOutput
+     */
+    Value?: string;
 }

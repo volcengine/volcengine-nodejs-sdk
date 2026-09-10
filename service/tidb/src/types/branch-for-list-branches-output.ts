@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AnnotationForListBranchesOutput } from './annotation-for-list-branches-output';
 import { EndpointsForListBranchesOutput } from './endpoints-for-list-branches-output';
 import { UsagesForListBranchesOutput } from './usages-for-list-branches-output';
  /**
@@ -23,10 +24,10 @@ import { UsagesForListBranchesOutput } from './usages-for-list-branches-output';
 export interface BranchForListBranchesOutput {
 
     /**
-     * @type {string}
+     * @type {Array<AnnotationForListBranchesOutput>}
      * @memberof BranchForListBranchesOutput
      */
-    Annotations?: string;
+    Annotations?: Array<AnnotationForListBranchesOutput>;
 
     /**
      * @type {string}
@@ -93,6 +94,12 @@ export interface BranchForListBranchesOutput {
      * @memberof BranchForListBranchesOutput
      */
     ParentTimestamp?: string;
+
+    /**
+     * @type {string}
+     * @memberof BranchForListBranchesOutput
+     */
+    ProjectName?: string;
 
     /**
      * @type {string}

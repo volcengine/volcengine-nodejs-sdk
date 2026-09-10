@@ -16,19 +16,25 @@
  * 
  *
  * @export
- * @interface AlicloudForListBranchesOutput
+ * @interface DeleteRecycledInstanceBackupRequest
  */
-export interface AlicloudForListBranchesOutput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof AlicloudForListBranchesOutput
-     */
-    AvailabilityZone?: Array<string>;
+export interface DeleteRecycledInstanceBackupRequest {
 
     /**
      * @type {string}
-     * @memberof AlicloudForListBranchesOutput
+     * @memberof DeleteRecycledInstanceBackupRequest
      */
-    ServiceName?: string;
+    BackupId: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteRecycledInstanceBackupRequest
+     */
+    ClusterId: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteRecycledInstanceBackupRequest
+     */
+    ProjectName?: string;
 }

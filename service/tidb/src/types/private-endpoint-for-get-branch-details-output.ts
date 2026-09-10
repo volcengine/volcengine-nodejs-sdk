@@ -12,8 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AlicloudForGetBranchDetailsOutput } from './alicloud-for-get-branch-details-output';
-import { AwsForGetBranchDetailsOutput } from './aws-for-get-branch-details-output';
+import { AuthorizedNetworkForGetBranchDetailsOutput } from './authorized-network-for-get-branch-details-output';
  /**
  * 
  *
@@ -23,16 +22,16 @@ import { AwsForGetBranchDetailsOutput } from './aws-for-get-branch-details-outpu
 export interface PrivateEndpointForGetBranchDetailsOutput {
 
     /**
-     * @type {AlicloudForGetBranchDetailsOutput}
+     * @type {Array<AuthorizedNetworkForGetBranchDetailsOutput>}
      * @memberof PrivateEndpointForGetBranchDetailsOutput
      */
-    Alicloud?: AlicloudForGetBranchDetailsOutput;
+    AuthorizedNetworks?: Array<AuthorizedNetworkForGetBranchDetailsOutput>;
 
     /**
-     * @type {AwsForGetBranchDetailsOutput}
+     * @type {boolean}
      * @memberof PrivateEndpointForGetBranchDetailsOutput
      */
-    Aws?: AwsForGetBranchDetailsOutput;
+    Disabled?: boolean;
 
     /**
      * @type {string}
@@ -45,4 +44,28 @@ export interface PrivateEndpointForGetBranchDetailsOutput {
      * @memberof PrivateEndpointForGetBranchDetailsOutput
      */
     Port?: number;
+
+    /**
+     * @type {number}
+     * @memberof PrivateEndpointForGetBranchDetailsOutput
+     */
+    SecurityGroupCount?: number;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForGetBranchDetailsOutput
+     */
+    ServiceName?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForGetBranchDetailsOutput
+     */
+    VpcEndpointId?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForGetBranchDetailsOutput
+     */
+    VpcEndpointName?: string;
 }

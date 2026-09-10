@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface AwsForListClustersOutput
+ * @interface GetRecycledInstanceRequest
  */
-export interface AwsForListClustersOutput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof AwsForListClustersOutput
-     */
-    AvailabilityZone?: Array<string>;
+export interface GetRecycledInstanceRequest {
 
     /**
      * @type {string}
-     * @memberof AwsForListClustersOutput
+     * @memberof GetRecycledInstanceRequest
      */
-    ServiceName?: string;
+    ClusterId: string;
+
+    /**
+     * @type {string}
+     * @memberof GetRecycledInstanceRequest
+     */
+    ProjectName?: string;
 }

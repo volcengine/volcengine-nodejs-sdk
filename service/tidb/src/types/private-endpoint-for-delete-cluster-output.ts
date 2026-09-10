@@ -12,8 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { AlicloudForDeleteClusterOutput } from './alicloud-for-delete-cluster-output';
-import { AwsForDeleteClusterOutput } from './aws-for-delete-cluster-output';
+import { AuthorizedNetworkForDeleteClusterOutput } from './authorized-network-for-delete-cluster-output';
  /**
  * 
  *
@@ -23,16 +22,16 @@ import { AwsForDeleteClusterOutput } from './aws-for-delete-cluster-output';
 export interface PrivateEndpointForDeleteClusterOutput {
 
     /**
-     * @type {AlicloudForDeleteClusterOutput}
+     * @type {Array<AuthorizedNetworkForDeleteClusterOutput>}
      * @memberof PrivateEndpointForDeleteClusterOutput
      */
-    Alicloud?: AlicloudForDeleteClusterOutput;
+    AuthorizedNetworks?: Array<AuthorizedNetworkForDeleteClusterOutput>;
 
     /**
-     * @type {AwsForDeleteClusterOutput}
+     * @type {boolean}
      * @memberof PrivateEndpointForDeleteClusterOutput
      */
-    Aws?: AwsForDeleteClusterOutput;
+    Disabled?: boolean;
 
     /**
      * @type {string}
@@ -45,4 +44,28 @@ export interface PrivateEndpointForDeleteClusterOutput {
      * @memberof PrivateEndpointForDeleteClusterOutput
      */
     Port?: number;
+
+    /**
+     * @type {number}
+     * @memberof PrivateEndpointForDeleteClusterOutput
+     */
+    SecurityGroupCount?: number;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForDeleteClusterOutput
+     */
+    ServiceName?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForDeleteClusterOutput
+     */
+    VpcEndpointId?: string;
+
+    /**
+     * @type {string}
+     * @memberof PrivateEndpointForDeleteClusterOutput
+     */
+    VpcEndpointName?: string;
 }
