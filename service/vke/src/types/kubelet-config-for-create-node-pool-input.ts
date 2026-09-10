@@ -43,10 +43,28 @@ export interface KubeletConfigForCreateNodePoolInput {
     EvictionHard?: Array<EvictionHardForCreateNodePoolInput>;
 
     /**
+     * @type {boolean}
+     * @memberof KubeletConfigForCreateNodePoolInput
+     */
+    FailSwapOn?: boolean;
+
+    /**
      * @type {FeatureGatesForCreateNodePoolInput}
      * @memberof KubeletConfigForCreateNodePoolInput
      */
     FeatureGates?: FeatureGatesForCreateNodePoolInput;
+
+    /**
+     * @type {number}
+     * @memberof KubeletConfigForCreateNodePoolInput
+     */
+    ImageGCHighThresholdPercent?: number;
+
+    /**
+     * @type {number}
+     * @memberof KubeletConfigForCreateNodePoolInput
+     */
+    ImageGCLowThresholdPercent?: number;
 
     /**
      * @type {number}
