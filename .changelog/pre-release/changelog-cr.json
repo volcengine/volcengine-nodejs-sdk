@@ -1,9 +1,13 @@
 {
   "actions": [
-    "UpdateRegistry",
-    "UpdateTagDescription"
+    "UpdatePublicEndpoint",
+    "UpdateVpcEndpoint",
+    "CreateNamespace",
+    "CreateRegistry",
+    "GetAuthorizationToken",
+    "ListRegistries"
   ],
-  "description": "CR: 新增 UpdateTagDescription, UpdateRegistry",
+  "description": "CR: 修改 CreateNamespace, CreateRegistry, GetAuthorizationToken, ListRegistries, UpdatePublicEndpoint, UpdateVpcEndpoint",
   "modules": "service/cr",
   "type": "feature"
 }

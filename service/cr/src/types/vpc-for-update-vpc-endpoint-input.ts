@@ -36,6 +36,12 @@ export interface VpcForUpdateVpcEndpointInput {
      * @type {string}
      * @memberof VpcForUpdateVpcEndpointInput
      */
+    Region?: string;
+
+    /**
+     * @type {string}
+     * @memberof VpcForUpdateVpcEndpointInput
+     */
     SubnetId?: string;
 
     /**

@@ -24,5 +24,23 @@ export interface ProxyCacheForListRegistriesOutput {
      * @type {string}
      * @memberof ProxyCacheForListRegistriesOutput
      */
+    Endpoint?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof ProxyCacheForListRegistriesOutput
+     */
+    SkipSSLVerify?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof ProxyCacheForListRegistriesOutput
+     */
     Type?: string;
+
+    /**
+     * @type {string}
+     * @memberof ProxyCacheForListRegistriesOutput
+     */
+    Username?: string;
 }
