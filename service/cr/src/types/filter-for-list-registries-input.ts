@@ -34,6 +34,12 @@ export interface FilterForListRegistriesInput {
     Projects?: Array<string>;
 
     /**
+     * @type {boolean}
+     * @memberof FilterForListRegistriesInput
+     */
+    ProxyCacheEnabled?: boolean;
+
+    /**
      * @type {Array<StatusForListRegistriesInput>}
      * @memberof FilterForListRegistriesInput
      */
