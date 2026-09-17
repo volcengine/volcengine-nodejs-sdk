@@ -132,7 +132,7 @@ export interface ListForListResourcePackagesOutput {
      * @type {string}
      * @memberof ListForListResourcePackagesOutput
      */
-    Status?: ListForListResourcePackagesOutputStatusEnum;
+    Status?: string;
 
     /**
      * @type {string}
@@ -164,17 +164,3 @@ export interface ListForListResourcePackagesOutput {
      */
     ZoneCode?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum ListForListResourcePackagesOutputStatusEnum {
-    Effective = 'Effective',
-    NotEffective = 'NotEffective',
-    FailedToCreate = 'FailedToCreate',
-    UsedUp = 'UsedUp',
-    Expired = 'Expired',
-    Refunded = 'Refunded'
-}
-

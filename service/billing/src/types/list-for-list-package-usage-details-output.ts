@@ -168,7 +168,7 @@ export interface ListForListPackageUsageDetailsOutput {
      * @type {string}
      * @memberof ListForListPackageUsageDetailsOutput
      */
-    PackageType?: ListForListPackageUsageDetailsOutputPackageTypeEnum;
+    PackageType?: string;
 
     /**
      * @type {string}
@@ -230,14 +230,3 @@ export interface ListForListPackageUsageDetailsOutput {
      */
     ZoneCode?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum ListForListPackageUsageDetailsOutputPackageTypeEnum {
-    Periodic = 'Periodic',
-    Diminishing = 'Diminishing',
-    Hybrid = 'Hybrid'
-}
-

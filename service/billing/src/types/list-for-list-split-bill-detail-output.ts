@@ -120,12 +120,6 @@ export interface ListForListSplitBillDetailOutput {
      * @type {string}
      * @memberof ListForListSplitBillDetailOutput
      */
-    CreditCarriedAmount?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListSplitBillDetailOutput
-     */
     Currency?: string;
 
     /**
@@ -294,12 +288,6 @@ export interface ListForListSplitBillDetailOutput {
      * @type {string}
      * @memberof ListForListSplitBillDetailOutput
      */
-    PaidAmount?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListSplitBillDetailOutput
-     */
     PayableAmount?: string;
 
     /**
@@ -444,7 +432,7 @@ export interface ListForListSplitBillDetailOutput {
      * @type {string}
      * @memberof ListForListSplitBillDetailOutput
      */
-    SavingPlanDeductionDiscountAmount?: string;
+    SalesChannel?: string;
 
     /**
      * @type {string}
@@ -613,12 +601,6 @@ export interface ListForListSplitBillDetailOutput {
      * @memberof ListForListSplitBillDetailOutput
      */
     Unit?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListSplitBillDetailOutput
-     */
-    UnpaidAmount?: string;
 
     /**
      * @type {string}

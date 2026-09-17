@@ -43,6 +43,12 @@ export interface OrderProductInfoForListOrderProductDetailsOutput {
      * @type {string}
      * @memberof OrderProductInfoForListOrderProductDetailsOutput
      */
+    CurrencySettlement?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderProductInfoForListOrderProductDetailsOutput
+     */
     DeductionCount?: string;
 
     /**
@@ -62,6 +68,12 @@ export interface OrderProductInfoForListOrderProductDetailsOutput {
      * @memberof OrderProductInfoForListOrderProductDetailsOutput
      */
     EndTime?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderProductInfoForListOrderProductDetailsOutput
+     */
+    ExchangeRate?: string;
 
     /**
      * @type {string}
@@ -127,13 +139,55 @@ export interface OrderProductInfoForListOrderProductDetailsOutput {
      * @type {string}
      * @memberof OrderProductInfoForListOrderProductDetailsOutput
      */
+    PointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderProductInfoForListOrderProductDetailsOutput
+     */
+    Points?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderProductInfoForListOrderProductDetailsOutput
+     */
+    PreTaxPayableAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderProductInfoForListOrderProductDetailsOutput
+     */
     Product?: string;
 
     /**
      * @type {string}
      * @memberof OrderProductInfoForListOrderProductDetailsOutput
      */
+    SettlePayableAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderProductInfoForListOrderProductDetailsOutput
+     */
+    SettleTax?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderProductInfoForListOrderProductDetailsOutput
+     */
     Status?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderProductInfoForListOrderProductDetailsOutput
+     */
+    Tax?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderProductInfoForListOrderProductDetailsOutput
+     */
+    TaxRate?: string;
 
     /**
      * @type {string}

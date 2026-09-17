@@ -1,5 +1,22 @@
 {
-  "description": "BILLING: 修改 ListAmortizedCostBillDaily, ListAmortizedCostBillDetail, ListAmortizedCostBillMonthly, ListBillDetail, ListSplitBillDetail, RenewInstance",
+  "actions": [
+    "ListAmortizedCostBillMonthly",
+    "ListBillDetail",
+    "ListSplitBillDetail",
+    "GetOrder",
+    "ListPackageUsageDetails",
+    "ListResourcePackages",
+    "ListCostAnalysisOpenApi",
+    "QueryBalanceAcct",
+    "ListBill",
+    "ListBudget",
+    "ListOrderProductDetails",
+    "ListOrders",
+    "QueryBudgetDetail",
+    "ListAmortizedCostBillDaily",
+    "ListAmortizedCostBillDetail"
+  ],
+  "description": "BILLING: 修改 ListOrderProductDetails, ListAmortizedCostBillDetail, ListResourcePackages, ListCostAnalysisOpenApi, ListBillDetail, ListSplitBillDetail, ListOrders, QueryBalanceAcct, QueryBudgetDetail, ListAmortizedCostBillDaily, GetOrder, ListBill, ListBudget, ListPackageUsageDetails, ListAmortizedCostBillMonthly",
   "modules": "service/billing",
-  "type": "feature"
+  "type": "breaking-change"
 }
