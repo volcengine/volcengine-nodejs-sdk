@@ -60,13 +60,13 @@ export interface BudgetListForListBudgetOutput {
      * @type {string}
      * @memberof BudgetListForListBudgetOutput
      */
-    BudgetType?: BudgetListForListBudgetOutputBudgetTypeEnum;
+    BudgetType?: string;
 
     /**
      * @type {string}
      * @memberof BudgetListForListBudgetOutput
      */
-    Period?: BudgetListForListBudgetOutputPeriodEnum;
+    Period?: string;
 
     /**
      * @type {string}
@@ -80,21 +80,3 @@ export interface BudgetListForListBudgetOutput {
      */
     Status?: number;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum BudgetListForListBudgetOutputBudgetTypeEnum {
-    CostBudget = 'cost_budget'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum BudgetListForListBudgetOutputPeriodEnum {
-    Month = 'month',
-    Quarter = 'quarter',
-    Year = 'year'
-}
-

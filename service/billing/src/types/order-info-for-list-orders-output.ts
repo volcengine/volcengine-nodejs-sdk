@@ -49,7 +49,19 @@ export interface OrderInfoForListOrdersOutput {
      * @type {string}
      * @memberof OrderInfoForListOrdersOutput
      */
+    CurrencySettlement?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderInfoForListOrdersOutput
+     */
     DiscountAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderInfoForListOrdersOutput
+     */
+    ExchangeRate?: string;
 
     /**
      * @type {OrderFailRefundInfoForListOrdersOutput}
@@ -103,6 +115,24 @@ export interface OrderInfoForListOrdersOutput {
      * @type {string}
      * @memberof OrderInfoForListOrdersOutput
      */
+    PointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderInfoForListOrdersOutput
+     */
+    Points?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderInfoForListOrdersOutput
+     */
+    PreTaxPayableAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderInfoForListOrdersOutput
+     */
     SellerCustomerName?: string;
 
     /**
@@ -115,6 +145,18 @@ export interface OrderInfoForListOrdersOutput {
      * @type {string}
      * @memberof OrderInfoForListOrdersOutput
      */
+    SettlePayableAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderInfoForListOrdersOutput
+     */
+    SettleTax?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderInfoForListOrdersOutput
+     */
     Status?: string;
 
     /**
@@ -122,4 +164,16 @@ export interface OrderInfoForListOrdersOutput {
      * @memberof OrderInfoForListOrdersOutput
      */
     SubjectNo?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderInfoForListOrdersOutput
+     */
+    Tax?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderInfoForListOrdersOutput
+     */
+    TaxRate?: string;
 }
