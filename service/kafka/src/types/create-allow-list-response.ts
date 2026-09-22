@@ -16,7 +16,13 @@
  * 
  *
  * @export
- * @interface UpdateMigrateTaskStatusResponse
+ * @interface CreateAllowListResponse
  */
-export interface UpdateMigrateTaskStatusResponse {
+export interface CreateAllowListResponse {
+
+    /**
+     * @type {string}
+     * @memberof CreateAllowListResponse
+     */
+    AllowListId?: string;
 }

@@ -16,25 +16,25 @@
  * 
  *
  * @export
- * @interface ItemForCreateMigrateSubTasksInput
+ * @interface ItemForVerifyMigrateSubTasksInput
  */
-export interface ItemForCreateMigrateSubTasksInput {
+export interface ItemForVerifyMigrateSubTasksInput {
 
     /**
      * @type {string}
-     * @memberof ItemForCreateMigrateSubTasksInput
+     * @memberof ItemForVerifyMigrateSubTasksInput
      */
     Config?: string;
 
     /**
      * @type {string}
-     * @memberof ItemForCreateMigrateSubTasksInput
+     * @memberof ItemForVerifyMigrateSubTasksInput
      */
     Name?: string;
 
     /**
      * @type {string}
-     * @memberof ItemForCreateMigrateSubTasksInput
+     * @memberof ItemForVerifyMigrateSubTasksInput
      */
     Type?: string;
 }

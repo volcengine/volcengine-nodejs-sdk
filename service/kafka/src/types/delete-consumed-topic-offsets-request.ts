@@ -16,13 +16,25 @@
  * 
  *
  * @export
- * @interface DeletePrivateDomainFromPublicRequest
+ * @interface DeleteConsumedTopicOffsetsRequest
  */
-export interface DeletePrivateDomainFromPublicRequest {
+export interface DeleteConsumedTopicOffsetsRequest {
 
     /**
      * @type {string}
-     * @memberof DeletePrivateDomainFromPublicRequest
+     * @memberof DeleteConsumedTopicOffsetsRequest
+     */
+    GroupId: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteConsumedTopicOffsetsRequest
      */
     InstanceId: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteConsumedTopicOffsetsRequest
+     */
+    TopicName: string;
 }
