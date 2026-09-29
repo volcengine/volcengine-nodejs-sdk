@@ -51,6 +51,12 @@ export interface ModifyFlowLogAttributeRequest {
     FlowLogName?: string;
 
     /**
+     * @type {number}
+     * @memberof ModifyFlowLogAttributeRequest
+     */
+    FlowLogVersion?: number;
+
+    /**
      * @type {Array<string>}
      * @memberof ModifyFlowLogAttributeRequest
      */

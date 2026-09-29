@@ -52,6 +52,12 @@ export interface CreateFlowLogRequest {
     FlowLogName: string;
 
     /**
+     * @type {number}
+     * @memberof CreateFlowLogRequest
+     */
+    FlowLogVersion?: number;
+
+    /**
      * @type {string}
      * @memberof CreateFlowLogRequest
      */

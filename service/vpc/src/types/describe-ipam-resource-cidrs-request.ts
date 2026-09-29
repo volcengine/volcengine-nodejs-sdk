@@ -60,6 +60,12 @@ export interface DescribeIpamResourceCidrsRequest {
      * @type {string}
      * @memberof DescribeIpamResourceCidrsRequest
      */
+    ResourceRegionId?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeIpamResourceCidrsRequest
+     */
     ResourceType?: string;
 
     /**

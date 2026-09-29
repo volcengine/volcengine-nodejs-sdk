@@ -31,4 +31,10 @@ export interface ModifyFlowLogAttributeResponse {
      * @memberof ModifyFlowLogAttributeResponse
      */
     RequestId?: string;
+
+    /**
+     * @type {number}
+     * @memberof ModifyFlowLogAttributeResponse
+     */
+    Version?: number;
 }

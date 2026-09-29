@@ -46,8 +46,12 @@ import { AttachIpv4GatewayRequest } from './types/index';
 import { AttachIpv4GatewayResponse } from './types/index';
 import { AttachNetworkInterfaceRequest } from './types/index';
 import { AttachNetworkInterfaceResponse } from './types/index';
+import { AuthorizeSecurityGroupEgressBatchRequest } from './types/index';
+import { AuthorizeSecurityGroupEgressBatchResponse } from './types/index';
 import { AuthorizeSecurityGroupEgressRequest } from './types/index';
 import { AuthorizeSecurityGroupEgressResponse } from './types/index';
+import { AuthorizeSecurityGroupIngressBatchRequest } from './types/index';
+import { AuthorizeSecurityGroupIngressBatchResponse } from './types/index';
 import { AuthorizeSecurityGroupIngressRequest } from './types/index';
 import { AuthorizeSecurityGroupIngressResponse } from './types/index';
 import { CancelBandwidthPackageEipBandwidthRequest } from './types/index';
@@ -338,6 +342,10 @@ import { ModifyRouteTableAttributesRequest } from './types/index';
 import { ModifyRouteTableAttributesResponse } from './types/index';
 import { ModifySecurityGroupAttributesRequest } from './types/index';
 import { ModifySecurityGroupAttributesResponse } from './types/index';
+import { ModifySecurityGroupEgressBatchRequest } from './types/index';
+import { ModifySecurityGroupEgressBatchResponse } from './types/index';
+import { ModifySecurityGroupIngressBatchRequest } from './types/index';
+import { ModifySecurityGroupIngressBatchResponse } from './types/index';
 import { ModifySecurityGroupRuleDescriptionsEgressRequest } from './types/index';
 import { ModifySecurityGroupRuleDescriptionsEgressResponse } from './types/index';
 import { ModifySecurityGroupRuleDescriptionsIngressRequest } from './types/index';
@@ -364,8 +372,12 @@ import { ReleaseIpv6AddressBandwidthRequest } from './types/index';
 import { ReleaseIpv6AddressBandwidthResponse } from './types/index';
 import { RemoveBandwidthPackageIpRequest } from './types/index';
 import { RemoveBandwidthPackageIpResponse } from './types/index';
+import { RevokeSecurityGroupEgressBatchRequest } from './types/index';
+import { RevokeSecurityGroupEgressBatchResponse } from './types/index';
 import { RevokeSecurityGroupEgressRequest } from './types/index';
 import { RevokeSecurityGroupEgressResponse } from './types/index';
+import { RevokeSecurityGroupIngressBatchRequest } from './types/index';
+import { RevokeSecurityGroupIngressBatchResponse } from './types/index';
 import { RevokeSecurityGroupIngressRequest } from './types/index';
 import { RevokeSecurityGroupIngressResponse } from './types/index';
 import { TagIpamResourcesRequest } from './types/index';
@@ -405,7 +417,9 @@ export type AssociateVpcUserCidrBlockCommandOutput = CommandOutput<AssociateVpcU
 export type AttachIpv4GatewayCommandOutput = CommandOutput<AttachIpv4GatewayResponse>;
 export type AttachNetworkInterfaceCommandOutput = CommandOutput<AttachNetworkInterfaceResponse>;
 export type AuthorizeSecurityGroupEgressCommandOutput = CommandOutput<AuthorizeSecurityGroupEgressResponse>;
+export type AuthorizeSecurityGroupEgressBatchCommandOutput = CommandOutput<AuthorizeSecurityGroupEgressBatchResponse>;
 export type AuthorizeSecurityGroupIngressCommandOutput = CommandOutput<AuthorizeSecurityGroupIngressResponse>;
+export type AuthorizeSecurityGroupIngressBatchCommandOutput = CommandOutput<AuthorizeSecurityGroupIngressBatchResponse>;
 export type CancelBandwidthPackageEipBandwidthCommandOutput = CommandOutput<CancelBandwidthPackageEipBandwidthResponse>;
 export type ConvertEipAddressBillingTypeCommandOutput = CommandOutput<ConvertEipAddressBillingTypeResponse>;
 export type CreateBandwidthPackageCommandOutput = CommandOutput<CreateBandwidthPackageResponse>;
@@ -550,6 +564,8 @@ export type ModifyPrefixListCommandOutput = CommandOutput<ModifyPrefixListRespon
 export type ModifyRouteEntryCommandOutput = CommandOutput<ModifyRouteEntryResponse>;
 export type ModifyRouteTableAttributesCommandOutput = CommandOutput<ModifyRouteTableAttributesResponse>;
 export type ModifySecurityGroupAttributesCommandOutput = CommandOutput<ModifySecurityGroupAttributesResponse>;
+export type ModifySecurityGroupEgressBatchCommandOutput = CommandOutput<ModifySecurityGroupEgressBatchResponse>;
+export type ModifySecurityGroupIngressBatchCommandOutput = CommandOutput<ModifySecurityGroupIngressBatchResponse>;
 export type ModifySecurityGroupRuleDescriptionsEgressCommandOutput = CommandOutput<ModifySecurityGroupRuleDescriptionsEgressResponse>;
 export type ModifySecurityGroupRuleDescriptionsIngressCommandOutput = CommandOutput<ModifySecurityGroupRuleDescriptionsIngressResponse>;
 export type ModifySubnetAttributesCommandOutput = CommandOutput<ModifySubnetAttributesResponse>;
@@ -564,7 +580,9 @@ export type ReleaseIpamPoolAllocationCommandOutput = CommandOutput<ReleaseIpamPo
 export type ReleaseIpv6AddressBandwidthCommandOutput = CommandOutput<ReleaseIpv6AddressBandwidthResponse>;
 export type RemoveBandwidthPackageIpCommandOutput = CommandOutput<RemoveBandwidthPackageIpResponse>;
 export type RevokeSecurityGroupEgressCommandOutput = CommandOutput<RevokeSecurityGroupEgressResponse>;
+export type RevokeSecurityGroupEgressBatchCommandOutput = CommandOutput<RevokeSecurityGroupEgressBatchResponse>;
 export type RevokeSecurityGroupIngressCommandOutput = CommandOutput<RevokeSecurityGroupIngressResponse>;
+export type RevokeSecurityGroupIngressBatchCommandOutput = CommandOutput<RevokeSecurityGroupIngressBatchResponse>;
 export type TagIpamResourcesCommandOutput = CommandOutput<TagIpamResourcesResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type TemporaryUpgradeEipAddressCommandOutput = CommandOutput<TemporaryUpgradeEipAddressResponse>;
@@ -843,6 +861,21 @@ export class AuthorizeSecurityGroupEgressCommand extends Command<
   }
 }
 /**
+ * Command to AuthorizeSecurityGroupEgressBatch
+ */
+export class AuthorizeSecurityGroupEgressBatchCommand extends Command<
+  AuthorizeSecurityGroupEgressBatchRequest,
+  AuthorizeSecurityGroupEgressBatchCommandOutput,
+  'AuthorizeSecurityGroupEgressBatchCommand'
+> {
+  static readonly metaPath = '/AuthorizeSecurityGroupEgressBatch/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: AuthorizeSecurityGroupEgressBatchRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AuthorizeSecurityGroupEgressBatchCommand.metaPath);
+  }
+}
+/**
  * Command to AuthorizeSecurityGroupIngress
  */
 export class AuthorizeSecurityGroupIngressCommand extends Command<
@@ -855,6 +888,21 @@ export class AuthorizeSecurityGroupIngressCommand extends Command<
   constructor(input: AuthorizeSecurityGroupIngressRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(AuthorizeSecurityGroupIngressCommand.metaPath);
+  }
+}
+/**
+ * Command to AuthorizeSecurityGroupIngressBatch
+ */
+export class AuthorizeSecurityGroupIngressBatchCommand extends Command<
+  AuthorizeSecurityGroupIngressBatchRequest,
+  AuthorizeSecurityGroupIngressBatchCommandOutput,
+  'AuthorizeSecurityGroupIngressBatchCommand'
+> {
+  static readonly metaPath = '/AuthorizeSecurityGroupIngressBatch/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: AuthorizeSecurityGroupIngressBatchRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AuthorizeSecurityGroupIngressBatchCommand.metaPath);
   }
 }
 /**
@@ -3018,6 +3066,36 @@ export class ModifySecurityGroupAttributesCommand extends Command<
   }
 }
 /**
+ * Command to ModifySecurityGroupEgressBatch
+ */
+export class ModifySecurityGroupEgressBatchCommand extends Command<
+  ModifySecurityGroupEgressBatchRequest,
+  ModifySecurityGroupEgressBatchCommandOutput,
+  'ModifySecurityGroupEgressBatchCommand'
+> {
+  static readonly metaPath = '/ModifySecurityGroupEgressBatch/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifySecurityGroupEgressBatchRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifySecurityGroupEgressBatchCommand.metaPath);
+  }
+}
+/**
+ * Command to ModifySecurityGroupIngressBatch
+ */
+export class ModifySecurityGroupIngressBatchCommand extends Command<
+  ModifySecurityGroupIngressBatchRequest,
+  ModifySecurityGroupIngressBatchCommandOutput,
+  'ModifySecurityGroupIngressBatchCommand'
+> {
+  static readonly metaPath = '/ModifySecurityGroupIngressBatch/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: ModifySecurityGroupIngressBatchRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ModifySecurityGroupIngressBatchCommand.metaPath);
+  }
+}
+/**
  * Command to ModifySecurityGroupRuleDescriptionsEgress
  */
 export class ModifySecurityGroupRuleDescriptionsEgressCommand extends Command<
@@ -3228,6 +3306,21 @@ export class RevokeSecurityGroupEgressCommand extends Command<
   }
 }
 /**
+ * Command to RevokeSecurityGroupEgressBatch
+ */
+export class RevokeSecurityGroupEgressBatchCommand extends Command<
+  RevokeSecurityGroupEgressBatchRequest,
+  RevokeSecurityGroupEgressBatchCommandOutput,
+  'RevokeSecurityGroupEgressBatchCommand'
+> {
+  static readonly metaPath = '/RevokeSecurityGroupEgressBatch/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: RevokeSecurityGroupEgressBatchRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RevokeSecurityGroupEgressBatchCommand.metaPath);
+  }
+}
+/**
  * Command to RevokeSecurityGroupIngress
  */
 export class RevokeSecurityGroupIngressCommand extends Command<
@@ -3240,6 +3333,21 @@ export class RevokeSecurityGroupIngressCommand extends Command<
   constructor(input: RevokeSecurityGroupIngressRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(RevokeSecurityGroupIngressCommand.metaPath);
+  }
+}
+/**
+ * Command to RevokeSecurityGroupIngressBatch
+ */
+export class RevokeSecurityGroupIngressBatchCommand extends Command<
+  RevokeSecurityGroupIngressBatchRequest,
+  RevokeSecurityGroupIngressBatchCommandOutput,
+  'RevokeSecurityGroupIngressBatchCommand'
+> {
+  static readonly metaPath = '/RevokeSecurityGroupIngressBatch/2020-04-01/vpc/get/text_plain/';
+
+  constructor(input: RevokeSecurityGroupIngressBatchRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(RevokeSecurityGroupIngressBatchCommand.metaPath);
   }
 }
 /**
@@ -3382,7 +3490,9 @@ export default {
   AttachIpv4GatewayCommand,
   AttachNetworkInterfaceCommand,
   AuthorizeSecurityGroupEgressCommand,
+  AuthorizeSecurityGroupEgressBatchCommand,
   AuthorizeSecurityGroupIngressCommand,
+  AuthorizeSecurityGroupIngressBatchCommand,
   CancelBandwidthPackageEipBandwidthCommand,
   ConvertEipAddressBillingTypeCommand,
   CreateBandwidthPackageCommand,
@@ -3527,6 +3637,8 @@ export default {
   ModifyRouteEntryCommand,
   ModifyRouteTableAttributesCommand,
   ModifySecurityGroupAttributesCommand,
+  ModifySecurityGroupEgressBatchCommand,
+  ModifySecurityGroupIngressBatchCommand,
   ModifySecurityGroupRuleDescriptionsEgressCommand,
   ModifySecurityGroupRuleDescriptionsIngressCommand,
   ModifySubnetAttributesCommand,
@@ -3541,7 +3653,9 @@ export default {
   ReleaseIpv6AddressBandwidthCommand,
   RemoveBandwidthPackageIpCommand,
   RevokeSecurityGroupEgressCommand,
+  RevokeSecurityGroupEgressBatchCommand,
   RevokeSecurityGroupIngressCommand,
+  RevokeSecurityGroupIngressBatchCommand,
   TagIpamResourcesCommand,
   TagResourcesCommand,
   TemporaryUpgradeEipAddressCommand,
