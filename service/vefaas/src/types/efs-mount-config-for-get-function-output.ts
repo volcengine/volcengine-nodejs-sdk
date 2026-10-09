@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AuthForGetFunctionOutput } from './auth-for-get-function-output';
 import { MountPointForGetFunctionOutput } from './mount-point-for-get-function-output';
  /**
  * 
@@ -20,6 +21,12 @@ import { MountPointForGetFunctionOutput } from './mount-point-for-get-function-o
  * @interface EfsMountConfigForGetFunctionOutput
  */
 export interface EfsMountConfigForGetFunctionOutput {
+
+    /**
+     * @type {AuthForGetFunctionOutput}
+     * @memberof EfsMountConfigForGetFunctionOutput
+     */
+    Auth?: AuthForGetFunctionOutput;
 
     /**
      * @type {Array<MountPointForGetFunctionOutput>}

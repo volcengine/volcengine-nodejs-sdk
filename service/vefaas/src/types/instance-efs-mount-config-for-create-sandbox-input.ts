@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AuthForCreateSandboxInput } from './auth-for-create-sandbox-input';
 import { MountPointForCreateSandboxInput } from './mount-point-for-create-sandbox-input';
  /**
  * 
@@ -20,6 +21,12 @@ import { MountPointForCreateSandboxInput } from './mount-point-for-create-sandbo
  * @interface InstanceEfsMountConfigForCreateSandboxInput
  */
 export interface InstanceEfsMountConfigForCreateSandboxInput {
+
+    /**
+     * @type {AuthForCreateSandboxInput}
+     * @memberof InstanceEfsMountConfigForCreateSandboxInput
+     */
+    Auth?: AuthForCreateSandboxInput;
 
     /**
      * @type {Array<MountPointForCreateSandboxInput>}

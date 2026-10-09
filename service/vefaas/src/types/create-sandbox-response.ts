@@ -33,6 +33,12 @@ export interface CreateSandboxResponse {
     AssignStatus?: string;
 
     /**
+     * @type {number}
+     * @memberof CreateSandboxResponse
+     */
+    LatencyMs?: number;
+
+    /**
      * @type {string}
      * @memberof CreateSandboxResponse
      */
