@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { NetworkConfigForPrecacheSandboxImagesInput } from './network-config-for-precache-sandbox-images-input';
+import { RegistryAuthConfigForPrecacheSandboxImagesInput } from './registry-auth-config-for-precache-sandbox-images-input';
  /**
  * 
  *
@@ -21,14 +23,32 @@
 export interface PrecacheSandboxImagesRequest {
 
     /**
+     * @type {string}
+     * @memberof PrecacheSandboxImagesRequest
+     */
+    ClientToken?: string;
+
+    /**
      * @type {Array<string>}
      * @memberof PrecacheSandboxImagesRequest
      */
     ImageUrls?: Array<string>;
 
     /**
+     * @type {NetworkConfigForPrecacheSandboxImagesInput}
+     * @memberof PrecacheSandboxImagesRequest
+     */
+    NetworkConfig?: NetworkConfigForPrecacheSandboxImagesInput;
+
+    /**
+     * @type {RegistryAuthConfigForPrecacheSandboxImagesInput}
+     * @memberof PrecacheSandboxImagesRequest
+     */
+    RegistryAuthConfig?: RegistryAuthConfigForPrecacheSandboxImagesInput;
+
+    /**
      * @type {string}
      * @memberof PrecacheSandboxImagesRequest
      */
-    RegistryId?: string;
+    RegistryType?: string;
 }

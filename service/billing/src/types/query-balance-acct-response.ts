@@ -54,5 +54,11 @@ export interface QueryBalanceAcctResponse {
      * @type {string}
      * @memberof QueryBalanceAcctResponse
      */
+    Currency?: string;
+
+    /**
+     * @type {string}
+     * @memberof QueryBalanceAcctResponse
+     */
     FreezeAmount?: string;
 }

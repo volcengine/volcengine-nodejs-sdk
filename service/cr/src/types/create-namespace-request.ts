@@ -21,6 +21,12 @@
 export interface CreateNamespaceRequest {
 
     /**
+     * @type {boolean}
+     * @memberof CreateNamespaceRequest
+     */
+    AutoCreateRepositoryDisabled?: boolean;
+
+    /**
      * @type {string}
      * @memberof CreateNamespaceRequest
      */
@@ -43,4 +49,10 @@ export interface CreateNamespaceRequest {
      * @memberof CreateNamespaceRequest
      */
     Registry: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateNamespaceRequest
+     */
+    RepositoryDefaultAccessLevel?: string;
 }

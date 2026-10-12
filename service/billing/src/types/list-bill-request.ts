@@ -85,4 +85,10 @@ export interface ListBillRequest {
      * @memberof ListBillRequest
      */
     Product?: Array<string>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof ListBillRequest
+     */
+    SalesChannel?: Array<string>;
 }

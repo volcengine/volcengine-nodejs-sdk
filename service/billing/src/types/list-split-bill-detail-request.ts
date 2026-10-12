@@ -106,6 +106,12 @@ export interface ListSplitBillDetailRequest {
     Project?: Array<string>;
 
     /**
+     * @type {Array<string>}
+     * @memberof ListSplitBillDetailRequest
+     */
+    SalesChannel?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof ListSplitBillDetailRequest
      */

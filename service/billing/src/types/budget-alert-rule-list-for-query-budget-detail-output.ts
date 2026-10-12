@@ -24,7 +24,7 @@ export interface BudgetAlertRuleListForQueryBudgetDetailOutput {
      * @type {string}
      * @memberof BudgetAlertRuleListForQueryBudgetDetailOutput
      */
-    BudgetAlertItem?: BudgetAlertRuleListForQueryBudgetDetailOutputBudgetAlertItemEnum;
+    BudgetAlertItem?: string;
 
     /**
      * @type {string}
@@ -42,22 +42,5 @@ export interface BudgetAlertRuleListForQueryBudgetDetailOutput {
      * @type {string}
      * @memberof BudgetAlertRuleListForQueryBudgetDetailOutput
      */
-    BudgetAlertThresholdType?: BudgetAlertRuleListForQueryBudgetDetailOutputBudgetAlertThresholdTypeEnum;
+    BudgetAlertThresholdType?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum BudgetAlertRuleListForQueryBudgetDetailOutputBudgetAlertItemEnum {
-    ActualAmount = 'actual_amount'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum BudgetAlertRuleListForQueryBudgetDetailOutputBudgetAlertThresholdTypeEnum {
-    Amount = 'amount',
-    Ratio = 'ratio'
-}
-

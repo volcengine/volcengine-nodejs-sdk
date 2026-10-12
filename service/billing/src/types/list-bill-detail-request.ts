@@ -112,6 +112,12 @@ export interface ListBillDetailRequest {
     Project?: Array<string>;
 
     /**
+     * @type {Array<string>}
+     * @memberof ListBillDetailRequest
+     */
+    SalesChannel?: Array<string>;
+
+    /**
      * @type {Array<TagKVForListBillDetailInput>}
      * @memberof ListBillDetailRequest
      */

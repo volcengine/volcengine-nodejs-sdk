@@ -21,6 +21,12 @@
 export interface UpdatePublicEndpointRequest {
 
     /**
+     * @type {string}
+     * @memberof UpdatePublicEndpointRequest
+     */
+    ClientToken?: string;
+
+    /**
      * @type {boolean}
      * @memberof UpdatePublicEndpointRequest
      */

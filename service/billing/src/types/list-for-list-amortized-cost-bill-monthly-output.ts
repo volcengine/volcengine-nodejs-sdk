@@ -72,12 +72,6 @@ export interface ListForListAmortizedCostBillMonthlyOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillMonthlyOutput
      */
-    BeforeAmortizedPaidAmount?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListAmortizedCostBillMonthlyOutput
-     */
     BeforeAmortizedPayableAmount?: string;
 
     /**
@@ -295,12 +289,6 @@ export interface ListForListAmortizedCostBillMonthlyOutput {
      * @memberof ListForListAmortizedCostBillMonthlyOutput
      */
     DailyAmortizedOriginalBillAmount?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListAmortizedCostBillMonthlyOutput
-     */
-    DailyAmortizedPaidAmount?: string;
 
     /**
      * @type {string}
@@ -528,12 +516,6 @@ export interface ListForListAmortizedCostBillMonthlyOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillMonthlyOutput
      */
-    NowAmortizedPaidAmount?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListAmortizedCostBillMonthlyOutput
-     */
     NowAmortizedPayableAmount?: string;
 
     /**
@@ -667,12 +649,6 @@ export interface ListForListAmortizedCostBillMonthlyOutput {
      * @memberof ListForListAmortizedCostBillMonthlyOutput
      */
     OwnerUserName?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListAmortizedCostBillMonthlyOutput
-     */
-    PaidAmount?: string;
 
     /**
      * @type {string}
@@ -925,12 +901,6 @@ export interface ListForListAmortizedCostBillMonthlyOutput {
      * @memberof ListForListAmortizedCostBillMonthlyOutput
      */
     UnamortizedOriginalBillAmount?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListAmortizedCostBillMonthlyOutput
-     */
-    UnamortizedPaidAmount?: string;
 
     /**
      * @type {string}

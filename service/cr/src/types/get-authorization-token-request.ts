@@ -21,6 +21,12 @@
 export interface GetAuthorizationTokenRequest {
 
     /**
+     * @type {number}
+     * @memberof GetAuthorizationTokenRequest
+     */
+    ExpiresAt?: number;
+
+    /**
      * @type {string}
      * @memberof GetAuthorizationTokenRequest
      */
