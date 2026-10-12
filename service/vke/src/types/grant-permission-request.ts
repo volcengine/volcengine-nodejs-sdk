@@ -69,7 +69,6 @@ export interface GrantPermissionRequest {
  */
 export enum GrantPermissionRequestGranteeTypeEnum {
     User = 'User',
-    Role = 'Role',
-    Account = 'Account'
+    Role = 'Role'
 }
 

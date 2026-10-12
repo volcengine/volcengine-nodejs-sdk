@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface LabelForListRemedyConfigsOutput
+ * @interface ParamForListDiagnosticTaskInput
  */
-export interface LabelForListRemedyConfigsOutput {
+export interface ParamForListDiagnosticTaskInput {
 
     /**
      * @type {string}
-     * @memberof LabelForListRemedyConfigsOutput
+     * @memberof ParamForListDiagnosticTaskInput
      */
     Key?: string;
 
     /**
-     * @type {string}
-     * @memberof LabelForListRemedyConfigsOutput
+     * @type {Array<string>}
+     * @memberof ParamForListDiagnosticTaskInput
      */
-    Value?: string;
+    Values?: Array<string>;
 }

@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface ActionForListRemedyConfigsOutput
+ * @interface NodePoolForUpgradeNodePoolsInput
  */
-export interface ActionForListRemedyConfigsOutput {
+export interface NodePoolForUpgradeNodePoolsInput {
 
     /**
-     * @type {boolean}
-     * @memberof ActionForListRemedyConfigsOutput
+     * @type {Array<string>}
+     * @memberof NodePoolForUpgradeNodePoolsInput
      */
-    RebootEcs?: boolean;
+    NodeIds?: Array<string>;
 
     /**
-     * @type {number}
-     * @memberof ActionForListRemedyConfigsOutput
+     * @type {string}
+     * @memberof NodePoolForUpgradeNodePoolsInput
      */
-    WaitFor?: number;
+    NodePoolId?: string;
 }

@@ -44,6 +44,12 @@ export interface CreateNodesRequest {
      * @type {string}
      * @memberof CreateNodesRequest
      */
+    ContainerStorageMountPoint?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateNodesRequest
+     */
     ContainerStoragePath?: string;
 
     /**

@@ -22,12 +22,20 @@ import { CreateClusterRequest } from './types/index';
 import { CreateClusterResponse } from './types/index';
 import { CreateDefaultNodePoolRequest } from './types/index';
 import { CreateDefaultNodePoolResponse } from './types/index';
+import { CreateDiagnosticTaskRequest } from './types/index';
+import { CreateDiagnosticTaskResponse } from './types/index';
+import { CreateInspectionPolicyRequest } from './types/index';
+import { CreateInspectionPolicyResponse } from './types/index';
 import { CreateKubeconfigRequest } from './types/index';
 import { CreateKubeconfigResponse } from './types/index';
+import { CreateKubernetesObservabilityRequest } from './types/index';
+import { CreateKubernetesObservabilityResponse } from './types/index';
 import { CreateNodePoolRequest } from './types/index';
 import { CreateNodePoolResponse } from './types/index';
 import { CreateNodesRequest } from './types/index';
 import { CreateNodesResponse } from './types/index';
+import { CreateRemedyRuleRequest } from './types/index';
+import { CreateRemedyRuleResponse } from './types/index';
 import { CreateScalingPolicyRequest } from './types/index';
 import { CreateScalingPolicyResponse } from './types/index';
 import { CreateSnapshotRequest } from './types/index';
@@ -36,12 +44,16 @@ import { DeleteAddonRequest } from './types/index';
 import { DeleteAddonResponse } from './types/index';
 import { DeleteClusterRequest } from './types/index';
 import { DeleteClusterResponse } from './types/index';
+import { DeleteInspectionPolicyRequest } from './types/index';
+import { DeleteInspectionPolicyResponse } from './types/index';
 import { DeleteKubeconfigsRequest } from './types/index';
 import { DeleteKubeconfigsResponse } from './types/index';
 import { DeleteNodePoolRequest } from './types/index';
 import { DeleteNodePoolResponse } from './types/index';
 import { DeleteNodesRequest } from './types/index';
 import { DeleteNodesResponse } from './types/index';
+import { DeleteRemedyRuleRequest } from './types/index';
+import { DeleteRemedyRuleResponse } from './types/index';
 import { DeleteScalingPoliciesRequest } from './types/index';
 import { DeleteScalingPoliciesResponse } from './types/index';
 import { DeleteSnapshotRequest } from './types/index';
@@ -62,10 +74,18 @@ import { ListAddonsRequest } from './types/index';
 import { ListAddonsResponse } from './types/index';
 import { ListClustersRequest } from './types/index';
 import { ListClustersResponse } from './types/index';
+import { ListDiagnosticTaskRequest } from './types/index';
+import { ListDiagnosticTaskResponse } from './types/index';
+import { ListDiagnosticTaskResultsRequest } from './types/index';
+import { ListDiagnosticTaskResultsResponse } from './types/index';
+import { ListInspectionPoliciesRequest } from './types/index';
+import { ListInspectionPoliciesResponse } from './types/index';
 import { ListInstanceTypeLabelsRequest } from './types/index';
 import { ListInstanceTypeLabelsResponse } from './types/index';
 import { ListKubeconfigsRequest } from './types/index';
 import { ListKubeconfigsResponse } from './types/index';
+import { ListKubernetesObservabilityRequest } from './types/index';
+import { ListKubernetesObservabilityResponse } from './types/index';
 import { ListNodePoolsRequest } from './types/index';
 import { ListNodePoolsResponse } from './types/index';
 import { ListNodesRequest } from './types/index';
@@ -108,12 +128,20 @@ import { UpdateAddonVersionRequest } from './types/index';
 import { UpdateAddonVersionResponse } from './types/index';
 import { UpdateClusterConfigRequest } from './types/index';
 import { UpdateClusterConfigResponse } from './types/index';
+import { UpdateClusterVersionRequest } from './types/index';
+import { UpdateClusterVersionResponse } from './types/index';
+import { UpdateInspectionPolicyRequest } from './types/index';
+import { UpdateInspectionPolicyResponse } from './types/index';
 import { UpdateKubernetesObservabilityComponentConfigsRequest } from './types/index';
 import { UpdateKubernetesObservabilityComponentConfigsResponse } from './types/index';
 import { UpdateNodePoolConfigRequest } from './types/index';
 import { UpdateNodePoolConfigResponse } from './types/index';
+import { UpdateRemedyRuleRequest } from './types/index';
+import { UpdateRemedyRuleResponse } from './types/index';
 import { UpdateScalingPolicyRequest } from './types/index';
 import { UpdateScalingPolicyResponse } from './types/index';
+import { UpgradeNodePoolsRequest } from './types/index';
+import { UpgradeNodePoolsResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
@@ -122,16 +150,22 @@ export type BindingRemedyConfigCommandOutput = CommandOutput<BindingRemedyConfig
 export type CreateAddonCommandOutput = CommandOutput<CreateAddonResponse>;
 export type CreateClusterCommandOutput = CommandOutput<CreateClusterResponse>;
 export type CreateDefaultNodePoolCommandOutput = CommandOutput<CreateDefaultNodePoolResponse>;
+export type CreateDiagnosticTaskCommandOutput = CommandOutput<CreateDiagnosticTaskResponse>;
+export type CreateInspectionPolicyCommandOutput = CommandOutput<CreateInspectionPolicyResponse>;
 export type CreateKubeconfigCommandOutput = CommandOutput<CreateKubeconfigResponse>;
+export type CreateKubernetesObservabilityCommandOutput = CommandOutput<CreateKubernetesObservabilityResponse>;
 export type CreateNodePoolCommandOutput = CommandOutput<CreateNodePoolResponse>;
 export type CreateNodesCommandOutput = CommandOutput<CreateNodesResponse>;
+export type CreateRemedyRuleCommandOutput = CommandOutput<CreateRemedyRuleResponse>;
 export type CreateScalingPolicyCommandOutput = CommandOutput<CreateScalingPolicyResponse>;
 export type CreateSnapshotCommandOutput = CommandOutput<CreateSnapshotResponse>;
 export type DeleteAddonCommandOutput = CommandOutput<DeleteAddonResponse>;
 export type DeleteClusterCommandOutput = CommandOutput<DeleteClusterResponse>;
+export type DeleteInspectionPolicyCommandOutput = CommandOutput<DeleteInspectionPolicyResponse>;
 export type DeleteKubeconfigsCommandOutput = CommandOutput<DeleteKubeconfigsResponse>;
 export type DeleteNodePoolCommandOutput = CommandOutput<DeleteNodePoolResponse>;
 export type DeleteNodesCommandOutput = CommandOutput<DeleteNodesResponse>;
+export type DeleteRemedyRuleCommandOutput = CommandOutput<DeleteRemedyRuleResponse>;
 export type DeleteScalingPoliciesCommandOutput = CommandOutput<DeleteScalingPoliciesResponse>;
 export type DeleteSnapshotCommandOutput = CommandOutput<DeleteSnapshotResponse>;
 export type DescribeContainerImageCommitmentsCommandOutput = CommandOutput<DescribeContainerImageCommitmentsResponse>;
@@ -142,8 +176,12 @@ export type GetGlobalDefaultDeleteOptionCommandOutput = CommandOutput<GetGlobalD
 export type GrantPermissionCommandOutput = CommandOutput<GrantPermissionResponse>;
 export type ListAddonsCommandOutput = CommandOutput<ListAddonsResponse>;
 export type ListClustersCommandOutput = CommandOutput<ListClustersResponse>;
+export type ListDiagnosticTaskCommandOutput = CommandOutput<ListDiagnosticTaskResponse>;
+export type ListDiagnosticTaskResultsCommandOutput = CommandOutput<ListDiagnosticTaskResultsResponse>;
+export type ListInspectionPoliciesCommandOutput = CommandOutput<ListInspectionPoliciesResponse>;
 export type ListInstanceTypeLabelsCommandOutput = CommandOutput<ListInstanceTypeLabelsResponse>;
 export type ListKubeconfigsCommandOutput = CommandOutput<ListKubeconfigsResponse>;
+export type ListKubernetesObservabilityCommandOutput = CommandOutput<ListKubernetesObservabilityResponse>;
 export type ListNodePoolsCommandOutput = CommandOutput<ListNodePoolsResponse>;
 export type ListNodesCommandOutput = CommandOutput<ListNodesResponse>;
 export type ListPermissionsCommandOutput = CommandOutput<ListPermissionsResponse>;
@@ -165,9 +203,13 @@ export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateAddonConfigCommandOutput = CommandOutput<UpdateAddonConfigResponse>;
 export type UpdateAddonVersionCommandOutput = CommandOutput<UpdateAddonVersionResponse>;
 export type UpdateClusterConfigCommandOutput = CommandOutput<UpdateClusterConfigResponse>;
+export type UpdateClusterVersionCommandOutput = CommandOutput<UpdateClusterVersionResponse>;
+export type UpdateInspectionPolicyCommandOutput = CommandOutput<UpdateInspectionPolicyResponse>;
 export type UpdateKubernetesObservabilityComponentConfigsCommandOutput = CommandOutput<UpdateKubernetesObservabilityComponentConfigsResponse>;
 export type UpdateNodePoolConfigCommandOutput = CommandOutput<UpdateNodePoolConfigResponse>;
+export type UpdateRemedyRuleCommandOutput = CommandOutput<UpdateRemedyRuleResponse>;
 export type UpdateScalingPolicyCommandOutput = CommandOutput<UpdateScalingPolicyResponse>;
+export type UpgradeNodePoolsCommandOutput = CommandOutput<UpgradeNodePoolsResponse>;
 
 /**
  * VKEClient Service Client
@@ -243,6 +285,36 @@ export class CreateDefaultNodePoolCommand extends Command<
   }
 }
 /**
+ * Command to CreateDiagnosticTask
+ */
+export class CreateDiagnosticTaskCommand extends Command<
+  CreateDiagnosticTaskRequest,
+  CreateDiagnosticTaskCommandOutput,
+  'CreateDiagnosticTaskCommand'
+> {
+  static readonly metaPath = '/CreateDiagnosticTask/2022-05-12/vke/post/application_json/';
+
+  constructor(input: CreateDiagnosticTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateDiagnosticTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateInspectionPolicy
+ */
+export class CreateInspectionPolicyCommand extends Command<
+  CreateInspectionPolicyRequest,
+  CreateInspectionPolicyCommandOutput,
+  'CreateInspectionPolicyCommand'
+> {
+  static readonly metaPath = '/CreateInspectionPolicy/2022-05-12/vke/post/application_json/';
+
+  constructor(input: CreateInspectionPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateInspectionPolicyCommand.metaPath);
+  }
+}
+/**
  * Command to CreateKubeconfig
  */
 export class CreateKubeconfigCommand extends Command<
@@ -255,6 +327,21 @@ export class CreateKubeconfigCommand extends Command<
   constructor(input: CreateKubeconfigRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateKubeconfigCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateKubernetesObservability
+ */
+export class CreateKubernetesObservabilityCommand extends Command<
+  CreateKubernetesObservabilityRequest,
+  CreateKubernetesObservabilityCommandOutput,
+  'CreateKubernetesObservabilityCommand'
+> {
+  static readonly metaPath = '/CreateKubernetesObservability/2022-05-12/vke/post/application_json/';
+
+  constructor(input: CreateKubernetesObservabilityRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateKubernetesObservabilityCommand.metaPath);
   }
 }
 /**
@@ -285,6 +372,21 @@ export class CreateNodesCommand extends Command<
   constructor(input: CreateNodesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateNodesCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateRemedyRule
+ */
+export class CreateRemedyRuleCommand extends Command<
+  CreateRemedyRuleRequest,
+  CreateRemedyRuleCommandOutput,
+  'CreateRemedyRuleCommand'
+> {
+  static readonly metaPath = '/CreateRemedyRule/2022-05-12/vke/post/application_json/';
+
+  constructor(input: CreateRemedyRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateRemedyRuleCommand.metaPath);
   }
 }
 /**
@@ -348,6 +450,21 @@ export class DeleteClusterCommand extends Command<
   }
 }
 /**
+ * Command to DeleteInspectionPolicy
+ */
+export class DeleteInspectionPolicyCommand extends Command<
+  DeleteInspectionPolicyRequest,
+  DeleteInspectionPolicyCommandOutput,
+  'DeleteInspectionPolicyCommand'
+> {
+  static readonly metaPath = '/DeleteInspectionPolicy/2022-05-12/vke/post/application_json/';
+
+  constructor(input: DeleteInspectionPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteInspectionPolicyCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteKubeconfigs
  */
 export class DeleteKubeconfigsCommand extends Command<
@@ -390,6 +507,21 @@ export class DeleteNodesCommand extends Command<
   constructor(input: DeleteNodesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteNodesCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteRemedyRule
+ */
+export class DeleteRemedyRuleCommand extends Command<
+  DeleteRemedyRuleRequest,
+  DeleteRemedyRuleCommandOutput,
+  'DeleteRemedyRuleCommand'
+> {
+  static readonly metaPath = '/DeleteRemedyRule/2022-05-12/vke/post/application_json/';
+
+  constructor(input: DeleteRemedyRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteRemedyRuleCommand.metaPath);
   }
 }
 /**
@@ -543,6 +675,51 @@ export class ListClustersCommand extends Command<
   }
 }
 /**
+ * Command to ListDiagnosticTask
+ */
+export class ListDiagnosticTaskCommand extends Command<
+  ListDiagnosticTaskRequest,
+  ListDiagnosticTaskCommandOutput,
+  'ListDiagnosticTaskCommand'
+> {
+  static readonly metaPath = '/ListDiagnosticTask/2022-05-12/vke/post/application_json/';
+
+  constructor(input: ListDiagnosticTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDiagnosticTaskCommand.metaPath);
+  }
+}
+/**
+ * Command to ListDiagnosticTaskResults
+ */
+export class ListDiagnosticTaskResultsCommand extends Command<
+  ListDiagnosticTaskResultsRequest,
+  ListDiagnosticTaskResultsCommandOutput,
+  'ListDiagnosticTaskResultsCommand'
+> {
+  static readonly metaPath = '/ListDiagnosticTaskResults/2022-05-12/vke/post/application_json/';
+
+  constructor(input: ListDiagnosticTaskResultsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListDiagnosticTaskResultsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListInspectionPolicies
+ */
+export class ListInspectionPoliciesCommand extends Command<
+  ListInspectionPoliciesRequest,
+  ListInspectionPoliciesCommandOutput,
+  'ListInspectionPoliciesCommand'
+> {
+  static readonly metaPath = '/ListInspectionPolicies/2022-05-12/vke/post/application_json/';
+
+  constructor(input: ListInspectionPoliciesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListInspectionPoliciesCommand.metaPath);
+  }
+}
+/**
  * Command to ListInstanceTypeLabels
  */
 export class ListInstanceTypeLabelsCommand extends Command<
@@ -570,6 +747,21 @@ export class ListKubeconfigsCommand extends Command<
   constructor(input: ListKubeconfigsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListKubeconfigsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListKubernetesObservability
+ */
+export class ListKubernetesObservabilityCommand extends Command<
+  ListKubernetesObservabilityRequest,
+  ListKubernetesObservabilityCommandOutput,
+  'ListKubernetesObservabilityCommand'
+> {
+  static readonly metaPath = '/ListKubernetesObservability/2022-05-12/vke/post/application_json/';
+
+  constructor(input: ListKubernetesObservabilityRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListKubernetesObservabilityCommand.metaPath);
   }
 }
 /**
@@ -888,6 +1080,36 @@ export class UpdateClusterConfigCommand extends Command<
   }
 }
 /**
+ * Command to UpdateClusterVersion
+ */
+export class UpdateClusterVersionCommand extends Command<
+  UpdateClusterVersionRequest,
+  UpdateClusterVersionCommandOutput,
+  'UpdateClusterVersionCommand'
+> {
+  static readonly metaPath = '/UpdateClusterVersion/2022-05-12/vke/post/application_json/';
+
+  constructor(input: UpdateClusterVersionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateClusterVersionCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateInspectionPolicy
+ */
+export class UpdateInspectionPolicyCommand extends Command<
+  UpdateInspectionPolicyRequest,
+  UpdateInspectionPolicyCommandOutput,
+  'UpdateInspectionPolicyCommand'
+> {
+  static readonly metaPath = '/UpdateInspectionPolicy/2022-05-12/vke/post/application_json/';
+
+  constructor(input: UpdateInspectionPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateInspectionPolicyCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateKubernetesObservabilityComponentConfigs
  */
 export class UpdateKubernetesObservabilityComponentConfigsCommand extends Command<
@@ -918,6 +1140,21 @@ export class UpdateNodePoolConfigCommand extends Command<
   }
 }
 /**
+ * Command to UpdateRemedyRule
+ */
+export class UpdateRemedyRuleCommand extends Command<
+  UpdateRemedyRuleRequest,
+  UpdateRemedyRuleCommandOutput,
+  'UpdateRemedyRuleCommand'
+> {
+  static readonly metaPath = '/UpdateRemedyRule/2022-05-12/vke/post/application_json/';
+
+  constructor(input: UpdateRemedyRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateRemedyRuleCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateScalingPolicy
  */
 export class UpdateScalingPolicyCommand extends Command<
@@ -932,6 +1169,21 @@ export class UpdateScalingPolicyCommand extends Command<
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateScalingPolicyCommand.metaPath);
   }
 }
+/**
+ * Command to UpgradeNodePools
+ */
+export class UpgradeNodePoolsCommand extends Command<
+  UpgradeNodePoolsRequest,
+  UpgradeNodePoolsCommandOutput,
+  'UpgradeNodePoolsCommand'
+> {
+  static readonly metaPath = '/UpgradeNodePools/2022-05-12/vke/post/application_json/';
+
+  constructor(input: UpgradeNodePoolsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpgradeNodePoolsCommand.metaPath);
+  }
+}
 
 export default {
   VKEClient,
@@ -939,16 +1191,22 @@ export default {
   CreateAddonCommand,
   CreateClusterCommand,
   CreateDefaultNodePoolCommand,
+  CreateDiagnosticTaskCommand,
+  CreateInspectionPolicyCommand,
   CreateKubeconfigCommand,
+  CreateKubernetesObservabilityCommand,
   CreateNodePoolCommand,
   CreateNodesCommand,
+  CreateRemedyRuleCommand,
   CreateScalingPolicyCommand,
   CreateSnapshotCommand,
   DeleteAddonCommand,
   DeleteClusterCommand,
+  DeleteInspectionPolicyCommand,
   DeleteKubeconfigsCommand,
   DeleteNodePoolCommand,
   DeleteNodesCommand,
+  DeleteRemedyRuleCommand,
   DeleteScalingPoliciesCommand,
   DeleteSnapshotCommand,
   DescribeContainerImageCommitmentsCommand,
@@ -959,8 +1217,12 @@ export default {
   GrantPermissionCommand,
   ListAddonsCommand,
   ListClustersCommand,
+  ListDiagnosticTaskCommand,
+  ListDiagnosticTaskResultsCommand,
+  ListInspectionPoliciesCommand,
   ListInstanceTypeLabelsCommand,
   ListKubeconfigsCommand,
+  ListKubernetesObservabilityCommand,
   ListNodePoolsCommand,
   ListNodesCommand,
   ListPermissionsCommand,
@@ -982,7 +1244,11 @@ export default {
   UpdateAddonConfigCommand,
   UpdateAddonVersionCommand,
   UpdateClusterConfigCommand,
+  UpdateClusterVersionCommand,
+  UpdateInspectionPolicyCommand,
   UpdateKubernetesObservabilityComponentConfigsCommand,
   UpdateNodePoolConfigCommand,
+  UpdateRemedyRuleCommand,
   UpdateScalingPolicyCommand,
+  UpgradeNodePoolsCommand,
 };

@@ -33,6 +33,12 @@ export interface DeleteNodesRequest {
     ClusterId: string;
 
     /**
+     * @type {boolean}
+     * @memberof DeleteNodesRequest
+     */
+    Drain?: boolean;
+
+    /**
      * @type {Array<string>}
      * @memberof DeleteNodesRequest
      */

@@ -44,6 +44,12 @@ export interface ItemForListNodesOutput {
      * @type {string}
      * @memberof ItemForListNodesOutput
      */
+    ContainerStorageMountPoint?: string;
+
+    /**
+     * @type {string}
+     * @memberof ItemForListNodesOutput
+     */
     ContainerStoragePath?: string;
 
     /**

@@ -16,13 +16,7 @@
  * 
  *
  * @export
- * @interface DrainForListRemedyConfigsOutput
+ * @interface UpdateInspectionPolicyResponse
  */
-export interface DrainForListRemedyConfigsOutput {
-
-    /**
-     * @type {number}
-     * @memberof DrainForListRemedyConfigsOutput
-     */
-    WaitFor?: number;
+export interface UpdateInspectionPolicyResponse {
 }

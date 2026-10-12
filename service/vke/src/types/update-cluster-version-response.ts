@@ -16,19 +16,13 @@
  * 
  *
  * @export
- * @interface RegistryProxyConfigForListNodePoolsOutput
+ * @interface UpdateClusterVersionResponse
  */
-export interface RegistryProxyConfigForListNodePoolsOutput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof RegistryProxyConfigForListNodePoolsOutput
-     */
-    ProxyEndpoints?: Array<string>;
+export interface UpdateClusterVersionResponse {
 
     /**
      * @type {string}
-     * @memberof RegistryProxyConfigForListNodePoolsOutput
+     * @memberof UpdateClusterVersionResponse
      */
-    Registry?: string;
+    TaskId?: string;
 }
