@@ -30,17 +30,23 @@ export interface UpdatePrivateEndpointAllowlistRuleRequest {
      * @type {string}
      * @memberof UpdatePrivateEndpointAllowlistRuleRequest
      */
-    DisplayName: string;
+    CurrentVpcEndpointId: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdatePrivateEndpointAllowlistRuleRequest
+     */
+    DisplayName?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdatePrivateEndpointAllowlistRuleRequest
+     */
+    NewVpcEndpointId?: string;
 
     /**
      * @type {string}
      * @memberof UpdatePrivateEndpointAllowlistRuleRequest
      */
     ProjectName?: string;
-
-    /**
-     * @type {string}
-     * @memberof UpdatePrivateEndpointAllowlistRuleRequest
-     */
-    VpcEndpointId: string;
 }
