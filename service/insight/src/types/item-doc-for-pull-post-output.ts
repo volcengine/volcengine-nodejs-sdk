@@ -46,10 +46,10 @@ export interface ItemDocForPullPostOutput {
     DedupID?: string;
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof ItemDocForPullPostOutput
      */
-    DocStatus?: string;
+    DocStatus?: number;
 
     /**
      * @type {string}
@@ -70,6 +70,18 @@ export interface ItemDocForPullPostOutput {
     IsFollow?: boolean;
 
     /**
+     * @type {Array<string>}
+     * @memberof ItemDocForPullPostOutput
+     */
+    Keywords?: Array<string>;
+
+    /**
+     * @type {string}
+     * @memberof ItemDocForPullPostOutput
+     */
+    LevelName?: string;
+
+    /**
      * @type {string}
      * @memberof ItemDocForPullPostOutput
      */
@@ -80,6 +92,12 @@ export interface ItemDocForPullPostOutput {
      * @memberof ItemDocForPullPostOutput
      */
     MediaName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ItemDocForPullPostOutput
+     */
+    MediaUid?: string;
 
     /**
      * @type {string}
@@ -134,6 +152,12 @@ export interface ItemDocForPullPostOutput {
      * @memberof ItemDocForPullPostOutput
      */
     Url?: string;
+
+    /**
+     * @type {number}
+     * @memberof ItemDocForPullPostOutput
+     */
+    WarnLevel?: number;
 
     /**
      * @type {Array<LocationForPullPostOutput>}
