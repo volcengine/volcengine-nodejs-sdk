@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AuthForCreateFunctionInput } from './auth-for-create-function-input';
 import { MountPointForCreateFunctionInput } from './mount-point-for-create-function-input';
  /**
  * 
@@ -20,6 +21,12 @@ import { MountPointForCreateFunctionInput } from './mount-point-for-create-funct
  * @interface EfsMountConfigForCreateFunctionInput
  */
 export interface EfsMountConfigForCreateFunctionInput {
+
+    /**
+     * @type {AuthForCreateFunctionInput}
+     * @memberof EfsMountConfigForCreateFunctionInput
+     */
+    Auth?: AuthForCreateFunctionInput;
 
     /**
      * @type {Array<MountPointForCreateFunctionInput>}
