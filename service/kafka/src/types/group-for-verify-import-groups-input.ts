@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface UpdateMigrateTaskStatusRequest
+ * @interface GroupForVerifyImportGroupsInput
  */
-export interface UpdateMigrateTaskStatusRequest {
+export interface GroupForVerifyImportGroupsInput {
 
     /**
      * @type {string}
-     * @memberof UpdateMigrateTaskStatusRequest
+     * @memberof GroupForVerifyImportGroupsInput
      */
-    Status: string;
+    Description?: string;
 
     /**
      * @type {string}
-     * @memberof UpdateMigrateTaskStatusRequest
+     * @memberof GroupForVerifyImportGroupsInput
      */
-    TaskId: string;
+    GroupId?: string;
 }

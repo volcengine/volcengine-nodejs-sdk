@@ -12,24 +12,24 @@
  * Do not edit the class manually.
  */
 
-import { ItemForCreateMigrateSubTasksInput } from './item-for-create-migrate-sub-tasks-input';
+import { ItemForVerifyMigrateSubTasksInput } from './item-for-verify-migrate-sub-tasks-input';
  /**
  * 
  *
  * @export
- * @interface CreateMigrateSubTasksRequest
+ * @interface VerifyMigrateSubTasksRequest
  */
-export interface CreateMigrateSubTasksRequest {
+export interface VerifyMigrateSubTasksRequest {
 
     /**
-     * @type {Array<ItemForCreateMigrateSubTasksInput>}
-     * @memberof CreateMigrateSubTasksRequest
+     * @type {Array<ItemForVerifyMigrateSubTasksInput>}
+     * @memberof VerifyMigrateSubTasksRequest
      */
-    Items?: Array<ItemForCreateMigrateSubTasksInput>;
+    Items?: Array<ItemForVerifyMigrateSubTasksInput>;
 
     /**
      * @type {string}
-     * @memberof CreateMigrateSubTasksRequest
+     * @memberof VerifyMigrateSubTasksRequest
      */
     TaskId: string;
 }

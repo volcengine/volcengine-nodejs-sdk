@@ -16,7 +16,7 @@
  * 
  *
  * @export
- * @interface DeletePrivateDomainFromPublicResponse
+ * @interface DeletePublicAddressResponse
  */
-export interface DeletePrivateDomainFromPublicResponse {
+export interface DeletePublicAddressResponse {
 }

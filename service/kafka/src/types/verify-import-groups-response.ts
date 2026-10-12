@@ -12,11 +12,18 @@
  * Do not edit the class manually.
  */
 
+import { ResultForVerifyImportGroupsOutput } from './result-for-verify-import-groups-output';
  /**
  * 
  *
  * @export
- * @interface CreateMigrateSubTasksResponse
+ * @interface VerifyImportGroupsResponse
  */
-export interface CreateMigrateSubTasksResponse {
+export interface VerifyImportGroupsResponse {
+
+    /**
+     * @type {Array<ResultForVerifyImportGroupsOutput>}
+     * @memberof VerifyImportGroupsResponse
+     */
+    Results?: Array<ResultForVerifyImportGroupsOutput>;
 }
