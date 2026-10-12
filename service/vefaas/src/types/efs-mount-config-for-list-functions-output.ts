@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AuthForListFunctionsOutput } from './auth-for-list-functions-output';
 import { MountPointForListFunctionsOutput } from './mount-point-for-list-functions-output';
  /**
  * 
@@ -20,6 +21,12 @@ import { MountPointForListFunctionsOutput } from './mount-point-for-list-functio
  * @interface EfsMountConfigForListFunctionsOutput
  */
 export interface EfsMountConfigForListFunctionsOutput {
+
+    /**
+     * @type {AuthForListFunctionsOutput}
+     * @memberof EfsMountConfigForListFunctionsOutput
+     */
+    Auth?: AuthForListFunctionsOutput;
 
     /**
      * @type {Array<MountPointForListFunctionsOutput>}

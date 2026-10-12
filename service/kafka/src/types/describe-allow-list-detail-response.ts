@@ -46,8 +46,32 @@ export interface DescribeAllowListDetailResponse {
     AllowListName?: string;
 
     /**
+     * @type {number}
+     * @memberof DescribeAllowListDetailResponse
+     */
+    AssociatedInstanceNum?: number;
+
+    /**
      * @type {Array<AssociatedInstanceForDescribeAllowListDetailOutput>}
      * @memberof DescribeAllowListDetailResponse
      */
     AssociatedInstances?: Array<AssociatedInstanceForDescribeAllowListDetailOutput>;
+
+    /**
+     * @type {number}
+     * @memberof DescribeAllowListDetailResponse
+     */
+    AssociatedLBNum?: number;
+
+    /**
+     * @type {boolean}
+     * @memberof DescribeAllowListDetailResponse
+     */
+    ExceedLimit?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof DescribeAllowListDetailResponse
+     */
+    ProjectName?: string;
 }
