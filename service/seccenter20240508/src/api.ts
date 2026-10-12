@@ -274,6 +274,8 @@ import { GetClusterStatisticsRequest } from './types/index';
 import { GetClusterStatisticsResponse } from './types/index';
 import { GetClustersPermissionResultRequest } from './types/index';
 import { GetClustersPermissionResultResponse } from './types/index';
+import { GetCntrQuotaRequest } from './types/index';
+import { GetCntrQuotaResponse } from './types/index';
 import { GetCustomWeakPasswordsRequest } from './types/index';
 import { GetCustomWeakPasswordsResponse } from './types/index';
 import { GetDevAssetOverviewRequest } from './types/index';
@@ -438,6 +440,8 @@ import { GetTLSInfoRequest } from './types/index';
 import { GetTLSInfoResponse } from './types/index';
 import { GetTenantQuotaRequest } from './types/index';
 import { GetTenantQuotaResponse } from './types/index';
+import { GetTenantStatusRequest } from './types/index';
+import { GetTenantStatusResponse } from './types/index';
 import { GetUserBatchScanStatusRequest } from './types/index';
 import { GetUserBatchScanStatusResponse } from './types/index';
 import { GetVarmorAuthInfoRequest } from './types/index';
@@ -610,6 +614,8 @@ import { ListLoginConfigsRequest } from './types/index';
 import { ListLoginConfigsResponse } from './types/index';
 import { ListMLPAssetTasksRequest } from './types/index';
 import { ListMLPAssetTasksResponse } from './types/index';
+import { ListManagedAccountsRequest } from './types/index';
+import { ListManagedAccountsResponse } from './types/index';
 import { ListMlpAlarmTagsRequest } from './types/index';
 import { ListMlpAlarmTagsResponse } from './types/index';
 import { ListMlpAlarmsRequest } from './types/index';
@@ -932,6 +938,7 @@ export type GetBruteForceBanStatisticsCommandOutput = CommandOutput<GetBruteForc
 export type GetCisDetailCommandOutput = CommandOutput<GetCisDetailResponse>;
 export type GetClusterStatisticsCommandOutput = CommandOutput<GetClusterStatisticsResponse>;
 export type GetClustersPermissionResultCommandOutput = CommandOutput<GetClustersPermissionResultResponse>;
+export type GetCntrQuotaCommandOutput = CommandOutput<GetCntrQuotaResponse>;
 export type GetCustomWeakPasswordsCommandOutput = CommandOutput<GetCustomWeakPasswordsResponse>;
 export type GetDevAssetOverviewCommandOutput = CommandOutput<GetDevAssetOverviewResponse>;
 export type GetDevDetailCommandOutput = CommandOutput<GetDevDetailResponse>;
@@ -1014,6 +1021,7 @@ export type GetStackTraceCommandOutput = CommandOutput<GetStackTraceResponse>;
 export type GetSupportedVarmorVersionsCommandOutput = CommandOutput<GetSupportedVarmorVersionsResponse>;
 export type GetTLSInfoCommandOutput = CommandOutput<GetTLSInfoResponse>;
 export type GetTenantQuotaCommandOutput = CommandOutput<GetTenantQuotaResponse>;
+export type GetTenantStatusCommandOutput = CommandOutput<GetTenantStatusResponse>;
 export type GetUserBatchScanStatusCommandOutput = CommandOutput<GetUserBatchScanStatusResponse>;
 export type GetVarmorAuthInfoCommandOutput = CommandOutput<GetVarmorAuthInfoResponse>;
 export type GetVarmorConfigYAMLCommandOutput = CommandOutput<GetVarmorConfigYAMLResponse>;
@@ -1100,6 +1108,7 @@ export type ListLayeredGroupRelatedHostCommandOutput = CommandOutput<ListLayered
 export type ListLayeredGroupsDetailCommandOutput = CommandOutput<ListLayeredGroupsDetailResponse>;
 export type ListLoginConfigsCommandOutput = CommandOutput<ListLoginConfigsResponse>;
 export type ListMLPAssetTasksCommandOutput = CommandOutput<ListMLPAssetTasksResponse>;
+export type ListManagedAccountsCommandOutput = CommandOutput<ListManagedAccountsResponse>;
 export type ListMlpAlarmTagsCommandOutput = CommandOutput<ListMlpAlarmTagsResponse>;
 export type ListMlpAlarmsCommandOutput = CommandOutput<ListMlpAlarmsResponse>;
 export type ListMonitorPoliciesCommandOutput = CommandOutput<ListMonitorPoliciesResponse>;
@@ -3159,6 +3168,21 @@ export class GetClustersPermissionResultCommand extends Command<
   }
 }
 /**
+ * Command to GetCntrQuota
+ */
+export class GetCntrQuotaCommand extends Command<
+  GetCntrQuotaRequest,
+  GetCntrQuotaCommandOutput,
+  'GetCntrQuotaCommand'
+> {
+  static readonly metaPath = '/GetCntrQuota/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetCntrQuotaRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetCntrQuotaCommand.metaPath);
+  }
+}
+/**
  * Command to GetCustomWeakPasswords
  */
 export class GetCustomWeakPasswordsCommand extends Command<
@@ -4386,6 +4410,21 @@ export class GetTenantQuotaCommand extends Command<
   constructor(input: GetTenantQuotaRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetTenantQuotaCommand.metaPath);
+  }
+}
+/**
+ * Command to GetTenantStatus
+ */
+export class GetTenantStatusCommand extends Command<
+  GetTenantStatusRequest,
+  GetTenantStatusCommandOutput,
+  'GetTenantStatusCommand'
+> {
+  static readonly metaPath = '/GetTenantStatus/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetTenantStatusRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetTenantStatusCommand.metaPath);
   }
 }
 /**
@@ -5676,6 +5715,21 @@ export class ListMLPAssetTasksCommand extends Command<
   constructor(input: ListMLPAssetTasksRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListMLPAssetTasksCommand.metaPath);
+  }
+}
+/**
+ * Command to ListManagedAccounts
+ */
+export class ListManagedAccountsCommand extends Command<
+  ListManagedAccountsRequest,
+  ListManagedAccountsCommandOutput,
+  'ListManagedAccountsCommand'
+> {
+  static readonly metaPath = '/ListManagedAccounts/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: ListManagedAccountsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListManagedAccountsCommand.metaPath);
   }
 }
 /**
@@ -7221,6 +7275,7 @@ export default {
   GetCisDetailCommand,
   GetClusterStatisticsCommand,
   GetClustersPermissionResultCommand,
+  GetCntrQuotaCommand,
   GetCustomWeakPasswordsCommand,
   GetDevAssetOverviewCommand,
   GetDevDetailCommand,
@@ -7303,6 +7358,7 @@ export default {
   GetSupportedVarmorVersionsCommand,
   GetTLSInfoCommand,
   GetTenantQuotaCommand,
+  GetTenantStatusCommand,
   GetUserBatchScanStatusCommand,
   GetVarmorAuthInfoCommand,
   GetVarmorConfigYAMLCommand,
@@ -7389,6 +7445,7 @@ export default {
   ListLayeredGroupsDetailCommand,
   ListLoginConfigsCommand,
   ListMLPAssetTasksCommand,
+  ListManagedAccountsCommand,
   ListMlpAlarmTagsCommand,
   ListMlpAlarmsCommand,
   ListMonitorPoliciesCommand,
