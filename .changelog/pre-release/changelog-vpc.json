@@ -1,19 +1,24 @@
 {
   "actions": [
-    "ModifyIpamScope",
-    "CreateIpamPool",
-    "DescribeIpamScopes",
-    "ModifyIpam",
-    "CreateIpamScope",
-    "ModifyIpamPool",
-    "DescribeIpamPools",
-    "ModifyIpamResourceDiscovery",
     "CreateIpam",
-    "CreateIpamResourceDiscovery",
-    "DescribeIpamResourceDiscoveries",
-    "DescribeIpams"
+    "AuthorizeSecurityGroupEgressBatch",
+    "RevokeSecurityGroupEgressBatch",
+    "CreateNetworkInterface",
+    "ModifyFlowLogAttribute",
+    "CreateFlowLog",
+    "RevokeSecurityGroupIngressBatch",
+    "DescribeSecurityGroupAttributes",
+    "ModifyIpamResourceDiscovery",
+    "ModifyNetworkInterfaceAttributes",
+    "DescribeIpamResourceCidrs",
+    "AuthorizeSecurityGroupIngressBatch",
+    "ModifySecurityGroupEgressBatch",
+    "ModifySecurityGroupIngressBatch",
+    "DescribeNetworkInterfaces",
+    "DescribeNetworkInterfaceAttributes",
+    "ModifyIpam"
   ],
-  "description": "VPC: 修改 ModifyIpamPool, ModifyIpamScope, CreateIpamPool, DescribeIpamPools, DescribeIpamScopes, ModifyIpam, ModifyIpamResourceDiscovery, CreateIpam, CreateIpamResourceDiscovery, CreateIpamScope, DescribeIpamResourceDiscoveries, DescribeIpams",
+  "description": "VPC: 新增 AuthorizeSecurityGroupEgressBatch, AuthorizeSecurityGroupIngressBatch, ModifySecurityGroupEgressBatch, ModifySecurityGroupIngressBatch, RevokeSecurityGroupEgressBatch, RevokeSecurityGroupIngressBatch；修改 CreateFlowLog, CreateNetworkInterface, DescribeNetworkInterfaces, DescribeSecurityGroupAttributes, ModifyFlowLogAttribute, ModifyIpamResourceDiscovery, ModifyNetworkInterfaceAttributes, CreateIpam, DescribeIpamResourceCidrs, DescribeNetworkInterfaceAttributes, ModifyIpam",
   "modules": "service/vpc",
-  "type": "breaking-change"
+  "type": "feature"
 }

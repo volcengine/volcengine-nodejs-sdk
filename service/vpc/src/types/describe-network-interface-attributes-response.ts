@@ -145,10 +145,28 @@ export interface DescribeNetworkInterfaceAttributesResponse {
     Tags?: Array<TagForDescribeNetworkInterfaceAttributesOutput>;
 
     /**
+     * @type {number}
+     * @memberof DescribeNetworkInterfaceAttributesResponse
+     */
+    TcpClosedAndTimeWaitTimeout?: number;
+
+    /**
+     * @type {number}
+     * @memberof DescribeNetworkInterfaceAttributesResponse
+     */
+    TcpEstablishedTimeout?: number;
+
+    /**
      * @type {string}
      * @memberof DescribeNetworkInterfaceAttributesResponse
      */
     Type?: string;
+
+    /**
+     * @type {number}
+     * @memberof DescribeNetworkInterfaceAttributesResponse
+     */
+    UdpTimeout?: number;
 
     /**
      * @type {string}

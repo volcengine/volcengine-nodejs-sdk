@@ -55,4 +55,22 @@ export interface ModifyNetworkInterfaceAttributesRequest {
      * @memberof ModifyNetworkInterfaceAttributesRequest
      */
     SecurityGroupIds?: Array<string>;
+
+    /**
+     * @type {number}
+     * @memberof ModifyNetworkInterfaceAttributesRequest
+     */
+    TcpClosedAndTimeWaitTimeout?: number;
+
+    /**
+     * @type {number}
+     * @memberof ModifyNetworkInterfaceAttributesRequest
+     */
+    TcpEstablishedTimeout?: number;
+
+    /**
+     * @type {number}
+     * @memberof ModifyNetworkInterfaceAttributesRequest
+     */
+    UdpTimeout?: number;
 }

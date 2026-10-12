@@ -139,10 +139,28 @@ export interface NetworkInterfaceSetForDescribeNetworkInterfacesOutput {
     Tags?: Array<TagForDescribeNetworkInterfacesOutput>;
 
     /**
+     * @type {number}
+     * @memberof NetworkInterfaceSetForDescribeNetworkInterfacesOutput
+     */
+    TcpClosedAndTimeWaitTimeout?: number;
+
+    /**
+     * @type {number}
+     * @memberof NetworkInterfaceSetForDescribeNetworkInterfacesOutput
+     */
+    TcpEstablishedTimeout?: number;
+
+    /**
      * @type {string}
      * @memberof NetworkInterfaceSetForDescribeNetworkInterfacesOutput
      */
     Type?: string;
+
+    /**
+     * @type {number}
+     * @memberof NetworkInterfaceSetForDescribeNetworkInterfacesOutput
+     */
+    UdpTimeout?: number;
 
     /**
      * @type {string}

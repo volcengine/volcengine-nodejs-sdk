@@ -21,6 +21,12 @@
 export interface ModifyIpamResourceDiscoveryRequest {
 
     /**
+     * @type {Array<string>}
+     * @memberof ModifyIpamResourceDiscoveryRequest
+     */
+    AddOperatingRegions?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof ModifyIpamResourceDiscoveryRequest
      */
@@ -37,4 +43,10 @@ export interface ModifyIpamResourceDiscoveryRequest {
      * @memberof ModifyIpamResourceDiscoveryRequest
      */
     IpamResourceDiscoveryName?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof ModifyIpamResourceDiscoveryRequest
+     */
+    RemoveOperatingRegions?: Array<string>;
 }

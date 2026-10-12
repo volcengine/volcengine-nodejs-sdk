@@ -37,4 +37,10 @@ export interface CreateFlowLogResponse {
      * @memberof CreateFlowLogResponse
      */
     RequestId?: string;
+
+    /**
+     * @type {number}
+     * @memberof CreateFlowLogResponse
+     */
+    Version?: number;
 }
