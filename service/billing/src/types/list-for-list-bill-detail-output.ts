@@ -114,12 +114,6 @@ export interface ListForListBillDetailOutput {
      * @type {string}
      * @memberof ListForListBillDetailOutput
      */
-    CreditCarriedAmount?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListBillDetailOutput
-     */
     Currency?: string;
 
     /**
@@ -306,12 +300,6 @@ export interface ListForListBillDetailOutput {
      * @type {string}
      * @memberof ListForListBillDetailOutput
      */
-    PaidAmount?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListBillDetailOutput
-     */
     PayableAmount?: string;
 
     /**
@@ -480,6 +468,12 @@ export interface ListForListBillDetailOutput {
      * @type {string}
      * @memberof ListForListBillDetailOutput
      */
+    SalesChannel?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillDetailOutput
+     */
     SavingPlanDeductionDiscountAmount?: string;
 
     /**
@@ -619,12 +613,6 @@ export interface ListForListBillDetailOutput {
      * @memberof ListForListBillDetailOutput
      */
     Unit?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListBillDetailOutput
-     */
-    UnpaidAmount?: string;
 
     /**
      * @type {string}

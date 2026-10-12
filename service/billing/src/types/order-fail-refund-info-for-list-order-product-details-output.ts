@@ -55,4 +55,34 @@ export interface OrderFailRefundInfoForListOrderProductDetailsOutput {
      * @memberof OrderFailRefundInfoForListOrderProductDetailsOutput
      */
     PayableAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderFailRefundInfoForListOrderProductDetailsOutput
+     */
+    PointDeductAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderFailRefundInfoForListOrderProductDetailsOutput
+     */
+    PreTaxPayableAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderFailRefundInfoForListOrderProductDetailsOutput
+     */
+    SettlePayableAmount?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderFailRefundInfoForListOrderProductDetailsOutput
+     */
+    SettleTax?: string;
+
+    /**
+     * @type {string}
+     * @memberof OrderFailRefundInfoForListOrderProductDetailsOutput
+     */
+    Tax?: string;
 }

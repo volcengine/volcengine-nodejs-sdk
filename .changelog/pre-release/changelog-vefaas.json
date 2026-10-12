@@ -1,13 +1,17 @@
 {
   "actions": [
     "CreateSandbox",
+    "GetFunction",
+    "UpdateNetworkRules",
+    "ListFunctions",
+    "PrecacheSandboxImages",
     "DescribeSandbox",
-    "DeleteE2BAPIKey",
-    "ListSandboxes",
-    "ListSandboxSnapshots",
-    "UpdateFunctionResource"
+    "UpdateFunction",
+    "ListRevisions",
+    "CreateFunction",
+    "GetRevision"
   ],
-  "description": "VEFAAS: 新增 DeleteE2BAPIKey；修改 ListSandboxes, ListSandboxSnapshots, UpdateFunctionResource, CreateSandbox, DescribeSandbox",
+  "description": "VEFAAS: 新增 UpdateNetworkRules；修改 ListFunctions, ListRevisions, PrecacheSandboxImages, CreateFunction, CreateSandbox, GetFunction, GetRevision, DescribeSandbox, UpdateFunction",
   "modules": "service/vefaas",
   "type": "breaking-change"
 }

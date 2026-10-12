@@ -240,6 +240,12 @@ export interface ListForListBillOutput {
      * @type {string}
      * @memberof ListForListBillOutput
      */
+    SalesChannel?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListForListBillOutput
+     */
     SavingPlanOriginalAmount?: string;
 
     /**

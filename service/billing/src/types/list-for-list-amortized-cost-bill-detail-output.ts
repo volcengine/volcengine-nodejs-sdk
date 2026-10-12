@@ -180,12 +180,6 @@ export interface ListForListAmortizedCostBillDetailOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillDetailOutput
      */
-    DailyAmortizedPaidAmount?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListAmortizedCostBillDetailOutput
-     */
     DailyAmortizedPayableAmount?: string;
 
     /**
@@ -433,12 +427,6 @@ export interface ListForListAmortizedCostBillDetailOutput {
      * @memberof ListForListAmortizedCostBillDetailOutput
      */
     OwnerUserName?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListAmortizedCostBillDetailOutput
-     */
-    PaidAmount?: string;
 
     /**
      * @type {string}

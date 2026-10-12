@@ -168,12 +168,6 @@ export interface ListForListAmortizedCostBillDailyOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillDailyOutput
      */
-    DailyAmortizedPaidAmount?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListAmortizedCostBillDailyOutput
-     */
     DailyAmortizedPayableAmount?: string;
 
     /**
@@ -378,12 +372,6 @@ export interface ListForListAmortizedCostBillDailyOutput {
      * @type {string}
      * @memberof ListForListAmortizedCostBillDailyOutput
      */
-    NowAmortizedPaidAmount?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListAmortizedCostBillDailyOutput
-     */
     NowAmortizedPayableAmount?: string;
 
     /**
@@ -517,12 +505,6 @@ export interface ListForListAmortizedCostBillDailyOutput {
      * @memberof ListForListAmortizedCostBillDailyOutput
      */
     OwnerUserName?: string;
-
-    /**
-     * @type {string}
-     * @memberof ListForListAmortizedCostBillDailyOutput
-     */
-    PaidAmount?: string;
 
     /**
      * @type {string}

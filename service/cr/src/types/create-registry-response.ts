@@ -19,4 +19,10 @@
  * @interface CreateRegistryResponse
  */
 export interface CreateRegistryResponse {
+
+    /**
+     * @type {string}
+     * @memberof CreateRegistryResponse
+     */
+    Name?: string;
 }

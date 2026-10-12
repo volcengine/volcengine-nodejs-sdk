@@ -61,13 +61,13 @@ export interface ListCostAnalysisOpenApiRequest {
      * @type {number}
      * @memberof ListCostAnalysisOpenApiRequest
      */
-    Limit?: number;
+    Limit: number;
 
     /**
      * @type {number}
      * @memberof ListCostAnalysisOpenApiRequest
      */
-    Offset?: number;
+    Offset: number;
 
     /**
      * @type {number}
