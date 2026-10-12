@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AuthForUpdateFunctionOutput } from './auth-for-update-function-output';
 import { MountPointForUpdateFunctionOutput } from './mount-point-for-update-function-output';
  /**
  * 
@@ -20,6 +21,12 @@ import { MountPointForUpdateFunctionOutput } from './mount-point-for-update-func
  * @interface EfsMountConfigForUpdateFunctionOutput
  */
 export interface EfsMountConfigForUpdateFunctionOutput {
+
+    /**
+     * @type {AuthForUpdateFunctionOutput}
+     * @memberof EfsMountConfigForUpdateFunctionOutput
+     */
+    Auth?: AuthForUpdateFunctionOutput;
 
     /**
      * @type {Array<MountPointForUpdateFunctionOutput>}

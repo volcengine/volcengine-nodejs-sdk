@@ -132,6 +132,8 @@ import { UpdateFunctionResourceResponse } from './types/index';
 import { UpdateFunctionResponse } from './types/index';
 import { UpdateKafkaTriggerRequest } from './types/index';
 import { UpdateKafkaTriggerResponse } from './types/index';
+import { UpdateNetworkRulesRequest } from './types/index';
+import { UpdateNetworkRulesResponse } from './types/index';
 import { UpdateReleaseRequest } from './types/index';
 import { UpdateReleaseResponse } from './types/index';
 import { UpdateTimerRequest } from './types/index';
@@ -201,6 +203,7 @@ export type UpdateFunctionCommandOutput = CommandOutput<UpdateFunctionResponse>;
 export type UpdateFunctionMetricScaleStrategyRulesCommandOutput = CommandOutput<UpdateFunctionMetricScaleStrategyRulesResponse>;
 export type UpdateFunctionResourceCommandOutput = CommandOutput<UpdateFunctionResourceResponse>;
 export type UpdateKafkaTriggerCommandOutput = CommandOutput<UpdateKafkaTriggerResponse>;
+export type UpdateNetworkRulesCommandOutput = CommandOutput<UpdateNetworkRulesResponse>;
 export type UpdateReleaseCommandOutput = CommandOutput<UpdateReleaseResponse>;
 export type UpdateTimerCommandOutput = CommandOutput<UpdateTimerResponse>;
 export type UpsertSecretTokenCommandOutput = CommandOutput<UpsertSecretTokenResponse>;
@@ -1104,6 +1107,21 @@ export class UpdateKafkaTriggerCommand extends Command<
   }
 }
 /**
+ * Command to UpdateNetworkRules
+ */
+export class UpdateNetworkRulesCommand extends Command<
+  UpdateNetworkRulesRequest,
+  UpdateNetworkRulesCommandOutput,
+  'UpdateNetworkRulesCommand'
+> {
+  static readonly metaPath = '/UpdateNetworkRules/2024-06-06/vefaas/post/application_json/';
+
+  constructor(input: UpdateNetworkRulesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateNetworkRulesCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateRelease
  */
 export class UpdateReleaseCommand extends Command<
@@ -1210,6 +1228,7 @@ export default {
   UpdateFunctionMetricScaleStrategyRulesCommand,
   UpdateFunctionResourceCommand,
   UpdateKafkaTriggerCommand,
+  UpdateNetworkRulesCommand,
   UpdateReleaseCommand,
   UpdateTimerCommand,
   UpsertSecretTokenCommand,

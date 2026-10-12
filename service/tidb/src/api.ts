@@ -20,6 +20,8 @@ import { CancelImportTaskRequest } from './types/index';
 import { CancelImportTaskResponse } from './types/index';
 import { ChangeBranchPasswordRequest } from './types/index';
 import { ChangeBranchPasswordResponse } from './types/index';
+import { CreateAuditLogFilterRuleRequest } from './types/index';
+import { CreateAuditLogFilterRuleResponse } from './types/index';
 import { CreateBranchRequest } from './types/index';
 import { CreateBranchResponse } from './types/index';
 import { CreateClusterRequest } from './types/index';
@@ -32,6 +34,8 @@ import { CreateImportUploadUrlRequest } from './types/index';
 import { CreateImportUploadUrlResponse } from './types/index';
 import { CreatePrivateEndpointAllowlistRuleRequest } from './types/index';
 import { CreatePrivateEndpointAllowlistRuleResponse } from './types/index';
+import { DeleteAuditLogFilterRuleRequest } from './types/index';
+import { DeleteAuditLogFilterRuleResponse } from './types/index';
 import { DeleteBranchRequest } from './types/index';
 import { DeleteBranchResponse } from './types/index';
 import { DeleteClusterRequest } from './types/index';
@@ -44,6 +48,12 @@ import { DeleteRecycledInstanceBackupRequest } from './types/index';
 import { DeleteRecycledInstanceBackupResponse } from './types/index';
 import { DescribePriceDetailRequest } from './types/index';
 import { DescribePriceDetailResponse } from './types/index';
+import { DownloadAuditLogFilesRequest } from './types/index';
+import { DownloadAuditLogFilesResponse } from './types/index';
+import { GetAuditLogConfigRequest } from './types/index';
+import { GetAuditLogConfigResponse } from './types/index';
+import { GetAuditLogFilterRuleRequest } from './types/index';
+import { GetAuditLogFilterRuleResponse } from './types/index';
 import { GetBackupRequest } from './types/index';
 import { GetBackupResponse } from './types/index';
 import { GetBackupRetentionRequest } from './types/index';
@@ -70,6 +80,10 @@ import { GetSlowQueryDetailsRequest } from './types/index';
 import { GetSlowQueryDetailsResponse } from './types/index';
 import { GetStatementPlanDetailsRequest } from './types/index';
 import { GetStatementPlanDetailsResponse } from './types/index';
+import { ListAuditLogFilesRequest } from './types/index';
+import { ListAuditLogFilesResponse } from './types/index';
+import { ListAuditLogFilterRulesRequest } from './types/index';
+import { ListAuditLogFilterRulesResponse } from './types/index';
 import { ListBackupsRequest } from './types/index';
 import { ListBackupsResponse } from './types/index';
 import { ListBranchDatabasesRequest } from './types/index';
@@ -126,6 +140,10 @@ import { TagResourcesRequest } from './types/index';
 import { TagResourcesResponse } from './types/index';
 import { UntagResourcesRequest } from './types/index';
 import { UntagResourcesResponse } from './types/index';
+import { UpdateAuditLogConfigRequest } from './types/index';
+import { UpdateAuditLogConfigResponse } from './types/index';
+import { UpdateAuditLogFilterRuleRequest } from './types/index';
+import { UpdateAuditLogFilterRuleResponse } from './types/index';
 import { UpdateBranchRequest } from './types/index';
 import { UpdateBranchResponse } from './types/index';
 import { UpdateClusterRequest } from './types/index';
@@ -141,18 +159,23 @@ import { ValidateImportTaskResponse } from './types/index';
 export type CancelExportTaskCommandOutput = CommandOutput<CancelExportTaskResponse>;
 export type CancelImportTaskCommandOutput = CommandOutput<CancelImportTaskResponse>;
 export type ChangeBranchPasswordCommandOutput = CommandOutput<ChangeBranchPasswordResponse>;
+export type CreateAuditLogFilterRuleCommandOutput = CommandOutput<CreateAuditLogFilterRuleResponse>;
 export type CreateBranchCommandOutput = CommandOutput<CreateBranchResponse>;
 export type CreateClusterCommandOutput = CommandOutput<CreateClusterResponse>;
 export type CreateExportTaskCommandOutput = CommandOutput<CreateExportTaskResponse>;
 export type CreateImportTaskCommandOutput = CommandOutput<CreateImportTaskResponse>;
 export type CreateImportUploadUrlCommandOutput = CommandOutput<CreateImportUploadUrlResponse>;
 export type CreatePrivateEndpointAllowlistRuleCommandOutput = CommandOutput<CreatePrivateEndpointAllowlistRuleResponse>;
+export type DeleteAuditLogFilterRuleCommandOutput = CommandOutput<DeleteAuditLogFilterRuleResponse>;
 export type DeleteBranchCommandOutput = CommandOutput<DeleteBranchResponse>;
 export type DeleteClusterCommandOutput = CommandOutput<DeleteClusterResponse>;
 export type DeleteExportTaskCommandOutput = CommandOutput<DeleteExportTaskResponse>;
 export type DeletePrivateEndpointAllowlistRuleCommandOutput = CommandOutput<DeletePrivateEndpointAllowlistRuleResponse>;
 export type DeleteRecycledInstanceBackupCommandOutput = CommandOutput<DeleteRecycledInstanceBackupResponse>;
 export type DescribePriceDetailCommandOutput = CommandOutput<DescribePriceDetailResponse>;
+export type DownloadAuditLogFilesCommandOutput = CommandOutput<DownloadAuditLogFilesResponse>;
+export type GetAuditLogConfigCommandOutput = CommandOutput<GetAuditLogConfigResponse>;
+export type GetAuditLogFilterRuleCommandOutput = CommandOutput<GetAuditLogFilterRuleResponse>;
 export type GetBackupCommandOutput = CommandOutput<GetBackupResponse>;
 export type GetBackupRetentionCommandOutput = CommandOutput<GetBackupRetentionResponse>;
 export type GetBranchDetailsCommandOutput = CommandOutput<GetBranchDetailsResponse>;
@@ -166,6 +189,8 @@ export type GetRecycledInstanceCommandOutput = CommandOutput<GetRecycledInstance
 export type GetRestoreProgressCommandOutput = CommandOutput<GetRestoreProgressResponse>;
 export type GetSlowQueryDetailsCommandOutput = CommandOutput<GetSlowQueryDetailsResponse>;
 export type GetStatementPlanDetailsCommandOutput = CommandOutput<GetStatementPlanDetailsResponse>;
+export type ListAuditLogFilesCommandOutput = CommandOutput<ListAuditLogFilesResponse>;
+export type ListAuditLogFilterRulesCommandOutput = CommandOutput<ListAuditLogFilterRulesResponse>;
 export type ListBackupsCommandOutput = CommandOutput<ListBackupsResponse>;
 export type ListBranchDatabasesCommandOutput = CommandOutput<ListBranchDatabasesResponse>;
 export type ListBranchesCommandOutput = CommandOutput<ListBranchesResponse>;
@@ -194,6 +219,8 @@ export type ResetClusterPasswordCommandOutput = CommandOutput<ResetClusterPasswo
 export type RestoreClusterCommandOutput = CommandOutput<RestoreClusterResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
+export type UpdateAuditLogConfigCommandOutput = CommandOutput<UpdateAuditLogConfigResponse>;
+export type UpdateAuditLogFilterRuleCommandOutput = CommandOutput<UpdateAuditLogFilterRuleResponse>;
 export type UpdateBranchCommandOutput = CommandOutput<UpdateBranchResponse>;
 export type UpdateClusterCommandOutput = CommandOutput<UpdateClusterResponse>;
 export type UpdatePrivateEndpointAllowlistRuleCommandOutput = CommandOutput<UpdatePrivateEndpointAllowlistRuleResponse>;
@@ -255,6 +282,21 @@ export class ChangeBranchPasswordCommand extends Command<
   constructor(input: ChangeBranchPasswordRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ChangeBranchPasswordCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateAuditLogFilterRule
+ */
+export class CreateAuditLogFilterRuleCommand extends Command<
+  CreateAuditLogFilterRuleRequest,
+  CreateAuditLogFilterRuleCommandOutput,
+  'CreateAuditLogFilterRuleCommand'
+> {
+  static readonly metaPath = '/CreateAuditLogFilterRule/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: CreateAuditLogFilterRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateAuditLogFilterRuleCommand.metaPath);
   }
 }
 /**
@@ -348,6 +390,21 @@ export class CreatePrivateEndpointAllowlistRuleCommand extends Command<
   }
 }
 /**
+ * Command to DeleteAuditLogFilterRule
+ */
+export class DeleteAuditLogFilterRuleCommand extends Command<
+  DeleteAuditLogFilterRuleRequest,
+  DeleteAuditLogFilterRuleCommandOutput,
+  'DeleteAuditLogFilterRuleCommand'
+> {
+  static readonly metaPath = '/DeleteAuditLogFilterRule/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: DeleteAuditLogFilterRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteAuditLogFilterRuleCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteBranch
  */
 export class DeleteBranchCommand extends Command<
@@ -435,6 +492,51 @@ export class DescribePriceDetailCommand extends Command<
   constructor(input: DescribePriceDetailRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribePriceDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to DownloadAuditLogFiles
+ */
+export class DownloadAuditLogFilesCommand extends Command<
+  DownloadAuditLogFilesRequest,
+  DownloadAuditLogFilesCommandOutput,
+  'DownloadAuditLogFilesCommand'
+> {
+  static readonly metaPath = '/DownloadAuditLogFiles/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: DownloadAuditLogFilesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DownloadAuditLogFilesCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAuditLogConfig
+ */
+export class GetAuditLogConfigCommand extends Command<
+  GetAuditLogConfigRequest,
+  GetAuditLogConfigCommandOutput,
+  'GetAuditLogConfigCommand'
+> {
+  static readonly metaPath = '/GetAuditLogConfig/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: GetAuditLogConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAuditLogConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to GetAuditLogFilterRule
+ */
+export class GetAuditLogFilterRuleCommand extends Command<
+  GetAuditLogFilterRuleRequest,
+  GetAuditLogFilterRuleCommandOutput,
+  'GetAuditLogFilterRuleCommand'
+> {
+  static readonly metaPath = '/GetAuditLogFilterRule/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: GetAuditLogFilterRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetAuditLogFilterRuleCommand.metaPath);
   }
 }
 /**
@@ -630,6 +732,36 @@ export class GetStatementPlanDetailsCommand extends Command<
   constructor(input: GetStatementPlanDetailsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetStatementPlanDetailsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAuditLogFiles
+ */
+export class ListAuditLogFilesCommand extends Command<
+  ListAuditLogFilesRequest,
+  ListAuditLogFilesCommandOutput,
+  'ListAuditLogFilesCommand'
+> {
+  static readonly metaPath = '/ListAuditLogFiles/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ListAuditLogFilesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAuditLogFilesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListAuditLogFilterRules
+ */
+export class ListAuditLogFilterRulesCommand extends Command<
+  ListAuditLogFilterRulesRequest,
+  ListAuditLogFilterRulesCommandOutput,
+  'ListAuditLogFilterRulesCommand'
+> {
+  static readonly metaPath = '/ListAuditLogFilterRules/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ListAuditLogFilterRulesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListAuditLogFilterRulesCommand.metaPath);
   }
 }
 /**
@@ -1053,6 +1185,36 @@ export class UntagResourcesCommand extends Command<
   }
 }
 /**
+ * Command to UpdateAuditLogConfig
+ */
+export class UpdateAuditLogConfigCommand extends Command<
+  UpdateAuditLogConfigRequest,
+  UpdateAuditLogConfigCommandOutput,
+  'UpdateAuditLogConfigCommand'
+> {
+  static readonly metaPath = '/UpdateAuditLogConfig/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: UpdateAuditLogConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAuditLogConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateAuditLogFilterRule
+ */
+export class UpdateAuditLogFilterRuleCommand extends Command<
+  UpdateAuditLogFilterRuleRequest,
+  UpdateAuditLogFilterRuleCommandOutput,
+  'UpdateAuditLogFilterRuleCommand'
+> {
+  static readonly metaPath = '/UpdateAuditLogFilterRule/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: UpdateAuditLogFilterRuleRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateAuditLogFilterRuleCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateBranch
  */
 export class UpdateBranchCommand extends Command<
@@ -1118,18 +1280,23 @@ export default {
   CancelExportTaskCommand,
   CancelImportTaskCommand,
   ChangeBranchPasswordCommand,
+  CreateAuditLogFilterRuleCommand,
   CreateBranchCommand,
   CreateClusterCommand,
   CreateExportTaskCommand,
   CreateImportTaskCommand,
   CreateImportUploadUrlCommand,
   CreatePrivateEndpointAllowlistRuleCommand,
+  DeleteAuditLogFilterRuleCommand,
   DeleteBranchCommand,
   DeleteClusterCommand,
   DeleteExportTaskCommand,
   DeletePrivateEndpointAllowlistRuleCommand,
   DeleteRecycledInstanceBackupCommand,
   DescribePriceDetailCommand,
+  DownloadAuditLogFilesCommand,
+  GetAuditLogConfigCommand,
+  GetAuditLogFilterRuleCommand,
   GetBackupCommand,
   GetBackupRetentionCommand,
   GetBranchDetailsCommand,
@@ -1143,6 +1310,8 @@ export default {
   GetRestoreProgressCommand,
   GetSlowQueryDetailsCommand,
   GetStatementPlanDetailsCommand,
+  ListAuditLogFilesCommand,
+  ListAuditLogFilterRulesCommand,
   ListBackupsCommand,
   ListBranchDatabasesCommand,
   ListBranchesCommand,
@@ -1171,6 +1340,8 @@ export default {
   RestoreClusterCommand,
   TagResourcesCommand,
   UntagResourcesCommand,
+  UpdateAuditLogConfigCommand,
+  UpdateAuditLogFilterRuleCommand,
   UpdateBranchCommand,
   UpdateClusterCommand,
   UpdatePrivateEndpointAllowlistRuleCommand,

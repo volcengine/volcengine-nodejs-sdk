@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AuthForGetRevisionOutput } from './auth-for-get-revision-output';
 import { MountPointForGetRevisionOutput } from './mount-point-for-get-revision-output';
  /**
  * 
@@ -20,6 +21,12 @@ import { MountPointForGetRevisionOutput } from './mount-point-for-get-revision-o
  * @interface EfsMountConfigForGetRevisionOutput
  */
 export interface EfsMountConfigForGetRevisionOutput {
+
+    /**
+     * @type {AuthForGetRevisionOutput}
+     * @memberof EfsMountConfigForGetRevisionOutput
+     */
+    Auth?: AuthForGetRevisionOutput;
 
     /**
      * @type {Array<MountPointForGetRevisionOutput>}

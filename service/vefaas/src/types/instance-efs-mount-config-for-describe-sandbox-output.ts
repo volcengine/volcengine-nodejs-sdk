@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AuthForDescribeSandboxOutput } from './auth-for-describe-sandbox-output';
 import { MountPointForDescribeSandboxOutput } from './mount-point-for-describe-sandbox-output';
  /**
  * 
@@ -20,6 +21,12 @@ import { MountPointForDescribeSandboxOutput } from './mount-point-for-describe-s
  * @interface InstanceEfsMountConfigForDescribeSandboxOutput
  */
 export interface InstanceEfsMountConfigForDescribeSandboxOutput {
+
+    /**
+     * @type {AuthForDescribeSandboxOutput}
+     * @memberof InstanceEfsMountConfigForDescribeSandboxOutput
+     */
+    Auth?: AuthForDescribeSandboxOutput;
 
     /**
      * @type {Array<MountPointForDescribeSandboxOutput>}
