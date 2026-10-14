@@ -30,6 +30,12 @@ export interface BudgetListForListBudgetOutput {
      * @type {string}
      * @memberof BudgetListForListBudgetOutput
      */
+    AmountType?: string;
+
+    /**
+     * @type {string}
+     * @memberof BudgetListForListBudgetOutput
+     */
     BudgetAmount?: string;
 
     /**
@@ -61,6 +67,12 @@ export interface BudgetListForListBudgetOutput {
      * @memberof BudgetListForListBudgetOutput
      */
     BudgetType?: string;
+
+    /**
+     * @type {string}
+     * @memberof BudgetListForListBudgetOutput
+     */
+    CurrencySettlement?: string;
 
     /**
      * @type {string}

@@ -24,6 +24,12 @@ export interface BudgetForQueryBudgetDetailOutput {
      * @type {string}
      * @memberof BudgetForQueryBudgetDetailOutput
      */
+    AmountType?: string;
+
+    /**
+     * @type {string}
+     * @memberof BudgetForQueryBudgetDetailOutput
+     */
     BudgetEndTime?: string;
 
     /**
@@ -49,6 +55,12 @@ export interface BudgetForQueryBudgetDetailOutput {
      * @memberof BudgetForQueryBudgetDetailOutput
      */
     BudgetType?: string;
+
+    /**
+     * @type {string}
+     * @memberof BudgetForQueryBudgetDetailOutput
+     */
+    CurrencySettlement?: string;
 
     /**
      * @type {string}

@@ -34,6 +34,12 @@ export interface CreateDropShippingOrderRequest {
     BizNo?: string;
 
     /**
+     * @type {string}
+     * @memberof CreateDropShippingOrderRequest
+     */
+    BizOrderBeginTime?: string;
+
+    /**
      * @type {Array<ConfigItemForCreateDropShippingOrderInput>}
      * @memberof CreateDropShippingOrderRequest
      */
