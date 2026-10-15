@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ConfigurationCodeForCreateBudgetInput } from './configuration-code-for-create-budget-input';
  /**
  * 
  *
@@ -25,6 +26,12 @@ export interface BudgetRangeForCreateBudgetInput {
      * @memberof BudgetRangeForCreateBudgetInput
      */
     BillingMode?: Array<string>;
+
+    /**
+     * @type {Array<ConfigurationCodeForCreateBudgetInput>}
+     * @memberof BudgetRangeForCreateBudgetInput
+     */
+    ConfigurationCode?: Array<ConfigurationCodeForCreateBudgetInput>;
 
     /**
      * @type {Array<number>}
@@ -55,6 +62,18 @@ export interface BudgetRangeForCreateBudgetInput {
      * @memberof BudgetRangeForCreateBudgetInput
      */
     Region?: Array<string>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof BudgetRangeForCreateBudgetInput
+     */
+    SplitItemID?: Array<string>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof BudgetRangeForCreateBudgetInput
+     */
+    SplitItemName?: Array<string>;
 
     /**
      * @type {Array<string>}

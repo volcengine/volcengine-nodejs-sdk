@@ -13,6 +13,7 @@
  */
 
 import { BudgetRangeBillingModeForQueryBudgetDetailOutput } from './budget-range-billing-mode-for-query-budget-detail-output';
+import { BudgetRangeConfigurationCodeForQueryBudgetDetailOutput } from './budget-range-configuration-code-for-query-budget-detail-output';
 import { BudgetRangeOwnerForQueryBudgetDetailOutput } from './budget-range-owner-for-query-budget-detail-output';
 import { BudgetRangePayerForQueryBudgetDetailOutput } from './budget-range-payer-for-query-budget-detail-output';
 import { BudgetRangeProductForQueryBudgetDetailOutput } from './budget-range-product-for-query-budget-detail-output';
@@ -32,6 +33,12 @@ export interface BudgetRangeInfoForQueryBudgetDetailOutput {
      * @memberof BudgetRangeInfoForQueryBudgetDetailOutput
      */
     BudgetRangeBillingMode?: Array<BudgetRangeBillingModeForQueryBudgetDetailOutput>;
+
+    /**
+     * @type {Array<BudgetRangeConfigurationCodeForQueryBudgetDetailOutput>}
+     * @memberof BudgetRangeInfoForQueryBudgetDetailOutput
+     */
+    BudgetRangeConfigurationCode?: Array<BudgetRangeConfigurationCodeForQueryBudgetDetailOutput>;
 
     /**
      * @type {Array<BudgetRangeOwnerForQueryBudgetDetailOutput>}
@@ -62,6 +69,18 @@ export interface BudgetRangeInfoForQueryBudgetDetailOutput {
      * @memberof BudgetRangeInfoForQueryBudgetDetailOutput
      */
     BudgetRangeRegion?: Array<BudgetRangeRegionForQueryBudgetDetailOutput>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof BudgetRangeInfoForQueryBudgetDetailOutput
+     */
+    BudgetRangeSplitItemID?: Array<string>;
+
+    /**
+     * @type {Array<string>}
+     * @memberof BudgetRangeInfoForQueryBudgetDetailOutput
+     */
+    BudgetRangeSplitItemName?: Array<string>;
 
     /**
      * @type {Array<BudgetRangeSubjectForQueryBudgetDetailOutput>}

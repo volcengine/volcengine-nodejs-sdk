@@ -16,19 +16,13 @@
  * 
  *
  * @export
- * @interface RegistryProxyConfigForUpdateNodePoolConfigInput
+ * @interface RemedyStrategyForCreateRemedyRuleInput
  */
-export interface RegistryProxyConfigForUpdateNodePoolConfigInput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof RegistryProxyConfigForUpdateNodePoolConfigInput
-     */
-    ProxyEndpoints?: Array<string>;
+export interface RemedyStrategyForCreateRemedyRuleInput {
 
     /**
      * @type {string}
-     * @memberof RegistryProxyConfigForUpdateNodePoolConfigInput
+     * @memberof RemedyStrategyForCreateRemedyRuleInput
      */
-    Registry?: string;
+    Type?: string;
 }

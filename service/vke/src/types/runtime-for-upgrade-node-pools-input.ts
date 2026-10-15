@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface LabelForListRemedyConfigsOutput
+ * @interface RuntimeForUpgradeNodePoolsInput
  */
-export interface LabelForListRemedyConfigsOutput {
+export interface RuntimeForUpgradeNodePoolsInput {
 
     /**
      * @type {string}
-     * @memberof LabelForListRemedyConfigsOutput
+     * @memberof RuntimeForUpgradeNodePoolsInput
      */
-    Key?: string;
+    Type?: string;
 
     /**
      * @type {string}
-     * @memberof LabelForListRemedyConfigsOutput
+     * @memberof RuntimeForUpgradeNodePoolsInput
      */
-    Value?: string;
+    Version?: string;
 }

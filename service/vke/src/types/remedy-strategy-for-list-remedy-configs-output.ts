@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { ConfigForListRemedyConfigsOutput } from './config-for-list-remedy-configs-output';
  /**
  * 
  *
@@ -22,26 +21,8 @@ import { ConfigForListRemedyConfigsOutput } from './config-for-list-remedy-confi
 export interface RemedyStrategyForListRemedyConfigsOutput {
 
     /**
-     * @type {ConfigForListRemedyConfigsOutput}
-     * @memberof RemedyStrategyForListRemedyConfigsOutput
-     */
-    Config?: ConfigForListRemedyConfigsOutput;
-
-    /**
      * @type {string}
      * @memberof RemedyStrategyForListRemedyConfigsOutput
      */
-    Type?: RemedyStrategyForListRemedyConfigsOutputTypeEnum;
+    Type?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum RemedyStrategyForListRemedyConfigsOutputTypeEnum {
-    Notify = 'Notify',
-    CordonNode = 'CordonNode',
-    DrainNode = 'DrainNode',
-    Remedy = 'Remedy'
-}
-

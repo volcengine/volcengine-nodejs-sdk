@@ -24,6 +24,12 @@ export interface BudgetForUpdateBudgetInput {
      * @type {string}
      * @memberof BudgetForUpdateBudgetInput
      */
+    AmountType?: BudgetForUpdateBudgetInputAmountTypeEnum;
+
+    /**
+     * @type {string}
+     * @memberof BudgetForUpdateBudgetInput
+     */
     BudgetEndTime?: string;
 
     /**
@@ -54,9 +60,23 @@ export interface BudgetForUpdateBudgetInput {
      * @type {string}
      * @memberof BudgetForUpdateBudgetInput
      */
+    CurrencySettlement?: string;
+
+    /**
+     * @type {string}
+     * @memberof BudgetForUpdateBudgetInput
+     */
     Period?: BudgetForUpdateBudgetInputPeriodEnum;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum BudgetForUpdateBudgetInputAmountTypeEnum {
+    PreTaxPayable = 'pre_tax_payable',
+    PostTaxPayable = 'post_tax_payable'
+}
 /**
  * @export
  * @enum {string}
