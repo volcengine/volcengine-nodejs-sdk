@@ -1,6 +1,8 @@
 // Mock fs — must be before import
 const mockReadFile = jest.fn().mockResolvedValue("mock-oidc-token-content");
+const mockReadFileSync = jest.fn().mockReturnValue("mock-ca");
 jest.mock("fs", () => ({
+  readFileSync: mockReadFileSync,
   promises: {
     readFile: mockReadFile,
   },
@@ -77,6 +79,8 @@ describe("OidcCredentialProvider", () => {
     // preventing unconsumed mockResolvedValueOnce from leaking across tests.
     mockSend.mockReset();
     mockReadFile.mockReset();
+    mockReadFileSync.mockReset();
+    mockReadFileSync.mockReturnValue("mock-ca");
     mockReadFile.mockResolvedValue("mock-oidc-token-content");
   });
 
@@ -143,6 +147,30 @@ describe("OidcCredentialProvider", () => {
 
       expect(c1).toBe(c2);
       expect(mockSend).toHaveBeenCalledTimes(1);
+    });
+
+    it("should validate caFile before returning cached credentials", async () => {
+      mockSend.mockResolvedValueOnce(buildMockResponse());
+
+      const provider = new OidcCredentialProvider({
+        ...makeParams("ca-file-cache-test"),
+        caFile: "/path/to/custom-ca.pem",
+      });
+
+      await provider.resolveCredentials();
+
+      mockReadFileSync.mockImplementationOnce(() => {
+        const err = new Error("ENOENT: no such file or directory");
+        (err as NodeJS.ErrnoException).code = "ENOENT";
+        throw err;
+      });
+
+      await expect(provider.resolveCredentials()).rejects.toThrow(
+        "OidcCredentialProvider: caFile is not readable",
+      );
+      expect(mockSend).toHaveBeenCalledTimes(1);
+      expect(mockReadFile).toHaveBeenCalledTimes(1);
+      expect(mockReadFileSync).toHaveBeenCalledTimes(2);
     });
 
     it("should merge concurrent requests", async () => {

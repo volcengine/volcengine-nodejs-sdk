@@ -6,7 +6,11 @@ import type {
   InternalAxiosRequestConfig,
   AxiosResponse,
 } from "axios";
+import fs from "fs";
 import https from "https";
+import os from "os";
+import path from "path";
+import tls from "tls";
 
 /**
  * Tests for AxiosRequestHandler
@@ -448,5 +452,100 @@ describe("AxiosRequestHandler - httpsAgent", () => {
     expect(config.httpsAgent.options.maxSockets).toBe(20);
     expect(config.httpsAgent.options.keepAlive).toBeUndefined();
     expect(config.httpsAgent.options.maxFreeSockets).toBeUndefined();
+  });
+
+  test("should create proxy config from proxyUrl", () => {
+    new AxiosRequestHandler(
+      {
+        proxyUrl: "http://user:pass@proxy.internal:8080",
+        proxy: {
+          protocol: "http",
+          host: "legacy-proxy",
+          port: 3128,
+        },
+      },
+      mockClientFactory,
+    );
+
+    const config = mockClientFactory.mock.calls[0][0];
+    expect(config.proxy).toEqual({
+      protocol: "http",
+      host: "proxy.internal",
+      port: 8080,
+      auth: {
+        username: "user",
+        password: "pass",
+      },
+    });
+  });
+
+  test("should throw when proxyUrl is non-empty but invalid", () => {
+    expect(
+      () =>
+        new AxiosRequestHandler(
+          {
+            proxyUrl: "not-a-valid-url",
+            proxy: {
+              protocol: "http",
+              host: "legacy-proxy",
+              port: 3128,
+            },
+          },
+          mockClientFactory,
+        ),
+    ).toThrow("Invalid proxyUrl");
+  });
+
+  test("should fall back to proxy when proxyUrl is empty string", () => {
+    new AxiosRequestHandler(
+      {
+        proxyUrl: "",
+        proxy: {
+          protocol: "http",
+          host: "legacy-proxy",
+          port: 3128,
+        },
+      },
+      mockClientFactory,
+    );
+
+    const config = mockClientFactory.mock.calls[0][0];
+    expect(config.proxy).toEqual({
+      protocol: "http",
+      host: "legacy-proxy",
+      port: 3128,
+    });
+  });
+
+  test("should create httpsAgent with caFile", () => {
+    const caFilePath = path.join(
+      fs.mkdtempSync(path.join(os.tmpdir(), "sdk-core-ca-")),
+      "ca.pem",
+    );
+    fs.writeFileSync(caFilePath, "mock-ca");
+
+    try {
+      new AxiosRequestHandler({ caFile: caFilePath }, mockClientFactory);
+      const config = mockClientFactory.mock.calls[0][0];
+      expect(config.httpsAgent).toBeInstanceOf(https.Agent);
+      expect(config.httpsAgent.options.ca).toEqual(
+        expect.arrayContaining(["mock-ca"]),
+      );
+      expect(config.httpsAgent.options.ca.length).toBeGreaterThanOrEqual(
+        tls.rootCertificates.length + 1,
+      );
+    } finally {
+      fs.rmSync(path.dirname(caFilePath), { recursive: true, force: true });
+    }
+  });
+
+  test("should throw when caFile cannot be read", () => {
+    expect(
+      () =>
+        new AxiosRequestHandler(
+          { caFile: "/path/does/not/exist/ca.pem" },
+          mockClientFactory,
+        ),
+    ).toThrow();
   });
 });
