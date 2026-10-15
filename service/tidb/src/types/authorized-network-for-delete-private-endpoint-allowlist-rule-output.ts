@@ -24,7 +24,7 @@ export interface AuthorizedNetworkForDeletePrivateEndpointAllowlistRuleOutput {
      * @type {string}
      * @memberof AuthorizedNetworkForDeletePrivateEndpointAllowlistRuleOutput
      */
-    DisplayName?: string;
+    AuthorizedNetworkName?: string;
 
     /**
      * @type {number}

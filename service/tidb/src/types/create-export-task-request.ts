@@ -29,16 +29,16 @@ export interface CreateExportTaskRequest {
     ClusterId: string;
 
     /**
-     * @type {string}
-     * @memberof CreateExportTaskRequest
-     */
-    DisplayName?: string;
-
-    /**
      * @type {ExportOptionsForCreateExportTaskInput}
      * @memberof CreateExportTaskRequest
      */
     ExportOptions?: ExportOptionsForCreateExportTaskInput;
+
+    /**
+     * @type {string}
+     * @memberof CreateExportTaskRequest
+     */
+    ExportTaskName?: string;
 
     /**
      * @type {string}

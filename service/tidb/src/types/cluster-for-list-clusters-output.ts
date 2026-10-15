@@ -31,6 +31,12 @@ import { ZoneForListClustersOutput } from './zone-for-list-clusters-output';
 export interface ClusterForListClustersOutput {
 
     /**
+     * @type {string}
+     * @memberof ClusterForListClustersOutput
+     */
+    AccountId?: string;
+
+    /**
      * @type {Array<AnnotationForListClustersOutput>}
      * @memberof ClusterForListClustersOutput
      */
@@ -64,13 +70,13 @@ export interface ClusterForListClustersOutput {
      * @type {string}
      * @memberof ClusterForListClustersOutput
      */
-    CreateTime?: string;
+    ClusterName?: string;
 
     /**
      * @type {string}
      * @memberof ClusterForListClustersOutput
      */
-    DisplayName?: string;
+    CreateTime?: string;
 
     /**
      * @type {EncryptionConfigForListClustersOutput}
@@ -95,12 +101,6 @@ export interface ClusterForListClustersOutput {
      * @memberof ClusterForListClustersOutput
      */
     Labels?: Array<LabelForListClustersOutput>;
-
-    /**
-     * @type {string}
-     * @memberof ClusterForListClustersOutput
-     */
-    Name?: string;
 
     /**
      * @type {string}

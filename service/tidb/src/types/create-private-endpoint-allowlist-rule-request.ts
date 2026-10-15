@@ -24,13 +24,13 @@ export interface CreatePrivateEndpointAllowlistRuleRequest {
      * @type {string}
      * @memberof CreatePrivateEndpointAllowlistRuleRequest
      */
-    ClusterId: string;
+    AuthorizedNetworkName?: string;
 
     /**
      * @type {string}
      * @memberof CreatePrivateEndpointAllowlistRuleRequest
      */
-    DisplayName?: string;
+    ClusterId: string;
 
     /**
      * @type {string}

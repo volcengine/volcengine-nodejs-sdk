@@ -44,12 +44,6 @@ export interface ExportForDeleteExportTaskOutput {
      * @type {string}
      * @memberof ExportForDeleteExportTaskOutput
      */
-    DisplayName?: string;
-
-    /**
-     * @type {string}
-     * @memberof ExportForDeleteExportTaskOutput
-     */
     ExpireTime?: string;
 
     /**
@@ -68,7 +62,7 @@ export interface ExportForDeleteExportTaskOutput {
      * @type {string}
      * @memberof ExportForDeleteExportTaskOutput
      */
-    Name?: string;
+    ExportTaskName?: string;
 
     /**
      * @type {string}

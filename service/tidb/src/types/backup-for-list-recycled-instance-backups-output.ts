@@ -54,12 +54,6 @@ export interface BackupForListRecycledInstanceBackupsOutput {
      * @type {string}
      * @memberof BackupForListRecycledInstanceBackupsOutput
      */
-    Name?: string;
-
-    /**
-     * @type {string}
-     * @memberof BackupForListRecycledInstanceBackupsOutput
-     */
     State?: BackupForListRecycledInstanceBackupsOutputStateEnum;
 
     /**

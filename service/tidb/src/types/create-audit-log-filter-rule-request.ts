@@ -31,7 +31,7 @@ export interface CreateAuditLogFilterRuleRequest {
      * @type {string}
      * @memberof CreateAuditLogFilterRuleRequest
      */
-    DisplayName: string;
+    FilterRuleName: string;
 
     /**
      * @type {Array<FilterForCreateAuditLogFilterRuleInput>}

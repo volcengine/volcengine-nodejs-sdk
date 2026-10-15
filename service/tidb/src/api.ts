@@ -14,6 +14,8 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { AttachPrivateLinkConnectionDomainsRequest } from './types/index';
+import { AttachPrivateLinkConnectionDomainsResponse } from './types/index';
 import { CancelExportTaskRequest } from './types/index';
 import { CancelExportTaskResponse } from './types/index';
 import { CancelImportTaskRequest } from './types/index';
@@ -24,6 +26,8 @@ import { CreateAuditLogFilterRuleRequest } from './types/index';
 import { CreateAuditLogFilterRuleResponse } from './types/index';
 import { CreateBranchRequest } from './types/index';
 import { CreateBranchResponse } from './types/index';
+import { CreateChangefeedRequest } from './types/index';
+import { CreateChangefeedResponse } from './types/index';
 import { CreateClusterRequest } from './types/index';
 import { CreateClusterResponse } from './types/index';
 import { CreateExportTaskRequest } from './types/index';
@@ -34,22 +38,34 @@ import { CreateImportUploadUrlRequest } from './types/index';
 import { CreateImportUploadUrlResponse } from './types/index';
 import { CreatePrivateEndpointAllowlistRuleRequest } from './types/index';
 import { CreatePrivateEndpointAllowlistRuleResponse } from './types/index';
+import { CreatePrivateLinkConnectionRequest } from './types/index';
+import { CreatePrivateLinkConnectionResponse } from './types/index';
 import { DeleteAuditLogFilterRuleRequest } from './types/index';
 import { DeleteAuditLogFilterRuleResponse } from './types/index';
 import { DeleteBranchRequest } from './types/index';
 import { DeleteBranchResponse } from './types/index';
+import { DeleteChangefeedRequest } from './types/index';
+import { DeleteChangefeedResponse } from './types/index';
 import { DeleteClusterRequest } from './types/index';
 import { DeleteClusterResponse } from './types/index';
 import { DeleteExportTaskRequest } from './types/index';
 import { DeleteExportTaskResponse } from './types/index';
 import { DeletePrivateEndpointAllowlistRuleRequest } from './types/index';
 import { DeletePrivateEndpointAllowlistRuleResponse } from './types/index';
+import { DeletePrivateLinkConnectionRequest } from './types/index';
+import { DeletePrivateLinkConnectionResponse } from './types/index';
 import { DeleteRecycledInstanceBackupRequest } from './types/index';
 import { DeleteRecycledInstanceBackupResponse } from './types/index';
 import { DescribePriceDetailRequest } from './types/index';
 import { DescribePriceDetailResponse } from './types/index';
+import { DescribeSchemaTableRequest } from './types/index';
+import { DescribeSchemaTableResponse } from './types/index';
+import { DetachPrivateLinkConnectionDomainsRequest } from './types/index';
+import { DetachPrivateLinkConnectionDomainsResponse } from './types/index';
 import { DownloadAuditLogFilesRequest } from './types/index';
 import { DownloadAuditLogFilesResponse } from './types/index';
+import { EditChangefeedRequest } from './types/index';
+import { EditChangefeedResponse } from './types/index';
 import { GetAuditLogConfigRequest } from './types/index';
 import { GetAuditLogConfigResponse } from './types/index';
 import { GetAuditLogFilterRuleRequest } from './types/index';
@@ -60,6 +76,8 @@ import { GetBackupRetentionRequest } from './types/index';
 import { GetBackupRetentionResponse } from './types/index';
 import { GetBranchDetailsRequest } from './types/index';
 import { GetBranchDetailsResponse } from './types/index';
+import { GetChangefeedRequest } from './types/index';
+import { GetChangefeedResponse } from './types/index';
 import { GetClusterDetailsRequest } from './types/index';
 import { GetClusterDetailsResponse } from './types/index';
 import { GetExportTaskDetailsRequest } from './types/index';
@@ -72,6 +90,10 @@ import { GetMetricsRequest } from './types/index';
 import { GetMetricsResponse } from './types/index';
 import { GetPrivateEndpointAllowlistRuleRequest } from './types/index';
 import { GetPrivateEndpointAllowlistRuleResponse } from './types/index';
+import { GetPrivateLinkConnectionAvailabilityZonesRequest } from './types/index';
+import { GetPrivateLinkConnectionAvailabilityZonesResponse } from './types/index';
+import { GetPrivateLinkConnectionRequest } from './types/index';
+import { GetPrivateLinkConnectionResponse } from './types/index';
 import { GetRecycledInstanceRequest } from './types/index';
 import { GetRecycledInstanceResponse } from './types/index';
 import { GetRestoreProgressRequest } from './types/index';
@@ -90,6 +112,10 @@ import { ListBranchDatabasesRequest } from './types/index';
 import { ListBranchDatabasesResponse } from './types/index';
 import { ListBranchesRequest } from './types/index';
 import { ListBranchesResponse } from './types/index';
+import { ListChangefeedSpecificationsRequest } from './types/index';
+import { ListChangefeedSpecificationsResponse } from './types/index';
+import { ListChangefeedsRequest } from './types/index';
+import { ListChangefeedsResponse } from './types/index';
 import { ListClusterDatabasesRequest } from './types/index';
 import { ListClusterDatabasesResponse } from './types/index';
 import { ListClustersRequest } from './types/index';
@@ -106,6 +132,8 @@ import { ListImportTasksRequest } from './types/index';
 import { ListImportTasksResponse } from './types/index';
 import { ListPrivateEndpointAllowlistRequest } from './types/index';
 import { ListPrivateEndpointAllowlistResponse } from './types/index';
+import { ListPrivateLinkConnectionsRequest } from './types/index';
+import { ListPrivateLinkConnectionsResponse } from './types/index';
 import { ListRecycledInstanceBackupsRequest } from './types/index';
 import { ListRecycledInstanceBackupsResponse } from './types/index';
 import { ListRecycledInstancesRequest } from './types/index';
@@ -126,6 +154,8 @@ import { ListTagsForResourcesRequest } from './types/index';
 import { ListTagsForResourcesResponse } from './types/index';
 import { ListZonesRequest } from './types/index';
 import { ListZonesResponse } from './types/index';
+import { OpsListClustersRequest } from './types/index';
+import { OpsListClustersResponse } from './types/index';
 import { PrecheckImportTaskRequest } from './types/index';
 import { PrecheckImportTaskResponse } from './types/index';
 import { PreviewLocalImportRequest } from './types/index';
@@ -136,8 +166,16 @@ import { ResetClusterPasswordRequest } from './types/index';
 import { ResetClusterPasswordResponse } from './types/index';
 import { RestoreClusterRequest } from './types/index';
 import { RestoreClusterResponse } from './types/index';
+import { ScaleChangefeedRequest } from './types/index';
+import { ScaleChangefeedResponse } from './types/index';
+import { StartChangefeedRequest } from './types/index';
+import { StartChangefeedResponse } from './types/index';
+import { StopChangefeedRequest } from './types/index';
+import { StopChangefeedResponse } from './types/index';
 import { TagResourcesRequest } from './types/index';
 import { TagResourcesResponse } from './types/index';
+import { TestChangefeedRequest } from './types/index';
+import { TestChangefeedResponse } from './types/index';
 import { UntagResourcesRequest } from './types/index';
 import { UntagResourcesResponse } from './types/index';
 import { UpdateAuditLogConfigRequest } from './types/index';
@@ -156,35 +194,46 @@ import { ValidateImportTaskResponse } from './types/index';
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type AttachPrivateLinkConnectionDomainsCommandOutput = CommandOutput<AttachPrivateLinkConnectionDomainsResponse>;
 export type CancelExportTaskCommandOutput = CommandOutput<CancelExportTaskResponse>;
 export type CancelImportTaskCommandOutput = CommandOutput<CancelImportTaskResponse>;
 export type ChangeBranchPasswordCommandOutput = CommandOutput<ChangeBranchPasswordResponse>;
 export type CreateAuditLogFilterRuleCommandOutput = CommandOutput<CreateAuditLogFilterRuleResponse>;
 export type CreateBranchCommandOutput = CommandOutput<CreateBranchResponse>;
+export type CreateChangefeedCommandOutput = CommandOutput<CreateChangefeedResponse>;
 export type CreateClusterCommandOutput = CommandOutput<CreateClusterResponse>;
 export type CreateExportTaskCommandOutput = CommandOutput<CreateExportTaskResponse>;
 export type CreateImportTaskCommandOutput = CommandOutput<CreateImportTaskResponse>;
 export type CreateImportUploadUrlCommandOutput = CommandOutput<CreateImportUploadUrlResponse>;
 export type CreatePrivateEndpointAllowlistRuleCommandOutput = CommandOutput<CreatePrivateEndpointAllowlistRuleResponse>;
+export type CreatePrivateLinkConnectionCommandOutput = CommandOutput<CreatePrivateLinkConnectionResponse>;
 export type DeleteAuditLogFilterRuleCommandOutput = CommandOutput<DeleteAuditLogFilterRuleResponse>;
 export type DeleteBranchCommandOutput = CommandOutput<DeleteBranchResponse>;
+export type DeleteChangefeedCommandOutput = CommandOutput<DeleteChangefeedResponse>;
 export type DeleteClusterCommandOutput = CommandOutput<DeleteClusterResponse>;
 export type DeleteExportTaskCommandOutput = CommandOutput<DeleteExportTaskResponse>;
 export type DeletePrivateEndpointAllowlistRuleCommandOutput = CommandOutput<DeletePrivateEndpointAllowlistRuleResponse>;
+export type DeletePrivateLinkConnectionCommandOutput = CommandOutput<DeletePrivateLinkConnectionResponse>;
 export type DeleteRecycledInstanceBackupCommandOutput = CommandOutput<DeleteRecycledInstanceBackupResponse>;
 export type DescribePriceDetailCommandOutput = CommandOutput<DescribePriceDetailResponse>;
+export type DescribeSchemaTableCommandOutput = CommandOutput<DescribeSchemaTableResponse>;
+export type DetachPrivateLinkConnectionDomainsCommandOutput = CommandOutput<DetachPrivateLinkConnectionDomainsResponse>;
 export type DownloadAuditLogFilesCommandOutput = CommandOutput<DownloadAuditLogFilesResponse>;
+export type EditChangefeedCommandOutput = CommandOutput<EditChangefeedResponse>;
 export type GetAuditLogConfigCommandOutput = CommandOutput<GetAuditLogConfigResponse>;
 export type GetAuditLogFilterRuleCommandOutput = CommandOutput<GetAuditLogFilterRuleResponse>;
 export type GetBackupCommandOutput = CommandOutput<GetBackupResponse>;
 export type GetBackupRetentionCommandOutput = CommandOutput<GetBackupRetentionResponse>;
 export type GetBranchDetailsCommandOutput = CommandOutput<GetBranchDetailsResponse>;
+export type GetChangefeedCommandOutput = CommandOutput<GetChangefeedResponse>;
 export type GetClusterDetailsCommandOutput = CommandOutput<GetClusterDetailsResponse>;
 export type GetExportTaskDetailsCommandOutput = CommandOutput<GetExportTaskDetailsResponse>;
 export type GetImportTableColumnsCommandOutput = CommandOutput<GetImportTableColumnsResponse>;
 export type GetImportTaskDetailsCommandOutput = CommandOutput<GetImportTaskDetailsResponse>;
 export type GetMetricsCommandOutput = CommandOutput<GetMetricsResponse>;
 export type GetPrivateEndpointAllowlistRuleCommandOutput = CommandOutput<GetPrivateEndpointAllowlistRuleResponse>;
+export type GetPrivateLinkConnectionCommandOutput = CommandOutput<GetPrivateLinkConnectionResponse>;
+export type GetPrivateLinkConnectionAvailabilityZonesCommandOutput = CommandOutput<GetPrivateLinkConnectionAvailabilityZonesResponse>;
 export type GetRecycledInstanceCommandOutput = CommandOutput<GetRecycledInstanceResponse>;
 export type GetRestoreProgressCommandOutput = CommandOutput<GetRestoreProgressResponse>;
 export type GetSlowQueryDetailsCommandOutput = CommandOutput<GetSlowQueryDetailsResponse>;
@@ -194,6 +243,8 @@ export type ListAuditLogFilterRulesCommandOutput = CommandOutput<ListAuditLogFil
 export type ListBackupsCommandOutput = CommandOutput<ListBackupsResponse>;
 export type ListBranchDatabasesCommandOutput = CommandOutput<ListBranchDatabasesResponse>;
 export type ListBranchesCommandOutput = CommandOutput<ListBranchesResponse>;
+export type ListChangefeedSpecificationsCommandOutput = CommandOutput<ListChangefeedSpecificationsResponse>;
+export type ListChangefeedsCommandOutput = CommandOutput<ListChangefeedsResponse>;
 export type ListClusterDatabasesCommandOutput = CommandOutput<ListClusterDatabasesResponse>;
 export type ListClustersCommandOutput = CommandOutput<ListClustersResponse>;
 export type ListEventsCommandOutput = CommandOutput<ListEventsResponse>;
@@ -202,6 +253,7 @@ export type ListImportSupportedDataTypesCommandOutput = CommandOutput<ListImport
 export type ListImportTargetTablesCommandOutput = CommandOutput<ListImportTargetTablesResponse>;
 export type ListImportTasksCommandOutput = CommandOutput<ListImportTasksResponse>;
 export type ListPrivateEndpointAllowlistCommandOutput = CommandOutput<ListPrivateEndpointAllowlistResponse>;
+export type ListPrivateLinkConnectionsCommandOutput = CommandOutput<ListPrivateLinkConnectionsResponse>;
 export type ListRecycledInstanceBackupsCommandOutput = CommandOutput<ListRecycledInstanceBackupsResponse>;
 export type ListRecycledInstancesCommandOutput = CommandOutput<ListRecycledInstancesResponse>;
 export type ListRegionsCommandOutput = CommandOutput<ListRegionsResponse>;
@@ -212,12 +264,17 @@ export type ListStatementTypesCommandOutput = CommandOutput<ListStatementTypesRe
 export type ListStatementsCommandOutput = CommandOutput<ListStatementsResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
 export type ListZonesCommandOutput = CommandOutput<ListZonesResponse>;
+export type OpsListClustersCommandOutput = CommandOutput<OpsListClustersResponse>;
 export type PrecheckImportTaskCommandOutput = CommandOutput<PrecheckImportTaskResponse>;
 export type PreviewLocalImportCommandOutput = CommandOutput<PreviewLocalImportResponse>;
 export type ResetBranchCommandOutput = CommandOutput<ResetBranchResponse>;
 export type ResetClusterPasswordCommandOutput = CommandOutput<ResetClusterPasswordResponse>;
 export type RestoreClusterCommandOutput = CommandOutput<RestoreClusterResponse>;
+export type ScaleChangefeedCommandOutput = CommandOutput<ScaleChangefeedResponse>;
+export type StartChangefeedCommandOutput = CommandOutput<StartChangefeedResponse>;
+export type StopChangefeedCommandOutput = CommandOutput<StopChangefeedResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
+export type TestChangefeedCommandOutput = CommandOutput<TestChangefeedResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateAuditLogConfigCommandOutput = CommandOutput<UpdateAuditLogConfigResponse>;
 export type UpdateAuditLogFilterRuleCommandOutput = CommandOutput<UpdateAuditLogFilterRuleResponse>;
@@ -239,6 +296,21 @@ export class TIDBClient extends Client {
   }
 }
 
+/**
+ * Command to AttachPrivateLinkConnectionDomains
+ */
+export class AttachPrivateLinkConnectionDomainsCommand extends Command<
+  AttachPrivateLinkConnectionDomainsRequest,
+  AttachPrivateLinkConnectionDomainsCommandOutput,
+  'AttachPrivateLinkConnectionDomainsCommand'
+> {
+  static readonly metaPath = '/AttachPrivateLinkConnectionDomains/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: AttachPrivateLinkConnectionDomainsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AttachPrivateLinkConnectionDomainsCommand.metaPath);
+  }
+}
 /**
  * Command to CancelExportTask
  */
@@ -312,6 +384,21 @@ export class CreateBranchCommand extends Command<
   constructor(input: CreateBranchRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateBranchCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateChangefeed
+ */
+export class CreateChangefeedCommand extends Command<
+  CreateChangefeedRequest,
+  CreateChangefeedCommandOutput,
+  'CreateChangefeedCommand'
+> {
+  static readonly metaPath = '/CreateChangefeed/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: CreateChangefeedRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateChangefeedCommand.metaPath);
   }
 }
 /**
@@ -390,6 +477,21 @@ export class CreatePrivateEndpointAllowlistRuleCommand extends Command<
   }
 }
 /**
+ * Command to CreatePrivateLinkConnection
+ */
+export class CreatePrivateLinkConnectionCommand extends Command<
+  CreatePrivateLinkConnectionRequest,
+  CreatePrivateLinkConnectionCommandOutput,
+  'CreatePrivateLinkConnectionCommand'
+> {
+  static readonly metaPath = '/CreatePrivateLinkConnection/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: CreatePrivateLinkConnectionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreatePrivateLinkConnectionCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteAuditLogFilterRule
  */
 export class DeleteAuditLogFilterRuleCommand extends Command<
@@ -417,6 +519,21 @@ export class DeleteBranchCommand extends Command<
   constructor(input: DeleteBranchRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteBranchCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteChangefeed
+ */
+export class DeleteChangefeedCommand extends Command<
+  DeleteChangefeedRequest,
+  DeleteChangefeedCommandOutput,
+  'DeleteChangefeedCommand'
+> {
+  static readonly metaPath = '/DeleteChangefeed/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: DeleteChangefeedRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteChangefeedCommand.metaPath);
   }
 }
 /**
@@ -465,6 +582,21 @@ export class DeletePrivateEndpointAllowlistRuleCommand extends Command<
   }
 }
 /**
+ * Command to DeletePrivateLinkConnection
+ */
+export class DeletePrivateLinkConnectionCommand extends Command<
+  DeletePrivateLinkConnectionRequest,
+  DeletePrivateLinkConnectionCommandOutput,
+  'DeletePrivateLinkConnectionCommand'
+> {
+  static readonly metaPath = '/DeletePrivateLinkConnection/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: DeletePrivateLinkConnectionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeletePrivateLinkConnectionCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteRecycledInstanceBackup
  */
 export class DeleteRecycledInstanceBackupCommand extends Command<
@@ -495,6 +627,36 @@ export class DescribePriceDetailCommand extends Command<
   }
 }
 /**
+ * Command to DescribeSchemaTable
+ */
+export class DescribeSchemaTableCommand extends Command<
+  DescribeSchemaTableRequest,
+  DescribeSchemaTableCommandOutput,
+  'DescribeSchemaTableCommand'
+> {
+  static readonly metaPath = '/DescribeSchemaTable/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: DescribeSchemaTableRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeSchemaTableCommand.metaPath);
+  }
+}
+/**
+ * Command to DetachPrivateLinkConnectionDomains
+ */
+export class DetachPrivateLinkConnectionDomainsCommand extends Command<
+  DetachPrivateLinkConnectionDomainsRequest,
+  DetachPrivateLinkConnectionDomainsCommandOutput,
+  'DetachPrivateLinkConnectionDomainsCommand'
+> {
+  static readonly metaPath = '/DetachPrivateLinkConnectionDomains/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: DetachPrivateLinkConnectionDomainsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DetachPrivateLinkConnectionDomainsCommand.metaPath);
+  }
+}
+/**
  * Command to DownloadAuditLogFiles
  */
 export class DownloadAuditLogFilesCommand extends Command<
@@ -507,6 +669,21 @@ export class DownloadAuditLogFilesCommand extends Command<
   constructor(input: DownloadAuditLogFilesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DownloadAuditLogFilesCommand.metaPath);
+  }
+}
+/**
+ * Command to EditChangefeed
+ */
+export class EditChangefeedCommand extends Command<
+  EditChangefeedRequest,
+  EditChangefeedCommandOutput,
+  'EditChangefeedCommand'
+> {
+  static readonly metaPath = '/EditChangefeed/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: EditChangefeedRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(EditChangefeedCommand.metaPath);
   }
 }
 /**
@@ -582,6 +759,21 @@ export class GetBranchDetailsCommand extends Command<
   constructor(input: GetBranchDetailsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetBranchDetailsCommand.metaPath);
+  }
+}
+/**
+ * Command to GetChangefeed
+ */
+export class GetChangefeedCommand extends Command<
+  GetChangefeedRequest,
+  GetChangefeedCommandOutput,
+  'GetChangefeedCommand'
+> {
+  static readonly metaPath = '/GetChangefeed/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: GetChangefeedRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetChangefeedCommand.metaPath);
   }
 }
 /**
@@ -672,6 +864,36 @@ export class GetPrivateEndpointAllowlistRuleCommand extends Command<
   constructor(input: GetPrivateEndpointAllowlistRuleRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetPrivateEndpointAllowlistRuleCommand.metaPath);
+  }
+}
+/**
+ * Command to GetPrivateLinkConnection
+ */
+export class GetPrivateLinkConnectionCommand extends Command<
+  GetPrivateLinkConnectionRequest,
+  GetPrivateLinkConnectionCommandOutput,
+  'GetPrivateLinkConnectionCommand'
+> {
+  static readonly metaPath = '/GetPrivateLinkConnection/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: GetPrivateLinkConnectionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetPrivateLinkConnectionCommand.metaPath);
+  }
+}
+/**
+ * Command to GetPrivateLinkConnectionAvailabilityZones
+ */
+export class GetPrivateLinkConnectionAvailabilityZonesCommand extends Command<
+  GetPrivateLinkConnectionAvailabilityZonesRequest,
+  GetPrivateLinkConnectionAvailabilityZonesCommandOutput,
+  'GetPrivateLinkConnectionAvailabilityZonesCommand'
+> {
+  static readonly metaPath = '/GetPrivateLinkConnectionAvailabilityZones/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: GetPrivateLinkConnectionAvailabilityZonesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetPrivateLinkConnectionAvailabilityZonesCommand.metaPath);
   }
 }
 /**
@@ -810,6 +1032,36 @@ export class ListBranchesCommand extends Command<
   }
 }
 /**
+ * Command to ListChangefeedSpecifications
+ */
+export class ListChangefeedSpecificationsCommand extends Command<
+  ListChangefeedSpecificationsRequest,
+  ListChangefeedSpecificationsCommandOutput,
+  'ListChangefeedSpecificationsCommand'
+> {
+  static readonly metaPath = '/ListChangefeedSpecifications/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ListChangefeedSpecificationsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListChangefeedSpecificationsCommand.metaPath);
+  }
+}
+/**
+ * Command to ListChangefeeds
+ */
+export class ListChangefeedsCommand extends Command<
+  ListChangefeedsRequest,
+  ListChangefeedsCommandOutput,
+  'ListChangefeedsCommand'
+> {
+  static readonly metaPath = '/ListChangefeeds/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ListChangefeedsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListChangefeedsCommand.metaPath);
+  }
+}
+/**
  * Command to ListClusterDatabases
  */
 export class ListClusterDatabasesCommand extends Command<
@@ -927,6 +1179,21 @@ export class ListPrivateEndpointAllowlistCommand extends Command<
   constructor(input: ListPrivateEndpointAllowlistRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListPrivateEndpointAllowlistCommand.metaPath);
+  }
+}
+/**
+ * Command to ListPrivateLinkConnections
+ */
+export class ListPrivateLinkConnectionsCommand extends Command<
+  ListPrivateLinkConnectionsRequest,
+  ListPrivateLinkConnectionsCommandOutput,
+  'ListPrivateLinkConnectionsCommand'
+> {
+  static readonly metaPath = '/ListPrivateLinkConnections/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ListPrivateLinkConnectionsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListPrivateLinkConnectionsCommand.metaPath);
   }
 }
 /**
@@ -1080,6 +1347,21 @@ export class ListZonesCommand extends Command<
   }
 }
 /**
+ * Command to OpsListClusters
+ */
+export class OpsListClustersCommand extends Command<
+  OpsListClustersRequest,
+  OpsListClustersCommandOutput,
+  'OpsListClustersCommand'
+> {
+  static readonly metaPath = '/OpsListClusters/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: OpsListClustersRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(OpsListClustersCommand.metaPath);
+  }
+}
+/**
  * Command to PrecheckImportTask
  */
 export class PrecheckImportTaskCommand extends Command<
@@ -1155,6 +1437,51 @@ export class RestoreClusterCommand extends Command<
   }
 }
 /**
+ * Command to ScaleChangefeed
+ */
+export class ScaleChangefeedCommand extends Command<
+  ScaleChangefeedRequest,
+  ScaleChangefeedCommandOutput,
+  'ScaleChangefeedCommand'
+> {
+  static readonly metaPath = '/ScaleChangefeed/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: ScaleChangefeedRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ScaleChangefeedCommand.metaPath);
+  }
+}
+/**
+ * Command to StartChangefeed
+ */
+export class StartChangefeedCommand extends Command<
+  StartChangefeedRequest,
+  StartChangefeedCommandOutput,
+  'StartChangefeedCommand'
+> {
+  static readonly metaPath = '/StartChangefeed/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: StartChangefeedRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StartChangefeedCommand.metaPath);
+  }
+}
+/**
+ * Command to StopChangefeed
+ */
+export class StopChangefeedCommand extends Command<
+  StopChangefeedRequest,
+  StopChangefeedCommandOutput,
+  'StopChangefeedCommand'
+> {
+  static readonly metaPath = '/StopChangefeed/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: StopChangefeedRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StopChangefeedCommand.metaPath);
+  }
+}
+/**
  * Command to TagResources
  */
 export class TagResourcesCommand extends Command<
@@ -1167,6 +1494,21 @@ export class TagResourcesCommand extends Command<
   constructor(input: TagResourcesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(TagResourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to TestChangefeed
+ */
+export class TestChangefeedCommand extends Command<
+  TestChangefeedRequest,
+  TestChangefeedCommandOutput,
+  'TestChangefeedCommand'
+> {
+  static readonly metaPath = '/TestChangefeed/2026-06-30/tidb/post/application_json/';
+
+  constructor(input: TestChangefeedRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(TestChangefeedCommand.metaPath);
   }
 }
 /**
@@ -1277,35 +1619,46 @@ export class ValidateImportTaskCommand extends Command<
 
 export default {
   TIDBClient,
+  AttachPrivateLinkConnectionDomainsCommand,
   CancelExportTaskCommand,
   CancelImportTaskCommand,
   ChangeBranchPasswordCommand,
   CreateAuditLogFilterRuleCommand,
   CreateBranchCommand,
+  CreateChangefeedCommand,
   CreateClusterCommand,
   CreateExportTaskCommand,
   CreateImportTaskCommand,
   CreateImportUploadUrlCommand,
   CreatePrivateEndpointAllowlistRuleCommand,
+  CreatePrivateLinkConnectionCommand,
   DeleteAuditLogFilterRuleCommand,
   DeleteBranchCommand,
+  DeleteChangefeedCommand,
   DeleteClusterCommand,
   DeleteExportTaskCommand,
   DeletePrivateEndpointAllowlistRuleCommand,
+  DeletePrivateLinkConnectionCommand,
   DeleteRecycledInstanceBackupCommand,
   DescribePriceDetailCommand,
+  DescribeSchemaTableCommand,
+  DetachPrivateLinkConnectionDomainsCommand,
   DownloadAuditLogFilesCommand,
+  EditChangefeedCommand,
   GetAuditLogConfigCommand,
   GetAuditLogFilterRuleCommand,
   GetBackupCommand,
   GetBackupRetentionCommand,
   GetBranchDetailsCommand,
+  GetChangefeedCommand,
   GetClusterDetailsCommand,
   GetExportTaskDetailsCommand,
   GetImportTableColumnsCommand,
   GetImportTaskDetailsCommand,
   GetMetricsCommand,
   GetPrivateEndpointAllowlistRuleCommand,
+  GetPrivateLinkConnectionCommand,
+  GetPrivateLinkConnectionAvailabilityZonesCommand,
   GetRecycledInstanceCommand,
   GetRestoreProgressCommand,
   GetSlowQueryDetailsCommand,
@@ -1315,6 +1668,8 @@ export default {
   ListBackupsCommand,
   ListBranchDatabasesCommand,
   ListBranchesCommand,
+  ListChangefeedSpecificationsCommand,
+  ListChangefeedsCommand,
   ListClusterDatabasesCommand,
   ListClustersCommand,
   ListEventsCommand,
@@ -1323,6 +1678,7 @@ export default {
   ListImportTargetTablesCommand,
   ListImportTasksCommand,
   ListPrivateEndpointAllowlistCommand,
+  ListPrivateLinkConnectionsCommand,
   ListRecycledInstanceBackupsCommand,
   ListRecycledInstancesCommand,
   ListRegionsCommand,
@@ -1333,12 +1689,17 @@ export default {
   ListStatementsCommand,
   ListTagsForResourcesCommand,
   ListZonesCommand,
+  OpsListClustersCommand,
   PrecheckImportTaskCommand,
   PreviewLocalImportCommand,
   ResetBranchCommand,
   ResetClusterPasswordCommand,
   RestoreClusterCommand,
+  ScaleChangefeedCommand,
+  StartChangefeedCommand,
+  StopChangefeedCommand,
   TagResourcesCommand,
+  TestChangefeedCommand,
   UntagResourcesCommand,
   UpdateAuditLogConfigCommand,
   UpdateAuditLogFilterRuleCommand,

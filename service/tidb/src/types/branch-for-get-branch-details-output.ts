@@ -75,12 +75,6 @@ export interface BranchForGetBranchDetailsOutput {
      * @type {string}
      * @memberof BranchForGetBranchDetailsOutput
      */
-    Name?: string;
-
-    /**
-     * @type {string}
-     * @memberof BranchForGetBranchDetailsOutput
-     */
     ParentDisplayName?: string;
 
     /**

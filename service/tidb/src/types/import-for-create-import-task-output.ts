@@ -83,12 +83,6 @@ export interface ImportForCreateImportTaskOutput {
     Message?: string;
 
     /**
-     * @type {string}
-     * @memberof ImportForCreateImportTaskOutput
-     */
-    Name?: string;
-
-    /**
      * @type {number}
      * @memberof ImportForCreateImportTaskOutput
      */

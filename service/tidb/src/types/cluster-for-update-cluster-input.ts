@@ -31,6 +31,12 @@ import { ZoneForUpdateClusterInput } from './zone-for-update-cluster-input';
 export interface ClusterForUpdateClusterInput {
 
     /**
+     * @type {string}
+     * @memberof ClusterForUpdateClusterInput
+     */
+    AccountId?: string;
+
+    /**
      * @type {Array<AnnotationForUpdateClusterInput>}
      * @memberof ClusterForUpdateClusterInput
      */
@@ -64,13 +70,13 @@ export interface ClusterForUpdateClusterInput {
      * @type {string}
      * @memberof ClusterForUpdateClusterInput
      */
-    CreateTime?: string;
+    ClusterName?: string;
 
     /**
      * @type {string}
      * @memberof ClusterForUpdateClusterInput
      */
-    DisplayName?: string;
+    CreateTime?: string;
 
     /**
      * @type {EncryptionConfigForUpdateClusterInput}
@@ -95,12 +101,6 @@ export interface ClusterForUpdateClusterInput {
      * @memberof ClusterForUpdateClusterInput
      */
     Labels?: Array<LabelForUpdateClusterInput>;
-
-    /**
-     * @type {string}
-     * @memberof ClusterForUpdateClusterInput
-     */
-    Name?: string;
 
     /**
      * @type {string}

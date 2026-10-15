@@ -31,6 +31,12 @@ import { ZoneForDeleteClusterOutput } from './zone-for-delete-cluster-output';
 export interface ClusterForDeleteClusterOutput {
 
     /**
+     * @type {string}
+     * @memberof ClusterForDeleteClusterOutput
+     */
+    AccountId?: string;
+
+    /**
      * @type {Array<AnnotationForDeleteClusterOutput>}
      * @memberof ClusterForDeleteClusterOutput
      */
@@ -64,13 +70,13 @@ export interface ClusterForDeleteClusterOutput {
      * @type {string}
      * @memberof ClusterForDeleteClusterOutput
      */
-    CreateTime?: string;
+    ClusterName?: string;
 
     /**
      * @type {string}
      * @memberof ClusterForDeleteClusterOutput
      */
-    DisplayName?: string;
+    CreateTime?: string;
 
     /**
      * @type {EncryptionConfigForDeleteClusterOutput}
@@ -95,12 +101,6 @@ export interface ClusterForDeleteClusterOutput {
      * @memberof ClusterForDeleteClusterOutput
      */
     Labels?: Array<LabelForDeleteClusterOutput>;
-
-    /**
-     * @type {string}
-     * @memberof ClusterForDeleteClusterOutput
-     */
-    Name?: string;
 
     /**
      * @type {string}

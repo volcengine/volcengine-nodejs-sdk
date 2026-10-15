@@ -24,7 +24,7 @@ export interface AuthorizedNetworkForUpdateClusterInput {
      * @type {string}
      * @memberof AuthorizedNetworkForUpdateClusterInput
      */
-    DisplayName?: string;
+    AuthorizedNetworkName?: string;
 
     /**
      * @type {number}

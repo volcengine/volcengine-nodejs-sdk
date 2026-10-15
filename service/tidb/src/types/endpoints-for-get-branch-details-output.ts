@@ -13,7 +13,6 @@
  */
 
 import { PrivateEndpointForGetBranchDetailsOutput } from './private-endpoint-for-get-branch-details-output';
-import { PublicEndpointForGetBranchDetailsOutput } from './public-endpoint-for-get-branch-details-output';
  /**
  * 
  *
@@ -27,10 +26,4 @@ export interface EndpointsForGetBranchDetailsOutput {
      * @memberof EndpointsForGetBranchDetailsOutput
      */
     PrivateEndpoint?: PrivateEndpointForGetBranchDetailsOutput;
-
-    /**
-     * @type {PublicEndpointForGetBranchDetailsOutput}
-     * @memberof EndpointsForGetBranchDetailsOutput
-     */
-    PublicEndpoint?: PublicEndpointForGetBranchDetailsOutput;
 }

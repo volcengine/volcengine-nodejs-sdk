@@ -24,6 +24,12 @@ export interface UpdatePrivateEndpointAllowlistRuleRequest {
      * @type {string}
      * @memberof UpdatePrivateEndpointAllowlistRuleRequest
      */
+    AuthorizedNetworkName?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdatePrivateEndpointAllowlistRuleRequest
+     */
     ClusterId: string;
 
     /**
@@ -31,12 +37,6 @@ export interface UpdatePrivateEndpointAllowlistRuleRequest {
      * @memberof UpdatePrivateEndpointAllowlistRuleRequest
      */
     CurrentVpcEndpointId: string;
-
-    /**
-     * @type {string}
-     * @memberof UpdatePrivateEndpointAllowlistRuleRequest
-     */
-    DisplayName?: string;
 
     /**
      * @type {string}

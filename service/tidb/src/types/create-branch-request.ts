@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { BranchForCreateBranchInput } from './branch-for-create-branch-input';
  /**
  * 
  *
@@ -22,16 +21,28 @@ import { BranchForCreateBranchInput } from './branch-for-create-branch-input';
 export interface CreateBranchRequest {
 
     /**
-     * @type {BranchForCreateBranchInput}
+     * @type {string}
      * @memberof CreateBranchRequest
      */
-    Branch?: BranchForCreateBranchInput;
+    BranchName: string;
 
     /**
      * @type {string}
      * @memberof CreateBranchRequest
      */
     ClusterId: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateBranchRequest
+     */
+    ParentId?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateBranchRequest
+     */
+    ParentTimestamp?: string;
 
     /**
      * @type {string}

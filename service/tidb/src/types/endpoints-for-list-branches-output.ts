@@ -13,7 +13,6 @@
  */
 
 import { PrivateEndpointForListBranchesOutput } from './private-endpoint-for-list-branches-output';
-import { PublicEndpointForListBranchesOutput } from './public-endpoint-for-list-branches-output';
  /**
  * 
  *
@@ -27,10 +26,4 @@ export interface EndpointsForListBranchesOutput {
      * @memberof EndpointsForListBranchesOutput
      */
     PrivateEndpoint?: PrivateEndpointForListBranchesOutput;
-
-    /**
-     * @type {PublicEndpointForListBranchesOutput}
-     * @memberof EndpointsForListBranchesOutput
-     */
-    PublicEndpoint?: PublicEndpointForListBranchesOutput;
 }

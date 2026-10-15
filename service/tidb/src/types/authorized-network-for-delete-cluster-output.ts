@@ -24,7 +24,7 @@ export interface AuthorizedNetworkForDeleteClusterOutput {
      * @type {string}
      * @memberof AuthorizedNetworkForDeleteClusterOutput
      */
-    DisplayName?: string;
+    AuthorizedNetworkName?: string;
 
     /**
      * @type {number}

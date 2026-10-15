@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { BranchForUpdateBranchInput } from './branch-for-update-branch-input';
  /**
  * 
  *
@@ -22,16 +21,16 @@ import { BranchForUpdateBranchInput } from './branch-for-update-branch-input';
 export interface UpdateBranchRequest {
 
     /**
-     * @type {BranchForUpdateBranchInput}
+     * @type {string}
      * @memberof UpdateBranchRequest
      */
-    Branch?: BranchForUpdateBranchInput;
+    BranchId: string;
 
     /**
      * @type {string}
      * @memberof UpdateBranchRequest
      */
-    BranchId: string;
+    BranchName: string;
 
     /**
      * @type {string}

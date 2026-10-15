@@ -37,13 +37,13 @@ export interface UpdateAuditLogFilterRuleRequest {
      * @type {string}
      * @memberof UpdateAuditLogFilterRuleRequest
      */
-    DisplayName?: string;
+    FilterRuleId: string;
 
     /**
      * @type {string}
      * @memberof UpdateAuditLogFilterRuleRequest
      */
-    FilterRuleId: string;
+    FilterRuleName?: string;
 
     /**
      * @type {Array<FilterForUpdateAuditLogFilterRuleInput>}

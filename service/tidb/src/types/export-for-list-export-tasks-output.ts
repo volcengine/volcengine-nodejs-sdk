@@ -44,12 +44,6 @@ export interface ExportForListExportTasksOutput {
      * @type {string}
      * @memberof ExportForListExportTasksOutput
      */
-    DisplayName?: string;
-
-    /**
-     * @type {string}
-     * @memberof ExportForListExportTasksOutput
-     */
     ExpireTime?: string;
 
     /**
@@ -68,7 +62,7 @@ export interface ExportForListExportTasksOutput {
      * @type {string}
      * @memberof ExportForListExportTasksOutput
      */
-    Name?: string;
+    ExportTaskName?: string;
 
     /**
      * @type {string}

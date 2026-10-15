@@ -24,19 +24,13 @@ export interface RegionForListRegionsOutput {
      * @type {string}
      * @memberof RegionForListRegionsOutput
      */
-    DisplayName?: string;
-
-    /**
-     * @type {string}
-     * @memberof RegionForListRegionsOutput
-     */
-    Name?: string;
-
-    /**
-     * @type {string}
-     * @memberof RegionForListRegionsOutput
-     */
     RegionId?: string;
+
+    /**
+     * @type {string}
+     * @memberof RegionForListRegionsOutput
+     */
+    RegionName?: string;
 
     /**
      * @type {Array<string>}
