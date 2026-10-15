@@ -16,19 +16,19 @@
  * 
  *
  * @export
- * @interface RegistryProxyConfigForUpdateNodePoolConfigInput
+ * @interface RuntimeForUpgradeNodePoolsInput
  */
-export interface RegistryProxyConfigForUpdateNodePoolConfigInput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof RegistryProxyConfigForUpdateNodePoolConfigInput
-     */
-    ProxyEndpoints?: Array<string>;
+export interface RuntimeForUpgradeNodePoolsInput {
 
     /**
      * @type {string}
-     * @memberof RegistryProxyConfigForUpdateNodePoolConfigInput
+     * @memberof RuntimeForUpgradeNodePoolsInput
      */
-    Registry?: string;
+    Type?: string;
+
+    /**
+     * @type {string}
+     * @memberof RuntimeForUpgradeNodePoolsInput
+     */
+    Version?: string;
 }

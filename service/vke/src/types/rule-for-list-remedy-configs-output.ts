@@ -25,7 +25,7 @@ export interface RuleForListRemedyConfigsOutput {
      * @type {string}
      * @memberof RuleForListRemedyConfigsOutput
      */
-    FaultType?: RuleForListRemedyConfigsOutputFaultTypeEnum;
+    FaultType?: string;
 
     /**
      * @type {Array<string>}
@@ -39,14 +39,3 @@ export interface RuleForListRemedyConfigsOutput {
      */
     RemedyStrategy?: RemedyStrategyForListRemedyConfigsOutput;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum RuleForListRemedyConfigsOutputFaultTypeEnum {
-    GPUFault = 'GPUFault',
-    NodeFault = 'NodeFault',
-    SystemFault = 'SystemFault'
-}
-

@@ -70,7 +70,7 @@ export interface FilterForListPermissionsInput {
 export enum FilterForListPermissionsInputGranteeTypeEnum {
     User = 'User',
     Role = 'Role',
-    Account = 'Account'
+    All = 'All'
 }
 /**
  * @export

@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { RegistryProxyConfigForListNodePoolsOutput } from './registry-proxy-config-for-list-node-pools-output';
  /**
  * 
  *
@@ -22,14 +21,26 @@ import { RegistryProxyConfigForListNodePoolsOutput } from './registry-proxy-conf
 export interface ContainerdConfigForListNodePoolsOutput {
 
     /**
-     * @type {Array<string>}
+     * @type {number}
      * @memberof ContainerdConfigForListNodePoolsOutput
      */
-    InsecureRegistries?: Array<string>;
+    ConcurrentLayerFetchBuffer?: number;
 
     /**
-     * @type {Array<RegistryProxyConfigForListNodePoolsOutput>}
+     * @type {number}
      * @memberof ContainerdConfigForListNodePoolsOutput
      */
-    RegistryProxyConfigs?: Array<RegistryProxyConfigForListNodePoolsOutput>;
+    MaxConcurrentDownloads?: number;
+
+    /**
+     * @type {number}
+     * @memberof ContainerdConfigForListNodePoolsOutput
+     */
+    MaxConcurrentUnpacks?: number;
+
+    /**
+     * @type {boolean}
+     * @memberof ContainerdConfigForListNodePoolsOutput
+     */
+    UseLocalImagePull?: boolean;
 }

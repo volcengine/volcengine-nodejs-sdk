@@ -16,19 +16,7 @@
  * 
  *
  * @export
- * @interface RegistryProxyConfigForCreateDefaultNodePoolInput
+ * @interface CreateKubernetesObservabilityResponse
  */
-export interface RegistryProxyConfigForCreateDefaultNodePoolInput {
-
-    /**
-     * @type {Array<string>}
-     * @memberof RegistryProxyConfigForCreateDefaultNodePoolInput
-     */
-    ProxyEndpoints?: Array<string>;
-
-    /**
-     * @type {string}
-     * @memberof RegistryProxyConfigForCreateDefaultNodePoolInput
-     */
-    Registry?: string;
+export interface CreateKubernetesObservabilityResponse {
 }

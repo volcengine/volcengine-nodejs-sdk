@@ -27,6 +27,24 @@ export interface SystemVolumeForUpdateNodePoolConfigInput {
     BurstEnabled?: boolean;
 
     /**
+     * @type {number}
+     * @memberof SystemVolumeForUpdateNodePoolConfigInput
+     */
+    ExtraPerformanceIops?: number;
+
+    /**
+     * @type {number}
+     * @memberof SystemVolumeForUpdateNodePoolConfigInput
+     */
+    ExtraPerformanceThroughputMb?: number;
+
+    /**
+     * @type {string}
+     * @memberof SystemVolumeForUpdateNodePoolConfigInput
+     */
+    ExtraPerformanceTypeId?: SystemVolumeForUpdateNodePoolConfigInputExtraPerformanceTypeIdEnum;
+
+    /**
      * @type {string}
      * @memberof SystemVolumeForUpdateNodePoolConfigInput
      */
@@ -51,6 +69,15 @@ export interface SystemVolumeForUpdateNodePoolConfigInput {
     Type?: SystemVolumeForUpdateNodePoolConfigInputTypeEnum;
 }
 
+/**
+ * @export
+ * @enum {string}
+ */
+export enum SystemVolumeForUpdateNodePoolConfigInputExtraPerformanceTypeIdEnum {
+    Balance = 'Balance',
+    IOPS = 'IOPS',
+    Throughput = 'Throughput'
+}
 /**
  * @export
  * @enum {string}

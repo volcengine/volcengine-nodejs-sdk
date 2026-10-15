@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 
-import { RegistryProxyConfigForCreateNodePoolInput } from './registry-proxy-config-for-create-node-pool-input';
  /**
  * 
  *
@@ -22,14 +21,26 @@ import { RegistryProxyConfigForCreateNodePoolInput } from './registry-proxy-conf
 export interface ContainerdConfigForCreateNodePoolInput {
 
     /**
-     * @type {Array<string>}
+     * @type {number}
      * @memberof ContainerdConfigForCreateNodePoolInput
      */
-    InsecureRegistries?: Array<string>;
+    ConcurrentLayerFetchBuffer?: number;
 
     /**
-     * @type {Array<RegistryProxyConfigForCreateNodePoolInput>}
+     * @type {number}
      * @memberof ContainerdConfigForCreateNodePoolInput
      */
-    RegistryProxyConfigs?: Array<RegistryProxyConfigForCreateNodePoolInput>;
+    MaxConcurrentDownloads?: number;
+
+    /**
+     * @type {number}
+     * @memberof ContainerdConfigForCreateNodePoolInput
+     */
+    MaxConcurrentUnpacks?: number;
+
+    /**
+     * @type {boolean}
+     * @memberof ContainerdConfigForCreateNodePoolInput
+     */
+    UseLocalImagePull?: boolean;
 }
