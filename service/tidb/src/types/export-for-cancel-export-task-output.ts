@@ -44,12 +44,6 @@ export interface ExportForCancelExportTaskOutput {
      * @type {string}
      * @memberof ExportForCancelExportTaskOutput
      */
-    DisplayName?: string;
-
-    /**
-     * @type {string}
-     * @memberof ExportForCancelExportTaskOutput
-     */
     ExpireTime?: string;
 
     /**
@@ -68,7 +62,7 @@ export interface ExportForCancelExportTaskOutput {
      * @type {string}
      * @memberof ExportForCancelExportTaskOutput
      */
-    Name?: string;
+    ExportTaskName?: string;
 
     /**
      * @type {string}

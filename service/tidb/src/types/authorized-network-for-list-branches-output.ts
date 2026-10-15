@@ -24,7 +24,7 @@ export interface AuthorizedNetworkForListBranchesOutput {
      * @type {string}
      * @memberof AuthorizedNetworkForListBranchesOutput
      */
-    DisplayName?: string;
+    AuthorizedNetworkName?: string;
 
     /**
      * @type {number}

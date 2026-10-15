@@ -53,6 +53,6 @@ export interface UpdateClusterRequest {
 export enum UpdateClusterRequestUpdateMaskEnum {
     AutoScaling = 'autoScaling',
     AutomatedBackupPolicy = 'automatedBackupPolicy',
-    DisplayName = 'displayName'
+    ClusterName = 'clusterName'
 }
 

@@ -24,7 +24,7 @@ export interface ConvertAuthorizedNetworkForUpdateClusterInput {
      * @type {string}
      * @memberof ConvertAuthorizedNetworkForUpdateClusterInput
      */
-    DisplayName?: string;
+    AuthorizedNetworkName?: string;
 
     /**
      * @type {string}

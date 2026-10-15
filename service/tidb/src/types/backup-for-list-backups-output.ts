@@ -54,12 +54,6 @@ export interface BackupForListBackupsOutput {
      * @type {string}
      * @memberof BackupForListBackupsOutput
      */
-    Name?: string;
-
-    /**
-     * @type {string}
-     * @memberof BackupForListBackupsOutput
-     */
     State?: BackupForListBackupsOutputStateEnum;
 
     /**

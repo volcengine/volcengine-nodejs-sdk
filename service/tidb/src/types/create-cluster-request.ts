@@ -34,7 +34,7 @@ export interface CreateClusterRequest {
      * @type {string}
      * @memberof CreateClusterRequest
      */
-    DisplayName?: string;
+    ClusterName?: string;
 
     /**
      * @type {EncryptionConfigForCreateClusterInput}

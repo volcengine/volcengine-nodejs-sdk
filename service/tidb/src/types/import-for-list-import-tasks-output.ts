@@ -83,12 +83,6 @@ export interface ImportForListImportTasksOutput {
     Message?: string;
 
     /**
-     * @type {string}
-     * @memberof ImportForListImportTasksOutput
-     */
-    Name?: string;
-
-    /**
      * @type {number}
      * @memberof ImportForListImportTasksOutput
      */

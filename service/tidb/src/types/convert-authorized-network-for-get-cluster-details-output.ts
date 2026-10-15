@@ -24,7 +24,7 @@ export interface ConvertAuthorizedNetworkForGetClusterDetailsOutput {
      * @type {string}
      * @memberof ConvertAuthorizedNetworkForGetClusterDetailsOutput
      */
-    DisplayName?: string;
+    AuthorizedNetworkName?: string;
 
     /**
      * @type {string}

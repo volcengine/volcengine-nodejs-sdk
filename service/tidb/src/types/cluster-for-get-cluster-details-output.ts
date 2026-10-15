@@ -31,6 +31,12 @@ import { ZoneForGetClusterDetailsOutput } from './zone-for-get-cluster-details-o
 export interface ClusterForGetClusterDetailsOutput {
 
     /**
+     * @type {string}
+     * @memberof ClusterForGetClusterDetailsOutput
+     */
+    AccountId?: string;
+
+    /**
      * @type {Array<AnnotationForGetClusterDetailsOutput>}
      * @memberof ClusterForGetClusterDetailsOutput
      */
@@ -64,13 +70,13 @@ export interface ClusterForGetClusterDetailsOutput {
      * @type {string}
      * @memberof ClusterForGetClusterDetailsOutput
      */
-    CreateTime?: string;
+    ClusterName?: string;
 
     /**
      * @type {string}
      * @memberof ClusterForGetClusterDetailsOutput
      */
-    DisplayName?: string;
+    CreateTime?: string;
 
     /**
      * @type {EncryptionConfigForGetClusterDetailsOutput}
@@ -95,12 +101,6 @@ export interface ClusterForGetClusterDetailsOutput {
      * @memberof ClusterForGetClusterDetailsOutput
      */
     Labels?: Array<LabelForGetClusterDetailsOutput>;
-
-    /**
-     * @type {string}
-     * @memberof ClusterForGetClusterDetailsOutput
-     */
-    Name?: string;
 
     /**
      * @type {string}

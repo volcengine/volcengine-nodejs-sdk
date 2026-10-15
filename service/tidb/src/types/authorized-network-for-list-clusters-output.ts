@@ -24,7 +24,7 @@ export interface AuthorizedNetworkForListClustersOutput {
      * @type {string}
      * @memberof AuthorizedNetworkForListClustersOutput
      */
-    DisplayName?: string;
+    AuthorizedNetworkName?: string;
 
     /**
      * @type {number}

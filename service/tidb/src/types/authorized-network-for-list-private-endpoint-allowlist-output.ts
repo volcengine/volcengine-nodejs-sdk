@@ -24,7 +24,7 @@ export interface AuthorizedNetworkForListPrivateEndpointAllowlistOutput {
      * @type {string}
      * @memberof AuthorizedNetworkForListPrivateEndpointAllowlistOutput
      */
-    DisplayName?: string;
+    AuthorizedNetworkName?: string;
 
     /**
      * @type {number}

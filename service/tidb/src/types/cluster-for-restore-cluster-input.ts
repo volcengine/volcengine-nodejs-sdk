@@ -32,7 +32,7 @@ export interface ClusterForRestoreClusterInput {
      * @type {string}
      * @memberof ClusterForRestoreClusterInput
      */
-    DisplayName?: string;
+    ClusterName?: string;
 
     /**
      * @type {string}

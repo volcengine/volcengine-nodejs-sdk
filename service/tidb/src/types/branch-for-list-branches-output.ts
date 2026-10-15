@@ -75,12 +75,6 @@ export interface BranchForListBranchesOutput {
      * @type {string}
      * @memberof BranchForListBranchesOutput
      */
-    Name?: string;
-
-    /**
-     * @type {string}
-     * @memberof BranchForListBranchesOutput
-     */
     ParentDisplayName?: string;
 
     /**

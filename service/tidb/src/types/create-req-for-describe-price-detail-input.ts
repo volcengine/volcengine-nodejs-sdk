@@ -34,7 +34,7 @@ export interface CreateReqForDescribePriceDetailInput {
      * @type {string}
      * @memberof CreateReqForDescribePriceDetailInput
      */
-    DisplayName?: string;
+    ClusterName?: string;
 
     /**
      * @type {EncryptionConfigForDescribePriceDetailInput}
