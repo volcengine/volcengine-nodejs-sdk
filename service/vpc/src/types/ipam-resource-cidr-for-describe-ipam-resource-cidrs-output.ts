@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { OverlapDetailForDescribeIpamResourceCidrsOutput } from './overlap-detail-for-describe-ipam-resource-cidrs-output';
  /**
  * 
  *
@@ -63,6 +64,12 @@ export interface IpamResourceCidrForDescribeIpamResourceCidrsOutput {
     ManagementStatus?: string;
 
     /**
+     * @type {Array<OverlapDetailForDescribeIpamResourceCidrsOutput>}
+     * @memberof IpamResourceCidrForDescribeIpamResourceCidrsOutput
+     */
+    OverlapDetails?: Array<OverlapDetailForDescribeIpamResourceCidrsOutput>;
+
+    /**
      * @type {string}
      * @memberof IpamResourceCidrForDescribeIpamResourceCidrsOutput
      */
@@ -85,6 +92,12 @@ export interface IpamResourceCidrForDescribeIpamResourceCidrsOutput {
      * @memberof IpamResourceCidrForDescribeIpamResourceCidrsOutput
      */
     ResourceName?: string;
+
+    /**
+     * @type {string}
+     * @memberof IpamResourceCidrForDescribeIpamResourceCidrsOutput
+     */
+    ResourceRegionId?: string;
 
     /**
      * @type {string}

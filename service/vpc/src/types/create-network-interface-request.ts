@@ -98,4 +98,22 @@ export interface CreateNetworkInterfaceRequest {
      * @memberof CreateNetworkInterfaceRequest
      */
     Tags?: Array<TagForCreateNetworkInterfaceInput>;
+
+    /**
+     * @type {number}
+     * @memberof CreateNetworkInterfaceRequest
+     */
+    TcpClosedAndTimeWaitTimeout?: number;
+
+    /**
+     * @type {number}
+     * @memberof CreateNetworkInterfaceRequest
+     */
+    TcpEstablishedTimeout?: number;
+
+    /**
+     * @type {number}
+     * @memberof CreateNetworkInterfaceRequest
+     */
+    UdpTimeout?: number;
 }

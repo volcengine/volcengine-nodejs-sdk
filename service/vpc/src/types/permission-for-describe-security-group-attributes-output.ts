@@ -90,6 +90,12 @@ export interface PermissionForDescribeSecurityGroupAttributesOutput {
      * @type {string}
      * @memberof PermissionForDescribeSecurityGroupAttributesOutput
      */
+    SecurityGroupRuleId?: string;
+
+    /**
+     * @type {string}
+     * @memberof PermissionForDescribeSecurityGroupAttributesOutput
+     */
     SourceGroupId?: string;
 
     /**

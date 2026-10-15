@@ -16,28 +16,36 @@ import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandO
 
 import { AddTagsToResourceRequest } from './types/index';
 import { AddTagsToResourceResponse } from './types/index';
+import { AllowAutoUseTopicRequest } from './types/index';
+import { AllowAutoUseTopicResponse } from './types/index';
 import { AssociateAllowListRequest } from './types/index';
 import { AssociateAllowListResponse } from './types/index';
 import { CreateAclRequest } from './types/index';
 import { CreateAclResponse } from './types/index';
+import { CreateAllowListRequest } from './types/index';
+import { CreateAllowListResponse } from './types/index';
 import { CreateGroupRequest } from './types/index';
 import { CreateGroupResponse } from './types/index';
-import { CreateMigrateSubTasksRequest } from './types/index';
-import { CreateMigrateSubTasksResponse } from './types/index';
+import { CreateInstanceRequest } from './types/index';
+import { CreateInstanceResponse } from './types/index';
 import { CreatePublicAddressRequest } from './types/index';
 import { CreatePublicAddressResponse } from './types/index';
+import { CreateTopicRequest } from './types/index';
+import { CreateTopicResponse } from './types/index';
 import { CreateUserRequest } from './types/index';
 import { CreateUserResponse } from './types/index';
 import { DeleteAclRequest } from './types/index';
 import { DeleteAclResponse } from './types/index';
 import { DeleteAllowListRequest } from './types/index';
 import { DeleteAllowListResponse } from './types/index';
+import { DeleteConsumedTopicOffsetsRequest } from './types/index';
+import { DeleteConsumedTopicOffsetsResponse } from './types/index';
 import { DeleteGroupRequest } from './types/index';
 import { DeleteGroupResponse } from './types/index';
 import { DeleteInstanceRequest } from './types/index';
 import { DeleteInstanceResponse } from './types/index';
-import { DeletePrivateDomainFromPublicRequest } from './types/index';
-import { DeletePrivateDomainFromPublicResponse } from './types/index';
+import { DeletePublicAddressRequest } from './types/index';
+import { DeletePublicAddressResponse } from './types/index';
 import { DeleteTopicRequest } from './types/index';
 import { DeleteTopicResponse } from './types/index';
 import { DeleteUserRequest } from './types/index';
@@ -50,12 +58,26 @@ import { DescribeAllowListsRequest } from './types/index';
 import { DescribeAllowListsResponse } from './types/index';
 import { DescribeAvailabilityZonesRequest } from './types/index';
 import { DescribeAvailabilityZonesResponse } from './types/index';
+import { DescribeConsumedPartitionsRequest } from './types/index';
+import { DescribeConsumedPartitionsResponse } from './types/index';
+import { DescribeConsumedTopicsRequest } from './types/index';
+import { DescribeConsumedTopicsResponse } from './types/index';
+import { DescribeGroupsRequest } from './types/index';
+import { DescribeGroupsResponse } from './types/index';
+import { DescribeInstanceDetailRequest } from './types/index';
+import { DescribeInstanceDetailResponse } from './types/index';
+import { DescribeInstancePriceInfoRequest } from './types/index';
+import { DescribeInstancePriceInfoResponse } from './types/index';
+import { DescribeInstancesRequest } from './types/index';
+import { DescribeInstancesResponse } from './types/index';
 import { DescribeRegionsRequest } from './types/index';
 import { DescribeRegionsResponse } from './types/index';
 import { DescribeTagsByResourceRequest } from './types/index';
 import { DescribeTagsByResourceResponse } from './types/index';
 import { DescribeTopicAccessPoliciesRequest } from './types/index';
 import { DescribeTopicAccessPoliciesResponse } from './types/index';
+import { DescribeTopicAuditInfoRequest } from './types/index';
+import { DescribeTopicAuditInfoResponse } from './types/index';
 import { DescribeTopicParametersRequest } from './types/index';
 import { DescribeTopicParametersResponse } from './types/index';
 import { DescribeTopicPartitionsRequest } from './types/index';
@@ -66,6 +88,8 @@ import { DescribeUsersRequest } from './types/index';
 import { DescribeUsersResponse } from './types/index';
 import { DisassociateAllowListRequest } from './types/index';
 import { DisassociateAllowListResponse } from './types/index';
+import { ImportGroupsRequest } from './types/index';
+import { ImportGroupsResponse } from './types/index';
 import { ModifyAllowListRequest } from './types/index';
 import { ModifyAllowListResponse } from './types/index';
 import { ModifyGroupRequest } from './types/index';
@@ -88,6 +112,8 @@ import { ModifyUserAuthorityRequest } from './types/index';
 import { ModifyUserAuthorityResponse } from './types/index';
 import { ModifyUserPasswordRequest } from './types/index';
 import { ModifyUserPasswordResponse } from './types/index';
+import { ProhibitAutoUseTopicRequest } from './types/index';
+import { ProhibitAutoUseTopicResponse } from './types/index';
 import { PublishPrivateDomainToPublicRequest } from './types/index';
 import { PublishPrivateDomainToPublicResponse } from './types/index';
 import { QueryMessageByTimestampRequest } from './types/index';
@@ -96,38 +122,54 @@ import { RemoveTagsFromResourceRequest } from './types/index';
 import { RemoveTagsFromResourceResponse } from './types/index';
 import { ResetConsumedOffsetsRequest } from './types/index';
 import { ResetConsumedOffsetsResponse } from './types/index';
-import { UpdateMigrateTaskStatusRequest } from './types/index';
-import { UpdateMigrateTaskStatusResponse } from './types/index';
+import { RestartInstanceRequest } from './types/index';
+import { RestartInstanceResponse } from './types/index';
+import { VerifyImportGroupsRequest } from './types/index';
+import { VerifyImportGroupsResponse } from './types/index';
+import { VerifyMigrateSubTasksRequest } from './types/index';
+import { VerifyMigrateSubTasksResponse } from './types/index';
 
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
 export type AddTagsToResourceCommandOutput = CommandOutput<AddTagsToResourceResponse>;
+export type AllowAutoUseTopicCommandOutput = CommandOutput<AllowAutoUseTopicResponse>;
 export type AssociateAllowListCommandOutput = CommandOutput<AssociateAllowListResponse>;
 export type CreateAclCommandOutput = CommandOutput<CreateAclResponse>;
+export type CreateAllowListCommandOutput = CommandOutput<CreateAllowListResponse>;
 export type CreateGroupCommandOutput = CommandOutput<CreateGroupResponse>;
-export type CreateMigrateSubTasksCommandOutput = CommandOutput<CreateMigrateSubTasksResponse>;
+export type CreateInstanceCommandOutput = CommandOutput<CreateInstanceResponse>;
 export type CreatePublicAddressCommandOutput = CommandOutput<CreatePublicAddressResponse>;
+export type CreateTopicCommandOutput = CommandOutput<CreateTopicResponse>;
 export type CreateUserCommandOutput = CommandOutput<CreateUserResponse>;
 export type DeleteAclCommandOutput = CommandOutput<DeleteAclResponse>;
 export type DeleteAllowListCommandOutput = CommandOutput<DeleteAllowListResponse>;
+export type DeleteConsumedTopicOffsetsCommandOutput = CommandOutput<DeleteConsumedTopicOffsetsResponse>;
 export type DeleteGroupCommandOutput = CommandOutput<DeleteGroupResponse>;
 export type DeleteInstanceCommandOutput = CommandOutput<DeleteInstanceResponse>;
-export type DeletePrivateDomainFromPublicCommandOutput = CommandOutput<DeletePrivateDomainFromPublicResponse>;
+export type DeletePublicAddressCommandOutput = CommandOutput<DeletePublicAddressResponse>;
 export type DeleteTopicCommandOutput = CommandOutput<DeleteTopicResponse>;
 export type DeleteUserCommandOutput = CommandOutput<DeleteUserResponse>;
 export type DescribeAclsCommandOutput = CommandOutput<DescribeAclsResponse>;
 export type DescribeAllowListDetailCommandOutput = CommandOutput<DescribeAllowListDetailResponse>;
 export type DescribeAllowListsCommandOutput = CommandOutput<DescribeAllowListsResponse>;
 export type DescribeAvailabilityZonesCommandOutput = CommandOutput<DescribeAvailabilityZonesResponse>;
+export type DescribeConsumedPartitionsCommandOutput = CommandOutput<DescribeConsumedPartitionsResponse>;
+export type DescribeConsumedTopicsCommandOutput = CommandOutput<DescribeConsumedTopicsResponse>;
+export type DescribeGroupsCommandOutput = CommandOutput<DescribeGroupsResponse>;
+export type DescribeInstanceDetailCommandOutput = CommandOutput<DescribeInstanceDetailResponse>;
+export type DescribeInstancePriceInfoCommandOutput = CommandOutput<DescribeInstancePriceInfoResponse>;
+export type DescribeInstancesCommandOutput = CommandOutput<DescribeInstancesResponse>;
 export type DescribeRegionsCommandOutput = CommandOutput<DescribeRegionsResponse>;
 export type DescribeTagsByResourceCommandOutput = CommandOutput<DescribeTagsByResourceResponse>;
 export type DescribeTopicAccessPoliciesCommandOutput = CommandOutput<DescribeTopicAccessPoliciesResponse>;
+export type DescribeTopicAuditInfoCommandOutput = CommandOutput<DescribeTopicAuditInfoResponse>;
 export type DescribeTopicParametersCommandOutput = CommandOutput<DescribeTopicParametersResponse>;
 export type DescribeTopicPartitionsCommandOutput = CommandOutput<DescribeTopicPartitionsResponse>;
 export type DescribeTopicsCommandOutput = CommandOutput<DescribeTopicsResponse>;
 export type DescribeUsersCommandOutput = CommandOutput<DescribeUsersResponse>;
 export type DisassociateAllowListCommandOutput = CommandOutput<DisassociateAllowListResponse>;
+export type ImportGroupsCommandOutput = CommandOutput<ImportGroupsResponse>;
 export type ModifyAllowListCommandOutput = CommandOutput<ModifyAllowListResponse>;
 export type ModifyGroupCommandOutput = CommandOutput<ModifyGroupResponse>;
 export type ModifyInstanceAttributesCommandOutput = CommandOutput<ModifyInstanceAttributesResponse>;
@@ -139,12 +181,14 @@ export type ModifyTopicAttributesCommandOutput = CommandOutput<ModifyTopicAttrib
 export type ModifyTopicParametersCommandOutput = CommandOutput<ModifyTopicParametersResponse>;
 export type ModifyUserAuthorityCommandOutput = CommandOutput<ModifyUserAuthorityResponse>;
 export type ModifyUserPasswordCommandOutput = CommandOutput<ModifyUserPasswordResponse>;
+export type ProhibitAutoUseTopicCommandOutput = CommandOutput<ProhibitAutoUseTopicResponse>;
 export type PublishPrivateDomainToPublicCommandOutput = CommandOutput<PublishPrivateDomainToPublicResponse>;
 export type QueryMessageByTimestampCommandOutput = CommandOutput<QueryMessageByTimestampResponse>;
 export type RemoveTagsFromResourceCommandOutput = CommandOutput<RemoveTagsFromResourceResponse>;
 export type ResetConsumedOffsetsCommandOutput = CommandOutput<ResetConsumedOffsetsResponse>;
-export type UpdateMigrateTaskStatusCommandOutput = CommandOutput<UpdateMigrateTaskStatusResponse>;
-
+export type RestartInstanceCommandOutput = CommandOutput<RestartInstanceResponse>;
+export type VerifyImportGroupsCommandOutput = CommandOutput<VerifyImportGroupsResponse>;
+export type VerifyMigrateSubTasksCommandOutput = CommandOutput<VerifyMigrateSubTasksResponse>;
 
 /**
  * KAFKAClient Service Client
@@ -172,6 +216,21 @@ export class AddTagsToResourceCommand extends Command<
   constructor(input: AddTagsToResourceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(AddTagsToResourceCommand.metaPath);
+  }
+}
+/**
+ * Command to AllowAutoUseTopic
+ */
+export class AllowAutoUseTopicCommand extends Command<
+  AllowAutoUseTopicRequest,
+  AllowAutoUseTopicCommandOutput,
+  'AllowAutoUseTopicCommand'
+> {
+  static readonly metaPath = '/AllowAutoUseTopic/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: AllowAutoUseTopicRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(AllowAutoUseTopicCommand.metaPath);
   }
 }
 /**
@@ -205,6 +264,21 @@ export class CreateAclCommand extends Command<
   }
 }
 /**
+ * Command to CreateAllowList
+ */
+export class CreateAllowListCommand extends Command<
+  CreateAllowListRequest,
+  CreateAllowListCommandOutput,
+  'CreateAllowListCommand'
+> {
+  static readonly metaPath = '/CreateAllowList/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: CreateAllowListRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateAllowListCommand.metaPath);
+  }
+}
+/**
  * Command to CreateGroup
  */
 export class CreateGroupCommand extends Command<
@@ -220,18 +294,18 @@ export class CreateGroupCommand extends Command<
   }
 }
 /**
- * Command to CreateMigrateSubTasks
+ * Command to CreateInstance
  */
-export class CreateMigrateSubTasksCommand extends Command<
-  CreateMigrateSubTasksRequest,
-  CreateMigrateSubTasksCommandOutput,
-  'CreateMigrateSubTasksCommand'
+export class CreateInstanceCommand extends Command<
+  CreateInstanceRequest,
+  CreateInstanceCommandOutput,
+  'CreateInstanceCommand'
 > {
-  static readonly metaPath = '/CreateMigrateSubTasks/2022-05-01/kafka/post/application_json/';
+  static readonly metaPath = '/CreateInstance/2022-05-01/kafka/post/application_json/';
 
-  constructor(input: CreateMigrateSubTasksRequest) {
+  constructor(input: CreateInstanceRequest) {
     super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(CreateMigrateSubTasksCommand.metaPath);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateInstanceCommand.metaPath);
   }
 }
 /**
@@ -247,6 +321,21 @@ export class CreatePublicAddressCommand extends Command<
   constructor(input: CreatePublicAddressRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreatePublicAddressCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateTopic
+ */
+export class CreateTopicCommand extends Command<
+  CreateTopicRequest,
+  CreateTopicCommandOutput,
+  'CreateTopicCommand'
+> {
+  static readonly metaPath = '/CreateTopic/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: CreateTopicRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateTopicCommand.metaPath);
   }
 }
 /**
@@ -295,6 +384,21 @@ export class DeleteAllowListCommand extends Command<
   }
 }
 /**
+ * Command to DeleteConsumedTopicOffsets
+ */
+export class DeleteConsumedTopicOffsetsCommand extends Command<
+  DeleteConsumedTopicOffsetsRequest,
+  DeleteConsumedTopicOffsetsCommandOutput,
+  'DeleteConsumedTopicOffsetsCommand'
+> {
+  static readonly metaPath = '/DeleteConsumedTopicOffsets/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: DeleteConsumedTopicOffsetsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteConsumedTopicOffsetsCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteGroup
  */
 export class DeleteGroupCommand extends Command<
@@ -325,18 +429,18 @@ export class DeleteInstanceCommand extends Command<
   }
 }
 /**
- * Command to DeletePrivateDomainFromPublic
+ * Command to DeletePublicAddress
  */
-export class DeletePrivateDomainFromPublicCommand extends Command<
-  DeletePrivateDomainFromPublicRequest,
-  DeletePrivateDomainFromPublicCommandOutput,
-  'DeletePrivateDomainFromPublicCommand'
+export class DeletePublicAddressCommand extends Command<
+  DeletePublicAddressRequest,
+  DeletePublicAddressCommandOutput,
+  'DeletePublicAddressCommand'
 > {
-  static readonly metaPath = '/DeletePrivateDomainFromPublic/2022-05-01/kafka/post/application_json/';
+  static readonly metaPath = '/DeletePublicAddress/2022-05-01/kafka/post/application_json/';
 
-  constructor(input: DeletePrivateDomainFromPublicRequest) {
+  constructor(input: DeletePublicAddressRequest) {
     super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(DeletePrivateDomainFromPublicCommand.metaPath);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeletePublicAddressCommand.metaPath);
   }
 }
 /**
@@ -430,6 +534,96 @@ export class DescribeAvailabilityZonesCommand extends Command<
   }
 }
 /**
+ * Command to DescribeConsumedPartitions
+ */
+export class DescribeConsumedPartitionsCommand extends Command<
+  DescribeConsumedPartitionsRequest,
+  DescribeConsumedPartitionsCommandOutput,
+  'DescribeConsumedPartitionsCommand'
+> {
+  static readonly metaPath = '/DescribeConsumedPartitions/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: DescribeConsumedPartitionsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeConsumedPartitionsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeConsumedTopics
+ */
+export class DescribeConsumedTopicsCommand extends Command<
+  DescribeConsumedTopicsRequest,
+  DescribeConsumedTopicsCommandOutput,
+  'DescribeConsumedTopicsCommand'
+> {
+  static readonly metaPath = '/DescribeConsumedTopics/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: DescribeConsumedTopicsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeConsumedTopicsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeGroups
+ */
+export class DescribeGroupsCommand extends Command<
+  DescribeGroupsRequest,
+  DescribeGroupsCommandOutput,
+  'DescribeGroupsCommand'
+> {
+  static readonly metaPath = '/DescribeGroups/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: DescribeGroupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeGroupsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeInstanceDetail
+ */
+export class DescribeInstanceDetailCommand extends Command<
+  DescribeInstanceDetailRequest,
+  DescribeInstanceDetailCommandOutput,
+  'DescribeInstanceDetailCommand'
+> {
+  static readonly metaPath = '/DescribeInstanceDetail/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: DescribeInstanceDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeInstanceDetailCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeInstancePriceInfo
+ */
+export class DescribeInstancePriceInfoCommand extends Command<
+  DescribeInstancePriceInfoRequest,
+  DescribeInstancePriceInfoCommandOutput,
+  'DescribeInstancePriceInfoCommand'
+> {
+  static readonly metaPath = '/DescribeInstancePriceInfo/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: DescribeInstancePriceInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeInstancePriceInfoCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeInstances
+ */
+export class DescribeInstancesCommand extends Command<
+  DescribeInstancesRequest,
+  DescribeInstancesCommandOutput,
+  'DescribeInstancesCommand'
+> {
+  static readonly metaPath = '/DescribeInstances/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: DescribeInstancesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeInstancesCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeRegions
  */
 export class DescribeRegionsCommand extends Command<
@@ -472,6 +666,21 @@ export class DescribeTopicAccessPoliciesCommand extends Command<
   constructor(input: DescribeTopicAccessPoliciesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeTopicAccessPoliciesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeTopicAuditInfo
+ */
+export class DescribeTopicAuditInfoCommand extends Command<
+  DescribeTopicAuditInfoRequest,
+  DescribeTopicAuditInfoCommandOutput,
+  'DescribeTopicAuditInfoCommand'
+> {
+  static readonly metaPath = '/DescribeTopicAuditInfo/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: DescribeTopicAuditInfoRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeTopicAuditInfoCommand.metaPath);
   }
 }
 /**
@@ -547,6 +756,21 @@ export class DisassociateAllowListCommand extends Command<
   constructor(input: DisassociateAllowListRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DisassociateAllowListCommand.metaPath);
+  }
+}
+/**
+ * Command to ImportGroups
+ */
+export class ImportGroupsCommand extends Command<
+  ImportGroupsRequest,
+  ImportGroupsCommandOutput,
+  'ImportGroupsCommand'
+> {
+  static readonly metaPath = '/ImportGroups/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: ImportGroupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ImportGroupsCommand.metaPath);
   }
 }
 /**
@@ -715,6 +939,21 @@ export class ModifyUserPasswordCommand extends Command<
   }
 }
 /**
+ * Command to ProhibitAutoUseTopic
+ */
+export class ProhibitAutoUseTopicCommand extends Command<
+  ProhibitAutoUseTopicRequest,
+  ProhibitAutoUseTopicCommandOutput,
+  'ProhibitAutoUseTopicCommand'
+> {
+  static readonly metaPath = '/ProhibitAutoUseTopic/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: ProhibitAutoUseTopicRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ProhibitAutoUseTopicCommand.metaPath);
+  }
+}
+/**
  * Command to PublishPrivateDomainToPublic
  */
 export class PublishPrivateDomainToPublicCommand extends Command<
@@ -775,49 +1014,91 @@ export class ResetConsumedOffsetsCommand extends Command<
   }
 }
 /**
- * Command to UpdateMigrateTaskStatus
+ * Command to RestartInstance
  */
-export class UpdateMigrateTaskStatusCommand extends Command<
-  UpdateMigrateTaskStatusRequest,
-  UpdateMigrateTaskStatusCommandOutput,
-  'UpdateMigrateTaskStatusCommand'
+export class RestartInstanceCommand extends Command<
+  RestartInstanceRequest,
+  RestartInstanceCommandOutput,
+  'RestartInstanceCommand'
 > {
-  static readonly metaPath = '/UpdateMigrateTaskStatus/2022-05-01/kafka/post/application_json/';
+  static readonly metaPath = '/RestartInstance/2022-05-01/kafka/post/application_json/';
 
-  constructor(input: UpdateMigrateTaskStatusRequest) {
+  constructor(input: RestartInstanceRequest) {
     super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(UpdateMigrateTaskStatusCommand.metaPath);
+    this.requestConfig = buildRequestConfigFromMetaPath(RestartInstanceCommand.metaPath);
+  }
+}
+/**
+ * Command to VerifyImportGroups
+ */
+export class VerifyImportGroupsCommand extends Command<
+  VerifyImportGroupsRequest,
+  VerifyImportGroupsCommandOutput,
+  'VerifyImportGroupsCommand'
+> {
+  static readonly metaPath = '/VerifyImportGroups/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: VerifyImportGroupsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VerifyImportGroupsCommand.metaPath);
+  }
+}
+/**
+ * Command to VerifyMigrateSubTasks
+ */
+export class VerifyMigrateSubTasksCommand extends Command<
+  VerifyMigrateSubTasksRequest,
+  VerifyMigrateSubTasksCommandOutput,
+  'VerifyMigrateSubTasksCommand'
+> {
+  static readonly metaPath = '/VerifyMigrateSubTasks/2022-05-01/kafka/post/application_json/';
+
+  constructor(input: VerifyMigrateSubTasksRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(VerifyMigrateSubTasksCommand.metaPath);
   }
 }
 
 export default {
   KAFKAClient,
   AddTagsToResourceCommand,
+  AllowAutoUseTopicCommand,
   AssociateAllowListCommand,
   CreateAclCommand,
+  CreateAllowListCommand,
   CreateGroupCommand,
-  CreateMigrateSubTasksCommand,
+  CreateInstanceCommand,
   CreatePublicAddressCommand,
+  CreateTopicCommand,
   CreateUserCommand,
   DeleteAclCommand,
   DeleteAllowListCommand,
+  DeleteConsumedTopicOffsetsCommand,
   DeleteGroupCommand,
   DeleteInstanceCommand,
-  DeletePrivateDomainFromPublicCommand,
+  DeletePublicAddressCommand,
   DeleteTopicCommand,
   DeleteUserCommand,
   DescribeAclsCommand,
   DescribeAllowListDetailCommand,
   DescribeAllowListsCommand,
   DescribeAvailabilityZonesCommand,
+  DescribeConsumedPartitionsCommand,
+  DescribeConsumedTopicsCommand,
+  DescribeGroupsCommand,
+  DescribeInstanceDetailCommand,
+  DescribeInstancePriceInfoCommand,
+  DescribeInstancesCommand,
   DescribeRegionsCommand,
   DescribeTagsByResourceCommand,
   DescribeTopicAccessPoliciesCommand,
+  DescribeTopicAuditInfoCommand,
   DescribeTopicParametersCommand,
   DescribeTopicPartitionsCommand,
   DescribeTopicsCommand,
   DescribeUsersCommand,
   DisassociateAllowListCommand,
+  ImportGroupsCommand,
   ModifyAllowListCommand,
   ModifyGroupCommand,
   ModifyInstanceAttributesCommand,
@@ -829,9 +1110,12 @@ export default {
   ModifyTopicParametersCommand,
   ModifyUserAuthorityCommand,
   ModifyUserPasswordCommand,
+  ProhibitAutoUseTopicCommand,
   PublishPrivateDomainToPublicCommand,
   QueryMessageByTimestampCommand,
   RemoveTagsFromResourceCommand,
   ResetConsumedOffsetsCommand,
-  UpdateMigrateTaskStatusCommand,
+  RestartInstanceCommand,
+  VerifyImportGroupsCommand,
+  VerifyMigrateSubTasksCommand,
 };
