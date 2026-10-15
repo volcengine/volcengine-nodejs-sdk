@@ -50,6 +50,26 @@ const client = new ECSClient({
 });
 ```
 
+### STS Provider TLS 配置
+
+`StsAssumeRoleProvider`、`OidcCredentialProvider`、`SamlCredentialProvider` 还支持以下可选 TLS 配置：
+
+- `caFile`：自定义 CA 证书文件路径
+- `insecureSkipVerify`：是否跳过 TLS 证书校验，默认 `false`，仅限联调，生产禁用
+
+```typescript
+import { StsAssumeRoleProvider } from "@volcengine/sdk-core";
+
+const credentialProvider = new StsAssumeRoleProvider({
+  accessKeyId: "ASSUME_ROLE_CALLER_AK",
+  secretAccessKey: "ASSUME_ROLE_CALLER_SK",
+  roleTrn: "trn:iam::2110400000:role/role123",
+  region: "cn-beijing",
+  caFile: "/path/to/custom-ca.pem",
+  insecureSkipVerify: false,
+});
+```
+
 ---
 
 [← Endpoint 配置](2-Endpoint-zh.md) | Transport [(English)](3-Transport.md) | [代理配置 →](4-Proxy-zh.md)

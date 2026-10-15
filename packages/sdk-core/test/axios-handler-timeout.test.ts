@@ -303,6 +303,196 @@ describe("AxiosRequestHandler - connectTimeout & readTimeout（修复后）", ()
     });
   });
 
+  describe("request() 总超时兜底", () => {
+    beforeEach(() => {
+      jest.useFakeTimers();
+    });
+
+    afterEach(() => {
+      jest.useRealTimers();
+    });
+
+    test("应在构造器 readTimeout 到期时中断未完成请求", async () => {
+      const handler = new AxiosRequestHandler(
+        { readTimeout: 100 },
+        mockClientFactory
+      );
+      (mockAxiosInstance.request as jest.Mock).mockImplementation(
+        () => new Promise(() => {})
+      );
+
+      const promise = handler.request({
+        url: "https://example.com/api",
+        method: "GET",
+        headers: {},
+        data: undefined,
+      });
+
+      jest.advanceTimersByTime(100);
+
+      await expect(promise).rejects.toMatchObject({
+        message: "timeout of 100ms exceeded",
+        code: "ECONNABORTED",
+        timeout: 100,
+      });
+    });
+
+    test("request() 中的 timeout 应覆盖构造器 readTimeout 的总超时", async () => {
+      const handler = new AxiosRequestHandler(
+        { readTimeout: 10000 },
+        mockClientFactory
+      );
+      (mockAxiosInstance.request as jest.Mock).mockImplementation(
+        () => new Promise(() => {})
+      );
+
+      const promise = handler.request({
+        url: "https://example.com/api",
+        method: "GET",
+        headers: {},
+        data: undefined,
+        timeout: 50,
+      });
+
+      jest.advanceTimersByTime(50);
+
+      await expect(promise).rejects.toMatchObject({
+        message: "timeout of 50ms exceeded",
+        code: "ECONNABORTED",
+        timeout: 50,
+      });
+    });
+
+    test("构造器 timeout 应作为 readTimeout 的回退并驱动总超时", async () => {
+      const handler = new AxiosRequestHandler(
+        { timeout: 80 },
+        mockClientFactory
+      );
+      (mockAxiosInstance.request as jest.Mock).mockImplementation(
+        () => new Promise(() => {})
+      );
+
+      const promise = handler.request({
+        url: "https://example.com/api",
+        method: "GET",
+        headers: {},
+        data: undefined,
+      });
+
+      jest.advanceTimersByTime(80);
+
+      await expect(promise).rejects.toMatchObject({
+        message: "timeout of 80ms exceeded",
+        code: "ECONNABORTED",
+        timeout: 80,
+      });
+    });
+
+    test("配置代理时也应启用总超时兜底", async () => {
+      const handler = new AxiosRequestHandler(
+        {
+          proxyUrl: "https://127.0.0.1:8443",
+          readTimeout: 120,
+        },
+        mockClientFactory
+      );
+      (mockAxiosInstance.request as jest.Mock).mockImplementation(
+        () => new Promise(() => {})
+      );
+
+      const constructorConfig = capturedAxiosConfig;
+      expect(constructorConfig.proxy).toEqual({
+        protocol: "https",
+        host: "127.0.0.1",
+        port: 8443,
+      });
+
+      const promise = handler.request({
+        url: "https://example.com/api",
+        method: "GET",
+        headers: {},
+        data: undefined,
+      });
+
+      jest.advanceTimersByTime(120);
+
+      await expect(promise).rejects.toMatchObject({
+        message: "timeout of 120ms exceeded",
+        code: "ECONNABORTED",
+        timeout: 120,
+      });
+    });
+
+    test("总超时触发时应优先返回 timeout 错误而不是 axios cancel 错误", async () => {
+      const handler = new AxiosRequestHandler(
+        { readTimeout: 100 },
+        mockClientFactory
+      );
+      (mockAxiosInstance.request as jest.Mock).mockImplementation(
+        (requestConfig: AxiosRequestConfig) =>
+          new Promise((_resolve, reject) => {
+            const signal = requestConfig.signal as AbortSignal;
+            signal.addEventListener("abort", () => {
+              const cancelError = new Error("canceled");
+              (cancelError as any).code = "ERR_CANCELED";
+              reject(cancelError);
+            });
+          })
+      );
+
+      const promise = handler.request({
+        url: "https://example.com/api",
+        method: "GET",
+        headers: {},
+        data: undefined,
+      });
+
+      jest.advanceTimersByTime(100);
+
+      await expect(promise).rejects.toMatchObject({
+        message: "timeout of 100ms exceeded",
+        code: "ECONNABORTED",
+        timeout: 100,
+      });
+    });
+
+    test("用户传入的 signal abort 时应同步取消内部 signal", async () => {
+      jest.useRealTimers();
+      const handler = new AxiosRequestHandler(
+        { readTimeout: 10000 },
+        mockClientFactory
+      );
+      (mockAxiosInstance.request as jest.Mock).mockImplementation(
+        (requestConfig: AxiosRequestConfig) =>
+          new Promise((_resolve, reject) => {
+            const signal = requestConfig.signal as AbortSignal;
+            signal.addEventListener("abort", () => {
+              reject(new Error("user canceled"));
+            });
+          })
+      );
+
+      const controller = new AbortController();
+      const promise = handler.request({
+        url: "https://example.com/api",
+        method: "GET",
+        headers: {},
+        data: undefined,
+        signal: controller.signal,
+      });
+
+      const requestCall = (mockAxiosInstance.request as jest.Mock).mock
+        .calls[0][0];
+      expect(requestCall.signal).not.toBe(controller.signal);
+      expect(requestCall.signal.aborted).toBe(false);
+
+      controller.abort();
+
+      await expect(promise).rejects.toThrow("user canceled");
+      expect(requestCall.signal.aborted).toBe(true);
+    });
+  });
+
   // =========================================================================
   // 边界值和异常输入
   // =========================================================================

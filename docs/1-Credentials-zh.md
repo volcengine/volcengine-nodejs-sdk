@@ -104,6 +104,9 @@ const credentialProvider = new StsAssumeRoleProvider({
   policy:
     '{"Statement":[{"Effect":"Allow","Action":["iam:ListUsers"],"Resource":["*"]}]}',
   tags: [{ Key: "project", Value: "sdk-test" }],
+  proxyUrl: "http://127.0.0.1:8080", // 可选：STS 请求使用的代理地址
+  caFile: "/path/to/custom-ca.pem", // 可选：自定义 CA 证书文件路径
+  insecureSkipVerify: false, // 可选：是否跳过 TLS 证书校验，默认 false，仅限联调，生产禁用
 });
 
 const client = new ECSClient({
@@ -145,6 +148,9 @@ const credentialProvider = new OidcCredentialProvider({
   host: "sts.volcengineapi.com",
   policy:
     '{"Statement":[{"Effect":"Allow","Action":["ecs:Describe*"],"Resource":["*"]}]}',
+  proxyUrl: "http://127.0.0.1:8080", // 可选：STS 请求使用的代理地址
+  caFile: "/path/to/custom-ca.pem", // 可选：自定义 CA 证书文件路径
+  insecureSkipVerify: false, // 可选：是否跳过 TLS 证书校验，默认 false，仅限联调，生产禁用
 });
 
 // 或从环境变量自动读取（无参构造）
@@ -191,6 +197,9 @@ const credentialProvider = new SamlCredentialProvider({
   host: "sts.volcengineapi.com",
   policy:
     '{"Statement":[{"Effect":"Allow","Action":["ecs:Describe*"],"Resource":["*"]}]}',
+  proxyUrl: "http://127.0.0.1:8080", // 可选：STS 请求使用的代理地址
+  caFile: "/path/to/custom-ca.pem", // 可选：自定义 CA 证书文件路径
+  insecureSkipVerify: false, // 可选：是否跳过 TLS 证书校验，默认 false，仅限联调，生产禁用
 });
 
 // 或从环境变量自动读取（无参构造）

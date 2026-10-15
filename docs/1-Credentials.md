@@ -104,6 +104,9 @@ const credentialProvider = new StsAssumeRoleProvider({
   policy:
     '{"Statement":[{"Effect":"Allow","Action":["iam:ListUsers"],"Resource":["*"]}]}',
   tags: [{ Key: "project", Value: "sdk-test" }],
+  proxyUrl: "http://127.0.0.1:8080", // Optional: proxy address used for STS requests
+  caFile: "/path/to/custom-ca.pem", // Optional: path to a custom CA certificate file
+  insecureSkipVerify: false, // Optional: whether to skip TLS certificate verification, default false, for debugging only, do not use in production
 });
 
 const client = new ECSClient({
@@ -145,6 +148,9 @@ const credentialProvider = new OidcCredentialProvider({
   host: "sts.volcengineapi.com",
   policy:
     '{"Statement":[{"Effect":"Allow","Action":["ecs:Describe*"],"Resource":["*"]}]}',
+  proxyUrl: "http://127.0.0.1:8080", // Optional: proxy address used for STS requests
+  caFile: "/path/to/custom-ca.pem", // Optional: path to a custom CA certificate file
+  insecureSkipVerify: false, // Optional: whether to skip TLS certificate verification, default false, for debugging only, do not use in production
 });
 
 // Or auto-read from environment variables (no-arg constructor)
@@ -191,6 +197,9 @@ const credentialProvider = new SamlCredentialProvider({
   host: "sts.volcengineapi.com",
   policy:
     '{"Statement":[{"Effect":"Allow","Action":["ecs:Describe*"],"Resource":["*"]}]}',
+  proxyUrl: "http://127.0.0.1:8080", // Optional: proxy address used for STS requests
+  caFile: "/path/to/custom-ca.pem", // Optional: path to a custom CA certificate file
+  insecureSkipVerify: false, // Optional: whether to skip TLS certificate verification, default false, for debugging only, do not use in production
 });
 
 // Or auto-read from environment variables (no-arg constructor)

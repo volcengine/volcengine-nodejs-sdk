@@ -63,7 +63,13 @@ export interface AssumeRoleParams {
   tags?: AssumeRoleRequest["Tags"];
 }
 
-export interface StsAssumeRoleParams {
+export interface StsProxyTlsParams {
+  proxyUrl?: string;
+  caFile?: string;
+  insecureSkipVerify?: boolean;
+}
+
+export interface StsAssumeRoleParams extends StsProxyTlsParams {
   accessKeyId: string;
   secretAccessKey: string;
   roleTrn: string;
@@ -76,7 +82,7 @@ export interface StsAssumeRoleParams {
   tags?: AssumeRoleRequest["Tags"];
 }
 
-export interface AssumeRoleWithOIDCParams {
+export interface AssumeRoleWithOIDCParams extends StsProxyTlsParams {
   roleTrn: string;
   roleSessionName?: string;
   oidcTokenFile: string;
@@ -87,7 +93,7 @@ export interface AssumeRoleWithOIDCParams {
   policy?: string;
 }
 
-export interface AssumeRoleWithSAMLParams {
+export interface AssumeRoleWithSAMLParams extends StsProxyTlsParams {
   roleTrn: string;
   accountId: string;
   samlProviderTrn: string;
@@ -123,6 +129,7 @@ export interface HttpOptions {
     host: string;
     port: number;
   };
+  proxyUrl?: string;
   /**
    * HTTPS 代理配置（例如用于忽略 SSL 验证）
    * 在 axios 中对应 httpsAgent 配置
@@ -133,6 +140,7 @@ export interface HttpOptions {
    * 是否忽略 SSL 验证错误
    */
   ignoreSSL?: boolean;
+  caFile?: string;
   pool?: {
     keepAlive?: boolean; // 开启
     keepAliveMsecs?: number; // 时间

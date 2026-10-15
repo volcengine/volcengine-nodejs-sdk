@@ -3,6 +3,7 @@ import { randomUUID } from "crypto";
 import type { CredentialValue, Provider } from "./types";
 import type { AssumeRoleWithOIDCParams } from "../types/types";
 import { loadEnv } from "../utils/env";
+import { assertCaFileReadable, buildStsHttpOptions } from "../utils/proxy";
 
 // 缓存类型定义
 interface CredentialsCache {
@@ -24,8 +25,10 @@ const DEFAULT_EXPIRE_BUFFER_MS = 60_000;
 
 // 生成缓存键的函数
 function generateCacheKey(params: AssumeRoleWithOIDCParams): string {
-  const { roleTrn, oidcTokenFile, policy } = params || {};
-  return `${roleTrn}-${oidcTokenFile}-${policy ?? ""}`;
+  const { roleTrn, oidcTokenFile, policy, host, proxyUrl, caFile } =
+    params || {};
+  const insecureSkipVerify = params?.insecureSkipVerify ? "1" : "0";
+  return `${roleTrn}-${oidcTokenFile}-${policy ?? ""}-${host ?? ""}-${proxyUrl ?? ""}-${caFile ?? ""}-${insecureSkipVerify}`;
 }
 
 /**
@@ -91,6 +94,8 @@ export class OidcCredentialProvider implements Provider {
   }
 
   async resolveCredentials(): Promise<CredentialValue> {
+    assertCaFileReadable(this.params.caFile, this.providerName);
+
     // 生成缓存键
     const cacheKey = generateCacheKey(this.params);
     const now = Date.now();
@@ -121,6 +126,11 @@ export class OidcCredentialProvider implements Provider {
           host: this.params.host || "sts.volcengineapi.com",
           protocol: this.params.protocol || "https",
           _jumpCredential: true,
+          httpOptions: buildStsHttpOptions({
+            proxyUrl: this.params.proxyUrl,
+            caFile: this.params.caFile,
+            insecureSkipVerify: this.params.insecureSkipVerify,
+          }),
         });
 
         // 读取 OIDC Token 文件内容（异步读取，避免阻塞事件循环）

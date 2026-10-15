@@ -1,3 +1,4 @@
+import fs from "fs";
 import { SamlCredentialProvider } from "../../src/credentials/SamlCredentialProvider";
 
 // Mock the dynamic import of stsClient
@@ -50,9 +51,18 @@ function buildMockResponse() {
 }
 
 describe("SamlCredentialProvider", () => {
+  let readFileSyncSpy: jest.SpyInstance;
+
   beforeEach(() => {
     // mockReset clears both call history AND accumulated one-time implementations
     mockSend.mockReset();
+    readFileSyncSpy = jest
+      .spyOn(fs, "readFileSync")
+      .mockImplementation(() => "mock-ca");
+  });
+
+  afterEach(() => {
+    readFileSyncSpy.mockRestore();
   });
 
   describe("constructor validation", () => {
@@ -124,6 +134,29 @@ describe("SamlCredentialProvider", () => {
 
       expect(c1).toBe(c2);
       expect(mockSend).toHaveBeenCalledTimes(1);
+    });
+
+    it("should validate caFile before returning cached credentials", async () => {
+      mockSend.mockResolvedValueOnce(buildMockResponse());
+
+      const provider = new SamlCredentialProvider({
+        ...makeParams("ca-file-cache-test"),
+        caFile: "/path/to/custom-ca.pem",
+      });
+
+      await provider.resolveCredentials();
+
+      readFileSyncSpy.mockImplementationOnce(() => {
+        const err = new Error("ENOENT: no such file or directory");
+        (err as NodeJS.ErrnoException).code = "ENOENT";
+        throw err;
+      });
+
+      await expect(provider.resolveCredentials()).rejects.toThrow(
+        "SamlCredentialProvider: caFile is not readable",
+      );
+      expect(mockSend).toHaveBeenCalledTimes(1);
+      expect(readFileSyncSpy).toHaveBeenCalledTimes(2);
     });
 
     it("should merge concurrent requests", async () => {
