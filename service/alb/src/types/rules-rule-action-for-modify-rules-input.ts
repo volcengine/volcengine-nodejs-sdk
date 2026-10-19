@@ -15,7 +15,9 @@
 import { ConvertForwardGroupConfigForModifyRulesInput } from './convert-forward-group-config-for-modify-rules-input';
 import { ConvertRedirectConfigForModifyRulesInput } from './convert-redirect-config-for-modify-rules-input';
 import { ConvertRewriteConfigForModifyRulesInput } from './convert-rewrite-config-for-modify-rules-input';
+import { CorsConfigForModifyRulesInput } from './cors-config-for-modify-rules-input';
 import { FixedResponseConfigForModifyRulesInput } from './fixed-response-config-for-modify-rules-input';
+import { InsertHeaderConfigForModifyRulesInput } from './insert-header-config-for-modify-rules-input';
 import { TrafficLimitConfigForModifyRulesInput } from './traffic-limit-config-for-modify-rules-input';
  /**
  * 
@@ -24,6 +26,12 @@ import { TrafficLimitConfigForModifyRulesInput } from './traffic-limit-config-fo
  * @interface RulesRuleActionForModifyRulesInput
  */
 export interface RulesRuleActionForModifyRulesInput {
+
+    /**
+     * @type {CorsConfigForModifyRulesInput}
+     * @memberof RulesRuleActionForModifyRulesInput
+     */
+    CorsConfig?: CorsConfigForModifyRulesInput;
 
     /**
      * @type {FixedResponseConfigForModifyRulesInput}
@@ -36,6 +44,12 @@ export interface RulesRuleActionForModifyRulesInput {
      * @memberof RulesRuleActionForModifyRulesInput
      */
     ForwardGroupConfig?: ConvertForwardGroupConfigForModifyRulesInput;
+
+    /**
+     * @type {InsertHeaderConfigForModifyRulesInput}
+     * @memberof RulesRuleActionForModifyRulesInput
+     */
+    InsertHeaderConfig?: InsertHeaderConfigForModifyRulesInput;
 
     /**
      * @type {ConvertRedirectConfigForModifyRulesInput}

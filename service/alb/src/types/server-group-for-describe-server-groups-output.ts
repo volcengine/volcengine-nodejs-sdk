@@ -13,6 +13,7 @@
  */
 
 import { HealthCheckForDescribeServerGroupsOutput } from './health-check-for-describe-server-groups-output';
+import { SlowStartConfigForDescribeServerGroupsOutput } from './slow-start-config-for-describe-server-groups-output';
 import { StickySessionConfigForDescribeServerGroupsOutput } from './sticky-session-config-for-describe-server-groups-output';
 import { TagForDescribeServerGroupsOutput } from './tag-for-describe-server-groups-output';
  /**
@@ -100,6 +101,12 @@ export interface ServerGroupForDescribeServerGroupsOutput {
      * @memberof ServerGroupForDescribeServerGroupsOutput
      */
     ServerGroupType?: string;
+
+    /**
+     * @type {SlowStartConfigForDescribeServerGroupsOutput}
+     * @memberof ServerGroupForDescribeServerGroupsOutput
+     */
+    SlowStartConfig?: SlowStartConfigForDescribeServerGroupsOutput;
 
     /**
      * @type {string}

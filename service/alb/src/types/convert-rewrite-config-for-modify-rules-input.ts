@@ -24,5 +24,11 @@ export interface ConvertRewriteConfigForModifyRulesInput {
      * @type {string}
      * @memberof ConvertRewriteConfigForModifyRulesInput
      */
+    Host?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertRewriteConfigForModifyRulesInput
+     */
     Path?: string;
 }

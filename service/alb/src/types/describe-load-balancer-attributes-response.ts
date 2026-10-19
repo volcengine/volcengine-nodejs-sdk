@@ -44,6 +44,12 @@ export interface DescribeLoadBalancerAttributesResponse {
      * @type {string}
      * @memberof DescribeLoadBalancerAttributesResponse
      */
+    ArkClawEnabled?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeLoadBalancerAttributesResponse
+     */
     BusinessStatus?: string;
 
     /**
@@ -197,10 +203,22 @@ export interface DescribeLoadBalancerAttributesResponse {
     RequestId?: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof DescribeLoadBalancerAttributesResponse
+     */
+    SecurityGroupIds?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof DescribeLoadBalancerAttributesResponse
      */
     SniAutoMatch?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeLoadBalancerAttributesResponse
+     */
+    SpaceNetworkId?: string;
 
     /**
      * @type {string}

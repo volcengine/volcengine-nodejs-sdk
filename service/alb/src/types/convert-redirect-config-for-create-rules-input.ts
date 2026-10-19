@@ -49,4 +49,10 @@ export interface ConvertRedirectConfigForCreateRulesInput {
      * @memberof ConvertRedirectConfigForCreateRulesInput
      */
     Protocol?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertRedirectConfigForCreateRulesInput
+     */
+    _Query?: string;
 }

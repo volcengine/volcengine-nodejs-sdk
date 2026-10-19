@@ -59,6 +59,12 @@ export interface LoadBalancerAddressForDescribeLoadBalancersOutput {
     EniIpv6Address?: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof LoadBalancerAddressForDescribeLoadBalancersOutput
+     */
+    Ipv4LocalAddresses?: Array<string>;
+
+    /**
      * @type {Ipv6EipForDescribeLoadBalancersOutput}
      * @memberof LoadBalancerAddressForDescribeLoadBalancersOutput
      */
@@ -69,4 +75,10 @@ export interface LoadBalancerAddressForDescribeLoadBalancersOutput {
      * @memberof LoadBalancerAddressForDescribeLoadBalancersOutput
      */
     Ipv6EipId?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof LoadBalancerAddressForDescribeLoadBalancersOutput
+     */
+    Ipv6LocalAddresses?: Array<string>;
 }
