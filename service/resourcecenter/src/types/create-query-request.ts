@@ -24,7 +24,7 @@ export interface CreateQueryRequest {
      * @type {string}
      * @memberof CreateQueryRequest
      */
-    Description: string;
+    Description?: string;
 
     /**
      * @type {string}
