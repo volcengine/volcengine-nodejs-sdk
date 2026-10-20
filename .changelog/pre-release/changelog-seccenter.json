@@ -1,11 +1,9 @@
 {
   "actions": [
-    "ListClustersAndVarmorApps",
-    "GetCntrQuota",
-    "GetTenantStatus",
-    "ListManagedAccounts"
+    "GetBaselineCheckConfig",
+    "AddBaselineCheckConfig"
   ],
-  "description": "SECCENTER: 新增 GetCntrQuota, GetTenantStatus, ListManagedAccounts；修改 ListClustersAndVarmorApps",
+  "description": "SECCENTER: 新增 GetBaselineCheckConfig；修改 AddBaselineCheckConfig",
   "modules": "service/seccenter",
-  "type": "breaking-change"
+  "type": "feature"
 }
