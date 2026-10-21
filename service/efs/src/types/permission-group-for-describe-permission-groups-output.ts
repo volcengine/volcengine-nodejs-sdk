@@ -94,7 +94,6 @@ export interface PermissionGroupForDescribePermissionGroupsOutput {
  * @enum {string}
  */
 export enum PermissionGroupForDescribePermissionGroupsOutputStatusEnum {
-    Unknown = 'Unknown',
     Creating = 'Creating',
     Available = 'Available',
     Updating = 'Updating',

@@ -116,7 +116,6 @@ export interface MountPointForDescribeMountPointsOutput {
  * @enum {string}
  */
 export enum MountPointForDescribeMountPointsOutputStatusEnum {
-    Unknown = 'Unknown',
     Creating = 'Creating',
     CreateError = 'CreateError',
     Running = 'Running',

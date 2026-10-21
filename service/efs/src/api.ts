@@ -14,12 +14,20 @@
 
 import { Client, ClientConfig, Command, buildRequestConfigFromMetaPath, CommandOutput } from '@volcengine/sdk-core';
 
+import { CancelDataFlowTaskRequest } from './types/index';
+import { CancelDataFlowTaskResponse } from './types/index';
 import { CheckDirRequest } from './types/index';
 import { CheckDirResponse } from './types/index';
 import { CreateAccessPointRequest } from './types/index';
 import { CreateAccessPointResponse } from './types/index';
+import { CreateDataFlowPolicyRequest } from './types/index';
+import { CreateDataFlowPolicyResponse } from './types/index';
+import { CreateDataFlowTaskRequest } from './types/index';
+import { CreateDataFlowTaskResponse } from './types/index';
 import { CreateDirRequest } from './types/index';
 import { CreateDirResponse } from './types/index';
+import { CreateFilePreSignedUrlRequest } from './types/index';
+import { CreateFilePreSignedUrlResponse } from './types/index';
 import { CreateFileSystemRequest } from './types/index';
 import { CreateFileSystemResponse } from './types/index';
 import { CreateMountPointRequest } from './types/index';
@@ -32,6 +40,10 @@ import { CreateQuotaRequest } from './types/index';
 import { CreateQuotaResponse } from './types/index';
 import { DeleteAccessPointRequest } from './types/index';
 import { DeleteAccessPointResponse } from './types/index';
+import { DeleteDataFlowPolicyRequest } from './types/index';
+import { DeleteDataFlowPolicyResponse } from './types/index';
+import { DeleteDataFlowTaskRequest } from './types/index';
+import { DeleteDataFlowTaskResponse } from './types/index';
 import { DeleteFileSystemRequest } from './types/index';
 import { DeleteFileSystemResponse } from './types/index';
 import { DeleteMountPointRequest } from './types/index';
@@ -44,8 +56,14 @@ import { DeleteQuotaRequest } from './types/index';
 import { DeleteQuotaResponse } from './types/index';
 import { DescribeAccessPointsRequest } from './types/index';
 import { DescribeAccessPointsResponse } from './types/index';
+import { DescribeDataFlowPoliciesRequest } from './types/index';
+import { DescribeDataFlowPoliciesResponse } from './types/index';
+import { DescribeDataFlowTasksRequest } from './types/index';
+import { DescribeDataFlowTasksResponse } from './types/index';
 import { DescribeFileSystemsRequest } from './types/index';
 import { DescribeFileSystemsResponse } from './types/index';
+import { DescribeFilespaceAttributeRequest } from './types/index';
+import { DescribeFilespaceAttributeResponse } from './types/index';
 import { DescribeMountPointsRequest } from './types/index';
 import { DescribeMountPointsResponse } from './types/index';
 import { DescribePermissionGroupsRequest } from './types/index';
@@ -60,14 +78,26 @@ import { DescribeZonesRequest } from './types/index';
 import { DescribeZonesResponse } from './types/index';
 import { ListTagsForResourcesRequest } from './types/index';
 import { ListTagsForResourcesResponse } from './types/index';
+import { StartDataFlowPolicyRequest } from './types/index';
+import { StartDataFlowPolicyResponse } from './types/index';
+import { StopDataFlowPolicyRequest } from './types/index';
+import { StopDataFlowPolicyResponse } from './types/index';
+import { SyncCreateFilespaceRequest } from './types/index';
+import { SyncCreateFilespaceResponse } from './types/index';
 import { TagResourcesRequest } from './types/index';
 import { TagResourcesResponse } from './types/index';
 import { UntagResourcesRequest } from './types/index';
 import { UntagResourcesResponse } from './types/index';
 import { UpdateAccessPointRequest } from './types/index';
 import { UpdateAccessPointResponse } from './types/index';
+import { UpdateDataFlowPolicyRequest } from './types/index';
+import { UpdateDataFlowPolicyResponse } from './types/index';
+import { UpdateDataFlowTaskRequest } from './types/index';
+import { UpdateDataFlowTaskResponse } from './types/index';
 import { UpdateFileSystemRequest } from './types/index';
 import { UpdateFileSystemResponse } from './types/index';
+import { UpdateFilespaceRequest } from './types/index';
+import { UpdateFilespaceResponse } from './types/index';
 import { UpdateMountPointRequest } from './types/index';
 import { UpdateMountPointResponse } from './types/index';
 import { UpdatePermissionGroupRequest } from './types/index';
@@ -80,22 +110,31 @@ import { UpdateQuotaResponse } from './types/index';
 // ============================================================================
 // Output Type Definitions
 // ============================================================================
+export type CancelDataFlowTaskCommandOutput = CommandOutput<CancelDataFlowTaskResponse>;
 export type CheckDirCommandOutput = CommandOutput<CheckDirResponse>;
 export type CreateAccessPointCommandOutput = CommandOutput<CreateAccessPointResponse>;
+export type CreateDataFlowPolicyCommandOutput = CommandOutput<CreateDataFlowPolicyResponse>;
+export type CreateDataFlowTaskCommandOutput = CommandOutput<CreateDataFlowTaskResponse>;
 export type CreateDirCommandOutput = CommandOutput<CreateDirResponse>;
+export type CreateFilePreSignedUrlCommandOutput = CommandOutput<CreateFilePreSignedUrlResponse>;
 export type CreateFileSystemCommandOutput = CommandOutput<CreateFileSystemResponse>;
 export type CreateMountPointCommandOutput = CommandOutput<CreateMountPointResponse>;
 export type CreatePermissionGroupCommandOutput = CommandOutput<CreatePermissionGroupResponse>;
 export type CreatePermissionRuleCommandOutput = CommandOutput<CreatePermissionRuleResponse>;
 export type CreateQuotaCommandOutput = CommandOutput<CreateQuotaResponse>;
 export type DeleteAccessPointCommandOutput = CommandOutput<DeleteAccessPointResponse>;
+export type DeleteDataFlowPolicyCommandOutput = CommandOutput<DeleteDataFlowPolicyResponse>;
+export type DeleteDataFlowTaskCommandOutput = CommandOutput<DeleteDataFlowTaskResponse>;
 export type DeleteFileSystemCommandOutput = CommandOutput<DeleteFileSystemResponse>;
 export type DeleteMountPointCommandOutput = CommandOutput<DeleteMountPointResponse>;
 export type DeletePermissionGroupCommandOutput = CommandOutput<DeletePermissionGroupResponse>;
 export type DeletePermissionRuleCommandOutput = CommandOutput<DeletePermissionRuleResponse>;
 export type DeleteQuotaCommandOutput = CommandOutput<DeleteQuotaResponse>;
 export type DescribeAccessPointsCommandOutput = CommandOutput<DescribeAccessPointsResponse>;
+export type DescribeDataFlowPoliciesCommandOutput = CommandOutput<DescribeDataFlowPoliciesResponse>;
+export type DescribeDataFlowTasksCommandOutput = CommandOutput<DescribeDataFlowTasksResponse>;
 export type DescribeFileSystemsCommandOutput = CommandOutput<DescribeFileSystemsResponse>;
+export type DescribeFilespaceAttributeCommandOutput = CommandOutput<DescribeFilespaceAttributeResponse>;
 export type DescribeMountPointsCommandOutput = CommandOutput<DescribeMountPointsResponse>;
 export type DescribePermissionGroupsCommandOutput = CommandOutput<DescribePermissionGroupsResponse>;
 export type DescribePermissionRulesCommandOutput = CommandOutput<DescribePermissionRulesResponse>;
@@ -103,10 +142,16 @@ export type DescribeQuotasCommandOutput = CommandOutput<DescribeQuotasResponse>;
 export type DescribeRegionsCommandOutput = CommandOutput<DescribeRegionsResponse>;
 export type DescribeZonesCommandOutput = CommandOutput<DescribeZonesResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
+export type StartDataFlowPolicyCommandOutput = CommandOutput<StartDataFlowPolicyResponse>;
+export type StopDataFlowPolicyCommandOutput = CommandOutput<StopDataFlowPolicyResponse>;
+export type SyncCreateFilespaceCommandOutput = CommandOutput<SyncCreateFilespaceResponse>;
 export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UpdateAccessPointCommandOutput = CommandOutput<UpdateAccessPointResponse>;
+export type UpdateDataFlowPolicyCommandOutput = CommandOutput<UpdateDataFlowPolicyResponse>;
+export type UpdateDataFlowTaskCommandOutput = CommandOutput<UpdateDataFlowTaskResponse>;
 export type UpdateFileSystemCommandOutput = CommandOutput<UpdateFileSystemResponse>;
+export type UpdateFilespaceCommandOutput = CommandOutput<UpdateFilespaceResponse>;
 export type UpdateMountPointCommandOutput = CommandOutput<UpdateMountPointResponse>;
 export type UpdatePermissionGroupCommandOutput = CommandOutput<UpdatePermissionGroupResponse>;
 export type UpdatePermissionRuleCommandOutput = CommandOutput<UpdatePermissionRuleResponse>;
@@ -125,6 +170,21 @@ export class EFSClient extends Client {
   }
 }
 
+/**
+ * Command to CancelDataFlowTask
+ */
+export class CancelDataFlowTaskCommand extends Command<
+  CancelDataFlowTaskRequest,
+  CancelDataFlowTaskCommandOutput,
+  'CancelDataFlowTaskCommand'
+> {
+  static readonly metaPath = '/CancelDataFlowTask/2025-01-01/efs/post/application_json/';
+
+  constructor(input: CancelDataFlowTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CancelDataFlowTaskCommand.metaPath);
+  }
+}
 /**
  * Command to CheckDir
  */
@@ -156,6 +216,36 @@ export class CreateAccessPointCommand extends Command<
   }
 }
 /**
+ * Command to CreateDataFlowPolicy
+ */
+export class CreateDataFlowPolicyCommand extends Command<
+  CreateDataFlowPolicyRequest,
+  CreateDataFlowPolicyCommandOutput,
+  'CreateDataFlowPolicyCommand'
+> {
+  static readonly metaPath = '/CreateDataFlowPolicy/2025-01-01/efs/post/application_json/';
+
+  constructor(input: CreateDataFlowPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateDataFlowPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateDataFlowTask
+ */
+export class CreateDataFlowTaskCommand extends Command<
+  CreateDataFlowTaskRequest,
+  CreateDataFlowTaskCommandOutput,
+  'CreateDataFlowTaskCommand'
+> {
+  static readonly metaPath = '/CreateDataFlowTask/2025-01-01/efs/post/application_json/';
+
+  constructor(input: CreateDataFlowTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateDataFlowTaskCommand.metaPath);
+  }
+}
+/**
  * Command to CreateDir
  */
 export class CreateDirCommand extends Command<
@@ -168,6 +258,21 @@ export class CreateDirCommand extends Command<
   constructor(input: CreateDirRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateDirCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateFilePreSignedUrl
+ */
+export class CreateFilePreSignedUrlCommand extends Command<
+  CreateFilePreSignedUrlRequest,
+  CreateFilePreSignedUrlCommandOutput,
+  'CreateFilePreSignedUrlCommand'
+> {
+  static readonly metaPath = '/CreateFilePreSignedUrl/2025-01-01/efs/post/application_json/';
+
+  constructor(input: CreateFilePreSignedUrlRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateFilePreSignedUrlCommand.metaPath);
   }
 }
 /**
@@ -261,6 +366,36 @@ export class DeleteAccessPointCommand extends Command<
   }
 }
 /**
+ * Command to DeleteDataFlowPolicy
+ */
+export class DeleteDataFlowPolicyCommand extends Command<
+  DeleteDataFlowPolicyRequest,
+  DeleteDataFlowPolicyCommandOutput,
+  'DeleteDataFlowPolicyCommand'
+> {
+  static readonly metaPath = '/DeleteDataFlowPolicy/2025-01-01/efs/post/application_json/';
+
+  constructor(input: DeleteDataFlowPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteDataFlowPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteDataFlowTask
+ */
+export class DeleteDataFlowTaskCommand extends Command<
+  DeleteDataFlowTaskRequest,
+  DeleteDataFlowTaskCommandOutput,
+  'DeleteDataFlowTaskCommand'
+> {
+  static readonly metaPath = '/DeleteDataFlowTask/2025-01-01/efs/post/application_json/';
+
+  constructor(input: DeleteDataFlowTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteDataFlowTaskCommand.metaPath);
+  }
+}
+/**
  * Command to DeleteFileSystem
  */
 export class DeleteFileSystemCommand extends Command<
@@ -351,6 +486,36 @@ export class DescribeAccessPointsCommand extends Command<
   }
 }
 /**
+ * Command to DescribeDataFlowPolicies
+ */
+export class DescribeDataFlowPoliciesCommand extends Command<
+  DescribeDataFlowPoliciesRequest,
+  DescribeDataFlowPoliciesCommandOutput,
+  'DescribeDataFlowPoliciesCommand'
+> {
+  static readonly metaPath = '/DescribeDataFlowPolicies/2025-01-01/efs/post/application_json/';
+
+  constructor(input: DescribeDataFlowPoliciesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeDataFlowPoliciesCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeDataFlowTasks
+ */
+export class DescribeDataFlowTasksCommand extends Command<
+  DescribeDataFlowTasksRequest,
+  DescribeDataFlowTasksCommandOutput,
+  'DescribeDataFlowTasksCommand'
+> {
+  static readonly metaPath = '/DescribeDataFlowTasks/2025-01-01/efs/post/application_json/';
+
+  constructor(input: DescribeDataFlowTasksRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeDataFlowTasksCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeFileSystems
  */
 export class DescribeFileSystemsCommand extends Command<
@@ -363,6 +528,21 @@ export class DescribeFileSystemsCommand extends Command<
   constructor(input: DescribeFileSystemsRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribeFileSystemsCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribeFilespaceAttribute
+ */
+export class DescribeFilespaceAttributeCommand extends Command<
+  DescribeFilespaceAttributeRequest,
+  DescribeFilespaceAttributeCommandOutput,
+  'DescribeFilespaceAttributeCommand'
+> {
+  static readonly metaPath = '/DescribeFilespaceAttribute/2025-01-01/efs/post/application_json/';
+
+  constructor(input: DescribeFilespaceAttributeRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeFilespaceAttributeCommand.metaPath);
   }
 }
 /**
@@ -471,6 +651,51 @@ export class ListTagsForResourcesCommand extends Command<
   }
 }
 /**
+ * Command to StartDataFlowPolicy
+ */
+export class StartDataFlowPolicyCommand extends Command<
+  StartDataFlowPolicyRequest,
+  StartDataFlowPolicyCommandOutput,
+  'StartDataFlowPolicyCommand'
+> {
+  static readonly metaPath = '/StartDataFlowPolicy/2025-01-01/efs/post/application_json/';
+
+  constructor(input: StartDataFlowPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StartDataFlowPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to StopDataFlowPolicy
+ */
+export class StopDataFlowPolicyCommand extends Command<
+  StopDataFlowPolicyRequest,
+  StopDataFlowPolicyCommandOutput,
+  'StopDataFlowPolicyCommand'
+> {
+  static readonly metaPath = '/StopDataFlowPolicy/2025-01-01/efs/post/application_json/';
+
+  constructor(input: StopDataFlowPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(StopDataFlowPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to SyncCreateFilespace
+ */
+export class SyncCreateFilespaceCommand extends Command<
+  SyncCreateFilespaceRequest,
+  SyncCreateFilespaceCommandOutput,
+  'SyncCreateFilespaceCommand'
+> {
+  static readonly metaPath = '/SyncCreateFilespace/2025-01-01/efs/post/application_json/';
+
+  constructor(input: SyncCreateFilespaceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(SyncCreateFilespaceCommand.metaPath);
+  }
+}
+/**
  * Command to TagResources
  */
 export class TagResourcesCommand extends Command<
@@ -516,6 +741,36 @@ export class UpdateAccessPointCommand extends Command<
   }
 }
 /**
+ * Command to UpdateDataFlowPolicy
+ */
+export class UpdateDataFlowPolicyCommand extends Command<
+  UpdateDataFlowPolicyRequest,
+  UpdateDataFlowPolicyCommandOutput,
+  'UpdateDataFlowPolicyCommand'
+> {
+  static readonly metaPath = '/UpdateDataFlowPolicy/2025-01-01/efs/post/application_json/';
+
+  constructor(input: UpdateDataFlowPolicyRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateDataFlowPolicyCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateDataFlowTask
+ */
+export class UpdateDataFlowTaskCommand extends Command<
+  UpdateDataFlowTaskRequest,
+  UpdateDataFlowTaskCommandOutput,
+  'UpdateDataFlowTaskCommand'
+> {
+  static readonly metaPath = '/UpdateDataFlowTask/2025-01-01/efs/get/text_plain/';
+
+  constructor(input: UpdateDataFlowTaskRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateDataFlowTaskCommand.metaPath);
+  }
+}
+/**
  * Command to UpdateFileSystem
  */
 export class UpdateFileSystemCommand extends Command<
@@ -528,6 +783,21 @@ export class UpdateFileSystemCommand extends Command<
   constructor(input: UpdateFileSystemRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(UpdateFileSystemCommand.metaPath);
+  }
+}
+/**
+ * Command to UpdateFilespace
+ */
+export class UpdateFilespaceCommand extends Command<
+  UpdateFilespaceRequest,
+  UpdateFilespaceCommandOutput,
+  'UpdateFilespaceCommand'
+> {
+  static readonly metaPath = '/UpdateFilespace/2025-01-01/efs/post/application_json/';
+
+  constructor(input: UpdateFilespaceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(UpdateFilespaceCommand.metaPath);
   }
 }
 /**
@@ -593,22 +863,31 @@ export class UpdateQuotaCommand extends Command<
 
 export default {
   EFSClient,
+  CancelDataFlowTaskCommand,
   CheckDirCommand,
   CreateAccessPointCommand,
+  CreateDataFlowPolicyCommand,
+  CreateDataFlowTaskCommand,
   CreateDirCommand,
+  CreateFilePreSignedUrlCommand,
   CreateFileSystemCommand,
   CreateMountPointCommand,
   CreatePermissionGroupCommand,
   CreatePermissionRuleCommand,
   CreateQuotaCommand,
   DeleteAccessPointCommand,
+  DeleteDataFlowPolicyCommand,
+  DeleteDataFlowTaskCommand,
   DeleteFileSystemCommand,
   DeleteMountPointCommand,
   DeletePermissionGroupCommand,
   DeletePermissionRuleCommand,
   DeleteQuotaCommand,
   DescribeAccessPointsCommand,
+  DescribeDataFlowPoliciesCommand,
+  DescribeDataFlowTasksCommand,
   DescribeFileSystemsCommand,
+  DescribeFilespaceAttributeCommand,
   DescribeMountPointsCommand,
   DescribePermissionGroupsCommand,
   DescribePermissionRulesCommand,
@@ -616,10 +895,16 @@ export default {
   DescribeRegionsCommand,
   DescribeZonesCommand,
   ListTagsForResourcesCommand,
+  StartDataFlowPolicyCommand,
+  StopDataFlowPolicyCommand,
+  SyncCreateFilespaceCommand,
   TagResourcesCommand,
   UntagResourcesCommand,
   UpdateAccessPointCommand,
+  UpdateDataFlowPolicyCommand,
+  UpdateDataFlowTaskCommand,
   UpdateFileSystemCommand,
+  UpdateFilespaceCommand,
   UpdateMountPointCommand,
   UpdatePermissionGroupCommand,
   UpdatePermissionRuleCommand,

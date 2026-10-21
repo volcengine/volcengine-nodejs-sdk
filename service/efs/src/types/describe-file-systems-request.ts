@@ -117,7 +117,6 @@ export interface DescribeFileSystemsRequest {
  * @enum {string}
  */
 export enum DescribeFileSystemsRequestBandwidthModeEnum {
-    Unknown = 'Unknown',
     Baseline = 'Baseline',
     Provisioned = 'Provisioned'
 }
@@ -134,7 +133,6 @@ export enum DescribeFileSystemsRequestChargeTypeEnum {
  * @enum {string}
  */
 export enum DescribeFileSystemsRequestInstanceTypeEnum {
-    Unknown = 'Unknown',
     Basic = 'Basic',
     Premium = 'Premium',
     IntelliTier = 'IntelliTier'
@@ -152,7 +150,6 @@ export enum DescribeFileSystemsRequestLanguageEnum {
  * @enum {string}
  */
 export enum DescribeFileSystemsRequestPerformanceDensityEnum {
-    Unknown = 'Unknown',
     Basic50 = 'Basic_50',
     Premium125 = 'Premium_125'
 }
@@ -178,7 +175,6 @@ export enum DescribeFileSystemsRequestSortOrderEnum {
  * @enum {string}
  */
 export enum DescribeFileSystemsRequestStatusesEnum {
-    Unknown = 'Unknown',
     Creating = 'Creating',
     CreateError = 'CreateError',
     Running = 'Running',
