@@ -50,11 +50,28 @@ export interface SearchMultiAccountResourcesRequest {
      * @type {string}
      * @memberof SearchMultiAccountResourcesRequest
      */
-    SortBy?: string;
+    SortBy?: SearchMultiAccountResourcesRequestSortByEnum;
 
     /**
      * @type {string}
      * @memberof SearchMultiAccountResourcesRequest
      */
-    SortOrder?: string;
+    SortOrder?: SearchMultiAccountResourcesRequestSortOrderEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum SearchMultiAccountResourcesRequestSortByEnum {
+    CreateTime = 'CreateTime'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum SearchMultiAccountResourcesRequestSortOrderEnum {
+    Asc = 'Asc',
+    Desc = 'Desc'
+}
+

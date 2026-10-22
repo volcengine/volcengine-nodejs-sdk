@@ -164,6 +164,7 @@ const defaultEndpoint: Record<string, ServiceEndpointInfo> = {
   vikingdb: { Service: "vikingdb", IsGlobal: false },
   pca: { Service: "pca", IsGlobal: true },
   efs: { Service: "efs", IsGlobal: false },
+  inframanager: { Service: "inframanager", IsGlobal: false },
 };
 
 const bootstrapRegion: Record<string, unknown> = {

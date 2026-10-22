@@ -208,4 +208,10 @@ export interface DescribeListenerAttributesResponse {
      * @memberof DescribeListenerAttributesResponse
      */
     UpdateTime?: string;
+
+    /**
+     * @type {string}
+     * @memberof DescribeListenerAttributesResponse
+     */
+    XRealIpEnabled?: string;
 }

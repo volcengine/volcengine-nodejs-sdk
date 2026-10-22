@@ -14,6 +14,7 @@
 
 import { HealthCheckForDescribeServerGroupAttributesOutput } from './health-check-for-describe-server-group-attributes-output';
 import { ServerForDescribeServerGroupAttributesOutput } from './server-for-describe-server-group-attributes-output';
+import { SlowStartConfigForDescribeServerGroupAttributesOutput } from './slow-start-config-for-describe-server-group-attributes-output';
 import { StickySessionConfigForDescribeServerGroupAttributesOutput } from './sticky-session-config-for-describe-server-group-attributes-output';
 import { TagForDescribeServerGroupAttributesOutput } from './tag-for-describe-server-group-attributes-output';
  /**
@@ -101,6 +102,18 @@ export interface DescribeServerGroupAttributesResponse {
      * @memberof DescribeServerGroupAttributesResponse
      */
     Servers?: Array<ServerForDescribeServerGroupAttributesOutput>;
+
+    /**
+     * @type {SlowStartConfigForDescribeServerGroupAttributesOutput}
+     * @memberof DescribeServerGroupAttributesResponse
+     */
+    SlowStartConfig?: SlowStartConfigForDescribeServerGroupAttributesOutput;
+
+    /**
+     * @type {string}
+     * @memberof DescribeServerGroupAttributesResponse
+     */
+    SpaceNetworkId?: string;
 
     /**
      * @type {string}

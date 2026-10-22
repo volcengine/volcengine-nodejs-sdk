@@ -146,4 +146,10 @@ export interface ModifyListenerAttributesRequest {
      * @memberof ModifyListenerAttributesRequest
      */
     ServerGroupId?: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyListenerAttributesRequest
+     */
+    XRealIpEnabled?: string;
 }

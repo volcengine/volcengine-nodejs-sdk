@@ -64,6 +64,12 @@ export interface DescribeLoadBalancersRequest {
     ProjectName?: string;
 
     /**
+     * @type {string}
+     * @memberof DescribeLoadBalancersRequest
+     */
+    SpaceNetworkId?: string;
+
+    /**
      * @type {Array<TagFilterForDescribeLoadBalancersInput>}
      * @memberof DescribeLoadBalancersRequest
      */
