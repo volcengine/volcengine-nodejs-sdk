@@ -27,6 +27,18 @@ export interface ServerForModifyServerGroupBackendServersInput {
     Description?: string;
 
     /**
+     * @type {string}
+     * @memberof ServerForModifyServerGroupBackendServersInput
+     */
+    InstanceId?: string;
+
+    /**
+     * @type {string}
+     * @memberof ServerForModifyServerGroupBackendServersInput
+     */
+    Ip?: string;
+
+    /**
      * @type {number}
      * @memberof ServerForModifyServerGroupBackendServersInput
      */
@@ -36,7 +48,13 @@ export interface ServerForModifyServerGroupBackendServersInput {
      * @type {string}
      * @memberof ServerForModifyServerGroupBackendServersInput
      */
-    ServerId: string;
+    ServerId?: string;
+
+    /**
+     * @type {string}
+     * @memberof ServerForModifyServerGroupBackendServersInput
+     */
+    Type?: string;
 
     /**
      * @type {number}

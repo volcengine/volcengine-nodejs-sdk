@@ -12,11 +12,13 @@
  * Do not edit the class manually.
  */
 
+import { CookieConfigForDescribeRulesOutput } from './cookie-config-for-describe-rules-output';
 import { HeaderConfigForDescribeRulesOutput } from './header-config-for-describe-rules-output';
 import { HostConfigForDescribeRulesOutput } from './host-config-for-describe-rules-output';
 import { MethodConfigForDescribeRulesOutput } from './method-config-for-describe-rules-output';
 import { PathConfigForDescribeRulesOutput } from './path-config-for-describe-rules-output';
 import { QueryStringConfigForDescribeRulesOutput } from './query-string-config-for-describe-rules-output';
+import { SourceIpConfigForDescribeRulesOutput } from './source-ip-config-for-describe-rules-output';
  /**
  * 
  *
@@ -24,6 +26,12 @@ import { QueryStringConfigForDescribeRulesOutput } from './query-string-config-f
  * @interface RuleConditionForDescribeRulesOutput
  */
 export interface RuleConditionForDescribeRulesOutput {
+
+    /**
+     * @type {CookieConfigForDescribeRulesOutput}
+     * @memberof RuleConditionForDescribeRulesOutput
+     */
+    CookieConfig?: CookieConfigForDescribeRulesOutput;
 
     /**
      * @type {HeaderConfigForDescribeRulesOutput}
@@ -54,6 +62,12 @@ export interface RuleConditionForDescribeRulesOutput {
      * @memberof RuleConditionForDescribeRulesOutput
      */
     QueryStringConfig?: QueryStringConfigForDescribeRulesOutput;
+
+    /**
+     * @type {SourceIpConfigForDescribeRulesOutput}
+     * @memberof RuleConditionForDescribeRulesOutput
+     */
+    SourceIpConfig?: SourceIpConfigForDescribeRulesOutput;
 
     /**
      * @type {string}

@@ -1,14 +1,8 @@
 {
   "actions": [
-    "QueryBudgetSplitItemID",
-    "QueryBudgetSplitItemName",
-    "QueryBudgetDetail",
-    "UpdateBudget",
-    "CreateBudget",
-    "ListBudget",
-    "ListBudgetFilterConfigurationInfo"
+    "GetDropShippingOrder"
   ],
-  "description": "BILLING: 新增 ListBudgetFilterConfigurationInfo, QueryBudgetSplitItemID, QueryBudgetSplitItemName；修改 QueryBudgetDetail, UpdateBudget, CreateBudget, ListBudget",
+  "description": "BILLING: 修改 GetDropShippingOrder",
   "modules": "service/billing",
   "type": "feature"
 }
