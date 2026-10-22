@@ -1,0 +1,19 @@
+{
+  "actions": [
+    "DescribeServerGroupAttributes",
+    "DescribeRules",
+    "CreateLoadBalancer",
+    "CreateRules",
+    "DescribeLoadBalancers",
+    "ModifyRules",
+    "ModifyServerGroupAttributes",
+    "DeleteServerGroupMcpRestTool",
+    "DescribeServerGroupMcpRestTools",
+    "DescribeServerGroups",
+    "CreateServerGroup",
+    "DescribeLoadBalancerAttributes"
+  ],
+  "description": "ALB: 新增 DeleteServerGroupMcpRestTool, DescribeServerGroupMcpRestTools；修改 DescribeServerGroupAttributes, DescribeServerGroups, CreateServerGroup, DescribeLoadBalancerAttributes, DescribeRules, ModifyRules, ModifyServerGroupAttributes, CreateLoadBalancer, CreateRules, DescribeLoadBalancers",
+  "modules": "service/alb",
+  "type": "feature"
+}

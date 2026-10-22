@@ -55,4 +55,10 @@ export interface ListBackupDataRequest {
      * @memberof ListBackupDataRequest
      */
     Status?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListBackupDataRequest
+     */
+    VolcRegion?: string;
 }

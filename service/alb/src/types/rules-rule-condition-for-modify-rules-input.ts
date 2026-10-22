@@ -12,11 +12,13 @@
  * Do not edit the class manually.
  */
 
+import { CookieConfigForModifyRulesInput } from './cookie-config-for-modify-rules-input';
 import { HeaderConfigForModifyRulesInput } from './header-config-for-modify-rules-input';
 import { HostConfigForModifyRulesInput } from './host-config-for-modify-rules-input';
 import { MethodConfigForModifyRulesInput } from './method-config-for-modify-rules-input';
 import { PathConfigForModifyRulesInput } from './path-config-for-modify-rules-input';
 import { QueryStringConfigForModifyRulesInput } from './query-string-config-for-modify-rules-input';
+import { SourceIpConfigForModifyRulesInput } from './source-ip-config-for-modify-rules-input';
  /**
  * 
  *
@@ -24,6 +26,12 @@ import { QueryStringConfigForModifyRulesInput } from './query-string-config-for-
  * @interface RulesRuleConditionForModifyRulesInput
  */
 export interface RulesRuleConditionForModifyRulesInput {
+
+    /**
+     * @type {CookieConfigForModifyRulesInput}
+     * @memberof RulesRuleConditionForModifyRulesInput
+     */
+    CookieConfig?: CookieConfigForModifyRulesInput;
 
     /**
      * @type {HeaderConfigForModifyRulesInput}
@@ -54,6 +62,12 @@ export interface RulesRuleConditionForModifyRulesInput {
      * @memberof RulesRuleConditionForModifyRulesInput
      */
     QueryStringConfig?: QueryStringConfigForModifyRulesInput;
+
+    /**
+     * @type {SourceIpConfigForModifyRulesInput}
+     * @memberof RulesRuleConditionForModifyRulesInput
+     */
+    SourceIpConfig?: SourceIpConfigForModifyRulesInput;
 
     /**
      * @type {string}

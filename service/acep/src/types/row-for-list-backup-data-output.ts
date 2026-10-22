@@ -193,4 +193,16 @@ export interface RowForListBackupDataOutput {
      * @memberof RowForListBackupDataOutput
      */
     UpdatedTime?: number;
+
+    /**
+     * @type {string}
+     * @memberof RowForListBackupDataOutput
+     */
+    VolcRegion?: string;
+
+    /**
+     * @type {string}
+     * @memberof RowForListBackupDataOutput
+     */
+    ZoneId?: string;
 }
