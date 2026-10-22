@@ -70,6 +70,12 @@ export interface GetDropShippingOrderResponse {
     ErrorMessage?: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof GetDropShippingOrderResponse
+     */
+    OrderIDList?: Array<string>;
+
+    /**
      * @type {boolean}
      * @memberof GetDropShippingOrderResponse
      */
