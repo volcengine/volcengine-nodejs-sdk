@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { RelatedTypeNameForListResourceTypesOutput } from './related-type-name-for-list-resource-types-output';
  /**
  * 
  *
@@ -19,6 +20,12 @@
  * @interface ResourceTypeForListResourceTypesOutput
  */
 export interface ResourceTypeForListResourceTypesOutput {
+
+    /**
+     * @type {Array<RelatedTypeNameForListResourceTypesOutput>}
+     * @memberof ResourceTypeForListResourceTypesOutput
+     */
+    RelatedTypeNames?: Array<RelatedTypeNameForListResourceTypesOutput>;
 
     /**
      * @type {string}
@@ -43,4 +50,10 @@ export interface ResourceTypeForListResourceTypesOutput {
      * @memberof ResourceTypeForListResourceTypesOutput
      */
     ServiceName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ResourceTypeForListResourceTypesOutput
+     */
+    TypeName?: string;
 }

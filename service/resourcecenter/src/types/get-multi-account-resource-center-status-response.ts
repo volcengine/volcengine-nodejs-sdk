@@ -24,7 +24,7 @@ export interface GetMultiAccountResourceCenterStatusResponse {
      * @type {string}
      * @memberof GetMultiAccountResourceCenterStatusResponse
      */
-    InitialStatus?: string;
+    InitStatus?: string;
 
     /**
      * @type {string}

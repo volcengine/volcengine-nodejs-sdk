@@ -25,4 +25,10 @@ export interface ExecuteSQLQueryResponse {
      * @memberof ExecuteSQLQueryResponse
      */
     NextToken?: string;
+
+    /**
+     * @type {Array<any>}
+     * @memberof ExecuteSQLQueryResponse
+     */
+    Rows?: Array<any>;
 }
