@@ -56,7 +56,6 @@ export interface ChargeConfigForDescribeFileSystemsOutput {
  * @enum {string}
  */
 export enum ChargeConfigForDescribeFileSystemsOutputChargeStatusEnum {
-    Unknown = 'Unknown',
     WaitingPaid = 'WaitingPaid',
     Pending = 'Pending',
     Modifying = 'Modifying',

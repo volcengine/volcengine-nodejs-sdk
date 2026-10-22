@@ -50,7 +50,6 @@ export interface CreatePermissionRuleRequest {
  * @enum {string}
  */
 export enum CreatePermissionRuleRequestRwModeEnum {
-    Unknown = 'Unknown',
     RW = 'RW',
     RO = 'RO'
 }
@@ -59,7 +58,6 @@ export enum CreatePermissionRuleRequestRwModeEnum {
  * @enum {string}
  */
 export enum CreatePermissionRuleRequestUserModeEnum {
-    Unknown = 'Unknown',
     RootSquash = 'Root_squash',
     NoRootSquash = 'No_root_squash',
     AllSquash = 'All_squash'

@@ -93,7 +93,6 @@ export interface CreateFileSystemRequest {
  * @enum {string}
  */
 export enum CreateFileSystemRequestBandwidthModeEnum {
-    Unknown = 'Unknown',
     Baseline = 'Baseline',
     Provisioned = 'Provisioned'
 }
