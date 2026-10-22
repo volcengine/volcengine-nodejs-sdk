@@ -12,11 +12,13 @@
  * Do not edit the class manually.
  */
 
+import { CookieConfigForCreateRulesInput } from './cookie-config-for-create-rules-input';
 import { HeaderConfigForCreateRulesInput } from './header-config-for-create-rules-input';
 import { HostConfigForCreateRulesInput } from './host-config-for-create-rules-input';
 import { MethodConfigForCreateRulesInput } from './method-config-for-create-rules-input';
 import { PathConfigForCreateRulesInput } from './path-config-for-create-rules-input';
 import { QueryStringConfigForCreateRulesInput } from './query-string-config-for-create-rules-input';
+import { SourceIpConfigForCreateRulesInput } from './source-ip-config-for-create-rules-input';
  /**
  * 
  *
@@ -24,6 +26,12 @@ import { QueryStringConfigForCreateRulesInput } from './query-string-config-for-
  * @interface RulesRuleConditionForCreateRulesInput
  */
 export interface RulesRuleConditionForCreateRulesInput {
+
+    /**
+     * @type {CookieConfigForCreateRulesInput}
+     * @memberof RulesRuleConditionForCreateRulesInput
+     */
+    CookieConfig?: CookieConfigForCreateRulesInput;
 
     /**
      * @type {HeaderConfigForCreateRulesInput}
@@ -54,6 +62,12 @@ export interface RulesRuleConditionForCreateRulesInput {
      * @memberof RulesRuleConditionForCreateRulesInput
      */
     QueryStringConfig?: QueryStringConfigForCreateRulesInput;
+
+    /**
+     * @type {SourceIpConfigForCreateRulesInput}
+     * @memberof RulesRuleConditionForCreateRulesInput
+     */
+    SourceIpConfig?: SourceIpConfigForCreateRulesInput;
 
     /**
      * @type {string}
