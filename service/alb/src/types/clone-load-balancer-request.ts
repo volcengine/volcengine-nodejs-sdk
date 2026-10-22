@@ -42,6 +42,12 @@ export interface CloneLoadBalancerRequest {
     Description?: string;
 
     /**
+     * @type {string}
+     * @memberof CloneLoadBalancerRequest
+     */
+    DryRun?: string;
+
+    /**
      * @type {EipBillingConfigForCloneLoadBalancerInput}
      * @memberof CloneLoadBalancerRequest
      */

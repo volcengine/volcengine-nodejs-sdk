@@ -202,4 +202,10 @@ export interface ListenerForDescribeListenersOutput {
      * @memberof ListenerForDescribeListenersOutput
      */
     UpdateTime?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListenerForDescribeListenersOutput
+     */
+    XRealIpEnabled?: string;
 }
