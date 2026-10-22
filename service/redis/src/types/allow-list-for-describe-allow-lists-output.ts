@@ -25,7 +25,7 @@ export interface AllowListForDescribeAllowListsOutput {
      * @type {string}
      * @memberof AllowListForDescribeAllowListsOutput
      */
-    AllowListCategory?: AllowListForDescribeAllowListsOutputAllowListCategoryEnum;
+    AllowListCategory?: string;
 
     /**
      * @type {string}
@@ -75,13 +75,3 @@ export interface AllowListForDescribeAllowListsOutput {
      */
     SecurityGroupBindInfos?: Array<SecurityGroupBindInfoForDescribeAllowListsOutput>;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum AllowListForDescribeAllowListsOutputAllowListCategoryEnum {
-    Ordinary = 'Ordinary',
-    Default = 'Default'
-}
-

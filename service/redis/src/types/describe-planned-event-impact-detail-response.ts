@@ -12,23 +12,18 @@
  * Do not edit the class manually.
  */
 
+import { ImpactForDescribePlannedEventImpactDetailOutput } from './impact-for-describe-planned-event-impact-detail-output';
  /**
  * 
  *
  * @export
- * @interface TagForCreateEnterpriseDBInstanceInput
+ * @interface DescribePlannedEventImpactDetailResponse
  */
-export interface TagForCreateEnterpriseDBInstanceInput {
+export interface DescribePlannedEventImpactDetailResponse {
 
     /**
-     * @type {string}
-     * @memberof TagForCreateEnterpriseDBInstanceInput
+     * @type {ImpactForDescribePlannedEventImpactDetailOutput}
+     * @memberof DescribePlannedEventImpactDetailResponse
      */
-    Key?: string;
-
-    /**
-     * @type {string}
-     * @memberof TagForCreateEnterpriseDBInstanceInput
-     */
-    Value?: string;
+    Impact?: ImpactForDescribePlannedEventImpactDetailOutput;
 }

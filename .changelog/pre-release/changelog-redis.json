@@ -1,13 +1,19 @@
 {
   "actions": [
-    "ApplyParameterGroup",
-    "DescribeClientSessionSnapshot",
+    "DescribeCrossRegionBackups",
+    "DescribeBlueGreenDeployments",
+    "DescribeParameterGroups",
+    "DescribeAllowListDetail",
+    "DescribeAllowLists",
+    "DescribePlannedEventImpactDetail",
+    "DescribeParameterGroupDetail",
+    "DescribeBackups",
+    "DescribeDBInstances",
+    "DescribePlannedEvents",
     "DescribeTasks",
-    "SyncAllowList",
-    "CreateDBInstance",
-    "DescribeDBInstanceDetail"
+    "SyncAllowList"
   ],
-  "description": "REDIS: 新增 ApplyParameterGroup, DescribeClientSessionSnapshot, DescribeTasks, SyncAllowList；修改 CreateDBInstance, DescribeDBInstanceDetail",
+  "description": "REDIS: 新增 DescribePlannedEventImpactDetail；删除 CreateEnterpriseDBInstance；修改 DescribeCrossRegionBackups, DescribeParameterGroupDetail, DescribeBackups, DescribeBlueGreenDeployments, DescribeDBInstances, DescribeParameterGroups, DescribePlannedEvents, DescribeTasks, DescribeAllowListDetail, DescribeAllowLists, SyncAllowList",
   "modules": "service/Redis",
   "type": "breaking-change"
 }

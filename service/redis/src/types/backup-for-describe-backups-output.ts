@@ -43,13 +43,13 @@ export interface BackupForDescribeBackupsOutput {
      * @type {string}
      * @memberof BackupForDescribeBackupsOutput
      */
-    BackupStrategy?: BackupForDescribeBackupsOutputBackupStrategyEnum;
+    BackupStrategy?: string;
 
     /**
      * @type {string}
      * @memberof BackupForDescribeBackupsOutput
      */
-    BackupType?: BackupForDescribeBackupsOutputBackupTypeEnum;
+    BackupType?: string;
 
     /**
      * @type {string}
@@ -91,7 +91,7 @@ export interface BackupForDescribeBackupsOutput {
      * @type {string}
      * @memberof BackupForDescribeBackupsOutput
      */
-    Status?: BackupForDescribeBackupsOutputStatusEnum;
+    Status?: string;
 
     /**
      * @type {number}
@@ -99,35 +99,3 @@ export interface BackupForDescribeBackupsOutput {
      */
     TTL?: number;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum BackupForDescribeBackupsOutputBackupStrategyEnum {
-    ManualBackup = 'ManualBackup',
-    AutomatedBackup = 'AutomatedBackup',
-    DataFlashBack = 'DataFlashBack',
-    AllStrategy = 'AllStrategy'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum BackupForDescribeBackupsOutputBackupTypeEnum {
-    Invalid = 'Invalid',
-    Full = 'Full',
-    Inc = 'Inc',
-    All = 'All'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum BackupForDescribeBackupsOutputStatusEnum {
-    Creating = 'Creating',
-    Available = 'Available',
-    Unavailable = 'Unavailable',
-    Deleting = 'Deleting'
-}
-

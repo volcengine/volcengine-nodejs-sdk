@@ -30,7 +30,7 @@ export interface ChangeObjectForSyncAllowListOutput {
      * @type {string}
      * @memberof ChangeObjectForSyncAllowListOutput
      */
-    BindMode?: ChangeObjectForSyncAllowListOutputBindModeEnum;
+    BindMode?: string;
 
     /**
      * @type {boolean}
@@ -74,13 +74,3 @@ export interface ChangeObjectForSyncAllowListOutput {
      */
     SecurityGroupName?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum ChangeObjectForSyncAllowListOutputBindModeEnum {
-    AssociateEcsIp = 'AssociateEcsIp',
-    IngressDirectionIp = 'IngressDirectionIp'
-}
-

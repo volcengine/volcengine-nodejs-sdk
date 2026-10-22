@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ImpactSummaryForDescribePlannedEventsOutput } from './impact-summary-for-describe-planned-events-output';
  /**
  * 
  *
@@ -54,6 +55,24 @@ export interface PlannedEventForDescribePlannedEventsOutput {
      * @type {string}
      * @memberof PlannedEventForDescribePlannedEventsOutput
      */
+    ExeEndTime?: string;
+
+    /**
+     * @type {string}
+     * @memberof PlannedEventForDescribePlannedEventsOutput
+     */
+    ExeStartTime?: string;
+
+    /**
+     * @type {ImpactSummaryForDescribePlannedEventsOutput}
+     * @memberof PlannedEventForDescribePlannedEventsOutput
+     */
+    ImpactSummary?: ImpactSummaryForDescribePlannedEventsOutput;
+
+    /**
+     * @type {string}
+     * @memberof PlannedEventForDescribePlannedEventsOutput
+     */
     InstanceId?: string;
 
     /**
@@ -84,7 +103,7 @@ export interface PlannedEventForDescribePlannedEventsOutput {
      * @type {string}
      * @memberof PlannedEventForDescribePlannedEventsOutput
      */
-    Status?: PlannedEventForDescribePlannedEventsOutputStatusEnum;
+    Status?: string;
 
     /**
      * @type {string}
@@ -92,18 +111,3 @@ export interface PlannedEventForDescribePlannedEventsOutput {
      */
     Type?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum PlannedEventForDescribePlannedEventsOutputStatusEnum {
-    Initiated = 'Initiated',
-    Waiting = 'Waiting',
-    Running = 'Running',
-    Success = 'Success',
-    Failed = 'Failed',
-    Canceled = 'Canceled',
-    Abandoned = 'Abandoned'
-}
-

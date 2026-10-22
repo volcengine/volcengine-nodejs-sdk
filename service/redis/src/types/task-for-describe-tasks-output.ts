@@ -105,7 +105,7 @@ export interface TaskForDescribeTasksOutput {
      * @type {string}
      * @memberof TaskForDescribeTasksOutput
      */
-    TaskStatus?: TaskForDescribeTasksOutputTaskStatusEnum;
+    TaskStatus?: string;
 
     /**
      * @type {Array<TaskStepInfoForDescribeTasksOutput>}
@@ -113,16 +113,3 @@ export interface TaskForDescribeTasksOutput {
      */
     TaskStepInfo?: Array<TaskStepInfoForDescribeTasksOutput>;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum TaskForDescribeTasksOutputTaskStatusEnum {
-    Running = 'Running',
-    Success = 'Success',
-    Failed = 'Failed',
-    Waiting = 'Waiting',
-    Canceled = 'Canceled'
-}
-

@@ -66,7 +66,7 @@ export interface BlueGreenDeploymentForDescribeBlueGreenDeploymentsOutput {
      * @type {string}
      * @memberof BlueGreenDeploymentForDescribeBlueGreenDeploymentsOutput
      */
-    Status?: BlueGreenDeploymentForDescribeBlueGreenDeploymentsOutputStatusEnum;
+    Status?: string;
 
     /**
      * @type {string}
@@ -86,22 +86,3 @@ export interface BlueGreenDeploymentForDescribeBlueGreenDeploymentsOutput {
      */
     TargetInstanceName?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum BlueGreenDeploymentForDescribeBlueGreenDeploymentsOutputStatusEnum {
-    INIT = 'INIT',
-    PROVISIONING = 'PROVISIONING',
-    AVAILABLE = 'AVAILABLE',
-    DATASYNCHRONIZING = 'DATA_SYNCHRONIZING',
-    SWITCHOVERAVAILABLE = 'SWITCHOVER_AVAILABLE',
-    SWITCHOVERINPROGRESS = 'SWITCHOVER_IN_PROGRESS',
-    SWITCHOVERPENDING = 'SWITCHOVER_PENDING',
-    SWITCHOVERCOMPLETED = 'SWITCHOVER_COMPLETED',
-    SWITCHOVERFAILED = 'SWITCHOVER_FAILED',
-    DELETING = 'DELETING',
-    DELETECOMPLETED = 'DELETE_COMPLETED'
-}
-

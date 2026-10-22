@@ -16,19 +16,13 @@
  * 
  *
  * @export
- * @interface CreateEnterpriseDBInstanceResponse
+ * @interface DescribePlannedEventImpactDetailRequest
  */
-export interface CreateEnterpriseDBInstanceResponse {
+export interface DescribePlannedEventImpactDetailRequest {
 
     /**
      * @type {string}
-     * @memberof CreateEnterpriseDBInstanceResponse
+     * @memberof DescribePlannedEventImpactDetailRequest
      */
-    InstanceId?: string;
-
-    /**
-     * @type {string}
-     * @memberof CreateEnterpriseDBInstanceResponse
-     */
-    OrderNO?: string;
+    EventId: string;
 }
