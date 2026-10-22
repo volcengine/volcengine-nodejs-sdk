@@ -81,6 +81,12 @@ export interface RowForListHostOutput {
     HostId?: string;
 
     /**
+     * @type {boolean}
+     * @memberof RowForListHostOutput
+     */
+    InitAutoCreatePod?: boolean;
+
+    /**
      * @type {string}
      * @memberof RowForListHostOutput
      */

@@ -58,6 +58,12 @@ export interface DescribeServerGroupsRequest {
     ServerGroupType?: string;
 
     /**
+     * @type {string}
+     * @memberof DescribeServerGroupsRequest
+     */
+    SpaceNetworkId?: string;
+
+    /**
      * @type {Array<TagFilterForDescribeServerGroupsInput>}
      * @memberof DescribeServerGroupsRequest
      */

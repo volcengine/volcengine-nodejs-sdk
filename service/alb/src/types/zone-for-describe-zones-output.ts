@@ -25,4 +25,10 @@ export interface ZoneForDescribeZonesOutput {
      * @memberof ZoneForDescribeZonesOutput
      */
     ZoneId?: string;
+
+    /**
+     * @type {string}
+     * @memberof ZoneForDescribeZonesOutput
+     */
+    ZoneType?: string;
 }

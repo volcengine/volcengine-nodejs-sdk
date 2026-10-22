@@ -13,6 +13,7 @@
  */
 
 import { HealthCheckForCreateServerGroupInput } from './health-check-for-create-server-group-input';
+import { SlowStartConfigForCreateServerGroupInput } from './slow-start-config-for-create-server-group-input';
 import { StickySessionConfigForCreateServerGroupInput } from './sticky-session-config-for-create-server-group-input';
 import { TagForCreateServerGroupInput } from './tag-for-create-server-group-input';
  /**
@@ -78,6 +79,18 @@ export interface CreateServerGroupRequest {
     ServerGroupType?: string;
 
     /**
+     * @type {SlowStartConfigForCreateServerGroupInput}
+     * @memberof CreateServerGroupRequest
+     */
+    SlowStartConfig?: SlowStartConfigForCreateServerGroupInput;
+
+    /**
+     * @type {string}
+     * @memberof CreateServerGroupRequest
+     */
+    SpaceNetworkId?: string;
+
+    /**
      * @type {StickySessionConfigForCreateServerGroupInput}
      * @memberof CreateServerGroupRequest
      */
@@ -93,5 +106,5 @@ export interface CreateServerGroupRequest {
      * @type {string}
      * @memberof CreateServerGroupRequest
      */
-    VpcId: string;
+    VpcId?: string;
 }

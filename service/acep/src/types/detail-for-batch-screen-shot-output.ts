@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { TosInfoForBatchScreenShotOutput } from './tos-info-for-batch-screen-shot-output';
  /**
  * 
  *
@@ -43,4 +44,10 @@ export interface DetailForBatchScreenShotOutput {
      * @memberof DetailForBatchScreenShotOutput
      */
     PodId?: string;
+
+    /**
+     * @type {TosInfoForBatchScreenShotOutput}
+     * @memberof DetailForBatchScreenShotOutput
+     */
+    TosInfo?: TosInfoForBatchScreenShotOutput;
 }
