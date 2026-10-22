@@ -19,4 +19,16 @@
  * @interface SubscribeResourceAutoResponse
  */
 export interface SubscribeResourceAutoResponse {
+
+    /**
+     * @type {Array<string>}
+     * @memberof SubscribeResourceAutoResponse
+     */
+    HostIdList?: Array<string>;
+
+    /**
+     * @type {string}
+     * @memberof SubscribeResourceAutoResponse
+     */
+    OrderId?: string;
 }

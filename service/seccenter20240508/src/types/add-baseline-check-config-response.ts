@@ -24,5 +24,11 @@ export interface AddBaselineCheckConfigResponse {
      * @type {string}
      * @memberof AddBaselineCheckConfigResponse
      */
+    ConfigID?: string;
+
+    /**
+     * @type {string}
+     * @memberof AddBaselineCheckConfigResponse
+     */
     Status?: string;
 }

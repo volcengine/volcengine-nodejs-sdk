@@ -32,6 +32,12 @@ export interface LoadBalancerForDescribeLoadBalancersOutput {
      * @type {string}
      * @memberof LoadBalancerForDescribeLoadBalancersOutput
      */
+    ArkClawEnabled?: string;
+
+    /**
+     * @type {string}
+     * @memberof LoadBalancerForDescribeLoadBalancersOutput
+     */
     BusinessStatus?: string;
 
     /**
@@ -155,10 +161,22 @@ export interface LoadBalancerForDescribeLoadBalancersOutput {
     ProxyProtocolEnabled?: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof LoadBalancerForDescribeLoadBalancersOutput
+     */
+    SecurityGroupIds?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof LoadBalancerForDescribeLoadBalancersOutput
      */
     SniAutoMatch?: string;
+
+    /**
+     * @type {string}
+     * @memberof LoadBalancerForDescribeLoadBalancersOutput
+     */
+    SpaceNetworkId?: string;
 
     /**
      * @type {string}

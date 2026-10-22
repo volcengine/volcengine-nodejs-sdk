@@ -34,6 +34,12 @@ export interface CreateLoadBalancerRequest {
      * @type {string}
      * @memberof CreateLoadBalancerRequest
      */
+    ArkClawEnabled?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateLoadBalancerRequest
+     */
     BandwidthPackageId?: string;
 
     /**
@@ -113,6 +119,12 @@ export interface CreateLoadBalancerRequest {
      * @memberof CreateLoadBalancerRequest
      */
     RegionId: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateLoadBalancerRequest
+     */
+    SpaceNetworkId?: string;
 
     /**
      * @type {string}
