@@ -258,6 +258,8 @@ import { GetAutoIsolateAgentListRequest } from './types/index';
 import { GetAutoIsolateAgentListResponse } from './types/index';
 import { GetAutoProtectConfigRequest } from './types/index';
 import { GetAutoProtectConfigResponse } from './types/index';
+import { GetBaselineCheckConfigRequest } from './types/index';
+import { GetBaselineCheckConfigResponse } from './types/index';
 import { GetBaselineDetectProgressDetailRequest } from './types/index';
 import { GetBaselineDetectProgressDetailResponse } from './types/index';
 import { GetBaselineGroupStatisticsRequest } from './types/index';
@@ -930,6 +932,7 @@ export type GetAutoHardeningEnabledCommandOutput = CommandOutput<GetAutoHardenin
 export type GetAutoHardeningPolicyCommandOutput = CommandOutput<GetAutoHardeningPolicyResponse>;
 export type GetAutoIsolateAgentListCommandOutput = CommandOutput<GetAutoIsolateAgentListResponse>;
 export type GetAutoProtectConfigCommandOutput = CommandOutput<GetAutoProtectConfigResponse>;
+export type GetBaselineCheckConfigCommandOutput = CommandOutput<GetBaselineCheckConfigResponse>;
 export type GetBaselineDetectProgressDetailCommandOutput = CommandOutput<GetBaselineDetectProgressDetailResponse>;
 export type GetBaselineGroupStatisticsCommandOutput = CommandOutput<GetBaselineGroupStatisticsResponse>;
 export type GetBruteForceBanCapParamsCommandOutput = CommandOutput<GetBruteForceBanCapParamsResponse>;
@@ -3045,6 +3048,21 @@ export class GetAutoProtectConfigCommand extends Command<
   constructor(input: GetAutoProtectConfigRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(GetAutoProtectConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to GetBaselineCheckConfig
+ */
+export class GetBaselineCheckConfigCommand extends Command<
+  GetBaselineCheckConfigRequest,
+  GetBaselineCheckConfigCommandOutput,
+  'GetBaselineCheckConfigCommand'
+> {
+  static readonly metaPath = '/GetBaselineCheckConfig/2024-05-08/seccenter/post/application_json/';
+
+  constructor(input: GetBaselineCheckConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetBaselineCheckConfigCommand.metaPath);
   }
 }
 /**
@@ -7267,6 +7285,7 @@ export default {
   GetAutoHardeningPolicyCommand,
   GetAutoIsolateAgentListCommand,
   GetAutoProtectConfigCommand,
+  GetBaselineCheckConfigCommand,
   GetBaselineDetectProgressDetailCommand,
   GetBaselineGroupStatisticsCommand,
   GetBruteForceBanCapParamsCommand,
