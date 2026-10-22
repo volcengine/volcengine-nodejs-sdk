@@ -332,6 +332,7 @@ export * from './tag-for-get-phone-template-output';
 export * from './tag-for-list-pod-output';
 export * from './tag-for-subscribe-resource-auto-input';
 export * from './tos-info-for-batch-screen-shot-input';
+export * from './tos-info-for-batch-screen-shot-output';
 export * from './tos-info-for-start-screen-shot-input';
 export * from './unbind-adb-key-pods-request';
 export * from './unbind-adb-key-pods-response';
