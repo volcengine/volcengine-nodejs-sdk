@@ -13,6 +13,7 @@
  */
 
 import { HealthCheckForModifyServerGroupAttributesInput } from './health-check-for-modify-server-group-attributes-input';
+import { SlowStartConfigForModifyServerGroupAttributesInput } from './slow-start-config-for-modify-server-group-attributes-input';
 import { StickySessionConfigForModifyServerGroupAttributesInput } from './sticky-session-config-for-modify-server-group-attributes-input';
  /**
  * 
@@ -57,6 +58,12 @@ export interface ModifyServerGroupAttributesRequest {
      * @memberof ModifyServerGroupAttributesRequest
      */
     ServerGroupName?: string;
+
+    /**
+     * @type {SlowStartConfigForModifyServerGroupAttributesInput}
+     * @memberof ModifyServerGroupAttributesRequest
+     */
+    SlowStartConfig?: SlowStartConfigForModifyServerGroupAttributesInput;
 
     /**
      * @type {StickySessionConfigForModifyServerGroupAttributesInput}

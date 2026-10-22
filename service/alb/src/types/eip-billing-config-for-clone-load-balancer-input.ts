@@ -37,4 +37,16 @@ export interface EipBillingConfigForCloneLoadBalancerInput {
      * @memberof EipBillingConfigForCloneLoadBalancerInput
      */
     ISP?: string;
+
+    /**
+     * @type {number}
+     * @memberof EipBillingConfigForCloneLoadBalancerInput
+     */
+    SecurityProtectionInstanceId?: number;
+
+    /**
+     * @type {string}
+     * @memberof EipBillingConfigForCloneLoadBalancerInput
+     */
+    SecurityProtectionTypes?: string;
 }

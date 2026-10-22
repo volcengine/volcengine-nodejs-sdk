@@ -159,4 +159,10 @@ export interface CreateListenerRequest {
      * @memberof CreateListenerRequest
      */
     Tags?: Array<TagForCreateListenerInput>;
+
+    /**
+     * @type {string}
+     * @memberof CreateListenerRequest
+     */
+    XRealIpEnabled?: string;
 }

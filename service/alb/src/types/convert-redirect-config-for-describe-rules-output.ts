@@ -49,4 +49,10 @@ export interface ConvertRedirectConfigForDescribeRulesOutput {
      * @memberof ConvertRedirectConfigForDescribeRulesOutput
      */
     Protocol?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertRedirectConfigForDescribeRulesOutput
+     */
+    _Query?: string;
 }

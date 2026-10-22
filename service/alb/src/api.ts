@@ -50,6 +50,8 @@ import { DeleteLoadBalancerRequest } from './types/index';
 import { DeleteLoadBalancerResponse } from './types/index';
 import { DeleteRulesRequest } from './types/index';
 import { DeleteRulesResponse } from './types/index';
+import { DeleteServerGroupMcpRestToolRequest } from './types/index';
+import { DeleteServerGroupMcpRestToolResponse } from './types/index';
 import { DeleteServerGroupRequest } from './types/index';
 import { DeleteServerGroupResponse } from './types/index';
 import { DescribeAclAttributesRequest } from './types/index';
@@ -84,6 +86,8 @@ import { DescribeServerGroupAttributesRequest } from './types/index';
 import { DescribeServerGroupAttributesResponse } from './types/index';
 import { DescribeServerGroupBackendServersRequest } from './types/index';
 import { DescribeServerGroupBackendServersResponse } from './types/index';
+import { DescribeServerGroupMcpRestToolsRequest } from './types/index';
+import { DescribeServerGroupMcpRestToolsResponse } from './types/index';
 import { DescribeServerGroupsRequest } from './types/index';
 import { DescribeServerGroupsResponse } from './types/index';
 import { DescribeZonesRequest } from './types/index';
@@ -102,6 +106,10 @@ import { EnableTLSAccessLogRequest } from './types/index';
 import { EnableTLSAccessLogResponse } from './types/index';
 import { ListTagsForResourcesRequest } from './types/index';
 import { ListTagsForResourcesResponse } from './types/index';
+import { LoadBalancerJoinSecurityGroupRequest } from './types/index';
+import { LoadBalancerJoinSecurityGroupResponse } from './types/index';
+import { LoadBalancerLeaveSecurityGroupRequest } from './types/index';
+import { LoadBalancerLeaveSecurityGroupResponse } from './types/index';
 import { ModifyAclAttributesRequest } from './types/index';
 import { ModifyAclAttributesResponse } from './types/index';
 import { ModifyCACertificateAttributesRequest } from './types/index';
@@ -165,6 +173,7 @@ export type DeleteListenerCommandOutput = CommandOutput<DeleteListenerResponse>;
 export type DeleteLoadBalancerCommandOutput = CommandOutput<DeleteLoadBalancerResponse>;
 export type DeleteRulesCommandOutput = CommandOutput<DeleteRulesResponse>;
 export type DeleteServerGroupCommandOutput = CommandOutput<DeleteServerGroupResponse>;
+export type DeleteServerGroupMcpRestToolCommandOutput = CommandOutput<DeleteServerGroupMcpRestToolResponse>;
 export type DescribeAclAttributesCommandOutput = CommandOutput<DescribeAclAttributesResponse>;
 export type DescribeAclsCommandOutput = CommandOutput<DescribeAclsResponse>;
 export type DescribeAllCertificatesCommandOutput = CommandOutput<DescribeAllCertificatesResponse>;
@@ -181,6 +190,7 @@ export type DescribeLoadBalancersCommandOutput = CommandOutput<DescribeLoadBalan
 export type DescribeRulesCommandOutput = CommandOutput<DescribeRulesResponse>;
 export type DescribeServerGroupAttributesCommandOutput = CommandOutput<DescribeServerGroupAttributesResponse>;
 export type DescribeServerGroupBackendServersCommandOutput = CommandOutput<DescribeServerGroupBackendServersResponse>;
+export type DescribeServerGroupMcpRestToolsCommandOutput = CommandOutput<DescribeServerGroupMcpRestToolsResponse>;
 export type DescribeServerGroupsCommandOutput = CommandOutput<DescribeServerGroupsResponse>;
 export type DescribeZonesCommandOutput = CommandOutput<DescribeZonesResponse>;
 export type DisableAccessLogCommandOutput = CommandOutput<DisableAccessLogResponse>;
@@ -190,6 +200,8 @@ export type EnableAccessLogCommandOutput = CommandOutput<EnableAccessLogResponse
 export type EnableHealthLogCommandOutput = CommandOutput<EnableHealthLogResponse>;
 export type EnableTLSAccessLogCommandOutput = CommandOutput<EnableTLSAccessLogResponse>;
 export type ListTagsForResourcesCommandOutput = CommandOutput<ListTagsForResourcesResponse>;
+export type LoadBalancerJoinSecurityGroupCommandOutput = CommandOutput<LoadBalancerJoinSecurityGroupResponse>;
+export type LoadBalancerLeaveSecurityGroupCommandOutput = CommandOutput<LoadBalancerLeaveSecurityGroupResponse>;
 export type ModifyAclAttributesCommandOutput = CommandOutput<ModifyAclAttributesResponse>;
 export type ModifyCACertificateAttributesCommandOutput = CommandOutput<ModifyCACertificateAttributesResponse>;
 export type ModifyCertificateAttributesCommandOutput = CommandOutput<ModifyCertificateAttributesResponse>;
@@ -210,7 +222,6 @@ export type TagResourcesCommandOutput = CommandOutput<TagResourcesResponse>;
 export type UntagResourcesCommandOutput = CommandOutput<UntagResourcesResponse>;
 export type UploadCACertificateCommandOutput = CommandOutput<UploadCACertificateResponse>;
 export type UploadCertificateCommandOutput = CommandOutput<UploadCertificateResponse>;
-
 
 /**
  * ALBClient Service Client
@@ -511,6 +522,21 @@ export class DeleteServerGroupCommand extends Command<
   }
 }
 /**
+ * Command to DeleteServerGroupMcpRestTool
+ */
+export class DeleteServerGroupMcpRestToolCommand extends Command<
+  DeleteServerGroupMcpRestToolRequest,
+  DeleteServerGroupMcpRestToolCommandOutput,
+  'DeleteServerGroupMcpRestToolCommand'
+> {
+  static readonly metaPath = '/DeleteServerGroupMcpRestTool/2020-04-01/alb/get/text_plain/';
+
+  constructor(input: DeleteServerGroupMcpRestToolRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteServerGroupMcpRestToolCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeAclAttributes
  */
 export class DescribeAclAttributesCommand extends Command<
@@ -751,6 +777,21 @@ export class DescribeServerGroupBackendServersCommand extends Command<
   }
 }
 /**
+ * Command to DescribeServerGroupMcpRestTools
+ */
+export class DescribeServerGroupMcpRestToolsCommand extends Command<
+  DescribeServerGroupMcpRestToolsRequest,
+  DescribeServerGroupMcpRestToolsCommandOutput,
+  'DescribeServerGroupMcpRestToolsCommand'
+> {
+  static readonly metaPath = '/DescribeServerGroupMcpRestTools/2020-04-01/alb/get/text_plain/';
+
+  constructor(input: DescribeServerGroupMcpRestToolsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribeServerGroupMcpRestToolsCommand.metaPath);
+  }
+}
+/**
  * Command to DescribeServerGroups
  */
 export class DescribeServerGroupsCommand extends Command<
@@ -883,6 +924,36 @@ export class ListTagsForResourcesCommand extends Command<
   constructor(input: ListTagsForResourcesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListTagsForResourcesCommand.metaPath);
+  }
+}
+/**
+ * Command to LoadBalancerJoinSecurityGroup
+ */
+export class LoadBalancerJoinSecurityGroupCommand extends Command<
+  LoadBalancerJoinSecurityGroupRequest,
+  LoadBalancerJoinSecurityGroupCommandOutput,
+  'LoadBalancerJoinSecurityGroupCommand'
+> {
+  static readonly metaPath = '/LoadBalancerJoinSecurityGroup/2020-04-01/alb/get/text_plain/';
+
+  constructor(input: LoadBalancerJoinSecurityGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(LoadBalancerJoinSecurityGroupCommand.metaPath);
+  }
+}
+/**
+ * Command to LoadBalancerLeaveSecurityGroup
+ */
+export class LoadBalancerLeaveSecurityGroupCommand extends Command<
+  LoadBalancerLeaveSecurityGroupRequest,
+  LoadBalancerLeaveSecurityGroupCommandOutput,
+  'LoadBalancerLeaveSecurityGroupCommand'
+> {
+  static readonly metaPath = '/LoadBalancerLeaveSecurityGroup/2020-04-01/alb/get/text_plain/';
+
+  constructor(input: LoadBalancerLeaveSecurityGroupRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(LoadBalancerLeaveSecurityGroupCommand.metaPath);
   }
 }
 /**
@@ -1207,6 +1278,7 @@ export default {
   DeleteLoadBalancerCommand,
   DeleteRulesCommand,
   DeleteServerGroupCommand,
+  DeleteServerGroupMcpRestToolCommand,
   DescribeAclAttributesCommand,
   DescribeAclsCommand,
   DescribeAllCertificatesCommand,
@@ -1223,6 +1295,7 @@ export default {
   DescribeRulesCommand,
   DescribeServerGroupAttributesCommand,
   DescribeServerGroupBackendServersCommand,
+  DescribeServerGroupMcpRestToolsCommand,
   DescribeServerGroupsCommand,
   DescribeZonesCommand,
   DisableAccessLogCommand,
@@ -1232,6 +1305,8 @@ export default {
   EnableHealthLogCommand,
   EnableTLSAccessLogCommand,
   ListTagsForResourcesCommand,
+  LoadBalancerJoinSecurityGroupCommand,
+  LoadBalancerLeaveSecurityGroupCommand,
   ModifyAclAttributesCommand,
   ModifyCACertificateAttributesCommand,
   ModifyCertificateAttributesCommand,
