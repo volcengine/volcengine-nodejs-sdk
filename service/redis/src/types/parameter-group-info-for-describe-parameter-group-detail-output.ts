@@ -67,7 +67,7 @@ export interface ParameterGroupInfoForDescribeParameterGroupDetailOutput {
      * @type {string}
      * @memberof ParameterGroupInfoForDescribeParameterGroupDetailOutput
      */
-    Source?: ParameterGroupInfoForDescribeParameterGroupDetailOutputSourceEnum;
+    Source?: string;
 
     /**
      * @type {string}
@@ -75,13 +75,3 @@ export interface ParameterGroupInfoForDescribeParameterGroupDetailOutput {
      */
     UpdateTime?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum ParameterGroupInfoForDescribeParameterGroupDetailOutputSourceEnum {
-    System = 'System',
-    User = 'User'
-}
-

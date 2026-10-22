@@ -24,7 +24,7 @@ export interface SecurityGroupBindInfoForDescribeAllowListsOutput {
      * @type {string}
      * @memberof SecurityGroupBindInfoForDescribeAllowListsOutput
      */
-    BindMode?: SecurityGroupBindInfoForDescribeAllowListsOutputBindModeEnum;
+    BindMode?: string;
 
     /**
      * @type {Array<string>}
@@ -44,13 +44,3 @@ export interface SecurityGroupBindInfoForDescribeAllowListsOutput {
      */
     SecurityGroupName?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum SecurityGroupBindInfoForDescribeAllowListsOutputBindModeEnum {
-    AssociateEcsIp = 'AssociateEcsIp',
-    IngressDirectionIp = 'IngressDirectionIp'
-}
-

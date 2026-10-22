@@ -43,13 +43,13 @@ export interface BackupForDescribeCrossRegionBackupsOutput {
      * @type {string}
      * @memberof BackupForDescribeCrossRegionBackupsOutput
      */
-    BackupStrategy?: BackupForDescribeCrossRegionBackupsOutputBackupStrategyEnum;
+    BackupStrategy?: string;
 
     /**
      * @type {string}
      * @memberof BackupForDescribeCrossRegionBackupsOutput
      */
-    BackupType?: BackupForDescribeCrossRegionBackupsOutputBackupTypeEnum;
+    BackupType?: string;
 
     /**
      * @type {string}
@@ -97,7 +97,7 @@ export interface BackupForDescribeCrossRegionBackupsOutput {
      * @type {string}
      * @memberof BackupForDescribeCrossRegionBackupsOutput
      */
-    Status?: BackupForDescribeCrossRegionBackupsOutputStatusEnum;
+    Status?: string;
 
     /**
      * @type {number}
@@ -111,35 +111,3 @@ export interface BackupForDescribeCrossRegionBackupsOutput {
      */
     TargetRegion?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum BackupForDescribeCrossRegionBackupsOutputBackupStrategyEnum {
-    ManualBackup = 'ManualBackup',
-    AutomatedBackup = 'AutomatedBackup',
-    DataFlashBack = 'DataFlashBack',
-    AllStrategy = 'AllStrategy'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum BackupForDescribeCrossRegionBackupsOutputBackupTypeEnum {
-    Invalid = 'Invalid',
-    Full = 'Full',
-    Inc = 'Inc',
-    All = 'All'
-}
-/**
- * @export
- * @enum {string}
- */
-export enum BackupForDescribeCrossRegionBackupsOutputStatusEnum {
-    Creating = 'Creating',
-    Available = 'Available',
-    Unavailable = 'Unavailable',
-    Deleting = 'Deleting'
-}
-
