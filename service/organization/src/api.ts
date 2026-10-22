@@ -90,6 +90,8 @@ import { ListTagsValuesRequest } from './types/index';
 import { ListTagsValuesResponse } from './types/index';
 import { ListTargetsForPolicyRequest } from './types/index';
 import { ListTargetsForPolicyResponse } from './types/index';
+import { ListTrustedServiceAdministratorsRequest } from './types/index';
+import { ListTrustedServiceAdministratorsResponse } from './types/index';
 import { ListTrustedServiceStatusRequest } from './types/index';
 import { ListTrustedServiceStatusResponse } from './types/index';
 import { MoveAccountRequest } from './types/index';
@@ -160,6 +162,7 @@ export type ListTagResourcesCommandOutput = CommandOutput<ListTagResourcesRespon
 export type ListTagsKeysCommandOutput = CommandOutput<ListTagsKeysResponse>;
 export type ListTagsValuesCommandOutput = CommandOutput<ListTagsValuesResponse>;
 export type ListTargetsForPolicyCommandOutput = CommandOutput<ListTargetsForPolicyResponse>;
+export type ListTrustedServiceAdministratorsCommandOutput = CommandOutput<ListTrustedServiceAdministratorsResponse>;
 export type ListTrustedServiceStatusCommandOutput = CommandOutput<ListTrustedServiceStatusResponse>;
 export type MoveAccountCommandOutput = CommandOutput<MoveAccountResponse>;
 export type QuitOrganizationCommandOutput = CommandOutput<QuitOrganizationResponse>;
@@ -759,6 +762,21 @@ export class ListTargetsForPolicyCommand extends Command<
   }
 }
 /**
+ * Command to ListTrustedServiceAdministrators
+ */
+export class ListTrustedServiceAdministratorsCommand extends Command<
+  ListTrustedServiceAdministratorsRequest,
+  ListTrustedServiceAdministratorsCommandOutput,
+  'ListTrustedServiceAdministratorsCommand'
+> {
+  static readonly metaPath = '/ListTrustedServiceAdministrators/2022-01-01/organization/post/application_json/';
+
+  constructor(input: ListTrustedServiceAdministratorsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListTrustedServiceAdministratorsCommand.metaPath);
+  }
+}
+/**
  * Command to ListTrustedServiceStatus
  */
 export class ListTrustedServiceStatusCommand extends Command<
@@ -1009,6 +1027,7 @@ export default {
   ListTagsKeysCommand,
   ListTagsValuesCommand,
   ListTargetsForPolicyCommand,
+  ListTrustedServiceAdministratorsCommand,
   ListTrustedServiceStatusCommand,
   MoveAccountCommand,
   QuitOrganizationCommand,
