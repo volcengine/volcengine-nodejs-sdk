@@ -21,12 +21,6 @@
 export interface ServiceStatusRequest {
 
     /**
-     * @type {number}
-     * @memberof ServiceStatusRequest
-     */
-    BlueprintID: number;
-
-    /**
      * @type {string}
      * @memberof ServiceStatusRequest
      */

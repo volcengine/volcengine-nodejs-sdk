@@ -21,10 +21,10 @@
 export interface UpdateAPIKeyRequest {
 
     /**
-     * @type {string}
+     * @type {boolean}
      * @memberof UpdateAPIKeyRequest
      */
-    Disable?: string;
+    Disable?: boolean;
 
     /**
      * @type {number}

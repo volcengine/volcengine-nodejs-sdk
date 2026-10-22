@@ -21,10 +21,10 @@
 export interface ListSpeakersRequest {
 
     /**
-     * @type {string}
+     * @type {number}
      * @memberof ListSpeakersRequest
      */
-    Limit?: string;
+    Limit?: number;
 
     /**
      * @type {number}
