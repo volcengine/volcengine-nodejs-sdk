@@ -37,4 +37,10 @@ export interface DeleteAllowRuleRequest {
      * @memberof DeleteAllowRuleRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteAllowRuleRequest
+     */
+    WAFInstanceID?: string;
 }

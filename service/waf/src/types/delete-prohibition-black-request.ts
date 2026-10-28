@@ -37,4 +37,10 @@ export interface DeleteProhibitionBlackRequest {
      * @memberof DeleteProhibitionBlackRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteProhibitionBlackRequest
+     */
+    WAFInstanceID?: string;
 }

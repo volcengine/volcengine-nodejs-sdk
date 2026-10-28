@@ -24,13 +24,7 @@ export interface UpdateSystemBotConfigRequest {
      * @type {string}
      * @memberof UpdateSystemBotConfigRequest
      */
-    Action?: string;
-
-    /**
-     * @type {string}
-     * @memberof UpdateSystemBotConfigRequest
-     */
-    BotType: string;
+    Action?: UpdateSystemBotConfigRequestActionEnum;
 
     /**
      * @type {number}
@@ -49,4 +43,36 @@ export interface UpdateSystemBotConfigRequest {
      * @memberof UpdateSystemBotConfigRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {Array<string>}
+     * @memberof UpdateSystemBotConfigRequest
+     */
+    RuleTagList?: Array<string>;
+
+    /**
+     * @type {number}
+     * @memberof UpdateSystemBotConfigRequest
+     */
+    VerificationExemptionTime?: number;
+
+    /**
+     * @type {string}
+     * @memberof UpdateSystemBotConfigRequest
+     */
+    WAFInstanceID?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum UpdateSystemBotConfigRequestActionEnum {
+    Observe = 'observe',
+    Block = 'block',
+    Js = 'js',
+    Pow = 'pow',
+    Captcha = 'captcha',
+    Permit = 'permit'
+}
+

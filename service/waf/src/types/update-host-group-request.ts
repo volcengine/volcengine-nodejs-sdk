@@ -55,4 +55,10 @@ export interface UpdateHostGroupRequest {
      * @memberof UpdateHostGroupRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateHostGroupRequest
+     */
+    WAFInstanceID?: string;
 }

@@ -152,4 +152,10 @@ export interface ListDomainRequest {
      * @memberof ListDomainRequest
      */
     VpcOwnerName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListDomainRequest
+     */
+    WAFInstanceID?: string;
 }

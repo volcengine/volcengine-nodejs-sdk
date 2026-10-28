@@ -46,10 +46,10 @@ export interface CreateCustomPageRequest {
     ClientIp: string;
 
     /**
-     * @type {number}
+     * @type {string}
      * @memberof CreateCustomPageRequest
      */
-    Code: number;
+    Code?: string;
 
     /**
      * @type {string}
@@ -61,13 +61,13 @@ export interface CreateCustomPageRequest {
      * @type {string}
      * @memberof CreateCustomPageRequest
      */
-    Description?: string;
+    Description: string;
 
     /**
      * @type {number}
      * @memberof CreateCustomPageRequest
      */
-    Enable: number;
+    Enable?: number;
 
     /**
      * @type {string}
@@ -94,6 +94,12 @@ export interface CreateCustomPageRequest {
     Policy: number;
 
     /**
+     * @type {number}
+     * @memberof CreateCustomPageRequest
+     */
+    PrefixSwitch?: number;
+
+    /**
      * @type {string}
      * @memberof CreateCustomPageRequest
      */
@@ -110,4 +116,10 @@ export interface CreateCustomPageRequest {
      * @memberof CreateCustomPageRequest
      */
     Url: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateCustomPageRequest
+     */
+    WAFInstanceID?: string;
 }

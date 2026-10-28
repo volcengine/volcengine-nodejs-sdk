@@ -245,4 +245,10 @@ export interface UpdateDomainRequest {
      * @memberof UpdateDomainRequest
      */
     VpcID?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateDomainRequest
+     */
+    WAFInstanceID?: string;
 }

@@ -24,7 +24,19 @@ export interface ListVulWhiteFieldRequest {
      * @type {string}
      * @memberof ListVulWhiteFieldRequest
      */
-    Host: string;
+    Host?: string;
+
+    /**
+     * @type {number}
+     * @memberof ListVulWhiteFieldRequest
+     */
+    HostAddType?: number;
+
+    /**
+     * @type {Array<string>}
+     * @memberof ListVulWhiteFieldRequest
+     */
+    HostList?: Array<string>;
 
     /**
      * @type {number}
@@ -36,7 +48,7 @@ export interface ListVulWhiteFieldRequest {
      * @type {number}
      * @memberof ListVulWhiteFieldRequest
      */
-    PageSize: number;
+    PageSize?: number;
 
     /**
      * @type {string}
@@ -49,4 +61,10 @@ export interface ListVulWhiteFieldRequest {
      * @memberof ListVulWhiteFieldRequest
      */
     RuleTag?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListVulWhiteFieldRequest
+     */
+    WAFInstanceID?: string;
 }

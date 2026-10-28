@@ -468,4 +468,10 @@ export interface DataForListDomainOutput {
      * @memberof DataForListDomainOutput
      */
     WhiteFieldEnable?: number;
+
+    /**
+     * @type {number}
+     * @memberof DataForListDomainOutput
+     */
+    XFFReset?: number;
 }

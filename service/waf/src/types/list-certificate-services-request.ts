@@ -37,4 +37,10 @@ export interface ListCertificateServicesRequest {
      * @memberof ListCertificateServicesRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListCertificateServicesRequest
+     */
+    WAFInstanceID?: string;
 }

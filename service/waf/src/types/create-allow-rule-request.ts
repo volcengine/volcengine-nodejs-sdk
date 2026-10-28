@@ -86,4 +86,10 @@ export interface CreateAllowRuleRequest {
      * @memberof CreateAllowRuleRequest
      */
     Url: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateAllowRuleRequest
+     */
+    WAFInstanceID?: string;
 }

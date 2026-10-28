@@ -37,4 +37,10 @@ export interface DeleteDomainRequest {
      * @memberof DeleteDomainRequest
      */
     Region: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteDomainRequest
+     */
+    WAFInstanceID?: string;
 }

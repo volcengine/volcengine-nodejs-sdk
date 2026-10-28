@@ -49,4 +49,10 @@ export interface UploadWafServiceCertificateRequest {
      * @memberof UploadWafServiceCertificateRequest
      */
     PublicKey: string;
+
+    /**
+     * @type {string}
+     * @memberof UploadWafServiceCertificateRequest
+     */
+    WAFInstanceID?: string;
 }

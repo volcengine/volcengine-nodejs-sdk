@@ -43,4 +43,10 @@ export interface UpdateInstanceCtlRequest {
      * @memberof UpdateInstanceCtlRequest
      */
     Region: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateInstanceCtlRequest
+     */
+    WAFInstanceID?: string;
 }

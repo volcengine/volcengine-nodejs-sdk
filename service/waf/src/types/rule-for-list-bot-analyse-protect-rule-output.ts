@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { CronConfForListBotAnalyseProtectRuleOutput } from './cron-conf-for-list-bot-analyse-protect-rule-output';
 import { GroupForListBotAnalyseProtectRuleOutput } from './group-for-list-bot-analyse-protect-rule-output';
  /**
  * 
@@ -44,6 +45,18 @@ export interface RuleForListBotAnalyseProtectRuleOutput {
      * @memberof RuleForListBotAnalyseProtectRuleOutput
      */
     ActionType?: number;
+
+    /**
+     * @type {Array<CronConfForListBotAnalyseProtectRuleOutput>}
+     * @memberof RuleForListBotAnalyseProtectRuleOutput
+     */
+    CronConfs?: Array<CronConfForListBotAnalyseProtectRuleOutput>;
+
+    /**
+     * @type {number}
+     * @memberof RuleForListBotAnalyseProtectRuleOutput
+     */
+    CronEnable?: number;
 
     /**
      * @type {number}

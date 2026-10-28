@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { ResponseMetadataForCreateCustomPageOutput } from './response-metadata-for-create-custom-page-output';
+import { ResultForCreateCustomPageOutput } from './result-for-create-custom-page-output';
  /**
  * 
  *
@@ -25,4 +27,16 @@ export interface CreateCustomPageResponse {
      * @memberof CreateCustomPageResponse
      */
     Id?: number;
+
+    /**
+     * @type {ResponseMetadataForCreateCustomPageOutput}
+     * @memberof CreateCustomPageResponse
+     */
+    ResponseMetadata?: ResponseMetadataForCreateCustomPageOutput;
+
+    /**
+     * @type {ResultForCreateCustomPageOutput}
+     * @memberof CreateCustomPageResponse
+     */
+    Result?: ResultForCreateCustomPageOutput;
 }

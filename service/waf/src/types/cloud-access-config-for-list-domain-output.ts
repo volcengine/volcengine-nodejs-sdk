@@ -51,12 +51,6 @@ export interface CloudAccessConfigForListDomainOutput {
     ListenerID?: string;
 
     /**
-     * @type {number}
-     * @memberof CloudAccessConfigForListDomainOutput
-     */
-    LostAssociationFromALB?: number;
-
-    /**
      * @type {string}
      * @memberof CloudAccessConfigForListDomainOutput
      */

@@ -36,13 +36,25 @@ export interface UpdateVulWhiteFieldRequest {
      * @type {string}
      * @memberof UpdateVulWhiteFieldRequest
      */
-    FieldList: string;
+    FieldList?: string;
 
     /**
      * @type {string}
      * @memberof UpdateVulWhiteFieldRequest
      */
-    Host: string;
+    Host?: string;
+
+    /**
+     * @type {number}
+     * @memberof UpdateVulWhiteFieldRequest
+     */
+    HostAddType?: number;
+
+    /**
+     * @type {Array<string>}
+     * @memberof UpdateVulWhiteFieldRequest
+     */
+    HostList?: Array<string>;
 
     /**
      * @type {number}
@@ -61,4 +73,10 @@ export interface UpdateVulWhiteFieldRequest {
      * @memberof UpdateVulWhiteFieldRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateVulWhiteFieldRequest
+     */
+    WAFInstanceID?: string;
 }

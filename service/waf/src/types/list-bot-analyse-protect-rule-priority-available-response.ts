@@ -21,8 +21,32 @@
 export interface ListBotAnalyseProtectRulePriorityAvailableResponse {
 
     /**
+     * @type {number}
+     * @memberof ListBotAnalyseProtectRulePriorityAvailableResponse
+     */
+    Count?: number;
+
+    /**
+     * @type {number}
+     * @memberof ListBotAnalyseProtectRulePriorityAvailableResponse
+     */
+    CurrentPage?: number;
+
+    /**
+     * @type {number}
+     * @memberof ListBotAnalyseProtectRulePriorityAvailableResponse
+     */
+    PageSize?: number;
+
+    /**
      * @type {Array<number>}
      * @memberof ListBotAnalyseProtectRulePriorityAvailableResponse
      */
     RulePriority?: Array<number>;
+
+    /**
+     * @type {number}
+     * @memberof ListBotAnalyseProtectRulePriorityAvailableResponse
+     */
+    TotalCount?: number;
 }

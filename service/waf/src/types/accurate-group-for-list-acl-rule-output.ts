@@ -31,5 +31,11 @@ export interface AccurateGroupForListAclRuleOutput {
      * @type {number}
      * @memberof AccurateGroupForListAclRuleOutput
      */
+    Id?: number;
+
+    /**
+     * @type {number}
+     * @memberof AccurateGroupForListAclRuleOutput
+     */
     Logic?: number;
 }

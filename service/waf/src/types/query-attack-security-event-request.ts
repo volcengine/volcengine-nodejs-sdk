@@ -103,4 +103,10 @@ export interface QueryAttackSecurityEventRequest {
      * @memberof QueryAttackSecurityEventRequest
      */
     StartTime: number;
+
+    /**
+     * @type {string}
+     * @memberof QueryAttackSecurityEventRequest
+     */
+    WAFInstanceID?: string;
 }

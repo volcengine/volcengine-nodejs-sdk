@@ -49,4 +49,10 @@ export interface ListAllowRuleRequest {
      * @memberof ListAllowRuleRequest
      */
     Url?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListAllowRuleRequest
+     */
+    WAFInstanceID?: string;
 }

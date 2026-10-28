@@ -12,7 +12,8 @@
  * Do not edit the class manually.
  */
 
-import { RuleGroupForListCCRuleOutput } from './rule-group-for-list-ccrule-output';
+import { ConvertRuleGroupForListCCRuleOutput } from './convert-rule-group-for-list-ccrule-output';
+import { DataForListCCRuleOutput } from './data-for-list-ccrule-output';
  /**
  * 
  *
@@ -34,6 +35,12 @@ export interface ListCCRuleResponse {
     CurrentPage?: number;
 
     /**
+     * @type {Array<DataForListCCRuleOutput>}
+     * @memberof ListCCRuleResponse
+     */
+    Data?: Array<DataForListCCRuleOutput>;
+
+    /**
      * @type {number}
      * @memberof ListCCRuleResponse
      */
@@ -52,10 +59,10 @@ export interface ListCCRuleResponse {
     PageSize?: number;
 
     /**
-     * @type {Array<RuleGroupForListCCRuleOutput>}
+     * @type {Array<ConvertRuleGroupForListCCRuleOutput>}
      * @memberof ListCCRuleResponse
      */
-    RuleGroup?: Array<RuleGroupForListCCRuleOutput>;
+    RuleGroup?: Array<ConvertRuleGroupForListCCRuleOutput>;
 
     /**
      * @type {number}

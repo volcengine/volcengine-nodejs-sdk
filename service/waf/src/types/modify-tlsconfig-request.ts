@@ -71,6 +71,12 @@ export interface ModifyTLSConfigRequest {
     TLSStorageTime?: number;
 
     /**
+     * @type {string}
+     * @memberof ModifyTLSConfigRequest
+     */
+    WAFInstanceID?: string;
+
+    /**
      * @type {WafActionListForModifyTLSConfigInput}
      * @memberof ModifyTLSConfigRequest
      */

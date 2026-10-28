@@ -51,12 +51,6 @@ export interface CloudAccessConfigForCreateDomainInput {
     ListenerID?: string;
 
     /**
-     * @type {number}
-     * @memberof CloudAccessConfigForCreateDomainInput
-     */
-    LostAssociationFromALB?: number;
-
-    /**
      * @type {string}
      * @memberof CloudAccessConfigForCreateDomainInput
      */

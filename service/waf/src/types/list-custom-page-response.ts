@@ -13,6 +13,9 @@
  */
 
 import { DataForListCustomPageOutput } from './data-for-list-custom-page-output';
+import { PageInfoForListCustomPageOutput } from './page-info-for-list-custom-page-output';
+import { ResponseMetadataForListCustomPageOutput } from './response-metadata-for-list-custom-page-output';
+import { ResultForListCustomPageOutput } from './result-for-list-custom-page-output';
  /**
  * 
  *
@@ -34,6 +37,12 @@ export interface ListCustomPageResponse {
     Data?: Array<DataForListCustomPageOutput>;
 
     /**
+     * @type {PageInfoForListCustomPageOutput}
+     * @memberof ListCustomPageResponse
+     */
+    PageInfo?: PageInfoForListCustomPageOutput;
+
+    /**
      * @type {number}
      * @memberof ListCustomPageResponse
      */
@@ -44,4 +53,16 @@ export interface ListCustomPageResponse {
      * @memberof ListCustomPageResponse
      */
     PageSize?: number;
+
+    /**
+     * @type {ResponseMetadataForListCustomPageOutput}
+     * @memberof ListCustomPageResponse
+     */
+    ResponseMetadata?: ResponseMetadataForListCustomPageOutput;
+
+    /**
+     * @type {Array<ResultForListCustomPageOutput>}
+     * @memberof ListCustomPageResponse
+     */
+    Result?: Array<ResultForListCustomPageOutput>;
 }

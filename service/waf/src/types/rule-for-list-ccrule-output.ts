@@ -59,6 +59,12 @@ export interface RuleForListCCRuleOutput {
     CronEnable?: number;
 
     /**
+     * @type {string}
+     * @memberof RuleForListCCRuleOutput
+     */
+    CustomResponsePageID?: string;
+
+    /**
      * @type {number}
      * @memberof RuleForListCCRuleOutput
      */
@@ -135,4 +141,39 @@ export interface RuleForListCCRuleOutput {
      * @memberof RuleForListCCRuleOutput
      */
     Url?: string;
+
+    /**
+     * @type {number}
+     * @memberof RuleForListCCRuleOutput
+     */
+    WSCdnByteThreshold?: number;
+
+    /**
+     * @type {number}
+     * @memberof RuleForListCCRuleOutput
+     */
+    WSCdnEnable?: number;
+
+    /**
+     * @type {number}
+     * @memberof RuleForListCCRuleOutput
+     */
+    WSCdnFrameThreshold?: number;
+
+    /**
+     * @type {string}
+     * @memberof RuleForListCCRuleOutput
+     */
+    WSCdnUnit?: RuleForListCCRuleOutputWSCdnUnitEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum RuleForListCCRuleOutputWSCdnUnitEnum {
+    KB = 'KB',
+    MB = 'MB',
+    GB = 'GB'
+}
+

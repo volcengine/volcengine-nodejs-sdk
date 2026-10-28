@@ -24,13 +24,13 @@ export interface ListAclRuleRequest {
      * @type {string}
      * @memberof ListAclRuleRequest
      */
-    AclType: string;
+    AclType: ListAclRuleRequestAclTypeEnum;
 
     /**
      * @type {Array<string>}
      * @memberof ListAclRuleRequest
      */
-    Action?: Array<string>;
+    Action?: Array<ListAclRuleRequestActionEnum>;
 
     /**
      * @type {Array<string>}
@@ -78,5 +78,37 @@ export interface ListAclRuleRequest {
      * @type {string}
      * @memberof ListAclRuleRequest
      */
-    TimeOrderBy?: string;
+    TimeOrderBy?: ListAclRuleRequestTimeOrderByEnum;
+
+    /**
+     * @type {string}
+     * @memberof ListAclRuleRequest
+     */
+    WAFInstanceID?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ListAclRuleRequestAclTypeEnum {
+    Allow = 'Allow',
+    Block = 'Block'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ListAclRuleRequestActionEnum {
+    Block = 'block',
+    Observe = 'observe'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ListAclRuleRequestTimeOrderByEnum {
+    ASC = 'ASC',
+    DESC = 'DESC'
+}
+

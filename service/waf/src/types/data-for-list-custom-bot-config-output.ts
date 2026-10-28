@@ -22,10 +22,10 @@ import { AccurateForListCustomBotConfigOutput } from './accurate-for-list-custom
 export interface DataForListCustomBotConfigOutput {
 
     /**
-     * @type {Array<AccurateForListCustomBotConfigOutput>}
+     * @type {AccurateForListCustomBotConfigOutput}
      * @memberof DataForListCustomBotConfigOutput
      */
-    Accurate?: Array<AccurateForListCustomBotConfigOutput>;
+    Accurate?: AccurateForListCustomBotConfigOutput;
 
     /**
      * @type {string}
@@ -74,4 +74,10 @@ export interface DataForListCustomBotConfigOutput {
      * @memberof DataForListCustomBotConfigOutput
      */
     UpdateTime?: string;
+
+    /**
+     * @type {number}
+     * @memberof DataForListCustomBotConfigOutput
+     */
+    VerificationExemptionTime?: number;
 }

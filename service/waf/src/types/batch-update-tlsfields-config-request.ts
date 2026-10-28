@@ -44,4 +44,10 @@ export interface BatchUpdateTLSFieldsConfigRequest {
      * @memberof BatchUpdateTLSFieldsConfigRequest
      */
     TLSFieldsConfig?: TLSFieldsConfigForBatchUpdateTLSFieldsConfigInput;
+
+    /**
+     * @type {string}
+     * @memberof BatchUpdateTLSFieldsConfigRequest
+     */
+    WAFInstanceID?: string;
 }

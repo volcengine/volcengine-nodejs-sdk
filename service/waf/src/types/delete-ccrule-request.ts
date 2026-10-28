@@ -37,4 +37,10 @@ export interface DeleteCCRuleRequest {
      * @memberof DeleteCCRuleRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteCCRuleRequest
+     */
+    WAFInstanceID?: string;
 }

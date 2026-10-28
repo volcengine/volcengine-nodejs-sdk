@@ -13,6 +13,7 @@
  */
 
 import { AccurateGroupForCreateBotAnalyseProtectRuleInput } from './accurate-group-for-create-bot-analyse-protect-rule-input';
+import { CronConfForCreateBotAnalyseProtectRuleInput } from './cron-conf-for-create-bot-analyse-protect-rule-input';
  /**
  * 
  *
@@ -22,16 +23,16 @@ import { AccurateGroupForCreateBotAnalyseProtectRuleInput } from './accurate-gro
 export interface CreateBotAnalyseProtectRuleRequest {
 
     /**
-     * @type {Array<AccurateGroupForCreateBotAnalyseProtectRuleInput>}
+     * @type {AccurateGroupForCreateBotAnalyseProtectRuleInput}
      * @memberof CreateBotAnalyseProtectRuleRequest
      */
-    AccurateGroup?: Array<AccurateGroupForCreateBotAnalyseProtectRuleInput>;
+    AccurateGroup?: AccurateGroupForCreateBotAnalyseProtectRuleInput;
 
     /**
      * @type {number}
      * @memberof CreateBotAnalyseProtectRuleRequest
      */
-    ActionAfterVerification?: number;
+    AccurateGroupPriority?: number;
 
     /**
      * @type {number}
@@ -40,10 +41,22 @@ export interface CreateBotAnalyseProtectRuleRequest {
     ActionType: number;
 
     /**
+     * @type {Array<CronConfForCreateBotAnalyseProtectRuleInput>}
+     * @memberof CreateBotAnalyseProtectRuleRequest
+     */
+    CronConfs?: Array<CronConfForCreateBotAnalyseProtectRuleInput>;
+
+    /**
      * @type {number}
      * @memberof CreateBotAnalyseProtectRuleRequest
      */
-    EffectTime: number;
+    CronEnable?: number;
+
+    /**
+     * @type {number}
+     * @memberof CreateBotAnalyseProtectRuleRequest
+     */
+    EffectTime?: number;
 
     /**
      * @type {number}
@@ -109,7 +122,7 @@ export interface CreateBotAnalyseProtectRuleRequest {
      * @type {number}
      * @memberof CreateBotAnalyseProtectRuleRequest
      */
-    SingleThreshold: number;
+    SingleThreshold?: number;
 
     /**
      * @type {number}
@@ -122,4 +135,10 @@ export interface CreateBotAnalyseProtectRuleRequest {
      * @memberof CreateBotAnalyseProtectRuleRequest
      */
     StatisticalType: number;
+
+    /**
+     * @type {string}
+     * @memberof CreateBotAnalyseProtectRuleRequest
+     */
+    WAFInstanceID?: string;
 }

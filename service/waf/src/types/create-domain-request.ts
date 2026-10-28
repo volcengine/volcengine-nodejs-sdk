@@ -245,4 +245,10 @@ export interface CreateDomainRequest {
      * @memberof CreateDomainRequest
      */
     VpcID?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateDomainRequest
+     */
+    WAFInstanceID?: string;
 }

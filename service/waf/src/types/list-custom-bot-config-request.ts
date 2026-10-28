@@ -43,4 +43,16 @@ export interface ListCustomBotConfigRequest {
      * @memberof ListCustomBotConfigRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListCustomBotConfigRequest
+     */
+    RuleTag?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListCustomBotConfigRequest
+     */
+    WAFInstanceID?: string;
 }

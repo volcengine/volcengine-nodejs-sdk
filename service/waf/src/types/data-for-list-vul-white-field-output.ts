@@ -48,6 +48,18 @@ export interface DataForListVulWhiteFieldOutput {
      * @type {number}
      * @memberof DataForListVulWhiteFieldOutput
      */
+    HostAddType?: number;
+
+    /**
+     * @type {Array<string>}
+     * @memberof DataForListVulWhiteFieldOutput
+     */
+    HostList?: Array<string>;
+
+    /**
+     * @type {number}
+     * @memberof DataForListVulWhiteFieldOutput
+     */
     ID?: number;
 
     /**

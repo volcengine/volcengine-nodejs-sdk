@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { PageInfoForUpdateAreaBlockRuleOutput } from './page-info-for-update-area-block-rule-output';
+import { ResponseMetadataForUpdateAreaBlockRuleOutput } from './response-metadata-for-update-area-block-rule-output';
  /**
  * 
  *
@@ -19,4 +21,16 @@
  * @interface UpdateAreaBlockRuleResponse
  */
 export interface UpdateAreaBlockRuleResponse {
+
+    /**
+     * @type {PageInfoForUpdateAreaBlockRuleOutput}
+     * @memberof UpdateAreaBlockRuleResponse
+     */
+    PageInfo?: PageInfoForUpdateAreaBlockRuleOutput;
+
+    /**
+     * @type {ResponseMetadataForUpdateAreaBlockRuleOutput}
+     * @memberof UpdateAreaBlockRuleResponse
+     */
+    ResponseMetadata?: ResponseMetadataForUpdateAreaBlockRuleOutput;
 }

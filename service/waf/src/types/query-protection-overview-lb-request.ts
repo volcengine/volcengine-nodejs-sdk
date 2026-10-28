@@ -37,4 +37,10 @@ export interface QueryProtectionOverviewLbRequest {
      * @memberof QueryProtectionOverviewLbRequest
      */
     StartTime: number;
+
+    /**
+     * @type {string}
+     * @memberof QueryProtectionOverviewLbRequest
+     */
+    WAFInstanceID?: string;
 }

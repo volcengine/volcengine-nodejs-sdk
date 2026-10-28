@@ -22,10 +22,22 @@ import { AccurateRuleForCreateAclRuleInput } from './accurate-rule-for-create-ac
 export interface AccurateGroupForCreateAclRuleInput {
 
     /**
+     * @type {number}
+     * @memberof AccurateGroupForCreateAclRuleInput
+     */
+    AccurateGroupPriority?: number;
+
+    /**
      * @type {Array<AccurateRuleForCreateAclRuleInput>}
      * @memberof AccurateGroupForCreateAclRuleInput
      */
     AccurateRules?: Array<AccurateRuleForCreateAclRuleInput>;
+
+    /**
+     * @type {number}
+     * @memberof AccurateGroupForCreateAclRuleInput
+     */
+    Id?: number;
 
     /**
      * @type {number}

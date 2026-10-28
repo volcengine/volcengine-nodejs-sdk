@@ -43,4 +43,10 @@ export interface ListBlockRuleRequest {
      * @memberof ListBlockRuleRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListBlockRuleRequest
+     */
+    WAFInstanceID?: string;
 }

@@ -31,4 +31,10 @@ export interface GetInstanceCtlRequest {
      * @memberof GetInstanceCtlRequest
      */
     Region?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetInstanceCtlRequest
+     */
+    WAFInstanceID?: string;
 }

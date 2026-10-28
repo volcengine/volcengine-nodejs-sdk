@@ -48,7 +48,7 @@ export interface ListCCRuleRequest {
      * @type {string}
      * @memberof ListCCRuleRequest
      */
-    PathOrderBy?: string;
+    PathOrderBy?: ListCCRuleRequestPathOrderByEnum;
 
     /**
      * @type {string}
@@ -73,4 +73,20 @@ export interface ListCCRuleRequest {
      * @memberof ListCCRuleRequest
      */
     Url?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListCCRuleRequest
+     */
+    WAFInstanceID?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ListCCRuleRequestPathOrderByEnum {
+    ASC = 'ASC',
+    DESC = 'DESC'
+}
+

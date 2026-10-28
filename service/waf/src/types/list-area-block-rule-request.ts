@@ -24,11 +24,17 @@ export interface ListAreaBlockRuleRequest {
      * @type {string}
      * @memberof ListAreaBlockRuleRequest
      */
-    Host: string;
+    Host?: string;
 
     /**
      * @type {string}
      * @memberof ListAreaBlockRuleRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListAreaBlockRuleRequest
+     */
+    WAFInstanceID?: string;
 }

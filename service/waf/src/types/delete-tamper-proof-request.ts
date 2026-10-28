@@ -37,4 +37,10 @@ export interface DeleteTamperProofRequest {
      * @memberof DeleteTamperProofRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteTamperProofRequest
+     */
+    WAFInstanceID?: string;
 }

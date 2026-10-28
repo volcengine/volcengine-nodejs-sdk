@@ -43,4 +43,10 @@ export interface ListTamperProofRequest {
      * @memberof ListTamperProofRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListTamperProofRequest
+     */
+    WAFInstanceID?: string;
 }

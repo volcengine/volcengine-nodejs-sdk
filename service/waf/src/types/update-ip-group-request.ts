@@ -49,4 +49,10 @@ export interface UpdateIpGroupRequest {
      * @memberof UpdateIpGroupRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateIpGroupRequest
+     */
+    WAFInstanceID?: string;
 }

@@ -43,4 +43,10 @@ export interface AddHostGroupRequest {
      * @memberof AddHostGroupRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof AddHostGroupRequest
+     */
+    WAFInstanceID?: string;
 }

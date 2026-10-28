@@ -73,4 +73,10 @@ export interface ListHostGroupRequest {
      * @memberof ListHostGroupRequest
      */
     TimeOrderBy: string;
+
+    /**
+     * @type {string}
+     * @memberof ListHostGroupRequest
+     */
+    WAFInstanceID?: string;
 }

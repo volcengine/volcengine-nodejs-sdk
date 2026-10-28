@@ -31,4 +31,10 @@ export interface DeleteVulWhiteFieldRequest {
      * @memberof DeleteVulWhiteFieldRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteVulWhiteFieldRequest
+     */
+    WAFInstanceID?: string;
 }

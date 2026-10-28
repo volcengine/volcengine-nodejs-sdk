@@ -31,4 +31,10 @@ export interface DeleteIpGroupRequest {
      * @memberof DeleteIpGroupRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteIpGroupRequest
+     */
+    WAFInstanceID?: string;
 }

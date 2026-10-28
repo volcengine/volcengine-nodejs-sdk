@@ -31,4 +31,10 @@ export interface DeleteBotAnalyseProtectRuleRequest {
      * @memberof DeleteBotAnalyseProtectRuleRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteBotAnalyseProtectRuleRequest
+     */
+    WAFInstanceID?: string;
 }

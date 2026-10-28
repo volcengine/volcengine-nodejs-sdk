@@ -22,8 +22,38 @@ import { DataForListSystemBotConfigOutput } from './data-for-list-system-bot-con
 export interface ListSystemBotConfigResponse {
 
     /**
+     * @type {number}
+     * @memberof ListSystemBotConfigResponse
+     */
+    Count?: number;
+
+    /**
+     * @type {number}
+     * @memberof ListSystemBotConfigResponse
+     */
+    CurrentPage?: number;
+
+    /**
      * @type {Array<DataForListSystemBotConfigOutput>}
      * @memberof ListSystemBotConfigResponse
      */
     Data?: Array<DataForListSystemBotConfigOutput>;
+
+    /**
+     * @type {string}
+     * @memberof ListSystemBotConfigResponse
+     */
+    LastUpdateTime?: string;
+
+    /**
+     * @type {number}
+     * @memberof ListSystemBotConfigResponse
+     */
+    PageSize?: number;
+
+    /**
+     * @type {number}
+     * @memberof ListSystemBotConfigResponse
+     */
+    TotalCount?: number;
 }

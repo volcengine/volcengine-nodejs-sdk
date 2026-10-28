@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { FilerByRuleMatchForListSystemBotConfigInput } from './filer-by-rule-match-for-list-system-bot-config-input';
  /**
  * 
  *
@@ -21,14 +22,56 @@
 export interface ListSystemBotConfigRequest {
 
     /**
+     * @type {FilerByRuleMatchForListSystemBotConfigInput}
+     * @memberof ListSystemBotConfigRequest
+     */
+    FilerByRuleMatch?: FilerByRuleMatchForListSystemBotConfigInput;
+
+    /**
      * @type {string}
      * @memberof ListSystemBotConfigRequest
      */
-    Host: string;
+    Host?: string;
+
+    /**
+     * @type {boolean}
+     * @memberof ListSystemBotConfigRequest
+     */
+    IPMatch?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof ListSystemBotConfigRequest
+     */
+    Name?: string;
+
+    /**
+     * @type {number}
+     * @memberof ListSystemBotConfigRequest
+     */
+    Page?: number;
+
+    /**
+     * @type {number}
+     * @memberof ListSystemBotConfigRequest
+     */
+    PageSize?: number;
 
     /**
      * @type {string}
      * @memberof ListSystemBotConfigRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListSystemBotConfigRequest
+     */
+    RuleTag?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListSystemBotConfigRequest
+     */
+    WAFInstanceID?: string;
 }

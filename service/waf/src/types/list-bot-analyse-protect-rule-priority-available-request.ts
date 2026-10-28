@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { AccurateGroupForListBotAnalyseProtectRulePriorityAvailableInput } from './accurate-group-for-list-bot-analyse-protect-rule-priority-available-input';
  /**
  * 
  *
@@ -21,10 +22,16 @@
 export interface ListBotAnalyseProtectRulePriorityAvailableRequest {
 
     /**
+     * @type {AccurateGroupForListBotAnalyseProtectRulePriorityAvailableInput}
+     * @memberof ListBotAnalyseProtectRulePriorityAvailableRequest
+     */
+    AccurateGroup?: AccurateGroupForListBotAnalyseProtectRulePriorityAvailableInput;
+
+    /**
      * @type {string}
      * @memberof ListBotAnalyseProtectRulePriorityAvailableRequest
      */
-    BotSpace: string;
+    BotSpace: ListBotAnalyseProtectRulePriorityAvailableRequestBotSpaceEnum;
 
     /**
      * @type {string}
@@ -55,4 +62,20 @@ export interface ListBotAnalyseProtectRulePriorityAvailableRequest {
      * @memberof ListBotAnalyseProtectRulePriorityAvailableRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListBotAnalyseProtectRulePriorityAvailableRequest
+     */
+    WAFInstanceID?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ListBotAnalyseProtectRulePriorityAvailableRequestBotSpaceEnum {
+    BotFrequency = 'BotFrequency',
+    BotRepeat = 'BotRepeat'
+}
+

@@ -49,4 +49,10 @@ export interface QueryAttackAnalysisWithRuleAggLbRequest {
      * @memberof QueryAttackAnalysisWithRuleAggLbRequest
      */
     StartTime: number;
+
+    /**
+     * @type {string}
+     * @memberof QueryAttackAnalysisWithRuleAggLbRequest
+     */
+    WAFInstanceID?: string;
 }

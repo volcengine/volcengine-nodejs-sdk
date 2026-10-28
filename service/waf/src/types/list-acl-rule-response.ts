@@ -12,7 +12,10 @@
  * Do not edit the class manually.
  */
 
-import { RuleForListAclRuleOutput } from './rule-for-list-acl-rule-output';
+import { ConvertRuleForListAclRuleOutput } from './convert-rule-for-list-acl-rule-output';
+import { PageInfoForListAclRuleOutput } from './page-info-for-list-acl-rule-output';
+import { ResponseMetadataForListAclRuleOutput } from './response-metadata-for-list-acl-rule-output';
+import { ResultForListAclRuleOutput } from './result-for-list-acl-rule-output';
  /**
  * 
  *
@@ -34,16 +37,34 @@ export interface ListAclRuleResponse {
     CurrentPage?: number;
 
     /**
+     * @type {PageInfoForListAclRuleOutput}
+     * @memberof ListAclRuleResponse
+     */
+    PageInfo?: PageInfoForListAclRuleOutput;
+
+    /**
      * @type {number}
      * @memberof ListAclRuleResponse
      */
     PageSize?: number;
 
     /**
-     * @type {Array<RuleForListAclRuleOutput>}
+     * @type {ResponseMetadataForListAclRuleOutput}
      * @memberof ListAclRuleResponse
      */
-    Rules?: Array<RuleForListAclRuleOutput>;
+    ResponseMetadata?: ResponseMetadataForListAclRuleOutput;
+
+    /**
+     * @type {ResultForListAclRuleOutput}
+     * @memberof ListAclRuleResponse
+     */
+    Result?: ResultForListAclRuleOutput;
+
+    /**
+     * @type {Array<ConvertRuleForListAclRuleOutput>}
+     * @memberof ListAclRuleResponse
+     */
+    Rules?: Array<ConvertRuleForListAclRuleOutput>;
 
     /**
      * @type {number}
