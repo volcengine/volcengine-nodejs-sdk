@@ -92,4 +92,10 @@ export interface CreateBlockRuleRequest {
      * @memberof CreateBlockRuleRequest
      */
     Url: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateBlockRuleRequest
+     */
+    WAFInstanceID?: string;
 }

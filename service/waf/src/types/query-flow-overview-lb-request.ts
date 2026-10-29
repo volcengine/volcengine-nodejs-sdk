@@ -37,4 +37,10 @@ export interface QueryFlowOverviewLbRequest {
      * @memberof QueryFlowOverviewLbRequest
      */
     StartTime: number;
+
+    /**
+     * @type {string}
+     * @memberof QueryFlowOverviewLbRequest
+     */
+    WAFInstanceID?: string;
 }

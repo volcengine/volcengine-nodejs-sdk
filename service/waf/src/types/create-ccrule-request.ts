@@ -32,6 +32,12 @@ export interface CreateCCRuleRequest {
      * @type {number}
      * @memberof CreateCCRuleRequest
      */
+    AccurateGroupPriority?: number;
+
+    /**
+     * @type {number}
+     * @memberof CreateCCRuleRequest
+     */
     CCType?: number;
 
     /**
@@ -51,6 +57,12 @@ export interface CreateCCRuleRequest {
      * @memberof CreateCCRuleRequest
      */
     CronEnable?: number;
+
+    /**
+     * @type {string}
+     * @memberof CreateCCRuleRequest
+     */
+    CustomResponsePageID?: string;
 
     /**
      * @type {number}
@@ -123,4 +135,45 @@ export interface CreateCCRuleRequest {
      * @memberof CreateCCRuleRequest
      */
     Url: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateCCRuleRequest
+     */
+    WAFInstanceID?: string;
+
+    /**
+     * @type {number}
+     * @memberof CreateCCRuleRequest
+     */
+    WSCdnByteThreshold?: number;
+
+    /**
+     * @type {number}
+     * @memberof CreateCCRuleRequest
+     */
+    WSCdnEnable?: number;
+
+    /**
+     * @type {number}
+     * @memberof CreateCCRuleRequest
+     */
+    WSCdnFrameThreshold?: number;
+
+    /**
+     * @type {string}
+     * @memberof CreateCCRuleRequest
+     */
+    WSCdnUnit?: CreateCCRuleRequestWSCdnUnitEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum CreateCCRuleRequestWSCdnUnitEnum {
+    KB = 'KB',
+    MB = 'MB',
+    GB = 'GB'
+}
+

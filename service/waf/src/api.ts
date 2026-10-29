@@ -22,6 +22,10 @@ import { AddProhibitionBlackRequest } from './types/index';
 import { AddProhibitionBlackResponse } from './types/index';
 import { AddProhibitionWhiteRequest } from './types/index';
 import { AddProhibitionWhiteResponse } from './types/index';
+import { BatchCopySystemBotConfigRequest } from './types/index';
+import { BatchCopySystemBotConfigResponse } from './types/index';
+import { BatchDeleteGlobalBanItemsRequest } from './types/index';
+import { BatchDeleteGlobalBanItemsResponse } from './types/index';
 import { BatchUpdateTLSFieldsConfigRequest } from './types/index';
 import { BatchUpdateTLSFieldsConfigResponse } from './types/index';
 import { CheckLLMPromptRequest } from './types/index';
@@ -46,6 +50,8 @@ import { CreateDomainRequest } from './types/index';
 import { CreateDomainResponse } from './types/index';
 import { CreateTamperProofRequest } from './types/index';
 import { CreateTamperProofResponse } from './types/index';
+import { CreateVolcWafServicesByBytePlusCDNRequest } from './types/index';
+import { CreateVolcWafServicesByBytePlusCDNResponse } from './types/index';
 import { CreateVulWhiteFieldRequest } from './types/index';
 import { CreateVulWhiteFieldResponse } from './types/index';
 import { DeleteAclRuleRequest } from './types/index';
@@ -74,6 +80,8 @@ import { DeleteProhibitionWhiteRequest } from './types/index';
 import { DeleteProhibitionWhiteResponse } from './types/index';
 import { DeleteTamperProofRequest } from './types/index';
 import { DeleteTamperProofResponse } from './types/index';
+import { DeleteVolcWafServiceRequest } from './types/index';
+import { DeleteVolcWafServiceResponse } from './types/index';
 import { DeleteVulWhiteFieldRequest } from './types/index';
 import { DeleteVulWhiteFieldResponse } from './types/index';
 import { DeleteWafServiceCertificateRequest } from './types/index';
@@ -112,6 +120,8 @@ import { ListCustomPageRequest } from './types/index';
 import { ListCustomPageResponse } from './types/index';
 import { ListDomainRequest } from './types/index';
 import { ListDomainResponse } from './types/index';
+import { ListGlobalBanItemsRequest } from './types/index';
+import { ListGlobalBanItemsResponse } from './types/index';
 import { ListHostGroupRequest } from './types/index';
 import { ListHostGroupResponse } from './types/index';
 import { ListIpGroupRequest } from './types/index';
@@ -128,6 +138,8 @@ import { ListVulWhiteFieldRequest } from './types/index';
 import { ListVulWhiteFieldResponse } from './types/index';
 import { ListVulnerabilityRuleRequest } from './types/index';
 import { ListVulnerabilityRuleResponse } from './types/index';
+import { ListWafInstancesRequest } from './types/index';
+import { ListWafInstancesResponse } from './types/index';
 import { ListWafServiceCertificateRequest } from './types/index';
 import { ListWafServiceCertificateResponse } from './types/index';
 import { ModifyServiceDefenceModeRequest } from './types/index';
@@ -140,6 +152,8 @@ import { QueryAttackAnalysisWithRuleAggLbRequest } from './types/index';
 import { QueryAttackAnalysisWithRuleAggLbResponse } from './types/index';
 import { QueryAttackSecurityEventRequest } from './types/index';
 import { QueryAttackSecurityEventResponse } from './types/index';
+import { QueryBytePlusCDNDomainsRequest } from './types/index';
+import { QueryBytePlusCDNDomainsResponse } from './types/index';
 import { QueryCertificateIfReplaceRequest } from './types/index';
 import { QueryCertificateIfReplaceResponse } from './types/index';
 import { QueryFlowOverviewLbRequest } from './types/index';
@@ -196,6 +210,8 @@ export type AddHostGroupCommandOutput = CommandOutput<AddHostGroupResponse>;
 export type AddIpGroupCommandOutput = CommandOutput<AddIpGroupResponse>;
 export type AddProhibitionBlackCommandOutput = CommandOutput<AddProhibitionBlackResponse>;
 export type AddProhibitionWhiteCommandOutput = CommandOutput<AddProhibitionWhiteResponse>;
+export type BatchCopySystemBotConfigCommandOutput = CommandOutput<BatchCopySystemBotConfigResponse>;
+export type BatchDeleteGlobalBanItemsCommandOutput = CommandOutput<BatchDeleteGlobalBanItemsResponse>;
 export type BatchUpdateTLSFieldsConfigCommandOutput = CommandOutput<BatchUpdateTLSFieldsConfigResponse>;
 export type CheckLLMPromptCommandOutput = CommandOutput<CheckLLMPromptResponse>;
 export type CheckLLMResponseStreamCommandOutput = CommandOutput<CheckLLMResponseStreamResponse>;
@@ -208,6 +224,7 @@ export type CreateCustomBotConfigCommandOutput = CommandOutput<CreateCustomBotCo
 export type CreateCustomPageCommandOutput = CommandOutput<CreateCustomPageResponse>;
 export type CreateDomainCommandOutput = CommandOutput<CreateDomainResponse>;
 export type CreateTamperProofCommandOutput = CommandOutput<CreateTamperProofResponse>;
+export type CreateVolcWafServicesByBytePlusCDNCommandOutput = CommandOutput<CreateVolcWafServicesByBytePlusCDNResponse>;
 export type CreateVulWhiteFieldCommandOutput = CommandOutput<CreateVulWhiteFieldResponse>;
 export type DeleteAclRuleCommandOutput = CommandOutput<DeleteAclRuleResponse>;
 export type DeleteAllowRuleCommandOutput = CommandOutput<DeleteAllowRuleResponse>;
@@ -222,6 +239,7 @@ export type DeleteIpGroupCommandOutput = CommandOutput<DeleteIpGroupResponse>;
 export type DeleteProhibitionBlackCommandOutput = CommandOutput<DeleteProhibitionBlackResponse>;
 export type DeleteProhibitionWhiteCommandOutput = CommandOutput<DeleteProhibitionWhiteResponse>;
 export type DeleteTamperProofCommandOutput = CommandOutput<DeleteTamperProofResponse>;
+export type DeleteVolcWafServiceCommandOutput = CommandOutput<DeleteVolcWafServiceResponse>;
 export type DeleteVulWhiteFieldCommandOutput = CommandOutput<DeleteVulWhiteFieldResponse>;
 export type DeleteWafServiceCertificateCommandOutput = CommandOutput<DeleteWafServiceCertificateResponse>;
 export type GetDomainInfoCommandOutput = CommandOutput<GetDomainInfoResponse>;
@@ -241,6 +259,7 @@ export type ListCertificateServicesCommandOutput = CommandOutput<ListCertificate
 export type ListCustomBotConfigCommandOutput = CommandOutput<ListCustomBotConfigResponse>;
 export type ListCustomPageCommandOutput = CommandOutput<ListCustomPageResponse>;
 export type ListDomainCommandOutput = CommandOutput<ListDomainResponse>;
+export type ListGlobalBanItemsCommandOutput = CommandOutput<ListGlobalBanItemsResponse>;
 export type ListHostGroupCommandOutput = CommandOutput<ListHostGroupResponse>;
 export type ListIpGroupCommandOutput = CommandOutput<ListIpGroupResponse>;
 export type ListLoadBalancerCommandOutput = CommandOutput<ListLoadBalancerResponse>;
@@ -249,12 +268,14 @@ export type ListSystemBotConfigCommandOutput = CommandOutput<ListSystemBotConfig
 export type ListTamperProofCommandOutput = CommandOutput<ListTamperProofResponse>;
 export type ListVulWhiteFieldCommandOutput = CommandOutput<ListVulWhiteFieldResponse>;
 export type ListVulnerabilityRuleCommandOutput = CommandOutput<ListVulnerabilityRuleResponse>;
+export type ListWafInstancesCommandOutput = CommandOutput<ListWafInstancesResponse>;
 export type ListWafServiceCertificateCommandOutput = CommandOutput<ListWafServiceCertificateResponse>;
 export type ModifyServiceDefenceModeCommandOutput = CommandOutput<ModifyServiceDefenceModeResponse>;
 export type ModifyTLSConfigCommandOutput = CommandOutput<ModifyTLSConfigResponse>;
 export type QueryAttackAnalysisTermsAggLbCommandOutput = CommandOutput<QueryAttackAnalysisTermsAggLbResponse>;
 export type QueryAttackAnalysisWithRuleAggLbCommandOutput = CommandOutput<QueryAttackAnalysisWithRuleAggLbResponse>;
 export type QueryAttackSecurityEventCommandOutput = CommandOutput<QueryAttackSecurityEventResponse>;
+export type QueryBytePlusCDNDomainsCommandOutput = CommandOutput<QueryBytePlusCDNDomainsResponse>;
 export type QueryCertificateIfReplaceCommandOutput = CommandOutput<QueryCertificateIfReplaceResponse>;
 export type QueryFlowOverviewLbCommandOutput = CommandOutput<QueryFlowOverviewLbResponse>;
 export type QueryLLMGenerateCommandOutput = CommandOutput<QueryLLMGenerateResponse>;
@@ -279,7 +300,6 @@ export type UpdateVulWhiteFieldCommandOutput = CommandOutput<UpdateVulWhiteField
 export type UpdateVulnerabilityConfigCommandOutput = CommandOutput<UpdateVulnerabilityConfigResponse>;
 export type UpdateWafServiceControlCommandOutput = CommandOutput<UpdateWafServiceControlResponse>;
 export type UploadWafServiceCertificateCommandOutput = CommandOutput<UploadWafServiceCertificateResponse>;
-
 
 /**
  * WAFClient Service Client
@@ -352,6 +372,36 @@ export class AddProhibitionWhiteCommand extends Command<
   constructor(input: AddProhibitionWhiteRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(AddProhibitionWhiteCommand.metaPath);
+  }
+}
+/**
+ * Command to BatchCopySystemBotConfig
+ */
+export class BatchCopySystemBotConfigCommand extends Command<
+  BatchCopySystemBotConfigRequest,
+  BatchCopySystemBotConfigCommandOutput,
+  'BatchCopySystemBotConfigCommand'
+> {
+  static readonly metaPath = '/BatchCopySystemBotConfig/2023-12-25/waf/post/application_json/';
+
+  constructor(input: BatchCopySystemBotConfigRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchCopySystemBotConfigCommand.metaPath);
+  }
+}
+/**
+ * Command to BatchDeleteGlobalBanItems
+ */
+export class BatchDeleteGlobalBanItemsCommand extends Command<
+  BatchDeleteGlobalBanItemsRequest,
+  BatchDeleteGlobalBanItemsCommandOutput,
+  'BatchDeleteGlobalBanItemsCommand'
+> {
+  static readonly metaPath = '/BatchDeleteGlobalBanItems/2023-12-25/waf/post/application_json/';
+
+  constructor(input: BatchDeleteGlobalBanItemsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(BatchDeleteGlobalBanItemsCommand.metaPath);
   }
 }
 /**
@@ -532,6 +582,21 @@ export class CreateTamperProofCommand extends Command<
   constructor(input: CreateTamperProofRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateTamperProofCommand.metaPath);
+  }
+}
+/**
+ * Command to CreateVolcWafServicesByBytePlusCDN
+ */
+export class CreateVolcWafServicesByBytePlusCDNCommand extends Command<
+  CreateVolcWafServicesByBytePlusCDNRequest,
+  CreateVolcWafServicesByBytePlusCDNCommandOutput,
+  'CreateVolcWafServicesByBytePlusCDNCommand'
+> {
+  static readonly metaPath = '/CreateVolcWafServicesByBytePlusCDN/2023-12-25/waf/post/application_json/';
+
+  constructor(input: CreateVolcWafServicesByBytePlusCDNRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(CreateVolcWafServicesByBytePlusCDNCommand.metaPath);
   }
 }
 /**
@@ -742,6 +807,21 @@ export class DeleteTamperProofCommand extends Command<
   constructor(input: DeleteTamperProofRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DeleteTamperProofCommand.metaPath);
+  }
+}
+/**
+ * Command to DeleteVolcWafService
+ */
+export class DeleteVolcWafServiceCommand extends Command<
+  DeleteVolcWafServiceRequest,
+  DeleteVolcWafServiceCommandOutput,
+  'DeleteVolcWafServiceCommand'
+> {
+  static readonly metaPath = '/DeleteVolcWafService/2023-12-25/waf/post/application_json/';
+
+  constructor(input: DeleteVolcWafServiceRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DeleteVolcWafServiceCommand.metaPath);
   }
 }
 /**
@@ -1030,6 +1110,21 @@ export class ListDomainCommand extends Command<
   }
 }
 /**
+ * Command to ListGlobalBanItems
+ */
+export class ListGlobalBanItemsCommand extends Command<
+  ListGlobalBanItemsRequest,
+  ListGlobalBanItemsCommandOutput,
+  'ListGlobalBanItemsCommand'
+> {
+  static readonly metaPath = '/ListGlobalBanItems/2023-12-25/waf/post/application_json/';
+
+  constructor(input: ListGlobalBanItemsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListGlobalBanItemsCommand.metaPath);
+  }
+}
+/**
  * Command to ListHostGroup
  */
 export class ListHostGroupCommand extends Command<
@@ -1150,6 +1245,21 @@ export class ListVulnerabilityRuleCommand extends Command<
   }
 }
 /**
+ * Command to ListWafInstances
+ */
+export class ListWafInstancesCommand extends Command<
+  ListWafInstancesRequest,
+  ListWafInstancesCommandOutput,
+  'ListWafInstancesCommand'
+> {
+  static readonly metaPath = '/ListWafInstances/2023-12-25/waf/post/application_json/';
+
+  constructor(input: ListWafInstancesRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListWafInstancesCommand.metaPath);
+  }
+}
+/**
  * Command to ListWafServiceCertificate
  */
 export class ListWafServiceCertificateCommand extends Command<
@@ -1237,6 +1347,21 @@ export class QueryAttackSecurityEventCommand extends Command<
   constructor(input: QueryAttackSecurityEventRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(QueryAttackSecurityEventCommand.metaPath);
+  }
+}
+/**
+ * Command to QueryBytePlusCDNDomains
+ */
+export class QueryBytePlusCDNDomainsCommand extends Command<
+  QueryBytePlusCDNDomainsRequest,
+  QueryBytePlusCDNDomainsCommandOutput,
+  'QueryBytePlusCDNDomainsCommand'
+> {
+  static readonly metaPath = '/QueryBytePlusCDNDomains/2023-12-25/waf/post/application_json/';
+
+  constructor(input: QueryBytePlusCDNDomainsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(QueryBytePlusCDNDomainsCommand.metaPath);
   }
 }
 /**
@@ -1606,6 +1731,8 @@ export default {
   AddIpGroupCommand,
   AddProhibitionBlackCommand,
   AddProhibitionWhiteCommand,
+  BatchCopySystemBotConfigCommand,
+  BatchDeleteGlobalBanItemsCommand,
   BatchUpdateTLSFieldsConfigCommand,
   CheckLLMPromptCommand,
   CheckLLMResponseStreamCommand,
@@ -1618,6 +1745,7 @@ export default {
   CreateCustomPageCommand,
   CreateDomainCommand,
   CreateTamperProofCommand,
+  CreateVolcWafServicesByBytePlusCDNCommand,
   CreateVulWhiteFieldCommand,
   DeleteAclRuleCommand,
   DeleteAllowRuleCommand,
@@ -1632,6 +1760,7 @@ export default {
   DeleteProhibitionBlackCommand,
   DeleteProhibitionWhiteCommand,
   DeleteTamperProofCommand,
+  DeleteVolcWafServiceCommand,
   DeleteVulWhiteFieldCommand,
   DeleteWafServiceCertificateCommand,
   GetDomainInfoCommand,
@@ -1651,6 +1780,7 @@ export default {
   ListCustomBotConfigCommand,
   ListCustomPageCommand,
   ListDomainCommand,
+  ListGlobalBanItemsCommand,
   ListHostGroupCommand,
   ListIpGroupCommand,
   ListLoadBalancerCommand,
@@ -1659,12 +1789,14 @@ export default {
   ListTamperProofCommand,
   ListVulWhiteFieldCommand,
   ListVulnerabilityRuleCommand,
+  ListWafInstancesCommand,
   ListWafServiceCertificateCommand,
   ModifyServiceDefenceModeCommand,
   ModifyTLSConfigCommand,
   QueryAttackAnalysisTermsAggLbCommand,
   QueryAttackAnalysisWithRuleAggLbCommand,
   QueryAttackSecurityEventCommand,
+  QueryBytePlusCDNDomainsCommand,
   QueryCertificateIfReplaceCommand,
   QueryFlowOverviewLbCommand,
   QueryLLMGenerateCommand,

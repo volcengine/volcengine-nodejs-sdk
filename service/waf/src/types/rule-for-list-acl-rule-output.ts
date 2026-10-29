@@ -33,7 +33,13 @@ export interface RuleForListAclRuleOutput {
      * @type {string}
      * @memberof RuleForListAclRuleOutput
      */
-    Action?: string;
+    Action?: RuleForListAclRuleOutputActionEnum;
+
+    /**
+     * @type {number}
+     * @memberof RuleForListAclRuleOutput
+     */
+    AddSrc?: number;
 
     /**
      * @type {number}
@@ -58,6 +64,12 @@ export interface RuleForListAclRuleOutput {
      * @memberof RuleForListAclRuleOutput
      */
     Enable?: number;
+
+    /**
+     * @type {string}
+     * @memberof RuleForListAclRuleOutput
+     */
+    Host?: string;
 
     /**
      * @type {number}
@@ -132,6 +144,18 @@ export interface RuleForListAclRuleOutput {
     Name?: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof RuleForListAclRuleOutput
+     */
+    PermitFeature?: Array<RuleForListAclRuleOutputPermitFeatureEnum>;
+
+    /**
+     * @type {number}
+     * @memberof RuleForListAclRuleOutput
+     */
+    PrefixSwitch?: number;
+
+    /**
      * @type {string}
      * @memberof RuleForListAclRuleOutput
      */
@@ -149,3 +173,36 @@ export interface RuleForListAclRuleOutput {
      */
     Url?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum RuleForListAclRuleOutputActionEnum {
+    Block = 'block',
+    Observe = 'observe'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum RuleForListAclRuleOutputPermitFeatureEnum {
+    Allowlist = 'allowlist',
+    Blocklist = 'blocklist',
+    GeoBlack = 'geo_black',
+    ApiRoute = 'api_route',
+    ApiSchema = 'api_schema',
+    ApiSensitive = 'api_sensitive',
+    BotDytoken = 'bot_dytoken',
+    BotFrequency = 'bot_frequency',
+    BotRepeat = 'bot_repeat',
+    BotSequence = 'bot_sequence',
+    UserUaBot = 'user_ua_bot',
+    BotUaSystem = 'bot_ua_system',
+    Httpflood = 'httpflood',
+    VulnSignature = 'vuln_signature',
+    ScanFreqvuln = 'scan_freqvuln',
+    ScanDirenum = 'scan_direnum',
+    BotSessionProtection = 'bot_session_protection'
+}
+

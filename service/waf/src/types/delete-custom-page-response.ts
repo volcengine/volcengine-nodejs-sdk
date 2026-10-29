@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ResponseMetadataForDeleteCustomPageOutput } from './response-metadata-for-delete-custom-page-output';
  /**
  * 
  *
@@ -19,4 +20,10 @@
  * @interface DeleteCustomPageResponse
  */
 export interface DeleteCustomPageResponse {
+
+    /**
+     * @type {ResponseMetadataForDeleteCustomPageOutput}
+     * @memberof DeleteCustomPageResponse
+     */
+    ResponseMetadata?: ResponseMetadataForDeleteCustomPageOutput;
 }

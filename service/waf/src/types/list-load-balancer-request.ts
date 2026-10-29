@@ -37,4 +37,10 @@ export interface ListLoadBalancerRequest {
      * @memberof ListLoadBalancerRequest
      */
     Type?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListLoadBalancerRequest
+     */
+    WAFInstanceID?: string;
 }

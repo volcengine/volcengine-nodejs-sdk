@@ -31,13 +31,13 @@ export interface CreateAclRuleRequest {
      * @type {string}
      * @memberof CreateAclRuleRequest
      */
-    AclType: string;
+    AclType: CreateAclRuleRequestAclTypeEnum;
 
     /**
      * @type {string}
      * @memberof CreateAclRuleRequest
      */
-    Action?: string;
+    Action?: CreateAclRuleRequestActionEnum;
 
     /**
      * @type {number}
@@ -112,6 +112,12 @@ export interface CreateAclRuleRequest {
     Name: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof CreateAclRuleRequest
+     */
+    PermitFeature?: Array<CreateAclRuleRequestPermitFeatureEnum>;
+
+    /**
      * @type {string}
      * @memberof CreateAclRuleRequest
      */
@@ -122,4 +128,51 @@ export interface CreateAclRuleRequest {
      * @memberof CreateAclRuleRequest
      */
     Url: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateAclRuleRequest
+     */
+    WAFInstanceID?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum CreateAclRuleRequestAclTypeEnum {
+    Allow = 'Allow',
+    Block = 'Block'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum CreateAclRuleRequestActionEnum {
+    Block = 'block',
+    Observe = 'observe'
+}
+/**
+ * @export
+ * @enum {string}
+ */
+export enum CreateAclRuleRequestPermitFeatureEnum {
+    Allowlist = 'allowlist',
+    Blocklist = 'blocklist',
+    GeoBlack = 'geo_black',
+    ApiRoute = 'api_route',
+    ApiSchema = 'api_schema',
+    ApiSensitive = 'api_sensitive',
+    BotDytoken = 'bot_dytoken',
+    BotFrequency = 'bot_frequency',
+    BotRepeat = 'bot_repeat',
+    BotSequence = 'bot_sequence',
+    UserUaBot = 'user_ua_bot',
+    BotUaSystem = 'bot_ua_system',
+    Httpflood = 'httpflood',
+    VulnSignature = 'vuln_signature',
+    ScanFreqvuln = 'scan_freqvuln',
+    ScanDirenum = 'scan_direnum',
+    BotSessionProtection = 'bot_session_protection'
+}
+

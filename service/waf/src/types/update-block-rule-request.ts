@@ -98,4 +98,10 @@ export interface UpdateBlockRuleRequest {
      * @memberof UpdateBlockRuleRequest
      */
     Url: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateBlockRuleRequest
+     */
+    WAFInstanceID?: string;
 }

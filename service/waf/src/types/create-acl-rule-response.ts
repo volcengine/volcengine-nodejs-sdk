@@ -12,6 +12,9 @@
  * Do not edit the class manually.
  */
 
+import { PageInfoForCreateAclRuleOutput } from './page-info-for-create-acl-rule-output';
+import { ResponseMetadataForCreateAclRuleOutput } from './response-metadata-for-create-acl-rule-output';
+import { ResultForCreateAclRuleOutput } from './result-for-create-acl-rule-output';
  /**
  * 
  *
@@ -25,4 +28,22 @@ export interface CreateAclRuleResponse {
      * @memberof CreateAclRuleResponse
      */
     Id?: number;
+
+    /**
+     * @type {PageInfoForCreateAclRuleOutput}
+     * @memberof CreateAclRuleResponse
+     */
+    PageInfo?: PageInfoForCreateAclRuleOutput;
+
+    /**
+     * @type {ResponseMetadataForCreateAclRuleOutput}
+     * @memberof CreateAclRuleResponse
+     */
+    ResponseMetadata?: ResponseMetadataForCreateAclRuleOutput;
+
+    /**
+     * @type {ResultForCreateAclRuleOutput}
+     * @memberof CreateAclRuleResponse
+     */
+    Result?: ResultForCreateAclRuleOutput;
 }

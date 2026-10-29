@@ -55,4 +55,10 @@ export interface QueryAttackAnalysisTermsAggLbRequest {
      * @memberof QueryAttackAnalysisTermsAggLbRequest
      */
     StartTime: number;
+
+    /**
+     * @type {string}
+     * @memberof QueryAttackAnalysisTermsAggLbRequest
+     */
+    WAFInstanceID?: string;
 }

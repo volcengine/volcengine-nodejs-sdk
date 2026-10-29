@@ -129,6 +129,12 @@ export interface UpdateWafServiceControlRequest {
     TamperProofEnable?: number;
 
     /**
+     * @type {string}
+     * @memberof UpdateWafServiceControlRequest
+     */
+    WAFInstanceID?: string;
+
+    /**
      * @type {number}
      * @memberof UpdateWafServiceControlRequest
      */

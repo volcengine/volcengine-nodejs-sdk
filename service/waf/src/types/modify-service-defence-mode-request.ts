@@ -44,4 +44,10 @@ export interface ModifyServiceDefenceModeRequest {
      * @memberof ModifyServiceDefenceModeRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ModifyServiceDefenceModeRequest
+     */
+    WAFInstanceID?: string;
 }

@@ -13,6 +13,7 @@
  */
 
 import { AccurateGroupForUpdateBotAnalyseProtectRuleInput } from './accurate-group-for-update-bot-analyse-protect-rule-input';
+import { CronConfForUpdateBotAnalyseProtectRuleInput } from './cron-conf-for-update-bot-analyse-protect-rule-input';
  /**
  * 
  *
@@ -22,16 +23,16 @@ import { AccurateGroupForUpdateBotAnalyseProtectRuleInput } from './accurate-gro
 export interface UpdateBotAnalyseProtectRuleRequest {
 
     /**
-     * @type {Array<AccurateGroupForUpdateBotAnalyseProtectRuleInput>}
+     * @type {AccurateGroupForUpdateBotAnalyseProtectRuleInput}
      * @memberof UpdateBotAnalyseProtectRuleRequest
      */
-    AccurateGroup?: Array<AccurateGroupForUpdateBotAnalyseProtectRuleInput>;
+    AccurateGroup?: AccurateGroupForUpdateBotAnalyseProtectRuleInput;
 
     /**
      * @type {number}
      * @memberof UpdateBotAnalyseProtectRuleRequest
      */
-    ActionAfterVerification?: number;
+    AccurateGroupPriority?: number;
 
     /**
      * @type {number}
@@ -40,10 +41,22 @@ export interface UpdateBotAnalyseProtectRuleRequest {
     ActionType: number;
 
     /**
+     * @type {Array<CronConfForUpdateBotAnalyseProtectRuleInput>}
+     * @memberof UpdateBotAnalyseProtectRuleRequest
+     */
+    CronConfs?: Array<CronConfForUpdateBotAnalyseProtectRuleInput>;
+
+    /**
      * @type {number}
      * @memberof UpdateBotAnalyseProtectRuleRequest
      */
-    EffectTime: number;
+    CronEnable?: number;
+
+    /**
+     * @type {number}
+     * @memberof UpdateBotAnalyseProtectRuleRequest
+     */
+    EffectTime?: number;
 
     /**
      * @type {number}
@@ -115,7 +128,7 @@ export interface UpdateBotAnalyseProtectRuleRequest {
      * @type {number}
      * @memberof UpdateBotAnalyseProtectRuleRequest
      */
-    SingleThreshold: number;
+    SingleThreshold?: number;
 
     /**
      * @type {number}
@@ -128,4 +141,16 @@ export interface UpdateBotAnalyseProtectRuleRequest {
      * @memberof UpdateBotAnalyseProtectRuleRequest
      */
     StatisticalType: number;
+
+    /**
+     * @type {string}
+     * @memberof UpdateBotAnalyseProtectRuleRequest
+     */
+    UpdateTime?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateBotAnalyseProtectRuleRequest
+     */
+    WAFInstanceID?: string;
 }

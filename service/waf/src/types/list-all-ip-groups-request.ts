@@ -30,6 +30,18 @@ export interface ListAllIpGroupsRequest {
      * @type {number}
      * @memberof ListAllIpGroupsRequest
      */
+    IpGroupId?: number;
+
+    /**
+     * @type {Array<number>}
+     * @memberof ListAllIpGroupsRequest
+     */
+    IpGroupIds?: Array<number>;
+
+    /**
+     * @type {number}
+     * @memberof ListAllIpGroupsRequest
+     */
     Page?: number;
 
     /**
@@ -55,4 +67,10 @@ export interface ListAllIpGroupsRequest {
      * @memberof ListAllIpGroupsRequest
      */
     TimeOrderBy: string;
+
+    /**
+     * @type {string}
+     * @memberof ListAllIpGroupsRequest
+     */
+    WAFInstanceID?: string;
 }

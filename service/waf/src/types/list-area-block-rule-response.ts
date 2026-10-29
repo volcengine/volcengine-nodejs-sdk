@@ -12,6 +12,9 @@
  * Do not edit the class manually.
  */
 
+import { PageInfoForListAreaBlockRuleOutput } from './page-info-for-list-area-block-rule-output';
+import { ResponseMetadataForListAreaBlockRuleOutput } from './response-metadata-for-list-area-block-rule-output';
+import { ResultForListAreaBlockRuleOutput } from './result-for-list-area-block-rule-output';
  /**
  * 
  *
@@ -31,6 +34,24 @@ export interface ListAreaBlockRuleResponse {
      * @memberof ListAreaBlockRuleResponse
      */
     Country?: Array<string>;
+
+    /**
+     * @type {PageInfoForListAreaBlockRuleOutput}
+     * @memberof ListAreaBlockRuleResponse
+     */
+    PageInfo?: PageInfoForListAreaBlockRuleOutput;
+
+    /**
+     * @type {ResponseMetadataForListAreaBlockRuleOutput}
+     * @memberof ListAreaBlockRuleResponse
+     */
+    ResponseMetadata?: ResponseMetadataForListAreaBlockRuleOutput;
+
+    /**
+     * @type {ResultForListAreaBlockRuleOutput}
+     * @memberof ListAreaBlockRuleResponse
+     */
+    Result?: ResultForListAreaBlockRuleOutput;
 
     /**
      * @type {string}

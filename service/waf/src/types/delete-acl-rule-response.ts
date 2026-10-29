@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { PageInfoForDeleteAclRuleOutput } from './page-info-for-delete-acl-rule-output';
+import { ResponseMetadataForDeleteAclRuleOutput } from './response-metadata-for-delete-acl-rule-output';
  /**
  * 
  *
@@ -19,4 +21,16 @@
  * @interface DeleteAclRuleResponse
  */
 export interface DeleteAclRuleResponse {
+
+    /**
+     * @type {PageInfoForDeleteAclRuleOutput}
+     * @memberof DeleteAclRuleResponse
+     */
+    PageInfo?: PageInfoForDeleteAclRuleOutput;
+
+    /**
+     * @type {ResponseMetadataForDeleteAclRuleOutput}
+     * @memberof DeleteAclRuleResponse
+     */
+    ResponseMetadata?: ResponseMetadataForDeleteAclRuleOutput;
 }

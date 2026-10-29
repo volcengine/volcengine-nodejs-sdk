@@ -31,4 +31,10 @@ export interface DeleteWafServiceCertificateRequest {
      * @memberof DeleteWafServiceCertificateRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteWafServiceCertificateRequest
+     */
+    WAFInstanceID?: string;
 }

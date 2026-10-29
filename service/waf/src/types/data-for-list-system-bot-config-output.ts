@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { SubRuleForListSystemBotConfigOutput } from './sub-rule-for-list-system-bot-config-output';
  /**
  * 
  *
@@ -45,8 +46,32 @@ export interface DataForListSystemBotConfigOutput {
     Enable?: number;
 
     /**
+     * @type {boolean}
+     * @memberof DataForListSystemBotConfigOutput
+     */
+    IPMatch?: boolean;
+
+    /**
+     * @type {string}
+     * @memberof DataForListSystemBotConfigOutput
+     */
+    Name?: string;
+
+    /**
      * @type {string}
      * @memberof DataForListSystemBotConfigOutput
      */
     RuleTag?: string;
+
+    /**
+     * @type {Array<SubRuleForListSystemBotConfigOutput>}
+     * @memberof DataForListSystemBotConfigOutput
+     */
+    SubRules?: Array<SubRuleForListSystemBotConfigOutput>;
+
+    /**
+     * @type {number}
+     * @memberof DataForListSystemBotConfigOutput
+     */
+    VerificationExemptionTime?: number;
 }

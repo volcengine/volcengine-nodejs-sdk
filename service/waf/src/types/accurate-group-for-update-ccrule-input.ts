@@ -22,10 +22,22 @@ import { AccurateRuleForUpdateCCRuleInput } from './accurate-rule-for-update-ccr
 export interface AccurateGroupForUpdateCCRuleInput {
 
     /**
+     * @type {number}
+     * @memberof AccurateGroupForUpdateCCRuleInput
+     */
+    AccurateGroupPriority?: number;
+
+    /**
      * @type {Array<AccurateRuleForUpdateCCRuleInput>}
      * @memberof AccurateGroupForUpdateCCRuleInput
      */
     AccurateRules?: Array<AccurateRuleForUpdateCCRuleInput>;
+
+    /**
+     * @type {number}
+     * @memberof AccurateGroupForUpdateCCRuleInput
+     */
+    Id?: number;
 
     /**
      * @type {number}

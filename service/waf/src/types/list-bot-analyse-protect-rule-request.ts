@@ -21,10 +21,16 @@
 export interface ListBotAnalyseProtectRuleRequest {
 
     /**
+     * @type {Array<number>}
+     * @memberof ListBotAnalyseProtectRuleRequest
+     */
+    ActionTypeKey?: Array<number>;
+
+    /**
      * @type {string}
      * @memberof ListBotAnalyseProtectRuleRequest
      */
-    BotSpace: string;
+    BotSpace?: ListBotAnalyseProtectRuleRequestBotSpaceEnum;
 
     /**
      * @type {string}
@@ -73,4 +79,20 @@ export interface ListBotAnalyseProtectRuleRequest {
      * @memberof ListBotAnalyseProtectRuleRequest
      */
     RuleTag?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListBotAnalyseProtectRuleRequest
+     */
+    WAFInstanceID?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum ListBotAnalyseProtectRuleRequestBotSpaceEnum {
+    BotFrequency = 'BotFrequency',
+    BotRepeat = 'BotRepeat'
+}
+

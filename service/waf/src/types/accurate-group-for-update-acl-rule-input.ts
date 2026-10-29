@@ -22,10 +22,22 @@ import { AccurateRuleForUpdateAclRuleInput } from './accurate-rule-for-update-ac
 export interface AccurateGroupForUpdateAclRuleInput {
 
     /**
+     * @type {number}
+     * @memberof AccurateGroupForUpdateAclRuleInput
+     */
+    AccurateGroupPriority?: number;
+
+    /**
      * @type {Array<AccurateRuleForUpdateAclRuleInput>}
      * @memberof AccurateGroupForUpdateAclRuleInput
      */
     AccurateRules?: Array<AccurateRuleForUpdateAclRuleInput>;
+
+    /**
+     * @type {number}
+     * @memberof AccurateGroupForUpdateAclRuleInput
+     */
+    Id?: number;
 
     /**
      * @type {number}

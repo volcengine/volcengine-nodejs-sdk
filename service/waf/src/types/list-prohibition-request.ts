@@ -91,4 +91,10 @@ export interface ListProhibitionRequest {
      * @memberof ListProhibitionRequest
      */
     TimeOrderBy?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListProhibitionRequest
+     */
+    WAFInstanceID?: string;
 }

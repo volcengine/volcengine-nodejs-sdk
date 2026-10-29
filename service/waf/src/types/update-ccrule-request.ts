@@ -59,6 +59,12 @@ export interface UpdateCCRuleRequest {
     CronEnable?: number;
 
     /**
+     * @type {string}
+     * @memberof UpdateCCRuleRequest
+     */
+    CustomResponsePageID?: string;
+
+    /**
      * @type {number}
      * @memberof UpdateCCRuleRequest
      */
@@ -134,5 +140,52 @@ export interface UpdateCCRuleRequest {
      * @type {string}
      * @memberof UpdateCCRuleRequest
      */
+    UpdateTime?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateCCRuleRequest
+     */
     Url: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateCCRuleRequest
+     */
+    WAFInstanceID?: string;
+
+    /**
+     * @type {number}
+     * @memberof UpdateCCRuleRequest
+     */
+    WSCdnByteThreshold?: number;
+
+    /**
+     * @type {number}
+     * @memberof UpdateCCRuleRequest
+     */
+    WSCdnEnable?: number;
+
+    /**
+     * @type {number}
+     * @memberof UpdateCCRuleRequest
+     */
+    WSCdnFrameThreshold?: number;
+
+    /**
+     * @type {string}
+     * @memberof UpdateCCRuleRequest
+     */
+    WSCdnUnit?: UpdateCCRuleRequestWSCdnUnitEnum;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum UpdateCCRuleRequestWSCdnUnitEnum {
+    KB = 'KB',
+    MB = 'MB',
+    GB = 'GB'
+}
+

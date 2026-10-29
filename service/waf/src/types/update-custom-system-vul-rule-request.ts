@@ -25,7 +25,19 @@ export interface UpdateCustomSystemVulRuleRequest {
      * @type {string}
      * @memberof UpdateCustomSystemVulRuleRequest
      */
-    Host: string;
+    Host?: string;
+
+    /**
+     * @type {number}
+     * @memberof UpdateCustomSystemVulRuleRequest
+     */
+    HostAddType?: number;
+
+    /**
+     * @type {Array<string>}
+     * @memberof UpdateCustomSystemVulRuleRequest
+     */
+    HostList?: Array<string>;
 
     /**
      * @type {string}
@@ -38,4 +50,10 @@ export interface UpdateCustomSystemVulRuleRequest {
      * @memberof UpdateCustomSystemVulRuleRequest
      */
     SystemRuleSwitch?: Array<SystemRuleSwitchForUpdateCustomSystemVulRuleInput>;
+
+    /**
+     * @type {string}
+     * @memberof UpdateCustomSystemVulRuleRequest
+     */
+    WAFInstanceID?: string;
 }

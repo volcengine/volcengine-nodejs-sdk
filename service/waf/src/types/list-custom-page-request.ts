@@ -24,7 +24,7 @@ export interface ListCustomPageRequest {
      * @type {string}
      * @memberof ListCustomPageRequest
      */
-    Host: string;
+    Host?: string;
 
     /**
      * @type {number}
@@ -49,4 +49,10 @@ export interface ListCustomPageRequest {
      * @memberof ListCustomPageRequest
      */
     RuleTag?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListCustomPageRequest
+     */
+    WAFInstanceID?: string;
 }

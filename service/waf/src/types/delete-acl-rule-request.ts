@@ -24,7 +24,7 @@ export interface DeleteAclRuleRequest {
      * @type {string}
      * @memberof DeleteAclRuleRequest
      */
-    AclType: string;
+    AclType: DeleteAclRuleRequestAclTypeEnum;
 
     /**
      * @type {number}
@@ -37,4 +37,20 @@ export interface DeleteAclRuleRequest {
      * @memberof DeleteAclRuleRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteAclRuleRequest
+     */
+    WAFInstanceID?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum DeleteAclRuleRequestAclTypeEnum {
+    Allow = 'Allow',
+    Block = 'Block'
+}
+

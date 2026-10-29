@@ -37,4 +37,10 @@ export interface AddProhibitionWhiteRequest {
      * @memberof AddProhibitionWhiteRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof AddProhibitionWhiteRequest
+     */
+    WAFInstanceID?: string;
 }

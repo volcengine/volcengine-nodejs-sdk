@@ -51,12 +51,6 @@ export interface TCPListenerConfigForListDomainOutput {
     ListenerID?: string;
 
     /**
-     * @type {number}
-     * @memberof TCPListenerConfigForListDomainOutput
-     */
-    LostAssociationFromALB?: number;
-
-    /**
      * @type {string}
      * @memberof TCPListenerConfigForListDomainOutput
      */

@@ -22,10 +22,22 @@ import { AccurateRuleForListCCRuleOutput } from './accurate-rule-for-list-ccrule
 export interface GroupForListCCRuleOutput {
 
     /**
+     * @type {number}
+     * @memberof GroupForListCCRuleOutput
+     */
+    AccurateGroupPriority?: number;
+
+    /**
      * @type {Array<AccurateRuleForListCCRuleOutput>}
      * @memberof GroupForListCCRuleOutput
      */
     AccurateRules?: Array<AccurateRuleForListCCRuleOutput>;
+
+    /**
+     * @type {number}
+     * @memberof GroupForListCCRuleOutput
+     */
+    Id?: number;
 
     /**
      * @type {number}

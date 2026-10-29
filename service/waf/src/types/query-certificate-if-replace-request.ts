@@ -43,4 +43,10 @@ export interface QueryCertificateIfReplaceRequest {
      * @memberof QueryCertificateIfReplaceRequest
      */
     PublicRealServer?: number;
+
+    /**
+     * @type {string}
+     * @memberof QueryCertificateIfReplaceRequest
+     */
+    WAFInstanceID?: string;
 }

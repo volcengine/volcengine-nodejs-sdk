@@ -62,4 +62,16 @@ export interface CreateCustomBotConfigRequest {
      * @memberof CreateCustomBotConfigRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {number}
+     * @memberof CreateCustomBotConfigRequest
+     */
+    VerificationExemptionTime?: number;
+
+    /**
+     * @type {string}
+     * @memberof CreateCustomBotConfigRequest
+     */
+    WAFInstanceID?: string;
 }

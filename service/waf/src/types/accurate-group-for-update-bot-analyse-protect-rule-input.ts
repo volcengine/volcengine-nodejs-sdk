@@ -22,10 +22,22 @@ import { AccurateRuleForUpdateBotAnalyseProtectRuleInput } from './accurate-rule
 export interface AccurateGroupForUpdateBotAnalyseProtectRuleInput {
 
     /**
+     * @type {number}
+     * @memberof AccurateGroupForUpdateBotAnalyseProtectRuleInput
+     */
+    AccurateGroupPriority?: number;
+
+    /**
      * @type {Array<AccurateRuleForUpdateBotAnalyseProtectRuleInput>}
      * @memberof AccurateGroupForUpdateBotAnalyseProtectRuleInput
      */
     AccurateRules?: Array<AccurateRuleForUpdateBotAnalyseProtectRuleInput>;
+
+    /**
+     * @type {number}
+     * @memberof AccurateGroupForUpdateBotAnalyseProtectRuleInput
+     */
+    Id?: number;
 
     /**
      * @type {number}

@@ -25,4 +25,10 @@ export interface GetTLSConfigRequest {
      * @memberof GetTLSConfigRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetTLSConfigRequest
+     */
+    WAFInstanceID?: string;
 }

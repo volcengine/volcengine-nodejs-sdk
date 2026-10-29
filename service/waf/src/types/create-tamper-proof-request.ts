@@ -61,4 +61,10 @@ export interface CreateTamperProofRequest {
      * @memberof CreateTamperProofRequest
      */
     Url: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateTamperProofRequest
+     */
+    WAFInstanceID?: string;
 }

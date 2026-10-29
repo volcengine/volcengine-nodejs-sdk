@@ -24,7 +24,7 @@ export interface UpdateAreaBlockRuleRequest {
      * @type {string}
      * @memberof UpdateAreaBlockRuleRequest
      */
-    Action: string;
+    Action: UpdateAreaBlockRuleRequestActionEnum;
 
     /**
      * @type {Array<string>}
@@ -39,6 +39,12 @@ export interface UpdateAreaBlockRuleRequest {
     Host: string;
 
     /**
+     * @type {Array<string>}
+     * @memberof UpdateAreaBlockRuleRequest
+     */
+    Location?: Array<string>;
+
+    /**
      * @type {string}
      * @memberof UpdateAreaBlockRuleRequest
      */
@@ -49,4 +55,20 @@ export interface UpdateAreaBlockRuleRequest {
      * @memberof UpdateAreaBlockRuleRequest
      */
     SubRegion?: Array<string>;
+
+    /**
+     * @type {string}
+     * @memberof UpdateAreaBlockRuleRequest
+     */
+    WAFInstanceID?: string;
 }
+
+/**
+ * @export
+ * @enum {string}
+ */
+export enum UpdateAreaBlockRuleRequestActionEnum {
+    Observe = 'observe',
+    Block = 'block'
+}
+

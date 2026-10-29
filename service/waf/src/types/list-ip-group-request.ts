@@ -33,10 +33,10 @@ export interface ListIpGroupRequest {
     IpGroupId: number;
 
     /**
-     * @type {string}
+     * @type {boolean}
      * @memberof ListIpGroupRequest
      */
-    ListAll?: string;
+    ListAll?: boolean;
 
     /**
      * @type {number}
@@ -55,4 +55,10 @@ export interface ListIpGroupRequest {
      * @memberof ListIpGroupRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListIpGroupRequest
+     */
+    WAFInstanceID?: string;
 }

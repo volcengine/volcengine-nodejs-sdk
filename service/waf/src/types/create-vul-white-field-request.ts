@@ -24,7 +24,7 @@ export interface CreateVulWhiteFieldRequest {
      * @type {number}
      * @memberof CreateVulWhiteFieldRequest
      */
-    Enable: number;
+    Enable?: number;
 
     /**
      * @type {string}
@@ -36,13 +36,25 @@ export interface CreateVulWhiteFieldRequest {
      * @type {string}
      * @memberof CreateVulWhiteFieldRequest
      */
-    FieldList: string;
+    FieldList?: string;
 
     /**
      * @type {string}
      * @memberof CreateVulWhiteFieldRequest
      */
-    Host: string;
+    Host?: string;
+
+    /**
+     * @type {number}
+     * @memberof CreateVulWhiteFieldRequest
+     */
+    HostAddType?: number;
+
+    /**
+     * @type {Array<string>}
+     * @memberof CreateVulWhiteFieldRequest
+     */
+    HostList?: Array<string>;
 
     /**
      * @type {string}
@@ -55,4 +67,10 @@ export interface CreateVulWhiteFieldRequest {
      * @memberof CreateVulWhiteFieldRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof CreateVulWhiteFieldRequest
+     */
+    WAFInstanceID?: string;
 }

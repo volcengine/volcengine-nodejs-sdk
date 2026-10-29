@@ -37,4 +37,10 @@ export interface DeleteCustomPageRequest {
      * @memberof DeleteCustomPageRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteCustomPageRequest
+     */
+    WAFInstanceID?: string;
 }

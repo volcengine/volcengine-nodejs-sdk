@@ -31,4 +31,10 @@ export interface DeleteHostGroupRequest {
      * @memberof DeleteHostGroupRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteHostGroupRequest
+     */
+    WAFInstanceID?: string;
 }

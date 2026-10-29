@@ -37,4 +37,10 @@ export interface DeleteCustomBotConfigRequest {
      * @memberof DeleteCustomBotConfigRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteCustomBotConfigRequest
+     */
+    WAFInstanceID?: string;
 }

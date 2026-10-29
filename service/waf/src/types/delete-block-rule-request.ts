@@ -37,4 +37,10 @@ export interface DeleteBlockRuleRequest {
      * @memberof DeleteBlockRuleRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof DeleteBlockRuleRequest
+     */
+    WAFInstanceID?: string;
 }

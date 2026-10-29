@@ -37,4 +37,10 @@ export interface UpdateTamperProofCacheRequest {
      * @memberof UpdateTamperProofCacheRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof UpdateTamperProofCacheRequest
+     */
+    WAFInstanceID?: string;
 }

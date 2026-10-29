@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+import { ResponseMetadataForUpdateCustomPageOutput } from './response-metadata-for-update-custom-page-output';
  /**
  * 
  *
@@ -19,4 +20,10 @@
  * @interface UpdateCustomPageResponse
  */
 export interface UpdateCustomPageResponse {
+
+    /**
+     * @type {ResponseMetadataForUpdateCustomPageOutput}
+     * @memberof UpdateCustomPageResponse
+     */
+    ResponseMetadata?: ResponseMetadataForUpdateCustomPageOutput;
 }

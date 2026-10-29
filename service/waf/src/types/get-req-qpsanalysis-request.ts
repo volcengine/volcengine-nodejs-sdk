@@ -37,4 +37,10 @@ export interface GetReqQPSAnalysisRequest {
      * @memberof GetReqQPSAnalysisRequest
      */
     StartTime: string;
+
+    /**
+     * @type {string}
+     * @memberof GetReqQPSAnalysisRequest
+     */
+    WAFInstanceID?: string;
 }

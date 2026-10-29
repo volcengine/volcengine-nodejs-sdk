@@ -25,4 +25,10 @@ export interface GetDomainInfoRequest {
      * @memberof GetDomainInfoRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof GetDomainInfoRequest
+     */
+    WAFInstanceID?: string;
 }

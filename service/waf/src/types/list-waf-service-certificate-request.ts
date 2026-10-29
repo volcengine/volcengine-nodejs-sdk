@@ -25,4 +25,10 @@ export interface ListWafServiceCertificateRequest {
      * @memberof ListWafServiceCertificateRequest
      */
     ProjectName?: string;
+
+    /**
+     * @type {string}
+     * @memberof ListWafServiceCertificateRequest
+     */
+    WAFInstanceID?: string;
 }
