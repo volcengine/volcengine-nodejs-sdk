@@ -42,17 +42,5 @@ export interface TaskStepInfoForDescribeTasksOutput {
      * @type {string}
      * @memberof TaskStepInfoForDescribeTasksOutput
      */
-    StepStatus?: TaskStepInfoForDescribeTasksOutputStepStatusEnum;
+    StepStatus?: string;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum TaskStepInfoForDescribeTasksOutputStepStatusEnum {
-    Running = 'Running',
-    Success = 'Success',
-    Failed = 'Failed',
-    Waiting = 'Waiting'
-}
-

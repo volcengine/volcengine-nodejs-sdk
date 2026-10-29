@@ -26,7 +26,7 @@ export interface InstanceForDescribeDBInstancesOutput {
      * @type {string}
      * @memberof InstanceForDescribeDBInstancesOutput
      */
-    BlueGreenRole?: InstanceForDescribeDBInstancesOutputBlueGreenRoleEnum;
+    BlueGreenRole?: string;
 
     /**
      * @type {CapacityForDescribeDBInstancesOutput}
@@ -184,13 +184,3 @@ export interface InstanceForDescribeDBInstancesOutput {
      */
     ZoneIds?: Array<string>;
 }
-
-/**
- * @export
- * @enum {string}
- */
-export enum InstanceForDescribeDBInstancesOutputBlueGreenRoleEnum {
-    Blue = 'Blue',
-    Green = 'Green'
-}
-

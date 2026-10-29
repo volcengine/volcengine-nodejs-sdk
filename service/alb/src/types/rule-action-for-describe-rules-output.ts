@@ -15,7 +15,9 @@
 import { ConvertForwardGroupConfigForDescribeRulesOutput } from './convert-forward-group-config-for-describe-rules-output';
 import { ConvertRedirectConfigForDescribeRulesOutput } from './convert-redirect-config-for-describe-rules-output';
 import { ConvertRewriteConfigForDescribeRulesOutput } from './convert-rewrite-config-for-describe-rules-output';
+import { CorsConfigForDescribeRulesOutput } from './cors-config-for-describe-rules-output';
 import { FixedResponseConfigForDescribeRulesOutput } from './fixed-response-config-for-describe-rules-output';
+import { InsertHeaderConfigForDescribeRulesOutput } from './insert-header-config-for-describe-rules-output';
 import { TrafficLimitConfigForDescribeRulesOutput } from './traffic-limit-config-for-describe-rules-output';
  /**
  * 
@@ -24,6 +26,12 @@ import { TrafficLimitConfigForDescribeRulesOutput } from './traffic-limit-config
  * @interface RuleActionForDescribeRulesOutput
  */
 export interface RuleActionForDescribeRulesOutput {
+
+    /**
+     * @type {CorsConfigForDescribeRulesOutput}
+     * @memberof RuleActionForDescribeRulesOutput
+     */
+    CorsConfig?: CorsConfigForDescribeRulesOutput;
 
     /**
      * @type {FixedResponseConfigForDescribeRulesOutput}
@@ -36,6 +44,12 @@ export interface RuleActionForDescribeRulesOutput {
      * @memberof RuleActionForDescribeRulesOutput
      */
     ForwardGroupConfig?: ConvertForwardGroupConfigForDescribeRulesOutput;
+
+    /**
+     * @type {InsertHeaderConfigForDescribeRulesOutput}
+     * @memberof RuleActionForDescribeRulesOutput
+     */
+    InsertHeaderConfig?: InsertHeaderConfigForDescribeRulesOutput;
 
     /**
      * @type {ConvertRedirectConfigForDescribeRulesOutput}

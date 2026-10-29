@@ -68,7 +68,6 @@ export interface PerformanceForDescribeFileSystemsOutput {
  * @enum {string}
  */
 export enum PerformanceForDescribeFileSystemsOutputBandwidthModeEnum {
-    Unknown = 'Unknown',
     Baseline = 'Baseline',
     Provisioned = 'Provisioned'
 }

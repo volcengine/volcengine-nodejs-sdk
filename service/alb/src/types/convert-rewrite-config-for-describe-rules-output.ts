@@ -24,5 +24,11 @@ export interface ConvertRewriteConfigForDescribeRulesOutput {
      * @type {string}
      * @memberof ConvertRewriteConfigForDescribeRulesOutput
      */
+    Host?: string;
+
+    /**
+     * @type {string}
+     * @memberof ConvertRewriteConfigForDescribeRulesOutput
+     */
     Path?: string;
 }

@@ -34,8 +34,6 @@ import { CreateDBEndpointPublicAddressRequest } from './types/index';
 import { CreateDBEndpointPublicAddressResponse } from './types/index';
 import { CreateDBInstanceRequest } from './types/index';
 import { CreateDBInstanceResponse } from './types/index';
-import { CreateEnterpriseDBInstanceRequest } from './types/index';
-import { CreateEnterpriseDBInstanceResponse } from './types/index';
 import { CreateKeyScanJobRequest } from './types/index';
 import { CreateKeyScanJobResponse } from './types/index';
 import { CreateParameterGroupRequest } from './types/index';
@@ -124,6 +122,8 @@ import { DescribeParameterGroupsRequest } from './types/index';
 import { DescribeParameterGroupsResponse } from './types/index';
 import { DescribePitrTimeWindowRequest } from './types/index';
 import { DescribePitrTimeWindowResponse } from './types/index';
+import { DescribePlannedEventImpactDetailRequest } from './types/index';
+import { DescribePlannedEventImpactDetailResponse } from './types/index';
 import { DescribePlannedEventsRequest } from './types/index';
 import { DescribePlannedEventsResponse } from './types/index';
 import { DescribeRegionsRequest } from './types/index';
@@ -238,7 +238,6 @@ export type CreateDBAccountCommandOutput = CommandOutput<CreateDBAccountResponse
 export type CreateDBEndpointDirectLinkAddressCommandOutput = CommandOutput<CreateDBEndpointDirectLinkAddressResponse>;
 export type CreateDBEndpointPublicAddressCommandOutput = CommandOutput<CreateDBEndpointPublicAddressResponse>;
 export type CreateDBInstanceCommandOutput = CommandOutput<CreateDBInstanceResponse>;
-export type CreateEnterpriseDBInstanceCommandOutput = CommandOutput<CreateEnterpriseDBInstanceResponse>;
 export type CreateKeyScanJobCommandOutput = CommandOutput<CreateKeyScanJobResponse>;
 export type CreateParameterGroupCommandOutput = CommandOutput<CreateParameterGroupResponse>;
 export type DecreaseDBInstanceNodeNumberCommandOutput = CommandOutput<DecreaseDBInstanceNodeNumberResponse>;
@@ -283,6 +282,7 @@ export type DescribeNodeIdsCommandOutput = CommandOutput<DescribeNodeIdsResponse
 export type DescribeParameterGroupDetailCommandOutput = CommandOutput<DescribeParameterGroupDetailResponse>;
 export type DescribeParameterGroupsCommandOutput = CommandOutput<DescribeParameterGroupsResponse>;
 export type DescribePitrTimeWindowCommandOutput = CommandOutput<DescribePitrTimeWindowResponse>;
+export type DescribePlannedEventImpactDetailCommandOutput = CommandOutput<DescribePlannedEventImpactDetailResponse>;
 export type DescribePlannedEventsCommandOutput = CommandOutput<DescribePlannedEventsResponse>;
 export type DescribeRegionsCommandOutput = CommandOutput<DescribeRegionsResponse>;
 export type DescribeSlowLogsCommandOutput = CommandOutput<DescribeSlowLogsResponse>;
@@ -495,21 +495,6 @@ export class CreateDBInstanceCommand extends Command<
   constructor(input: CreateDBInstanceRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(CreateDBInstanceCommand.metaPath);
-  }
-}
-/**
- * Command to CreateEnterpriseDBInstance
- */
-export class CreateEnterpriseDBInstanceCommand extends Command<
-  CreateEnterpriseDBInstanceRequest,
-  CreateEnterpriseDBInstanceCommandOutput,
-  'CreateEnterpriseDBInstanceCommand'
-> {
-  static readonly metaPath = '/CreateEnterpriseDBInstance/2020-12-07/redis/post/application_json/';
-
-  constructor(input: CreateEnterpriseDBInstanceRequest) {
-    super(input);
-    this.requestConfig = buildRequestConfigFromMetaPath(CreateEnterpriseDBInstanceCommand.metaPath);
   }
 }
 /**
@@ -1170,6 +1155,21 @@ export class DescribePitrTimeWindowCommand extends Command<
   constructor(input: DescribePitrTimeWindowRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(DescribePitrTimeWindowCommand.metaPath);
+  }
+}
+/**
+ * Command to DescribePlannedEventImpactDetail
+ */
+export class DescribePlannedEventImpactDetailCommand extends Command<
+  DescribePlannedEventImpactDetailRequest,
+  DescribePlannedEventImpactDetailCommandOutput,
+  'DescribePlannedEventImpactDetailCommand'
+> {
+  static readonly metaPath = '/DescribePlannedEventImpactDetail/2020-12-07/redis/post/application_json/';
+
+  constructor(input: DescribePlannedEventImpactDetailRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(DescribePlannedEventImpactDetailCommand.metaPath);
   }
 }
 /**
@@ -1935,7 +1935,6 @@ export default {
   CreateDBEndpointDirectLinkAddressCommand,
   CreateDBEndpointPublicAddressCommand,
   CreateDBInstanceCommand,
-  CreateEnterpriseDBInstanceCommand,
   CreateKeyScanJobCommand,
   CreateParameterGroupCommand,
   DecreaseDBInstanceNodeNumberCommand,
@@ -1980,6 +1979,7 @@ export default {
   DescribeParameterGroupDetailCommand,
   DescribeParameterGroupsCommand,
   DescribePitrTimeWindowCommand,
+  DescribePlannedEventImpactDetailCommand,
   DescribePlannedEventsCommand,
   DescribeRegionsCommand,
   DescribeSlowLogsCommand,

@@ -26,6 +26,8 @@ import { EnableMultiAccountResourceCenterRequest } from './types/index';
 import { EnableMultiAccountResourceCenterResponse } from './types/index';
 import { EnableResourceCenterRequest } from './types/index';
 import { EnableResourceCenterResponse } from './types/index';
+import { ExecuteMultiAccountSQLQueryRequest } from './types/index';
+import { ExecuteMultiAccountSQLQueryResponse } from './types/index';
 import { ExecuteSQLQueryRequest } from './types/index';
 import { ExecuteSQLQueryResponse } from './types/index';
 import { GetExampleQueryRequest } from './types/index';
@@ -34,16 +36,24 @@ import { GetMultiAccountResourceCenterStatusRequest } from './types/index';
 import { GetMultiAccountResourceCenterStatusResponse } from './types/index';
 import { GetMultiAccountResourceCountsRequest } from './types/index';
 import { GetMultiAccountResourceCountsResponse } from './types/index';
+import { GetMultiAccountResourceDescriptionRequest } from './types/index';
+import { GetMultiAccountResourceDescriptionResponse } from './types/index';
 import { GetQueryRequest } from './types/index';
 import { GetQueryResponse } from './types/index';
 import { GetResourceCenterStatusRequest } from './types/index';
 import { GetResourceCenterStatusResponse } from './types/index';
 import { GetResourceCountsRequest } from './types/index';
 import { GetResourceCountsResponse } from './types/index';
+import { GetResourceDescriptionRequest } from './types/index';
+import { GetResourceDescriptionResponse } from './types/index';
 import { ListExampleQueriesRequest } from './types/index';
 import { ListExampleQueriesResponse } from './types/index';
+import { ListMultiAccountResourceRelationshipsRequest } from './types/index';
+import { ListMultiAccountResourceRelationshipsResponse } from './types/index';
 import { ListQueriesRequest } from './types/index';
 import { ListQueriesResponse } from './types/index';
+import { ListResourceRelationshipsRequest } from './types/index';
+import { ListResourceRelationshipsResponse } from './types/index';
 import { ListResourceTypesRequest } from './types/index';
 import { ListResourceTypesResponse } from './types/index';
 import { SearchMultiAccountResourcesRequest } from './types/index';
@@ -62,15 +72,20 @@ export type DisableMultiAccountResourceCenterCommandOutput = CommandOutput<Disab
 export type DisableResourceCenterCommandOutput = CommandOutput<DisableResourceCenterResponse>;
 export type EnableMultiAccountResourceCenterCommandOutput = CommandOutput<EnableMultiAccountResourceCenterResponse>;
 export type EnableResourceCenterCommandOutput = CommandOutput<EnableResourceCenterResponse>;
+export type ExecuteMultiAccountSQLQueryCommandOutput = CommandOutput<ExecuteMultiAccountSQLQueryResponse>;
 export type ExecuteSQLQueryCommandOutput = CommandOutput<ExecuteSQLQueryResponse>;
 export type GetExampleQueryCommandOutput = CommandOutput<GetExampleQueryResponse>;
 export type GetMultiAccountResourceCenterStatusCommandOutput = CommandOutput<GetMultiAccountResourceCenterStatusResponse>;
 export type GetMultiAccountResourceCountsCommandOutput = CommandOutput<GetMultiAccountResourceCountsResponse>;
+export type GetMultiAccountResourceDescriptionCommandOutput = CommandOutput<GetMultiAccountResourceDescriptionResponse>;
 export type GetQueryCommandOutput = CommandOutput<GetQueryResponse>;
 export type GetResourceCenterStatusCommandOutput = CommandOutput<GetResourceCenterStatusResponse>;
 export type GetResourceCountsCommandOutput = CommandOutput<GetResourceCountsResponse>;
+export type GetResourceDescriptionCommandOutput = CommandOutput<GetResourceDescriptionResponse>;
 export type ListExampleQueriesCommandOutput = CommandOutput<ListExampleQueriesResponse>;
+export type ListMultiAccountResourceRelationshipsCommandOutput = CommandOutput<ListMultiAccountResourceRelationshipsResponse>;
 export type ListQueriesCommandOutput = CommandOutput<ListQueriesResponse>;
+export type ListResourceRelationshipsCommandOutput = CommandOutput<ListResourceRelationshipsResponse>;
 export type ListResourceTypesCommandOutput = CommandOutput<ListResourceTypesResponse>;
 export type SearchMultiAccountResourcesCommandOutput = CommandOutput<SearchMultiAccountResourcesResponse>;
 export type SearchResourcesCommandOutput = CommandOutput<SearchResourcesResponse>;
@@ -180,6 +195,21 @@ export class EnableResourceCenterCommand extends Command<
   }
 }
 /**
+ * Command to ExecuteMultiAccountSQLQuery
+ */
+export class ExecuteMultiAccountSQLQueryCommand extends Command<
+  ExecuteMultiAccountSQLQueryRequest,
+  ExecuteMultiAccountSQLQueryCommandOutput,
+  'ExecuteMultiAccountSQLQueryCommand'
+> {
+  static readonly metaPath = '/ExecuteMultiAccountSQLQuery/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: ExecuteMultiAccountSQLQueryRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ExecuteMultiAccountSQLQueryCommand.metaPath);
+  }
+}
+/**
  * Command to ExecuteSQLQuery
  */
 export class ExecuteSQLQueryCommand extends Command<
@@ -240,6 +270,21 @@ export class GetMultiAccountResourceCountsCommand extends Command<
   }
 }
 /**
+ * Command to GetMultiAccountResourceDescription
+ */
+export class GetMultiAccountResourceDescriptionCommand extends Command<
+  GetMultiAccountResourceDescriptionRequest,
+  GetMultiAccountResourceDescriptionCommandOutput,
+  'GetMultiAccountResourceDescriptionCommand'
+> {
+  static readonly metaPath = '/GetMultiAccountResourceDescription/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: GetMultiAccountResourceDescriptionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetMultiAccountResourceDescriptionCommand.metaPath);
+  }
+}
+/**
  * Command to GetQuery
  */
 export class GetQueryCommand extends Command<
@@ -285,6 +330,21 @@ export class GetResourceCountsCommand extends Command<
   }
 }
 /**
+ * Command to GetResourceDescription
+ */
+export class GetResourceDescriptionCommand extends Command<
+  GetResourceDescriptionRequest,
+  GetResourceDescriptionCommandOutput,
+  'GetResourceDescriptionCommand'
+> {
+  static readonly metaPath = '/GetResourceDescription/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: GetResourceDescriptionRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(GetResourceDescriptionCommand.metaPath);
+  }
+}
+/**
  * Command to ListExampleQueries
  */
 export class ListExampleQueriesCommand extends Command<
@@ -300,6 +360,21 @@ export class ListExampleQueriesCommand extends Command<
   }
 }
 /**
+ * Command to ListMultiAccountResourceRelationships
+ */
+export class ListMultiAccountResourceRelationshipsCommand extends Command<
+  ListMultiAccountResourceRelationshipsRequest,
+  ListMultiAccountResourceRelationshipsCommandOutput,
+  'ListMultiAccountResourceRelationshipsCommand'
+> {
+  static readonly metaPath = '/ListMultiAccountResourceRelationships/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: ListMultiAccountResourceRelationshipsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListMultiAccountResourceRelationshipsCommand.metaPath);
+  }
+}
+/**
  * Command to ListQueries
  */
 export class ListQueriesCommand extends Command<
@@ -312,6 +387,21 @@ export class ListQueriesCommand extends Command<
   constructor(input: ListQueriesRequest) {
     super(input);
     this.requestConfig = buildRequestConfigFromMetaPath(ListQueriesCommand.metaPath);
+  }
+}
+/**
+ * Command to ListResourceRelationships
+ */
+export class ListResourceRelationshipsCommand extends Command<
+  ListResourceRelationshipsRequest,
+  ListResourceRelationshipsCommandOutput,
+  'ListResourceRelationshipsCommand'
+> {
+  static readonly metaPath = '/ListResourceRelationships/2023-06-01/resourcecenter/post/application_json/';
+
+  constructor(input: ListResourceRelationshipsRequest) {
+    super(input);
+    this.requestConfig = buildRequestConfigFromMetaPath(ListResourceRelationshipsCommand.metaPath);
   }
 }
 /**
@@ -383,15 +473,20 @@ export default {
   DisableResourceCenterCommand,
   EnableMultiAccountResourceCenterCommand,
   EnableResourceCenterCommand,
+  ExecuteMultiAccountSQLQueryCommand,
   ExecuteSQLQueryCommand,
   GetExampleQueryCommand,
   GetMultiAccountResourceCenterStatusCommand,
   GetMultiAccountResourceCountsCommand,
+  GetMultiAccountResourceDescriptionCommand,
   GetQueryCommand,
   GetResourceCenterStatusCommand,
   GetResourceCountsCommand,
+  GetResourceDescriptionCommand,
   ListExampleQueriesCommand,
+  ListMultiAccountResourceRelationshipsCommand,
   ListQueriesCommand,
+  ListResourceRelationshipsCommand,
   ListResourceTypesCommand,
   SearchMultiAccountResourcesCommand,
   SearchResourcesCommand,
