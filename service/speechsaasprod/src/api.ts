@@ -64,7 +64,6 @@ export type ServiceStatusCommandOutput = CommandOutput<ServiceStatusResponse>;
 export type TerminateServiceCommandOutput = CommandOutput<TerminateServiceResponse>;
 export type UpdateAPIKeyCommandOutput = CommandOutput<UpdateAPIKeyResponse>;
 
-
 /**
  * SPEECHSAASPRODClient Service Client
  */
